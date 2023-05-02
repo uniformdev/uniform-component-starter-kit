@@ -1,0 +1,5215 @@
+{
+  "components": [
+    {
+      "id": "accordion",
+      "name": "Accordion",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_accordion_r6nkha.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "10"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "items",
+          "name": "Accordion Items",
+          "allowedComponents": [
+            "accordionItem",
+            "$loop",
+            "$test",
+            "$personalization"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.52026+00:00",
+      "updated": "2023-05-10T11:26:18.324231+00:00"
+    },
+    {
+      "id": "accordionItem",
+      "name": "Accordion Item",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462239/component-starter-kit/component-icons/icon_navgroup_rff7ep.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "10"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.358824+00:00",
+      "updated": "2023-05-10T11:26:20.020687+00:00"
+    },
+    {
+      "id": "callToAction",
+      "name": "Call to Action",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_CTA_jttsck.svg",
+      "parameters": [
+        {
+          "id": "eyebrowText",
+          "name": "Eyebrow Text ",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "3"
+          }
+        },
+        {
+          "id": "titleStyle",
+          "name": "Title Style",
+          "type": "tp-title-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "6"
+          }
+        },
+        {
+          "id": "primaryButtonCopy",
+          "name": "Primary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonLink",
+          "name": "Primary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonStyle",
+          "name": "Primary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonCopy",
+          "name": "Secondary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false
+          }
+        },
+        {
+          "id": "secondaryButtonLink",
+          "name": "Secondary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonStyle",
+          "name": "Secondary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:05.279393+00:00",
+      "updated": "2023-05-10T11:26:18.617451+00:00",
+      "variants": [
+        {
+          "id": "alignLeft",
+          "name": "Align Left"
+        },
+        {
+          "id": "alignRight",
+          "name": "Align Right"
+        },
+        {
+          "id": "featured",
+          "name": "Featured"
+        }
+      ]
+    },
+    {
+      "id": "card",
+      "name": "Card",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_card_lls0kn.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false,
+            "multiline": true,
+            "linesCount": "5"
+          }
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": {
+            "required": false
+          }
+        },
+        {
+          "id": "badge",
+          "name": "Badge",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "badgeStyle",
+          "name": "Badge Style",
+          "type": "tp-badge-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "badgeSize",
+          "name": "Badge Size",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Large",
+                "value": "lg"
+              },
+              {
+                "text": "Medium",
+                "value": "md"
+              },
+              {
+                "text": "Small",
+                "value": "sm"
+              },
+              {
+                "text": "Extra small",
+                "value": "xs"
+              }
+            ]
+          }
+        },
+        {
+          "id": "buttonCopy",
+          "name": "Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "buttonLink",
+          "name": "Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "buttonStyle",
+          "name": "Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.305376+00:00",
+      "updated": "2023-05-10T11:26:18.396844+00:00",
+      "variants": [
+        {
+          "id": "backgroundImage",
+          "name": "Background Image"
+        }
+      ]
+    },
+    {
+      "id": "cardBlock",
+      "name": "Card Block",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123189/component-starter-kit/component-icons/icon_cardblock_dszbli.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "titleStyle",
+          "name": "Title Style",
+          "type": "tp-title-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "multiline": true,
+            "linesCount": "10"
+          }
+        },
+        {
+          "id": "buttonCopy",
+          "name": "Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "buttonLink",
+          "name": "Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "buttonStyle",
+          "name": "Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "cardBlockInner",
+          "name": "Card Block Inner",
+          "allowedComponents": [
+            "card",
+            "flexContainer",
+            "gridContainer",
+            "container",
+            "$test",
+            "$personalization",
+            "$loop"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.408688+00:00",
+      "updated": "2023-05-10T11:26:19.767778+00:00",
+      "variants": [
+        {
+          "id": "carousel",
+          "name": "Carousel"
+        }
+      ]
+    },
+    {
+      "id": "container",
+      "name": "Container",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "Section title",
+          "typeConfig": null
+        },
+        {
+          "id": "backgroundType",
+          "name": "Background Type",
+          "type": "tp-background-type-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "paddingTop",
+          "name": "Padding Top",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Small",
+                "value": "Small"
+              },
+              {
+                "text": "Medium",
+                "value": "Medium"
+              },
+              {
+                "text": "Large",
+                "value": "Large"
+              },
+              {
+                "text": "None",
+                "value": "None"
+              }
+            ]
+          }
+        },
+        {
+          "id": "paddingBottom",
+          "name": "Padding Bottom",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Small",
+                "value": "Small"
+              },
+              {
+                "text": "Medium",
+                "value": "Medium"
+              },
+              {
+                "text": "Large",
+                "value": "Large"
+              },
+              {
+                "text": "None",
+                "value": "None"
+              }
+            ]
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "container-inner",
+          "name": "Container Inner",
+          "allowedComponents": [],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": true,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.338726+00:00",
+      "updated": "2023-05-10T11:26:20.044438+00:00"
+    },
+    {
+      "id": "content",
+      "name": "Content",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_content_e4lqbm.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false
+          }
+        },
+        {
+          "id": "titleStyle",
+          "name": "Title Style",
+          "type": "tp-title-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "text",
+          "name": "Text",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "multiline": true,
+            "linesCount": "5"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.340244+00:00",
+      "updated": "2023-05-10T11:26:18.753633+00:00"
+    },
+    {
+      "id": "feature",
+      "name": "Feature",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_feature_uutgds.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:05.247648+00:00",
+      "updated": "2023-05-10T11:26:18.651136+00:00"
+    },
+    {
+      "id": "featuredCallout",
+      "name": "Featured Callout",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_featured_callout_hnbgqq.svg",
+      "parameters": [
+        {
+          "id": "eyebrowText",
+          "name": "Eyebrow Text",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "titleStyle",
+          "name": "Title Style",
+          "type": "tp-title-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "10"
+          }
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "feature",
+          "name": "Feature",
+          "allowedComponents": [
+            "feature"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:05.960446+00:00",
+      "updated": "2023-05-10T11:26:20.135419+00:00",
+      "variants": [
+        {
+          "id": "imageRight",
+          "name": "Image Right"
+        }
+      ]
+    },
+    {
+      "id": "flexContainer",
+      "name": "Flex Container",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "parameters": [
+        {
+          "id": "direction",
+          "name": "Direction",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "row",
+                "value": "row"
+              },
+              {
+                "text": "row-reverse",
+                "value": "row-reverse"
+              },
+              {
+                "text": "column",
+                "value": "column"
+              },
+              {
+                "text": "column-reverse",
+                "value": "column-reverse"
+              }
+            ]
+          }
+        },
+        {
+          "id": "flexWrap",
+          "name": "Flex Wrap",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "nowrap",
+                "value": "nowrap"
+              },
+              {
+                "text": "wrap",
+                "value": "wrap"
+              },
+              {
+                "text": "wrap-reverse",
+                "value": "wrap-reverse"
+              }
+            ]
+          }
+        },
+        {
+          "id": "justifyContent",
+          "name": "Justify Content",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "normal",
+                "value": "normal"
+              },
+              {
+                "text": "flex-start",
+                "value": "flex-start"
+              },
+              {
+                "text": "flex-end",
+                "value": "flex-end"
+              },
+              {
+                "text": "center",
+                "value": "center"
+              },
+              {
+                "text": "space-between",
+                "value": "space-between"
+              },
+              {
+                "text": "space-around",
+                "value": "space-around"
+              },
+              {
+                "text": "space-evenly",
+                "value": "space-evenly"
+              },
+              {
+                "text": "stretch",
+                "value": "stretch"
+              }
+            ]
+          }
+        },
+        {
+          "id": "alignItems",
+          "name": "Align Items",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "normal",
+                "value": "normal"
+              },
+              {
+                "text": "flex-start",
+                "value": "flex-start"
+              },
+              {
+                "text": "flex-end",
+                "value": "flex-end"
+              },
+              {
+                "text": "center",
+                "value": "center"
+              },
+              {
+                "text": "baseline",
+                "value": "baseline"
+              },
+              {
+                "text": "stretch",
+                "value": "stretch"
+              }
+            ]
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "container-inner",
+          "name": "Container Inner",
+          "allowedComponents": [],
+          "allowAllComponents": true,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.105269+00:00",
+      "updated": "2023-05-10T11:26:19.060044+00:00"
+    },
+    {
+      "id": "footer",
+      "name": "Footer",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_footer_zky5zt.svg",
+      "parameters": [
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "copyright",
+          "name": "Copyright",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "multiline": true,
+            "linesCount": "10"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "section",
+          "name": "Section",
+          "allowedComponents": [
+            "footerSection"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        },
+        {
+          "id": "iconLinks",
+          "name": "Icon Links",
+          "allowedComponents": [
+            "iconLink"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.626252+00:00",
+      "updated": "2023-05-10T11:26:18.881835+00:00"
+    },
+    {
+      "id": "footerSection",
+      "name": "Footer Section",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_footer_zky5zt.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "links",
+          "name": "Links",
+          "allowedComponents": [
+            "navigationLink"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:06.876197+00:00",
+      "updated": "2023-05-10T11:26:18.936405+00:00"
+    },
+    {
+      "id": "globalTemplate",
+      "name": "Global Template",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_localization_buuv8g.svg",
+      "parameters": [
+        {
+          "id": "theme",
+          "name": "Theme",
+          "type": "tp-set-up-theme-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "font",
+          "name": "Font",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Inter",
+                "value": "inter"
+              },
+              {
+                "text": "Roboto mono",
+                "value": "roboto_mono"
+              },
+              {
+                "text": "Rubik",
+                "value": "rubik"
+              },
+              {
+                "text": "DM Mono",
+                "value": "dm_mono"
+              },
+              {
+                "text": "Farro",
+                "value": "farro"
+              },
+              {
+                "text": "Damion",
+                "value": "damion"
+              },
+              {
+                "text": "Advent Pro",
+                "value": "advent_pro"
+              },
+              {
+                "text": "Asap",
+                "value": "asap"
+              },
+              {
+                "text": "Antonio",
+                "value": "antonio"
+              },
+              {
+                "text": "Maven Pro",
+                "value": "maven_pro"
+              }
+            ]
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "header",
+          "name": "Header",
+          "allowedComponents": [
+            "header"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        },
+        {
+          "id": "footer",
+          "name": "Footer",
+          "allowedComponents": [
+            "footer"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": true,
+      "created": "2023-05-04T08:07:06.988738+00:00",
+      "updated": "2023-05-10T11:26:19.294428+00:00"
+    },
+    {
+      "id": "gridContainer",
+      "name": "Grid Container",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "parameters": [
+        {
+          "id": "columnsCount",
+          "name": "Columns Count",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "1",
+                "value": "1"
+              },
+              {
+                "text": "2",
+                "value": "2"
+              },
+              {
+                "text": "3",
+                "value": "3"
+              },
+              {
+                "text": "4",
+                "value": "4"
+              },
+              {
+                "text": "5",
+                "value": "5"
+              },
+              {
+                "text": "6",
+                "value": "6"
+              },
+              {
+                "text": "7",
+                "value": "7"
+              },
+              {
+                "text": "8",
+                "value": "8"
+              },
+              {
+                "text": "9",
+                "value": "9"
+              },
+              {
+                "text": "10",
+                "value": "10"
+              },
+              {
+                "text": "11",
+                "value": "11"
+              },
+              {
+                "text": "12",
+                "value": "12"
+              }
+            ],
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "container-inner",
+          "name": "Container Inner",
+          "allowedComponents": [],
+          "allowAllComponents": true,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.011676+00:00",
+      "updated": "2023-05-10T11:26:19.446357+00:00"
+    },
+    {
+      "id": "header",
+      "name": "Header",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_header_wlbufi.svg",
+      "parameters": [
+        {
+          "id": "logo",
+          "name": "Logo",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "links",
+          "name": "Links",
+          "allowedComponents": [
+            "navigationLink",
+            "navigationGroup"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        },
+        {
+          "id": "iconLinks",
+          "name": "Icon Links",
+          "allowedComponents": [
+            "iconLink"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.029725+00:00",
+      "updated": "2023-05-10T11:26:19.189108+00:00"
+    },
+    {
+      "id": "hero",
+      "name": "Hero",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462239/component-starter-kit/component-icons/icon_hero_fmo9cb.svg",
+      "parameters": [
+        {
+          "id": "eyebrowText",
+          "name": "Eyebrow text",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true,
+            "multiline": true,
+            "linesCount": "3"
+          }
+        },
+        {
+          "id": "titleStyle",
+          "name": "Title Style",
+          "type": "tp-title-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": false,
+            "multiline": true,
+            "linesCount": "10"
+          }
+        },
+        {
+          "id": "image",
+          "name": "Image",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonCopy",
+          "name": "Primary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonLink",
+          "name": "Primary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonStyle",
+          "name": "Primary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonCopy",
+          "name": "Secondary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonLink",
+          "name": "Secondary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonStyle",
+          "name": "Secondary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.049074+00:00",
+      "updated": "2023-05-10T11:26:20.330025+00:00",
+      "variants": [
+        {
+          "id": "imageLeft",
+          "name": "Image Left"
+        },
+        {
+          "id": "imageRight",
+          "name": "Image Right"
+        },
+        {
+          "id": "backgroundImage",
+          "name": "Background Image"
+        }
+      ]
+    },
+    {
+      "id": "iconLink",
+      "name": "Icon Link",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_headerlink_ntjsoi.svg",
+      "parameters": [
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.089631+00:00",
+      "updated": "2023-05-10T11:26:19.458572+00:00"
+    },
+    {
+      "id": "image",
+      "name": "Image",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_image_qpjmsm.svg",
+      "parameters": [
+        {
+          "id": "src",
+          "name": "Src",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "width",
+          "name": "Width",
+          "type": "number",
+          "helpText": "",
+          "typeConfig": {
+            "min": "1",
+            "required": true
+          }
+        },
+        {
+          "id": "height",
+          "name": "Height",
+          "type": "number",
+          "helpText": "",
+          "typeConfig": {
+            "min": "1"
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.115492+00:00",
+      "updated": "2023-05-10T11:26:19.59886+00:00"
+    },
+    {
+      "id": "navigationGroup",
+      "name": "Navigation Group",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_navgroup_f9l4xs.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": {}
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "subNavItems",
+          "name": "Sub Nav Items",
+          "allowedComponents": [
+            "navigationLink"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.218205+00:00",
+      "updated": "2023-05-10T11:26:19.696059+00:00"
+    },
+    {
+      "id": "navigationLink",
+      "name": "Navigation Link",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_headerlink_ntjsoi.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": {
+            "required": true
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "title",
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.463317+00:00",
+      "updated": "2023-05-10T11:26:20.309856+00:00",
+      "variants": [
+        {
+          "id": "header",
+          "name": "Header"
+        },
+        {
+          "id": "footer",
+          "name": "Footer"
+        }
+      ]
+    },
+    {
+      "id": "page",
+      "name": "Page",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_card_lls0kn.svg",
+      "parameters": [],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "pageContent",
+          "name": "Page Content",
+          "allowedComponents": [
+            "content",
+            "accordion",
+            "callToAction",
+            "cardBlock",
+            "container",
+            "featuredCallout",
+            "flexContainer",
+            "gridContainer",
+            "hero",
+            "sectionOneColumn",
+            "sectionTwoColumns",
+            "$localization",
+            "$test",
+            "$loop",
+            "$personalization",
+            "image"
+          ],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": false,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "defaults": {
+        "type": "page"
+      },
+      "canBeComposition": true,
+      "created": "2023-05-04T08:07:07.883822+00:00",
+      "updated": "2023-05-10T11:26:19.830382+00:00"
+    },
+    {
+      "id": "sectionOneColumn",
+      "name": "Section - One Column",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_onecolumn_cje5zt.svg",
+      "parameters": [
+        {
+          "id": "width",
+          "name": "Width",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Full width",
+                "value": "1"
+              },
+              {
+                "text": "1/2",
+                "value": "1/2"
+              },
+              {
+                "text": "1/3",
+                "value": "1/3"
+              },
+              {
+                "text": "2/3",
+                "value": "2/3"
+              },
+              {
+                "text": "1/4",
+                "value": "1/4"
+              },
+              {
+                "text": "3/4",
+                "value": "3/4"
+              }
+            ],
+            "required": true
+          }
+        },
+        {
+          "id": "alignment",
+          "name": "Alignment",
+          "type": "tp-horizontal-align-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "textAlignment",
+          "name": "Text Alignment",
+          "type": "tp-horizontal-align-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "section-content",
+          "name": "Section Content",
+          "allowedComponents": [],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": true,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.66646+00:00",
+      "updated": "2023-05-10T11:26:20.234741+00:00"
+    },
+    {
+      "id": "sectionTwoColumns",
+      "name": "Section - Two columns",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_twocolumn_it9ghk.svg",
+      "parameters": [
+        {
+          "id": "columnWidths",
+          "name": "Column Widths",
+          "type": "tp-column-width-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "verticalAlignment",
+          "name": "Vertical Alignment",
+          "type": "tp-vertical-align-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "mobileItemsOrder",
+          "name": "Mobile Items Order",
+          "type": "tp-items-order-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [
+        {
+          "id": "leftContent",
+          "name": "Left Content",
+          "allowedComponents": [],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": true,
+          "patternsInAllowedComponents": false
+        },
+        {
+          "id": "rightContent",
+          "name": "Right Content",
+          "allowedComponents": [],
+          "allowAllComponents": false,
+          "inheritAllowedComponents": true,
+          "patternsInAllowedComponents": false
+        }
+      ],
+      "canBeComposition": false,
+      "created": "2023-05-04T08:07:07.681259+00:00",
+      "updated": "2023-05-10T11:26:20.012813+00:00"
+    }
+  ],
+  "compositions": [
+    {
+      "composition": {
+        "_name": "Global",
+        "_id": "179bfdf3-be89-4d63-949c-53a58f3eff19",
+        "_slug": "global",
+        "type": "globalTemplate",
+        "parameters": {
+          "font": {
+            "type": "select",
+            "value": "inter"
+          },
+          "theme": {
+            "type": "tp-set-up-theme-parameter",
+            "value": {
+              "colors": [
+                {
+                  "name": "primary",
+                  "label": "Primary",
+                  "value": "#0052ED"
+                },
+                {
+                  "name": "primary-content",
+                  "label": "Primary Content",
+                  "value": "#FFFFFF"
+                },
+                {
+                  "name": "secondary",
+                  "label": "Secondary",
+                  "value": "#ffffff"
+                },
+                {
+                  "name": "secondary-content",
+                  "label": "Secondary Content",
+                  "value": "#000000"
+                },
+                {
+                  "name": "accent",
+                  "label": "Accent",
+                  "value": "#DF0000"
+                },
+                {
+                  "name": "accent-content",
+                  "label": "Accent Content",
+                  "value": "#FFFFFF"
+                },
+                {
+                  "name": "info-content",
+                  "label": "Info Content",
+                  "value": "#99C6FF"
+                },
+                {
+                  "name": "base-300",
+                  "label": "Base 300",
+                  "value": "#001242"
+                }
+              ],
+              "themeName": "uniform",
+              "themeLabel": "Uniform"
+            }
+          }
+        },
+        "slots": {
+          "footer": [
+            {
+              "_id": "299e5239-01a0-4e13-a807-c8c29bd500d7",
+              "type": "footer",
+              "slots": {
+                "section": [
+                  {
+                    "_id": "6d0c5ff7-19ef-48f2-9ec8-97c65cec38ac",
+                    "type": "footerSection",
+                    "slots": {
+                      "links": [
+                        {
+                          "_id": "6e5548bb-f480-4930-aa19-475a0b05f431",
+                          "type": "navigationLink",
+                          "variant": "footer",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "https://docs.uniform.app/docs/get-started/component-starter-kit",
+                                "type": "url"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Documentation"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "5b5c7862-e6f7-40f6-9a51-f06299d3ecd7",
+                          "type": "navigationLink",
+                          "variant": "footer",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "https://components-storybook.uniform.app/",
+                                "type": "url"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Storybook"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "e5365d0c-00d9-42d2-90eb-4446084cc3c0",
+                          "type": "navigationLink",
+                          "variant": "footer",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "https://components.uniform.app/",
+                                "type": "url"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Demo"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Key resources"
+                      }
+                    }
+                  }
+                ],
+                "iconLinks": [
+                  {
+                    "_id": "5ebfeac4-2e19-42fa-b71c-e3ffb179bc61",
+                    "type": "iconLink",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681893961/component-starter-kit/canvas-images/storybook_n7x1fd.svg"
+                      },
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "https://components-storybook.uniform.app/",
+                          "type": "url"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_id": "a743d3e8-28d6-4d44-adfb-71590eba0118",
+                    "type": "iconLink",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681894996/component-starter-kit/canvas-images/github-black_izszuz.svg"
+                      },
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "https://github.com/uniformdev/uniform-component-starter-kit",
+                          "type": "url"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "logo": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1680824573/Brand/Uniform_Logo_Black_hb6a69.svg"
+                },
+                "copyright": {
+                  "type": "text",
+                  "value": "Uniform Systems, Inc. All rights reserved.\n\n<p>Built with 💙 by folks at <a href=\"https://uniform.dev/\" rel=\"noopener noreferrer\" target=\"_blank\">Uniform</a>,\nstanding on the shoulders of these awesome open source projects: <a href=\"https://tailwindcss.com/\" rel=\"noopener noreferrer\"\n    target=\"_blank\">TailwindCSS</a>, <a href=\"https://daisyui.com/\" rel=\"noopener noreferrer\"\n    target=\"_blank\">DaisyUI</a>, <a href=\"https://react.dev/\" rel=\"noopener noreferrer\" target=\"_blank\">React</a>, and <a href=\"https://nextjs.org/\" rel=\"noopener noreferrer\" target=\"_blank\">Next.js</a>. Deployed to <a href=\"https://vercel.com/\" rel=\"noopener noreferrer\" target=\"_blank\">Vercel</a>.</p>\n"
+                }
+              }
+            }
+          ],
+          "header": [
+            {
+              "_id": "4f338b51-2356-44d4-a07e-66b27b089f53",
+              "type": "header",
+              "slots": {
+                "links": [
+                  {
+                    "_id": "404356a4-fc58-42f1-b7c6-681df14db53e",
+                    "type": "navigationLink",
+                    "variant": "header",
+                    "parameters": {
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "/",
+                          "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                          "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                        }
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Home"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "7a488739-4192-4f6c-920d-c408d4b24b48",
+                    "type": "navigationGroup",
+                    "slots": {
+                      "subNavItems": [
+                        {
+                          "_id": "848bfac0-c1e9-4b13-8a64-bf331d770f67",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/heroes",
+                                "type": "projectMapNode",
+                                "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Heroes"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "4eb57ae8-d397-4c59-a857-404f6f8f1ac2",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/calls-to-action",
+                                "type": "projectMapNode",
+                                "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Calls to Action"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "9991d52d-8df8-4e84-a73f-5263b56adc25",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/card-blocks",
+                                "nodeId": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Card Blocks"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "2e624d6a-e832-45a9-b77f-0f6883ef3b2b",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/featured-callouts",
+                                "nodeId": "97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Featured Callouts"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "5032e134-a0ad-453b-a546-53fdcef29ccb",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/accordions",
+                                "nodeId": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Accordions"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "6711ce22-df4c-4845-befb-93ac07c5ad88",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/content-blocks",
+                                "nodeId": "435b7a20-cf5a-4e2a-a1ce-f674fe7ee044",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Content Blocks"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "47b06e5b-0375-4f2d-b7d3-cc7c622b6e92",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/layouts-container",
+                                "nodeId": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Layouts & Containers"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "2f2d6565-cb2e-41fa-97da-e18e705b77f0",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/images",
+                                "type": "projectMapNode",
+                                "nodeId": "ef6da4d5-cb59-4d0a-91b5-1c8021bbb786",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Images"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "/components",
+                          "nodeId": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+                          "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                        }
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Components"
+                      }
+                    }
+                  }
+                ],
+                "iconLinks": [
+                  {
+                    "_id": "c34a481b-1d36-457d-bc91-a3cf3df2a8c0",
+                    "type": "iconLink",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681893961/component-starter-kit/canvas-images/storybook_n7x1fd.svg"
+                      },
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "https://components-storybook.uniform.app/",
+                          "type": "url"
+                        }
+                      }
+                    }
+                  },
+                  {
+                    "_id": "1c7db051-f4d6-4970-b077-8dc5f4faea70",
+                    "type": "iconLink",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681893961/component-starter-kit/canvas-images/github_l9wqxq.svg"
+                      },
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "https://github.com/uniformdev/uniform-component-starter-kit",
+                          "type": "url"
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "logo": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807651/component-starter-kit/canvas-images/Logo_amxon7.png"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-04T08:07:12.075689+00:00",
+      "modified": "2023-05-17T08:56:16.521643+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Images",
+        "_id": "2516f825-86ee-4e8a-a686-8ce31e49adb6",
+        "_slug": "images",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "c3a0e58a-3fa2-4e52-b29c-62725cf8f824",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Image Component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "The Image Component is built on top of next/image and is used in combination with other components."
+                }
+              }
+            },
+            {
+              "_id": "40438b92-b4ce-4ac4-bcc0-a8417a60b406",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "8aa73b2a-e164-49ff-b781-76c0de4f7bff",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "e265f699-71e2-48af-bb11-fd633349427e",
+                          "type": "image",
+                          "parameters": {
+                            "src": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "width": {
+                              "type": "number",
+                              "value": "300"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "81af4e5a-5134-42c3-9e74-ae0f76d3690d",
+                          "type": "image",
+                          "parameters": {
+                            "src": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "width": {
+                              "type": "number",
+                              "value": "300"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "660e1c09-e687-48ad-afc0-f30933613003",
+                          "type": "image",
+                          "parameters": {
+                            "src": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "width": {
+                              "type": "number",
+                              "value": "300"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "wrap"
+                      },
+                      "direction": {
+                        "type": "select",
+                        "value": "row"
+                      },
+                      "alignItems": {
+                        "type": "select",
+                        "value": "center"
+                      },
+                      "justifyContent": {
+                        "type": "select",
+                        "value": "space-between"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Images"
+                },
+                "paddingTop": {
+                  "type": "select",
+                  "value": "None"
+                },
+                "paddingBottom": {
+                  "type": "select",
+                  "value": "None"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-03T11:39:48.172767+00:00",
+      "modified": "2023-05-03T12:59:16.477628+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Featured Callouts",
+        "_id": "2abca1c9-4c73-431f-a661-0b1bd3d7f49a",
+        "_slug": "featured-callouts",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "485e7c34-89a0-4e6a-8d62-aa1a9ece02bf",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Featured Callouts"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "A composite component allows to add any number of features as child components into the Feature slot. Contains optional image, title and description parameters.\n"
+                }
+              }
+            },
+            {
+              "_id": "a87676ce-dab6-4fd7-916b-bef32a7f26e1",
+              "type": "featuredCallout",
+              "slots": {
+                "feature": [
+                  {
+                    "_id": "20ecba28-8458-4a50-8ab6-0d539819700a",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "c086778f-0827-49f1-8f95-529fe175dc87",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-improve_jkerfy.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "50dfd1fe-cbc1-4b82-99b3-0a498ba12a15",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-drive_le2khu.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Default variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Some compelling description"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "EYEBROW Text"
+                }
+              }
+            },
+            {
+              "_id": "15d90ef7-441c-4926-9d6c-cd2a808c5af2",
+              "type": "featuredCallout",
+              "slots": {
+                "feature": [
+                  {
+                    "_id": "0e03de14-ba1b-4dc4-8a37-9e610467d604",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "6769303a-afc8-4c61-be09-6f28b445bec6",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-improve_jkerfy.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "3463723d-fa71-4d57-917f-06c17da64042",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-drive_le2khu.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Description"
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "imageRight",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Image Right variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Some compelling description"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:30.560245+00:00",
+      "modified": "2023-05-03T12:16:21.551859+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Layout & Containers",
+        "_id": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
+        "_slug": "layouts-container",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "30aade7d-8148-4c88-855c-ac599e650a1c",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Layouts & Containers"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Collection of non-functional container components. Simple container with controlled padding, Grid Container and Flex Container for more advanced layout control."
+                }
+              }
+            },
+            {
+              "_id": "4d2a68bd-a8ff-4d7f-9727-243416e58742",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "ad09cf96-f01e-4328-94eb-dee7c047e693",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "any component can be placed here, content is just for a demo."
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Light Container with Small Padding"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h1"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Light Container with Small Padding"
+                },
+                "paddingTop": {
+                  "type": "select",
+                  "value": "Small"
+                },
+                "paddingBottom": {
+                  "type": "select",
+                  "value": "Small"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Light"
+                }
+              }
+            },
+            {
+              "_id": "8cea84bd-7795-44b4-acee-24b6ebc576a3",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "79c18135-6a4f-4826-bad9-f49248a513cd",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "any component can be placed here, content is just for a demo."
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Medium color Container with Medium padding"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h1"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Medium Container with medium background"
+                },
+                "paddingTop": {
+                  "type": "select",
+                  "value": "Medium"
+                },
+                "paddingBottom": {
+                  "type": "select",
+                  "value": "Medium"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Medium"
+                }
+              }
+            },
+            {
+              "_id": "d683af85-b1e4-4c4c-8836-0bb2506dc85e",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "b88dcc49-6d6f-4d19-a8eb-98e34fd44ca4",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "any component can be placed here, content is just for a demo."
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Dark Container with Large Padding"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h1"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Dark Container with Large Padding"
+                },
+                "paddingTop": {
+                  "type": "select",
+                  "value": "Large"
+                },
+                "paddingBottom": {
+                  "type": "select",
+                  "value": "Large"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Dark"
+                }
+              }
+            },
+            {
+              "_id": "246b845c-14f9-4083-9a29-e925abfda37a",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "d29e56f2-f908-4f0e-a688-a5fb66dc8c77",
+                    "type": "sectionTwoColumns",
+                    "slots": {
+                      "leftContent": [
+                        {
+                          "_id": "216322f6-a11b-4a96-b719-91b55af2bf77",
+                          "type": "content",
+                          "parameters": {
+                            "text": {
+                              "type": "text",
+                              "value": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Section with Two Column"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        }
+                      ],
+                      "rightContent": [
+                        {
+                          "_id": "b1660aaf-918d-439c-9c6b-d5938a970191",
+                          "type": "content",
+                          "parameters": {
+                            "text": {
+                              "type": "text",
+                              "value": "any component can be placed here"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Section with Two Column"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "columnWidths": {
+                        "type": "tp-column-width-parameter",
+                        "value": "3/4 - 1/4"
+                      },
+                      "mobileItemsOrder": {
+                        "type": "tp-items-order-parameter",
+                        "value": "last"
+                      },
+                      "verticalAlignment": {
+                        "type": "tp-vertical-align-parameter",
+                        "value": "top"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Section Two columns"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Light"
+                }
+              }
+            },
+            {
+              "_id": "d45d5c20-afb0-45f7-a9aa-e38ff224a8c3",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "a0978023-23cb-434f-bb6a-510654dffcb6",
+                    "type": "sectionOneColumn",
+                    "slots": {
+                      "section-content": [
+                        {
+                          "_id": "1ffc8c0c-1904-440a-8f81-a31dbc85f0f6",
+                          "type": "content",
+                          "parameters": {
+                            "text": {
+                              "type": "text",
+                              "value": "any component can be placed here"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Section with One Column"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "9afc3eea-8ce7-40e3-bd1c-e8ac4c071ba2",
+                          "type": "content",
+                          "parameters": {
+                            "text": {
+                              "type": "text",
+                              "value": "any component can be placed here"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Section with One Column"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "width": {
+                        "type": "select",
+                        "value": "3/4"
+                      },
+                      "alignment": {
+                        "type": "tp-horizontal-align-parameter",
+                        "value": "center"
+                      },
+                      "textAlignment": {
+                        "type": "tp-horizontal-align-parameter",
+                        "value": "center"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Section - One Column Centered"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Medium"
+                }
+              }
+            },
+            {
+              "_id": "e6f12ecf-a31c-4c99-a798-fcce19a598d4",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "bdd82c0a-0283-47ff-b26d-aa98abebc643",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "eae1f30f-a7d6-444f-9bfd-40396b0f89a0",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Flex Container Demo 1"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "d35ab62a-b9b5-4e63-9a9c-898d36b294d2",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Flex Container Demo 2"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "f0236e03-bb8a-414a-bb75-414d7a9a5df5",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Flex Container Demo 3"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "nowrap"
+                      },
+                      "direction": {
+                        "type": "select",
+                        "value": "row-reverse"
+                      },
+                      "alignItems": {
+                        "type": "select",
+                        "value": "flex-start"
+                      },
+                      "justifyContent": {
+                        "type": "select",
+                        "value": "space-between"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Flex Container"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Light"
+                }
+              }
+            },
+            {
+              "_id": "f2d92f89-b7ab-4ab6-99ad-4c2adb9a196b",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "8d97bda3-d6ac-4fc7-b700-1de661de0e31",
+                    "type": "gridContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "9c9eb3e2-a245-4661-8acc-8d4890dc5ea9",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Grid Container demo"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "b4fcf630-9e9d-45dd-baa2-7b1af5dad623",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Grid Container demo"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "e0c13a4f-07a6-494a-8b83-415d16117101",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Grid Container demo"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "87139d3f-dbb3-4137-8520-ab4b8711c37b",
+                          "type": "content",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Grid Container demo"
+                            },
+                            "titleStyle": {
+                              "type": "tp-title-style-parameter",
+                              "value": "h1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "columnsCount": {
+                        "type": "select",
+                        "value": "4"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Grid Container"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Light"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:30.442106+00:00",
+      "modified": "2023-05-03T13:14:42.510753+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Home",
+        "_id": "552a8a72-6c47-4993-bc45-f0148ea79904",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "1f352a25-7acb-4893-a11c-f06bd45f27ab",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Uniform’s Component Starter Kit"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Essential set of components you need to start building personalizable web experiences with Uniform."
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": ""
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Browse THE components"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components",
+                    "type": "projectMapNode",
+                    "nodeId": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                }
+              }
+            },
+            {
+              "_id": "7e072bd7-bbe7-4f97-8707-635f74d6ea8e",
+              "type": "callToAction",
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "How will Component Starter Kit help you?"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "The Component Starter kit gives you the key building blocks to create dynamic and compelling web experiences and demonstrate the power of digital experience composition in Uniform. Just install, customize and start creating."
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": ""
+                }
+              }
+            },
+            {
+              "_id": "cc1d51b7-9e89-4031-8658-5b0d81ba15a7",
+              "type": "featuredCallout",
+              "slots": {
+                "feature": [
+                  {
+                    "_id": "845be47f-7b29-4061-9383-2461814bdcee",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Clone, run locally, and customize"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "We designed the starter kit for you to take it home and customize it according to your needs. Go nuts!"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "2a2bb40f-f543-4566-97c8-7cd14cb82bc1",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-improve_jkerfy.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Optimized for performance"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Lightweight React components help keep your Core Web Vitals green."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "19438067-1453-4709-9346-914fdac47fe0",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-drive_le2khu.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Completely adaptable"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "The whole library is open source and based on TailwindCSS and DaisyUI, making it easy for you to adapt to your brand style."
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Built with the modern stack!"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Our Component Starter Kit is built on a TNT stack - Typescript, Next.js, and TailwindCSS. That means it’s completely customizable and adaptable for what you need to build.\n\n"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "something for the developers"
+                }
+              }
+            },
+            {
+              "_id": "45ca2e18-6110-4047-8f54-2f9ae43d047b",
+              "type": "featuredCallout",
+              "slots": {
+                "feature": [
+                  {
+                    "_id": "068668d5-520c-4bc5-b72a-9bda8beb189f",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-drive_le2khu.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Bring your CMS and commerce content"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Leverage our latest integrations to bring content from your own Headless CMS and/or Commerce systems without any glue code."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "b637acaa-f979-4bde-aa94-086c1ccf9c02",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": " No integration? No problem. No code required."
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Bring content from any REST API without a single developer ticket."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "c8205ca3-c293-4338-8392-83574cf74dd0",
+                    "type": "feature",
+                    "parameters": {
+                      "icon": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-improve_jkerfy.svg"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Build web experiences visually with real-time preview"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Create new pages from existing components, try different variants and customize the theme."
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "imageRight",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Unleash your content. Unchain from the backlog."
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Our Component Starter Kit is built on a TNT stack - Typescript, Next.js, and TailwindCSS. That means it’s completely customizable and adaptable for what you need to build.\n\n"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "something for the marketer"
+                }
+              }
+            },
+            {
+              "_id": "a952a7c9-697c-4dc4-a8e5-4614fef5419b",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "4adee7a5-55d6-48e9-9fbd-57308c992d03",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "5aa9b20e-3146-455e-a88d-a5c8769a5c6c",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Heroes"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See more"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/heroes",
+                                "type": "projectMapNode",
+                                "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Not just for one day\n"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "fc361f40-ad1a-4950-a03c-4a84f5cfc423",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Card Blocks"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Play with more cards"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/card-blocks",
+                                "type": "projectMapNode",
+                                "nodeId": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Pick a card, any card…"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "4316b6f4-c818-4f33-9d6a-094f6c01818d",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Featured Callouts"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See more"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/featured-callouts",
+                                "type": "projectMapNode",
+                                "nodeId": "97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "The call of the wild\n"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "wrap"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Featured components"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "buttonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "There are lots of components to choose from, but these are our favorites. There are more coming, so it's always worth checking again."
+                }
+              }
+            },
+            {
+              "_id": "5baddcdc-228e-4013-9243-ccfcfd7d8a17",
+              "type": "accordion",
+              "slots": {
+                "items": [
+                  {
+                    "_id": "92d7f00f-d300-4fee-8f02-45305892ac4c",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "How much does the Component Starter Kit cost?"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Exactly $0. These components are totally open source and available for anyone to use."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "40feaadf-2bb2-4d6c-87d7-d72487a6aab8",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Can I use these components for commercial projects?"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Yes you can! We’d be very happy if you do."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "6ef4f9f8-90e5-4fc6-8290-6a48b0f8046b",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Are there more components coming?"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "There will be, and we have some big ideas. Get in touch if there’s anything you want to see here."
+                      }
+                    }
+                  },
+                  {
+                    "_id": "68387eb3-5d35-4f58-99aa-3dcc7f628cfc",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Can I connect my own content and data to these components?"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Of course! You can use a pre-built Uniform integration or connect to any REST-based API source using Uniform. You can learn more in our documentation."
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Frequently Asked Questions"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Answer your customers possible questions here, it will increase the conversion rate as well as support or chat requests."
+                }
+              }
+            },
+            {
+              "_id": "8fff3946-2b9b-45c4-ab24-c56e5ef09d19",
+              "type": "hero",
+              "variant": "imageRight",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Now it's time to see how Uniform can help you accelerate building modern digital experiences."
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "We’d love to show you.\n"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Now this is Empowering!"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Book a free demo now"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "https://uniform.dev/demo?utm_source=component-starter-kit",
+                    "type": "url"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "No Uniform access? Request one"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "https://uniform.dev/try?utm_source=component-starter-kit",
+                    "type": "url"
+                  }
+                },
+                "secondaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "link"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:28.879669+00:00",
+      "modified": "2023-05-03T11:56:02.832755+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Components",
+        "_id": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
+        "_slug": "components",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "899acb18-ca1c-4c7c-a90c-b02fd0621b5f",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Browse Components"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Browse all the components and variants grouped by family"
+                }
+              }
+            },
+            {
+              "_id": "3b019958-ca9c-49b6-9414-9d69c5d892ef",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "5cdad3f4-49fe-4514-bd9b-39d4b16940c6",
+                    "type": "gridContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "5befc3e3-c35b-4bd6-a26c-efdab8b1cb02",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682462239/component-starter-kit/component-icons/icon_hero_fmo9cb.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Heroes"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See all Heros"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/heroes",
+                                "type": "projectMapNode",
+                                "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Everyone needs a hero, sometimes a couple."
+                            }
+                          }
+                        },
+                        {
+                          "_id": "27feb075-2783-48fb-b4ec-3bd527318418",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_CTA_jttsck.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Calls to action, or CTAs"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See all CTAs"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/calls-to-action",
+                                "type": "projectMapNode",
+                                "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Who are you going to call?"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "609f17c7-75aa-473d-8dbf-36c75702a096",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_featured_callout_hnbgqq.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Featured Callouts"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See all Featured Callouts"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/featured-callouts",
+                                "type": "projectMapNode",
+                                "nodeId": "97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Featured image, title, text and icon bullets."
+                            }
+                          }
+                        },
+                        {
+                          "_id": "79169748-e906-4aa7-994d-4da64d8181e9",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682123189/component-starter-kit/component-icons/icon_cardblock_dszbli.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Card Blocks"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All Card Blocks"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/card-blocks",
+                                "type": "projectMapNode",
+                                "nodeId": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "List of cards and title / text"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "7b92e0a4-89b7-4a1c-b187-9875c8f343ad",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_accordion_r6nkha.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Accordions"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All Accordions"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/accordions",
+                                "type": "projectMapNode",
+                                "nodeId": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Not your grandpa's accordion!"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "49452133-e11e-47ea-beb4-c4c15f172a43",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_content_e4lqbm.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Content Blocks"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All Content Blocks"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/content-blocks",
+                                "type": "projectMapNode",
+                                "nodeId": "435b7a20-cf5a-4e2a-a1ce-f674fe7ee044",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "title ❤️ text rendezvous"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "31795c37-a3f4-4a2b-a380-3e4a0c0cf5f8",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_image_qpjmsm.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Responsive Image"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See all images"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/images",
+                                "type": "projectMapNode",
+                                "nodeId": "ef6da4d5-cb59-4d0a-91b5-1c8021bbb786",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "You can't build a website without one, you know?"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "299dea7c-f79c-43f7-8d6b-c8c7074a2a08",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_twocolumn_it9ghk.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Layouts & Containers"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All Containers"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/layouts-container",
+                                "type": "projectMapNode",
+                                "nodeId": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "After seeing this, you won't be able to contain yourself."
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "columnsCount": {
+                        "type": "select",
+                        "value": "3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Available components"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "1b0986fd-b024-4010-aec2-338334f0f15e",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "56bc234b-63cd-4cb9-a358-ff17949de677",
+                    "type": "gridContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "f1bb9823-4bed-4750-97a8-f29be73abee9",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "coming soon"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_localization_buuv8g.svg"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Navigation / Mega Nav"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Coming soon"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "All your favorite mega navs"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "a97898f2-5316-46b3-8973-41d6053c6190",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "Coming Soon"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Lists"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "1, 2, n lists and stuff"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "bb0a1648-cf1c-428d-a917-174864363a19",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "Coming Soon"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Testimonials"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Proof points and famous quotes"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "columnsCount": {
+                        "type": "select",
+                        "value": "3"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Coming soon"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-04T08:07:12.167443+00:00",
+      "modified": "2023-05-17T08:52:40.596058+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Card Blocks",
+        "_id": "80717902-05d3-49ac-8a8b-017b31074615",
+        "_slug": "card-blocks",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "da299e8b-5554-41e5-aa62-40b468e5e024",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Card Blocks component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "A composite component that allows adding any number of cards within child slots. You can constrain the amount of child card components allowed."
+                }
+              }
+            },
+            {
+              "_id": "4ced7075-c9fa-46f2-be37-70eb31341a01",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "ad363c8c-f8ff-4660-8206-1332d6bc63c7",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "f080cee4-e66b-4b86-8db7-28af2038dc84",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "badgeSize": {
+                              "type": "select",
+                              "value": "lg"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Home"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "d1e18bb4-d96c-4e9b-a76c-b5554c8e5ffa",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "badgeSize": {
+                              "type": "select",
+                              "value": "lg"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "primary"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Home"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "c9c05201-0f60-400a-b501-aee661022dc4",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "badge": {
+                              "type": "text",
+                              "value": "New"
+                            },
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "badgeSize": {
+                              "type": "select",
+                              "value": "lg"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "outline"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Home"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "wrap"
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Default variant cards"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h3"
+                },
+                "description": {
+                  "type": "text",
+                  "value": ""
+                }
+              }
+            },
+            {
+              "_id": "0a602db6-ccc7-4032-a490-bd69c6f2dc61",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "2158b1bb-c13d-45d7-9df2-33ed11b0f4f3",
+                    "type": "card",
+                    "variant": "backgroundImage",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Background Image variant"
+                      },
+                      "badgeSize": {
+                        "type": "select",
+                        "value": "lg"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "accent"
+                      },
+                      "buttonStyle": {
+                        "type": "tp-button-style-parameter",
+                        "value": "primary"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "9bc73157-2b80-4603-8cdd-1ec30b084e29",
+                    "type": "card",
+                    "variant": "backgroundImage",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Background Image variant"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "primary"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling description"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "e2d440ce-5895-46b9-9eab-e6d7ef4f8b0b",
+                    "type": "card",
+                    "variant": "backgroundImage",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Background Image variant"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "secondary"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling description"
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Cards with background images"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h3"
+                },
+                "description": {
+                  "type": "text",
+                  "value": ""
+                }
+              }
+            },
+            {
+              "_id": "e013d63a-6467-4c2f-bf7b-c8124c663edb",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "8480d2ef-0d32-4978-b0eb-dbf9be7a5e82",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "578fc81c-6927-498f-bb4c-3b13e4567f5a",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Primary CTA"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "07e08f4f-aab8-47ef-ae2a-59f784a8285e",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Primary CTA"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "e83620dc-f969-4d56-94dd-200f6f50a5b7",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Default variant"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "Primary CTA"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/",
+                                "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Compelling description"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "wrap"
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Cards with CTA in a Flex Container"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h3"
+                }
+              }
+            },
+            {
+              "_id": "6a313a9f-1600-4b29-89af-adb566cb9640",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "25aaf9b2-d34d-4be0-93fe-f0a12839ebbf",
+                    "type": "card",
+                    "variant": "",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Card #1"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "accent"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling text"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "434e347c-f704-4511-a406-ce4b266828e1",
+                    "type": "card",
+                    "variant": "",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Card #2"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "accent"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling text"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "c33030f7-04b1-4bfc-877d-1b5e8a21e2a5",
+                    "type": "card",
+                    "variant": "",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Card #3"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "accent"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling text"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "4252e8b6-ea48-4715-9a2f-4892256e10e1",
+                    "type": "card",
+                    "variant": "",
+                    "parameters": {
+                      "badge": {
+                        "type": "text",
+                        "value": "New"
+                      },
+                      "image": {
+                        "type": "image",
+                        "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Card #4"
+                      },
+                      "badgeStyle": {
+                        "type": "tp-badge-style-parameter",
+                        "value": "accent"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Compelling text"
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "carousel",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Cards in a Carousel container"
+                },
+                "buttonCopy": {
+                  "type": "text",
+                  "value": "CTA title"
+                },
+                "buttonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/card-blocks",
+                    "type": "projectMapNode",
+                    "nodeId": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "You spin me right round"
+                }
+              }
+            },
+            {
+              "_id": "f2336571-fe22-4a59-804d-ac2d9180bec3",
+              "type": "cardBlock",
+              "slots": {
+                "cardBlockInner": [
+                  {
+                    "_id": "811ae93f-74cd-4b9c-a409-165484ba82f0",
+                    "type": "flexContainer",
+                    "slots": {
+                      "container-inner": [
+                        {
+                          "_id": "db455b50-daf3-42f4-9ac0-31689f31d473",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Title"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "054d70a1-81a1-4d6f-808e-dfc25f003db2",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Title"
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "6c368187-73a0-471c-a116-5f13024eaea3",
+                          "type": "card",
+                          "variant": "",
+                          "parameters": {
+                            "image": {
+                              "type": "image",
+                              "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Title"
+                            },
+                            "buttonStyle": {
+                              "type": "tp-button-style-parameter",
+                              "value": "primary"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "flexWrap": {
+                        "type": "select",
+                        "value": "wrap"
+                      },
+                      "direction": {
+                        "type": "select",
+                        "value": "column"
+                      },
+                      "alignItems": {
+                        "type": "select",
+                        "value": "center"
+                      },
+                      "justifyContent": {
+                        "type": "select",
+                        "value": ""
+                      }
+                    }
+                  }
+                ]
+              },
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Cards in a vertical Flex container"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:30.323752+00:00",
+      "modified": "2023-05-03T12:00:55.538561+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Heroes",
+        "_id": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
+        "_slug": "heroes",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "f87c0e6a-47ec-4b44-a271-6ed26841cd61",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Hero components (3 variants)"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "A classic hero component with optional image, button and multiple variants."
+                }
+              }
+            },
+            {
+              "_id": "c2e11a2c-e714-45a6-9b07-78e2b3e1aa10",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Background Image Hero variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Very compelling human generated text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            },
+            {
+              "_id": "8658506c-a098-49ff-8f98-4708e2f63f40",
+              "type": "hero",
+              "variant": "imageLeft",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Image Left Hero variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Very compelling human generated text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Secondary CTA"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            },
+            {
+              "_id": "6b102555-9ce3-4410-a1e5-8a5b00084385",
+              "type": "hero",
+              "variant": "imageRight",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Image Right Hero variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Very compelling human generated text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Secondary CTA"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-04T08:07:10.829566+00:00",
+      "modified": "2023-05-17T08:04:36.391033+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Content Blocks",
+        "_id": "92392ca2-400b-46bb-8892-b775a150b124",
+        "_slug": "content-blocks",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "437a7144-db99-42ca-805a-9e13f033eed2",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Content Block components"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Components with optional title and text parameters."
+                }
+              }
+            },
+            {
+              "_id": "3f8ee9ee-9893-49f7-aecd-45678282b7dc",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "118115df-54db-48f4-b1d1-e12d0890983a",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "Content Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "h1 title"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h1"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "c9cdf04e-eb23-457d-8b95-26d0fdb7ecb2",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "Content Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "h2 title"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h2"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "2de03b12-517d-4e7f-b2e9-a02df2436701",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "Content Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "h3 title"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h3"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "788c4c00-e400-4e3c-a88f-99ac5b80c55e",
+                    "type": "content",
+                    "parameters": {
+                      "text": {
+                        "type": "text",
+                        "value": "Content Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text\nContent Block Component Text"
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "h4"
+                      },
+                      "titleStyle": {
+                        "type": "tp-title-style-parameter",
+                        "value": "h4"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Title Variants"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Light"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:28.884889+00:00",
+      "modified": "2023-05-03T11:56:53.607923+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Accordions",
+        "_id": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
+        "_slug": "accordions",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "7744d2cb-72d5-4904-a701-18b33f7c99da",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Accordion component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "with expandable text"
+                }
+              }
+            },
+            {
+              "_id": "ebf7db31-5e01-4874-afb4-d8d668457ba8",
+              "type": "accordion",
+              "slots": {
+                "items": [
+                  {
+                    "_id": "a4119d6b-efcb-47c3-97cc-f81e4250c505",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Accordion item #1 title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Some accordion item text"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "0bd4bf43-76d0-44d9-9903-78d206aa74d4",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Accordion item #2 title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Some accordion item text"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "18f9d84b-690d-4e0a-94e8-c3f596b212c7",
+                    "type": "accordionItem",
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Accordion item #3 title"
+                      },
+                      "description": {
+                        "type": "text",
+                        "value": "Some accordion item text"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Accordion title"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Some compelling text"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-02T13:55:29.452014+00:00",
+      "modified": "2023-05-03T12:12:21.755711+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Calls to Action",
+        "_id": "f932829e-a28d-447c-9905-ebdd46b3aceb",
+        "_slug": "calls-to-action",
+        "type": "page",
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "55dd3fe6-899d-4ebe-8d78-8f986d85ca47",
+              "type": "hero",
+              "variant": "backgroundImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Call to Action components"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Contains two titles and two buttons with the ability to select the style for each button."
+                }
+              }
+            },
+            {
+              "_id": "8288c966-298b-46e0-811f-782c4d0c9a8a",
+              "type": "callToAction",
+              "variant": "",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Default Call to Action variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Compelling CTA text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow Text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Components"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "secondaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "link"
+                }
+              }
+            },
+            {
+              "_id": "c30a7c04-c2a8-4161-a49e-e2968e69389b",
+              "type": "callToAction",
+              "variant": "alignLeft",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Align Left Call to Action variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Compelling CTA text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow Text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "accent"
+                }
+              }
+            },
+            {
+              "_id": "87c62c67-79f2-4c6f-9a6e-ad8c07f1210e",
+              "type": "callToAction",
+              "variant": "alignRight",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Align Right Call to Action variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h3"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Compelling CTA text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow Text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Home"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "link"
+                },
+                "secondaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "accent"
+                }
+              }
+            },
+            {
+              "_id": "6180b276-ea09-4a19-bd8c-5f1756249f9b",
+              "type": "callToAction",
+              "variant": "featured",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Featured Call to Action variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Compelling CTA text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "secondary"
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Secondary CTA"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/calls-to-action",
+                    "type": "projectMapNode",
+                    "nodeId": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "secondaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "link"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-05-04T08:07:12.689165+00:00",
+      "modified": "2023-05-17T08:54:08.263688+00:00",
+      "pattern": false
+    }
+  ],
+  "projectMaps": [
+    {
+      "id": "40535f31-cdc1-4ac3-bb4d-2a008493b431",
+      "name": "Sitemap",
+      "baseUrl": "https://component-starter-kit.vercel.app",
+      "default": true
+    }
+  ],
+  "projectMapNodes": [
+    {
+      "id": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+      "name": "Home",
+      "type": "composition",
+      "data": {},
+      "order": 500,
+      "path": "/",
+      "compositionId": "552a8a72-6c47-4993-bc45-f0148ea79904",
+      "pathSegment": "",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+      "name": "Components",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/components",
+      "compositionId": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
+      "pathSegment": "components",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
+      "name": "Accordions",
+      "type": "composition",
+      "data": {},
+      "order": 100,
+      "path": "/components/accordions",
+      "compositionId": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
+      "pathSegment": "accordions",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "408d4a7c-de15-4029-9521-05df3f20bdfc",
+      "name": "Calls to Action",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/components/calls-to-action",
+      "compositionId": "f932829e-a28d-447c-9905-ebdd46b3aceb",
+      "pathSegment": "calls-to-action",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+      "name": "Card Blocks",
+      "type": "composition",
+      "data": {},
+      "order": 200,
+      "path": "/components/card-blocks",
+      "compositionId": "80717902-05d3-49ac-8a8b-017b31074615",
+      "pathSegment": "card-blocks",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "435b7a20-cf5a-4e2a-a1ce-f674fe7ee044",
+      "name": "Content Blocks",
+      "type": "composition",
+      "data": {},
+      "order": 0,
+      "path": "/components/content-blocks",
+      "compositionId": "92392ca2-400b-46bb-8892-b775a150b124",
+      "pathSegment": "content-blocks",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a",
+      "name": "Featured Callouts",
+      "type": "composition",
+      "data": {},
+      "order": 300,
+      "path": "/components/featured-callouts",
+      "compositionId": "2abca1c9-4c73-431f-a661-0b1bd3d7f49a",
+      "pathSegment": "featured-callouts",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+      "name": "Heroes",
+      "type": "composition",
+      "data": {},
+      "order": 500,
+      "path": "/components/heroes",
+      "compositionId": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
+      "pathSegment": "heroes",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "ef6da4d5-cb59-4d0a-91b5-1c8021bbb786",
+      "name": "Images",
+      "type": "composition",
+      "data": {},
+      "order": 600,
+      "path": "/components/images",
+      "compositionId": "2516f825-86ee-4e8a-a686-8ce31e49adb6",
+      "pathSegment": "images",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+      "name": "Layouts & Containers",
+      "type": "composition",
+      "data": {},
+      "order": -100,
+      "path": "/components/layouts-container",
+      "compositionId": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
+      "pathSegment": "layouts-container",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    }
+  ]
+}
