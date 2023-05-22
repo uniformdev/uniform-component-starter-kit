@@ -3,7 +3,7 @@
     {
       "id": "accordion",
       "name": "Accordion",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_accordion_r6nkha.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770721/component-starter-kit/component-icons/new/CSKicon_accordion_qjni0k.svg",
       "parameters": [
         {
           "id": "title",
@@ -44,13 +44,13 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.52026+00:00",
-      "updated": "2023-05-10T11:26:18.324231+00:00"
+      "created": "2023-05-22T15:31:21.265823+00:00",
+      "updated": "2023-05-22T15:52:10.585583+00:00"
     },
     {
       "id": "accordionItem",
       "name": "Accordion Item",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462239/component-starter-kit/component-icons/icon_navgroup_rff7ep.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_accordionitem_xx7ixj.svg",
       "parameters": [
         {
           "id": "title",
@@ -77,13 +77,13 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.358824+00:00",
-      "updated": "2023-05-10T11:26:20.020687+00:00"
+      "created": "2023-05-22T15:31:21.380786+00:00",
+      "updated": "2023-05-22T15:52:30.24036+00:00"
     },
     {
       "id": "callToAction",
       "name": "Call to Action",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_CTA_jttsck.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_CTA_niecwu.svg",
       "parameters": [
         {
           "id": "eyebrowText",
@@ -170,8 +170,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:05.279393+00:00",
-      "updated": "2023-05-10T11:26:18.617451+00:00",
+      "created": "2023-05-22T15:31:21.188497+00:00",
+      "updated": "2023-05-22T15:53:04.243991+00:00",
       "variants": [
         {
           "id": "alignLeft",
@@ -190,7 +190,7 @@
     {
       "id": "card",
       "name": "Card",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_card_lls0kn.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770718/component-starter-kit/component-icons/new/CSKicon_card_wtsqok.svg",
       "parameters": [
         {
           "id": "title",
@@ -287,8 +287,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.305376+00:00",
-      "updated": "2023-05-10T11:26:18.396844+00:00",
+      "created": "2023-05-22T15:31:22.726344+00:00",
+      "updated": "2023-05-22T15:53:23.810219+00:00",
       "variants": [
         {
           "id": "backgroundImage",
@@ -299,7 +299,7 @@
     {
       "id": "cardBlock",
       "name": "Card Block",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123189/component-starter-kit/component-icons/icon_cardblock_dszbli.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770718/component-starter-kit/component-icons/new/CSKicon_cardblock_zki53l.svg",
       "parameters": [
         {
           "id": "title",
@@ -368,8 +368,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.408688+00:00",
-      "updated": "2023-05-10T11:26:19.767778+00:00",
+      "created": "2023-05-22T15:31:22.809273+00:00",
+      "updated": "2023-05-22T15:53:47.896798+00:00",
       "variants": [
         {
           "id": "carousel",
@@ -380,7 +380,7 @@
     {
       "id": "container",
       "name": "Container",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_container_p810p1.svg",
       "parameters": [
         {
           "id": "title",
@@ -462,13 +462,13 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.338726+00:00",
-      "updated": "2023-05-10T11:26:20.044438+00:00"
+      "created": "2023-05-22T15:31:22.681807+00:00",
+      "updated": "2023-05-22T15:54:09.460342+00:00"
     },
     {
       "id": "content",
       "name": "Content",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_content_e4lqbm.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770885/component-starter-kit/component-icons/new/CSKicon_content_bhinpv.svg",
       "parameters": [
         {
           "id": "title",
@@ -501,13 +501,13 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.340244+00:00",
-      "updated": "2023-05-10T11:26:18.753633+00:00"
+      "created": "2023-05-22T15:31:22.660374+00:00",
+      "updated": "2023-05-22T15:54:57.783472+00:00"
     },
     {
       "id": "feature",
       "name": "Feature",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_feature_uutgds.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_feature_eklppa.svg",
       "parameters": [
         {
           "id": "title",
@@ -541,13 +541,13 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:05.247648+00:00",
-      "updated": "2023-05-10T11:26:18.651136+00:00"
+      "created": "2023-05-22T15:31:22.641558+00:00",
+      "updated": "2023-05-22T15:55:15.771198+00:00"
     },
     {
       "id": "featuredCallout",
       "name": "Featured Callout",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_featured_callout_hnbgqq.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770719/component-starter-kit/component-icons/new/CSKicon_featured_callout_jjkvix.svg",
       "parameters": [
         {
           "id": "eyebrowText",
@@ -606,8 +606,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:05.960446+00:00",
-      "updated": "2023-05-10T11:26:20.135419+00:00",
+      "created": "2023-05-22T15:31:21.06825+00:00",
+      "updated": "2023-05-22T15:55:28.417588+00:00",
       "variants": [
         {
           "id": "imageRight",
@@ -618,7 +618,7 @@
     {
       "id": "flexContainer",
       "name": "Flex Container",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "icon": "view-day",
       "parameters": [
         {
           "id": "direction",
@@ -757,13 +757,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.105269+00:00",
-      "updated": "2023-05-10T11:26:19.060044+00:00"
+      "created": "2023-05-22T15:31:22.720372+00:00",
+      "updated": "2023-05-22T15:55:54.989307+00:00"
     },
     {
       "id": "footer",
       "name": "Footer",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_footer_zky5zt.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_footer_s663bz.svg",
       "parameters": [
         {
           "id": "logo",
@@ -807,13 +807,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.626252+00:00",
-      "updated": "2023-05-10T11:26:18.881835+00:00"
+      "created": "2023-05-22T15:31:22.683658+00:00",
+      "updated": "2023-05-22T15:56:10.254246+00:00"
     },
     {
       "id": "footerSection",
       "name": "Footer Section",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_footer_zky5zt.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_footer_s663bz.svg",
       "parameters": [
         {
           "id": "title",
@@ -840,13 +840,13 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:06.876197+00:00",
-      "updated": "2023-05-10T11:26:18.936405+00:00"
+      "created": "2023-05-22T15:31:23.012412+00:00",
+      "updated": "2023-05-22T15:56:20.608344+00:00"
     },
     {
       "id": "globalTemplate",
       "name": "Global Template",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_localization_buuv8g.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_localization_aw3ca5.svg",
       "parameters": [
         {
           "id": "theme",
@@ -932,13 +932,13 @@
         }
       ],
       "canBeComposition": true,
-      "created": "2023-05-04T08:07:06.988738+00:00",
-      "updated": "2023-05-10T11:26:19.294428+00:00"
+      "created": "2023-05-22T15:31:22.965312+00:00",
+      "updated": "2023-05-22T15:58:58.5008+00:00"
     },
     {
       "id": "gridContainer",
       "name": "Grid Container",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462238/component-starter-kit/component-icons/icon_container_ntjvqn.svg",
+      "icon": "display-grid",
       "parameters": [
         {
           "id": "columnsCount",
@@ -1012,13 +1012,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.011676+00:00",
-      "updated": "2023-05-10T11:26:19.446357+00:00"
+      "created": "2023-05-22T15:31:21.544744+00:00",
+      "updated": "2023-05-22T15:56:51.8011+00:00"
     },
     {
       "id": "header",
       "name": "Header",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_header_wlbufi.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770719/component-starter-kit/component-icons/new/CSKicon_header_eu1k3o.svg",
       "parameters": [
         {
           "id": "logo",
@@ -1053,13 +1053,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.029725+00:00",
-      "updated": "2023-05-10T11:26:19.189108+00:00"
+      "created": "2023-05-22T15:31:22.857847+00:00",
+      "updated": "2023-05-22T15:57:05.399395+00:00"
     },
     {
       "id": "hero",
       "name": "Hero",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682462239/component-starter-kit/component-icons/icon_hero_fmo9cb.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_hero_odv0f6.svg",
       "parameters": [
         {
           "id": "eyebrowText",
@@ -1151,8 +1151,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.049074+00:00",
-      "updated": "2023-05-10T11:26:20.330025+00:00",
+      "created": "2023-05-22T15:31:21.465747+00:00",
+      "updated": "2023-05-22T15:59:12.84707+00:00",
       "variants": [
         {
           "id": "imageLeft",
@@ -1171,7 +1171,7 @@
     {
       "id": "iconLink",
       "name": "Icon Link",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_headerlink_ntjsoi.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_headerlink_coaugo.svg",
       "parameters": [
         {
           "id": "icon",
@@ -1195,13 +1195,13 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.089631+00:00",
-      "updated": "2023-05-10T11:26:19.458572+00:00"
+      "created": "2023-05-22T15:31:22.878642+00:00",
+      "updated": "2023-05-22T15:58:48.654709+00:00"
     },
     {
       "id": "image",
       "name": "Image",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_image_qpjmsm.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_image_wxugja.svg",
       "parameters": [
         {
           "id": "src",
@@ -1235,13 +1235,13 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.115492+00:00",
-      "updated": "2023-05-10T11:26:19.59886+00:00"
+      "created": "2023-05-22T15:31:22.866549+00:00",
+      "updated": "2023-05-22T15:57:45.143411+00:00"
     },
     {
       "id": "navigationGroup",
       "name": "Navigation Group",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_navgroup_f9l4xs.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770719/component-starter-kit/component-icons/new/CSKicon_novgroup1_vwfbxn.svg",
       "parameters": [
         {
           "id": "title",
@@ -1274,13 +1274,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.218205+00:00",
-      "updated": "2023-05-10T11:26:19.696059+00:00"
+      "created": "2023-05-22T15:31:22.822966+00:00",
+      "updated": "2023-05-22T15:58:17.807045+00:00"
     },
     {
       "id": "navigationLink",
       "name": "Navigation Link",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123188/component-starter-kit/component-icons/icon_headerlink_ntjsoi.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_headerlink_coaugo.svg",
       "parameters": [
         {
           "id": "title",
@@ -1305,8 +1305,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.463317+00:00",
-      "updated": "2023-05-10T11:26:20.309856+00:00",
+      "created": "2023-05-22T15:31:22.219368+00:00",
+      "updated": "2023-05-22T15:58:40.374448+00:00",
       "variants": [
         {
           "id": "header",
@@ -1321,7 +1321,7 @@
     {
       "id": "page",
       "name": "Page",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682123190/component-starter-kit/component-icons/icon_card_lls0kn.svg",
+      "icon": "file-document",
       "parameters": [],
       "useTeamPermissions": true,
       "slots": [
@@ -1355,13 +1355,13 @@
         "type": "page"
       },
       "canBeComposition": true,
-      "created": "2023-05-04T08:07:07.883822+00:00",
-      "updated": "2023-05-10T11:26:19.830382+00:00"
+      "created": "2023-05-22T15:31:22.948951+00:00",
+      "updated": "2023-05-22T16:00:51.408033+00:00"
     },
     {
       "id": "sectionOneColumn",
       "name": "Section - One Column",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_onecolumn_cje5zt.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770719/component-starter-kit/component-icons/new/CSKicon_one_column_gulojq.svg",
       "parameters": [
         {
           "id": "width",
@@ -1425,13 +1425,13 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.66646+00:00",
-      "updated": "2023-05-10T11:26:20.234741+00:00"
+      "created": "2023-05-22T15:31:22.226038+00:00",
+      "updated": "2023-05-22T15:59:54.155065+00:00"
     },
     {
       "id": "sectionTwoColumns",
       "name": "Section - Two columns",
-      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1682558240/component-starter-kit/component-icons/icon_twocolumn_it9ghk.svg",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770717/component-starter-kit/component-icons/new/CSKicon_twocolumn_hrz6cv.svg",
       "parameters": [
         {
           "id": "columnWidths",
@@ -1475,8 +1475,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.681259+00:00",
-      "updated": "2023-05-10T11:26:20.012813+00:00"
+      "created": "2023-05-22T15:31:22.486285+00:00",
+      "updated": "2023-05-22T15:59:30.217187+00:00"
     }
   ],
   "compositions": [
@@ -3354,7 +3354,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See all Heros"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3394,7 +3394,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See all CTAs"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3430,7 +3430,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See all Featured Callouts"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3462,7 +3462,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See All Card Blocks"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3494,7 +3494,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See All Accordions"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3526,7 +3526,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See All Content Blocks"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3562,7 +3562,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See all images"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3594,7 +3594,7 @@
                             },
                             "buttonCopy": {
                               "type": "text",
-                              "value": "See All Containers"
+                              "value": "See all"
                             },
                             "buttonLink": {
                               "type": "link",
@@ -3745,8 +3745,8 @@
           ]
         }
       },
-      "created": "2023-05-04T08:07:12.167443+00:00",
-      "modified": "2023-05-17T08:52:40.596058+00:00",
+      "created": "2023-05-22T15:31:26.142375+00:00",
+      "modified": "2023-05-22T15:33:29.964893+00:00",
       "pattern": false
     },
     {
