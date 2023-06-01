@@ -11,7 +11,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -20,7 +20,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "10"
           }
@@ -44,8 +44,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.265823+00:00",
-      "updated": "2023-05-22T15:52:10.585583+00:00"
+      "created": "2023-05-04T08:07:06.52026+00:00",
+      "updated": "2023-05-25T13:26:24.626733+00:00"
     },
     {
       "id": "accordionItem",
@@ -58,7 +58,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -67,7 +67,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "10"
           }
@@ -77,8 +77,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.380786+00:00",
-      "updated": "2023-05-22T15:52:30.24036+00:00"
+      "created": "2023-05-04T08:07:06.358824+00:00",
+      "updated": "2023-05-25T13:26:35.2915+00:00"
     },
     {
       "id": "callToAction",
@@ -98,7 +98,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "3"
           }
@@ -116,7 +116,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "6"
           }
@@ -170,8 +170,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.188497+00:00",
-      "updated": "2023-05-22T15:53:04.243991+00:00",
+      "created": "2023-05-04T08:07:05.279393+00:00",
+      "updated": "2023-05-25T13:27:16.405692+00:00",
       "variants": [
         {
           "id": "alignLeft",
@@ -198,7 +198,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -287,8 +287,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.726344+00:00",
-      "updated": "2023-05-22T15:53:23.810219+00:00",
+      "created": "2023-05-04T08:07:06.305376+00:00",
+      "updated": "2023-05-25T13:28:00.039055+00:00",
       "variants": [
         {
           "id": "backgroundImage",
@@ -515,7 +515,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -524,7 +524,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -533,7 +533,7 @@
           "type": "image",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         }
       ],
@@ -541,8 +541,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.641558+00:00",
-      "updated": "2023-05-22T15:55:15.771198+00:00"
+      "created": "2023-05-04T08:07:05.247648+00:00",
+      "updated": "2023-05-25T13:28:57.997147+00:00"
     },
     {
       "id": "featuredCallout",
@@ -562,7 +562,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -578,7 +578,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "10"
           }
@@ -606,8 +606,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.06825+00:00",
-      "updated": "2023-05-22T15:55:28.417588+00:00",
+      "created": "2023-05-04T08:07:05.960446+00:00",
+      "updated": "2023-05-25T13:29:17.037158+00:00",
       "variants": [
         {
           "id": "imageRight",
@@ -821,7 +821,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         }
       ],
@@ -840,8 +840,8 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:23.012412+00:00",
-      "updated": "2023-05-22T15:56:20.608344+00:00"
+      "created": "2023-05-04T08:07:06.876197+00:00",
+      "updated": "2023-05-25T13:29:37.050052+00:00"
     },
     {
       "id": "globalTemplate",
@@ -996,7 +996,7 @@
                 "value": "12"
               }
             ],
-            "required": true
+            "required": false
           }
         }
       ],
@@ -1012,8 +1012,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.544744+00:00",
-      "updated": "2023-05-22T15:56:51.8011+00:00"
+      "created": "2023-05-04T08:07:07.011676+00:00",
+      "updated": "2023-05-25T13:29:54.255975+00:00"
     },
     {
       "id": "header",
@@ -1074,7 +1074,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true,
+            "required": false,
             "multiline": true,
             "linesCount": "3"
           }
@@ -1151,8 +1151,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.465747+00:00",
-      "updated": "2023-05-22T15:59:12.84707+00:00",
+      "created": "2023-05-04T08:07:07.049074+00:00",
+      "updated": "2023-05-25T13:30:19.162682+00:00",
       "variants": [
         {
           "id": "imageLeft",
@@ -1179,7 +1179,7 @@
           "type": "image",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -1188,15 +1188,15 @@
           "type": "link",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         }
       ],
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.878642+00:00",
-      "updated": "2023-05-22T15:58:48.654709+00:00"
+      "created": "2023-05-04T08:07:07.089631+00:00",
+      "updated": "2023-05-25T13:30:54.468118+00:00"
     },
     {
       "id": "image",
@@ -1209,7 +1209,7 @@
           "type": "image",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -1219,7 +1219,7 @@
           "helpText": "",
           "typeConfig": {
             "min": "1",
-            "required": true
+            "required": false
           }
         },
         {
@@ -1235,8 +1235,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.866549+00:00",
-      "updated": "2023-05-22T15:57:45.143411+00:00"
+      "created": "2023-05-04T08:07:07.115492+00:00",
+      "updated": "2023-05-25T13:31:07.155519+00:00"
     },
     {
       "id": "navigationGroup",
@@ -1249,7 +1249,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -1274,8 +1274,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.822966+00:00",
-      "updated": "2023-05-22T15:58:17.807045+00:00"
+      "created": "2023-05-04T08:07:07.218205+00:00",
+      "updated": "2023-05-25T13:31:17.039709+00:00"
     },
     {
       "id": "navigationLink",
@@ -1288,7 +1288,7 @@
           "type": "text",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         },
         {
@@ -1297,7 +1297,7 @@
           "type": "link",
           "helpText": "",
           "typeConfig": {
-            "required": true
+            "required": false
           }
         }
       ],
@@ -1305,8 +1305,8 @@
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.219368+00:00",
-      "updated": "2023-05-22T15:58:40.374448+00:00",
+      "created": "2023-05-04T08:07:07.463317+00:00",
+      "updated": "2023-05-25T13:31:32.855781+00:00",
       "variants": [
         {
           "id": "header",
@@ -1395,7 +1395,7 @@
                 "value": "3/4"
               }
             ],
-            "required": true
+            "required": false
           }
         },
         {
@@ -1425,8 +1425,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.226038+00:00",
-      "updated": "2023-05-22T15:59:54.155065+00:00"
+      "created": "2023-05-04T08:07:07.66646+00:00",
+      "updated": "2023-05-25T13:31:46.618407+00:00"
     },
     {
       "id": "sectionTwoColumns",
@@ -5096,44 +5096,11 @@
     {
       "id": "40535f31-cdc1-4ac3-bb4d-2a008493b431",
       "name": "Sitemap",
-      "baseUrl": "https://component-starter-kit.vercel.app",
+      "baseUrl": "http://localhost:3000",
       "default": true
     }
   ],
   "projectMapNodes": [
-    {
-      "id": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
-      "name": "Home",
-      "type": "composition",
-      "data": {},
-      "order": 500,
-      "path": "/",
-      "compositionId": "552a8a72-6c47-4993-bc45-f0148ea79904",
-      "pathSegment": "",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
-    {
-      "id": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
-      "name": "Components",
-      "type": "composition",
-      "data": {},
-      "order": 400,
-      "path": "/components",
-      "compositionId": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
-      "pathSegment": "components",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
-    {
-      "id": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
-      "name": "Accordions",
-      "type": "composition",
-      "data": {},
-      "order": 100,
-      "path": "/components/accordions",
-      "compositionId": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
-      "pathSegment": "accordions",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
     {
       "id": "408d4a7c-de15-4029-9521-05df3f20bdfc",
       "name": "Calls to Action",
@@ -5143,17 +5110,6 @@
       "path": "/components/calls-to-action",
       "compositionId": "f932829e-a28d-447c-9905-ebdd46b3aceb",
       "pathSegment": "calls-to-action",
-      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-    },
-    {
-      "id": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
-      "name": "Card Blocks",
-      "type": "composition",
-      "data": {},
-      "order": 200,
-      "path": "/components/card-blocks",
-      "compositionId": "80717902-05d3-49ac-8a8b-017b31074615",
-      "pathSegment": "card-blocks",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
@@ -5168,6 +5124,39 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
+      "id": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+      "name": "Home",
+      "type": "composition",
+      "data": {},
+      "order": 500,
+      "path": "/",
+      "compositionId": "552a8a72-6c47-4993-bc45-f0148ea79904",
+      "pathSegment": "",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "626584c7-ec70-45eb-80ee-a4cda36d0a58",
+      "name": "Accordions",
+      "type": "composition",
+      "data": {},
+      "order": 100,
+      "path": "/components/accordions",
+      "compositionId": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
+      "pathSegment": "accordions",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
+      "name": "Card Blocks",
+      "type": "composition",
+      "data": {},
+      "order": 200,
+      "path": "/components/card-blocks",
+      "compositionId": "80717902-05d3-49ac-8a8b-017b31074615",
+      "pathSegment": "card-blocks",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
       "id": "97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a",
       "name": "Featured Callouts",
       "type": "composition",
@@ -5179,14 +5168,25 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
-      "id": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
-      "name": "Heroes",
+      "id": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+      "name": "Layouts & Containers",
       "type": "composition",
       "data": {},
-      "order": 500,
-      "path": "/components/heroes",
-      "compositionId": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
-      "pathSegment": "heroes",
+      "order": -100,
+      "path": "/components/layouts-container",
+      "compositionId": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
+      "pathSegment": "layouts-container",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
+      "id": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+      "name": "Components",
+      "type": "composition",
+      "data": {},
+      "order": 400,
+      "path": "/components",
+      "compositionId": "6a9389b6-3495-4a08-b6d6-f0dce73e4606",
+      "pathSegment": "components",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
@@ -5201,14 +5201,14 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
-      "id": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
-      "name": "Layouts & Containers",
+      "id": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+      "name": "Heroes",
       "type": "composition",
       "data": {},
-      "order": -100,
-      "path": "/components/layouts-container",
-      "compositionId": "466dc82d-75e7-4e2f-b365-d6cc343befc0",
-      "pathSegment": "layouts-container",
+      "order": 500,
+      "path": "/components/heroes",
+      "compositionId": "8e0d242a-4ba6-45c5-a57a-e13f0b2cc193",
+      "pathSegment": "heroes",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     }
   ]

@@ -17,7 +17,6 @@ export type Props = ComponentProps<{
   title: string;
   description: string;
   buttonCopy: string;
-  renderedFromCarousel?: boolean;
   buttonLink: Types.ProjectMapLink;
   buttonStyle: Types.ButtonStyles;
 }>;
@@ -92,7 +91,6 @@ const Card: FC<Props> = ({
   buttonCopy,
   buttonLink,
   buttonStyle,
-  renderedFromCarousel,
   component: { variant } = {},
 }) => {
   const imageUrl = getImageUrl(image);
@@ -118,7 +116,7 @@ const Card: FC<Props> = ({
         )}
       </figure>
       <div className="card-body">
-        {Boolean(badge && !renderedFromCarousel) && (
+        {Boolean(badge) && (
           <UniformText
             parameterId="badge"
             as="div"

@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import CardBlock, { CardBlockProps } from '@/canvas/CardBlock';
+import Carousel from '@/canvas/Carousel';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 
@@ -51,7 +52,18 @@ const BLOCK_CARDS = [
   },
 ];
 
-const renderStory = (args: CardBlockProps) => {
+const CAROUSEL_CARDS = [
+  ...BLOCK_CARDS,
+  {
+    image:
+      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+    title: 'Leverage existing technology investments ',
+    description:
+      'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
+  },
+];
+
+const renderDefaultStory = (args: CardBlockProps) => {
   const fakeComposition = createFakeCompositionData('cardBlock', args, {
     cardBlockInner: BLOCK_CARDS.map(card => ({
       type: 'card',
@@ -65,8 +77,28 @@ const renderStory = (args: CardBlockProps) => {
   );
 };
 
+const renderCarouselStory = (args: CardBlockProps) => {
+  const fakeComposition = createFakeCompositionData('cardBlock', args, {
+    cardBlockInner: CAROUSEL_CARDS.map(card => ({
+      type: 'card',
+      parameters: createUniformParameter(card),
+    })),
+  });
+  return (
+    <UniformComposition data={fakeComposition}>
+      <Carousel {...args} />
+    </UniformComposition>
+  );
+};
+
 export const Default: Story = {
   args: BASE_PROPS,
   argTypes,
-  render: renderStory,
+  render: renderDefaultStory,
+};
+
+export const CarouselBlock: Story = {
+  args: BASE_PROPS,
+  argTypes,
+  render: renderCarouselStory,
 };

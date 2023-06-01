@@ -23,7 +23,6 @@ export const getCanvasClient = () => {
     apiHost,
     projectId,
     edgeApiHost,
-    bypassCache: true, // FixMe. Will be removed https://linear.app/uniform/issue/UNI-2339/composition-update-webhooks-are-arriving-before-the-data-is-available
   });
 
   return client;

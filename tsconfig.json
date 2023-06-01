@@ -13,7 +13,7 @@
     "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "noEmit": true,
-    "module": "esnext",
+    "module": "commonjs",
     "resolveJsonModule": true,
     "jsx": "preserve",
     "incremental": true,
