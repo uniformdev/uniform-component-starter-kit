@@ -28,6 +28,7 @@ module.exports = {
 
           'info-content': '#E4E4E4',
           'base-300': '#372f26',
+          'base-200': '#b69066',
         },
         uniform: {
           primary: '#0052ED',
@@ -40,6 +41,7 @@ module.exports = {
           'accent-content': '#FFFFFF',
 
           'info-content': '#99C6FF',
+          'base-200': '#6b8ff0',
           'base-300': '#001242',
         },
       },

@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
@@ -10,8 +11,21 @@ type HeaderProps = ComponentProps<{
   theme: string;
 }>;
 
-const Header: FC<HeaderProps> = ({ logo }) => (
-  <div className="bg-base-300 text-primary-content">
+enum HeaderVariants {
+  Light = 'light',
+}
+
+const getHeaderColor = (variant?: string) => {
+  switch (variant) {
+    case HeaderVariants.Light:
+      return 'bg-base-200';
+    default:
+      return 'bg-base-300';
+  }
+};
+
+const Header: FC<HeaderProps> = ({ logo, component }) => (
+  <div className={classNames('text-primary-content', getHeaderColor(component.variant))}>
     <BaseContainer>
       <div className="navbar px-0">
         <div className="navbar-start w-full">
@@ -48,9 +62,12 @@ const Header: FC<HeaderProps> = ({ logo }) => (
   </div>
 );
 
-registerUniformComponent({
-  type: 'header',
-  component: Header,
+[undefined, HeaderVariants.Light].forEach(variantId => {
+  registerUniformComponent({
+    type: 'header',
+    component: Header,
+    variantId,
+  });
 });
 
 export default Header;

@@ -26,7 +26,7 @@ At the end, you will end up with a locally running starter and Uniform project w
    ```bash
    UNIFORM_API_KEY=
    UNIFORM_PROJECT_ID=
-   UNIFORM_PREVIEW_SECRET=uniform
+   UNIFORM_PREVIEW_SECRET=hello-world
    ```
 2. `npm install`
 3. Run `npm run uniform:push` and `npm run uniform:publish` to push the content from this starter kit (components, compositions and project map) into your project.
@@ -44,7 +44,7 @@ At the end, you will end up with a locally running starter and Uniform project w
 This integration brings Canvas UI extensions for theme management and new useful visual parameters to help control the look and feel of your components.
 
 1. Open your Uniform project.
-1. Head over to Settings > Canvas and configure preview to http://your-host/api/preview?secret=uniform
+1. Head over to Settings > Canvas and configure preview to http://your-host/api/preview?secret=hello-world
 1. Navigate to `Manage Integrations` tab and Install `Theme Pack` integration
 1. Select on of the themes or create your own and press `Save`
 1. Go to Compositions list, find the "Global" composition and open it in Canvas.

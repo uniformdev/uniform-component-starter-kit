@@ -4,6 +4,7 @@ import './CallToAction';
 import './Card';
 import './CardBlock';
 import './ContentBlock';
+import './Divider';
 import './Feature';
 import './FeaturedCallout';
 import './Hero';

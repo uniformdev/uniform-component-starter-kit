@@ -505,6 +505,59 @@
       "updated": "2023-05-22T15:54:57.783472+00:00"
     },
     {
+      "id": "divider",
+      "name": "Divider",
+      "icon": "math-divide",
+      "parameters": [
+        {
+          "id": "colorStyle",
+          "name": "Color Style",
+          "type": "tp-color-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "thickness",
+          "name": "Thickness",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "1px",
+                "value": "1px"
+              },
+              {
+                "text": "2px",
+                "value": "2px"
+              },
+              {
+                "text": "3px",
+                "value": "3px"
+              },
+              {
+                "text": "5px",
+                "value": "5px"
+              },
+              {
+                "text": "7px",
+                "value": "7px"
+              },
+              {
+                "text": "10px",
+                "value": "10px"
+              }
+            ]
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "canBeComposition": false,
+      "created": "2023-06-02T10:31:58.902614+00:00",
+      "updated": "2023-06-06T10:57:38.507934+00:00"
+    },
+    {
       "id": "feature",
       "name": "Feature",
       "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1684770720/component-starter-kit/component-icons/new/CSKicon_feature_eklppa.svg",
@@ -517,6 +570,13 @@
           "typeConfig": {
             "required": false
           }
+        },
+        {
+          "id": "link",
+          "name": "Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
         },
         {
           "id": "description",
@@ -542,7 +602,7 @@
       "titleParameter": "title",
       "canBeComposition": false,
       "created": "2023-05-04T08:07:05.247648+00:00",
-      "updated": "2023-05-25T13:28:57.997147+00:00"
+      "updated": "2023-06-02T11:31:08.948972+00:00"
     },
     {
       "id": "featuredCallout",
@@ -906,6 +966,13 @@
               }
             ]
           }
+        },
+        {
+          "id": "favicon",
+          "name": "Favicon",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
         }
       ],
       "useTeamPermissions": true,
@@ -932,8 +999,8 @@
         }
       ],
       "canBeComposition": true,
-      "created": "2023-05-22T15:31:22.965312+00:00",
-      "updated": "2023-05-22T15:58:58.5008+00:00"
+      "created": "2023-05-04T08:07:06.988738+00:00",
+      "updated": "2023-06-02T11:24:18.176547+00:00"
     },
     {
       "id": "gridContainer",
@@ -1053,8 +1120,14 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.857847+00:00",
-      "updated": "2023-05-22T15:57:05.399395+00:00"
+      "created": "2023-05-04T08:07:07.029725+00:00",
+      "updated": "2023-06-06T10:25:37.482917+00:00",
+      "variants": [
+        {
+          "id": "light",
+          "name": "Light"
+        }
+      ]
     },
     {
       "id": "hero",
@@ -1344,7 +1417,8 @@
             "$test",
             "$loop",
             "$personalization",
-            "image"
+            "image",
+            "divider"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -1355,8 +1429,8 @@
         "type": "page"
       },
       "canBeComposition": true,
-      "created": "2023-05-22T15:31:22.948951+00:00",
-      "updated": "2023-05-22T16:00:51.408033+00:00"
+      "created": "2023-05-04T08:07:07.883822+00:00",
+      "updated": "2023-06-02T10:33:18.654087+00:00"
     },
     {
       "id": "sectionOneColumn",
@@ -1531,6 +1605,11 @@
                   "value": "#99C6FF"
                 },
                 {
+                  "name": "base-200",
+                  "label": "Base 200",
+                  "value": "#6b8ff0"
+                },
+                {
                   "name": "base-300",
                   "label": "Base 300",
                   "value": "#001242"
@@ -1539,6 +1618,10 @@
               "themeName": "uniform",
               "themeLabel": "Uniform"
             }
+          },
+          "favicon": {
+            "type": "image",
+            "value": "https://res.cloudinary.com/uniformdev/image/upload/v1684913299/component-starter-kit/canvas-images/LaunchArt_LI_uikeod.png"
           }
         },
         "slots": {
@@ -1909,7 +1992,7 @@
         }
       },
       "created": "2023-05-04T08:07:12.075689+00:00",
-      "modified": "2023-05-17T08:56:16.521643+00:00",
+      "modified": "2023-06-02T11:26:59.970839+00:00",
       "pattern": false
     },
     {
@@ -2084,6 +2167,15 @@
                         "type": "image",
                         "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg"
                       },
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "/",
+                          "type": "projectMapNode",
+                          "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                          "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                        }
+                      },
                       "title": {
                         "type": "text",
                         "value": "Title"
@@ -2239,8 +2331,8 @@
           ]
         }
       },
-      "created": "2023-05-02T13:55:30.560245+00:00",
-      "modified": "2023-05-03T12:16:21.551859+00:00",
+      "created": "2023-05-04T08:07:12.039253+00:00",
+      "modified": "2023-06-02T11:31:36.038513+00:00",
       "pattern": false
     },
     {

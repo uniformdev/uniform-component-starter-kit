@@ -1,10 +1,10 @@
 import { FC } from 'react';
+import classNames from 'classnames';
 import { UniformComposition, UniformSlot } from '@uniformdev/canvas-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 import { HeroVariant } from '@/canvas/Hero';
 import ThemeProvider from './ThemeProvider';
 import Container, { PaddingSize } from './Container';
-import classNames from 'classnames';
 
 type PageProps = {
   preview: boolean;

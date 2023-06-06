@@ -9,6 +9,10 @@ declare namespace Types {
 
   type ButtonStyles = 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
 
+  type AvailableColor = 'primary' | 'secondary' | 'accent' | 'base-200' | 'base-300';
+
+  type AvailableThickness = '1px' | '2px' | '3px' | '5px' | '7px' | '10px';
+
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
   type VerticalAlignment = 'top' | 'center' | 'bottom';
