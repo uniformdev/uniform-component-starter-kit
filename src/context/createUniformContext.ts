@@ -1,12 +1,24 @@
-import { Context, ManifestV2, enableContextDevTools, enableDebugConsoleLogDrain } from '@uniformdev/context';
+import { NextPageContext } from 'next';
+import {
+  Context,
+  ManifestV2,
+  ContextPlugin,
+  enableDebugConsoleLogDrain,
+  enableContextDevTools,
+} from '@uniformdev/context';
+import { NextCookieTransitionDataStore } from '@uniformdev/context-next';
+
 import manifest from './manifest.json';
 
-// Docs: https://docs.uniform.app/guides/classification/activation
-const createUniformContext = () =>
-  new Context({
+export default function createUniformContext(serverContext?: NextPageContext): Context {
+  const plugins: ContextPlugin[] = [enableContextDevTools(), enableDebugConsoleLogDrain('debug')];
+  const context = new Context({
     defaultConsent: true,
     manifest: manifest as ManifestV2,
-    plugins: [enableContextDevTools(), enableDebugConsoleLogDrain('debug')],
+    transitionStore: new NextCookieTransitionDataStore({
+      serverContext,
+    }),
+    plugins: plugins,
   });
-
-export default createUniformContext;
+  return context;
+}

@@ -1,6 +1,9 @@
 declare namespace Types {
   type ProjectMapLink = {
     path: string;
+    type?: string;
+    isRoot?: boolean;
+    name?: string;
   };
 
   type CloudinaryImage = {
@@ -11,7 +14,7 @@ declare namespace Types {
 
   type AvailableColor = 'primary' | 'secondary' | 'accent' | 'base-200' | 'base-300';
 
-  type AvailableThickness = '1px' | '2px' | '3px' | '5px' | '7px' | '10px';
+  type AvailableOpacity = 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100;
 
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 

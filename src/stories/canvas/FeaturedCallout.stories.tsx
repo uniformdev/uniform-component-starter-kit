@@ -30,6 +30,9 @@ const FEATURES = [
   {
     icon: 'https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg',
     title: 'Understand your customers',
+    link: {
+      path: '/your-link',
+    },
     description: 'Then explain the first point breifly in one or two lines.',
   },
   {

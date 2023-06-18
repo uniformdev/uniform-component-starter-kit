@@ -1,58 +1,72 @@
-import { withUniformGetStaticProps, withUniformGetStaticPaths } from '@uniformdev/canvas-next/project-map';
+import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
 import Page from '@/components/Page';
-import { getCanvasClient, getCompositionById, getProjectMapClient, globalCompositionId } from '@/utils/canvas';
+import { getBreadcrumbs, getCompositionById, globalCompositionId, mergeGlobalCompositions } from '@/utils/canvas';
+import { withUniformGetServerSideProps } from '@uniformdev/canvas-next/route';
 
-export const getStaticProps = withUniformGetStaticProps({
-  param: 'slug',
-  preview: process.env.NODE_ENV === 'development',
-  client: getCanvasClient(),
-  callback: async (context, composition) => {
-    if (!composition) {
-      return {
-        notFound: true,
-        revalidate: 31536000,
-      };
-    }
-
+// SSR configuration is enabled by default
+export const getServerSideProps = withUniformGetServerSideProps({
+  requestOptions: {
+    state: process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+  },
+  handleComposition: async (routeResponse, _context) => {
+    const { composition } = routeResponse.compositionApiResponse || {};
+    const breadcrumbs = await getBreadcrumbs(composition._id, Boolean(_context.preview));
     // fetching global composition for header navigation and footer
-    const globalComposition = await getCompositionById(globalCompositionId, context as { preview: boolean });
-
+    const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });
     // merging two compositions
-    const pageComposition = {
-      _name: composition?._name,
-      _id: composition?._id,
-      type: composition?.type,
-      parameters: {
-        ...composition?.parameters,
-        ...globalComposition?.parameters,
-      },
-      slots: {
-        header: globalComposition?.slots?.header ?? null,
-        pageContent: composition?.slots?.pageContent ?? null,
-        footer: globalComposition?.slots?.footer ?? null,
-      },
-    };
-
+    const pageComposition = mergeGlobalCompositions(composition, globalComposition);
     return {
       props: {
-        preview: Boolean(context.preview),
-        composition: pageComposition || null,
+        preview: Boolean(_context.preview),
+        data: pageComposition || null,
+        context: {
+          breadcrumbs,
+        },
       },
-      revalidate: 31536000,
     };
   },
 });
 
-export const getStaticPaths = async () => {
-  const nodePaths = await withUniformGetStaticPaths({
-    preview: process.env.NODE_ENV === 'development',
-    client: getProjectMapClient(),
-  });
-  const { paths } = await nodePaths();
-  return {
-    paths,
-    fallback: 'blocking',
-  };
-};
-
 export default Page;
+
+// Enable if switching to SSG mode
+// import { withUniformGetStaticProps, withUniformGetStaticPaths } from '@uniformdev/canvas-next/route';
+// import { getProjectMapClient } from '@/utils/canvas';
+
+// SSG configuration - replace getServerSideProps with this if you want this mode
+// export const getStaticProps = withUniformGetStaticProps({
+//   requestOptions: {
+//     state: process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+//   },
+//   param: 'slug',
+//   handleComposition: async (routeResponse, _context) => {
+//     const { composition } = routeResponse.compositionApiResponse || {};
+//     const breadcrumbs = await getBreadcrumbs(composition._id, Boolean(_context.preview));
+//     // fetching global composition for header navigation and footer
+//     const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });
+//     // merging two compositions
+//     const pageComposition = mergeGlobalCompositions(composition, globalComposition);
+//     return {
+//       props: {
+//         preview: Boolean(_context.preview),
+//         data: pageComposition || null,
+//         context: {
+//           breadcrumbs,
+//         },
+//       },
+//     };
+//   },
+// });
+
+// SSG configuration, add this function
+// export const getStaticPaths = async () => {
+//   const nodePaths = await withUniformGetStaticPaths({
+//     preview: process.env.NODE_ENV === 'development',
+//     client: getProjectMapClient(),
+//   });
+//   const { paths } = await nodePaths();
+//   return {
+//     paths,
+//     fallback: 'blocking',
+//   };
+// };

@@ -1,6 +1,6 @@
 import { RootComponentInstance, ComponentInstance } from '@uniformdev/canvas';
 
-export const createUniformParameter = (params: Record<string, string>) =>
+export const createUniformParameter = (params: Record<string, unknown>) =>
   Object.keys(params).reduce((acc, key) => {
     return {
       ...acc,

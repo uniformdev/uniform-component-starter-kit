@@ -30,6 +30,13 @@ const config: StorybookConfig = {
           ...alias,
           '@': path.resolve(__dirname, '../src/'),
         },
+        fallback: {
+          ...config.resolve?.fallback,
+          zlib: false,
+          fs: false,
+          stream: false,
+          os: false,
+        },
       },
     };
   },

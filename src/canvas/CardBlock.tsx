@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import { UniformSlot, registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
 import { getTextClass } from '@/utils';
 import Button from '@/components/Button';
-import Carousel from '@/canvas/Carousel';
+import CardBlockCarousel from '@/canvas/CardBlockCarousel';
 
 export type CardBlockProps = ComponentProps<{
   title: string;
@@ -42,7 +42,7 @@ const CardBlock: FC<CardBlockProps> = ({
 [undefined, CardBlockVariants.Carousel].forEach(variantId => {
   registerUniformComponent({
     type: 'cardBlock',
-    component: variantId === CardBlockVariants.Carousel ? Carousel : CardBlock,
+    component: variantId === CardBlockVariants.Carousel ? CardBlockCarousel : CardBlock,
     variantId,
   });
 });

@@ -4,7 +4,7 @@ import { registerUniformComponent, ComponentProps } from '@uniformdev/canvas-rea
 
 type Props = ComponentProps<{
   colorStyle: Types.AvailableColor;
-  thickness: Types.AvailableThickness;
+  thickness: number;
 }>;
 
 const getDividerColorStyle = (style: Types.AvailableColor) => {
@@ -24,27 +24,8 @@ const getDividerColorStyle = (style: Types.AvailableColor) => {
   }
 };
 
-const getDividerThickness = (thickness: Types.AvailableThickness) => {
-  switch (thickness) {
-    case '1px':
-      return 'border-[1px]';
-    case '2px':
-      return 'border-[2px]';
-    case '3px':
-      return 'border-[3px]';
-    case '5px':
-      return 'border-[5px]';
-    case '7px':
-      return 'border-[7px]';
-    case '10px':
-      return 'border-[10px]';
-    default:
-      return 'border-[1px]';
-  }
-};
-
 const Divider: FC<Props> = ({ colorStyle, thickness }) => (
-  <div className={classNames('w-full', getDividerColorStyle(colorStyle), getDividerThickness(thickness))} />
+  <div className={classNames('w-full', getDividerColorStyle(colorStyle))} style={{ borderWidth: `${thickness}px` }} />
 );
 
 export default Divider;

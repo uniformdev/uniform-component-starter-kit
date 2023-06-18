@@ -9,6 +9,7 @@ import { getImageUrl } from '@/utils';
 type HeaderProps = ComponentProps<{
   logo: string | Types.CloudinaryImage;
   theme: string;
+  linksAlignment: Types.HorizontalAlignment;
 }>;
 
 enum HeaderVariants {
@@ -24,7 +25,20 @@ const getHeaderColor = (variant?: string) => {
   }
 };
 
-const Header: FC<HeaderProps> = ({ logo, component }) => (
+const getLinksAlignment = (alignment?: Types.HorizontalAlignment) => {
+  switch (alignment) {
+    case 'left':
+      return 'justify-start';
+    case 'center':
+      return 'justify-center';
+    case 'right':
+      return 'justify-end';
+    default:
+      return 'justify-end';
+  }
+};
+
+const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => (
   <div className={classNames('text-primary-content', getHeaderColor(component.variant))}>
     <BaseContainer>
       <div className="navbar px-0">
@@ -50,12 +64,14 @@ const Header: FC<HeaderProps> = ({ logo, component }) => (
           <Link className="ml-8 lg:ml-0" href="/">
             <Image src={getImageUrl(logo)} width="270" height="43" alt="Uniform" />
           </Link>
+          <div className={classNames('hidden lg:flex w-full', getLinksAlignment(linksAlignment))}>
+            <ul className="menu menu-horizontal px-1 shrink-0">
+              <UniformSlot name="links" />
+            </ul>
+          </div>
         </div>
-        <div className="navbar-end hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 shrink-0">
-            <UniformSlot name="links" />
-          </ul>
-          <UniformSlot name="iconLinks" />
+        <div className="hidden lg:flex">
+          <UniformSlot name="iconLinks" emptyPlaceholder={null} />
         </div>
       </div>
     </BaseContainer>

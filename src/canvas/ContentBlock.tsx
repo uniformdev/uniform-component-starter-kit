@@ -10,7 +10,7 @@ export type Props = ComponentProps<{
 }>;
 
 const ContentBlock: FC<Props> = ({ titleStyle: TitleTag = 'h1', text }) => (
-  <div className={'items-center justify-between w-full gap-5 mx-auto lg:flex-nowrap rounded-xl'}>
+  <div className={'text-secondary-content items-center justify-between w-full gap-5 mx-auto lg:flex-nowrap rounded-xl'}>
     <UniformText parameterId="title" as={TitleTag} className={classNames('font-medium', getTextClass(TitleTag))} />
     {Boolean(text) ? <UniformText parameterId="text" as={TitleTag} className="py-6 text-xl" /> : null}
   </div>

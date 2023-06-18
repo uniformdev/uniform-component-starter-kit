@@ -1,4 +1,5 @@
 import { CanvasClient, CANVAS_PUBLISHED_STATE, CANVAS_DRAFT_STATE } from '@uniformdev/canvas';
+import type { RootComponentInstance } from '@uniformdev/canvas';
 import { ProjectMapClient } from '@uniformdev/project-map';
 
 export const globalCompositionId = '179bfdf3-be89-4d63-949c-53a58f3eff19';
@@ -63,3 +64,40 @@ export const getCompositionById = async (id: string, context: { preview: boolean
 
 export const getState = (preview: boolean | undefined) =>
   process.env.NODE_ENV === 'development' || preview ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE;
+
+export const getBreadcrumbs = async (compositionId: string, preview?: boolean) => {
+  const projectMapClient = getProjectMapClient();
+
+  const { nodes: projectMapNodes } = await projectMapClient.getNodes({
+    compositionId: compositionId,
+    includeAncestors: true,
+    state: getState(preview),
+  });
+
+  return projectMapNodes?.map(node => ({
+    name: node.name,
+    path: node.path,
+    type: node.type,
+    isRoot: node.path === '/',
+  }));
+};
+
+export const mergeGlobalCompositions = (
+  composition: RootComponentInstance,
+  globalComposition: RootComponentInstance | undefined
+): RootComponentInstance => {
+  const slots: any = {};
+  slots['header'] = globalComposition?.slots?.header ?? null;
+  slots['pageContent'] = composition?.slots?.pageContent ?? null;
+  slots['footer'] = globalComposition?.slots?.footer ?? null;
+  return {
+    _name: composition?._name,
+    _id: composition?._id,
+    type: composition?.type,
+    parameters: {
+      ...composition?.parameters,
+      ...globalComposition?.parameters,
+    },
+    slots,
+  };
+};

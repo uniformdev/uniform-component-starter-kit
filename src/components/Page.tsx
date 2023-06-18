@@ -9,10 +9,10 @@ import Container, { PaddingSize } from './Container';
 type PageProps = {
   preview: boolean;
   useUniformComposition?: boolean;
-  composition: RootComponentInstance;
+  data: RootComponentInstance;
 };
 
-const Page: FC<PageProps> = ({ composition, useUniformComposition }) => (
+const Page: FC<PageProps> = ({ data: composition, useUniformComposition }) => (
   <UniformComposition data={composition} behaviorTracking="onLoad">
     <ThemeProvider data={composition} useUniformComposition={useUniformComposition}>
       {/* Docs: https://docs.uniform.app/reference/packages/uniformdev-canvas-react#slot */}

@@ -13,7 +13,7 @@ const IconLink: FC<IconLinkProps> = ({ icon, link }) => {
   const imageUrl = getImageUrl(icon);
   if (!link || !imageUrl) return null;
   return (
-    <Link target="_blank" className="[&:not(:last-child)]:mr-3" href={link?.path || '#'}>
+    <Link target="_blank" className="[&:not(:last-child)]:mr-3 shrink-0" href={link?.path || '#'}>
       <Image src={imageUrl} width="32" height="32" alt="iconLink" />
     </Link>
   );

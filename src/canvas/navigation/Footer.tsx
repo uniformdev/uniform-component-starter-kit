@@ -1,12 +1,13 @@
 import { FC } from 'react';
 import Image from 'next/image';
-import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import { UniformSlot, ComponentProps, registerUniformComponent, UniformRichText } from '@uniformdev/canvas-react';
 import { BaseContainer } from '@/components/Container';
 import { getImageUrl } from '@/utils';
 
 type FooterProps = ComponentProps<{
   logo: string | Types.CloudinaryImage;
   copyright: string;
+  footerText?: string;
 }>;
 
 const Footer: FC<FooterProps> = ({ logo, copyright }) => {
@@ -20,6 +21,9 @@ const Footer: FC<FooterProps> = ({ logo, copyright }) => {
             className="footer-content text-secondary-content"
             dangerouslySetInnerHTML={{ __html: `2023 ${copyright}` }}
           />
+          <div className="footer-content text-secondary-content">
+            <UniformRichText parameterId="footerText" />
+          </div>
         </div>
         <UniformSlot name="section" />
         <div className="flex">
