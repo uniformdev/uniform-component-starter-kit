@@ -739,10 +739,14 @@
         {
           "id": "thickness",
           "name": "Thickness",
-          "type": "tp-size-parameter",
+          "type": "tp-slider-parameter",
           "helpText": "",
           "typeConfig": {
             "step": 1,
+            "type": "steps",
+            "unit": "px",
+            "options": [],
+            "maxValue": 10,
             "minValue": 1
           }
         }
@@ -750,8 +754,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-06-02T10:31:58.902614+00:00",
-      "updated": "2023-06-13T10:24:55.080197+00:00"
+      "created": "2023-06-20T09:53:49.756337+00:00",
+      "updated": "2023-06-22T05:15:30.673435+00:00"
     },
     {
       "id": "feature",
@@ -1481,14 +1485,75 @@
           "type": "tp-button-style-parameter",
           "helpText": "",
           "typeConfig": null
+        },
+        {
+          "id": "group_imageSettings",
+          "name": "Image Settings",
+          "type": "group",
+          "typeConfig": {
+            "collapsed": true,
+            "childrenParams": [
+              "objectFit",
+              "overlayColor",
+              "overlayOpacity"
+            ]
+          }
+        },
+        {
+          "id": "objectFit",
+          "name": "Object Fit",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Contain",
+                "value": "contain"
+              },
+              {
+                "text": "Cover",
+                "value": "cover"
+              },
+              {
+                "text": "Fill",
+                "value": "fill"
+              },
+              {
+                "text": "None",
+                "value": "none"
+              }
+            ]
+          }
+        },
+        {
+          "id": "overlayColor",
+          "name": "Overlay Color",
+          "type": "tp-color-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "overlayOpacity",
+          "name": "Overlay Opacity",
+          "type": "tp-slider-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "step": 10,
+            "type": "steps",
+            "unit": "px",
+            "units": "%",
+            "options": [],
+            "maxValue": 100,
+            "minValue": 0
+          }
         }
       ],
       "useTeamPermissions": true,
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:21.465747+00:00",
-      "updated": "2023-06-12T20:07:53.243006+00:00",
+      "created": "2023-05-04T08:07:07.049074+00:00",
+      "updated": "2023-06-23T13:55:18.885676+00:00",
       "variants": [
         {
           "id": "imageLeft",
@@ -1499,8 +1564,12 @@
           "name": "Image Right"
         },
         {
-          "id": "backgroundImage",
-          "name": "Background Image"
+          "id": "backgroundLightImage",
+          "name": "Background Light Image"
+        },
+        {
+          "id": "backgroundDarkImage",
+          "name": "Background Dark Image"
         }
       ]
     },
@@ -1595,11 +1664,16 @@
         {
           "id": "overlayOpacity",
           "name": "Overlay Opacity",
-          "type": "tp-opacity-parameter",
+          "type": "tp-slider-parameter",
           "helpText": "",
           "typeConfig": {
             "step": 10,
-            "maxValue": 100
+            "type": "steps",
+            "unit": "px",
+            "units": "%",
+            "options": [],
+            "maxValue": 100,
+            "minValue": 0
           }
         },
         {
@@ -1609,7 +1683,8 @@
           "typeConfig": {
             "childrenParams": [
               "borderWidth",
-              "borderColor"
+              "borderColor",
+              "borderRadius"
             ]
           }
         },
@@ -1623,11 +1698,50 @@
         {
           "id": "borderWidth",
           "name": "Border Width",
-          "type": "tp-size-parameter",
+          "type": "tp-slider-parameter",
           "helpText": "",
           "typeConfig": {
             "step": 1,
-            "maxValue": 10
+            "type": "steps",
+            "unit": "px",
+            "options": [],
+            "maxValue": 10,
+            "minValue": 0
+          }
+        },
+        {
+          "id": "borderRadius",
+          "name": "Border Radius",
+          "type": "tp-slider-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "step": 1,
+            "type": "custom",
+            "unit": "px",
+            "options": [
+              {
+                "label": "None",
+                "value": "none"
+              },
+              {
+                "label": "Small",
+                "value": "small"
+              },
+              {
+                "label": "Medium",
+                "value": "medium"
+              },
+              {
+                "label": "Large",
+                "value": "large"
+              },
+              {
+                "label": "Full",
+                "value": "full"
+              }
+            ],
+            "maxValue": 10,
+            "minValue": 0
           }
         },
         {
@@ -1639,7 +1753,34 @@
             "childrenParams": [
               "quality",
               "priority",
-              "fill"
+              "fill",
+              "objectFit"
+            ]
+          }
+        },
+        {
+          "id": "objectFit",
+          "name": "Object Fit",
+          "type": "select",
+          "helpText": "",
+          "typeConfig": {
+            "options": [
+              {
+                "text": "Contain",
+                "value": "contain"
+              },
+              {
+                "text": "Cover",
+                "value": "cover"
+              },
+              {
+                "text": "Fill",
+                "value": "fill"
+              },
+              {
+                "text": "None",
+                "value": "none"
+              }
             ]
           }
         },
@@ -1672,8 +1813,8 @@
       "slots": [],
       "titleParameter": "alt",
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.866549+00:00",
-      "updated": "2023-06-17T19:25:56.942116+00:00"
+      "created": "2023-05-04T08:07:07.115492+00:00",
+      "updated": "2023-06-22T11:22:36.541888+00:00"
     },
     {
       "id": "menuSection",
@@ -2383,7 +2524,8 @@
             "carousel",
             "breadcrumbs",
             "header",
-            "spacer"
+            "spacer",
+            "richText"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -2396,7 +2538,7 @@
           "pageContent": [
             {
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -2434,8 +2576,57 @@
       },
       "titleParameter": "pageTitle",
       "canBeComposition": true,
-      "created": "2023-05-22T15:31:22.948951+00:00",
-      "updated": "2023-06-17T20:17:51.331525+00:00"
+      "created": "2023-06-22T13:44:32.885374+00:00",
+      "updated": "2023-06-22T13:56:21.038131+00:00"
+    },
+    {
+      "id": "richText",
+      "name": "Rich Text",
+      "icon": "format-text",
+      "parameters": [
+        {
+          "id": "content",
+          "name": "Content",
+          "type": "richText",
+          "helpText": "",
+          "typeConfig": {
+            "elements": {
+              "builtIn": [
+                "h1",
+                "h2",
+                "h3",
+                "h4",
+                "h5",
+                "h6",
+                "unorderedList",
+                "orderedList",
+                "link",
+                "quote"
+              ]
+            },
+            "required": false,
+            "formatting": {
+              "builtIn": [
+                "bold",
+                "italic",
+                "underline"
+              ]
+            }
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "content",
+      "canBeComposition": false,
+      "created": "2023-06-22T23:46:06.626191+00:00",
+      "updated": "2023-06-23T00:15:41.527247+00:00",
+      "variants": [
+        {
+          "id": "light",
+          "name": "Light"
+        }
+      ]
     },
     {
       "id": "sectionOneColumn",
@@ -2565,11 +2756,14 @@
         {
           "id": "thickness",
           "name": "Thickness",
-          "type": "tp-size-parameter",
+          "type": "tp-slider-parameter",
           "helpText": "",
           "typeConfig": {
             "step": 10,
-            "maxValue": 100,
+            "type": "steps",
+            "unit": "px",
+            "options": [],
+            "maxValue": 250,
             "minValue": 10
           }
         }
@@ -2578,7 +2772,7 @@
       "slots": [],
       "canBeComposition": false,
       "created": "2023-06-13T10:36:32.371506+00:00",
-      "updated": "2023-06-13T10:47:35.623554+00:00",
+      "updated": "2023-06-26T10:59:51.2238+00:00",
       "variants": [
         {
           "id": "vertical",
@@ -3111,6 +3305,25 @@
                           }
                         },
                         {
+                          "_id": "d0b595c2-4035-47cb-b862-2911cb5a489e",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/carousels",
+                                "type": "projectMapNode",
+                                "nodeId": "fcebf9c9-e734-4e7b-94e5-be922d36de19",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Carousels"
+                            }
+                          }
+                        },
+                        {
                           "_id": "a1355659-e117-4054-847d-c099d2eea589",
                           "type": "navigationLink",
                           "parameters": {
@@ -3149,6 +3362,25 @@
                           }
                         },
                         {
+                          "_id": "e32f2c31-2751-4e72-adfa-393409f2bd3a",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/rich-texts",
+                                "type": "projectMapNode",
+                                "nodeId": "00a9c22c-831d-4a04-ac70-d9313cf74f5c",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Rich Texts "
+                            }
+                          }
+                        },
+                        {
                           "_id": "166bfbe5-10b0-4a59-a983-19b1816e03d5",
                           "type": "navigationLink",
                           "parameters": {
@@ -3183,25 +3415,6 @@
                             "title": {
                               "type": "text",
                               "value": "Images"
-                            }
-                          }
-                        },
-                        {
-                          "_id": "d0b595c2-4035-47cb-b862-2911cb5a489e",
-                          "type": "navigationLink",
-                          "parameters": {
-                            "link": {
-                              "type": "link",
-                              "value": {
-                                "path": "/components/carousels",
-                                "type": "projectMapNode",
-                                "nodeId": "fcebf9c9-e734-4e7b-94e5-be922d36de19",
-                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                              }
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Carousels"
                             }
                           }
                         },
@@ -3334,7 +3547,7 @@
         }
       },
       "created": "2023-05-22T15:31:26.19323+00:00",
-      "modified": "2023-06-18T00:08:07.99213+00:00",
+      "modified": "2023-06-23T00:16:52.430491+00:00",
       "pattern": false
     },
     {
@@ -3354,7 +3567,7 @@
             {
               "_id": "b923c09f-c005-4add-81d7-3dbf760c394b",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -3697,8 +3910,955 @@
           ]
         }
       },
-      "created": "2023-06-10T18:31:07.50699+00:00",
-      "modified": "2023-06-17T20:26:19.438654+00:00",
+      "created": "2023-06-22T13:44:37.861748+00:00",
+      "modified": "2023-06-22T13:50:32.13119+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Rich Texts",
+        "_id": "1dced7dd-66d4-428f-8ae2-fcfeb084027d",
+        "_slug": "rich-texts",
+        "type": "page",
+        "parameters": {
+          "pageTitle": {
+            "type": "text",
+            "value": "Component Starter Kit Rich Texts"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "3f8990b3-d44f-4ec4-9ff9-88c6847a8e4f",
+              "type": "hero",
+              "variant": "backgroundDarkImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Rich Text Component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Enhance your content with the versatile Rich Text component, allowing you to create visually appealing and formatted text with ease."
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "🤑"
+                }
+              }
+            },
+            {
+              "_id": "281e829c-86b8-4aa4-a7bf-cd51145955e3",
+              "type": "breadcrumbs",
+              "parameters": {
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "primary"
+                },
+                "displayRootNode": {
+                  "type": "checkbox",
+                  "value": true
+                }
+              }
+            },
+            {
+              "_id": "acaa0c03-e3cf-48ac-bc4f-e6f5ced5ce65",
+              "type": "callToAction",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Rich Text on a light background"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": ""
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Variant 1"
+                }
+              }
+            },
+            {
+              "_id": "25165a42-1009-4cdc-b5f4-57d9f6325778",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "924a8373-d14f-4c59-9555-11bb69336131",
+                    "type": "richText",
+                    "parameters": {
+                      "content": {
+                        "type": "richText",
+                        "value": {
+                          "root": {
+                            "type": "root",
+                            "format": "",
+                            "indent": 0,
+                            "version": 1,
+                            "children": [
+                              {
+                                "tag": "h1",
+                                "type": "heading",
+                                "format": "start",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Exploring the Power of Rich Text: Unlocking Creative Content Creation",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " components are ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "powerful tools",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 8,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " that enable users to enhance their content with a wide range of formatting options, transforming ordinary text into visually appealing and dynamic representations. With their versatile capabilities, Rich Text components offer numerous benefits to users, making them a valuable asset in various ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "contexts",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 2,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": ".",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "h2",
+                                "type": "heading",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Benefits",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "ol",
+                                "type": "list",
+                                "start": 1,
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "type": "listitem",
+                                    "value": 1,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Enhanced Visual Appeal: Rich Text components allow users to apply formatting options such as bold, italics, underlining, font styles, sizes, and colors, resulting in visually appealing and attractive content.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 2,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Improved Readability: By utilizing headings, subheadings, bullet points, and numbered lists, Rich Text components help users organize and structure their content, making it easier to read and comprehend.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 3,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Emphasizing Key Points: With features like bold and italics, Rich Text components enable users to highlight important information and emphasize key points, ensuring that crucial details stand out to the reader.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 4,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Flexibility in Content Organization: Rich Text components offer the flexibility to align text, adjust margins, create indents, and format paragraphs, allowing users to optimize the layout and presentation of their content.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  }
+                                ],
+                                "listType": "number",
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "h2",
+                                "type": "heading",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Why we should use it?",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "ul",
+                                "type": "list",
+                                "start": 1,
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "type": "listitem",
+                                    "value": 1,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Multimedia Integration: Users can seamlessly incorporate multimedia elements such as images, videos, audio files, hyperlinks, and interactive elements into their text, enriching the content and enhancing the user experience.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 2,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Collaboration and Version Control: Rich Text components facilitate collaborative work by allowing multiple users to make real-time edits, track changes, add comments, and revert to previous versions, promoting efficient teamwork and effective communication.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 3,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Accessibility: Rich Text components often support accessibility features such as screen readers, making the content accessible to individuals with disabilities and ensuring inclusivity.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 4,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Cross-Platform Compatibility: Rich Text components are compatible with various platforms and devices, allowing users to access and edit their content seamlessly across desktop computers, laptops, tablets, and mobile phones.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  }
+                                ],
+                                "listType": "bullet",
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Time Efficiency: With intuitive interfaces and user-friendly controls, Rich Text components simplify the content creation process, saving users time and effort in formatting and structuring their text.",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " components are also ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "user-friendly",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " and accessible. Users with limited technical knowledge can easily navigate the intuitive interface, and the formatting options are often presented in a familiar and straightforward manner. Additionally, ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "quote",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text components usually support screen readers and other assistive technologies, enabling individuals with disabilities to access and interact with the content effectively.",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "start",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [],
+                                "direction": "ltr"
+                              }
+                            ],
+                            "direction": "ltr"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Default RichText"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Medium"
+                }
+              }
+            },
+            {
+              "_id": "c641f515-571d-43bc-a444-25de824969c3",
+              "type": "callToAction",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Rich Text on a dark background"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": ""
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "variant 2"
+                }
+              }
+            },
+            {
+              "_id": "44b36650-bd7b-4dbc-9f8f-e002c1ce40c4",
+              "type": "container",
+              "slots": {
+                "container-inner": [
+                  {
+                    "_id": "5790c66a-fd85-484e-9ab5-2a5fb04a3212",
+                    "type": "richText",
+                    "variant": "light",
+                    "parameters": {
+                      "content": {
+                        "type": "richText",
+                        "value": {
+                          "root": {
+                            "type": "root",
+                            "format": "",
+                            "indent": 0,
+                            "version": 1,
+                            "children": [
+                              {
+                                "tag": "h1",
+                                "type": "heading",
+                                "format": "start",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Exploring the Power of Rich Text: Unlocking Creative Content Creation",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "type": "linebreak",
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " components are ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "powerful tools",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 8,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " that enable users to enhance their content with a wide range of formatting options, transforming ordinary text into visually appealing and dynamic representations. With their versatile capabilities, Rich Text components offer numerous benefits to users, making them a valuable asset in various contexts.",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "h2",
+                                "type": "heading",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Benefits",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "ol",
+                                "type": "list",
+                                "start": 1,
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "type": "listitem",
+                                    "value": 1,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Enhanced Visual Appeal: Rich Text components allow users to apply formatting options such as bold, italics, underlining, font styles, sizes, and colors, resulting in visually appealing and attractive content.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 2,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Improved Readability: By utilizing headings, subheadings, bullet points, and numbered lists, Rich Text components help users organize and structure their content, making it easier to read and comprehend.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 3,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Emphasizing Key Points: With features like bold and italics, Rich Text components enable users to highlight important information and emphasize key points, ensuring that crucial details stand out to the reader.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 4,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Flexibility in Content Organization: Rich Text components offer the flexibility to align text, adjust margins, create indents, and format paragraphs, allowing users to optimize the layout and presentation of their content.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  }
+                                ],
+                                "listType": "number",
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [],
+                                "direction": null
+                              },
+                              {
+                                "tag": "h2",
+                                "type": "heading",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Why we should use it?",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "tag": "ul",
+                                "type": "list",
+                                "start": 1,
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "type": "listitem",
+                                    "value": 1,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Multimedia Integration: Users can seamlessly incorporate multimedia elements such as images, videos, audio files, hyperlinks, and interactive elements into their text, enriching the content and enhancing the user experience.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 2,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Collaboration and Version Control: Rich Text components facilitate collaborative work by allowing multiple users to make real-time edits, track changes, add comments, and revert to previous versions, promoting efficient teamwork and effective communication.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 3,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Accessibility: Rich Text components often support accessibility features such as screen readers, making the content accessible to individuals with disabilities and ensuring inclusivity.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  },
+                                  {
+                                    "type": "listitem",
+                                    "value": 4,
+                                    "format": "",
+                                    "indent": 0,
+                                    "version": 1,
+                                    "children": [
+                                      {
+                                        "mode": "normal",
+                                        "text": "Cross-Platform Compatibility: Rich Text components are compatible with various platforms and devices, allowing users to access and edit their content seamlessly across desktop computers, laptops, tablets, and mobile phones.",
+                                        "type": "text",
+                                        "style": "",
+                                        "detail": 0,
+                                        "format": 0,
+                                        "version": 1
+                                      }
+                                    ],
+                                    "direction": "ltr"
+                                  }
+                                ],
+                                "listType": "bullet",
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Time Efficiency: With intuitive interfaces and user-friendly controls, Rich Text components simplify the content creation process, saving users time and effort in formatting and structuring their text.",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " components are also ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": "user-friendly",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 1,
+                                    "version": 1
+                                  },
+                                  {
+                                    "mode": "normal",
+                                    "text": " and accessible. Users with limited technical knowledge can easily navigate the intuitive interface, and the formatting options are often presented in a familiar and straightforward manner. Additionally, ",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "quote",
+                                "format": "",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [
+                                  {
+                                    "mode": "normal",
+                                    "text": "Rich Text components usually support screen readers and other assistive technologies, enabling individuals with disabilities to access and interact with the content effectively.",
+                                    "type": "text",
+                                    "style": "",
+                                    "detail": 0,
+                                    "format": 0,
+                                    "version": 1
+                                  }
+                                ],
+                                "direction": "ltr"
+                              },
+                              {
+                                "type": "paragraph",
+                                "format": "start",
+                                "indent": 0,
+                                "version": 1,
+                                "children": [],
+                                "direction": "ltr"
+                              }
+                            ],
+                            "direction": "ltr"
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Dark RichText"
+                },
+                "backgroundType": {
+                  "type": "tp-background-type-parameter",
+                  "value": "Dark"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-06-22T23:46:09.115728+00:00",
+      "modified": "2023-06-23T00:20:22.888376+00:00",
       "pattern": false
     },
     {
@@ -3718,7 +4878,7 @@
             {
               "_id": "c3a0e58a-3fa2-4e52-b29c-62725cf8f824",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -3787,12 +4947,16 @@
                               "value": "300"
                             },
                             "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 0
+                              "type": "tp-slider-parameter",
+                              "value": "0px"
+                            },
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
                             },
                             "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 0
+                              "type": "tp-slider-parameter",
+                              "value": "0%"
                             }
                           }
                         },
@@ -3815,6 +4979,10 @@
                             "height": {
                               "type": "number",
                               "value": "300"
+                            },
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
                             }
                           }
                         },
@@ -3837,6 +5005,10 @@
                             "height": {
                               "type": "number",
                               "value": "200"
+                            },
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
                             }
                           }
                         }
@@ -3926,17 +5098,17 @@
                               "type": "number",
                               "value": "300"
                             },
-                            "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 0
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
                             },
                             "overlayColor": {
                               "type": "tp-color-style-parameter",
                               "value": "secondary"
                             },
                             "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 60
+                              "type": "tp-slider-parameter",
+                              "value": "60%"
                             }
                           }
                         },
@@ -3964,17 +5136,17 @@
                               "type": "tp-color-style-parameter",
                               "value": "secondary"
                             },
-                            "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 5
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "medium"
                             },
                             "overlayColor": {
                               "type": "tp-color-style-parameter",
                               "value": "base-200"
                             },
                             "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 50
+                              "type": "tp-slider-parameter",
+                              "value": "40%"
                             }
                           }
                         },
@@ -3998,13 +5170,17 @@
                               "type": "number",
                               "value": "200"
                             },
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "medium"
+                            },
                             "overlayColor": {
                               "type": "tp-color-style-parameter",
                               "value": "accent"
                             },
                             "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 50
+                              "type": "tp-slider-parameter",
+                              "value": "80%"
                             }
                           }
                         }
@@ -4099,12 +5275,12 @@
                               "value": "base-200"
                             },
                             "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 2
+                              "type": "tp-slider-parameter",
+                              "value": "9px"
                             },
-                            "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 0
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "full"
                             }
                           }
                         },
@@ -4133,12 +5309,12 @@
                               "value": "accent"
                             },
                             "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 3
+                              "type": "tp-slider-parameter",
+                              "value": "6px"
                             },
-                            "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 0
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "medium"
                             }
                           }
                         },
@@ -4167,12 +5343,12 @@
                               "value": "base-300"
                             },
                             "borderWidth": {
-                              "type": "tp-size-parameter",
-                              "value": 6
+                              "type": "tp-slider-parameter",
+                              "value": "7px"
                             },
-                            "overlayOpacity": {
-                              "type": "tp-opacity-parameter",
-                              "value": 0
+                            "borderRadius": {
+                              "type": "tp-slider-parameter",
+                              "value": "medium"
                             }
                           }
                         }
@@ -4213,12 +5389,22 @@
                   "value": "None"
                 }
               }
+            },
+            {
+              "_id": "510f6fc0-1b27-4844-8c12-0a2b77b946fc",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "80px"
+                }
+              }
             }
           ]
         }
       },
-      "created": "2023-05-22T15:31:25.066406+00:00",
-      "modified": "2023-06-17T20:26:36.559741+00:00",
+      "created": "2023-05-04T08:07:12.091515+00:00",
+      "modified": "2023-06-26T08:45:10.893981+00:00",
       "pattern": false
     },
     {
@@ -4242,7 +5428,7 @@
             {
               "_id": "485e7c34-89a0-4e6a-8d62-aa1a9ece02bf",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -4457,8 +5643,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.366853+00:00",
-      "modified": "2023-06-17T20:27:29.372073+00:00",
+      "created": "2023-06-22T13:44:37.969378+00:00",
+      "modified": "2023-06-22T13:49:46.755289+00:00",
       "pattern": false
     },
     {
@@ -4478,7 +5664,7 @@
             {
               "_id": "30aade7d-8148-4c88-855c-ac599e650a1c",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -4979,8 +6165,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:24.617696+00:00",
-      "modified": "2023-06-17T20:28:31.741107+00:00",
+      "created": "2023-06-22T13:44:37.628097+00:00",
+      "modified": "2023-06-22T13:51:54.874119+00:00",
       "pattern": false
     },
     {
@@ -5004,7 +6190,7 @@
             {
               "_id": "ef42e7ca-93f5-45c0-82b2-03d32dc99fc5",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -5226,8 +6412,8 @@
           ]
         }
       },
-      "created": "2023-06-10T20:00:26.93762+00:00",
-      "modified": "2023-06-17T20:25:18.073358+00:00",
+      "created": "2023-06-22T13:44:39.695794+00:00",
+      "modified": "2023-06-22T13:49:10.882045+00:00",
       "pattern": false
     },
     {
@@ -5286,7 +6472,7 @@
             {
               "_id": "1f352a25-7acb-4893-a11c-f06bd45f27ab",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -5825,8 +7011,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.151478+00:00",
-      "modified": "2023-06-17T20:20:40.52673+00:00",
+      "created": "2023-06-22T13:44:39.602369+00:00",
+      "modified": "2023-06-22T13:47:24.642203+00:00",
       "pattern": false
     },
     {
@@ -5854,7 +7040,7 @@
             {
               "_id": "899acb18-ca1c-4c7c-a90c-b02fd0621b5f",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -6316,6 +7502,38 @@
                               "value": "For all your CEO needs, oh, sorry SEO needs. All compositions have open graph meta-data, featuring fully dynamic og:image generation!"
                             }
                           }
+                        },
+                        {
+                          "_id": "1e4e6751-2759-4e11-94df-b7052946974b",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Rich Texts"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See all"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/rich-texts",
+                                "type": "projectMapNode",
+                                "nodeId": "00a9c22c-831d-4a04-ac70-d9313cf74f5c",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Enhance your content with the versatile Rich Text component, allowing you to create visually appealing and formatted text with ease."
+                            }
+                          }
                         }
                       ]
                     },
@@ -6349,29 +7567,6 @@
                     "type": "gridContainer",
                     "slots": {
                       "container-inner": [
-                        {
-                          "_id": "a97898f2-5316-46b3-8973-41d6053c6190",
-                          "type": "card",
-                          "variant": "backgroundImage",
-                          "parameters": {
-                            "badge": {
-                              "type": "text",
-                              "value": "Coming Soon"
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Rich Text"
-                            },
-                            "badgeStyle": {
-                              "type": "tp-badge-style-parameter",
-                              "value": "accent"
-                            },
-                            "description": {
-                              "type": "text",
-                              "value": "For that long-form content that nobody reads anymore."
-                            }
-                          }
-                        },
                         {
                           "_id": "d8f75f85-295d-471e-87eb-cb85146eecae",
                           "type": "card",
@@ -6493,8 +7688,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.142375+00:00",
-      "modified": "2023-06-17T19:42:18.606934+00:00",
+      "created": "2023-05-04T08:07:12.167443+00:00",
+      "modified": "2023-06-26T08:32:00.071208+00:00",
       "pattern": false
     },
     {
@@ -6514,7 +7709,7 @@
             {
               "_id": "22b79c2c-3eee-464d-be2a-a192131f38ff",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -6593,8 +7788,8 @@
               "type": "divider",
               "parameters": {
                 "thickness": {
-                  "type": "tp-size-parameter",
-                  "value": 1
+                  "type": "tp-slider-parameter",
+                  "value": "1px"
                 },
                 "colorStyle": {
                   "type": "tp-color-style-parameter",
@@ -6621,8 +7816,8 @@
               "type": "divider",
               "parameters": {
                 "thickness": {
-                  "type": "tp-size-parameter",
-                  "value": 10
+                  "type": "tp-slider-parameter",
+                  "value": "10px"
                 },
                 "colorStyle": {
                   "type": "tp-color-style-parameter",
@@ -6685,8 +7880,8 @@
               "type": "spacer",
               "parameters": {
                 "thickness": {
-                  "type": "tp-size-parameter",
-                  "value": 100
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
                 }
               }
             },
@@ -6751,8 +7946,8 @@
                     "variant": "vertical",
                     "parameters": {
                       "thickness": {
-                        "type": "tp-size-parameter",
-                        "value": 70
+                        "type": "tp-slider-parameter",
+                        "value": "90px"
                       }
                     }
                   },
@@ -6780,8 +7975,8 @@
           ]
         }
       },
-      "created": "2023-06-10T20:17:21.509327+00:00",
-      "modified": "2023-06-17T20:25:01.263417+00:00",
+      "created": "2023-06-22T13:44:38.679551+00:00",
+      "modified": "2023-06-22T13:50:06.046787+00:00",
       "pattern": false
     },
     {
@@ -6801,7 +7996,7 @@
             {
               "_id": "da299e8b-5554-41e5-aa62-40b468e5e024",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -7504,8 +8699,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.416759+00:00",
-      "modified": "2023-06-17T20:27:46.77314+00:00",
+      "created": "2023-06-22T13:44:39.190294+00:00",
+      "modified": "2023-06-22T13:49:21.312096+00:00",
       "pattern": false
     },
     {
@@ -7525,7 +8720,7 @@
             {
               "_id": "f87c0e6a-47ec-4b44-a271-6ed26841cd61",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -7566,7 +8761,7 @@
             {
               "_id": "c2e11a2c-e714-45a6-9b07-78e2b3e1aa10",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -7574,7 +8769,47 @@
                 },
                 "title": {
                   "type": "text",
-                  "value": "Background Image Hero variant"
+                  "value": "Background Dark Image Hero variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Very compelling human generated text"
+                },
+                "eyebrowText": {
+                  "type": "text",
+                  "value": "Eyebrow text"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Primary CTA"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/components/heroes",
+                    "type": "projectMapNode",
+                    "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            },
+            {
+              "_id": "3d70a978-47f9-487a-9a3b-55fb72f71b4b",
+              "type": "hero",
+              "variant": "backgroundLightImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.png"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Background Light Image Hero variant"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
@@ -7720,8 +8955,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.182608+00:00",
-      "modified": "2023-06-17T20:26:53.113105+00:00",
+      "created": "2023-06-22T13:44:39.963234+00:00",
+      "modified": "2023-06-22T13:46:33.953508+00:00",
       "pattern": false
     },
     {
@@ -7741,7 +8976,7 @@
             {
               "_id": "437a7144-db99-42ca-805a-9e13f033eed2",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -7872,8 +9107,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:24.624431+00:00",
-      "modified": "2023-06-17T20:28:18.056816+00:00",
+      "created": "2023-06-22T13:44:37.958873+00:00",
+      "modified": "2023-06-22T13:50:20.743991+00:00",
       "pattern": false
     },
     {
@@ -7893,7 +9128,7 @@
             {
               "_id": "5d2d4405-e658-4151-be24-e49e8eba0135",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -9953,12 +11188,22 @@
                   "value": "Medium"
                 }
               }
+            },
+            {
+              "_id": "97547805-d22b-44f2-a726-00d2146246eb",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "230px"
+                }
+              }
             }
           ]
         }
       },
-      "created": "2023-06-10T19:13:39.353126+00:00",
-      "modified": "2023-06-17T20:25:57.674854+00:00",
+      "created": "2023-06-09T08:49:55.002356+00:00",
+      "modified": "2023-06-26T11:01:02.617083+00:00",
       "pattern": false
     },
     {
@@ -9978,7 +11223,7 @@
             {
               "_id": "7744d2cb-72d5-4904-a701-18b33f7c99da",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -10079,8 +11324,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:26.643919+00:00",
-      "modified": "2023-06-17T20:28:01.095795+00:00",
+      "created": "2023-06-22T13:44:38.517239+00:00",
+      "modified": "2023-06-22T13:49:56.586695+00:00",
       "pattern": false
     },
     {
@@ -10100,7 +11345,7 @@
             {
               "_id": "55dd3fe6-899d-4ebe-8d78-8f986d85ca47",
               "type": "hero",
-              "variant": "backgroundImage",
+              "variant": "backgroundDarkImage",
               "parameters": {
                 "image": {
                   "type": "image",
@@ -10335,8 +11580,8 @@
           ]
         }
       },
-      "created": "2023-05-22T15:31:25.066407+00:00",
-      "modified": "2023-06-17T20:27:13.397549+00:00",
+      "created": "2023-06-22T13:44:40.163275+00:00",
+      "modified": "2023-06-22T13:45:51.607268+00:00",
       "pattern": false
     }
   ],
@@ -10348,6 +11593,17 @@
     }
   ],
   "projectMapNodes": [
+    {
+      "id": "00a9c22c-831d-4a04-ac70-d9313cf74f5c",
+      "name": "Rich Texts",
+      "type": "composition",
+      "data": {},
+      "order": -200,
+      "path": "/components/rich-texts",
+      "compositionId": "1dced7dd-66d4-428f-8ae2-fcfeb084027d",
+      "pathSegment": "rich-texts",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
     {
       "id": "408d4a7c-de15-4029-9521-05df3f20bdfc",
       "name": "Calls to Action",

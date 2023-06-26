@@ -25,7 +25,7 @@ const getDividerColorStyle = (style: Types.AvailableColor) => {
 };
 
 const Divider: FC<Props> = ({ colorStyle, thickness }) => (
-  <div className={classNames('w-full', getDividerColorStyle(colorStyle))} style={{ borderWidth: `${thickness}px` }} />
+  <div className={classNames('w-full', getDividerColorStyle(colorStyle))} style={{ borderWidth: thickness }} />
 );
 
 export default Divider;

@@ -8,8 +8,8 @@ type Props = ComponentProps<{
 
 const Accordion: FC<Props> = () => (
   <div className="text-secondary-content">
-    <UniformText parameterId="title" as="p" className="text-3xl font-extrabold pb-4" />
-    <UniformText parameterId="description" as="p" className="text-xl pb-6" />
+    <UniformText placeholder="Title goes here" parameterId="title" as="p" className="text-3xl font-extrabold pb-4" />
+    <UniformText placeholder="Description goes here" parameterId="description" as="p" className="text-xl pb-6" />
     <UniformSlot name="items" />
   </div>
 );

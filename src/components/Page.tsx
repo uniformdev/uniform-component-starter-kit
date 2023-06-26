@@ -23,12 +23,15 @@ const Page: FC<PageProps> = ({ data: composition, useUniformComposition }) => (
         {/* adding container with padding only to 1+ component in the content slot */}
         {({ key, child, component }) => {
           // Do not wrap container around the component if it is a container itself
-          if (component.type === 'container') return <>{child}</>;
+          if (['container', 'spacer'].includes(component.type)) return <>{child}</>;
 
           return (
             <Container
               className={classNames({
-                '!max-w-none !px-0': component.type === 'hero' && component.variant === HeroVariant.BackgroundImage,
+                '!max-w-none !px-0':
+                  component.type === 'hero' &&
+                  (component.variant === HeroVariant.BackgroundDarkImage ||
+                    component.variant === HeroVariant.BackgroundLightImage),
               })}
               // adding padding top only to 1+ component in the content slot
               paddingTop={key.toString().endsWith('-0') ? PaddingSize.None : PaddingSize.Small}

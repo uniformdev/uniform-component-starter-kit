@@ -16,6 +16,7 @@ const handler: NextApiHandler = async req => {
     return new ImageResponse(
       (
         <div tw="flex relative w-full h-full justify-center items-center">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
           {image && <img tw="absolute left-0 right-0 top-0 bottom-0" src={image} alt={title || 'og:image'} />}
           <div tw={classNames('text-white text-center text-7xl', { 'text-black': !image })}>{title}</div>
         </div>

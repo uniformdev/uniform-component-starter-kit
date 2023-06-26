@@ -1,7 +1,7 @@
 import { FC, Fragment, ReactElement, ReactNode } from 'react';
 import classNames from 'classnames';
 import MultiCarousel from 'react-multi-carousel';
-import { ComponentProps, UniformText, UniformSlot } from '@uniformdev/canvas-react';
+import { ComponentProps, UniformText, UniformSlot, useUniformCurrentComposition } from '@uniformdev/canvas-react';
 import CarouselButtons from '@/components/CarouselButtons';
 import Button from '@/components/Button';
 import { getTextClass } from '@/utils';
@@ -31,8 +31,9 @@ const defaultResponsiveData = {
   },
 };
 
-const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', description, buttonCopy, buttonLink, buttonStyle }) => {
+const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonStyle }) => {
   const children: ReactNode[] = [];
+  const { isContextualEditing } = useUniformCurrentComposition();
   return (
     <>
       {/*
@@ -53,10 +54,27 @@ const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', description, buttonC
       </UniformSlot>
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-10 text-secondary-content">
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
-          <UniformText parameterId="title" as={TitleTag} className={classNames('font-bold', getTextClass(TitleTag))} />
-          {Boolean(description) && <UniformText parameterId="description" as="p" className="sm:pr-8" />}
+          <UniformText
+            placeholder="Title goes here"
+            parameterId="title"
+            as={TitleTag}
+            className={classNames('font-bold', getTextClass(TitleTag))}
+          />
+          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="sm:pr-8" />
         </div>
-        {Boolean(buttonCopy && buttonLink) && <Button href={buttonLink.path} style={buttonStyle} copy={buttonCopy} />}
+        {Boolean(buttonLink) && (
+          <Button
+            href={buttonLink.path}
+            style={buttonStyle}
+            copy={
+              <UniformText
+                placeholder="Button copy goes here"
+                parameterId="buttonCopy"
+                onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+              />
+            }
+          />
+        )}
       </div>
       <MultiCarousel
         ssr

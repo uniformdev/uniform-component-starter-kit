@@ -35,7 +35,7 @@ const getGridColumnsClass = (columnsCount: Props['columnsCount']) => {
     case '12':
       return 'grid-cols-1 md:grid-cols-12';
     default:
-      return 'grid-cols-1 md:grid-cols-12';
+      return 'grid-cols-1';
   }
 };
 

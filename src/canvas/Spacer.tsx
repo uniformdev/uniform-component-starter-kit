@@ -13,7 +13,7 @@ export enum SpacerVariants {
 const Spacer: FC<Props> = ({ thickness, component }) => (
   <div
     className="w-full"
-    style={component?.variant === SpacerVariants.Vertical ? { width: `${thickness}px` } : { height: `${thickness}px` }}
+    style={component?.variant === SpacerVariants.Vertical ? { width: thickness } : { height: thickness }}
   />
 );
 

@@ -86,10 +86,6 @@ export const mergeGlobalCompositions = (
   composition: RootComponentInstance,
   globalComposition: RootComponentInstance | undefined
 ): RootComponentInstance => {
-  const slots: any = {};
-  slots['header'] = globalComposition?.slots?.header ?? null;
-  slots['pageContent'] = composition?.slots?.pageContent ?? null;
-  slots['footer'] = globalComposition?.slots?.footer ?? null;
   return {
     _name: composition?._name,
     _id: composition?._id,
@@ -98,6 +94,10 @@ export const mergeGlobalCompositions = (
       ...composition?.parameters,
       ...globalComposition?.parameters,
     },
-    slots,
+    slots: {
+      ...(Boolean(globalComposition?.slots?.header) && { header: globalComposition?.slots?.header }),
+      ...(Boolean(composition?.slots?.pageContent) && { pageContent: composition?.slots?.pageContent }),
+      ...(Boolean(globalComposition?.slots?.footer) && { footer: globalComposition?.slots?.footer }),
+    },
   };
 };

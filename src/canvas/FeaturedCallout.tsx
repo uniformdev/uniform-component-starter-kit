@@ -62,17 +62,19 @@ const FeaturedCallout: FC<Props> = ({
           <div className="flex flex-col w-full">
             {eyebrowText && (
               <UniformText
+                placeholder="Eyebrow text goes here"
                 parameterId="eyebrowText"
                 as="div"
                 className="text-sm font-bold tracking-wider uppercase text-primary my-3"
               />
             )}
             <UniformText
+              placeholder="Title goes here"
               parameterId="title"
               as={TitleTag}
               className={classNames('font-bold', getTextClass(TitleTag))}
             />
-            <UniformText parameterId="description" as="p" className="py-6" />
+            <UniformText placeholder="Description goes here" parameterId="description" as="p" className="py-6" />
           </div>
           <div className="w-full">
             <UniformSlot name="feature" />

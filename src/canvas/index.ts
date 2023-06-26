@@ -12,6 +12,7 @@ import './FeaturedCallout';
 import './Hero';
 import './Image';
 import './Spacer';
+import './RichText';
 import './navigation/Footer';
 import './navigation/FooterSection';
 import './navigation/Header';

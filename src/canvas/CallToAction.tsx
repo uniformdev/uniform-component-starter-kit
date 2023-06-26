@@ -1,6 +1,11 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
+import {
+  registerUniformComponent,
+  useUniformCurrentComposition,
+  ComponentProps,
+  UniformText,
+} from '@uniformdev/canvas-react';
 import Button from '@/components/Button';
 import { getTextClass } from '@/utils';
 
@@ -46,7 +51,6 @@ const getCallToActionTextWrappersClass = (variantId?: string) => {
 };
 
 const CallToAction: FC<Props> = ({
-  eyebrowText,
   titleStyle: TitleTag = 'h2',
   primaryButtonCopy,
   primaryButtonLink,
@@ -55,39 +59,58 @@ const CallToAction: FC<Props> = ({
   secondaryButtonLink,
   secondaryButtonStyle,
   component: { variant } = {},
-}) => (
-  <div className="flex flex-wrap items-center justify-between w-full lg:flex-nowrap rounded-xl text-secondary-content">
-    <div className={classNames('flex', getCallToActionContentClass(variant))}>
-      <div className={getCallToActionTextWrappersClass(variant)}>
-        {eyebrowText && (
+}) => {
+  const { isContextualEditing } = useUniformCurrentComposition();
+  return (
+    <div className="flex flex-wrap items-center justify-between w-full lg:flex-nowrap rounded-xl text-secondary-content">
+      <div className={classNames('flex', getCallToActionContentClass(variant))}>
+        <div className={getCallToActionTextWrappersClass(variant)}>
           <UniformText
+            placeholder="Eyebrow text goes here"
             parameterId="eyebrowText"
             as="div"
             className="text-sm font-bold tracking-wider uppercase text-primary my-3"
           />
-        )}
-        <UniformText parameterId="title" as={TitleTag} className={classNames('font-medium', getTextClass(TitleTag))} />
-        <UniformText parameterId="description" as="p" className="py-6 text-xl" />
-      </div>
-      <div className="flex justify-between">
-        {Boolean(primaryButtonLink && primaryButtonCopy) && (
-          <Button
-            href={primaryButtonLink.path}
-            copy={<UniformText parameterId="primaryButtonCopy" />}
-            style={primaryButtonStyle}
+          <UniformText
+            placeholder="Title goes here"
+            parameterId="title"
+            as={TitleTag}
+            className={classNames('font-medium', getTextClass(TitleTag))}
           />
-        )}
-        {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
-          <Button
-            href={secondaryButtonLink.path}
-            copy={<UniformText parameterId="secondaryButtonCopy" />}
-            style={secondaryButtonStyle}
-          />
-        )}
+          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="py-6 text-xl" />
+        </div>
+        <div className="flex justify-between">
+          {Boolean(primaryButtonLink && primaryButtonCopy) && (
+            <Button
+              href={primaryButtonLink.path}
+              copy={
+                <UniformText
+                  placeholder="Description goes here"
+                  parameterId="primaryButtonCopy"
+                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+                />
+              }
+              style={primaryButtonStyle}
+            />
+          )}
+          {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
+            <Button
+              href={secondaryButtonLink.path}
+              copy={
+                <UniformText
+                  placeholder="Description goes here"
+                  parameterId="secondaryButtonCopy"
+                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+                />
+              }
+              style={secondaryButtonStyle}
+            />
+          )}
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 [
   undefined,

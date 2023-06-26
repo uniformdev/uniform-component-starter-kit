@@ -77,12 +77,24 @@ export const ImageRight: Story = {
   render: renderStory,
 };
 
-export const BackgroundImage: Story = {
+export const BackgroundDarkImage: Story = {
   args: {
     ...BASE_PROPS,
     component: {
       type: 'hero',
-      variant: HeroVariant.BackgroundImage,
+      variant: HeroVariant.BackgroundDarkImage,
+    },
+  },
+  argTypes,
+  render: renderStory,
+};
+
+export const BackgroundLightImage: Story = {
+  args: {
+    ...BASE_PROPS,
+    component: {
+      type: 'hero',
+      variant: HeroVariant.BackgroundLightImage,
     },
   },
   argTypes,

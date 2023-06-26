@@ -1,7 +1,12 @@
 import { FC } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
-import { ComponentProps, registerUniformComponent, UniformText } from '@uniformdev/canvas-react';
+import {
+  ComponentProps,
+  registerUniformComponent,
+  UniformText,
+  useUniformCurrentComposition,
+} from '@uniformdev/canvas-react';
 import Button from '@/components/Button';
 import { getImageUrl } from '@/utils';
 
@@ -84,16 +89,14 @@ const getImageSizeClassName = (variantId?: string) => {
 
 const Card: FC<Props> = ({
   image,
-  badge,
   badgeSize = 'md',
   badgeStyle = 'secondary',
-  description,
-  buttonCopy,
   buttonLink,
   buttonStyle,
   component: { variant } = {},
 }) => {
   const imageUrl = getImageUrl(image);
+  const { isContextualEditing } = useUniformCurrentComposition();
   return (
     <div
       className={classNames(
@@ -116,18 +119,37 @@ const Card: FC<Props> = ({
         )}
       </figure>
       <div className="card-body">
-        {Boolean(badge) && (
-          <UniformText
-            parameterId="badge"
-            as="div"
-            className={classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize))}
-          />
-        )}
-        <UniformText parameterId="title" as="h2" className={classNames('card-title', getTextClass(variant))} />
-        {Boolean(description) && <UniformText parameterId="description" as="p" className={getTextClass(variant)} />}
+        <UniformText
+          placeholder="Badge goes here"
+          parameterId="badge"
+          as="div"
+          className={classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize))}
+        />
+        <UniformText
+          placeholder="Title goes here"
+          parameterId="title"
+          as="h2"
+          className={classNames('card-title', getTextClass(variant))}
+        />
+        <UniformText
+          placeholder="Description goes here"
+          parameterId="description"
+          className={getTextClass(variant)}
+          render={(value = '') => <div dangerouslySetInnerHTML={{ __html: value }} />}
+        />
         <div className="card-actions justify-end">
-          {Boolean(buttonCopy && buttonLink?.path) && (
-            <Button href={buttonLink?.path} style={buttonStyle} copy={<UniformText parameterId="buttonCopy" />} />
+          {Boolean(buttonLink?.path) && (
+            <Button
+              href={buttonLink?.path}
+              style={buttonStyle}
+              copy={
+                <UniformText
+                  placeholder="Button copy goes here"
+                  parameterId="buttonCopy"
+                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+                />
+              }
+            />
           )}
         </div>
       </div>

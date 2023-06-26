@@ -14,7 +14,11 @@ declare namespace Types {
 
   type AvailableColor = 'primary' | 'secondary' | 'accent' | 'base-200' | 'base-300';
 
-  type AvailableOpacity = 0 | 10 | 20 | 30 | 40 | 50 | 60 | 70 | 80 | 90 | 100;
+  type AvailableObjectFit = 'contain' | 'cover' | 'fill' | 'none';
+
+  type AvailableBorderRadius = 'none' | 'small' | 'medium' | 'large' | 'full';
+
+  type AvailableOpacity = '0%' | '10%' | '20%' | '30%' | '40%' | '50%' | '60%' | '70%' | '80%' | '90%' | '100%';
 
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 

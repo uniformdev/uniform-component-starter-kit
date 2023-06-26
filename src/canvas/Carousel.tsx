@@ -15,7 +15,7 @@ export type Props = ComponentProps<{
   description?: string;
 }>;
 
-const Carousel: FC<Props> = ({ component, titleStyle: TitleTag = 'h1', description }) => {
+const Carousel: FC<Props> = ({ component, titleStyle: TitleTag = 'h1' }) => {
   const { selectedComponentReference, isContextualEditing } = useUniformContextualEditingState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const totalCountOfItems = component?.slots?.carouselItem?.length || 0;
@@ -42,8 +42,13 @@ const Carousel: FC<Props> = ({ component, titleStyle: TitleTag = 'h1', descripti
     <div>
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-10 text-secondary-content">
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
-          <UniformText parameterId="title" as={TitleTag} className={classNames('font-bold', getTextClass(TitleTag))} />
-          {Boolean(description) && <UniformText parameterId="description" as="p" className="sm:pr-8" />}
+          <UniformText
+            placeholder="Title goes here"
+            parameterId="title"
+            as={TitleTag}
+            className={classNames('font-bold', getTextClass(TitleTag))}
+          />
+          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="sm:pr-8" />
         </div>
       </div>
       <div className="relative w-full min-h-[500px] overflow-hidden">

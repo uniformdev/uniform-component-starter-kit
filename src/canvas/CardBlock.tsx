@@ -1,6 +1,12 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { UniformSlot, registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
+import {
+  UniformSlot,
+  registerUniformComponent,
+  ComponentProps,
+  UniformText,
+  useUniformCurrentComposition,
+} from '@uniformdev/canvas-react';
 import { getTextClass } from '@/utils';
 import Button from '@/components/Button';
 import CardBlockCarousel from '@/canvas/CardBlockCarousel';
@@ -18,26 +24,38 @@ export enum CardBlockVariants {
   Carousel = 'carousel',
 }
 
-const CardBlock: FC<CardBlockProps> = ({
-  description,
-  buttonCopy,
-  buttonLink,
-  titleStyle: TitleTag = 'h1',
-  buttonStyle,
-}) => (
-  <div className="flex items-center text-secondary-content justify-between py-2 flex-wrap">
-    <div className="w-full flex flex-col md:flex-row md:items-center justify-between px-3 pb-6">
-      <div className="basis-2/3 xl:basis-auto">
-        <UniformText parameterId="title" as={TitleTag} className={classNames('font-bold', getTextClass(TitleTag))} />
-        {Boolean(description) && <UniformText parameterId="description" as="p" className="py-6" />}
+const CardBlock: FC<CardBlockProps> = ({ buttonLink, titleStyle: TitleTag = 'h1', buttonStyle }) => {
+  const { isContextualEditing } = useUniformCurrentComposition();
+  return (
+    <div className="flex items-center text-secondary-content justify-between py-2 flex-wrap">
+      <div className="w-full flex flex-col md:flex-row md:items-center justify-between px-3 pb-6">
+        <div className="basis-2/3 xl:basis-auto">
+          <UniformText
+            placeholder="Title goes here"
+            parameterId="title"
+            as={TitleTag}
+            className={classNames('font-bold', getTextClass(TitleTag))}
+          />
+          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="py-6" />
+        </div>
+        {Boolean(buttonLink) && (
+          <Button
+            href={buttonLink.path}
+            copy={
+              <UniformText
+                placeholder="Button copy goes here"
+                parameterId="buttonCopy"
+                onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+              />
+            }
+            style={buttonStyle}
+          />
+        )}
       </div>
-      {Boolean(buttonCopy && buttonLink) && (
-        <Button href={buttonLink.path} copy={<UniformText parameterId="buttonCopy" />} style={buttonStyle} />
-      )}
+      <UniformSlot name="cardBlockInner" />
     </div>
-    <UniformSlot name="cardBlockInner" />
-  </div>
-);
+  );
+};
 
 [undefined, CardBlockVariants.Carousel].forEach(variantId => {
   registerUniformComponent({

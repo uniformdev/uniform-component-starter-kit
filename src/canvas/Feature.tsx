@@ -29,9 +29,9 @@ const Feature: FC<ComponentProps<Props>> = ({ icon, link }) => {
       </div>
       <div>
         <Wrapper>
-          <UniformText parameterId="title" as="p" className="text-xl font-bold" />
+          <UniformText placeholder="Title goes here" parameterId="title" as="p" className="text-xl font-bold" />
         </Wrapper>
-        <UniformText parameterId="description" as="p" />
+        <UniformText placeholder="Description goes here" parameterId="description" as="p" />
       </div>
     </div>
   );

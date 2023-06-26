@@ -17,7 +17,12 @@ const AccordionItem: FC<Props> = () => {
         onClick={toggleAccordion}
         className="flex flex-row justify-between items-center p-4 md:p-8 text-2xl font-bold bg-primary w-full"
       >
-        <UniformText parameterId="title" as="p" className="text-start pr-2 text-primary-content" />
+        <UniformText
+          placeholder="Title goes here"
+          parameterId="title"
+          as="p"
+          className="text-start pr-2 text-primary-content"
+        />
         <div className="flex items-center">
           {isOpened ? (
             <svg width="15" height="9" viewBox="0 0 15 9" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +45,14 @@ const AccordionItem: FC<Props> = () => {
           )}
         </div>
       </button>
-      {isOpened && <UniformText parameterId="description" as="p" className="p-10 text-secondary-content" />}
+      {isOpened && (
+        <UniformText
+          placeholder="Description goes here"
+          parameterId="description"
+          as="p"
+          className="p-10 text-secondary-content"
+        />
+      )}
     </div>
   );
 };

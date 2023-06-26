@@ -11,11 +11,13 @@ import '@/styles/globals.css';
 
 const clientContext = createUniformContext();
 
+const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
+
 const App = ({
   Component,
   pageProps,
   serverUniformContext,
-}: UniformAppProps<{ data: RootComponentInstance; context: any }>) => {
+}: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => {
   const { data: composition } = pageProps || {};
   const {
     pageTitle,
@@ -38,34 +40,33 @@ const App = ({
   const twTitle = (twitterTitle?.value as string)?.replaceAll?.(' ', '%20');
   const title: string = pageTitle?.value as string;
 
-  let ogImageElement: any = openGraphImage?.value ? (
-    <meta property="og:image" content={openGraphImage?.value as string} />
-  ) : undefined;
-  if (overlayTitleToOgImage?.value && openGraphImage?.value) {
-    ogImageElement = (
-      <meta
-        property="og:image"
-        content={`https://${process.env.VERCEL_URL ?? ''}/api/og?title=${
-          ogTitle ?? title?.replaceAll?.(' ', '%20')
-        }&image=${openGraphImage.value}`}
-      />
-    );
-  }
+  const renderOgImageElement = () => {
+    if (overlayTitleToOgImage?.value && openGraphImage?.value) {
+      return (
+        <meta
+          property="og:image"
+          content={`${VERCEL_URL}/api/og?title=${ogTitle ?? title?.replaceAll?.(' ', '%20')}&image=${
+            openGraphImage.value
+          }`}
+        />
+      );
+    }
+    if (openGraphImage?.value) return <meta property="og:image" content={openGraphImage?.value as string} />;
+  };
 
-  let twitterImageElement = twitterImage?.value ? (
-    <meta property="twitter:image" content={twitterImage?.value as string} />
-  ) : null;
-
-  if (overlayTitleToTwitterImage?.value && twitterImage?.value) {
-    twitterImageElement = (
-      <meta
-        property="twitter:image"
-        content={`https://${process.env.VERCEL_URL ?? ''}/api/og?title=${
-          twTitle ?? title?.replaceAll?.(' ', '%20')
-        }&image=${twitterImage.value}`}
-      />
-    );
-  }
+  const renderTwitterImageElement = () => {
+    if (overlayTitleToTwitterImage?.value && twitterImage?.value) {
+      return (
+        <meta
+          property="twitter:image"
+          content={`${VERCEL_URL}/api/og?title=${twTitle ?? title?.replaceAll?.(' ', '%20')}&image=${
+            twitterImage.value
+          }`}
+        />
+      );
+    }
+    if (twitterImage?.value) return <meta property="twitter:image" content={twitterImage?.value as string} />;
+  };
 
   return (
     <>
@@ -74,15 +75,13 @@ const App = ({
         <title>{(pageTitle?.value as string) ?? 'Uniform Component Starter Kit'}</title>
         <meta property="og:description" content={pageMetaDescription?.value as string} />
         <meta name="keywords" content={pageKeywords?.value as string} />
-
         {/* Open Graph */}
         <meta property="og:title" content={(openGraphTitle?.value as string) ?? pageTitle?.value} />
         <meta
           property="og:description"
           content={(openGraphDescription?.value as string) ?? pageMetaDescription?.value}
         />
-        {ogImageElement}
-
+        {renderOgImageElement()}
         {/* Twitter */}
         <meta name="twitter:title" content={(twitterTitle?.value as string) ?? pageTitle?.value} />
         <meta name="twitter:card" content={(twitterCard?.value as string) ?? 'summary'} />
@@ -90,8 +89,7 @@ const App = ({
           name="twitter:description"
           content={(twitterDescription?.value as string) ?? pageMetaDescription?.value}
         />
-        {twitterImageElement}
-
+        {renderTwitterImageElement() as any} {/* eslint-disable-line @typescript-eslint/no-explicit-any */}
         {/* Other stuff */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />

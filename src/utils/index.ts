@@ -34,6 +34,67 @@ export const getTextClass = (style?: Types.HeadingStyles) => {
   }
 };
 
+export const getObjectFitClass = (objectFit?: Types.AvailableObjectFit) => {
+  switch (objectFit) {
+    case 'contain':
+      return 'object-contain';
+    case 'cover':
+      return 'object-cover';
+    case 'fill':
+      return 'object-fill';
+    case 'none':
+      return 'object-none';
+    default:
+      return '';
+  }
+};
+
+export const getImageOverlayColorStyle = (style?: Types.AvailableColor) => {
+  switch (style) {
+    case 'primary':
+      return 'bg-primary';
+    case 'secondary':
+      return 'bg-secondary';
+    case 'accent':
+      return 'bg-accent';
+    case 'base-200':
+      return 'bg-base-200';
+    case 'base-300':
+      return 'bg-base-300';
+    default:
+      return '';
+  }
+};
+
+export const getImageOverlayOpacityStyle = (style?: Types.AvailableOpacity) => {
+  switch (style) {
+    case '0%':
+      return 'bg-opacity-0';
+    case '10%':
+      return 'bg-opacity-10';
+    case '20%':
+      return 'bg-opacity-20';
+    case '30%':
+      return 'bg-opacity-30';
+    case '40%':
+      return 'bg-opacity-40';
+    case '50%':
+      return 'bg-opacity-50';
+    case '60%':
+      return 'bg-opacity-60';
+    case '70%':
+      return 'bg-opacity-70';
+    case '80%':
+      return 'bg-opacity-80';
+    case '90%':
+      return 'bg-opacity-90';
+    case '100%':
+      return 'bg-opacity-100';
+    default:
+      return 'bg-opacity-0';
+  }
+};
+
 export const convertColumnWidthsToTailwindColumns = (columnWidths: string) => {
   // Converting to taiwind grid columns https://tailwindcss.com/docs/grid-column
   switch (columnWidths) {
