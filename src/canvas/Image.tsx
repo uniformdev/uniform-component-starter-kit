@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import NextImage from 'next/image';
-import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getImageUrl, getObjectFitClass } from '@/utils';
+import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '@/utils/styling';
+import { getImageUrl } from '@/utils';
 import classNames from 'classnames';
 
 export type Props = ComponentProps<{
@@ -75,7 +76,11 @@ const Image: FC<Props> = ({
 
   return (
     <div
-      className={classNames('relative', getBorderColorStyle(borderColor), getBorderRadiusStyle(borderRadius))}
+      className={classNames(
+        'relative max-w-max h-max',
+        getBorderColorStyle(borderColor),
+        getBorderRadiusStyle(borderRadius)
+      )}
       style={{ borderWidth: borderWidth }}
     >
       <NextImage

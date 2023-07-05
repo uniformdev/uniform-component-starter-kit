@@ -9,7 +9,11 @@ export const getServerSideProps = withUniformGetServerSideProps({
     state: process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   },
   handleComposition: async (routeResponse, _context) => {
-    const { composition } = routeResponse.compositionApiResponse || {};
+    const { composition, errors } = routeResponse.compositionApiResponse || {};
+    if (errors?.some(e => e.type === 'data' || e.type === 'binding')) {
+      return { notFound: true };
+    }
+
     const breadcrumbs = await getBreadcrumbs(composition._id, Boolean(_context.preview));
     // fetching global composition for header navigation and footer
     const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });

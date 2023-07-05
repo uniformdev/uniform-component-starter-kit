@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { UniformComposition } from '@uniformdev/canvas-react';
-import Carousel, { Props as CarouselProps } from '@/canvas/Carousel';
+import { UniformComposition, ComponentProps } from '@uniformdev/canvas-react';
+import Carousel, { CarouselVariants } from '@/canvas/Carousel';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
-import { titleStyleOptions } from '../constants';
 
 const meta: Meta<typeof Carousel> = {
   title: 'Carousel',
@@ -18,7 +17,7 @@ const HEROS_PROPS = [
     title: '1. Are developers stuck with outdated tech and custom code to maintain?',
     titleStyle: 'h2',
     description:
-      'Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand`s unique personality.',
+      "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
     primaryButtonCopy: 'Home',
     primaryButtonLink: {
       path: '/',
@@ -38,7 +37,7 @@ const HEROS_PROPS = [
     title: '2. Are developers stuck with outdated tech and custom code to maintain?',
     titleStyle: 'h2',
     description:
-      'Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand`s unique personality.',
+      "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
     primaryButtonCopy: 'Home',
     primaryButtonLink: {
       path: '/',
@@ -58,7 +57,7 @@ const HEROS_PROPS = [
     title: '3. Are developers stuck with outdated tech and custom code to maintain?',
     titleStyle: 'h2',
     description:
-      'Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand`s unique personality.',
+      "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
     primaryButtonCopy: 'Home',
     primaryButtonLink: {
       path: '/',
@@ -75,29 +74,31 @@ const HEROS_PROPS = [
   },
 ];
 
-const BASE_PROPS: CarouselProps = {
-  title: 'Carousel',
-  description: 'Use carousel to display some information in a slideshow.',
-  titleStyle: 'h2',
-  component: {
-    type: 'carousel',
-    slots: {
-      carouselItem: HEROS_PROPS,
-    },
+const IMAGES_PROPS = [
+  {
+    type: 'image',
+    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    width: '2000',
+    height: '2000',
   },
-};
+  {
+    type: 'image',
+    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    width: '2000',
+    height: '2000',
+  },
+  {
+    type: 'image',
+    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    width: '2000',
+    height: '2000',
+  },
+];
 
-const argTypes = {
-  titleStyle: { control: 'select', options: titleStyleOptions },
-};
+const argTypes = {};
 
-const renderStory = (args: CarouselProps) => {
-  const fakeComposition = createFakeCompositionData('hero', args, {
-    carouselItem: HEROS_PROPS.map(item => ({
-      type: 'hero',
-      parameters: createUniformParameter(item),
-    })),
-  });
+const renderStory = (args: ComponentProps) => {
+  const fakeComposition = createFakeCompositionData('carousel', args, { ...args.component.slots });
   return (
     <UniformComposition data={fakeComposition}>
       <Carousel {...args} />
@@ -106,7 +107,35 @@ const renderStory = (args: CarouselProps) => {
 };
 
 export const Default: Story = {
-  args: BASE_PROPS,
+  args: {
+    component: {
+      type: 'carousel',
+      variant: undefined,
+      slots: {
+        carouselItem: HEROS_PROPS.map(item => ({
+          type: 'hero',
+          parameters: createUniformParameter(item),
+        })),
+      },
+    },
+  },
+  argTypes,
+  render: renderStory,
+};
+
+export const ImageGallery: Story = {
+  args: {
+    component: {
+      type: 'carousel',
+      variant: CarouselVariants.ImageGallery,
+      slots: {
+        carouselItem: IMAGES_PROPS.map(item => ({
+          type: 'image',
+          parameters: createUniformParameter(item),
+        })),
+      },
+    },
+  },
   argTypes,
   render: renderStory,
 };

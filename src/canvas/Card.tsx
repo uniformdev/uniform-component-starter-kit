@@ -21,14 +21,37 @@ export type Props = ComponentProps<{
   badgeSize: BadgeSize;
   title: string;
   description: string;
+  slug?: string;
   buttonCopy: string;
   buttonLink: Types.ProjectMapLink;
   buttonStyle: Types.ButtonStyles;
+  lineCountRestriction: Types.AvailableMaxLineCount;
 }>;
 
 export enum CardVariants {
   BackgroundImage = 'backgroundImage',
 }
+
+const getLineClampClass = (maxLineCount?: Types.AvailableMaxLineCount) => {
+  switch (maxLineCount) {
+    case '1':
+      return 'line-clamp-1';
+    case '2':
+      return 'line-clamp-2';
+    case '3':
+      return 'line-clamp-3';
+    case '4':
+      return 'line-clamp-4';
+    case '5':
+      return 'line-clamp-5';
+    case '6':
+      return 'line-clamp-6';
+    case 'none':
+      return 'line-clamp-none';
+    default:
+      return '';
+  }
+};
 
 const getContentClass = (variantId?: string) => {
   switch (variantId) {
@@ -89,10 +112,12 @@ const getImageSizeClassName = (variantId?: string) => {
 
 const Card: FC<Props> = ({
   image,
+  slug = '',
   badgeSize = 'md',
   badgeStyle = 'secondary',
   buttonLink,
   buttonStyle,
+  lineCountRestriction,
   component: { variant } = {},
 }) => {
   const imageUrl = getImageUrl(image);
@@ -100,7 +125,7 @@ const Card: FC<Props> = ({
   return (
     <div
       className={classNames(
-        'card w-96 max-w-full min-h-96 shadow-xl my-2 mx-0 md:m-2 relative',
+        'card w-96 max-w-full min-h-96 my-2 mx-0 md:m-2 relative border border-gray-200',
         getContentClass(variant)
       )}
     >
@@ -134,13 +159,13 @@ const Card: FC<Props> = ({
         <UniformText
           placeholder="Description goes here"
           parameterId="description"
-          className={getTextClass(variant)}
+          className={classNames(getLineClampClass(lineCountRestriction), getTextClass(variant))}
           render={(value = '') => <div dangerouslySetInnerHTML={{ __html: value }} />}
         />
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-end mt-auto">
           {Boolean(buttonLink?.path) && (
             <Button
-              href={buttonLink?.path}
+              href={`${buttonLink.path}${slug ? `/${slug}` : ''}`}
               style={buttonStyle}
               copy={
                 <UniformText

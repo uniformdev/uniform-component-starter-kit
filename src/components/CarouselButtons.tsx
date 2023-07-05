@@ -2,7 +2,7 @@ import { FC, useCallback, useMemo } from 'react';
 import classNames from 'classnames';
 import { ButtonGroupProps } from 'react-multi-carousel';
 import IconArrow from '@/components/IconArrow';
-import { getButtonClass } from '@/utils';
+import { getButtonClass } from '@/utils/styling';
 
 type CarouselButtonProps = ButtonGroupProps & {
   buttonStyle: Types.ButtonStyles;

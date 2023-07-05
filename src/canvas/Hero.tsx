@@ -9,11 +9,11 @@ import {
 } from '@uniformdev/canvas-react';
 import {
   getTextClass,
-  getImageUrl,
   getImageOverlayOpacityStyle,
   getImageOverlayColorStyle,
   getObjectFitClass,
-} from '@/utils';
+} from '@/utils/styling';
+import { getImageUrl } from '@/utils';
 import Button from '@/components/Button';
 
 export type Props = ComponentProps<{

@@ -1,65 +1,51 @@
 import { FC, ReactNode } from 'react';
 import classNames from 'classnames';
+import {
+  BackgroundTypes,
+  PaddingSize,
+  getBackgroundClass,
+  getPaddingTopClass,
+  getPaddingBottomClass,
+  getMarginTopClass,
+  getMarginBottomClass,
+} from '@/utils/styling';
 
-export enum BackgroundTypes {
-  Light = 'Light',
-  Dark = 'Dark',
-  Medium = 'Medium',
-  Transparent = 'Transparent',
+export enum ContainerVariants {
+  BackgroundInContainer = 'backgroundInContainer',
+  FluentContent = 'fluentContent',
 }
-
-export enum PaddingSize {
-  Small = 'Small',
-  Medium = 'Medium',
-  Large = 'Large',
-  None = 'None',
-}
-
-const PaddingTopClasses = {
-  [PaddingSize.Large]: 'pt-16 md:pt-28',
-  [PaddingSize.Medium]: 'pt-10 lg:pt-20',
-  [PaddingSize.Small]: 'pt-6 lg:pt-8',
-  [PaddingSize.None]: '',
-};
-
-const PaddingBottomClasses = {
-  [PaddingSize.Large]: 'pb-16 md:pb-28',
-  [PaddingSize.Medium]: 'pb-10 lg:pb-20',
-  [PaddingSize.Small]: 'pb-6 lg:pb-8',
-  [PaddingSize.None]: '',
-};
-
-const BackgroundClasses = {
-  [BackgroundTypes.Transparent]: 'bg-transparent',
-  [BackgroundTypes.Light]: 'bg-base-100 text-black',
-  [BackgroundTypes.Medium]: 'bg-gray-50 text-black',
-  [BackgroundTypes.Dark]: 'bg-base-300 !text-primary-content',
-};
 
 export type Props = {
   backgroundType?: BackgroundTypes;
   paddingTop?: PaddingSize;
   paddingBottom?: PaddingSize;
+  marginTop?: PaddingSize;
+  marginBottom?: PaddingSize;
   children: ReactNode;
   backgroundClassName?: string;
+  containerVariant?: string;
   className?: string;
 };
 
 type BackgroundWrapperProps = Required<Omit<Props, 'className'>>;
 
-const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
+const BackgroundWrapper: FC<Omit<BackgroundWrapperProps, 'containerVariant'>> = ({
   backgroundType = BackgroundTypes.Transparent,
   paddingTop,
   paddingBottom,
+  marginTop,
+  marginBottom,
   children,
   backgroundClassName,
-}) =>
-  BackgroundTypes[backgroundType] ? (
+}) => {
+  return BackgroundTypes[backgroundType] ? (
     <div
       className={classNames(
-        BackgroundClasses[backgroundType],
-        PaddingTopClasses[paddingTop],
-        PaddingBottomClasses[paddingBottom],
+        getBackgroundClass(backgroundType),
+        getPaddingTopClass(paddingTop),
+        getPaddingBottomClass(paddingBottom),
+        getMarginTopClass(marginTop),
+        getMarginBottomClass(marginBottom),
         backgroundClassName
       )}
     >
@@ -68,27 +54,71 @@ const BackgroundWrapper: FC<BackgroundWrapperProps> = ({
   ) : (
     <>{children}</>
   );
+};
 
 export const BaseContainer: FC<Props> = ({ children, className }) => (
-  <div className={classNames('m-auto max-w-screen-xl px-4 lg:px-8', className)}>{children}</div>
+  <div className={classNames('px-4 lg:px-8', className)}>{children}</div>
+);
+
+export const ScreenContainer: FC<Props> = ({ children, className }) => (
+  <BaseContainer className={classNames('m-auto max-w-screen-xl', className)}>{children}</BaseContainer>
 );
 
 const Container: FC<Props> = ({
   backgroundType,
   paddingTop = PaddingSize.Medium,
   paddingBottom = PaddingSize.Medium,
+  marginTop = PaddingSize.None,
+  marginBottom = PaddingSize.None,
+  containerVariant,
   children,
   backgroundClassName = '',
   className,
-}) => (
-  <BackgroundWrapper
-    paddingTop={paddingTop}
-    backgroundType={backgroundType || BackgroundTypes.Transparent}
-    paddingBottom={paddingBottom}
-    backgroundClassName={backgroundClassName}
-  >
-    <BaseContainer className={className}>{children}</BaseContainer>
-  </BackgroundWrapper>
-);
+}) => {
+  if (containerVariant === ContainerVariants.FluentContent) {
+    return (
+      <BackgroundWrapper
+        paddingTop={paddingTop}
+        backgroundType={backgroundType || BackgroundTypes.Transparent}
+        paddingBottom={paddingBottom}
+        marginTop={marginTop}
+        marginBottom={marginBottom}
+        backgroundClassName={backgroundClassName}
+      >
+        <BaseContainer className={className}>{children}</BaseContainer>
+      </BackgroundWrapper>
+    );
+  }
+
+  if (containerVariant === ContainerVariants.BackgroundInContainer) {
+    return (
+      <ScreenContainer className={className}>
+        <BackgroundWrapper
+          paddingTop={paddingTop}
+          backgroundType={backgroundType || BackgroundTypes.Transparent}
+          paddingBottom={paddingBottom}
+          marginTop={marginTop}
+          marginBottom={marginBottom}
+          backgroundClassName={classNames('px-4 lg:px-8', backgroundClassName)}
+        >
+          {children}
+        </BackgroundWrapper>
+      </ScreenContainer>
+    );
+  }
+
+  return (
+    <BackgroundWrapper
+      paddingTop={paddingTop}
+      backgroundType={backgroundType || BackgroundTypes.Transparent}
+      paddingBottom={paddingBottom}
+      marginTop={marginTop}
+      marginBottom={marginBottom}
+      backgroundClassName={backgroundClassName}
+    >
+      <ScreenContainer className={className}>{children}</ScreenContainer>
+    </BackgroundWrapper>
+  );
+};
 
 export default Container;

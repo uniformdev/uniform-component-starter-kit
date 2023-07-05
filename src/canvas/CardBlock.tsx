@@ -7,7 +7,7 @@ import {
   UniformText,
   useUniformCurrentComposition,
 } from '@uniformdev/canvas-react';
-import { getTextClass } from '@/utils';
+import { getTextClass } from '@/utils/styling';
 import Button from '@/components/Button';
 import CardBlockCarousel from '@/canvas/CardBlockCarousel';
 

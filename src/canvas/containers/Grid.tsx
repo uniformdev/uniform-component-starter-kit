@@ -4,9 +4,11 @@ import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformd
 
 export type Props = ComponentProps<{
   columnsCount: Types.AvailableColumnCount;
+  gapY: Types.AvailableGapVariants;
+  gapX: Types.AvailableGapVariants;
 }>;
 
-const getGridColumnsClass = (columnsCount: Props['columnsCount']) => {
+const getGridColumnsClass = (columnsCount: Types.AvailableColumnCount) => {
   switch (columnsCount) {
     case '1':
       return 'grid-cols-1';
@@ -37,15 +39,45 @@ const getGridColumnsClass = (columnsCount: Props['columnsCount']) => {
   }
 };
 
-const GridContainer: FC<Props> = ({ columnsCount }) => (
-  <div className={classNames('w-full grid gap-4', getGridColumnsClass(columnsCount))}>
-    <UniformSlot name="container-inner" />
+const getGapYClass = (gapY: Types.AvailableGapVariants) => {
+  switch (gapY) {
+    case 'none':
+      return 'gap-y-0';
+    case 'small':
+      return 'gap-y-2';
+    case 'medium':
+      return 'gap-y-8';
+    case 'large':
+      return 'gap-y-16';
+    default:
+      return '';
+  }
+};
+
+const getGapXClass = (gapX: Types.AvailableGapVariants) => {
+  switch (gapX) {
+    case 'none':
+      return 'gap-x-0';
+    case 'small':
+      return 'gap-x-4';
+    case 'medium':
+      return 'gap-x-8';
+    case 'large':
+      return 'gap-x-16';
+    default:
+      return '';
+  }
+};
+
+const Grid: FC<Props> = ({ columnsCount, gapX, gapY }) => (
+  <div className={classNames('w-full grid', getGridColumnsClass(columnsCount), getGapXClass(gapX), getGapYClass(gapY))}>
+    <UniformSlot name="grid-inner" />
   </div>
 );
 
 registerUniformComponent({
-  type: 'gridContainer',
-  component: GridContainer,
+  type: 'grid',
+  component: Grid,
 });
 
-export default GridContainer;
+export default Grid;

@@ -7,7 +7,7 @@ import {
   UniformText,
 } from '@uniformdev/canvas-react';
 import Button from '@/components/Button';
-import { getTextClass } from '@/utils';
+import { getTextClass } from '@/utils/styling';
 
 export type Props = ComponentProps<{
   eyebrowText: string;

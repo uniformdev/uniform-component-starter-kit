@@ -4,7 +4,8 @@ import { UniformComposition, UniformSlot } from '@uniformdev/canvas-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 import { HeroVariant } from '@/canvas/Hero';
 import ThemeProvider from './ThemeProvider';
-import Container, { PaddingSize } from './Container';
+import Container from './Container';
+import { PaddingSize } from '@/utils/styling';
 
 type PageProps = {
   preview: boolean;

@@ -8,7 +8,7 @@ type BreadcrumbSeparator = 'slash' | 'chevron' | 'none';
 type Props = ComponentProps<{
   colorStyle: Types.AvailableColor;
   displayRootNode: boolean;
-  displayPlaceholders: boolean;
+  displayPlaceholderNodes: boolean;
   separator: BreadcrumbSeparator;
 }>;
 
@@ -68,12 +68,14 @@ const getSeparator = (separator: 'slash' | 'chevron' | 'none') => {
   }
 };
 
-const Breadcrumbs: FC<Props> = ({ colorStyle, displayPlaceholders, displayRootNode, separator }) => {
+const Breadcrumbs: FC<Props> = ({ colorStyle, displayPlaceholderNodes, displayRootNode, separator }) => {
   const { breadcrumbs = [] } = useComponentStarterKitContext();
 
   const breadcrumbsToShow = breadcrumbs
     .filter((breadcrumb: Types.ProjectMapLink) => (!displayRootNode ? !breadcrumb.isRoot : true))
-    .filter((breadcrumb: Types.ProjectMapLink) => (!displayPlaceholders ? breadcrumb?.type !== 'placeholder' : true));
+    .filter((breadcrumb: Types.ProjectMapLink) =>
+      !displayPlaceholderNodes ? breadcrumb?.type !== 'placeholder' : true
+    );
 
   return (
     <div key={`breadcrumbs-${breadcrumbsToShow.length}`} className={classNames('text-sm', getColorStyle(colorStyle))}>

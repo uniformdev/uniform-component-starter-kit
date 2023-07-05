@@ -2,7 +2,8 @@ import { FC } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import { UniformSlot, registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
-import { getTextClass, getImageUrl } from '@/utils';
+import { getImageUrl } from '@/utils';
+import { getTextClass } from '@/utils/styling';
 
 export type Props = ComponentProps<{
   eyebrowText?: string;

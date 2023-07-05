@@ -24,12 +24,12 @@ const ACCORDION_ITEMS = [
   {
     title: 'What is your refund policy?',
     description:
-      'If you`re unhappy with your purchase for any reason, email us within 90 days and we`ll refund you in full, no questions asked.',
+      "If you're unhappy with your purchase for any reason, email us within 90 days and we'll refund you in full, no questions asked.",
   },
   {
     title: 'Do you offer technical support?',
     description:
-      'No, we don`t offer technical support for free downloads. Please purchase a support plan to get 6 months of support.',
+      "No, we don't offer technical support for free downloads. Please purchase a support plan to get 6 months of support.",
   },
 ];
 

@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Link from 'next/link';
 import classNames from 'classnames';
-import { getButtonClass } from '@/utils';
+import { getButtonClass } from '@/utils/styling';
 
 type Props = {
   href: string;

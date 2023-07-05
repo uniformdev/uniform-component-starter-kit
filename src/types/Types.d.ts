@@ -16,7 +16,15 @@ declare namespace Types {
 
   type AvailableObjectFit = 'contain' | 'cover' | 'fill' | 'none';
 
+  type AvailableMaxLineCount = '1' | '2' | '3' | '4' | '5' | '6' | 'none';
+
   type AvailableBorderRadius = 'none' | 'small' | 'medium' | 'large' | 'full';
+
+  type AvailableGapVariants = 'none' | 'small' | 'medium' | 'large';
+
+  type AvailableColumnCount = '1' | '2' | '3' | '4' | '5' | '6' | '7' | '8' | '9' | '10' | '11' | '12';
+
+  type AvailableRowCount = '1' | '2' | '3' | '4' | '5' | '6';
 
   type AvailableOpacity = '0%' | '10%' | '20%' | '30%' | '40%' | '50%' | '60%' | '70%' | '80%' | '90%' | '100%';
 

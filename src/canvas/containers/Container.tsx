@@ -1,18 +1,21 @@
 import { FC } from 'react';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import BaseContainer, { Props as BaseContainerProps } from '@/components/Container';
+import BaseContainer, { Props as BaseContainerProps, ContainerVariants } from '@/components/Container';
 
 export type ContainerProps = ComponentProps<BaseContainerProps>;
 
 const Container: FC<ContainerProps> = props => (
-  <BaseContainer {...props}>
+  <BaseContainer {...props} containerVariant={props?.component?.variant}>
     <UniformSlot name="container-inner" />
   </BaseContainer>
 );
 
-registerUniformComponent({
-  type: 'container',
-  component: Container,
+[undefined, ContainerVariants.BackgroundInContainer, ContainerVariants.FluentContent].forEach(variantId => {
+  registerUniformComponent({
+    type: 'container',
+    component: Container,
+    variantId,
+  });
 });
 
 export default Container;

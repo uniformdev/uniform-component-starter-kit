@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import classNames from 'classnames';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import { convertColumnWidthsToTailwindColumns } from '@/utils';
+import { convertColumnWidthsToTailwindColumns } from '@/utils/styling';
 
 export type Props = ComponentProps<{
   width: string;

@@ -25,11 +25,13 @@ const BASE_PROPS: Omit<CardProps, 'component'> = {
   badge: 'New',
   badgeStyle: 'primary',
   badgeSize: 'sm',
+  slug: '',
   buttonCopy: 'Home',
   buttonLink: {
     path: '/',
   },
   buttonStyle: 'primary',
+  lineCountRestriction: 'none',
 };
 
 const argTypes = {

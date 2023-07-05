@@ -44,7 +44,7 @@ export const Default: Story = {
     colorStyle: 'primary',
     separator: 'chevron',
     displayRootNode: false,
-    displayPlaceholders: false,
+    displayPlaceholderNodes: false,
   },
   argTypes,
   render: args => {
@@ -54,7 +54,7 @@ export const Default: Story = {
         colorStyle: args.colorStyle,
         separator: args.separator,
         displayRootNode: args.displayRootNode,
-        displayPlaceholders: args.displayPlaceholders,
+        displayPlaceholderNodes: args.displayPlaceholderNodes,
       },
       {}
     );

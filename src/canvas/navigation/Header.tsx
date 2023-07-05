@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import { BaseContainer } from '@/components/Container';
+import { ScreenContainer } from '@/components/Container';
 import { getImageUrl } from '@/utils';
 
 type HeaderProps = ComponentProps<{
@@ -40,7 +40,7 @@ const getLinksAlignment = (alignment?: Types.HorizontalAlignment) => {
 
 const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => (
   <div className={classNames('text-primary-content', getHeaderColor(component.variant))}>
-    <BaseContainer>
+    <ScreenContainer>
       <div className="navbar px-0">
         <div className="navbar-start w-full">
           <div className="dropdown">
@@ -74,7 +74,7 @@ const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => (
           <UniformSlot name="iconLinks" emptyPlaceholder={null} />
         </div>
       </div>
-    </BaseContainer>
+    </ScreenContainer>
   </div>
 );
 

@@ -4,7 +4,7 @@ import MultiCarousel from 'react-multi-carousel';
 import { ComponentProps, UniformText, UniformSlot, useUniformCurrentComposition } from '@uniformdev/canvas-react';
 import CarouselButtons from '@/components/CarouselButtons';
 import Button from '@/components/Button';
-import { getTextClass } from '@/utils';
+import { getTextClass } from '@/utils/styling';
 import 'react-multi-carousel/lib/styles.css';
 
 type Props = ComponentProps<{
@@ -84,7 +84,7 @@ const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonSt
         renderButtonGroupOutside
         shouldResetAutoplay={false}
         arrows={false}
-        itemClass="px-2.5"
+        itemClass="px-2.5 flex"
         containerClass="-mx-2.5"
         responsive={defaultResponsiveData}
       >

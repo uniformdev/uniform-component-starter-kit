@@ -1,7 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import ContentBlock, { Props as ContentBlockContentBlock } from '@/canvas/ContentBlock';
-import Container, { BackgroundTypes } from '@/components/Container';
+import Container from '@/components/Container';
+import { BackgroundTypes } from '@/utils/styling';
 import { createFakeCompositionData } from '../utils';
 import { titleStyleOptions } from '../constants';
 
