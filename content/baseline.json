@@ -115,6 +115,148 @@
       "updated": "2023-07-03T13:28:45.286548+00:00"
     },
     {
+      "id": "banner",
+      "name": "Banner",
+      "icon": "toolbar-bottom",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "icon",
+          "name": "Icon",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "position",
+          "name": "Position",
+          "type": "tp-slider-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "step": 1,
+            "type": "custom",
+            "unit": "px",
+            "options": [
+              {
+                "label": "Top",
+                "value": "top"
+              },
+              {
+                "label": "Center",
+                "value": "center"
+              },
+              {
+                "label": "Bottom",
+                "value": "bottom"
+              }
+            ],
+            "maxValue": 10,
+            "minValue": 0
+          }
+        },
+        {
+          "id": "inline",
+          "name": "Inline",
+          "type": "checkbox",
+          "helpText": "If checked, the banner will not be positioned absolutely, and the position parameter will be ignored.",
+          "typeConfig": null
+        },
+        {
+          "id": "group_primaryCta",
+          "name": "Primary CTA",
+          "type": "group",
+          "typeConfig": {
+            "collapsed": true,
+            "childrenParams": [
+              "primaryButtonCopy",
+              "primaryButtonLink",
+              "primaryButtonStyle"
+            ]
+          }
+        },
+        {
+          "id": "primaryButtonCopy",
+          "name": "Primary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonLink",
+          "name": "Primary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "primaryButtonStyle",
+          "name": "Primary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "group_secondaryCta",
+          "name": "Secondary CTA",
+          "type": "group",
+          "typeConfig": {
+            "collapsed": true,
+            "childrenParams": [
+              "secondaryButtonCopy",
+              "secondaryButtonLink",
+              "secondaryButtonStyle"
+            ]
+          }
+        },
+        {
+          "id": "secondaryButtonCopy",
+          "name": "Secondary Button Copy",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonLink",
+          "name": "Secondary Button Link",
+          "type": "link",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "secondaryButtonStyle",
+          "name": "Secondary Button Style",
+          "type": "tp-button-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "description",
+      "canBeComposition": false,
+      "created": "2023-07-06T22:51:04.50327+00:00",
+      "updated": "2023-07-06T23:39:44.038595+00:00",
+      "variants": [
+        {
+          "id": "fullWidth",
+          "name": "Full Width"
+        }
+      ]
+    },
+    {
       "id": "breadcrumbs",
       "name": "Breadcrumbs",
       "icon": "border-style-dashed",
@@ -519,9 +661,10 @@
       ],
       "useTeamPermissions": true,
       "slots": [],
+      "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-06-26T09:07:00.928779+00:00",
-      "updated": "2023-07-03T13:24:31.62508+00:00",
+      "created": "2023-05-22T15:31:22.726344+00:00",
+      "updated": "2023-07-06T23:30:51.603211+00:00",
       "variants": [
         {
           "id": "backgroundImage",
@@ -1389,12 +1532,12 @@
             "spacer",
             "accordion",
             "grid",
-            "$localization",
             "$loop",
             "$personalization",
             "$test",
             "price",
-            "addToCart"
+            "addToCart",
+            "review"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -1403,13 +1546,13 @@
       ],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-07-03T12:01:56.143348+00:00",
-      "updated": "2023-07-03T12:22:50.790347+00:00"
+      "created": "2023-07-06T22:51:05.949603+00:00",
+      "updated": "2023-07-06T23:10:26.186232+00:00"
     },
     {
       "id": "gridItem",
       "name": "Grid Item",
-      "icon": "screen",
+      "icon": "layout-grid",
       "parameters": [
         {
           "id": "columnStart",
@@ -1644,11 +1787,11 @@
             "spacer",
             "grid",
             "$test",
-            "$localization",
             "$loop",
             "$personalization",
             "price",
-            "addToCart"
+            "addToCart",
+            "review"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -1656,8 +1799,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-07-03T12:01:56.247268+00:00",
-      "updated": "2023-07-03T12:22:59.256239+00:00"
+      "created": "2023-07-06T22:51:05.019599+00:00",
+      "updated": "2023-07-06T23:10:08.394346+00:00"
     },
     {
       "id": "header",
@@ -2229,9 +2372,10 @@
           "patternsInAllowedComponents": false
         }
       ],
+      "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.218205+00:00",
-      "updated": "2023-05-25T13:31:17.039709+00:00"
+      "created": "2023-05-22T15:31:22.822966+00:00",
+      "updated": "2023-07-06T23:48:10.884498+00:00"
     },
     {
       "id": "navigationLink",
@@ -2869,11 +3013,7 @@
             "cardBlock",
             "container",
             "featuredCallout",
-            "flexContainer",
-            "gridContainer",
             "hero",
-            "sectionOneColumn",
-            "sectionTwoColumns",
             "$test",
             "$loop",
             "$personalization",
@@ -2887,7 +3027,9 @@
             "video",
             "grid",
             "price",
-            "addToCart"
+            "addToCart",
+            "banner",
+            "review"
           ],
           "allowAllComponents": false,
           "inheritAllowedComponents": false,
@@ -2938,8 +3080,8 @@
       },
       "titleParameter": "pageTitle",
       "canBeComposition": true,
-      "created": "2023-06-26T09:07:01.317091+00:00",
-      "updated": "2023-07-03T12:22:43.081595+00:00"
+      "created": "2023-06-26T07:51:45.05932+00:00",
+      "updated": "2023-07-05T12:58:29.417662+00:00"
     },
     {
       "id": "price",
@@ -2996,6 +3138,165 @@
       "updated": "2023-07-03T12:18:58.117358+00:00"
     },
     {
+      "id": "review",
+      "name": "Review",
+      "icon": "https://res.cloudinary.com/uniformdev/image/upload/v1688684573/component-starter-kit/component-icons/star.svg",
+      "parameters": [
+        {
+          "id": "title",
+          "name": "Title",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "description",
+          "name": "Description",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "stars",
+          "name": "Stars",
+          "type": "tp-slider-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "step": 1,
+            "type": "custom",
+            "unit": "px",
+            "options": [
+              {
+                "label": "1",
+                "value": "1"
+              },
+              {
+                "label": "2",
+                "value": "2"
+              },
+              {
+                "label": "3",
+                "value": "3"
+              },
+              {
+                "label": "4",
+                "value": "4"
+              },
+              {
+                "label": "5",
+                "value": "5"
+              }
+            ],
+            "maxValue": 10,
+            "minValue": 0
+          }
+        },
+        {
+          "id": "personName",
+          "name": "Person Name",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "picture",
+          "name": "Picture",
+          "type": "image",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "date",
+          "name": "Date",
+          "type": "text",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "group_reviewDescription",
+          "name": "Presentation Settings",
+          "type": "group",
+          "typeConfig": {
+            "collapsed": true,
+            "childrenParams": [
+              "starsColor",
+              "showReviewLabel",
+              "lineCountRestriction"
+            ]
+          }
+        },
+        {
+          "id": "starsColor",
+          "name": "Stars Color",
+          "type": "tp-color-style-parameter",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "showReviewLabel",
+          "name": "Show Label",
+          "type": "checkbox",
+          "helpText": "",
+          "typeConfig": null
+        },
+        {
+          "id": "lineCountRestriction",
+          "name": "Line Count Restriction",
+          "type": "tp-slider-parameter",
+          "helpText": "",
+          "typeConfig": {
+            "step": 1,
+            "type": "custom",
+            "unit": "px",
+            "options": [
+              {
+                "label": "None",
+                "value": "none"
+              },
+              {
+                "label": "6",
+                "value": "6"
+              },
+              {
+                "label": "5",
+                "value": "5"
+              },
+              {
+                "label": "4",
+                "value": "4"
+              },
+              {
+                "label": "3",
+                "value": "3"
+              },
+              {
+                "label": "2",
+                "value": "2"
+              },
+              {
+                "label": "1",
+                "value": "1"
+              }
+            ],
+            "maxValue": 10,
+            "minValue": 0
+          }
+        }
+      ],
+      "useTeamPermissions": true,
+      "slots": [],
+      "titleParameter": "personName",
+      "canBeComposition": false,
+      "created": "2023-07-05T12:51:58.523863+00:00",
+      "updated": "2023-07-07T08:06:59.664587+00:00",
+      "variants": [
+        {
+          "id": "multiColumn",
+          "name": "Multi Column"
+        }
+      ]
+    },
+    {
       "id": "richText",
       "name": "Rich Text",
       "icon": "format-text",
@@ -3047,7 +3348,7 @@
     {
       "id": "spacer",
       "name": "Spacer",
-      "icon": "screen",
+      "icon": "merge-horizontal",
       "parameters": [
         {
           "id": "thickness",
@@ -3067,8 +3368,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-06-13T10:36:32.371506+00:00",
-      "updated": "2023-06-26T10:59:51.2238+00:00",
+      "created": "2023-06-17T18:58:42.722746+00:00",
+      "updated": "2023-07-06T23:03:27.71518+00:00",
       "variants": [
         {
           "id": "vertical",
@@ -3079,11 +3380,11 @@
     {
       "id": "video",
       "name": "Video",
-      "icon": "screen",
+      "icon": "camera",
       "parameters": [
         {
           "id": "url",
-          "name": "Url",
+          "name": "Video Url",
           "type": "link",
           "helpText": "",
           "typeConfig": {
@@ -3095,21 +3396,32 @@
           }
         },
         {
+          "id": "placeholderImage",
+          "name": "Placeholder Image",
+          "type": "image",
+          "helpText": "You can replace video preview image by using this parameter. Work only when light is checked",
+          "typeConfig": null
+        },
+        {
           "id": "group_displaySettings",
-          "name": "Display Settings",
+          "name": "Playback settings",
           "type": "group",
           "typeConfig": {
             "collapsed": true,
             "childrenParams": [
+              "lazyLoad",
               "loop",
               "controls",
-              "light",
-              "autoPlay",
-              "placeholderImage",
-              "muted",
-              "lazyLoad"
+              "muted"
             ]
           }
+        },
+        {
+          "id": "lazyLoad",
+          "name": "Lazy Load",
+          "type": "checkbox",
+          "helpText": "Check to show just the video thumbnail, which loads the full player on click",
+          "typeConfig": null
         },
         {
           "id": "loop",
@@ -3126,20 +3438,6 @@
           "typeConfig": null
         },
         {
-          "id": "lazyLoad",
-          "name": "Lazy Load",
-          "type": "checkbox",
-          "helpText": "Check to show just the video thumbnail, which loads the full player on click",
-          "typeConfig": null
-        },
-        {
-          "id": "placeholderImage",
-          "name": "Placeholder Image",
-          "type": "image",
-          "helpText": "You can replace video preview image by using this parameter. Work only when light is checked",
-          "typeConfig": null
-        },
-        {
           "id": "muted",
           "name": "Muted",
           "type": "checkbox",
@@ -3150,8 +3448,8 @@
       "useTeamPermissions": true,
       "slots": [],
       "canBeComposition": false,
-      "created": "2023-06-27T11:37:49.438202+00:00",
-      "updated": "2023-07-03T09:54:30.772919+00:00"
+      "created": "2023-07-06T22:51:04.982344+00:00",
+      "updated": "2023-07-06T23:13:52.159998+00:00"
     }
   ],
   "compositions": [
@@ -3204,11 +3502,6 @@
                   "name": "info-content",
                   "label": "Info Content",
                   "value": "#99C6FF"
-                },
-                {
-                  "name": "base-200",
-                  "label": "Base 200",
-                  "value": "#6b8ff0"
                 },
                 {
                   "name": "base-300",
@@ -3583,21 +3876,21 @@
               "slots": {
                 "links": [
                   {
-                    "_id": "404356a4-fc58-42f1-b7c6-681df14db53e",
+                    "_id": "7e1606da-1b52-4d4d-8896-00a503345736",
                     "type": "navigationLink",
-                    "variant": "header",
                     "parameters": {
                       "link": {
                         "type": "link",
                         "value": {
-                          "path": "/",
-                          "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                          "path": "/components",
+                          "type": "projectMapNode",
+                          "nodeId": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
                           "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
                         }
                       },
                       "title": {
                         "type": "text",
-                        "value": "Home"
+                        "value": "All components"
                       }
                     }
                   },
@@ -3719,6 +4012,171 @@
                               "value": "Accordions"
                             }
                           }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "link": {
+                        "type": "link",
+                        "value": {
+                          "path": "/components",
+                          "type": "projectMapNode",
+                          "nodeId": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
+                          "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                        }
+                      },
+                      "title": {
+                        "type": "text",
+                        "value": "Marketing"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "7c6482b9-8ce0-4689-9fb8-f0f976f1806e",
+                    "type": "navigationGroup",
+                    "slots": {
+                      "subNavItems": [
+                        {
+                          "_id": "9cf340da-aed0-424a-854f-f20e27f4cd58",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/pdp",
+                                "type": "projectMapNode",
+                                "nodeId": "f28599b9-2a0e-4f69-be98-9c32278237d4",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Product Detail Page"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "fe803539-1484-4827-a876-060037b4ce1c",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/reviews",
+                                "type": "projectMapNode",
+                                "nodeId": "d42bee8b-afda-49e3-8691-54ce2f39f809",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Reviews"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Commerce"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "e878d974-3def-4d9d-8c6b-1a5df6c94b73",
+                    "type": "navigationGroup",
+                    "slots": {
+                      "subNavItems": [
+                        {
+                          "_id": "e9964bf2-aecd-49de-bc15-b92be59f7896",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/headers-topnav",
+                                "type": "projectMapNode",
+                                "nodeId": "e0558074-87bb-41c9-962d-814853d8f829",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Header & Top Nav"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "50608254-c677-4030-9ffd-aa4d5f2a93d1",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/breadcrumbs",
+                                "type": "projectMapNode",
+                                "nodeId": "aeed197a-ba51-497f-8f3e-92dc601918f2",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Breadcrumbs"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "26774ef2-48fc-4aca-a614-70dff91b4a0a",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/cookie-banners",
+                                "type": "projectMapNode",
+                                "nodeId": "7a7b2f31-988c-47b2-abd9-e601b0ede3d9",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Cookie Banners"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "title": {
+                        "type": "text",
+                        "value": "Global"
+                      }
+                    }
+                  },
+                  {
+                    "_id": "64d3acf5-96f3-454a-8d47-52d212bc40d1",
+                    "type": "navigationGroup",
+                    "slots": {
+                      "subNavItems": [
+                        {
+                          "_id": "166bfbe5-10b0-4a59-a983-19b1816e03d5",
+                          "type": "navigationLink",
+                          "parameters": {
+                            "link": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/layouts-container",
+                                "type": "projectMapNode",
+                                "nodeId": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Layouts & Containers"
+                            }
+                          }
                         },
                         {
                           "_id": "164ab5d3-e420-4b63-a4b7-fcbb352446ad",
@@ -3759,21 +4217,21 @@
                           }
                         },
                         {
-                          "_id": "166bfbe5-10b0-4a59-a983-19b1816e03d5",
+                          "_id": "c5ba3067-be0b-4a9d-8804-911727601ac6",
                           "type": "navigationLink",
                           "parameters": {
                             "link": {
                               "type": "link",
                               "value": {
-                                "path": "/components/layouts-container",
+                                "path": "/components/spacers-dividers",
                                 "type": "projectMapNode",
-                                "nodeId": "a99b4044-8f9a-48fc-9f58-6c2fe4fb7534",
+                                "nodeId": "8f4c8afc-f1a0-4443-855d-e5499eb9a91b",
                                 "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
                               }
                             },
                             "title": {
                               "type": "text",
-                              "value": "Layouts & Containers"
+                              "value": "Spacers & Dividers"
                             }
                           }
                         },
@@ -3797,63 +4255,6 @@
                           }
                         },
                         {
-                          "_id": "e9964bf2-aecd-49de-bc15-b92be59f7896",
-                          "type": "navigationLink",
-                          "parameters": {
-                            "link": {
-                              "type": "link",
-                              "value": {
-                                "path": "/components/headers-topnav",
-                                "type": "projectMapNode",
-                                "nodeId": "e0558074-87bb-41c9-962d-814853d8f829",
-                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                              }
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Header & Top Nav"
-                            }
-                          }
-                        },
-                        {
-                          "_id": "50608254-c677-4030-9ffd-aa4d5f2a93d1",
-                          "type": "navigationLink",
-                          "parameters": {
-                            "link": {
-                              "type": "link",
-                              "value": {
-                                "path": "/components/breadcrumbs",
-                                "type": "projectMapNode",
-                                "nodeId": "aeed197a-ba51-497f-8f3e-92dc601918f2",
-                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                              }
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Breadcrumbs"
-                            }
-                          }
-                        },
-                        {
-                          "_id": "c5ba3067-be0b-4a9d-8804-911727601ac6",
-                          "type": "navigationLink",
-                          "parameters": {
-                            "link": {
-                              "type": "link",
-                              "value": {
-                                "path": "/components/spacers-dividers",
-                                "type": "projectMapNode",
-                                "nodeId": "8f4c8afc-f1a0-4443-855d-e5499eb9a91b",
-                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                              }
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Spacers & Dividers"
-                            }
-                          }
-                        },
-                        {
                           "_id": "fb9580f8-495a-4f50-89fb-21dca93a303c",
                           "type": "navigationLink",
                           "parameters": {
@@ -3871,41 +4272,13 @@
                               "value": "Videos"
                             }
                           }
-                        },
-                        {
-                          "_id": "9cf340da-aed0-424a-854f-f20e27f4cd58",
-                          "type": "navigationLink",
-                          "parameters": {
-                            "link": {
-                              "type": "link",
-                              "value": {
-                                "path": "/components/commerce-components",
-                                "type": "projectMapNode",
-                                "nodeId": "f28599b9-2a0e-4f69-be98-9c32278237d4",
-                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                              }
-                            },
-                            "title": {
-                              "type": "text",
-                              "value": "Commerce Components"
-                            }
-                          }
                         }
                       ]
                     },
                     "parameters": {
-                      "link": {
-                        "type": "link",
-                        "value": {
-                          "path": "/components",
-                          "type": "projectMapNode",
-                          "nodeId": "cab3997c-e1bb-4846-be31-9afeae37c5d4",
-                          "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
-                        }
-                      },
                       "title": {
                         "type": "text",
-                        "value": "Components"
+                        "value": "Atoms"
                       }
                     }
                   }
@@ -3962,20 +4335,20 @@
           ]
         }
       },
-      "created": "2023-06-26T09:07:03.957483+00:00",
-      "modified": "2023-07-03T13:14:56.519024+00:00",
+      "created": "2023-05-22T15:31:26.19323+00:00",
+      "modified": "2023-07-06T23:52:08.261092+00:00",
       "pattern": false
     },
     {
       "composition": {
-        "_name": "Videos",
+        "_name": "Video Player",
         "_id": "18490a18-819f-4b53-a3e7-07fd12b30228",
         "_slug": "videos",
         "type": "page",
         "parameters": {
           "pageTitle": {
             "type": "text",
-            "value": "Component Starter Kit Video Components"
+            "value": "Video Player component : CSK"
           }
         },
         "slots": {
@@ -3991,7 +4364,7 @@
                 },
                 "title": {
                   "type": "text",
-                  "value": "Dynamic Video Player: Explore the World through Multimedia Delights"
+                  "value": "Video Player component"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
@@ -3999,7 +4372,7 @@
                 },
                 "description": {
                   "type": "text",
-                  "value": "Designed to offer an immersive and seamless video playback experience. This versatile tool allows you to effortlessly play videos from various URLs, opening up a world of multimedia delights at your fingertips."
+                  "value": "Performance-optimized video players that are multi-source capable. Get your YouTube, Vimeo, etc. content rendered."
                 }
               }
             },
@@ -4018,20 +4391,20 @@
               }
             },
             {
-              "_id": "0c3be97c-a08a-4a71-9311-4357c03a8c6e",
-              "type": "callToAction",
+              "_id": "fb175877-755d-4c21-818b-32f266713215",
+              "type": "content",
               "parameters": {
+                "text": {
+                  "type": "text",
+                  "value": "Lazy loaded, without controls, unmuted. See more playback settings..."
+                },
                 "title": {
                   "type": "text",
-                  "value": "YouTube Video Player"
+                  "value": "Video Player variant - YouTube"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
                   "value": "h2"
-                },
-                "description": {
-                  "type": "text",
-                  "value": "Enjoy seamless streaming of your favorite YouTube videos with our advanced video player. Access millions of videos, from viral clips to music videos, tutorials, and much more. With intuitive controls and high-quality playback, immerse yourself in a world of endless entertainment right at your fingertips."
                 }
               }
             },
@@ -4042,7 +4415,7 @@
                 "url": {
                   "type": "link",
                   "value": {
-                    "path": "https://www.youtube.com/watch?v=PsqNPuSZLrI",
+                    "path": "https://www.youtube.com/watch?v=qh_ekk7CfZw",
                     "type": "url"
                   }
                 },
@@ -4053,20 +4426,79 @@
               }
             },
             {
-              "_id": "a34cca73-9c9d-49a1-8287-3e8a46ba9ed5",
-              "type": "callToAction",
+              "_id": "4114e606-cedd-404c-9333-ec9f4c53e35f",
+              "type": "spacer",
               "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "ad6bce49-677b-4f84-a5cc-cb5ae1694b25",
+              "type": "content",
+              "parameters": {
+                "text": {
+                  "type": "text",
+                  "value": "Lazy loaded, without controls, unmuted. See more playback settings..."
+                },
                 "title": {
                   "type": "text",
-                  "value": "Vimeo Video Player"
+                  "value": "Video Player variant - YouTube with placeholder image"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
                   "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "f2fbe6a0-9e3f-43dc-8cf0-f43edadf1c3f",
+              "type": "video",
+              "parameters": {
+                "url": {
+                  "type": "link",
+                  "value": {
+                    "path": "https://www.youtube.com/watch?v=HjQ--q22sxw",
+                    "type": "url"
+                  }
                 },
-                "description": {
+                "lazyLoad": {
+                  "type": "checkbox",
+                  "value": true
+                },
+                "placeholderImage": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688685495/component-starter-kit/webinar-poster.png"
+                }
+              }
+            },
+            {
+              "_id": "e7db4ef7-2e12-46d3-b6cf-be9712e3540d",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "b81fd61e-f33f-4f0c-afbf-8b759f806a8a",
+              "type": "content",
+              "parameters": {
+                "text": {
                   "type": "text",
-                  "value": "Experience the best of Vimeo's creative community with our feature-rich video player. Stream stunning high-definition videos from talented filmmakers, artists, and creators around the world. Explore a vast collection of short films, documentaries, animations, and more. Our player offers smooth playback, customizable settings, and easy navigation, allowing you to dive into a world of artistic expression. Discover and share captivating videos with the Vimeo video player."
+                  "value": "Lazy loaded, without controls, unmuted. See more playback settings..."
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Video Player Variant - Vimeo"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
                 }
               }
             },
@@ -4077,13 +4509,9 @@
                 "url": {
                   "type": "link",
                   "value": {
-                    "path": "https://vimeo.com/780006959",
+                    "path": "https://vimeo.com/838451446",
                     "type": "url"
                   }
-                },
-                "controls": {
-                  "type": "checkbox",
-                  "value": true
                 },
                 "lazyLoad": {
                   "type": "checkbox",
@@ -4094,8 +4522,8 @@
           ]
         }
       },
-      "created": "2023-06-27T11:39:25.270211+00:00",
-      "modified": "2023-07-03T09:55:54.494203+00:00",
+      "created": "2023-07-06T22:51:12.088208+00:00",
+      "modified": "2023-07-06T23:24:26.935348+00:00",
       "pattern": false
     },
     {
@@ -5608,6 +6036,20 @@
               }
             },
             {
+              "_id": "58517387-5e7e-4ece-a29a-a4d8fa69d140",
+              "type": "content",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Images in a grid"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
               "_id": "40438b92-b4ce-4ac4-bcc0-a8417a60b406",
               "type": "container",
               "slots": {
@@ -5742,20 +6184,26 @@
               }
             },
             {
-              "_id": "5431d872-db5e-4923-8831-197731a61082",
-              "type": "callToAction",
+              "_id": "55d94dbf-e754-45b6-8611-273d28913dab",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "1b1ef393-eb3a-4832-9da7-37f767d18efa",
+              "type": "content",
               "parameters": {
                 "title": {
                   "type": "text",
-                  "value": "Enhanced Image Overlay Control"
+                  "value": "Images with overlays"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
-                  "value": "h1"
-                },
-                "description": {
-                  "type": "text",
-                  "value": "The Enhanced Image Overlay Control feature empowers users to customize the appearance of images by applying overlays with precision."
+                  "value": "h2"
                 }
               }
             },
@@ -5914,20 +6362,26 @@
               }
             },
             {
-              "_id": "5dc8c288-b385-4aa6-b370-b38cbeae82e8",
-              "type": "callToAction",
+              "_id": "6f42feb3-5341-4a04-8ad7-346a04b0f032",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "4111ffa9-dca5-4ef7-bd35-46b5d20baa4e",
+              "type": "content",
               "parameters": {
                 "title": {
                   "type": "text",
-                  "value": "Customizable Image Borders"
+                  "value": "Images with customizable borders"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
                   "value": "h1"
-                },
-                "description": {
-                  "type": "text",
-                  "value": "With the Customizable Image Borders feature, you can now take full control over the appearance of borders around your images. Effortlessly adjust the border width and color to perfectly complement your design aesthetic"
                 }
               }
             },
@@ -6094,8 +6548,8 @@
           ]
         }
       },
-      "created": "2023-06-26T07:51:50.425593+00:00",
-      "modified": "2023-07-03T13:25:03.465651+00:00",
+      "created": "2023-05-22T15:31:25.066406+00:00",
+      "modified": "2023-07-06T23:35:43.877471+00:00",
       "pattern": false
     },
     {
@@ -6340,14 +6794,14 @@
     },
     {
       "composition": {
-        "_name": "Commerce Components",
+        "_name": "Product Detail Page",
         "_id": "2e1bdedd-d37d-4230-97e2-f44913faaf2f",
         "_slug": "commerce-components",
         "type": "page",
         "parameters": {
           "pageTitle": {
             "type": "text",
-            "value": "Commerce Components page"
+            "value": "Product Detail Page components : CSK"
           }
         },
         "slots": {
@@ -6363,7 +6817,7 @@
                 },
                 "title": {
                   "type": "text",
-                  "value": "Commerce Components"
+                  "value": "Product Detail Page components"
                 },
                 "titleStyle": {
                   "type": "tp-title-style-parameter",
@@ -6371,11 +6825,11 @@
                 },
                 "description": {
                   "type": "text",
-                  "value": "for your PDPs and PLPs... you know... TCB - taking care of business."
+                  "value": "for your PDPs... you know... TCB - taking care of business."
                 },
                 "eyebrowText": {
                   "type": "text",
-                  "value": "🛒"
+                  "value": ""
                 }
               }
             },
@@ -6408,7 +6862,7 @@
                       },
                       "titleStyle": {
                         "type": "tp-title-style-parameter",
-                        "value": "h1"
+                        "value": "h2"
                       }
                     }
                   },
@@ -6436,7 +6890,7 @@
                                   },
                                   "titleStyle": {
                                     "type": "tp-title-style-parameter",
-                                    "value": "h3"
+                                    "value": "h4"
                                   }
                                 }
                               },
@@ -6458,7 +6912,7 @@
                                   },
                                   "labelStyle": {
                                     "type": "tp-title-style-parameter",
-                                    "value": "h3"
+                                    "value": "h4"
                                   }
                                 }
                               },
@@ -6483,6 +6937,10 @@
                                   "buttonCopy": {
                                     "type": "text",
                                     "value": "Add to Cart"
+                                  },
+                                  "buttonStyle": {
+                                    "type": "tp-button-style-parameter",
+                                    "value": "primary"
                                   }
                                 }
                               },
@@ -6649,7 +7107,7 @@
                     "parameters": {
                       "thickness": {
                         "type": "tp-slider-parameter",
-                        "value": "30px"
+                        "value": "80px"
                       }
                     }
                   },
@@ -6666,34 +7124,6 @@
                         "value": "primary"
                       }
                     }
-                  },
-                  {
-                    "_id": "ea1a590d-0470-4a77-9fd4-0dc9220e8d5b",
-                    "type": "spacer",
-                    "parameters": {
-                      "thickness": {
-                        "type": "tp-slider-parameter",
-                        "value": "30px"
-                      }
-                    }
-                  },
-                  {
-                    "_id": "58a56178-6c7f-47b8-a164-b7b47b84d744",
-                    "type": "content",
-                    "parameters": {
-                      "text": {
-                        "type": "text",
-                        "value": "Light Roast Coffee: Our Breakfast Blend light roast whole bean coffee is the perfect morning coffee to ease you into your day. Sustainable Light Roast Coffee Beans: Our coffee is made with premium quality Arabica coffee beans from Central and South America. They are grown, sourced and packaged responsibly, after being roasted fresh in Seattle, USA."
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "About this product"
-                      },
-                      "titleStyle": {
-                        "type": "tp-title-style-parameter",
-                        "value": "h1"
-                      }
-                    }
                   }
                 ]
               },
@@ -6704,15 +7134,19 @@
                 },
                 "marginTop": {
                   "type": "select",
-                  "value": ""
+                  "value": "None"
+                },
+                "paddingTop": {
+                  "type": "select",
+                  "value": "None"
                 },
                 "marginBottom": {
                   "type": "select",
-                  "value": ""
+                  "value": "None"
                 },
                 "paddingBottom": {
                   "type": "select",
-                  "value": ""
+                  "value": "None"
                 }
               }
             },
@@ -6735,7 +7169,7 @@
                       },
                       "titleStyle": {
                         "type": "tp-title-style-parameter",
-                        "value": "h1"
+                        "value": "h2"
                       }
                     }
                   },
@@ -6864,7 +7298,7 @@
                                   },
                                   "titleStyle": {
                                     "type": "tp-title-style-parameter",
-                                    "value": "h3"
+                                    "value": "h4"
                                   }
                                 }
                               },
@@ -6886,7 +7320,7 @@
                                   },
                                   "labelStyle": {
                                     "type": "tp-title-style-parameter",
-                                    "value": "h3"
+                                    "value": "h4"
                                   }
                                 }
                               },
@@ -6969,58 +7403,6 @@
                         "value": "3"
                       }
                     }
-                  },
-                  {
-                    "_id": "8de53d12-57ed-466c-99e7-46816447d56e",
-                    "type": "spacer",
-                    "parameters": {
-                      "thickness": {
-                        "type": "tp-slider-parameter",
-                        "value": "30px"
-                      }
-                    }
-                  },
-                  {
-                    "_id": "5bc44676-3e80-41e6-982e-6b5a81426d84",
-                    "type": "divider",
-                    "parameters": {
-                      "thickness": {
-                        "type": "tp-slider-parameter",
-                        "value": "1px"
-                      },
-                      "colorStyle": {
-                        "type": "tp-color-style-parameter",
-                        "value": "primary"
-                      }
-                    }
-                  },
-                  {
-                    "_id": "836c41ee-3e19-466a-85ed-fede113bd647",
-                    "type": "spacer",
-                    "parameters": {
-                      "thickness": {
-                        "type": "tp-slider-parameter",
-                        "value": "30px"
-                      }
-                    }
-                  },
-                  {
-                    "_id": "e48a3124-25d9-4b3f-9190-cb579e553859",
-                    "type": "content",
-                    "parameters": {
-                      "text": {
-                        "type": "text",
-                        "value": "Light Roast Coffee: Our Breakfast Blend light roast whole bean coffee is the perfect morning coffee to ease you into your day. Sustainable Light Roast Coffee Beans: Our coffee is made with premium quality Arabica coffee beans from Central and South America. They are grown, sourced and packaged responsibly, after being roasted fresh in Seattle, USA."
-                      },
-                      "title": {
-                        "type": "text",
-                        "value": "About this product"
-                      },
-                      "titleStyle": {
-                        "type": "tp-title-style-parameter",
-                        "value": "h1"
-                      }
-                    }
                   }
                 ]
               },
@@ -7035,7 +7417,7 @@
                 },
                 "marginBottom": {
                   "type": "select",
-                  "value": ""
+                  "value": "Small"
                 },
                 "paddingBottom": {
                   "type": "select",
@@ -7046,8 +7428,483 @@
           ]
         }
       },
-      "created": "2023-07-03T14:21:36.956309+00:00",
-      "modified": "2023-07-05T09:42:17.407497+00:00",
+      "created": "2023-07-05T09:19:52.278211+00:00",
+      "modified": "2023-07-07T09:54:30.895644+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
+        "_name": "Reviews",
+        "_id": "42b0381e-8643-4aa4-a3b6-c49ab21344fd",
+        "_slug": "reviews",
+        "type": "page",
+        "parameters": {
+          "pageTitle": {
+            "type": "text",
+            "value": "Component Starter Kit Reviews"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "da2629b8-d924-4e4a-a027-cb3dcea7a180",
+              "type": "hero",
+              "variant": "backgroundDarkImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Reviews component"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Star reviews are pretty popular in commerce scenarios. This component comes in two variants now."
+                }
+              }
+            },
+            {
+              "_id": "c0fccd1b-a581-4178-99a8-0c05ae7481dd",
+              "type": "breadcrumbs",
+              "parameters": {
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "primary"
+                },
+                "displayRootNode": {
+                  "type": "checkbox",
+                  "value": true
+                }
+              }
+            },
+            {
+              "_id": "aee676d0-488c-4d44-9122-ae182a3c751b",
+              "type": "content",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Default variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "e76afd71-4858-4524-9533-5bd2300bea4a",
+              "type": "grid",
+              "slots": {
+                "grid-inner": [
+                  {
+                    "_id": "ecfe5ada-3231-4564-a7c3-0ab4491c4b76",
+                    "type": "gridItem",
+                    "slots": {
+                      "inner": [
+                        {
+                          "_id": "56d4dcc9-df34-4c46-9489-74f3a80cf930",
+                          "type": "grid",
+                          "slots": {
+                            "grid-inner": [
+                              {
+                                "_id": "8b7126f0-a066-4f52-b7cd-dcb6ba93a0a0",
+                                "type": "review",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "Can't say enough good things"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563026/component-starter-kit/canvas-images/photo-1500648767791-00dcc994a43e_h3two9.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Hector Gibbons"
+                                  },
+                                  "starsColor": {
+                                    "type": "tp-color-style-parameter",
+                                    "value": "primary"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price."
+                                  },
+                                  "lineCountRestriction": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "none"
+                                  }
+                                }
+                              },
+                              {
+                                "_id": "07d97a02-73cd-4e62-89cf-ceea22e12986",
+                                "type": "review",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "4"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "The last shirts I may ever need"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563026/component-starter-kit/canvas-images/photo-1502685104226-ee32379fefbe_pjadfb.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Emily Selman"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!"
+                                  }
+                                }
+                              },
+                              {
+                                "_id": "759bd889-07a5-4999-8513-e2f6fb6f9c13",
+                                "type": "review",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "Very comfy and looks the part"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563025/component-starter-kit/canvas-images/photo-1519244703995-f4e0f30006d5_ozngea.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Laura G"
+                                  },
+                                  "starsColor": {
+                                    "type": "tp-color-style-parameter",
+                                    "value": "accent"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "I bought two of those comfy cotton shirts, and let me tell you: they're amazing! I have been wearing them almost every day. Even after a dozen of washes, that still looks and feel good as new. Will definitely order a few more... If I ever need to!"
+                                  },
+                                  "showReviewLabel": {
+                                    "type": "checkbox",
+                                    "value": true
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "parameters": {
+                            "gapX": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
+                            },
+                            "gapY": {
+                              "type": "tp-slider-parameter",
+                              "value": "medium"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Column Grid"
+                            },
+                            "columnsCount": {
+                              "type": "tp-slider-parameter",
+                              "value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "rowSpan": {
+                        "type": "tp-slider-parameter",
+                        "value": "1"
+                      },
+                      "rowStart": {
+                        "type": "tp-slider-parameter",
+                        "value": "None"
+                      },
+                      "columnSpan": {
+                        "type": "tp-slider-parameter",
+                        "value": "6"
+                      },
+                      "columnStart": {
+                        "type": "tp-slider-parameter",
+                        "value": "2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "gapX": {
+                  "type": "tp-slider-parameter",
+                  "value": "none"
+                },
+                "gapY": {
+                  "type": "tp-slider-parameter",
+                  "value": "none"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Default review container"
+                },
+                "columnsCount": {
+                  "type": "tp-slider-parameter",
+                  "value": "8"
+                }
+              }
+            },
+            {
+              "_id": "82ee2143-6698-481b-af25-58fdb7b5c4ef",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "e62bf666-9de5-4cbc-9080-59925eca8465",
+              "type": "content",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Column view variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                }
+              }
+            },
+            {
+              "_id": "578c67b0-3be3-43e7-9af3-d24c2ebc5db3",
+              "type": "grid",
+              "slots": {
+                "grid-inner": [
+                  {
+                    "_id": "6e8dd46f-d2af-402b-ae33-6085cfb3410f",
+                    "type": "gridItem",
+                    "slots": {
+                      "inner": [
+                        {
+                          "_id": "92b6d36e-4ccd-4b6c-82bc-da4fcbb0ed01",
+                          "type": "grid",
+                          "slots": {
+                            "grid-inner": [
+                              {
+                                "_id": "28318318-3b31-49ff-a171-32d4105e0dc9",
+                                "type": "review",
+                                "variant": "multiColumn",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "Can't say enough good things!"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563026/component-starter-kit/canvas-images/photo-1500648767791-00dcc994a43e_h3two9.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Hector Gibbons"
+                                  },
+                                  "starsColor": {
+                                    "type": "tp-color-style-parameter",
+                                    "value": "base-200"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price."
+                                  },
+                                  "lineCountRestriction": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  }
+                                }
+                              },
+                              {
+                                "_id": "cbb1f84a-6a7b-4739-8b50-3a5278895ed8",
+                                "type": "review",
+                                "variant": "multiColumn",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "4"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "The last shirts I may ever need"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563026/component-starter-kit/canvas-images/photo-1502685104226-ee32379fefbe_pjadfb.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Emily Selman"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "This icon pack is just what I need for my latest project. There's an icon for just about anything I could ever need. Love the playful look!"
+                                  },
+                                  "showReviewLabel": {
+                                    "type": "checkbox",
+                                    "value": true
+                                  },
+                                  "lineCountRestriction": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  }
+                                }
+                              },
+                              {
+                                "_id": "b5d1b220-54e6-4002-a0b3-b446ba353dd7",
+                                "type": "review",
+                                "variant": "multiColumn",
+                                "parameters": {
+                                  "date": {
+                                    "type": "text",
+                                    "value": "July 12, 2021"
+                                  },
+                                  "stars": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  },
+                                  "title": {
+                                    "type": "text",
+                                    "value": "Very comfy and looks the part"
+                                  },
+                                  "picture": {
+                                    "type": "image",
+                                    "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688563025/component-starter-kit/canvas-images/photo-1519244703995-f4e0f30006d5_ozngea.avif"
+                                  },
+                                  "personName": {
+                                    "type": "text",
+                                    "value": "Laura G"
+                                  },
+                                  "starsColor": {
+                                    "type": "tp-color-style-parameter",
+                                    "value": "base-300"
+                                  },
+                                  "description": {
+                                    "type": "text",
+                                    "value": "I bought two of those comfy cotton shirts, and let me tell you: they're amazing! I have been wearing them almost every day. Even after a dozen of washes, that still looks and feel good as new. Will definitely order a few more... If I ever need to!"
+                                  },
+                                  "lineCountRestriction": {
+                                    "type": "tp-slider-parameter",
+                                    "value": "5"
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          "parameters": {
+                            "gapX": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
+                            },
+                            "gapY": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
+                            },
+                            "title": {
+                              "type": "text",
+                              "value": "Column Grid"
+                            },
+                            "columnsCount": {
+                              "type": "tp-slider-parameter",
+                              "value": "1"
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    "parameters": {
+                      "rowSpan": {
+                        "type": "tp-slider-parameter",
+                        "value": "1"
+                      },
+                      "rowStart": {
+                        "type": "tp-slider-parameter",
+                        "value": "None"
+                      },
+                      "columnSpan": {
+                        "type": "tp-slider-parameter",
+                        "value": "6"
+                      },
+                      "columnStart": {
+                        "type": "tp-slider-parameter",
+                        "value": "2"
+                      }
+                    }
+                  }
+                ]
+              },
+              "parameters": {
+                "gapX": {
+                  "type": "tp-slider-parameter",
+                  "value": "none"
+                },
+                "gapY": {
+                  "type": "tp-slider-parameter",
+                  "value": "none"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Multi review container"
+                },
+                "columnsCount": {
+                  "type": "tp-slider-parameter",
+                  "value": "8"
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-07-05T12:57:53.69073+00:00",
+      "modified": "2023-07-07T08:13:09.320412+00:00",
       "pattern": false
     },
     {
@@ -9620,7 +10477,11 @@
                             },
                             "description": {
                               "type": "text",
-                              "value": "Want to confuse Zoomer? Talk to them about the breadcrumbs and rotary phones."
+                              "value": "Want to confuse a Zoomer? Talk to them about the breadcrumbs and rotary phones."
+                            },
+                            "lineCountRestriction": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
                             }
                           }
                         },
@@ -9736,13 +10597,13 @@
                           }
                         },
                         {
-                          "_id": "7cd4db97-5f66-48ca-8a7f-6bfd4a58e845",
+                          "_id": "bf7118da-cfee-4f06-bd20-d9f6a9a51714",
                           "type": "card",
                           "variant": "backgroundImage",
                           "parameters": {
                             "title": {
                               "type": "text",
-                              "value": "Commerce Components"
+                              "value": "Product Detail Page"
                             },
                             "badgeStyle": {
                               "type": "tp-badge-style-parameter",
@@ -9755,7 +10616,7 @@
                             "buttonLink": {
                               "type": "link",
                               "value": {
-                                "path": "/components/commerce-components",
+                                "path": "/components/pdp",
                                 "type": "projectMapNode",
                                 "nodeId": "f28599b9-2a0e-4f69-be98-9c32278237d4",
                                 "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
@@ -9763,7 +10624,79 @@
                             },
                             "description": {
                               "type": "text",
-                              "value": "Transform your online store with our comprehensive set of commerce components."
+                              "value": "Usual suspect components found on PDPs - image gallery, add to cart, price..."
+                            },
+                            "lineCountRestriction": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "fe25fa3f-8656-4f43-8a37-5a23bb8c753a",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Cookie Banners"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/cookie-banners",
+                                "type": "projectMapNode",
+                                "nodeId": "7a7b2f31-988c-47b2-abd9-e601b0ede3d9",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Ron LaFlamme will tell you you need one."
+                            },
+                            "lineCountRestriction": {
+                              "type": "tp-slider-parameter",
+                              "value": "none"
+                            }
+                          }
+                        },
+                        {
+                          "_id": "52e298c8-5534-4f68-b70b-58cac0ed528c",
+                          "type": "card",
+                          "variant": "backgroundImage",
+                          "parameters": {
+                            "title": {
+                              "type": "text",
+                              "value": "Reviews"
+                            },
+                            "badgeStyle": {
+                              "type": "tp-badge-style-parameter",
+                              "value": "accent"
+                            },
+                            "buttonCopy": {
+                              "type": "text",
+                              "value": "See All"
+                            },
+                            "buttonLink": {
+                              "type": "link",
+                              "value": {
+                                "path": "/components/reviews",
+                                "type": "projectMapNode",
+                                "nodeId": "d42bee8b-afda-49e3-8691-54ce2f39f809",
+                                "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                              }
+                            },
+                            "description": {
+                              "type": "text",
+                              "value": "Count those stars in your reviews."
                             },
                             "lineCountRestriction": {
                               "type": "tp-slider-parameter",
@@ -9902,8 +10835,8 @@
           ]
         }
       },
-      "created": "2023-05-04T08:07:12.167443+00:00",
-      "modified": "2023-07-05T09:40:19.202249+00:00",
+      "created": "2023-05-22T15:31:26.142375+00:00",
+      "modified": "2023-07-06T23:32:50.417271+00:00",
       "pattern": false
     },
     {
@@ -10603,7 +11536,7 @@
                   {
                     "_id": "25aaf9b2-d34d-4be0-93fe-f0a12839ebbf",
                     "type": "card",
-                    "variant": "",
+                    "variant": "backgroundImage",
                     "parameters": {
                       "badge": {
                         "type": "text",
@@ -10617,9 +11550,13 @@
                         "type": "text",
                         "value": "Card #1"
                       },
+                      "badgeSize": {
+                        "type": "select",
+                        "value": "lg"
+                      },
                       "badgeStyle": {
                         "type": "tp-badge-style-parameter",
-                        "value": "accent"
+                        "value": "secondary"
                       },
                       "description": {
                         "type": "text",
@@ -10630,7 +11567,7 @@
                   {
                     "_id": "434e347c-f704-4511-a406-ce4b266828e1",
                     "type": "card",
-                    "variant": "",
+                    "variant": "backgroundImage",
                     "parameters": {
                       "badge": {
                         "type": "text",
@@ -10644,9 +11581,13 @@
                         "type": "text",
                         "value": "Card #2"
                       },
+                      "badgeSize": {
+                        "type": "select",
+                        "value": "lg"
+                      },
                       "badgeStyle": {
                         "type": "tp-badge-style-parameter",
-                        "value": "accent"
+                        "value": "secondary"
                       },
                       "description": {
                         "type": "text",
@@ -10657,7 +11598,7 @@
                   {
                     "_id": "c33030f7-04b1-4bfc-877d-1b5e8a21e2a5",
                     "type": "card",
-                    "variant": "",
+                    "variant": "backgroundImage",
                     "parameters": {
                       "badge": {
                         "type": "text",
@@ -10671,9 +11612,13 @@
                         "type": "text",
                         "value": "Card #3"
                       },
+                      "badgeSize": {
+                        "type": "select",
+                        "value": "lg"
+                      },
                       "badgeStyle": {
                         "type": "tp-badge-style-parameter",
-                        "value": "accent"
+                        "value": "secondary"
                       },
                       "description": {
                         "type": "text",
@@ -10684,7 +11629,7 @@
                   {
                     "_id": "4252e8b6-ea48-4715-9a2f-4892256e10e1",
                     "type": "card",
-                    "variant": "",
+                    "variant": "backgroundImage",
                     "parameters": {
                       "badge": {
                         "type": "text",
@@ -10698,9 +11643,13 @@
                         "type": "text",
                         "value": "Card #4"
                       },
+                      "badgeSize": {
+                        "type": "select",
+                        "value": "lg"
+                      },
                       "badgeStyle": {
                         "type": "tp-badge-style-parameter",
-                        "value": "accent"
+                        "value": "secondary"
                       },
                       "description": {
                         "type": "text",
@@ -10742,8 +11691,8 @@
           ]
         }
       },
-      "created": "2023-06-26T07:51:50.464465+00:00",
-      "modified": "2023-07-03T13:15:55.220686+00:00",
+      "created": "2023-05-22T15:31:26.416759+00:00",
+      "modified": "2023-07-06T23:41:42.044072+00:00",
       "pattern": false
     },
     {
@@ -10866,6 +11815,14 @@
                   "type": "text",
                   "value": "Eyebrow text"
                 },
+                "overlayColor": {
+                  "type": "tp-color-style-parameter",
+                  "value": "secondary"
+                },
+                "overlayOpacity": {
+                  "type": "tp-slider-parameter",
+                  "value": "70%"
+                },
                 "primaryButtonCopy": {
                   "type": "text",
                   "value": "Primary CTA"
@@ -10878,6 +11835,10 @@
                     "nodeId": "fc8a9187-2ae6-4a07-b6e4-6a81b97b0779",
                     "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
                   }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "accent"
                 }
               }
             },
@@ -10998,8 +11959,8 @@
           ]
         }
       },
-      "created": "2023-06-22T13:44:39.963234+00:00",
-      "modified": "2023-06-22T13:46:33.953508+00:00",
+      "created": "2023-05-22T15:31:26.182608+00:00",
+      "modified": "2023-07-06T23:37:31.089098+00:00",
       "pattern": false
     },
     {
@@ -13251,6 +14212,283 @@
     },
     {
       "composition": {
+        "_name": "Cookie Banners",
+        "_id": "c88ff38b-1703-4c03-bdeb-17c1e3133202",
+        "_slug": "banners",
+        "type": "page",
+        "parameters": {
+          "pageTitle": {
+            "type": "text",
+            "value": "Component Starter Kit Banners"
+          }
+        },
+        "slots": {
+          "pageContent": [
+            {
+              "_id": "6b530dff-d417-4a3b-84bc-305f9465b47d",
+              "type": "hero",
+              "variant": "backgroundDarkImage",
+              "parameters": {
+                "image": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.webp"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Cookie Banners"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h1"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Custom cookie banners if you need something truly bespoke for your GDPR needs."
+                }
+              }
+            },
+            {
+              "_id": "a60834b7-ae62-4392-ba28-5193bed6d454",
+              "type": "breadcrumbs",
+              "parameters": {
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "primary"
+                },
+                "displayRootNode": {
+                  "type": "checkbox",
+                  "value": true
+                }
+              }
+            },
+            {
+              "_id": "bc5fd4a9-d7db-4232-8fee-12a83d60b67b",
+              "type": "content",
+              "parameters": {
+                "text": {
+                  "type": "text",
+                  "value": "banner with top position"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Top Variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "d6a1a40d-d431-4e64-a302-8e56a5c63579",
+              "type": "banner",
+              "variant": "",
+              "parameters": {
+                "icon": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688475471/component-starter-kit/canvas-images/cookie_kqaswu.svg"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Top Variant Cookie Banner"
+                },
+                "inline": {
+                  "type": "checkbox",
+                  "value": true
+                },
+                "position": {
+                  "type": "tp-slider-parameter",
+                  "value": "top"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Description can be added here"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Go Home"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/",
+                    "type": "projectMapNode",
+                    "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "accent"
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Secondary CTA"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/",
+                    "type": "projectMapNode",
+                    "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            },
+            {
+              "_id": "75a51a43-e1e9-41fc-9bd0-a13a565c05a6",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "3130bd1b-5a5a-4d0f-b16d-0fe5097f02cd",
+              "type": "content",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Center full width variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "37446514-f486-4632-aca2-80f20e13573d",
+              "type": "banner",
+              "variant": "fullWidth",
+              "parameters": {
+                "icon": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688475471/component-starter-kit/canvas-images/cookie_kqaswu.svg"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Center Full Width Variant"
+                },
+                "inline": {
+                  "type": "checkbox",
+                  "value": true
+                },
+                "position": {
+                  "type": "tp-slider-parameter",
+                  "value": "center"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Description can be added here"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Accept"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/",
+                    "type": "projectMapNode",
+                    "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "primary"
+                }
+              }
+            },
+            {
+              "_id": "fe6116a5-18a9-4b40-b1da-85de8fc6508b",
+              "type": "content",
+              "parameters": {
+                "title": {
+                  "type": "text",
+                  "value": "Bottom variant"
+                },
+                "titleStyle": {
+                  "type": "tp-title-style-parameter",
+                  "value": "h2"
+                }
+              }
+            },
+            {
+              "_id": "5dd016a6-2917-4f4a-895d-326f9ed35764",
+              "type": "spacer",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "100px"
+                }
+              }
+            },
+            {
+              "_id": "e00b2645-21e6-4c36-b7b8-d4a25690505b",
+              "type": "banner",
+              "parameters": {
+                "icon": {
+                  "type": "image",
+                  "value": "https://res.cloudinary.com/uniformdev/image/upload/v1688475471/component-starter-kit/canvas-images/cookie_kqaswu.svg"
+                },
+                "title": {
+                  "type": "text",
+                  "value": "Bottom Variant"
+                },
+                "position": {
+                  "type": "tp-slider-parameter",
+                  "value": "bottom"
+                },
+                "description": {
+                  "type": "text",
+                  "value": "Description can be added here"
+                },
+                "primaryButtonCopy": {
+                  "type": "text",
+                  "value": "Accept"
+                },
+                "primaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/",
+                    "type": "projectMapNode",
+                    "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                },
+                "primaryButtonStyle": {
+                  "type": "tp-button-style-parameter",
+                  "value": "accent"
+                },
+                "secondaryButtonCopy": {
+                  "type": "text",
+                  "value": "Decline"
+                },
+                "secondaryButtonLink": {
+                  "type": "link",
+                  "value": {
+                    "path": "/",
+                    "type": "projectMapNode",
+                    "nodeId": "5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81",
+                    "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      "created": "2023-07-06T22:51:12.997729+00:00",
+      "modified": "2023-07-06T22:57:53.94074+00:00",
+      "pattern": false
+    },
+    {
+      "composition": {
         "_name": "Accordions",
         "_id": "d7af4c54-9a0c-41af-9eda-4075a9e6dbec",
         "_slug": "accordions",
@@ -13484,6 +14722,20 @@
               }
             },
             {
+              "_id": "75b498ea-4f3e-4b2e-8c24-f5865762287f",
+              "type": "divider",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "2px"
+                },
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "base-300"
+                }
+              }
+            },
+            {
               "_id": "c30a7c04-c2a8-4161-a49e-e2968e69389b",
               "type": "callToAction",
               "variant": "alignLeft",
@@ -13520,6 +14772,20 @@
                 "primaryButtonStyle": {
                   "type": "tp-button-style-parameter",
                   "value": "accent"
+                }
+              }
+            },
+            {
+              "_id": "b04cff14-aff1-4e89-8a93-aa8905b112eb",
+              "type": "divider",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "2px"
+                },
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "base-300"
                 }
               }
             },
@@ -13564,6 +14830,20 @@
                 "secondaryButtonStyle": {
                   "type": "tp-button-style-parameter",
                   "value": "accent"
+                }
+              }
+            },
+            {
+              "_id": "e6c2eac2-0a8f-4a53-9826-d95cc0d25879",
+              "type": "divider",
+              "parameters": {
+                "thickness": {
+                  "type": "tp-slider-parameter",
+                  "value": "2px"
+                },
+                "colorStyle": {
+                  "type": "tp-color-style-parameter",
+                  "value": "base-300"
                 }
               }
             },
@@ -13623,8 +14903,8 @@
           ]
         }
       },
-      "created": "2023-06-22T13:44:40.163275+00:00",
-      "modified": "2023-06-22T13:45:51.607268+00:00",
+      "created": "2023-05-22T15:31:25.066407+00:00",
+      "modified": "2023-07-06T23:39:16.253322+00:00",
       "pattern": false
     }
   ],
@@ -13692,6 +14972,17 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
+      "id": "7a7b2f31-988c-47b2-abd9-e601b0ede3d9",
+      "name": "Cookie Banners",
+      "type": "composition",
+      "data": {},
+      "order": 1300,
+      "path": "/components/cookie-banners",
+      "compositionId": "c88ff38b-1703-4c03-bdeb-17c1e3133202",
+      "pathSegment": "cookie-banners",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
       "id": "88ede0b7-bb7c-4d6b-b3f8-10b545bd986b",
       "name": "Card Blocks",
       "type": "composition",
@@ -13726,7 +15017,7 @@
     },
     {
       "id": "98bc7d92-11bc-491b-9b1c-391760a3c875",
-      "name": "Videos",
+      "name": "Video Players",
       "type": "composition",
       "data": {},
       "order": 1100,
@@ -13769,6 +15060,17 @@
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {
+      "id": "d42bee8b-afda-49e3-8691-54ce2f39f809",
+      "name": "Reviews",
+      "type": "composition",
+      "data": {},
+      "order": 1400,
+      "path": "/components/reviews",
+      "compositionId": "42b0381e-8643-4aa4-a3b6-c49ab21344fd",
+      "pathSegment": "reviews",
+      "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
+    },
+    {
       "id": "e0558074-87bb-41c9-962d-814853d8f829",
       "name": "Header & Top Navigation",
       "type": "composition",
@@ -13792,13 +15094,13 @@
     },
     {
       "id": "f28599b9-2a0e-4f69-be98-9c32278237d4",
-      "name": "Commerce Components",
+      "name": "Product Detail Page",
       "type": "composition",
       "data": {},
       "order": 1200,
-      "path": "/components/commerce-components",
+      "path": "/components/pdp",
       "compositionId": "2e1bdedd-d37d-4230-97e2-f44913faaf2f",
-      "pathSegment": "commerce-components",
+      "pathSegment": "pdp",
       "projectMapId": "40535f31-cdc1-4ac3-bb4d-2a008493b431"
     },
     {

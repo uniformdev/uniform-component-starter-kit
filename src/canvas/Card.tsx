@@ -9,6 +9,7 @@ import {
 } from '@uniformdev/canvas-react';
 import Button from '@/components/Button';
 import { getImageUrl } from '@/utils';
+import { getLineClampClass } from '@/utils/styling';
 
 type BadgeStyles = 'primary' | 'secondary' | 'accent' | 'outline';
 
@@ -31,27 +32,6 @@ export type Props = ComponentProps<{
 export enum CardVariants {
   BackgroundImage = 'backgroundImage',
 }
-
-const getLineClampClass = (maxLineCount?: Types.AvailableMaxLineCount) => {
-  switch (maxLineCount) {
-    case '1':
-      return 'line-clamp-1';
-    case '2':
-      return 'line-clamp-2';
-    case '3':
-      return 'line-clamp-3';
-    case '4':
-      return 'line-clamp-4';
-    case '5':
-      return 'line-clamp-5';
-    case '6':
-      return 'line-clamp-6';
-    case 'none':
-      return 'line-clamp-none';
-    default:
-      return '';
-  }
-};
 
 const getContentClass = (variantId?: string) => {
   switch (variantId) {

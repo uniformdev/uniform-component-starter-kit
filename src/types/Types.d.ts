@@ -14,6 +14,8 @@ declare namespace Types {
 
   type AvailableColor = 'primary' | 'secondary' | 'accent' | 'base-200' | 'base-300';
 
+  type AvailableBannerPosition = 'top' | 'center' | 'bottom';
+
   type AvailableObjectFit = 'contain' | 'cover' | 'fill' | 'none';
 
   type AvailableMaxLineCount = '1' | '2' | '3' | '4' | '5' | '6' | 'none';

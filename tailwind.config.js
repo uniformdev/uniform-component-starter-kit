@@ -5,6 +5,9 @@ module.exports = {
       minHeight: {
         96: '384px',
       },
+      width: {
+        'screen-xl': '1280px',
+      },
     },
   },
   plugins: [require('@tailwindcss/typography'), require('daisyui')],

@@ -24,7 +24,7 @@ const Page: FC<PageProps> = ({ data: composition, useUniformComposition }) => (
         {/* adding container with padding only to 1+ component in the content slot */}
         {({ key, child, component }) => {
           // Do not wrap container around the component if it is a container itself
-          if (['container', 'spacer'].includes(component.type)) return <>{child}</>;
+          if (['container', 'spacer', 'banner'].includes(component.type)) return <>{child}</>;
 
           return (
             <Container
