@@ -3,9 +3,11 @@ import classNames from 'classnames';
 import { UniformComposition, UniformSlot } from '@uniformdev/canvas-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 import { HeroVariant } from '@/canvas/Hero';
+import UniformPreviewIcon from './UniformPreviewIcon';
 import ThemeProvider from './ThemeProvider';
 import Container from './Container';
 import { PaddingSize } from '@/utils/styling';
+import { mergeGlobalCompositions } from '@/utils/canvas';
 
 type PageProps = {
   preview: boolean;
@@ -13,8 +15,16 @@ type PageProps = {
   data: RootComponentInstance;
 };
 
-const Page: FC<PageProps> = ({ data: composition, useUniformComposition }) => (
-  <UniformComposition data={composition} behaviorTracking="onLoad">
+const Page: FC<PageProps> = ({ data: composition, useUniformComposition, preview }) => (
+  <UniformComposition
+    data={composition}
+    behaviorTracking="onLoad"
+    contextualEditingEnhancer={
+      !useUniformComposition
+        ? ({ composition: rootComposition }) => mergeGlobalCompositions(rootComposition, composition)
+        : undefined
+    }
+  >
     <ThemeProvider data={composition} useUniformComposition={useUniformComposition}>
       {/* Docs: https://docs.uniform.app/reference/packages/uniformdev-canvas-react#slot */}
       <UniformSlot name="header" />
@@ -44,6 +54,7 @@ const Page: FC<PageProps> = ({ data: composition, useUniformComposition }) => (
         }}
       </UniformSlot>
       <UniformSlot name="footer" />
+      {preview && <UniformPreviewIcon />}
     </ThemeProvider>
   </UniformComposition>
 );

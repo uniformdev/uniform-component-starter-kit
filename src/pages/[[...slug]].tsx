@@ -5,28 +5,23 @@ import { withUniformGetServerSideProps } from '@uniformdev/canvas-next/route';
 
 // SSR configuration is enabled by default
 export const getServerSideProps = withUniformGetServerSideProps({
-  requestOptions: {
-    state: process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
-  },
+  requestOptions: context => ({
+    state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+  }),
   handleComposition: async (routeResponse, _context) => {
     const { composition, errors } = routeResponse.compositionApiResponse || {};
     if (errors?.some(e => e.type === 'data' || e.type === 'binding')) {
       return { notFound: true };
     }
 
-    const breadcrumbs = await getBreadcrumbs(composition._id, Boolean(_context.preview));
+    const preview = Boolean(_context.preview);
+    const breadcrumbs = await getBreadcrumbs(composition._id, preview);
     // fetching global composition for header navigation and footer
     const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });
     // merging two compositions
     const pageComposition = mergeGlobalCompositions(composition, globalComposition);
     return {
-      props: {
-        preview: Boolean(_context.preview),
-        data: pageComposition || null,
-        context: {
-          breadcrumbs,
-        },
-      },
+      props: { preview, data: pageComposition || null, context: { breadcrumbs } },
     };
   },
 });

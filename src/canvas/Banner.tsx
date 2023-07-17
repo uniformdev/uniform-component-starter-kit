@@ -10,7 +10,7 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import { ScreenContainer } from '@/components/Container';
 
-type Props = ComponentProps<{
+export type Props = ComponentProps<{
   title: string;
   description: string;
   icon: string;
@@ -24,7 +24,7 @@ type Props = ComponentProps<{
   secondaryButtonStyle: Types.ButtonStyles;
 }>;
 
-const enum BannerVariant {
+export const enum BannerVariant {
   FullWidth = 'fullWidth',
 }
 
@@ -71,7 +71,7 @@ const Banner: FC<Props> = ({
 }) => {
   const { isContextualEditing } = useUniformCurrentComposition();
 
-  const Wrapper = inline && component.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
+  const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
 
   return (
     <Wrapper className="box-content">
