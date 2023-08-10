@@ -1,4 +1,4 @@
-import { FC, Fragment, ReactElement, ReactNode } from 'react';
+import { FC } from 'react';
 import classNames from 'classnames';
 import MultiCarousel from 'react-multi-carousel';
 import { ComponentProps, UniformText, UniformSlot, useUniformCurrentComposition } from '@uniformdev/canvas-react';
@@ -32,26 +32,9 @@ const defaultResponsiveData = {
 };
 
 const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonStyle }) => {
-  const children: ReactNode[] = [];
   const { isContextualEditing } = useUniformCurrentComposition();
   return (
     <>
-      {/*
-        This is a workaround because Uniform sends us a Slot with these items wrapped by a Fragment. 
-        However, in order to make this carousel work, we should send an array as the children
-      */}
-      <UniformSlot name="cardBlockInner">
-        {({ child }) => {
-          const currentComponent = child as ReactElement;
-          const isAlreadyExist = children.some(item => (item as ReactElement).key === currentComponent.key);
-
-          if (!isAlreadyExist) {
-            children.push(child);
-          }
-
-          return <Fragment />;
-        }}
-      </UniformSlot>
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-10 text-secondary-content">
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
           <UniformText
@@ -76,20 +59,27 @@ const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonSt
           />
         )}
       </div>
-      <MultiCarousel
-        ssr
-        deviceType="desktop"
-        renderDotsOutside
-        customButtonGroup={<CarouselButtons buttonStyle={buttonStyle} />}
-        renderButtonGroupOutside
-        shouldResetAutoplay={false}
-        arrows={false}
-        itemClass="px-2.5 flex"
-        containerClass="-mx-2.5"
-        responsive={defaultResponsiveData}
-      >
-        {children}
-      </MultiCarousel>
+      <UniformSlot
+        name="cardBlockInner"
+        wrapperComponent={({ items }) => {
+          return (
+            <MultiCarousel
+              ssr
+              deviceType="desktop"
+              renderDotsOutside
+              customButtonGroup={<CarouselButtons buttonStyle={buttonStyle} />}
+              renderButtonGroupOutside
+              shouldResetAutoplay={false}
+              arrows={false}
+              itemClass="px-2.5 flex"
+              containerClass="-mx-2.5"
+              responsive={defaultResponsiveData}
+            >
+              {items}
+            </MultiCarousel>
+          );
+        }}
+      />
     </>
   );
 };

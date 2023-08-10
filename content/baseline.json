@@ -1215,6 +1215,8 @@
           }
         }
       ],
+      "description": "",
+      "previewImageUrl": "",
       "useTeamPermissions": true,
       "slots": [
         {
@@ -1239,8 +1241,8 @@
         }
       ],
       "canBeComposition": false,
-      "created": "2023-05-22T15:31:22.683658+00:00",
-      "updated": "2023-06-12T21:15:52.534793+00:00"
+      "created": "2023-08-10T09:41:53.205947+00:00",
+      "updated": "2023-08-10T12:14:22.883437+00:00"
     },
     {
       "id": "footerSection",
@@ -1822,6 +1824,8 @@
           "typeConfig": null
         }
       ],
+      "description": "",
+      "previewImageUrl": "",
       "useTeamPermissions": true,
       "slots": [
         {
@@ -1849,8 +1853,8 @@
       ],
       "titleParameter": "linksAlignment",
       "canBeComposition": false,
-      "created": "2023-06-09T07:12:11.048971+00:00",
-      "updated": "2023-06-09T08:20:29.140845+00:00",
+      "created": "2023-08-10T09:41:53.213799+00:00",
+      "updated": "2023-08-10T12:14:24.521344+00:00",
       "variants": [
         {
           "id": "light",
@@ -2049,12 +2053,14 @@
           }
         }
       ],
+      "description": "",
+      "previewImageUrl": "",
       "useTeamPermissions": true,
       "slots": [],
       "titleParameter": "title",
       "canBeComposition": false,
-      "created": "2023-05-04T08:07:07.049074+00:00",
-      "updated": "2023-06-23T13:55:18.885676+00:00",
+      "created": "2023-08-10T09:41:53.506856+00:00",
+      "updated": "2023-08-10T12:14:23.846543+00:00",
       "variants": [
         {
           "id": "imageLeft",
@@ -3001,6 +3007,8 @@
           }
         }
       ],
+      "description": "",
+      "previewImageUrl": "",
       "useTeamPermissions": true,
       "slots": [
         {
@@ -3080,8 +3088,8 @@
       },
       "titleParameter": "pageTitle",
       "canBeComposition": true,
-      "created": "2023-06-26T07:51:45.05932+00:00",
-      "updated": "2023-07-05T12:58:29.417662+00:00"
+      "created": "2023-08-10T09:41:53.539128+00:00",
+      "updated": "2023-08-10T12:14:25.025655+00:00"
     },
     {
       "id": "price",

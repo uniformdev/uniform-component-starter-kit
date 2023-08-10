@@ -57,25 +57,28 @@ const Carousel: FC<ComponentProps> = ({ component }) => {
     <div>
       <div className="relative overflow-hidden">
         <div ref={container} className="flex flex-row items-center scroll-smooth overflow-x-hidden">
-          <UniformSlot name="carouselItem">
-            {({ child, key }) => {
-              const keyElements = (key as string).split('-');
-
-              const currentChildIndex = parseInt(keyElements[keyElements.length - 1], 10);
-
+          <UniformSlot
+            name="carouselItem"
+            wrapperComponent={({ items }) => {
               return (
-                <div
-                  id={`slide-${currentChildIndex}`}
-                  key={currentChildIndex}
-                  className={classNames('min-w-full', {
-                    hidden: isContextualEditing && currentIndex !== currentChildIndex,
+                <>
+                  {items.map((item, index) => {
+                    return (
+                      <div
+                        id={`slide-${index}`}
+                        key={index}
+                        className={classNames('min-w-full', {
+                          hidden: isContextualEditing && currentIndex !== index,
+                        })}
+                      >
+                        {item}
+                      </div>
+                    );
                   })}
-                >
-                  {child}
-                </div>
+                </>
               );
             }}
-          </UniformSlot>
+          />
         </div>
         <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
           <a
