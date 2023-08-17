@@ -4,6 +4,8 @@ The Component Starter kit gives you the key building blocks to create dynamic an
 
 Built with love by Uniform folks, standing on the shoulders of TailwindCSS, DaisyUI, React and Next.js.
 
+<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funiformdev%2Funiform-component-starter-kit&env=UNIFORM_API_KEY,UNIFORM_PROJECT_ID"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
+
 - [Demo](https://components.uniform.app/)
 - [Storybook](https://components-storybook.uniform.app/)
 
