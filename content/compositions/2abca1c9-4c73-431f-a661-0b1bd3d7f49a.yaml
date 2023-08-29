@@ -1,0 +1,185 @@
+composition:
+  _name: Featured Callouts
+  _id: 2abca1c9-4c73-431f-a661-0b1bd3d7f49a
+  _slug: featured-callouts
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Featured Callout component
+    openGraphTitle:
+      type: text
+      value: Featured Callouts
+  slots:
+    pageFooter:
+      - _id: efca84d0-4b4e-477f-9372-34ea9a59e80d
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 1db3fd36-8ffd-4b55-b1a2-641278473143
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 485e7c34-89a0-4e6a-8d62-aa1a9ece02bf
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Featured Callout component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >
+              A composite component allows to add any number of features as
+              child components into the Feature slot. Contains optional image,
+              title and description parameters.
+      - _id: f26bf1e8-a6de-414a-98e2-002a8f550522
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-200
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: a87676ce-dab6-4fd7-916b-bef32a7f26e1
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 20ecba28-8458-4a50-8ab6-0d539819700a
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276689/csk-icons/icon-understand_eytz6h_cgirir.svg
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: c086778f-0827-49f1-8f95-529fe175dc87
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276740/csk-icons/icon-improve_jkerfy_z0qxiy.svg
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 50dfd1fe-cbc1-4b82-99b3-0a498ba12a15
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276654/csk-icons/icon-drive_le2khu_i6jwy8.svg
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+          title:
+            type: text
+            value: Default variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Some compelling description
+          eyebrowText:
+            type: text
+            value: EYEBROW Text
+      - _id: 15d90ef7-441c-4926-9d6c-cd2a808c5af2
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 0e03de14-ba1b-4dc4-8a37-9e610467d604
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276689/csk-icons/icon-understand_eytz6h_cgirir.svg
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 6769303a-afc8-4c61-be09-6f28b445bec6
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276740/csk-icons/icon-improve_jkerfy_z0qxiy.svg
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 3463723d-fa71-4d57-917f-06c17da64042
+              type: feature
+              parameters:
+                icon:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276654/csk-icons/icon-drive_le2khu_i6jwy8.svg
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+        variant: imageRight
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+          title:
+            type: text
+            value: Image Right variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Some compelling description
+created: '2023-08-08T13:08:39.543879+00:00'
+modified: '2023-08-08T13:08:39.543879+00:00'
+pattern: false

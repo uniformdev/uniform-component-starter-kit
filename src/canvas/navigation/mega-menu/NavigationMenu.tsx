@@ -17,7 +17,7 @@ const NavigationMenu: FC<NavigationMenuProps> = ({ link, title }) => {
     const [pathWithoutQuery] = asPath.split('?');
 
     if (link?.path === '/') {
-      return asPath === link.path;
+      return asPath === link?.path;
     }
 
     return pathWithoutQuery.includes(link?.path);

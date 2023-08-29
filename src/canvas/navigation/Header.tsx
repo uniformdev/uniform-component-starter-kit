@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import { UniformSlot, ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import { ScreenContainer } from '@/components/Container';
-import { getImageUrl } from '@/utils';
+import { ScreenContainer } from '../../components/Container';
+import { getImageUrl } from '../../utilities';
 
 type HeaderProps = ComponentProps<{
   logo: string | Types.CloudinaryImage;

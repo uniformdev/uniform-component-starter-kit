@@ -1,14 +1,26 @@
 import { FC, useMemo } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import { useRouter, NextRouter } from 'next/router';
 import { ComponentProps, UniformSlot, registerUniformComponent } from '@uniformdev/canvas-react';
-
 import classNames from 'classnames';
 
 type LinkProps = ComponentProps<{
   title: string;
   link: Types.ProjectMapLink;
 }>;
+
+const checkIsCurrentRoute = (router: NextRouter, link: Types.ProjectMapLink) => {
+  const { asPath } = router;
+
+  if (!link) {
+    return false;
+  }
+
+  const [pathWithoutQuery] = asPath.split('?');
+  const linkPath = link.path === '/' ? link.path : link.path.replace(/\/$/, '');
+
+  return pathWithoutQuery === linkPath;
+};
 
 const FooterLink: FC<LinkProps> = ({ title, link }) => (
   <Link href={link?.path || '#'} className="link text-secondary-content font-bold link-hover">
@@ -19,17 +31,7 @@ const FooterLink: FC<LinkProps> = ({ title, link }) => (
 const HeaderLink: FC<LinkProps> = ({ title, link }) => {
   const router = useRouter();
 
-  const isCurrentRoute = useMemo(() => {
-    const { asPath } = router;
-    const [pathWithoutQuery] = asPath.split('?');
-
-    if (link?.path === '/') {
-      return asPath === link.path;
-    }
-
-    return pathWithoutQuery.includes(link?.path);
-  }, [router, link]);
-
+  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
   return (
     <li>
       <Link className={classNames('!rounded-none', { 'font-extrabold': isCurrentRoute })} href={link?.path || '#'}>
@@ -42,16 +44,7 @@ const HeaderLink: FC<LinkProps> = ({ title, link }) => {
 const NavigationGroup: FC<LinkProps> = ({ title, link }) => {
   const router = useRouter();
 
-  const isCurrentRoute = useMemo(() => {
-    const { asPath } = router;
-    const [pathWithoutQuery] = asPath.split('?');
-
-    if (link?.path === '/') {
-      return asPath === link.path;
-    }
-
-    return pathWithoutQuery.includes(link?.path);
-  }, [router, link]);
+  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
 
   return (
     <li tabIndex={0}>

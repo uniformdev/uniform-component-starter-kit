@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Accordion from '@/canvas/Accordion';
+import { Accordion } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 
 const meta: Meta<typeof Accordion> = {

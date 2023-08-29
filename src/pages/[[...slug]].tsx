@@ -1,27 +1,31 @@
 import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
-import Page from '@/components/Page';
-import { getBreadcrumbs, getCompositionById, globalCompositionId, mergeGlobalCompositions } from '@/utils/canvas';
 import { withUniformGetServerSideProps } from '@uniformdev/canvas-next/route';
+import { Page } from '@/components';
+import { getBreadcrumbs, getRouteClient } from '@/utilities/canvas/canvasClients';
 
 // SSR configuration is enabled by default
 export const getServerSideProps = withUniformGetServerSideProps({
   requestOptions: context => ({
     state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   }),
+  client: getRouteClient(),
   handleComposition: async (routeResponse, _context) => {
     const { composition, errors } = routeResponse.compositionApiResponse || {};
+
     if (errors?.some(e => e.type === 'data' || e.type === 'binding')) {
       return { notFound: true };
     }
 
     const preview = Boolean(_context.preview);
-    const breadcrumbs = await getBreadcrumbs(composition._id, preview);
-    // fetching global composition for header navigation and footer
-    const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });
-    // merging two compositions
-    const pageComposition = mergeGlobalCompositions(composition, globalComposition);
+    const breadcrumbs = await getBreadcrumbs({
+      compositionId: composition._id,
+      preview,
+      dynamicTitle: composition?.parameters?.pageTitle?.value as string,
+      resolvedUrl: _context.resolvedUrl,
+    });
+
     return {
-      props: { preview, data: pageComposition || null, context: { breadcrumbs } },
+      props: { preview, data: composition || null, context: { breadcrumbs } },
     };
   },
 });
@@ -41,14 +45,10 @@ export default Page;
 //   handleComposition: async (routeResponse, _context) => {
 //     const { composition } = routeResponse.compositionApiResponse || {};
 //     const breadcrumbs = await getBreadcrumbs(composition._id, Boolean(_context.preview));
-//     // fetching global composition for header navigation and footer
-//     const globalComposition = await getCompositionById(globalCompositionId, _context as { preview: boolean });
-//     // merging two compositions
-//     const pageComposition = mergeGlobalCompositions(composition, globalComposition);
 //     return {
 //       props: {
 //         preview: Boolean(_context.preview),
-//         data: pageComposition || null,
+//         data: composition || null,
 //         context: {
 //           breadcrumbs,
 //         },

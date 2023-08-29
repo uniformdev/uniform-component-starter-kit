@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Grid, { Props as GridProps } from '@/canvas/containers/Grid';
-import '@/canvas/containers/GridItem';
+import { Grid, GridProps } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 
 const columnCountOptions = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
@@ -31,42 +30,42 @@ const argTypes = {
 const CARDS = [
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
@@ -74,7 +73,7 @@ const CARDS = [
 ];
 
 const renderStory = (args: GridProps) => {
-  const fakeComposition = createFakeCompositionData('gridContainer', args, {
+  const fakeComposition = createFakeCompositionData('grid', args, {
     'grid-inner': CARDS.map(card => ({
       type: 'card',
       parameters: createUniformParameter(card),
@@ -90,7 +89,7 @@ const renderStory = (args: GridProps) => {
 const indexToInsertSpan = 3;
 
 const renderStoryWithColumnSpan = (args: GridProps) => {
-  const fakeComposition = createFakeCompositionData('gridContainer', args, {
+  const fakeComposition = createFakeCompositionData('grid', args, {
     'grid-inner': CARDS.slice(0, -1).map((card, index) => ({
       type: 'gridItem',
       parameters: createUniformParameter(
@@ -126,7 +125,7 @@ const renderStoryWithColumnSpan = (args: GridProps) => {
 };
 
 const renderStoryWithRowSpan = (args: GridProps) => {
-  const fakeComposition = createFakeCompositionData('gridContainer', args, {
+  const fakeComposition = createFakeCompositionData('grid', args, {
     'grid-inner': [...CARDS, ...CARDS].slice(0, -1).map((card, index) => ({
       type: 'gridItem',
       parameters: createUniformParameter(

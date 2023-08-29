@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { ComponentProps, UniformSlot, registerUniformComponent } from '@uniformdev/canvas-react';
-
-import Button from '@/components/Button';
+import Button from '../../../components/Button';
+import { formatProjectMapLink } from '../../../utilities';
 
 type NavigationOneColumnMenuProps = ComponentProps<{
   description?: string;
@@ -34,12 +34,17 @@ const NavigationTwoColumnsMenu: FC<NavigationOneColumnMenuProps> = ({
           </div>
         </div>
         {Boolean(primaryButtonCopy && primaryButtonLink) && (
-          <Button className="mx-1" href={primaryButtonLink.path} copy={primaryButtonCopy} style={primaryButtonStyle} />
+          <Button
+            className="mx-1"
+            href={formatProjectMapLink(primaryButtonLink)}
+            copy={primaryButtonCopy}
+            style={primaryButtonStyle}
+          />
         )}
         {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
           <Button
             className="mx-1"
-            href={secondaryButtonLink.path}
+            href={formatProjectMapLink(secondaryButtonLink)}
             copy={secondaryButtonCopy}
             style={secondaryButtonStyle}
           />

@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationLink
+name: Navigation Link
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281226/csk-icons/component-icons-v2/CSKicon_headerlink_coaugo_mfcseb.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig:
+      required: false
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+description: ''
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Navigation_link_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:18.841682+00:00'
+updated: '2023-08-28T12:30:18.841682+00:00'
+variants:
+  - id: header
+    name: Header
+  - id: footer
+    name: Footer

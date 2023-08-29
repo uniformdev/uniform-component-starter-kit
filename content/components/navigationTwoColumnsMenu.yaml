@@ -1,0 +1,89 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationTwoColumnsMenu
+name: Navigation Two Columns Menu
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281067/csk-icons/component-icons-v2/CSKicon_novgroup1_vwfbxn_b9ycqi.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: group_primaryCta
+    name: Primary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - primaryButtonCopy
+        - primaryButtonLink
+        - primaryButtonStyle
+  - id: primaryButtonCopy
+    name: Primary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonLink
+    name: Primary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonStyle
+    name: Primary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_secondaryCta
+    name: Secondary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - secondaryButtonCopy
+        - secondaryButtonLink
+        - secondaryButtonStyle
+  - id: secondaryButtonCopy
+    name: Secondary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonLink
+    name: Secondary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonStyle
+    name: Secondary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+description: ''
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Navigation_two_column_menu_preview_image
+useTeamPermissions: true
+slots:
+  - id: leftColumn
+    name: Left Column
+    allowedComponents:
+      - navigationMenuSection
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: rightColumn
+    name: Right Column
+    allowedComponents:
+      - navigationMenuSection
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: content
+    name: Content
+    allowedComponents:
+      - card
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:19.55771+00:00'
+updated: '2023-08-29T08:14:56.421959+00:00'

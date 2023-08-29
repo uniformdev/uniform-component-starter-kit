@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Container, { ContainerProps } from '@/canvas/containers/Container';
+import { Container, ContainerProps } from '@/canvas';
+import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
-import { BackgroundTypes, PaddingSize } from '@/utils/styling';
 
 const containerBackgroundTypeOptions = ['Light', 'Dark', 'Medium', 'Transparent'];
 
@@ -37,7 +37,7 @@ const renderStory = (args: ContainerProps) => {
         parameters: createUniformParameter({
           title: 'Are developers stuck with outdated tech and custom code to maintain?',
           image:
-            'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.png',
+            'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
           description:
             "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
           eyebrowText: 'Hero component',

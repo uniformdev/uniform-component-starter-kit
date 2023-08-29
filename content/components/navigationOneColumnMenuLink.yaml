@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationOneColumnMenuLink
+name: Navigation One Column Menu Link
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281067/csk-icons/component-icons-v2/CSKicon_novgroup1_vwfbxn_b9ycqi.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: icon
+    name: Icon
+    type: image
+    helpText: ''
+    typeConfig: null
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+description: ''
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Navigation_one_column_menu_link_preview_image
+useTeamPermissions: true
+slots:
+  - id: hoverContent
+    name: Hover Content
+    allowedComponents:
+      - card
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:19.545275+00:00'
+updated: '2023-08-28T12:30:19.545275+00:00'
+variants:
+  - id: iconLeft
+    name: Icon Left

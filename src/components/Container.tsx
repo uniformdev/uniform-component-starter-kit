@@ -8,7 +8,7 @@ import {
   getPaddingBottomClass,
   getMarginTopClass,
   getMarginBottomClass,
-} from '@/utils/styling';
+} from '../utilities/styling';
 
 export enum ContainerVariants {
   BackgroundInContainer = 'backgroundInContainer',

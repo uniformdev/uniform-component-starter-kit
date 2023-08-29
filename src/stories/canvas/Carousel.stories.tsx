@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition, ComponentProps } from '@uniformdev/canvas-react';
-import Carousel, { CarouselVariants } from '@/canvas/Carousel';
+import { Carousel, CarouselVariants } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 
 const meta: Meta<typeof Carousel> = {
@@ -23,7 +23,7 @@ const HEROS_PROPS = [
       path: '/',
     },
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -43,7 +43,7 @@ const HEROS_PROPS = [
       path: '/',
     },
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -63,7 +63,7 @@ const HEROS_PROPS = [
       path: '/',
     },
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -77,19 +77,19 @@ const HEROS_PROPS = [
 const IMAGES_PROPS = [
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     width: '2000',
     height: '2000',
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     width: '2000',
     height: '2000',
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
     width: '2000',
     height: '2000',
   },

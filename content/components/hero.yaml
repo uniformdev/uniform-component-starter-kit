@@ -1,0 +1,154 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: hero
+name: Hero
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281207/csk-icons/component-icons-v2/CSKicon_hero_odv0f6_ipen7r.svg
+parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - eyebrowText
+        - title
+        - description
+        - image
+        - titleStyle
+  - id: eyebrowText
+    name: Eyebrow text
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '3'
+  - id: titleStyle
+    name: Title Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '10'
+  - id: image
+    name: Image
+    type: image
+    helpText: ''
+    typeConfig: null
+  - id: group_primaryCta
+    name: Primary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - primaryButtonCopy
+        - primaryButtonLink
+        - primaryButtonStyle
+  - id: primaryButtonCopy
+    name: Primary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonLink
+    name: Primary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonStyle
+    name: Primary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_secondaryCta
+    name: Secondary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - secondaryButtonLink
+        - secondaryButtonCopy
+        - secondaryButtonStyle
+  - id: secondaryButtonCopy
+    name: Secondary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonLink
+    name: Secondary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonStyle
+    name: Secondary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_imageSettings
+    name: Image Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - overlayColor
+        - overlayOpacity
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+description: ''
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Hero_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:18.572841+00:00'
+updated: '2023-08-28T12:30:18.572841+00:00'
+variants:
+  - id: imageLeft
+    name: Image Left
+  - id: imageRight
+    name: Image Right
+  - id: backgroundLightImage
+    name: Background Light Image
+  - id: backgroundDarkImage
+    name: Background Dark Image

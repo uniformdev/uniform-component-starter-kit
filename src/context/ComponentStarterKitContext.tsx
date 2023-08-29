@@ -1,4 +1,4 @@
-import React, { FC, PropsWithChildren, createContext, useContext, useMemo } from 'react';
+import { FC, PropsWithChildren, createContext, useContext, useMemo } from 'react';
 
 type ComponentStartKitContextProps = {
   breadcrumbs?: Types.ProjectMapLink[];

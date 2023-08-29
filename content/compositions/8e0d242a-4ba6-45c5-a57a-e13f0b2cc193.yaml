@@ -1,0 +1,211 @@
+composition:
+  _name: Heroes
+  _id: 8e0d242a-4ba6-45c5-a57a-e13f0b2cc193
+  _slug: heroes
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Heroes component
+  slots:
+    pageFooter:
+      - _id: 8273a4a0-f343-4874-bf32-222c785e8659
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 2ee6ce67-d980-4bb4-b094-50fe83e90a94
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: f87c0e6a-47ec-4b44-a271-6ed26841cd61
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Hero components
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              A classic hero component with optional image, button and multiple
+              variants.
+      - _id: 3fefa476-3a61-4b60-843a-8e4b83fb5b80
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-200
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: c2e11a2c-e714-45a6-9b07-78e2b3e1aa10
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Background Dark Image Hero variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+      - _id: 3d70a978-47f9-487a-9a3b-55fb72f71b4b
+        type: hero
+        variant: backgroundLightImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Background Light Image Hero variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          overlayColor:
+            type: tp-color-style-parameter
+            value: secondary
+          overlayOpacity:
+            type: tp-slider-parameter
+            value: 70%
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: 8658506c-a098-49ff-8f98-4708e2f63f40
+        type: hero
+        variant: imageLeft
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+          title:
+            type: text
+            value: Image Left Hero variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+      - _id: 6b102555-9ce3-4410-a1e5-8a5b00084385
+        type: hero
+        variant: imageRight
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+          title:
+            type: text
+            value: Image Right Hero variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+created: '2023-08-08T13:08:40.208427+00:00'
+modified: '2023-08-08T13:08:40.208427+00:00'
+pattern: false

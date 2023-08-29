@@ -2,12 +2,11 @@ import { FC, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import { useUniformCurrentComposition } from '@uniformdev/canvas-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
-import { appFonts } from '@/fonts';
-import { generateCustomTheme } from '@/utils/theme';
+import { appFonts } from '../fonts';
+import { generateCustomTheme } from '../utilities/theme';
 
 type Props = PropsWithChildren<{
-  data: RootComponentInstance;
-  useUniformComposition?: boolean;
+  data?: RootComponentInstance;
 }>;
 
 type ThemeValue = {
@@ -15,16 +14,17 @@ type ThemeValue = {
   colors: Types.ThemeColors[];
 };
 
-const ThemeProvider: FC<Props> = ({ children, data, useUniformComposition }) => {
-  const { data: currentCompositionData } = useUniformCurrentComposition();
+const ThemeProvider: FC<Props> = ({ children, data }) => {
+  const { data: composition } = useUniformCurrentComposition();
 
-  const composition = useUniformComposition ? currentCompositionData : data;
+  const compositionHeader = composition?.slots?.pageHeader?.[0];
 
-  const font = composition?.parameters?.font?.value as Types.SupportedFonts;
+  const font = compositionHeader?.parameters?.font?.value as Types.SupportedFonts;
   const currentFont = appFonts[font];
 
-  const themeName = (composition?.parameters?.theme?.value as ThemeValue)?.themeName;
-  const colors = (composition?.parameters?.theme?.value as ThemeValue)?.colors;
+  const themeName = (compositionHeader?.parameters?.theme?.value as ThemeValue)?.themeName;
+
+  const colors = (compositionHeader?.parameters?.theme?.value as ThemeValue)?.colors;
 
   const generatedTheme = generateCustomTheme(themeName, colors);
 
@@ -32,7 +32,7 @@ const ThemeProvider: FC<Props> = ({ children, data, useUniformComposition }) => 
     // The way how we can set current theme
     <div
       className={classNames('min-h-screen overflow-x-hidden flex flex-col', currentFont?.className)}
-      data-theme={(composition?.parameters?.theme?.value as ThemeValue)?.themeName}
+      data-theme={((data || compositionHeader)?.parameters?.theme?.value as ThemeValue)?.themeName}
     >
       <div dangerouslySetInnerHTML={{ __html: generatedTheme }} />
       {children}

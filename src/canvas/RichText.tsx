@@ -2,7 +2,7 @@ import { FC } from 'react';
 import classNames from 'classnames';
 import { ComponentProps, registerUniformComponent, UniformRichText } from '@uniformdev/canvas-react';
 import Container from '../components/Container';
-import { PaddingSize } from '@/utils/styling';
+import { PaddingSize } from '../utilities/styling';
 
 type RichTextProps = ComponentProps<{
   content?: string;

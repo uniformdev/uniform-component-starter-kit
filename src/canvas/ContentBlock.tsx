@@ -1,10 +1,10 @@
+import Link from 'next/link';
 import { FC, Fragment, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import { Next, documentToHtmlString, Options } from '@contentful/rich-text-html-renderer';
 import { BLOCKS, NodeData, Document } from '@contentful/rich-text-types';
 import { registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
-import { getTextClass } from '@/utils/styling';
-import Link from 'next/link';
+import { getTextClass } from '../utilities/styling';
 
 const documentToHtmlStringOptions: Options = {
   renderNode: {
@@ -24,10 +24,10 @@ export type Props = ComponentProps<{
   titleStyle: Types.HeadingStyles;
   link?: Types.ProjectMapLink;
   text: string;
-  contentfulContent?: Document;
+  content?: string | Document;
 }>;
 
-const ContentBlock: FC<Props> = ({ titleStyle: TitleTag = 'h1', contentfulContent, link }) => {
+const ContentBlock: FC<Props> = ({ titleStyle: TitleTag = 'h1', content = '', link }) => {
   const Wrapper = link?.path
     ? ({ children }: PropsWithChildren) => {
         return <Link href={link?.path}>{children}</Link>;
@@ -46,11 +46,11 @@ const ContentBlock: FC<Props> = ({ titleStyle: TitleTag = 'h1', contentfulConten
           className={classNames('font-medium', getTextClass(TitleTag))}
         />
       </Wrapper>
-      {contentfulContent ? (
+      {content ? (
         <div
           className="py-6 text-xl"
           dangerouslySetInnerHTML={{
-            __html: documentToHtmlString(contentfulContent, documentToHtmlStringOptions),
+            __html: typeof content === 'string' ? content : documentToHtmlString(content, documentToHtmlStringOptions),
           }}
         />
       ) : (

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Hero, { HeroVariant, Props as HeroProps } from '@/canvas/Hero';
+import { Hero, HeroProps, HeroVariant } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 
@@ -23,7 +23,7 @@ const BASE_PROPS: Omit<HeroProps, 'component'> = {
     path: '/',
   },
   image:
-    'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
   primaryButtonStyle: 'primary',
   secondaryButtonCopy: 'Components',
   secondaryButtonLink: {

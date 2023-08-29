@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import CallToAction, { CallToActionVariant, Props as CallToActionProps } from '@/canvas/CallToAction';
+import { CallToAction, CallToActionProps, CallToActionVariant } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 

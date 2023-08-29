@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { FC, useEffect, useRef, useState, createContext, useContext } from 'react';
 import Image from 'next/image';
 import classNames from 'classnames';
 import {
@@ -6,21 +6,22 @@ import {
   UniformSlot,
   registerUniformComponent,
   useUniformContextualEditingState,
+  UniformSlotProps,
 } from '@uniformdev/canvas-react';
-import { fromCamelCaseText } from '@/utils';
+import { fromCamelCaseText } from '../utilities';
 
 export enum CarouselVariants {
   ImageGallery = 'imageGallery',
 }
 
 const Carousel: FC<ComponentProps> = ({ component }) => {
-  const { selectedComponentReference, isContextualEditing } = useUniformContextualEditingState();
+  const { selectedComponentReference } = useUniformContextualEditingState();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [reCheckCarouselSlider, setReCheckCarouselSlider] = useState<boolean>(false);
   const totalCountOfItems = component?.slots?.carouselItem?.length || 0;
   const variant = component?.variant;
   const container = useRef<HTMLInputElement>(null);
-  const carouselItem = component.slots?.carouselItem;
+  const carouselItem = component?.slots?.carouselItem;
 
   useEffect(() => {
     const handleResize = () => setReCheckCarouselSlider(prevState => !prevState);
@@ -54,76 +55,89 @@ const Carousel: FC<ComponentProps> = ({ component }) => {
   };
 
   return (
-    <div>
-      <div className="relative overflow-hidden">
-        <div ref={container} className="flex flex-row items-center scroll-smooth overflow-x-hidden">
-          <UniformSlot name="carouselItem">
-            {({ child, key }) => {
-              const keyElements = (key as string).split('-');
-
-              const currentChildIndex = parseInt(keyElements[keyElements.length - 1], 10);
+    <CarouselContext.Provider
+      value={{
+        currentIndex,
+      }}
+    >
+      <div>
+        <div className="relative overflow-hidden">
+          <div ref={container} className="flex flex-row items-center scroll-smooth overflow-x-hidden">
+            <UniformSlot name="carouselItem" wrapperComponent={CarouselInner} />
+          </div>
+          <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+            <a
+              onClick={() => onGoPrevious()}
+              className={classNames('btn btn-circle', { 'btn-disabled': currentIndex === 0 })}
+            >
+              ❮
+            </a>
+            <a
+              onClick={() => onGoNext()}
+              className={classNames('btn btn-circle', { 'btn-disabled': totalCountOfItems - 1 === currentIndex })}
+            >
+              ❯
+            </a>
+          </div>
+        </div>
+        {variant === CarouselVariants.ImageGallery && !!carouselItem?.length && (
+          <div className="pt-2 flex flex-row gap-2 flex-wrap">
+            {carouselItem.map((item, index) => {
+              const { src } = item.parameters || {};
+              const srcImage = src?.value as string | undefined;
 
               return (
-                <div
-                  id={`slide-${currentChildIndex}`}
-                  key={currentChildIndex}
-                  className={classNames('min-w-full', {
-                    hidden: isContextualEditing && currentIndex !== currentChildIndex,
-                  })}
+                <button
+                  type="submit"
+                  aria-label="image-gallery"
+                  key={`image-gallery-${index}`}
+                  className={classNames(
+                    'cursor-pointer w-32 h-32 outline outline-1 outline-gray-200 p-1.5 hover:p-0.5 ease-out duration-300',
+                    { '!p-0.5 pointer-events-none': currentIndex === index }
+                  )}
+                  onClick={() => setCurrentIndex(index)}
                 >
-                  {child}
-                </div>
+                  {srcImage ? (
+                    <div className="relative w-full h-full">
+                      <Image src={srcImage} fill className="object-cover" alt="" />
+                    </div>
+                  ) : (
+                    <div className="bg-primary w-full h-full  flex justify-center items-center">
+                      <span className="break-words">{fromCamelCaseText(item.type)}</span>
+                    </div>
+                  )}
+                </button>
               );
-            }}
-          </UniformSlot>
-        </div>
-        <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-          <a
-            onClick={() => onGoPrevious()}
-            className={classNames('btn btn-circle', { 'btn-disabled': currentIndex === 0 })}
-          >
-            ❮
-          </a>
-          <a
-            onClick={() => onGoNext()}
-            className={classNames('btn btn-circle', { 'btn-disabled': totalCountOfItems - 1 === currentIndex })}
-          >
-            ❯
-          </a>
-        </div>
+            })}
+          </div>
+        )}
       </div>
-      {variant === CarouselVariants.ImageGallery && !!carouselItem?.length && (
-        <div className="pt-2 flex flex-row gap-2 flex-wrap">
-          {carouselItem.map((item, index) => {
-            const { src } = item.parameters || {};
-            const srcImage = src?.value as string | undefined;
+    </CarouselContext.Provider>
+  );
+};
 
-            return (
-              <button
-                type="submit"
-                aria-label="image-gallery"
-                key={`image-gallery-${index}`}
-                className={classNames(
-                  'cursor-pointer w-32 h-32 outline outline-1 outline-gray-200 p-1.5 hover:p-0.5 ease-out duration-300',
-                  { '!p-0.5 pointer-events-none': currentIndex === index }
-                )}
-                onClick={() => setCurrentIndex(index)}
-              >
-                {srcImage ? (
-                  <div className="relative w-full h-full">
-                    <Image src={srcImage} fill className="object-cover" alt="" />
-                  </div>
-                ) : (
-                  <div className="bg-primary w-full h-full  flex justify-center items-center">
-                    <span className="break-words">{fromCamelCaseText(item.type)}</span>
-                  </div>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      )}
-    </div>
+export const CarouselContext = createContext({ currentIndex: 0 });
+
+const CarouselInner: UniformSlotProps<string>['wrapperComponent'] = ({ items }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
+  const { currentIndex } = useContext(CarouselContext);
+
+  return (
+    <>
+      {items.map((item, index) => {
+        return (
+          <div
+            id={`slide-${index}`}
+            key={index}
+            className={classNames('min-w-full', {
+              hidden: isContextualEditing && currentIndex !== index,
+            })}
+          >
+            {item}
+          </div>
+        );
+      })}
+    </>
   );
 };
 

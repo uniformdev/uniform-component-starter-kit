@@ -2,7 +2,7 @@ import { FC, Fragment, PropsWithChildren } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
-import { getImageUrl } from '@/utils';
+import { getImageUrl } from '../utilities';
 
 type Props = {
   title: string;

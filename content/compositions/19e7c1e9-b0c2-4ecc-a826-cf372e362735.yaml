@@ -1,0 +1,381 @@
+composition:
+  _name: Carousels
+  _id: 19e7c1e9-b0c2-4ecc-a826-cf372e362735
+  _slug: carousel
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Carousel component
+  slots:
+    pageFooter:
+      - _id: bd0ebd63-5130-4215-bc33-8923d4397ea9
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: da43e4da-93ff-40d9-a1e0-9aa5a66089b4
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: b923c09f-c005-4add-81d7-3dbf760c394b
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Carousel component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: "A Carousel component is versatile since\_it can render any child component, allowing for interactive content display in a confined space."
+      - _id: 0cdff197-2f93-4103-bba2-9486991817af
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-200
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 03f05a0e-2b9c-4a6e-81d1-d979d905fe21
+        type: container
+        slots:
+          container-inner:
+            - _id: 401777c8-f9eb-4a27-b457-2c8aa251e3aa
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains a Hero as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Heroes
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 17e502fa-3a28-4809-ad89-a7a70a736799
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: ba0eb776-7465-4038-846e-ad334c8a87bc
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      title:
+                        type: text
+                        value: Increased Visibility and Engagement
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          A Carousel component allows you to showcase a larger
+                          number of content items within a limited space,
+                          ensuring that your audience can easily view and engage
+                          with a variety of content without overwhelming the
+                          user interface.
+                  - _id: 34f96294-8014-4925-b66a-607e42e46825
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      title:
+                        type: text
+                        value: Enhanced User Interaction
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          With navigation controls, such as arrow buttons or
+                          indicators, users can actively navigate through the
+                          Carousel, giving them control over the displayed
+                          content and creating an engaging and interactive
+                          experience.
+                  - _id: 99423823-71f3-4061-b342-99a3fcb12fcc
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      title:
+                        type: text
+                        value: Optimal Space Utilization
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          Carousels are ideal for situations where space is
+                          limited. By presenting multiple components within a
+                          single container, a Carousel maximizes the use of
+                          available screen real estate, allowing you to display
+                          a diverse range of content without cluttering the
+                          interface.
+        parameters:
+          title:
+            type: text
+            value: Carousel with Heroes
+      - _id: 95d8e763-e41b-4c18-9a04-6a7fee0aaf22
+        type: container
+        slots:
+          container-inner:
+            - _id: a3f75819-02d3-4c47-beb5-b5a839542065
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains an Image as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Images
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: c66dea05-b28f-49b8-849b-fdfb3bffa32e
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: ff01f2cd-1956-4bff-8cb8-69491f133155
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+                  - _id: 15313a2a-b69e-4376-b79d-7d9004d5998e
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+                  - _id: 5ea169c9-d287-49d5-a4e7-2a7bafe7ddf6
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+        parameters:
+          title:
+            type: text
+            value: Carousel with Images
+      - _id: 8d2d6580-a2c3-467a-b49d-5cefa6098ed3
+        type: container
+        slots:
+          container-inner:
+            - _id: d3a653a0-015e-4856-814e-abe66f29ca29
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains 3 Call to Actions as a
+                    child components
+                title:
+                  type: text
+                  value: Carousel with Call to Actions
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: fa765353-b467-4ca9-a743-21fe5c7d77a2
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 8f822f8e-b916-45c8-8a24-254849b6d6f3
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: First call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the first call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero uno
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                  - _id: 2b8f5d69-46be-4af2-badf-afce5d44683f
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: Second call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the second call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero dos
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: link
+                  - _id: a86f6e2a-473b-4ee3-b79e-ad5fde6ad198
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: Third call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the third call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero tres
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: accent
+        parameters:
+          title:
+            type: text
+            value: Carousel with Call to Actions
+      - _id: 25be7e77-9e2a-4f0b-a133-13b57abeb467
+        type: container
+        slots:
+          container-inner:
+            - _id: 7c95ea33-d85b-44b6-a2ad-47e70cb1541d
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains an Image as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Images (Image Gallery variant)
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 4eaaae2b-b22d-4091-83e6-3101bf37c452
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 30bb8495-0f36-4971-a39a-d81f669949dd
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+                  - _id: 6e9e60b7-3463-430a-85d6-57e62c6596aa
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+                  - _id: 3dfa887d-3b96-42ba-b34c-333358db0da7
+                    type: image
+                    parameters:
+                      src:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+                      width:
+                        type: number
+                        value: '2000'
+                      height:
+                        type: number
+                        value: '2000'
+              variant: imageGallery
+created: '2023-08-08T13:08:39.35086+00:00'
+modified: '2023-08-08T13:08:39.35086+00:00'
+pattern: false

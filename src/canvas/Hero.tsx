@@ -7,14 +7,14 @@ import {
   UniformText,
   useUniformCurrentComposition,
 } from '@uniformdev/canvas-react';
+import Button from '../components/Button';
 import {
   getTextClass,
   getImageOverlayOpacityStyle,
   getImageOverlayColorStyle,
   getObjectFitClass,
-} from '@/utils/styling';
-import { getImageUrl } from '@/utils';
-import Button from '@/components/Button';
+} from '../utilities/styling';
+import { formatProjectMapLink, getImageUrl } from '../utilities';
 
 export type Props = ComponentProps<{
   eyebrowText: string;
@@ -160,18 +160,14 @@ const Hero: FC<Props> = ({
             parameterId="title"
             as={TitleTag}
             className={classNames('font-bold', getTextClass(TitleTag))}
+            data-testid="hero-title"
           />
-          <UniformText
-            placeholder="Description goes here"
-            parameterId="description"
-            as="div"
-            className={classNames('py-6')}
-          />
+          <UniformText placeholder="Description goes here" parameterId="description" as="div" className="py-6" />
           <div className={classNames('pb-6', { 'py-6': !description })}>
             {Boolean(primaryButtonLink) && (
               <Button
                 className="mx-1"
-                href={primaryButtonLink.path}
+                href={formatProjectMapLink(primaryButtonLink)}
                 copy={
                   <UniformText
                     placeholder="Button Copy goes here"
@@ -185,7 +181,7 @@ const Hero: FC<Props> = ({
             {Boolean(secondaryButtonLink) && (
               <Button
                 className="mx-1"
-                href={secondaryButtonLink.path}
+                href={formatProjectMapLink(secondaryButtonLink)}
                 copy={
                   <UniformText
                     placeholder="Button Copy goes here"

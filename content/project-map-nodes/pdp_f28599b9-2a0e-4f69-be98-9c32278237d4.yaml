@@ -1,0 +1,9 @@
+id: f28599b9-2a0e-4f69-be98-9c32278237d4
+name: Product Detail Page
+type: composition
+data: {}
+order: 1200
+path: /components/pdp
+compositionId: 2e1bdedd-d37d-4230-97e2-f44913faaf2f
+pathSegment: pdp
+projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

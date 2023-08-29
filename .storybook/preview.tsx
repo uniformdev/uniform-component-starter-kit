@@ -1,8 +1,8 @@
 import React from 'react';
-import '../src/styles/globals.css';
+import '../src/styles/globals.scss';
 import '../src/canvas';
 
-import ThemeProvider from '../src/components/ThemeProvider';
+import { ThemeProvider } from '../src/components';
 import { getTheme } from '../src/stories/utils/themes';
 import type { Preview } from '@storybook/react';
 

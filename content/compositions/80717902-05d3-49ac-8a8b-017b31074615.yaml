@@ -1,0 +1,563 @@
+composition:
+  _name: Card Blocks
+  _id: 80717902-05d3-49ac-8a8b-017b31074615
+  _slug: card-blocks
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Card Blocks component
+  slots:
+    pageFooter:
+      - _id: 4c3f6d2b-ee78-4a6c-b520-a71dc846801d
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: c555f62b-a503-4413-9d82-3f8eef39f1d5
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: da299e8b-5554-41e5-aa62-40b468e5e024
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Card Blocks component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              A composite component that allows adding any number of cards
+              within child slots. You can constrain the amount of child card
+              components allowed.
+      - _id: 7700ea98-131f-44f8-9ccd-47ce3470289b
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-200
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 4ced7075-c9fa-46f2-be37-70eb31341a01
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: f080cee4-e66b-4b86-8db7-28af2038dc84
+              type: card
+              variant: ''
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: accent
+                buttonCopy:
+                  type: text
+                  value: Home
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                buttonStyle:
+                  type: tp-button-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: Compelling description
+                overlayColor:
+                  type: tp-color-style-parameter
+                  value: accent
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 0%
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: d1e18bb4-d96c-4e9b-a76c-b5554c8e5ffa
+              type: card
+              variant: ''
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: primary
+                buttonCopy:
+                  type: text
+                  value: Home
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                buttonStyle:
+                  type: tp-button-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: Compelling description
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: c9c05201-0f60-400a-b501-aee661022dc4
+              type: card
+              variant: ''
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: outline
+                buttonCopy:
+                  type: text
+                  value: Home
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                buttonStyle:
+                  type: tp-button-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: Compelling description
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Default variant cards
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: ''
+      - _id: 0a602db6-ccc7-4032-a490-bd69c6f2dc61
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 2158b1bb-c13d-45d7-9df2-33ed11b0f4f3
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Background Image variant
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: accent
+                buttonStyle:
+                  type: tp-button-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: >-
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+                    eu, pretium quis, sem. Nulla consequat massa quis enim.
+                    Donec pede justo, fringilla vel, aliquet nec, vulputate
+                    eget, arcu.Lorem ipsum dolor sit amet, consectetuer
+                    adipiscing elit. Aenean commodo ligula eget dolor. Aenean
+                    massa.
+                overlayColor:
+                  type: tp-color-style-parameter
+                  value: base-300
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 50%
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: '6'
+            - _id: 9bc73157-2b80-4603-8cdd-1ec30b084e29
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Background Image variant
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: >-
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec.
+                overlayColor:
+                  type: tp-color-style-parameter
+                  value: base-300
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 50%
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: e2d440ce-5895-46b9-9eab-e6d7ef4f8b0b
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Background Image variant
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: >-
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Donec quam felis, ultricies nec.
+                overlayColor:
+                  type: tp-color-style-parameter
+                  value: base-300
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 50%
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Cards with background images
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: ''
+      - _id: e013d63a-6467-4c2f-bf7b-c8124c663edb
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 578fc81c-6927-498f-bb4c-3b13e4567f5a
+              type: card
+              variant: ''
+              parameters:
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                objectFit:
+                  type: select
+                  value: cover
+                buttonCopy:
+                  type: text
+                  value: Primary CTA
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                buttonStyle:
+                  type: tp-button-style-parameter
+                  value: primary
+                description:
+                  type: text
+                  value: Compelling description
+            - _id: 07e08f4f-aab8-47ef-ae2a-59f784a8285e
+              type: card
+              variant: ''
+              parameters:
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                objectFit:
+                  type: select
+                  value: cover
+                buttonCopy:
+                  type: text
+                  value: Primary CTA
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                description:
+                  type: text
+                  value: Compelling description
+            - _id: e83620dc-f969-4d56-94dd-200f6f50a5b7
+              type: card
+              variant: ''
+              parameters:
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: Default variant
+                objectFit:
+                  type: select
+                  value: cover
+                buttonCopy:
+                  type: text
+                  value: Primary CTA
+                buttonLink:
+                  type: link
+                  value:
+                    path: /
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                description:
+                  type: text
+                  value: Compelling description
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Cards with CTA in a Flex Container
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: 6a313a9f-1600-4b29-89af-adb566cb9640
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 25aaf9b2-d34d-4be0-93fe-f0a12839ebbf
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: 'Card #1'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+            - _id: 434e347c-f704-4511-a406-ce4b266828e1
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: 'Card #2'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 0%
+            - _id: c33030f7-04b1-4bfc-877d-1b5e8a21e2a5
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: 'Card #3'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+            - _id: 4252e8b6-ea48-4715-9a2f-4892256e10e1
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png
+                title:
+                  type: text
+                  value: 'Card #4'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 0%
+        variant: carousel
+        parameters:
+          title:
+            type: text
+            value: Cards in a Carousel container
+          buttonCopy:
+            type: text
+            value: CTA title
+          buttonLink:
+            type: link
+            value:
+              path: /components/card-blocks
+              type: projectMapNode
+              nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: You spin me right round
+created: '2023-08-21T08:31:17.428553+00:00'
+modified: '2023-08-22T10:22:45.534708+00:00'
+pattern: false

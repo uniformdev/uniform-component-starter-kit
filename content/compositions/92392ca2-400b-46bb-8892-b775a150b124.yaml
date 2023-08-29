@@ -1,0 +1,137 @@
+composition:
+  _name: Content Blocks
+  _id: 92392ca2-400b-46bb-8892-b775a150b124
+  _slug: content-blocks
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Content Block component
+  slots:
+    pageFooter:
+      - _id: ac5ed332-b72b-4271-b928-e5ba518a2642
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: a099e432-2919-4202-ad77-e879d9db086f
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 437a7144-db99-42ca-805a-9e13f033eed2
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Content Block component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Components with optional title and text parameters.
+      - _id: 601278a7-bf6d-4419-81d3-d8abad514ce3
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-200
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 3f8ee9ee-9893-49f7-aecd-45678282b7dc
+        type: container
+        slots:
+          container-inner:
+            - _id: 118115df-54db-48f4-b1d1-e12d0890983a
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: |-
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                title:
+                  type: text
+                  value: h1 title
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: c9cdf04e-eb23-457d-8b95-26d0fdb7ecb2
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: |-
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                title:
+                  type: text
+                  value: h2 title
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 2de03b12-517d-4e7f-b2e9-a02df2436701
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: |-
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                title:
+                  type: text
+                  value: h3 title
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h3
+            - _id: 788c4c00-e400-4e3c-a88f-99ac5b80c55e
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: |-
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                    Content Block Component Text
+                title:
+                  type: text
+                  value: h4
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h4
+        parameters:
+          title:
+            type: text
+            value: Title Variants
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Light
+created: '2023-08-08T13:08:39.73234+00:00'
+modified: '2023-08-08T13:08:39.73234+00:00'
+pattern: false

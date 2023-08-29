@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { UniformComposition } from '@uniformdev/canvas-react';
-import CardBlock, { CardBlockProps } from '@/canvas/CardBlock';
-import Carousel from '@/canvas/Carousel';
+import { ComponentProps, UniformComposition } from '@uniformdev/canvas-react';
+import { CardBlock, CardBlockProps, CardBlockCarousel, CardBlockVariants } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 
@@ -31,21 +30,21 @@ const argTypes = {
 const BLOCK_CARDS = [
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
@@ -56,20 +55,15 @@ const CAROUSEL_CARDS = [
   ...BLOCK_CARDS,
   {
     image:
-      'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
     title: 'Leverage existing technology investments ',
     description:
       'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   },
 ];
 
-const renderDefaultStory = (args: CardBlockProps) => {
-  const fakeComposition = createFakeCompositionData('cardBlock', args, {
-    cardBlockInner: BLOCK_CARDS.map(card => ({
-      type: 'card',
-      parameters: createUniformParameter(card),
-    })),
-  });
+const renderStory = (args: ComponentProps & Omit<CardBlockProps, 'component'>) => {
+  const fakeComposition = createFakeCompositionData('cardBlock', args, { ...args.component.slots });
   return (
     <UniformComposition data={fakeComposition}>
       <CardBlock {...args} />
@@ -77,28 +71,47 @@ const renderDefaultStory = (args: CardBlockProps) => {
   );
 };
 
-const renderCarouselStory = (args: CardBlockProps) => {
-  const fakeComposition = createFakeCompositionData('cardBlock', args, {
-    cardBlockInner: CAROUSEL_CARDS.map(card => ({
-      type: 'card',
-      parameters: createUniformParameter(card),
-    })),
-  });
+const renderStoryCardBlockCarousel = (args: ComponentProps & Omit<CardBlockProps, 'component'>) => {
+  const fakeComposition = createFakeCompositionData('cardBlock', args, { ...args.component.slots });
   return (
     <UniformComposition data={fakeComposition}>
-      <Carousel {...args} />
+      <CardBlockCarousel {...args} />
     </UniformComposition>
   );
 };
 
 export const Default: Story = {
-  args: BASE_PROPS,
+  args: {
+    ...BASE_PROPS,
+    component: {
+      type: 'cardBlock',
+      variant: undefined,
+      slots: {
+        cardBlockInner: BLOCK_CARDS.map(card => ({
+          type: 'card',
+          parameters: createUniformParameter(card),
+        })),
+      },
+    },
+  },
   argTypes,
-  render: renderDefaultStory,
+  render: renderStory,
 };
 
 export const CarouselBlock: Story = {
-  args: BASE_PROPS,
+  args: {
+    ...BASE_PROPS,
+    component: {
+      type: 'cardBlock',
+      variant: CardBlockVariants.Carousel,
+      slots: {
+        cardBlockInner: CAROUSEL_CARDS.map(card => ({
+          type: 'card',
+          parameters: createUniformParameter(card),
+        })),
+      },
+    },
+  },
   argTypes,
-  render: renderCarouselStory,
+  render: renderStoryCardBlockCarousel,
 };

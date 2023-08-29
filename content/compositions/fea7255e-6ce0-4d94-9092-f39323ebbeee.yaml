@@ -1,0 +1,162 @@
+composition:
+  _name: Multi reviews
+  _id: fea7255e-6ce0-4d94-9092-f39323ebbeee
+  type: grid
+  parameters:
+    gapX:
+      type: tp-slider-parameter
+      value: none
+    gapY:
+      type: tp-slider-parameter
+      value: none
+    title:
+      type: text
+      value: Multi reviews
+    columnsCount:
+      type: tp-slider-parameter
+      value: '8'
+  slots:
+    grid-inner:
+      - _id: 6e8dd46f-d2af-402b-ae33-6085cfb3410f
+        type: gridItem
+        slots:
+          inner:
+            - _id: 92b6d36e-4ccd-4b6c-82bc-da4fcbb0ed01
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 28318318-3b31-49ff-a171-32d4105e0dc9
+                    type: review
+                    variant: multiColumn
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '5'
+                      title:
+                        type: text
+                        value: Can't say enough good things!
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.avif
+                      personName:
+                        type: text
+                        value: Hector Gibbons
+                      starsColor:
+                        type: tp-color-style-parameter
+                        value: base-200
+                      description:
+                        type: text
+                        value: >-
+                          Blown away by how polished this icon pack is.
+                          Everything looks so consistent and each SVG is
+                          optimized out of the box so I can use it directly with
+                          confidence. It would take me several hours to create a
+                          single icon this good, so it's a steal at this price.
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+                  - _id: cbb1f84a-6a7b-4739-8b50-3a5278895ed8
+                    type: review
+                    variant: multiColumn
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '4'
+                      title:
+                        type: text
+                        value: The last shirts I may ever need
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279704/csk-marketing/photo-1502685104226-ee32379fefbe_pjadfb_xsnohl.avif
+                      personName:
+                        type: text
+                        value: Emily Selman
+                      description:
+                        type: text
+                        value: >-
+                          This icon pack is just what I need for my latest
+                          project. There's an icon for just about anything I
+                          could ever need. Love the playful look!
+                      showReviewLabel:
+                        type: checkbox
+                        value: true
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+                  - _id: b5d1b220-54e6-4002-a0b3-b446ba353dd7
+                    type: review
+                    variant: multiColumn
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '5'
+                      title:
+                        type: text
+                        value: Very comfy and looks the part
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279729/csk-marketing/photo-1519244703995-f4e0f30006d5_ozngea_fx5wrx.avif
+                      personName:
+                        type: text
+                        value: Laura G
+                      starsColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      description:
+                        type: text
+                        value: >-
+                          I bought two of those comfy cotton shirts, and let me
+                          tell you: they're amazing! I have been wearing them
+                          almost every day. Even after a dozen of washes, that
+                          still looks and feel good as new. Will definitely
+                          order a few more... If I ever need to!
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: none
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: Column Grid
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '1'
+        parameters:
+          title:
+            type: text
+            value: Grouped Section
+          rowSpan:
+            type: tp-slider-parameter
+            value: '1'
+          rowStart:
+            type: tp-slider-parameter
+            value: None
+          columnSpan:
+            type: tp-slider-parameter
+            value: '6'
+          columnStart:
+            type: tp-slider-parameter
+            value: '2'
+created: '2023-08-28T12:30:23.831885+00:00'
+modified: '2023-08-29T08:15:47.397955+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Review_multi_pattern_preview_image
+categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5

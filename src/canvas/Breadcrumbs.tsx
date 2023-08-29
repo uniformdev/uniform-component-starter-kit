@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import { useComponentStarterKitContext } from '@/context/ComponentStarterKitContext';
+import { useComponentStarterKitContext } from '../context/ComponentStarterKitContext';
 import classNames from 'classnames';
 
 type BreadcrumbSeparator = 'slash' | 'chevron' | 'none';
@@ -86,7 +86,7 @@ const Breadcrumbs: FC<Props> = ({ colorStyle, displayPlaceholderNodes, displayRo
             {breadcrumb?.type === 'placeholder' ? (
               <span>{breadcrumb.name}</span>
             ) : (
-              <a href={breadcrumb?.path}>{breadcrumb.name}</a>
+              <a href={breadcrumb?.path}>{breadcrumb.dynamicInputTitle || breadcrumb.name}</a>
             )}
           </li>
         ))}

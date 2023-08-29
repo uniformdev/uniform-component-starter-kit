@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Container from '@/components/Container';
-import { BackgroundTypes } from '@/utils/styling';
-import RichText from '@/canvas/RichText';
+import { RichText } from '@/canvas';
+import { Container } from '@/components';
+import { BackgroundTypes } from '@/utilities/styling';
 import { createFakeCompositionData } from '../utils';
 
 const meta: Meta<typeof RichText> = {

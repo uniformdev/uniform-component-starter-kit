@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-
+import { Divider } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
-import Divider from '@/canvas/Divider';
 
 const meta: Meta<typeof Divider> = {
   title: 'Divider',

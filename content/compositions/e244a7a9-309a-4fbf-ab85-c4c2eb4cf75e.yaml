@@ -1,0 +1,153 @@
+composition:
+  _name: Default reviews
+  _id: e244a7a9-309a-4fbf-ab85-c4c2eb4cf75e
+  type: grid
+  parameters:
+    gapX:
+      type: tp-slider-parameter
+      value: none
+    gapY:
+      type: tp-slider-parameter
+      value: none
+    title:
+      type: text
+      value: Default reviews
+    columnsCount:
+      type: tp-slider-parameter
+      value: '8'
+  slots:
+    grid-inner:
+      - _id: ecfe5ada-3231-4564-a7c3-0ab4491c4b76
+        type: gridItem
+        slots:
+          inner:
+            - _id: 56d4dcc9-df34-4c46-9489-74f3a80cf930
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 8b7126f0-a066-4f52-b7cd-dcb6ba93a0a0
+                    type: review
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '5'
+                      title:
+                        type: text
+                        value: Can't say enough good things
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.avif
+                      personName:
+                        type: text
+                        value: Hector Gibbons
+                      starsColor:
+                        type: tp-color-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Blown away by how polished this icon pack is.
+                          Everything looks so consistent and each SVG is
+                          optimized out of the box so I can use it directly with
+                          confidence. It would take me several hours to create a
+                          single icon this good, so it's a steal at this price.
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 07d97a02-73cd-4e62-89cf-ceea22e12986
+                    type: review
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '4'
+                      title:
+                        type: text
+                        value: The last shirts I may ever need
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279704/csk-marketing/photo-1502685104226-ee32379fefbe_pjadfb_xsnohl.avif
+                      personName:
+                        type: text
+                        value: Emily Selman
+                      description:
+                        type: text
+                        value: >-
+                          This icon pack is just what I need for my latest
+                          project. There's an icon for just about anything I
+                          could ever need. Love the playful look!
+                  - _id: 759bd889-07a5-4999-8513-e2f6fb6f9c13
+                    type: review
+                    parameters:
+                      date:
+                        type: text
+                        value: July 12, 2021
+                      stars:
+                        type: tp-slider-parameter
+                        value: '5'
+                      title:
+                        type: text
+                        value: Very comfy and looks the part
+                      picture:
+                        type: image
+                        value: >-
+                          https://res.cloudinary.com/uniform-demos/image/upload/v1692279729/csk-marketing/photo-1519244703995-f4e0f30006d5_ozngea_fx5wrx.avif
+                      personName:
+                        type: text
+                        value: Laura G
+                      starsColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      description:
+                        type: text
+                        value: >-
+                          I bought two of those comfy cotton shirts, and let me
+                          tell you: they're amazing! I have been wearing them
+                          almost every day. Even after a dozen of washes, that
+                          still looks and feel good as new. Will definitely
+                          order a few more... If I ever need to!
+                      showReviewLabel:
+                        type: checkbox
+                        value: true
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: none
+                gapY:
+                  type: tp-slider-parameter
+                  value: medium
+                title:
+                  type: text
+                  value: Column Grid
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '1'
+        parameters:
+          title:
+            type: text
+            value: Grouped Section
+          rowSpan:
+            type: tp-slider-parameter
+            value: '1'
+          rowStart:
+            type: tp-slider-parameter
+            value: None
+          columnSpan:
+            type: tp-slider-parameter
+            value: '6'
+          columnStart:
+            type: tp-slider-parameter
+            value: '2'
+created: '2023-08-28T12:30:23.785518+00:00'
+modified: '2023-08-29T08:15:28.017672+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Review_default_pattern_preview_image
+categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5

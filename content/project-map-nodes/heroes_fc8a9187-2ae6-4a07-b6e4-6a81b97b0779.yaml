@@ -1,0 +1,9 @@
+id: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+name: Heroes
+type: composition
+data: {}
+order: 500
+path: /components/heroes
+compositionId: 8e0d242a-4ba6-45c5-a57a-e13f0b2cc193
+pathSegment: heroes
+projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

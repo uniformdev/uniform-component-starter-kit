@@ -6,8 +6,9 @@ import {
   ComponentProps,
   UniformText,
 } from '@uniformdev/canvas-react';
-import Button from '@/components/Button';
-import { getTextClass } from '@/utils/styling';
+import Button from '../components/Button';
+import { getTextClass } from '../utilities/styling';
+import { formatProjectMapLink } from '../utilities';
 
 export type Props = ComponentProps<{
   eyebrowText: string;
@@ -82,7 +83,7 @@ const CallToAction: FC<Props> = ({
         <div className="flex justify-between">
           {Boolean(primaryButtonLink && primaryButtonCopy) && (
             <Button
-              href={primaryButtonLink.path}
+              href={formatProjectMapLink(primaryButtonLink)}
               copy={
                 <UniformText
                   placeholder="Description goes here"
@@ -95,7 +96,7 @@ const CallToAction: FC<Props> = ({
           )}
           {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
             <Button
-              href={secondaryButtonLink.path}
+              href={formatProjectMapLink(secondaryButtonLink)}
               copy={
                 <UniformText
                   placeholder="Description goes here"

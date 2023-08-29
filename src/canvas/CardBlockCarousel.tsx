@@ -1,11 +1,18 @@
-import { FC, Fragment, ReactElement, ReactNode } from 'react';
+import { FC, useCallback } from 'react';
 import classNames from 'classnames';
 import MultiCarousel from 'react-multi-carousel';
-import { ComponentProps, UniformText, UniformSlot, useUniformCurrentComposition } from '@uniformdev/canvas-react';
-import CarouselButtons from '@/components/CarouselButtons';
-import Button from '@/components/Button';
-import { getTextClass } from '@/utils/styling';
+import {
+  ComponentProps,
+  UniformText,
+  UniformSlot,
+  useUniformCurrentComposition,
+  UniformSlotWrapperComponentProps,
+} from '@uniformdev/canvas-react';
 import 'react-multi-carousel/lib/styles.css';
+import CarouselButtons from '../components/CarouselButtons';
+import Button from '../components/Button';
+import { getTextClass } from '../utilities/styling';
+import { formatProjectMapLink } from '../utilities';
 
 type Props = ComponentProps<{
   title: string;
@@ -32,26 +39,32 @@ const defaultResponsiveData = {
 };
 
 const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonStyle }) => {
-  const children: ReactNode[] = [];
   const { isContextualEditing } = useUniformCurrentComposition();
+
+  const carouselInner = useCallback(
+    ({ items }: UniformSlotWrapperComponentProps) => {
+      return (
+        <MultiCarousel
+          ssr
+          deviceType="desktop"
+          renderDotsOutside
+          customButtonGroup={<CarouselButtons buttonStyle={buttonStyle} />}
+          renderButtonGroupOutside
+          shouldResetAutoplay={false}
+          arrows={false}
+          itemClass="px-2.5 flex"
+          containerClass="-mx-2.5"
+          responsive={defaultResponsiveData}
+        >
+          {items}
+        </MultiCarousel>
+      );
+    },
+    [buttonStyle]
+  );
+
   return (
-    <>
-      {/*
-        This is a workaround because Uniform sends us a Slot with these items wrapped by a Fragment. 
-        However, in order to make this carousel work, we should send an array as the children
-      */}
-      <UniformSlot name="cardBlockInner">
-        {({ child }) => {
-          const currentComponent = child as ReactElement;
-          const isAlreadyExist = children.some(item => (item as ReactElement).key === currentComponent.key);
-
-          if (!isAlreadyExist) {
-            children.push(child);
-          }
-
-          return <Fragment />;
-        }}
-      </UniformSlot>
+    <div>
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between mb-6 md:mb-10 text-secondary-content">
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
           <UniformText
@@ -64,7 +77,7 @@ const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonSt
         </div>
         {Boolean(buttonLink) && (
           <Button
-            href={buttonLink.path}
+            href={formatProjectMapLink(buttonLink)}
             style={buttonStyle}
             copy={
               <UniformText
@@ -76,21 +89,8 @@ const Carousel: FC<Props> = ({ titleStyle: TitleTag = 'h1', buttonLink, buttonSt
           />
         )}
       </div>
-      <MultiCarousel
-        ssr
-        deviceType="desktop"
-        renderDotsOutside
-        customButtonGroup={<CarouselButtons buttonStyle={buttonStyle} />}
-        renderButtonGroupOutside
-        shouldResetAutoplay={false}
-        arrows={false}
-        itemClass="px-2.5 flex"
-        containerClass="-mx-2.5"
-        responsive={defaultResponsiveData}
-      >
-        {children}
-      </MultiCarousel>
-    </>
+      <UniformSlot name="cardBlockInner" wrapperComponent={carouselInner} />
+    </div>
   );
 };
 

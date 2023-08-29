@@ -1,0 +1,83 @@
+composition:
+  _name: Reviews
+  _id: 42b0381e-8643-4aa4-a3b6-c49ab21344fd
+  _slug: reviews
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Reviews
+  slots:
+    pageFooter:
+      - _id: 375ca5d7-8579-4322-b018-e311a1afed1e
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 13e73105-9f7b-4d41-9965-0b34f44b0f47
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: da2629b8-d924-4e4a-a027-cb3dcea7a180
+        type: hero
+        variant: backgroundDarkImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Reviews component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Star reviews are pretty popular in commerce scenarios. This
+              component comes in two variants now.
+      - _id: c0fccd1b-a581-4178-99a8-0c05ae7481dd
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: aee676d0-488c-4d44-9122-ae182a3c751b
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Default variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 49e2de71-3827-4b0a-b541-99ee2c5c513d
+        type: grid
+        _pattern: e244a7a9-309a-4fbf-ab85-c4c2eb4cf75e
+      - _id: 82ee2143-6698-481b-af25-58fdb7b5c4ef
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: e62bf666-9de5-4cbc-9080-59925eca8465
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Column view variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+      - _id: 578c67b0-3be3-43e7-9af3-d24c2ebc5db3
+        type: grid
+        _pattern: fea7255e-6ce0-4d94-9092-f39323ebbeee
+created: '2023-08-08T13:08:39.838153+00:00'
+modified: '2023-08-08T13:08:39.838153+00:00'
+pattern: false

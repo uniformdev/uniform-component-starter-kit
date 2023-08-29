@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import NextImage from 'next/image';
-import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '@/utils/styling';
-import { getImageUrl } from '@/utils';
+import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../utilities/styling';
+import { getImageUrl } from '../utilities';
 import classNames from 'classnames';
 
 export type Props = ComponentProps<{

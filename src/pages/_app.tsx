@@ -4,10 +4,10 @@ import { UniformContext } from '@uniformdev/context-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 
 import createUniformContext from '@/context/createUniformContext';
-import ComponentStarterKitContextProvider from '@/context/ComponentStarterKitContext';
+import { ComponentStarterKitContextProvider } from '@/context';
 import '@/canvas';
 
-import '@/styles/globals.css';
+import '@/styles/globals.scss';
 
 const clientContext = createUniformContext();
 
@@ -23,7 +23,6 @@ const App = ({
     pageTitle,
     pageMetaDescription,
     pageKeywords,
-    favicon,
     openGraphTitle,
     openGraphDescription,
     openGraphImage,
@@ -39,6 +38,10 @@ const App = ({
   const ogTitle = (openGraphTitle?.value as string)?.replaceAll?.(' ', '%20');
   const twTitle = (twitterTitle?.value as string)?.replaceAll?.(' ', '%20');
   const title: string = pageTitle?.value as string;
+
+  const compositionHeader = composition?.slots?.pageHeader?.[0];
+
+  const favicon = compositionHeader?.parameters?.favicon;
 
   const renderOgImageElement = () => {
     if (overlayTitleToOgImage?.value && openGraphImage?.value) {

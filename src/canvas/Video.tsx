@@ -5,7 +5,7 @@ import classNames from 'classnames';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
-export type VideoProps = ComponentProps<{
+export type Props = ComponentProps<{
   url: Types.ProjectMapLink;
   loop?: boolean;
   controls: boolean;
@@ -48,7 +48,7 @@ const PlayButton: FC<PlayButtonProps> = ({ onClick }) => (
   </button>
 );
 
-const Video: FC<VideoProps> = ({ url, loop, controls, lazyLoad, placeholderImage, muted }) => {
+const Video: FC<Props> = ({ url, loop, controls, lazyLoad, placeholderImage, muted }) => {
   const [playing, setPlaying] = useState(false);
   const playerRef = useRef(null);
 

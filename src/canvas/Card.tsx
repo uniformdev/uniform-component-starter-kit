@@ -7,26 +7,30 @@ import {
   UniformText,
   useUniformCurrentComposition,
 } from '@uniformdev/canvas-react';
-import Button from '@/components/Button';
-import { getImageUrl } from '@/utils';
-import { getLineClampClass } from '@/utils/styling';
-
-type BadgeStyles = 'primary' | 'secondary' | 'accent' | 'outline';
-
-type BadgeSize = 'xs' | 'sm' | 'md' | 'lg';
+import Button from '../components/Button';
+import { formatProjectMapLink, getImageUrl } from '../utilities';
+import {
+  getImageOverlayColorStyle,
+  getImageOverlayOpacityStyle,
+  getLineClampClass,
+  getObjectFitClass,
+} from '../utilities/styling';
 
 export type Props = ComponentProps<{
   image: string | Types.CloudinaryImage;
   badge: string;
-  badgeStyle: BadgeStyles;
-  badgeSize: BadgeSize;
+  badgeStyle: Types.BadgeStyles;
+  badgeSize: Types.BadgeSize;
   title: string;
   description: string;
-  slug?: string;
   buttonCopy: string;
-  buttonLink: Types.ProjectMapLink;
+  buttonLink?: Types.ProjectMapLink;
   buttonStyle: Types.ButtonStyles;
   lineCountRestriction: Types.AvailableMaxLineCount;
+  useCustomTextElements?: boolean;
+  overlayColor?: Types.AvailableColor;
+  overlayOpacity?: Types.AvailableOpacity;
+  objectFit?: Types.AvailableObjectFit;
 }>;
 
 export enum CardVariants {
@@ -92,67 +96,96 @@ const getImageSizeClassName = (variantId?: string) => {
 
 const Card: FC<Props> = ({
   image,
-  slug = '',
+  badge,
   badgeSize = 'md',
   badgeStyle = 'secondary',
   buttonLink,
   buttonStyle,
+  title,
+  buttonCopy,
+  description,
   lineCountRestriction,
+  useCustomTextElements,
+  overlayOpacity,
+  overlayColor,
+  objectFit = 'cover',
   component: { variant } = {},
 }) => {
   const imageUrl = getImageUrl(image);
   const { isContextualEditing } = useUniformCurrentComposition();
+
+  const badgeClassNames = classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize));
+  const titleClassNames = classNames('card-title', getTextClass(variant));
+  const descriptionClassNames = classNames(getLineClampClass(lineCountRestriction), getTextClass(variant));
+
+  const isBackgroundImage = variant === CardVariants.BackgroundImage;
+
   return (
     <div
-      className={classNames(
-        'card w-96 max-w-full min-h-96 my-2 mx-0 md:m-2 relative border border-gray-200',
-        getContentClass(variant)
-      )}
+      className={classNames('card w-96 max-w-full mx-0 md:mx-2 border border-gray-200', getContentClass(variant), {
+        relative: isBackgroundImage,
+      })}
     >
-      {variant === CardVariants.BackgroundImage && (
-        <div className="absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 rounded-xl" />
-      )}
-      <figure>
+      <figure className={classNames({ relative: !isBackgroundImage })}>
         {Boolean(imageUrl) && (
           <Image
             alt="image"
             src={imageUrl}
             width={384}
             height={384}
-            className={classNames('object-cover', getImageSizeClassName(variant))}
+            className={classNames(getObjectFitClass(objectFit || 'cover'), getImageSizeClassName(variant))}
           />
         )}
+        <div
+          className={classNames(
+            'absolute top-0 left-0 right-0 bottom-0 rounded-xl',
+            getImageOverlayOpacityStyle(overlayOpacity),
+            getImageOverlayColorStyle(overlayColor)
+          )}
+        />
       </figure>
       <div className="card-body">
-        <UniformText
-          placeholder="Badge goes here"
-          parameterId="badge"
-          as="div"
-          className={classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize))}
-        />
-        <UniformText
-          placeholder="Title goes here"
-          parameterId="title"
-          as="h2"
-          className={classNames('card-title', getTextClass(variant))}
-        />
-        <UniformText
-          placeholder="Description goes here"
-          parameterId="description"
-          className={classNames(getLineClampClass(lineCountRestriction), getTextClass(variant))}
-          render={(value = '') => <div dangerouslySetInnerHTML={{ __html: value }} />}
-        />
+        {useCustomTextElements ? (
+          <div className={badgeClassNames}>{badge}</div>
+        ) : (
+          <UniformText placeholder="Badge goes here" parameterId="badge" as="div" className={badgeClassNames} />
+        )}
+        {useCustomTextElements ? (
+          <h2 className={titleClassNames}>{title}</h2>
+        ) : (
+          <UniformText placeholder="Title goes here" parameterId="title" as="h2" className={titleClassNames} />
+        )}
+        {useCustomTextElements ? (
+          <div className={descriptionClassNames} dangerouslySetInnerHTML={{ __html: description }} />
+        ) : (
+          <UniformText
+            placeholder="Description goes here"
+            parameterId="description"
+            className={descriptionClassNames}
+            render={(value = '') => <div dangerouslySetInnerHTML={{ __html: value }} />}
+          />
+        )}
+
         <div className="card-actions justify-end mt-auto">
-          {Boolean(buttonLink?.path) && (
+          {buttonLink && (
             <Button
-              href={`${buttonLink.path}${slug ? `/${slug}` : ''}`}
+              href={formatProjectMapLink(buttonLink)}
               style={buttonStyle}
               copy={
-                <UniformText
-                  placeholder="Button copy goes here"
-                  parameterId="buttonCopy"
-                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-                />
+                useCustomTextElements ? (
+                  <div
+                    onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+                    className={descriptionClassNames}
+                  >
+                    {buttonCopy}
+                  </div>
+                ) : (
+                  <UniformText
+                    placeholder="Button copy goes here"
+                    parameterId="buttonCopy"
+                    onClick={isContextualEditing ? e => e.preventDefault() : undefined}
+                  />
+                )
               }
             />
           )}

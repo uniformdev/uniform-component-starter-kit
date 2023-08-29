@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { ComponentProps, UniformSlot, registerUniformComponent } from '@uniformdev/canvas-react';
-import { getImageUrl } from '@/utils';
+import { getImageUrl } from '../../../utilities';
 
 type LinkProps = ComponentProps<{
   title: string;
@@ -34,7 +34,7 @@ const NavigationOneColumnMenuLink: FC<LinkProps> = ({ title, link, icon, descrip
     const [pathWithoutQuery] = asPath.split('?');
 
     if (link?.path === '/') {
-      return asPath === link.path;
+      return asPath === link?.path;
     }
 
     return pathWithoutQuery.includes(link?.path);

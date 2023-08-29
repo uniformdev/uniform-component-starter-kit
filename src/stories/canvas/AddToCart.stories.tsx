@@ -1,8 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import AddToCart, { AddToCartProps } from '@/canvas/AddToCart';
-import Container from '@/components/Container';
-import { BackgroundTypes } from '@/utils/styling';
+import { AddToCart, AddToCartProps } from '@/canvas';
+import { Container } from '@/components';
+import { BackgroundTypes } from '@/utilities/styling';
 import { createFakeCompositionData } from '../utils';
 import { buttonStyleOptions } from '../constants';
 

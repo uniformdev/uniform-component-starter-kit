@@ -7,11 +7,12 @@ import {
   UniformText,
   useUniformCurrentComposition,
 } from '@uniformdev/canvas-react';
-import { getTextClass } from '@/utils/styling';
-import Button from '@/components/Button';
-import CardBlockCarousel from '@/canvas/CardBlockCarousel';
+import Button from '../components/Button';
+import CardBlockCarousel from './CardBlockCarousel';
+import { getTextClass } from '../utilities/styling';
+import { formatProjectMapLink } from '../utilities';
 
-export type CardBlockProps = ComponentProps<{
+export type Props = ComponentProps<{
   title: string;
   description?: string;
   titleStyle: Types.HeadingStyles;
@@ -24,10 +25,10 @@ export enum CardBlockVariants {
   Carousel = 'carousel',
 }
 
-const CardBlock: FC<CardBlockProps> = ({ buttonLink, titleStyle: TitleTag = 'h1', buttonStyle }) => {
+const CardBlock: FC<Props> = ({ buttonLink, titleStyle: TitleTag = 'h1', buttonStyle }) => {
   const { isContextualEditing } = useUniformCurrentComposition();
   return (
-    <div className="flex items-center text-secondary-content justify-between py-2 flex-wrap">
+    <div className="flex items-center text-secondary-content justify-between py-2 gap-2 flex-wrap">
       <div className="w-full flex flex-col md:flex-row md:items-center justify-between px-3 pb-6">
         <div className="basis-2/3 xl:basis-auto">
           <UniformText
@@ -40,7 +41,7 @@ const CardBlock: FC<CardBlockProps> = ({ buttonLink, titleStyle: TitleTag = 'h1'
         </div>
         {Boolean(buttonLink) && (
           <Button
-            href={buttonLink.path}
+            href={formatProjectMapLink(buttonLink)}
             copy={
               <UniformText
                 placeholder="Button copy goes here"

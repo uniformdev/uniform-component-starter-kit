@@ -1,16 +1,16 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 import { registerUniformComponent, ComponentProps, UniformText } from '@uniformdev/canvas-react';
-import { getTextClass } from '@/utils/styling';
+import { getTextClass } from '../utilities/styling';
 
-export type PriceProps = ComponentProps<{
+export type Props = ComponentProps<{
   label?: string;
   labelStyle: Types.HeadingStyles;
   price?: number | string;
   currency?: string;
 }>;
 
-const Price: FC<PriceProps> = ({ labelStyle = 'h1', currency }) => (
+const Price: FC<Props> = ({ labelStyle = 'h1', currency }) => (
   <div className="flex flex-row items-center text-secondary-content py-2 gap-2">
     <UniformText
       placeholder="Label goes here"

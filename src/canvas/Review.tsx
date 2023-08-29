@@ -1,9 +1,9 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent, UniformText } from '@uniformdev/canvas-react';
 import Image from 'next/image';
-import Rating from '@/components/Rating';
 import classNames from 'classnames';
-import { getLineClampClass } from '@/utils/styling';
+import Rating from '../components/Rating';
+import { getLineClampClass } from '../utilities/styling';
 
 export enum ReviewVariant {
   MultiColumn = 'multiColumn',

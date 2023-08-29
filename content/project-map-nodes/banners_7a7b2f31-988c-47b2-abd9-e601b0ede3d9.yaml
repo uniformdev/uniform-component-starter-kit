@@ -1,0 +1,9 @@
+id: 7a7b2f31-988c-47b2-abd9-e601b0ede3d9
+name: Banners
+type: composition
+data: {}
+order: 1300
+path: /components/banners
+compositionId: c88ff38b-1703-4c03-bdeb-17c1e3133202
+pathSegment: banners
+projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

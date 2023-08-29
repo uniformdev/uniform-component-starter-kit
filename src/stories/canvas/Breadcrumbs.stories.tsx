@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Breadcrumbs from '@/canvas/Breadcrumbs';
-import ComponentStarterKitContextProvider from '@/context/ComponentStarterKitContext';
+import { ComponentStarterKitContextProvider } from '@/context';
+import { Breadcrumbs } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 
 const argTypes = {

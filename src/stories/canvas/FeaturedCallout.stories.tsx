@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import FeaturedCallout, { FeaturedCalloutVariant, Props as FeaturedCalloutProps } from '@/canvas/FeaturedCallout';
+import { FeaturedCallout, FeaturedCalloutProps, FeaturedCalloutVariant } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 import { titleStyleOptions } from '../constants';
 
@@ -19,7 +19,7 @@ const BASE_PROPS: Omit<FeaturedCalloutProps, 'component'> = {
   description:
     'You can use this space to highlight your first benefit or a feature of your product. It can also contain an image or Illustration like in the example along with some bullet points.',
   image:
-    'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
 };
 
 const argTypes = {
@@ -28,7 +28,7 @@ const argTypes = {
 
 const FEATURES = [
   {
-    icon: 'https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-understand_eytz6h.svg',
+    icon: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276689/csk-icons/icon-understand_eytz6h_cgirir.svg',
     title: 'Understand your customers',
     link: {
       path: '/your-link',
@@ -36,12 +36,12 @@ const FEATURES = [
     description: 'Then explain the first point breifly in one or two lines.',
   },
   {
-    icon: 'https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-improve_jkerfy.svg',
+    icon: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276740/csk-icons/icon-improve_jkerfy_z0qxiy.svg',
     title: 'Improve acquisition',
     description: 'Here you can add a second point to explain the benefits of your product.',
   },
   {
-    icon: 'https://res.cloudinary.com/uniformdev/image/upload/v1681815248/component-starter-kit/canvas-images/icon-drive_le2khu.svg',
+    icon: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276654/csk-icons/icon-drive_le2khu_i6jwy8.svg',
     title: 'Engage your customers',
     description: 'Here you can add a third point to explain the benefits of your product.',
   },

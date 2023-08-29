@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import Card, { CardVariants, Props as CardProps } from '@/canvas/Card';
+import { Card, CardProps, CardVariants } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 import { buttonStyleOptions } from '../constants';
 
@@ -20,12 +20,11 @@ const BASE_PROPS: Omit<CardProps, 'component'> = {
   title: 'Leverage existing technology investments ',
   description: 'Use this paragraph to share information about your company or brand. Make it as engaging as possible.',
   image:
-    'https://res.cloudinary.com/uniformdev/image/upload/v1681808641/component-starter-kit/canvas-images/Hero-Rectangle_nof1km.png',
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
 
   badge: 'New',
   badgeStyle: 'primary',
   badgeSize: 'sm',
-  slug: '',
   buttonCopy: 'Home',
   buttonLink: {
     path: '/',

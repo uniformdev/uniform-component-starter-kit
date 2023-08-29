@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import UniformImage, { Props as ImageProps } from '@/canvas/Image';
+import { UniformImage, UniformImageProps } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 
 const meta: Meta<typeof UniformImage> = {
@@ -11,13 +11,13 @@ const meta: Meta<typeof UniformImage> = {
 export default meta;
 type Story = StoryObj<typeof UniformImage>;
 
-const BASE_PROPS: Omit<ImageProps, 'component'> = {
+const BASE_PROPS: Omit<UniformImageProps, 'component'> = {
   width: 200,
   height: 200,
-  src: 'https://res.cloudinary.com/uniformdev/image/upload/v1681807373/component-starter-kit/canvas-images/Rectangle_7_2_uupdjo.avif',
+  src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
 };
 
-const renderStory = (args: ImageProps) => {
+const renderStory = (args: UniformImageProps) => {
   const fakeComposition = createFakeCompositionData('image', args, {});
   return (
     <UniformComposition data={fakeComposition}>
