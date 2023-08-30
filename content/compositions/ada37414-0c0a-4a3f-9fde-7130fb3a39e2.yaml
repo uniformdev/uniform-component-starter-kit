@@ -1409,7 +1409,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279103/csk-icons/component-icons/icon_hero_fmo9cb_epvcnp_vk7jwb.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/heroes
@@ -1430,7 +1430,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279264/csk-icons/component-icons/icon_CTA_jttsck_cs5or7_xhzyox.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/calls-to-action
@@ -1451,7 +1451,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279298/csk-icons/component-icons/icon_cardblock_dszbli_scyhaf_p4ybok.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/carousels
@@ -1483,7 +1483,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279399/csk-icons/component-icons/icon_content_e4lqbm_fn26lv_gx0hhn.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/content-blocks
@@ -1504,7 +1504,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279298/csk-icons/component-icons/icon_cardblock_dszbli_scyhaf_p4ybok.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/card-blocks
@@ -1525,7 +1525,7 @@ composition:
                                           type: image
                                           value: >-
                                             https://res.cloudinary.com/uniform-demos/image/upload/v1692279459/csk-icons/component-icons/icon_image_qpjmsm_m8y69z_ugzrti.svg
-                                        links:
+                                        link:
                                           type: link
                                           value:
                                             path: /components/images

@@ -10,8 +10,8 @@ parameters:
     type: text
     helpText: ''
     typeConfig: null
-  - id: links
-    name: Links
+  - id: link
+    name: Link
     type: link
     helpText: ''
     typeConfig: null
