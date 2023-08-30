@@ -430,9 +430,9 @@ composition:
                       buttonLink:
                         type: link
                         value:
-                          path: /components/headers-topnav
+                          path: /components/breadcrumbs
                           type: projectMapNode
-                          nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                          nodeId: aeed197a-ba51-497f-8f3e-92dc601918f2
                           projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                       description:
                         type: text
