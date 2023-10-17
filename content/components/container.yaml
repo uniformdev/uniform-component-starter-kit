@@ -82,7 +82,6 @@ parameters:
         - text: None
           value: None
 categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Container_preview_image
 useTeamPermissions: true
@@ -96,9 +95,9 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:17.822277+00:00'
-updated: '2023-08-28T12:30:17.822277+00:00'
+updated: '2023-09-12T06:54:30.690672+00:00'
 variants:
   - id: backgroundInContainer
     name: Background In Container
-  - id: fluentContent
-    name: Fluent Content
+  - id: fluidContent
+    name: Fluid Content

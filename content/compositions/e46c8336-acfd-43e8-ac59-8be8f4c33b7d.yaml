@@ -3,9 +3,6 @@ composition:
   _id: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
   type: header
   parameters:
-    font:
-      type: select
-      value: inter
     logo:
       type: image
       value: >-
@@ -47,6 +44,12 @@ composition:
       type: image
       value: >-
         https://res.cloudinary.com/uniform-demos/image/upload/v1692279602/csk-marketing/LaunchArt_LI_uikeod_stwidx.png
+    primaryFont:
+      type: select
+      value: inter
+    syntheticGap:
+      type: tp-slider-parameter
+      value: Medium
     linksAlignment:
       type: tp-horizontal-align-parameter
       value: center
@@ -194,6 +197,32 @@ composition:
                 title:
                   type: text
                   value: Reviews
+            - _id: 64690ec2-aaeb-415c-af9e-1ae8b2c6ff10
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/product-gallery
+                    type: projectMapNode
+                    nodeId: ff09deec-49ab-4dee-8431-e9bf6e9a5d37
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Product Gallery
+            - _id: 00aaa89c-c2c2-4018-b207-07ca4ab9bccf
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/product-info
+                    type: projectMapNode
+                    nodeId: c6b270b9-bb82-4d6c-a40c-66cd80939c13
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Product Info
         parameters:
           title:
             type: text
@@ -369,8 +398,11 @@ composition:
             value:
               path: https://github.com/uniformdev/uniform-component-starter-kit
               type: url
-created: '2023-08-25T08:44:16.239313+00:00'
-modified: '2023-08-28T11:59:25.929105+00:00'
+  _overridability:
+    parameters:
+      syntheticGap: 'yes'
+created: '2023-08-28T12:30:23.574658+00:00'
+modified: '2023-09-19T10:05:32.724101+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Header_pattern_preview_image

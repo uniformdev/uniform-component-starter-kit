@@ -1,4 +1,5 @@
 import {
+  additionalModulesForComponentStarterKit,
   getAlgoliaEnvs,
   getCommercetoolsEnvs,
   getContentfulEnvs,
@@ -10,7 +11,6 @@ import { AvailableProjects, CommonVariants } from './constants';
 import commercetoolsIntegration from './customIntegrations/commercetools';
 import openAIIntegration from './customIntegrations/openAI';
 import { composeGetEnvFns, fetchThemePackThemes } from './utils';
-import coveoIntegration from './customIntegrations/coveo';
 
 export const demosVariantsGetEnvsMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<
@@ -40,13 +40,13 @@ export const demosVariantsGetEnvsMap: {
   },
 };
 
-const Integrations = {
+export const Integrations = {
   Cloudinary: {
     name: 'Cloudinary',
     data: {
-      cloudName: process.env.CLI_CLOUDINARY_CLOUD_NAME,
-      apiKey: process.env.CLI_CLOUDINARY_API_KEY,
-      apiSecret: process.env.CLI_CLOUDINARY_API_SECRET,
+      cloudName: process.env.CLI_CLOUDINARY_CLOUD_NAME!,
+      apiKey: process.env.CLI_CLOUDINARY_API_KEY!,
+      apiSecret: process.env.CLI_CLOUDINARY_API_SECRET!,
     },
   },
   Contentful: {
@@ -61,11 +61,18 @@ const Integrations = {
   },
   ThemePackUniform: {
     name: `Theme Pack`,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fetchDataFn: (data: any) => fetchThemePackThemes('uniform', data),
   },
   ThemePackJavadrip: {
     name: `Theme Pack`,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fetchDataFn: (data: any) => fetchThemePackThemes('javadrip', data),
+  },
+  ThemePackJavadripBlack: {
+    name: `Theme Pack`,
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    fetchDataFn: (data: any) => fetchThemePackThemes('custom', data),
   },
   UniformFakeCommerce: {
     name: 'Uniform Fake Commerce',
@@ -94,10 +101,9 @@ const Integrations = {
   },
   Coveo: {
     name: 'Coveo',
-    customManifest: coveoIntegration,
     data: {
-      organizationId: process.env.CLI_COVEO_ORGANIZATION_ID,
-      apiKey: process.env.CLI_COVEO_API_KEY,
+      organizationId: process.env.CLI_COVEO_ORGANIZATION_ID as string,
+      apiKey: process.env.CLI_COVEO_API_KEY as string,
     },
   },
   OpenAI: {
@@ -137,14 +143,14 @@ export const demosRequiredIntegrationsMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, CLI.Integration[] | undefined>>;
 } = {
   [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: [Integrations.ContentfulClassic],
+    [CommonVariants.Default]: [Integrations.ThemePackJavadrip, Integrations.ContentfulClassic, Integrations.Cloudinary],
   },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: [Integrations.ThemePackJavadrip, Integrations.UniformFakeCommerce],
   },
   [AvailableProjects.CommerceAlgoliaDemo]: {
     [CommonVariants.Default]: [
-      Integrations.ThemePackJavadrip,
+      Integrations.ThemePackJavadripBlack,
       Integrations.Algolia,
       Integrations.Cloudinary,
       Integrations.Contentful,
@@ -154,7 +160,7 @@ export const demosRequiredIntegrationsMap: {
   },
   [AvailableProjects.CommerceCoveoDemo]: {
     [CommonVariants.Default]: [
-      Integrations.ThemePackJavadrip,
+      Integrations.ThemePackJavadripBlack,
       Integrations.Coveo,
       Integrations.Cloudinary,
       Integrations.Contentful,
@@ -162,7 +168,13 @@ export const demosRequiredIntegrationsMap: {
     ],
   },
   [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: [Integrations.Commercetools, Integrations.Contentful, Integrations.Contentstack],
+    [CommonVariants.Default]: [
+      Integrations.ThemePackJavadripBlack,
+      Integrations.Commercetools,
+      Integrations.Contentful,
+      Integrations.Contentstack,
+      Integrations.Cloudinary,
+    ],
   },
   [AvailableProjects.ComponentStarterKit]: {
     [CommonVariants.Default]: [Integrations.ThemePackUniform],
@@ -278,54 +290,6 @@ export const demosRequiredDataSourceMap: {
   },
 };
 
-export const demosVariantsRequiredEnvsMap: {
-  [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, string[]>>;
-} = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: [
-      'CONTENTFUL_SPACE_ID',
-      'CONTENTFUL_ENVIRONMENT',
-      'CONTENTFUL_CDA_ACCESS_TOKEN',
-      'CONTENTFUL_CPA_ACCESS_TOKEN',
-    ],
-  },
-  [AvailableProjects.CommerceStarter]: {
-    [CommonVariants.Default]: [],
-  },
-  [AvailableProjects.CommerceAlgoliaDemo]: {
-    [CommonVariants.Default]: [
-      'ALGOLIA_APPLICATION_ID',
-      'ALGOLIA_SEARCH_KEY',
-      'NEXT_PUBLIC_ANALYTICS_WRITE_KEY',
-      'SEGMENT_API_KEY',
-      'SEGMENT_SPACE_ID',
-      'NEXT_PUBLIC_GOOGLE_ANALYTICS_ID',
-    ],
-  },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: [
-      'COVEO_ORGANIZATION_ID',
-      'COVEO_API_KEY',
-      'NEXT_PUBLIC_ANALYTICS_WRITE_KEY',
-      'SEGMENT_API_KEY',
-      'SEGMENT_SPACE_ID',
-      'NEXT_PUBLIC_GOOGLE_ANALYTICS_ID',
-    ],
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: [
-      'COMMERCETOOLS_PROJECT_KEY',
-      'COMMERCETOOLS_AUTH_URL',
-      'COMMERCETOOLS_API_URL',
-      'COMMERCETOOLS_CLIENT_ID',
-      'COMMERCETOOLS_CLIENT_SECRET',
-    ],
-  },
-  [AvailableProjects.ComponentStarterKit]: {
-    [CommonVariants.Default]: [],
-  },
-};
-
 export const demosVariantsRequiredLocales: {
   [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, string[]>>;
 } = {
@@ -346,5 +310,33 @@ export const demosVariantsRequiredLocales: {
   },
   [AvailableProjects.ComponentStarterKit]: {
     [CommonVariants.Default]: [],
+  },
+};
+
+export const demosVariantsModulesRequire: {
+  [availableProjects in CLI.AvailableProjects]: Partial<
+    Record<CLI.CommonVariants, (props: CLI.AdditionalModulesExecutorProps) => Promise<void> | undefined>
+  >;
+} = {
+  [AvailableProjects.Localization]: {
+    [CommonVariants.Default]: () => undefined,
+  },
+  [AvailableProjects.CommerceStarter]: {
+    [CommonVariants.Default]: () => undefined,
+  },
+  [AvailableProjects.ComponentStarterKit]: {
+    [CommonVariants.Default]: additionalModulesForComponentStarterKit({
+      integrationList: [Integrations.Coveo],
+      packagesList: ['@coveo/headless@2.31.0'],
+    }),
+  },
+  [AvailableProjects.CommerceAlgoliaDemo]: {
+    [CommonVariants.Default]: () => undefined,
+  },
+  [AvailableProjects.CommerceCoveoDemo]: {
+    [CommonVariants.Default]: () => undefined,
+  },
+  [AvailableProjects.CommerceCommercetoolsDemo]: {
+    [CommonVariants.Default]: () => undefined,
   },
 };

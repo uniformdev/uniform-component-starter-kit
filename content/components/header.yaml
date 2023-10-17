@@ -22,15 +22,15 @@ parameters:
       collapsed: true
       childrenParams:
         - theme
-        - font
+        - primaryFont
         - favicon
   - id: theme
     name: Theme
     type: tp-set-up-theme-parameter
     helpText: ''
     typeConfig: null
-  - id: font
-    name: Font
+  - id: primaryFont
+    name: Primary Font
     type: select
     helpText: ''
     typeConfig:
@@ -55,13 +55,35 @@ parameters:
           value: antonio
         - text: Maven Pro
           value: maven_pro
+        - text: Lexend Giga
+          value: lexend_giga
+        - text: Metrophobic
+          value: metrophobic
   - id: favicon
     name: Favicon
     type: image
     helpText: ''
     typeConfig: null
+  - id: syntheticGap
+    name: Synthetic Gap
+    type: tp-slider-parameter
+    helpText: Manage spacing between components on the page
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: None
+        - label: Small
+          value: Small
+        - label: Medium
+          value: Medium
+        - label: Large
+          value: Large
+      maxValue: 10
+      minValue: 0
 categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Header_preview_image
 useTeamPermissions: true
@@ -85,7 +107,7 @@ slots:
 titleParameter: linksAlignment
 canBeComposition: false
 created: '2023-08-28T12:30:18.569126+00:00'
-updated: '2023-08-29T08:19:38.827482+00:00'
+updated: '2023-09-12T06:54:30.210971+00:00'
 variants:
   - id: light
     name: Light

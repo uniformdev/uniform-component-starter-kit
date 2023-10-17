@@ -33,7 +33,7 @@ export const Default: Story = {
     );
     return (
       <UniformComposition data={fakeComposition}>
-        <Divider {...args} />,
+        <Divider {...args} />
       </UniformComposition>
     );
   },

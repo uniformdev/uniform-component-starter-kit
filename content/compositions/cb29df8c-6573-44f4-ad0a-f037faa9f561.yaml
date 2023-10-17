@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: da2629b8-d924-4e4a-a027-cb3dcea7a180
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,9 +28,21 @@ composition:
           title:
             type: text
             value: Testimonials component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: c0fccd1b-a581-4178-99a8-0c05ae7481dd
         type: breadcrumbs
         parameters:
@@ -297,6 +309,6 @@ composition:
           columnsCount:
             type: tp-slider-parameter
             value: '2'
-created: '2023-08-21T11:07:43.323023+00:00'
-modified: '2023-08-22T11:07:04.270494+00:00'
+created: '2023-09-21T21:17:21.350796+00:00'
+modified: '2023-10-03T08:32:23.729228+00:00'
 pattern: false

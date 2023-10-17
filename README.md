@@ -18,7 +18,7 @@ Built with love by Uniform folks, standing on the shoulders of TailwindCSS, Dais
 1. In your terminal, from the project root, run the following command and follow the instructions:
 
    ```bash
-   npm install && npm run cli
+   npm run cli
    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -56,3 +56,10 @@ This integration brings Canvas UI extensions for theme management and new useful
    > Here you can also manage your header and footer content - logo and navigation links.
 
 Important: in order to apply theme changes, you must re-publish the "Main Header" pattern after every time you change the `theme` on the integration settings page.
+
+### Additional examples
+
+This package contains an additional set of examples based on the Component Starter Kit components:
+
+1. Coveo Search Page
+1. Algolia Search Page (soon...)

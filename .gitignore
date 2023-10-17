@@ -15,6 +15,7 @@ npm-debug.log*
 .env.development.local
 .env.test.local
 .env.production.local
+!/cli-run/.env
 
 #idea
 .idea

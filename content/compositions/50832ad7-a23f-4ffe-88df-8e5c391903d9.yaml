@@ -22,7 +22,7 @@ composition:
     pageContent:
       - _id: ef42e7ca-93f5-45c0-82b2-03d32dc99fc5
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -31,6 +31,9 @@ composition:
           title:
             type: text
             value: Breadcrumb component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -42,6 +45,15 @@ composition:
           eyebrowText:
             type: text
             value: ...
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: f3774ba0-0a24-437e-a477-4f3ed93313e2
         type: callToAction
         variant: alignLeft
@@ -188,6 +200,6 @@ composition:
           displayRootNode:
             type: checkbox
             value: true
-created: '2023-08-08T13:08:40.668906+00:00'
-modified: '2023-08-08T13:08:40.668906+00:00'
+created: '2023-09-21T21:17:20.213654+00:00'
+modified: '2023-10-03T08:32:22.955502+00:00'
 pattern: false

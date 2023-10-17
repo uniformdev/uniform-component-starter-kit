@@ -1,6 +1,12 @@
+import fs from 'fs';
+import path from 'path';
 import color from 'picocolors';
 import open from 'open';
 import { select, text, intro, confirm } from './promts';
+import { addExamplesCanvasCache, remove } from './utils';
+import { demosRequiredIntegrationsMap, demosVariantsGetEnvsMap } from './mappers';
+import { fixEslint, installPackages } from './commands/run';
+import { CommonVariants } from './constants';
 
 const args = process.argv.slice(2);
 const isDevMode = args.includes('--dev');
@@ -208,17 +214,17 @@ export const getAlgoliaEnvs = async (
 export const getCoveoEnvs = async (
   project: string
 ): Promise<{
-  COVEO_ORGANIZATION_ID: string;
-  COVEO_API_KEY: string;
+  NEXT_PUBLIC_COVEO_ORGANIZATION_ID: string;
+  NEXT_PUBLIC_COVEO_API_KEY: string;
 }> => {
   if (!isDevMode) {
     return {
-      COVEO_ORGANIZATION_ID: process.env.CLI_COVEO_ORGANIZATION_ID || '',
-      COVEO_API_KEY: process.env.CLI_COVEO_API_KEY || '',
+      NEXT_PUBLIC_COVEO_ORGANIZATION_ID: process.env.CLI_COVEO_ORGANIZATION_ID || '',
+      NEXT_PUBLIC_COVEO_API_KEY: process.env.CLI_COVEO_API_KEY || '',
     };
   }
 
-  const COVEO_ORGANIZATION_ID = (
+  const NEXT_PUBLIC_COVEO_ORGANIZATION_ID = (
     await text({
       message: `Your ${project} coveo organization id:`,
       validate,
@@ -226,7 +232,7 @@ export const getCoveoEnvs = async (
     })
   ).toString();
 
-  const COVEO_API_KEY = (
+  const NEXT_PUBLIC_COVEO_API_KEY = (
     await text({
       message: `Your ${project} coveo api key:`,
       validate,
@@ -234,7 +240,7 @@ export const getCoveoEnvs = async (
     })
   ).toString();
 
-  return { COVEO_ORGANIZATION_ID, COVEO_API_KEY };
+  return { NEXT_PUBLIC_COVEO_ORGANIZATION_ID, NEXT_PUBLIC_COVEO_API_KEY };
 };
 
 export const getCommercetoolsEnvs = async (
@@ -420,3 +426,63 @@ export const getGoogleAnalyticsEnvs = async (
 
   return { NEXT_PUBLIC_GOOGLE_ANALYTICS_ID };
 };
+
+export const additionalModulesForComponentStarterKit =
+  ({ integrationList, packagesList }: { integrationList: CLI.Integration[]; packagesList: string[] }) =>
+  async ({
+    progressSpinner,
+    project,
+    variant = CommonVariants.Default,
+    projectPath,
+  }: CLI.AdditionalModulesExecutorProps) => {
+    const pathToModules = path.resolve(projectPath, 'src', 'modules');
+    const pathToAdditionalCache = path.resolve(projectPath, 'content', 'examples');
+    if (!fs.existsSync(pathToModules) || !fs.existsSync(pathToAdditionalCache)) return;
+
+    const isRunAddingModules = await confirm({
+      message: `Do you want to add additional Examples (Coveo Search)?`,
+    });
+
+    if (!isRunAddingModules) {
+      await remove(pathToModules);
+      await remove(pathToAdditionalCache);
+      return;
+    }
+
+    if (packagesList.length) {
+      progressSpinner.start(`Installing additional packages`);
+      await installPackages(projectPath, packagesList);
+      progressSpinner.stop(`Finished installing additional packages`);
+    }
+
+    progressSpinner.start(`Adding additional canvas cache`);
+    await addExamplesCanvasCache(projectPath);
+    progressSpinner.stop(`Finished adding additional canvas cache`);
+
+    progressSpinner.start(`Adding additional integration`);
+    demosRequiredIntegrationsMap[project][variant]?.push(...integrationList);
+    progressSpinner.stop(`Finished adding additional integration`);
+
+    progressSpinner.start(`Adding additional environment variables`);
+    demosVariantsGetEnvsMap[project][variant] = getCoveoEnvs;
+    progressSpinner.stop(`Finished adding additional environment variables`);
+
+    progressSpinner.start(`Cleaning up module files`);
+    const listOfCoveoFiles = await fs.promises.readdir(path.resolve(projectPath, 'src', 'modules', 'coveo'));
+    await Promise.all(
+      listOfCoveoFiles.map(async fileName => {
+        const pathToCoveoFile = path.resolve(projectPath, 'src', 'modules', 'coveo', fileName);
+        const coveoFile = await fs.promises.readFile(pathToCoveoFile, 'utf-8');
+        await fs.promises.writeFile(
+          pathToCoveoFile,
+          coveoFile
+            .replaceAll('/* eslint-disable @typescript-eslint/ban-ts-comment */', '')
+            .replaceAll(/\/\/ @ts-ignore:.+\n/g, '')
+        );
+      })
+    );
+    await fixEslint(projectPath);
+    progressSpinner.stop(`Finished cleaning up module files`);
+
+    return;
+  };

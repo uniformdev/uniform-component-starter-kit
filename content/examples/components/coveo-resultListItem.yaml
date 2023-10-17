@@ -1,0 +1,158 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: coveo-resultListItem
+name: Result List Item
+icon: shape-square
+parameters:
+  - id: group_cta
+    name: CTA
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - buttonLink
+        - buttonStyle
+        - buttonCopy
+  - id: buttonLink
+    name: Button Link
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+  - id: buttonStyle
+    name: Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: buttonCopy
+    name: Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: group_badge
+    name: Badge
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - badgeSize
+        - badgeStyle
+  - id: badgeSize
+    name: Badge Size
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Large
+          value: lg
+        - text: Medium
+          value: md
+        - text: Small
+          value: sm
+        - text: Extra small
+          value: xs
+  - id: badgeStyle
+    name: Badge Style
+    type: tp-badge-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_description
+    name: Description
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - lineCountRestriction
+  - id: lineCountRestriction
+    name: Line Count Restriction
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: None
+        - label: '1'
+          value: '1'
+        - label: '2'
+          value: '2'
+        - label: '3'
+          value: '3'
+        - label: '4'
+          value: '4'
+        - label: '5'
+          value: '5'
+        - label: '6'
+          value: '6'
+      maxValue: 10
+      minValue: 0
+  - id: group_imageSettings
+    name: Image Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - overlayColor
+        - overlayOpacity
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColorVariant
+  - id: textColorVariant
+    name: Text Color Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Dark
+          value: Dark
+        - text: Light
+          value: Light
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-09-22T09:38:17.450708+00:00'
+updated: '2023-09-22T09:38:17.450708+00:00'
+variants:
+  - id: backgroundImage
+    name: Background Image

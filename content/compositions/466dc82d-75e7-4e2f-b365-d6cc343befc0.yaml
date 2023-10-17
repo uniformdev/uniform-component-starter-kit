@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 30aade7d-8148-4c88-855c-ac599e650a1c
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,6 +28,9 @@ composition:
           title:
             type: text
             value: Layouts & Containers
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -37,6 +40,15 @@ composition:
               Collection of non-functional container components. Simple
               container with controlled padding, Grid Container and Flex
               Container for more advanced layout control.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: 322d533c-8bf0-41a2-83ad-2fd0d353bbd7
         type: breadcrumbs
         parameters:
@@ -135,15 +147,15 @@ composition:
                     demo.
                 title:
                   type: text
-                  value: 'Fluent content variant '
+                  value: 'Fluid content variant '
                 titleStyle:
                   type: tp-title-style-parameter
                   value: h1
-        variant: fluentContent
+        variant: fluidContent
         parameters:
           title:
             type: text
-            value: 'Fluent content variant '
+            value: 'Fluid content variant '
           marginTop:
             type: select
             value: Small
@@ -881,6 +893,6 @@ composition:
           backgroundType:
             type: tp-background-type-parameter
             value: Light
-created: '2023-08-08T13:08:39.990641+00:00'
-modified: '2023-08-08T13:08:39.990641+00:00'
+created: '2023-09-21T21:17:19.684725+00:00'
+modified: '2023-10-03T08:32:23.283747+00:00'
 pattern: false

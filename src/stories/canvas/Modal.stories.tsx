@@ -47,7 +47,7 @@ const renderStory = (args: ModalProps) => {
     content: [
       {
         type: 'hero',
-        variant: HeroVariant.BackgroundDarkImage,
+        variant: HeroVariant.BackgroundImage,
         parameters: createUniformParameter(HERO_PROPS),
       },
     ],

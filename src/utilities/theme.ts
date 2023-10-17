@@ -314,24 +314,18 @@ const convertToHsl = (input: Input) => {
   return input;
 };
 
-const defaultThemeNames = ['uniform', 'javadrip'];
-
 export const generateCustomTheme = (themeName?: string, compositionColors?: Types.ThemeColors[]) => {
   if (!compositionColors || !themeName) return '';
   const colors = compositionColors.reduce<Input>((acc, color) => ({ ...acc, [color.name]: color.value }), {} as Input);
 
   const hls = convertToHsl(colors);
 
-  const generatedTheme = !defaultThemeNames.includes(themeName)
-    ? `<style>
+  return `<style>
    [data-theme=${themeName}] {
     ${Object.entries(hls).reduce((acc, [key, value]) => {
       acc += `${key}: ${value};\n\r`;
       return acc;
     }, '')}
    }
-  </style>`
-    : '';
-
-  return generatedTheme;
+  </style>`;
 };

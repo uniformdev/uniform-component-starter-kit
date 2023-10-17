@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Hero, HeroProps, HeroVariant } from '@/canvas';
+import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
 import { createFakeCompositionData } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 
@@ -12,7 +13,7 @@ const meta: Meta<typeof Hero> = {
 export default meta;
 type Story = StoryObj<typeof Hero>;
 
-const BASE_PROPS: Omit<HeroProps, 'component'> = {
+const BASE_PROPS: Omit<HeroProps, 'component' | 'children'> = {
   eyebrowText: 'Hero',
   title: 'Are developers stuck with outdated tech and custom code to maintain?',
   titleStyle: 'h2',
@@ -30,6 +31,17 @@ const BASE_PROPS: Omit<HeroProps, 'component'> = {
     path: '/',
   },
   secondaryButtonStyle: 'link',
+  fullHeight: false,
+  animationType: 'flyIn',
+  animationOrder: 'oneByOne',
+  duration: 'slow',
+  marginTop: PaddingSize.Medium,
+  marginBottom: PaddingSize.Medium,
+  backgroundType: BackgroundTypes.Light,
+  containerVariant: '',
+  paddingTop: PaddingSize.Medium,
+  paddingBottom: PaddingSize.Medium,
+  textColorVariant: 'Light',
 };
 
 const argTypes = {
@@ -77,24 +89,24 @@ export const ImageRight: Story = {
   render: renderStory,
 };
 
-export const BackgroundDarkImage: Story = {
+export const BackgroundImage: Story = {
   args: {
     ...BASE_PROPS,
     component: {
       type: 'hero',
-      variant: HeroVariant.BackgroundDarkImage,
+      variant: HeroVariant.BackgroundImage,
     },
   },
   argTypes,
   render: renderStory,
 };
 
-export const BackgroundLightImage: Story = {
+export const TwoColumns: Story = {
   args: {
     ...BASE_PROPS,
     component: {
       type: 'hero',
-      variant: HeroVariant.BackgroundLightImage,
+      variant: HeroVariant.TwoColumns,
     },
   },
   argTypes,

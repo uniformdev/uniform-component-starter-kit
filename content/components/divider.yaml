@@ -21,11 +21,10 @@ parameters:
       maxValue: 10
       minValue: 1
 categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Divider_preview_image
 useTeamPermissions: true
 slots: []
 canBeComposition: false
 created: '2023-08-28T12:30:17.952986+00:00'
-updated: '2023-08-28T12:30:17.952986+00:00'
+updated: '2023-09-12T06:54:30.646175+00:00'

@@ -125,7 +125,6 @@ parameters:
         - text: player
           value: player
 categoryId: 31fcffb0-aead-4256-8e49-4d50cc28aa29
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/page_preview_image
 useTeamPermissions: true
@@ -168,6 +167,8 @@ slots:
       - modal
       - button
       - testimonial
+      - productGallery
+      - productInfo
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
@@ -190,7 +191,7 @@ defaults:
         _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
     pageContent:
       - type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -199,6 +200,12 @@ defaults:
           title:
             type: text
             value: Page Title
+          textColorVariant:
+            type: select
+            value: Light
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -208,6 +215,12 @@ defaults:
           eyebrowText:
             type: text
             value: eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
       - type: breadcrumbs
         parameters:
           separator:
@@ -222,4 +235,4 @@ defaults:
 titleParameter: pageTitle
 canBeComposition: true
 created: '2023-08-28T12:30:19.861272+00:00'
-updated: '2023-08-28T12:30:19.861272+00:00'
+updated: '2023-09-26T08:38:53.861436+00:00'

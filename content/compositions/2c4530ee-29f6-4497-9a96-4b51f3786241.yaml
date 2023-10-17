@@ -1,0 +1,395 @@
+composition:
+  _name: Product Gallery
+  _id: 2c4530ee-29f6-4497-9a96-4b51f3786241
+  _slug: product-gallery
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Product Gallery component
+  slots:
+    pageFooter:
+      - _id: 63e1fc78-77a2-49f7-967c-5b31841612e7
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 2e650f79-08eb-459e-a5b9-d844ae1823b9
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 71c567f9-bfa9-45d4-981e-846b38dbe7db
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Product Gallery component
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              The Product Gallery component is designed to display product
+              images in a gallery view 
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
+      - _id: 8afcdbe8-bdc6-402a-8de6-2469540d3a93
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: ab51159d-9cf3-4adc-85cd-09fc625f66be
+        type: productGallery
+        slots:
+          images:
+            - _id: 20ad7461-34e8-4a9e-b347-69fbf5d41400
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_1.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 0a0c3b4c-81cd-47c2-9106-a2227161cecd
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_2.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 37baf0fc-2323-47b5-b983-8ac600221554
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_3.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: ee483f56-4a8f-47de-a951-c5122924c339
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_4.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 2440fd8c-35e8-4950-b809-9198b55f4e2b
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_5.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Product Gallery
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h4
+          description:
+            type: text
+            value: 'Product Gallery without animation '
+          paddingBottom:
+            type: select
+            value: Medium
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Dark
+      - _id: db482920-e4c1-4018-b2d0-86f3528d91e8
+        type: productGallery
+        slots:
+          images:
+            - _id: dff6b11c-dd8e-4933-8311-fcddd635bb81
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_1.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 295f8813-0838-496a-b63f-712b756fa4dc
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_2.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: f0f468e9-f4b9-4eb8-a151-932f82a59597
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_3.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 71ca05dc-bcd7-4835-82a4-86fbf705e47a
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_4.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: fc21e811-e539-4ef9-a395-28f6bd21893e
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_5.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Product Gallery
+          duration:
+            type: select
+            value: slow
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h4
+          description:
+            type: text
+            value: 'Product Gallery with static animation '
+          animationType:
+            type: select
+            value: fadeIn
+          paddingBottom:
+            type: select
+            value: Medium
+          animationOrder:
+            type: select
+            value: oneByOne
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Light
+      - _id: 42e0053a-06ef-482d-9dd5-8e73a948069c
+        type: productGallery
+        slots:
+          images:
+            - _id: 4b1cdfb8-4056-4033-adb8-061114a08eaa
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_1.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: acabc783-d7e4-4365-bb7c-aa7a9e3cf2cf
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_2.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 1b0f0f8a-1aed-478f-8c08-a8c8385f8209
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_3.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 49bdb830-4346-4b51-96df-b4c921587332
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_4.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+            - _id: 5fcd2eb8-f76e-4577-9dcb-3ecb1b265f5d
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: image
+                  value: >-
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1693309094/products/EspressoGPT_image_5.jpg
+                width:
+                  type: number
+                  value: '10000'
+                height:
+                  type: number
+                  value: '10000'
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Product Gallery
+          duration:
+            type: select
+            value: slow
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h4
+          description:
+            type: text
+            value: 'Product Gallery with dynamic animation '
+          animationType:
+            type: select
+            value: flyIn
+          paddingBottom:
+            type: select
+            value: Medium
+          animationOrder:
+            type: select
+            value: oneByOne
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Dark
+created: '2023-09-21T21:17:21.376351+00:00'
+modified: '2023-10-03T08:32:24.585661+00:00'
+pattern: false

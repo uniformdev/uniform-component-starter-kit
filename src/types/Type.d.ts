@@ -10,7 +10,13 @@ declare namespace Types {
 
   type CloudinaryImage = {
     url: string;
+    src?: string;
   }[];
+
+  type UniformImage = {
+    id: string;
+    url: string;
+  };
 
   type ButtonStyles = 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
 
@@ -23,6 +29,16 @@ declare namespace Types {
   type AvailableBannerPosition = 'top' | 'center' | 'bottom';
 
   type AvailableObjectFit = 'contain' | 'cover' | 'fill' | 'none';
+
+  type AvailableTextColorVariant = 'Dark' | 'Light';
+
+  type AnimationType = 'fadeIn' | 'flyIn';
+
+  type AnimationOrder = 'oneByOne' | 'allAtOnce';
+
+  type DurationType = 'slow' | 'medium' | 'fast';
+
+  type AnimationDelay = 'none' | 'short' | 'medium' | 'long';
 
   type AvailableMaxLineCount = '1' | '2' | '3' | '4' | '5' | '6' | 'none';
 
@@ -40,10 +56,6 @@ declare namespace Types {
 
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
-  type VerticalAlignment = 'top' | 'center' | 'bottom';
-
-  type ItemsOrder = 'first' | 'last';
-
   type HorizontalAlignment = 'left' | 'center' | 'right';
 
   type SupportedThemes = 'uniform' | 'javadrip' | 'custom';
@@ -51,12 +63,6 @@ declare namespace Types {
   type ThemeColors = {
     value: string;
     name: string;
-  };
-
-  type GetCompositionRouteResponse<T> = {
-    compositionApiResponse: {
-      composition: T;
-    };
   };
 
   type SupportedFonts =
@@ -69,5 +75,12 @@ declare namespace Types {
     | 'advent_pro'
     | 'asap'
     | 'antonio'
-    | 'maven_pro';
+    | 'maven_pro'
+    | 'lexend_giga'
+    | 'metrophobic';
+
+  type ThemeValue = {
+    themeName: Types.SupportedThemes;
+    colors: Types.ThemeColors[];
+  };
 }

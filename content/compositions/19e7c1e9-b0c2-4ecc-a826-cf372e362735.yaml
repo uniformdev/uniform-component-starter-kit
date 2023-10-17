@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: b923c09f-c005-4add-81d7-3dbf760c394b
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,12 +28,24 @@ composition:
           title:
             type: text
             value: Carousel component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
           description:
             type: text
             value: "A Carousel component is versatile since\_it can render any child component, allowing for interactive content display in a confined space."
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: 0cdff197-2f93-4103-bba2-9486991817af
         type: breadcrumbs
         parameters:
@@ -82,6 +94,9 @@ composition:
                       title:
                         type: text
                         value: Increased Visibility and Engagement
+                      paddingTop:
+                        type: select
+                        value: None
                       titleStyle:
                         type: tp-title-style-parameter
                         value: h3
@@ -93,6 +108,15 @@ composition:
                           ensuring that your audience can easily view and engage
                           with a variety of content without overwhelming the
                           user interface.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+                      textColorVariant:
+                        type: select
+                        value: Dark
                   - _id: 34f96294-8014-4925-b66a-607e42e46825
                     type: hero
                     variant: imageLeft
@@ -104,6 +128,9 @@ composition:
                       title:
                         type: text
                         value: Enhanced User Interaction
+                      paddingTop:
+                        type: select
+                        value: None
                       titleStyle:
                         type: tp-title-style-parameter
                         value: h3
@@ -115,6 +142,15 @@ composition:
                           Carousel, giving them control over the displayed
                           content and creating an engaging and interactive
                           experience.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+                      textColorVariant:
+                        type: select
+                        value: Dark
                   - _id: 99423823-71f3-4061-b342-99a3fcb12fcc
                     type: hero
                     variant: imageLeft
@@ -126,6 +162,9 @@ composition:
                       title:
                         type: text
                         value: Optimal Space Utilization
+                      paddingTop:
+                        type: select
+                        value: None
                       titleStyle:
                         type: tp-title-style-parameter
                         value: h3
@@ -138,6 +177,15 @@ composition:
                           available screen real estate, allowing you to display
                           a diverse range of content without cluttering the
                           interface.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+                      textColorVariant:
+                        type: select
+                        value: Dark
         parameters:
           title:
             type: text
@@ -376,6 +424,6 @@ composition:
                         type: number
                         value: '2000'
               variant: imageGallery
-created: '2023-08-08T13:08:39.35086+00:00'
-modified: '2023-08-08T13:08:39.35086+00:00'
+created: '2023-09-21T21:17:19.623743+00:00'
+modified: '2023-10-03T08:32:22.886871+00:00'
 pattern: false

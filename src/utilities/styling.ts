@@ -15,6 +15,45 @@ export const getButtonClass = (style?: Types.ButtonStyles) => {
   }
 };
 
+const getDynamicAnimationClass = (style?: Types.ButtonStyles) => {
+  const animationBaseClass = `border-none transition-all duration-[0.3s] relative before:content-[''] before:absolute before:w-full before:h-full before:z-[1] before:opacity-0 before:transition-all before:duration-[0.3s] before:border-t before:border-b before:scale-x-[0.1] before:scale-y-100 before:left-0 before:bottom-0 hover:before:opacity-100 hover:before:scale-100 after:content-[''] after:absolute after:w-full after:h-full after:z-[1] after:transition-all after:duration-[0.3s] after:left-0 after:bottom-0 hover:after:opacity-0 hover:after:scale-x-[0.1] hover:after:scale-y-100`;
+  switch (style) {
+    case 'primary':
+      return `btn-primary ${animationBaseClass} before:border-y-primary hover:text-primary hover:bg-primary-content`;
+    case 'secondary':
+      return `btn-secondary ${animationBaseClass} before:border-y-secondary hover:text-secondary hover:bg-transparent`;
+    case 'accent':
+      return `btn-accent ${animationBaseClass} before:border-y-accent hover:text-accent hover:bg-transparent`;
+    case 'ghost':
+      return `btn-ghost ${animationBaseClass} before:border-y-ghost hover:text-ghost hover:bg-transparent`;
+    case 'link':
+      return `btn-link ${animationBaseClass} before:border-y-primary`;
+    default:
+      return `btn-primary ${animationBaseClass} before:border-y-primary hover:text-primary hover:bg-primary-content`;
+  }
+};
+
+const getStaticAnimationClass = (style?: Types.ButtonStyles) => {
+  switch (style) {
+    case 'primary':
+      return 'btn-primary hover:text-primary hover:bg-transparent';
+    case 'secondary':
+      return 'btn-secondary hover:text-secondary hover:bg-transparent';
+    case 'accent':
+      return 'btn-accent hover:text-accent hover:bg-transparent hover:border-accent';
+    case 'ghost':
+      return 'btn-ghost hover:text-ghost hover:bg-transparent hover:border-ghost';
+    case 'link':
+      return 'btn-link hover:border-transparent';
+    default:
+      return 'btn-primary hover:text-primary hover:transparent';
+  }
+};
+
+export const getButtonAnimationClass = (style: Types.ButtonStyles, animationType: Types.AnimationType) => {
+  return animationType === 'flyIn' ? getDynamicAnimationClass(style) : getStaticAnimationClass(style);
+};
+
 export const getTextClass = (style?: Types.HeadingStyles) => {
   switch (style) {
     case 'h1':
@@ -197,6 +236,21 @@ export const getMarginBottomClass = (padding?: PaddingSize) => {
       return 'mb-10 lg:mb-20';
     case PaddingSize.Small:
       return 'mb-6 lg:mb-8';
+    case PaddingSize.None:
+      return '';
+    default:
+      return '';
+  }
+};
+
+export const getGapClass = (padding?: PaddingSize) => {
+  switch (padding) {
+    case PaddingSize.Large:
+      return 'gap-16 md:gap-28';
+    case PaddingSize.Medium:
+      return 'gap-10 lg:gap-20';
+    case PaddingSize.Small:
+      return 'gap-6 lg:gap-8';
     case PaddingSize.None:
       return '';
     default:

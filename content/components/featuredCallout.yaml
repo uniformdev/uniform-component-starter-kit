@@ -35,7 +35,6 @@ parameters:
     helpText: ''
     typeConfig: null
 categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Featured_callout_preview_image
 useTeamPermissions: true
@@ -50,7 +49,7 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:18.21042+00:00'
-updated: '2023-08-28T12:30:18.21042+00:00'
+updated: '2023-09-12T06:54:30.60695+00:00'
 variants:
   - id: imageRight
     name: Image Right

@@ -3,16 +3,18 @@ import 'dotenv/config';
 import clear from 'clear';
 import color from 'picocolors';
 import path from 'path';
-import { confirm, spinner, cancel, note } from './promts';
+import { confirm, spinner, cancel, note, select } from './promts';
 import {
   demosRequiredIntegrationsMap,
   demosVariantsGetEnvsMap,
+  demosVariantsModulesRequire,
   demosVariantsRequiredLocales,
   notMeshIntegrations,
 } from './mappers';
 import {
   buildDemo,
   fillEnvFiles,
+  fixEslint,
   getExistDemoPath,
   installDependencies,
   isMetaDataExist,
@@ -24,7 +26,8 @@ import {
 } from './commands/run';
 import { getProjectLocation, getUniformEnvs, showDemoHeader, getUniformAccessTokenEnvs } from './informationCollector';
 import { setupUniformProject } from './commands/setupUniform';
-import { CommonVariants } from './constants';
+import { AppModes, CommonVariants } from './constants';
+import { scanPageDirectory, switchModeInPageDirectory } from './utils';
 
 const progressSpinner = spinner();
 
@@ -162,7 +165,7 @@ const runRunDemoJourney = async (
       progressSpinner
     );
 
-    if (!uniformProjectId) {
+    if (!uniformProjectId || !uniformApiKey) {
       return;
     }
     await processEnvFile({ ...uniformCredentials, uniformProjectId, uniformApiKey }, project, projectPath, variant);
@@ -176,14 +179,47 @@ const runRunDemoJourney = async (
     }`,
   });
 
-  if (shouldRunPush) {
-    await runResetCanvasJourney(project, projectPath);
-  }
+  if (shouldRunPush) await runResetCanvasJourney(project, projectPath);
 
   progressSpinner.start('Running your demo');
   await buildDemo(projectPath);
   progressSpinner.stop('Demo running check localhost:3000');
   runDemo(projectPath);
+};
+
+const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVariants = CommonVariants.Default) => {
+  const projectPath = path.resolve('../');
+  const isSSGModeAvailable = await scanPageDirectory(projectPath, AppModes.SSG);
+
+  const appMode = isSSGModeAvailable
+    ? (
+        await select({
+          message: 'Which rendering mode do you prefer?',
+          options: [
+            { value: 'ssr', label: 'Server-side Rendering \t(SSR)' },
+            { value: 'ssg', label: 'Static Site Generation \t(SSG)' },
+          ],
+          initialValue: AppModes.SSR,
+        })
+      ).toString()
+    : AppModes.SSR;
+
+  await switchModeInPageDirectory(projectPath, appMode as AppModes);
+
+  const projectVariantsModulesRequire = demosVariantsModulesRequire[project];
+  const installModules = projectVariantsModulesRequire?.[variant];
+  await installModules?.({
+    progressSpinner,
+    project,
+    variant,
+    projectPath,
+  });
+
+  if (!Boolean(installModules)) {
+    progressSpinner.start(`Cleaning up`);
+    await fixEslint(projectPath);
+    progressSpinner.stop(`Finished cleaning up`);
+  }
 };
 
 (async () => {
@@ -197,6 +233,8 @@ const runRunDemoJourney = async (
   const { project, variant } = await parseMetadata();
 
   showDemoHeader(project, variant);
+
+  await preSetDemo(project, variant);
 
   await runRunDemoJourney(project, variant);
 })();

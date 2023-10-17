@@ -61,7 +61,7 @@ export const Default: Story = {
     return (
       <ComponentStarterKitContextProvider {...{ breadcrumbs: BREADCRUMBS }}>
         <UniformComposition data={fakeComposition}>
-          <Breadcrumbs {...args} />,
+          <Breadcrumbs {...args} />
         </UniformComposition>
       </ComponentStarterKitContextProvider>
     );

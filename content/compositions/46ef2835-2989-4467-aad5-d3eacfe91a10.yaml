@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 437cc38e-a638-46e2-a34d-957da592930e
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,6 +28,9 @@ composition:
           title:
             type: text
             value: 'Modal: A Versatile and Interactive component'
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -42,6 +45,15 @@ composition:
           eyebrowText:
             type: text
             value: eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: a2f369a2-9640-4102-b948-cdeb3a1a2a0a
         type: breadcrumbs
         parameters:
@@ -155,6 +167,9 @@ composition:
                 title:
                   type: text
                   value: Special Offer Inside
+                paddingTop:
+                  type: select
+                  value: None
                 titleStyle:
                   type: tp-title-style-parameter
                   value: h1
@@ -170,6 +185,15 @@ composition:
                 eyebrowText:
                   type: text
                   value: Exciting News!
+                paddingBottom:
+                  type: select
+                  value: None
+                containerVariant:
+                  type: select
+                  value: fluidContent
+                textColorVariant:
+                  type: select
+                  value: Dark
           trigger:
             - _id: 9e8a67c7-7ff2-4ae0-98a2-4bb62f019906
               type: button
@@ -214,6 +238,9 @@ composition:
                 title:
                   type: text
                   value: Automatically triggered
+                paddingTop:
+                  type: select
+                  value: None
                 titleStyle:
                   type: tp-title-style-parameter
                   value: h1
@@ -229,6 +256,15 @@ composition:
                 eyebrowText:
                   type: text
                   value: Exciting News!
+                paddingBottom:
+                  type: select
+                  value: None
+                containerVariant:
+                  type: select
+                  value: fluidContent
+                textColorVariant:
+                  type: select
+                  value: Dark
         parameters:
           maxWidth:
             type: tp-slider-parameter
@@ -239,6 +275,6 @@ composition:
           automaticOpenTimeout:
             type: number
             value: '5'
-created: '2023-08-18T09:11:33.017803+00:00'
-modified: '2023-08-21T10:10:52.958965+00:00'
+created: '2023-09-21T21:17:19.484727+00:00'
+modified: '2023-10-03T08:32:22.947204+00:00'
 pattern: false

@@ -22,7 +22,7 @@ composition:
     pageContent:
       - _id: 485e7c34-89a0-4e6a-8d62-aa1a9ece02bf
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -31,6 +31,9 @@ composition:
           title:
             type: text
             value: Featured Callout component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -40,6 +43,15 @@ composition:
               A composite component allows to add any number of features as
               child components into the Feature slot. Contains optional image,
               title and description parameters.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: f26bf1e8-a6de-414a-98e2-002a8f550522
         type: breadcrumbs
         parameters:
@@ -180,6 +192,6 @@ composition:
           description:
             type: text
             value: Some compelling description
-created: '2023-08-08T13:08:39.543879+00:00'
-modified: '2023-08-08T13:08:39.543879+00:00'
+created: '2023-09-21T21:17:19.601045+00:00'
+modified: '2023-10-03T08:32:22.406111+00:00'
 pattern: false

@@ -55,7 +55,7 @@ export const Default: Story = {
     );
     return (
       <UniformComposition data={fakeComposition}>
-        <Accordion {...args} />,
+        <Accordion {...args} />
       </UniformComposition>
     );
   },

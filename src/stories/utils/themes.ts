@@ -53,44 +53,49 @@ const javaDripTheme = {
   value: {
     colors: [
       {
-        name: 'primary',
         label: 'Primary',
-        value: '#55493b',
+        name: 'primary',
+        value: '#000000',
       },
       {
-        name: 'primary-content',
         label: 'Primary Content',
+        name: 'primary-content',
         value: '#FFFFFF',
       },
       {
-        name: 'secondary',
         label: 'Secondary',
-        value: '#ffffff',
+        name: 'secondary',
+        value: '#F7DF1E',
       },
       {
-        name: 'secondary-content',
         label: 'Secondary Content',
+        name: 'secondary-content',
         value: '#000000',
       },
       {
-        name: 'accent',
         label: 'Accent',
+        name: 'accent',
         value: '#F8E399',
       },
       {
-        name: 'accent-content',
         label: 'Accent Content',
+        name: 'accent-content',
         value: '#000000',
       },
       {
-        name: 'info-content',
         label: 'Info Content',
+        name: 'info-content',
         value: '#E4E4E4',
       },
       {
-        name: 'base-300',
+        label: 'Base 200',
+        name: 'base-200',
+        value: '#b69066',
+      },
+      {
         label: 'Base 300',
-        value: '#372f26',
+        name: 'base-300',
+        value: '#000000',
       },
     ],
     themeName: 'javadrip',
@@ -107,7 +112,15 @@ export const getTheme = (themeName: 'javadrip' | 'uniform') => ({
   _name: 'dummy_theme_composition',
   type: 'dummy_theme_composition',
   _id: 'ebf7db31-5e01-4874-afb4-d8d668457ba8',
-  parameters: {
-    theme: themes[themeName],
+  slots: {
+    pageHeader: [
+      {
+        _name: 'dummy_slot',
+        type: 'dummy_slot',
+        parameters: {
+          theme: themes[themeName],
+        },
+      },
+    ],
   },
 });

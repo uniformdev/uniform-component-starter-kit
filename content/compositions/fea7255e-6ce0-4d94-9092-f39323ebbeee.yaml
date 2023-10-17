@@ -56,9 +56,25 @@ composition:
                           optimized out of the box so I can use it directly with
                           confidence. It would take me several hours to create a
                           single icon this good, so it's a steal at this price.
+                      textColorVariant:
+                        type: select
+                        value: Dark
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: '5'
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
                   - _id: cbb1f84a-6a7b-4739-8b50-3a5278895ed8
                     type: review
                     variant: multiColumn
@@ -88,9 +104,25 @@ composition:
                       showReviewLabel:
                         type: checkbox
                         value: true
+                      textColorVariant:
+                        type: select
+                        value: Dark
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: '5'
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
                   - _id: b5d1b220-54e6-4002-a0b3-b446ba353dd7
                     type: review
                     variant: multiColumn
@@ -122,9 +154,25 @@ composition:
                           almost every day. Even after a dozen of washes, that
                           still looks and feel good as new. Will definitely
                           order a few more... If I ever need to!
+                      textColorVariant:
+                        type: select
+                        value: Dark
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: '5'
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
               parameters:
                 gapX:
                   type: tp-slider-parameter
@@ -138,6 +186,12 @@ composition:
                 columnsCount:
                   type: tp-slider-parameter
                   value: '1'
+              _overridability:
+                parameters:
+                  gapX: 'yes'
+                  gapY: 'yes'
+                  title: 'yes'
+                  columnsCount: 'yes'
         parameters:
           title:
             type: text
@@ -154,8 +208,21 @@ composition:
           columnStart:
             type: tp-slider-parameter
             value: '2'
-created: '2023-08-28T12:30:23.831885+00:00'
-modified: '2023-08-29T08:15:47.397955+00:00'
+        _overridability:
+          parameters:
+            title: 'yes'
+            rowSpan: 'yes'
+            rowStart: 'yes'
+            columnSpan: 'yes'
+            columnStart: 'yes'
+  _overridability:
+    parameters:
+      gapX: 'yes'
+      gapY: 'yes'
+      title: 'yes'
+      columnsCount: 'yes'
+created: '2023-09-21T21:17:20.882953+00:00'
+modified: '2023-10-03T08:32:24.383865+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Review_multi_pattern_preview_image

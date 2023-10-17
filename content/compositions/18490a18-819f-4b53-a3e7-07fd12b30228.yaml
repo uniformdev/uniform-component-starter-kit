@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 1da0b500-f7d4-4305-ae61-0043c5aad2ec
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,6 +28,9 @@ composition:
           title:
             type: text
             value: Video Player component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -36,6 +39,15 @@ composition:
             value: >-
               Performance-optimized video players that are multi-source capable.
               Get your YouTube, Vimeo, etc. content rendered.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: f7481bc7-7689-48c5-8613-8a6c418834ae
         type: breadcrumbs
         parameters:
@@ -139,6 +151,6 @@ composition:
           lazyLoad:
             type: checkbox
             value: true
-created: '2023-08-08T13:08:39.294+00:00'
-modified: '2023-08-08T13:08:39.294+00:00'
+created: '2023-09-21T21:17:19.51565+00:00'
+modified: '2023-10-03T08:32:22.714639+00:00'
 pattern: false

@@ -139,7 +139,9 @@ export const setupUniformProject = async (
   }
 
   return {
+    uniformTeamId: teamId,
     uniformProjectId: projectId,
     uniformApiKey: writeApiKey,
+    uniformHeaders: headers,
   };
 };

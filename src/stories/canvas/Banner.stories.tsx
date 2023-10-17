@@ -47,7 +47,7 @@ export const Default: Story = {
     const fakeComposition = createFakeCompositionData('banner', args, {});
     return (
       <UniformComposition data={fakeComposition}>
-        <Banner {...args} />,
+        <Banner {...args} />
       </UniformComposition>
     );
   },
@@ -67,7 +67,6 @@ export const FullWidth: Story = {
             variant: BannerVariant.FullWidth,
           }}
         />
-        ,
       </UniformComposition>
     );
   },

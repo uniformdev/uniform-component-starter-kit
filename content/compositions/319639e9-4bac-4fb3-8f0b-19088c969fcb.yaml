@@ -254,8 +254,8 @@ composition:
             value:
               path: https://github.com/uniformdev/uniform-component-starter-kit
               type: url
-created: '2023-08-25T08:44:13.732878+00:00'
-modified: '2023-08-28T11:54:19.908497+00:00'
+created: '2023-08-28T12:30:22.654999+00:00'
+modified: '2023-08-28T14:37:35.003289+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Footer_preview_image

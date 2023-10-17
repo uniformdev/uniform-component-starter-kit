@@ -32,7 +32,6 @@ parameters:
       collapsed: true
       childrenParams:
         - description
-        - maxLineCount
         - lineCountRestriction
   - id: description
     name: Description
@@ -72,9 +71,9 @@ parameters:
     type: group
     typeConfig:
       childrenParams:
-        - badgeStyle
-        - badgeSize
         - badge
+        - badgeSize
+        - badgeStyle
   - id: badge
     name: Badge
     type: text
@@ -104,10 +103,10 @@ parameters:
     type: group
     typeConfig:
       childrenParams:
-        - buttonCopy
         - buttonLink
         - buttonStyle
-        - slug
+        - buttonCopy
+        - buttonAnimationType
   - id: buttonLink
     name: Button Link
     type: link
@@ -123,6 +122,16 @@ parameters:
     type: text
     helpText: ''
     typeConfig: null
+  - id: buttonAnimationType
+    name: Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
   - id: group_imageSettings
     name: Image Settings
     type: group
@@ -163,16 +172,85 @@ parameters:
       options: []
       maxValue: 100
       minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColorVariant
+  - id: textColorVariant
+    name: Text Color Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Dark
+          value: Dark
+        - text: Light
+          value: Light
+  - id: group_animationSettings
+    name: Animation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - animationType
+        - duration
+        - delay
+        - animationPreview
+  - id: animationType
+    name: Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: duration
+    name: Duration
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Slow
+          value: slow
+        - text: Medium
+          value: medium
+        - text: Fast
+          value: fast
+  - id: delay
+    name: Delay
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: None
+          value: none
+        - text: Short (250ms)
+          value: short
+        - text: Medium (500ms)
+          value: medium
+        - text: Long (1000ms)
+          value: long
+  - id: animationPreview
+    name: Animation Preview
+    type: tp-play-animation-parameter
+    helpText: ''
+    typeConfig: null
 categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Card_preview_image
 useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
-created: '2023-08-28T12:30:17.667255+00:00'
-updated: '2023-08-28T12:30:17.667255+00:00'
+created: '2023-08-07T12:33:09.265386+00:00'
+updated: '2023-09-28T05:03:43.97681+00:00'
 variants:
   - id: backgroundImage
     name: Background Image
+  - id: featured
+    name: Featured

@@ -60,9 +60,20 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
+        - textColorVariant
         - starsColor
         - showReviewLabel
         - lineCountRestriction
+  - id: textColorVariant
+    name: Text Color Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Dark
+          value: Dark
+        - text: Light
+          value: Light
   - id: starsColor
     name: Stars Color
     type: tp-color-style-parameter
@@ -99,7 +110,6 @@ parameters:
       maxValue: 10
       minValue: 0
 categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Review_preview_image
 useTeamPermissions: true
@@ -107,7 +117,7 @@ slots: []
 titleParameter: personName
 canBeComposition: false
 created: '2023-08-28T12:30:19.579649+00:00'
-updated: '2023-08-28T12:30:19.579649+00:00'
+updated: '2023-10-02T10:10:09.17414+00:00'
 variants:
   - id: multiColumn
     name: Multi Column

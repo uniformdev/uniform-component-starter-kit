@@ -31,7 +31,6 @@ parameters:
         - text: EUR
           value: EUR
 categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Price_preview_image
 useTeamPermissions: true
@@ -39,4 +38,4 @@ slots: []
 titleParameter: label
 canBeComposition: false
 created: '2023-08-28T12:30:19.832319+00:00'
-updated: '2023-08-28T12:30:19.832319+00:00'
+updated: '2023-09-12T06:54:32.162502+00:00'

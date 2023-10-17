@@ -25,7 +25,7 @@ composition:
     pageContent:
       - _id: 899acb18-ca1c-4c7c-a90c-b02fd0621b5f
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -34,12 +34,24 @@ composition:
           title:
             type: text
             value: Browse all components
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
           description:
             type: text
             value: Browse all the components and variants grouped by type
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: d6d78453-7951-4515-b685-ddcefccdb423
         type: breadcrumbs
         parameters:
@@ -102,6 +114,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 27feb075-2783-48fb-b4ec-3bd527318418
                     type: card
                     variant: backgroundImage
@@ -141,6 +156,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 609f17c7-75aa-473d-8dbf-36c75702a096
                     type: card
                     variant: backgroundImage
@@ -174,6 +192,12 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
                   - _id: 79169748-e906-4aa7-994d-4da64d8181e9
                     type: card
                     variant: backgroundImage
@@ -207,6 +231,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 7b92e0a4-89b7-4a1c-b187-9875c8f343ad
                     type: card
                     variant: backgroundImage
@@ -240,6 +267,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 49452133-e11e-47ea-beb4-c4c15f172a43
                     type: card
                     variant: backgroundImage
@@ -273,6 +303,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 31795c37-a3f4-4a2b-a380-3e4a0c0cf5f8
                     type: card
                     variant: backgroundImage
@@ -309,6 +342,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 299dea7c-f79c-43f7-8d6b-c8c7074a2a08
                     type: card
                     variant: backgroundImage
@@ -344,6 +380,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 8c509d5d-7c9b-4a6a-a317-3c151b75ab2d
                     type: card
                     variant: backgroundImage
@@ -379,6 +418,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 1d58108c-808d-4985-acb9-469f68e0591b
                     type: card
                     variant: backgroundImage
@@ -414,6 +456,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 997bf33b-ab6b-4300-9927-75a3382be817
                     type: card
                     variant: backgroundImage
@@ -445,6 +490,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
@@ -477,6 +525,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: de76b3ca-4a3b-421e-a7d8-2ffa23b20365
                     type: card
                     variant: backgroundImage
@@ -502,6 +553,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: 1e4e6751-2759-4e11-94df-b7052946974b
                     type: card
                     variant: backgroundImage
@@ -537,6 +591,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: f0d4a60c-868a-4f0d-ab4d-34324d5a3d78
                     type: card
                     variant: backgroundImage
@@ -569,6 +626,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                   - _id: bf7118da-cfee-4f06-bd20-d9f6a9a51714
                     type: card
                     variant: backgroundImage
@@ -600,6 +660,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
@@ -635,6 +698,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
@@ -670,6 +736,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
@@ -707,6 +776,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
@@ -744,6 +816,90 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 5d61a21c-24da-4546-802e-9bd0719b3479
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Product Info
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/product-info
+                          type: projectMapNode
+                          nodeId: c6b270b9-bb82-4d6c-a40c-66cd80939c13
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Show the basic product information
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 40066a4c-eef7-4649-a41c-2438f2166b5d
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Product Gallery
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/product-gallery
+                          type: projectMapNode
+                          nodeId: ff09deec-49ab-4dee-8431-e9bf6e9a5d37
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          The Product Gallery component is designed to display
+                          the product images in a gallery view
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
               parameters:
                 gapX:
                   type: tp-slider-parameter
@@ -797,6 +953,9 @@ composition:
                       overlayOpacity:
                         type: tp-slider-parameter
                         value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
               parameters:
                 gapX:
                   type: tp-slider-parameter
@@ -820,6 +979,6 @@ composition:
           description:
             type: text
             value: This is just a glimpse of what's around the corner.
-created: '2023-08-18T09:11:32.778631+00:00'
-modified: '2023-08-28T11:14:49.93611+00:00'
+created: '2023-09-21T21:17:20.035663+00:00'
+modified: '2023-10-03T08:32:23.987123+00:00'
 pattern: false

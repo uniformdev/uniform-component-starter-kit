@@ -13,5 +13,6 @@ module.exports = {
         allowArrowFunction: true,
       },
     ],
+    'react/display-name': 'off',
   },
 };

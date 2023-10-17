@@ -1,0 +1,66 @@
+composition:
+  _name: Coveo Search Engine
+  _id: 1e418671-a585-4924-a25c-7a659a42975e
+  _slug: coveo-search-engine
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Coveo Search Engine
+  slots:
+    pageFooter:
+      - _id: 49e82f7b-9a75-426d-a3df-72ed143398ff
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 02b4ef0e-1e68-447f-9d16-328e7ca8c4d9
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 4a1450e7-0e2a-4a17-b142-15cf425188ce
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: image
+            value: >-
+              https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp
+          title:
+            type: text
+            value: Coveo Search Engine components
+          objectFit:
+            type: select
+            value: cover
+          textColorVariant:
+            type: select
+            value: Light
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 6b1603e1-aa58-4e20-9818-89055ad03ebc
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 4c9ae1b6-6ad1-4ebf-acea-13c1e3dc4cfc
+        type: coveo-searchProvider
+        _pattern: cd8d3791-4aa9-4a85-aa4b-1ab1242d7b07
+created: '2023-09-26T09:05:31.81302+00:00'
+modified: '2023-09-26T09:11:04.448432+00:00'
+pattern: false

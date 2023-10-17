@@ -144,7 +144,6 @@ parameters:
     helpText: When checked, the image will be considered high priority and preload.
     typeConfig: null
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Image_preview_image
 useTeamPermissions: true
@@ -152,4 +151,4 @@ slots: []
 titleParameter: alt
 canBeComposition: false
 created: '2023-08-28T12:30:18.596257+00:00'
-updated: '2023-08-28T12:30:18.596257+00:00'
+updated: '2023-09-12T06:54:31.396728+00:00'

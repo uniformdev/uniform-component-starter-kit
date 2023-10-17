@@ -18,11 +18,10 @@ parameters:
     typeConfig:
       required: false
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
-description: ''
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Icon_link_preview_image
 useTeamPermissions: true
 slots: []
 canBeComposition: false
 created: '2023-08-28T12:30:18.548641+00:00'
-updated: '2023-08-28T12:30:18.548641+00:00'
+updated: '2023-09-12T06:54:31.111919+00:00'

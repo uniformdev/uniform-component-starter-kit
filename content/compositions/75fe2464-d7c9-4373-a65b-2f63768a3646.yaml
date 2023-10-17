@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 22b79c2c-3eee-464d-be2a-a192131f38ff
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,6 +28,9 @@ composition:
           title:
             type: text
             value: Spacers & Dividers
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -39,6 +42,15 @@ composition:
           eyebrowText:
             type: text
             value: ''
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: 4ecbb06f-f63b-4083-bbf1-2e5504968c3e
         type: breadcrumbs
         parameters:
@@ -164,6 +176,6 @@ composition:
           titleStyle:
             type: tp-title-style-parameter
             value: h4
-created: '2023-08-08T13:08:40.015714+00:00'
-modified: '2023-08-08T13:08:40.015714+00:00'
+created: '2023-09-21T21:17:20.338194+00:00'
+modified: '2023-10-03T08:32:23.900209+00:00'
 pattern: false

@@ -1,0 +1,9 @@
+id: 61eb34d5-f2b4-4169-8d29-b316a89487be
+name: Coveo Search Engine
+type: composition
+data: {}
+order: 500
+path: /examples/coveo-search-engine
+compositionId: 1e418671-a585-4924-a25c-7a659a42975e
+pathSegment: coveo-search-engine
+projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

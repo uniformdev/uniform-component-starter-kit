@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { ComponentProps, UniformComposition } from '@uniformdev/canvas-react';
-import { CardBlock, CardBlockProps, CardBlockCarousel, CardBlockVariants } from '@/canvas';
+import { CardBlock, CardBlockProps, CardBlockVariants } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 import { buttonStyleOptions, titleStyleOptions } from '../constants';
 
@@ -20,6 +20,7 @@ const BASE_PROPS: Omit<CardBlockProps, 'component'> = {
     path: '/',
   },
   buttonStyle: 'primary',
+  textColorVariant: 'Dark',
 };
 
 const argTypes = {
@@ -75,7 +76,7 @@ const renderStoryCardBlockCarousel = (args: ComponentProps & Omit<CardBlockProps
   const fakeComposition = createFakeCompositionData('cardBlock', args, { ...args.component.slots });
   return (
     <UniformComposition data={fakeComposition}>
-      <CardBlockCarousel {...args} />
+      <CardBlock {...args} component={{ type: 'cardBlock', variant: CardBlockVariants.Carousel }} />
     </UniformComposition>
   );
 };

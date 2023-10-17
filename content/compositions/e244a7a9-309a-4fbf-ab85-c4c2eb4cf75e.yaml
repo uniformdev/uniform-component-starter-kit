@@ -55,9 +55,25 @@ composition:
                           optimized out of the box so I can use it directly with
                           confidence. It would take me several hours to create a
                           single icon this good, so it's a steal at this price.
+                      textColorVariant:
+                        type: select
+                        value: Dark
                       lineCountRestriction:
                         type: tp-slider-parameter
                         value: none
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
                   - _id: 07d97a02-73cd-4e62-89cf-ceea22e12986
                     type: review
                     parameters:
@@ -83,6 +99,25 @@ composition:
                           This icon pack is just what I need for my latest
                           project. There's an icon for just about anything I
                           could ever need. Love the playful look!
+                      textColorVariant:
+                        type: select
+                        value: Dark
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
                   - _id: 759bd889-07a5-4999-8513-e2f6fb6f9c13
                     type: review
                     parameters:
@@ -116,6 +151,25 @@ composition:
                       showReviewLabel:
                         type: checkbox
                         value: true
+                      textColorVariant:
+                        type: select
+                        value: Dark
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                    _overridability:
+                      variants: true
+                      parameters:
+                        date: 'yes'
+                        stars: 'yes'
+                        title: 'yes'
+                        picture: 'yes'
+                        personName: 'yes'
+                        starsColor: 'yes'
+                        description: 'yes'
+                        showReviewLabel: 'yes'
+                        textColorVariant: 'yes'
+                        lineCountRestriction: 'yes'
               parameters:
                 gapX:
                   type: tp-slider-parameter
@@ -129,6 +183,12 @@ composition:
                 columnsCount:
                   type: tp-slider-parameter
                   value: '1'
+              _overridability:
+                parameters:
+                  gapX: 'yes'
+                  gapY: 'yes'
+                  title: 'yes'
+                  columnsCount: 'yes'
         parameters:
           title:
             type: text
@@ -145,8 +205,21 @@ composition:
           columnStart:
             type: tp-slider-parameter
             value: '2'
-created: '2023-08-28T12:30:23.785518+00:00'
-modified: '2023-08-29T08:15:28.017672+00:00'
+        _overridability:
+          parameters:
+            title: 'yes'
+            rowSpan: 'yes'
+            rowStart: 'yes'
+            columnSpan: 'yes'
+            columnStart: 'yes'
+  _overridability:
+    parameters:
+      gapX: 'yes'
+      gapY: 'yes'
+      title: 'yes'
+      columnsCount: 'yes'
+created: '2023-09-21T21:17:20.967568+00:00'
+modified: '2023-10-03T08:32:24.421063+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-preview-images/UniformTheme/Review_default_pattern_preview_image

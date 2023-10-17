@@ -10,12 +10,18 @@ import {
   Asap,
   Antonio,
   Maven_Pro,
+  Lexend_Giga,
+  Metrophobic,
 } from 'next/font/google';
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 });
+
+const lexend_giga = Lexend_Giga({ subsets: ['latin'] });
+
+export const metrophobic = Metrophobic({ weight: ['400'], subsets: ['latin'], display: 'swap' });
 
 const rubik = Rubik({
   subsets: ['latin'],
@@ -81,4 +87,6 @@ export const appFonts: Record<Types.SupportedFonts, NextFont> = {
   asap,
   antonio,
   maven_pro,
+  lexend_giga,
+  metrophobic,
 };

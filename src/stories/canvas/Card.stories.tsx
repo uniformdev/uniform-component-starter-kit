@@ -31,6 +31,7 @@ const BASE_PROPS: Omit<CardProps, 'component'> = {
   },
   buttonStyle: 'primary',
   lineCountRestriction: 'none',
+  textColorVariant: 'Dark',
 };
 
 const argTypes = {
@@ -57,9 +58,22 @@ export const Default: Story = {
 export const BackgroundImage: Story = {
   args: {
     ...BASE_PROPS,
+    textColorVariant: 'Light',
     component: {
       type: 'card',
       variant: CardVariants.BackgroundImage,
+    },
+  },
+  argTypes,
+  render: renderStory,
+};
+
+export const Featured: Story = {
+  args: {
+    ...BASE_PROPS,
+    component: {
+      type: 'card',
+      variant: CardVariants.Featured,
     },
   },
   argTypes,

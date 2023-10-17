@@ -41,29 +41,6 @@ export const parseEnvFile = async (envFilePath: string) => {
   }, {});
 };
 
-export const checkEnvFile = async (envFilePath: string, requiredVariables: string[]) => {
-  try {
-    const envVars = await parseEnvFile(envFilePath);
-
-    const missingVars = requiredVariables.filter(v => !envVars[v]);
-    return missingVars.length === 0;
-  } catch (err) {
-    return false;
-  }
-};
-
-export const isEnvFileExistAndFilled = async (projectPath: string, additionalRequiredEnvs: string[] = []) => {
-  const isEnvFileExist = fs.existsSync(path.join(projectPath, 'node_modules'));
-
-  const isEnvFileFilled = await checkEnvFile(path.join(projectPath, '.env'), [
-    'UNIFORM_API_KEY',
-    'UNIFORM_PROJECT_ID',
-    ...additionalRequiredEnvs,
-  ]);
-
-  return isEnvFileExist && isEnvFileFilled;
-};
-
 export const fillEnvFiles = async (
   destination: string,
   apiKey: string,
@@ -107,4 +84,12 @@ export const runDemo = (projectPath: string) => {
 
 export const runPush = (projectPath: string) => {
   return execPromise(`cd ${projectPath} && npm run uniform:push && npm run uniform:publish`);
+};
+
+export const installPackages = (projectPath: string, packages: string[]) => {
+  return execPromise(`cd ${projectPath} && npm i ${packages.join(' ')}`);
+};
+
+export const fixEslint = (projectPath: string) => {
+  return execPromise(`cd ${projectPath} && npm run lint:fix`);
 };

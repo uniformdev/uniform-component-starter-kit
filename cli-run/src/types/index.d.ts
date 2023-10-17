@@ -3,6 +3,19 @@ declare namespace CLI {
 
   type AvailableProjects = import('../constants').AvailableProjects;
 
+  type Spinner = {
+    start: (msg?: string | undefined) => void;
+    stop: (msg?: string | undefined, code?: number | undefined) => void;
+    message: (msg?: string | undefined) => void;
+  };
+
+  type AdditionalModulesExecutorProps = {
+    progressSpinner: CLI.Spinner;
+    project: CLI.AvailableProjects;
+    variant: CLI.CommonVariants;
+    projectPath: string;
+  };
+
   type DataSourceConfiguration = {
     integrationDisplayName: string;
     dataSourceId: string;

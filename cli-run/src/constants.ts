@@ -10,3 +10,8 @@ export enum AvailableProjects {
 export enum CommonVariants {
   Default = 'baseline',
 }
+
+export enum AppModes {
+  SSR = 'ssr',
+  SSG = 'ssg',
+}

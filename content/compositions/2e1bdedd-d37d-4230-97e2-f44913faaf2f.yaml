@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 78814777-6cc8-4b03-8ea4-4f0c31ca1250
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,6 +28,9 @@ composition:
           title:
             type: text
             value: Product Detail Page components
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -37,6 +40,15 @@ composition:
           eyebrowText:
             type: text
             value: ''
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: 061745c0-bded-43c7-9780-948b0342f8f9
         type: breadcrumbs
         parameters:
@@ -454,6 +466,6 @@ composition:
           paddingBottom:
             type: select
             value: ''
-created: '2023-08-08T13:08:39.967736+00:00'
-modified: '2023-08-08T13:08:39.967736+00:00'
+created: '2023-09-21T21:17:19.403376+00:00'
+modified: '2023-10-03T08:32:22.736562+00:00'
 pattern: false

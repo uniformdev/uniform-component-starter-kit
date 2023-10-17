@@ -19,7 +19,7 @@ composition:
     pageContent:
       - _id: 7744d2cb-72d5-4904-a701-18b33f7c99da
         type: hero
-        variant: backgroundDarkImage
+        variant: backgroundImage
         parameters:
           image:
             type: image
@@ -28,12 +28,24 @@ composition:
           title:
             type: text
             value: Accordion component
+          paddingTop:
+            type: select
+            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
           description:
             type: text
             value: with expandable text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
       - _id: c9bee888-b048-42fc-b95f-263740c2c4b1
         type: breadcrumbs
         parameters:
@@ -87,6 +99,6 @@ composition:
           description:
             type: text
             value: Some compelling text
-created: '2023-08-08T13:08:40.463405+00:00'
-modified: '2023-08-08T13:08:40.463405+00:00'
+created: '2023-09-21T21:17:21.366724+00:00'
+modified: '2023-10-03T08:32:24.5729+00:00'
 pattern: false
