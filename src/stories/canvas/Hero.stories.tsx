@@ -41,7 +41,7 @@ const BASE_PROPS: Omit<HeroProps, 'component' | 'children'> = {
   containerVariant: '',
   paddingTop: PaddingSize.Medium,
   paddingBottom: PaddingSize.Medium,
-  textColorVariant: 'Light',
+  textColorVariant: 'Dark',
 };
 
 const argTypes = {
@@ -92,6 +92,23 @@ export const ImageRight: Story = {
 export const BackgroundImage: Story = {
   args: {
     ...BASE_PROPS,
+    textColorVariant: 'Light',
+    component: {
+      type: 'hero',
+      variant: HeroVariant.BackgroundImage,
+    },
+  },
+  argTypes,
+  render: renderStory,
+};
+
+export const BackgroundVideo: Story = {
+  args: {
+    ...BASE_PROPS,
+    textColorVariant: 'Light',
+    video: 'https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-mizuno-rojas.mp4',
+    containerVariant: 'fluidContent',
+    objectFit: 'cover',
     component: {
       type: 'hero',
       variant: HeroVariant.BackgroundImage,
@@ -104,6 +121,7 @@ export const BackgroundImage: Story = {
 export const TwoColumns: Story = {
   args: {
     ...BASE_PROPS,
+    textColorVariant: 'Light',
     component: {
       type: 'hero',
       variant: HeroVariant.TwoColumns,

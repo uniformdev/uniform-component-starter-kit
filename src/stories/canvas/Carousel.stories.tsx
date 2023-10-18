@@ -31,6 +31,7 @@ const HEROS_PROPS = [
     },
     secondaryButtonStyle: 'link',
     type: 'hero',
+    textColorVariant: 'Dark',
   },
   {
     eyebrowText: 'Hero',
@@ -51,6 +52,7 @@ const HEROS_PROPS = [
     },
     secondaryButtonStyle: 'link',
     type: 'hero',
+    textColorVariant: 'Dark',
   },
   {
     eyebrowText: 'Hero',
@@ -71,6 +73,7 @@ const HEROS_PROPS = [
     },
     secondaryButtonStyle: 'link',
     type: 'hero',
+    textColorVariant: 'Dark',
   },
 ];
 

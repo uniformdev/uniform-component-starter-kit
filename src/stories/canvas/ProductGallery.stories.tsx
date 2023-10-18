@@ -36,6 +36,10 @@ const BASE_PROPS: Omit<BaseProductGalleryProps, 'children' | 'component'> = {
   backgroundType: BackgroundTypes.Light,
   paddingTop: PaddingSize.Medium,
   paddingBottom: PaddingSize.Medium,
+  items: imagePaths.map((imagePath, index) => ({
+    id: index.toString(),
+    url: imagePath,
+  })),
 };
 
 const argTypes = {
@@ -45,29 +49,7 @@ const argTypes = {
 };
 
 const renderStory = (args: BaseProductGalleryProps) => {
-  const fakeComposition = createFakeCompositionData('productGallery', args, {
-    images: imagePaths.map(imagePath => ({
-      type: 'image',
-      parameters: {
-        alt: {
-          type: 'text',
-          value: 'Product image 1',
-        },
-        src: {
-          type: 'image',
-          value: imagePath,
-        },
-        width: {
-          type: 'number',
-          value: '10000',
-        },
-        height: {
-          type: 'number',
-          value: '10000',
-        },
-      },
-    })),
-  });
+  const fakeComposition = createFakeCompositionData('productGallery', args, {});
   return (
     <UniformComposition data={fakeComposition}>
       <ProductGallery {...args} />
