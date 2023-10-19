@@ -22,7 +22,7 @@ const BASE_PROPS: Omit<ProductInfoProps, 'component'> = {
   description:
     "Experience coffee like never before. From the moment you power up the EspressoGPT, you're not just brewing an espresso—you're entering the future of coffee. Welcome to a universe of unparalleled taste and sophistication.",
   highlightText: '$1,899.95',
-  image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1693386789/products/EspressoGPT_image',
+  image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1697702742/coffee-marketing/cup-delicious-coffee.jpg',
   primaryButtonCopy: 'Buy now',
   primaryButtonStyle: 'secondary',
 

@@ -85,7 +85,7 @@ composition:
                 image:
                   type: image
                   value: >-
-                    https://res.cloudinary.com/uniform-demos/image/upload/v1693386789/products/EspressoGPT_image.png
+                    https://res.cloudinary.com/uniform-demos/image/upload/v1697702742/coffee-marketing/cup-delicious-coffee.jpg
                 title:
                   type: text
                   value: EspressoGPT
