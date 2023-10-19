@@ -230,11 +230,16 @@ const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVar
     return process.exit(0);
   }
 
-  const { project, variant } = await parseMetadata();
+  try {
+    const { project, variant } = await parseMetadata();
 
-  showDemoHeader(project, variant);
+    showDemoHeader(project, variant);
 
-  await preSetDemo(project, variant);
+    await preSetDemo(project, variant);
 
-  await runRunDemoJourney(project, variant);
+    await runRunDemoJourney(project, variant);
+  } catch (e) {
+    console.error(e);
+    return process.exit(0);
+  }
 })();
