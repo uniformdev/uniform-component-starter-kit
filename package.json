@@ -1,6 +1,6 @@
 {
   "name": "component-starter-kit",
-  "version": "5.0.7",
+  "version": "5.0.8",
   "private": true,
   "engines": {
     "npm": ">=8.19.0",

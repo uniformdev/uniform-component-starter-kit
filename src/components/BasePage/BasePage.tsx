@@ -1,4 +1,4 @@
-import { FC, Fragment } from 'react';
+import { FC, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import {
   createUniformApiEnhancer,
@@ -16,16 +16,19 @@ import { BasePageProps } from './';
 const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 'providers' | 'styles'>> = ({
   useUniformComposition,
   preview,
-  providers: Providers = Fragment,
+  providers: Providers,
   styles,
 }) => {
   const { data: composition } = useUniformCurrentComposition();
 
   const gap = composition?.slots?.pageHeader?.[0]?.parameters?.syntheticGap?.value as PaddingSize | undefined;
 
+  const ContentProviders = ({ children }: PropsWithChildren) =>
+    Providers ? <Providers styles={{ modal: styles?.modal }}>{children}</Providers> : <>{children}</>;
+
   return (
     <ThemeProvider>
-      <Providers styles={{ modal: styles?.modal }}>
+      <ContentProviders>
         {/* Docs: https://docs.uniform.app/reference/packages/uniformdev-canvas-react#slot */}
         <div className={COMMON_PADDING}>
           <UniformSlot name="pageHeader" />
@@ -48,7 +51,7 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
           <UniformSlot name="pageFooter" />
         </div>
         {preview && <UniformPreviewIcon />}
-      </Providers>
+      </ContentProviders>
     </ThemeProvider>
   );
 };
@@ -57,7 +60,7 @@ const BasePage: FC<BasePageProps> = ({
   data: composition,
   useUniformComposition,
   preview,
-  providers = Fragment,
+  providers,
   styles,
   context,
 }) => (
