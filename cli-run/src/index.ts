@@ -189,22 +189,30 @@ const runRunDemoJourney = async (
 
 const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVariants = CommonVariants.Default) => {
   const projectPath = path.resolve('../');
+  const renderingModeOptions = [];
+  const isSSRModeAvailable = await scanPageDirectory(projectPath, AppModes.SSR);
   const isSSGModeAvailable = await scanPageDirectory(projectPath, AppModes.SSG);
 
-  const appMode = isSSGModeAvailable
+  if (isSSRModeAvailable) {
+    renderingModeOptions.push({ value: 'ssr', label: 'Server-side Rendering \t(SSR)' });
+  }
+  if (isSSGModeAvailable) {
+    renderingModeOptions.push({ value: 'ssg', label: 'Static Site Generation \t(SSG)' });
+  }
+
+  const appMode = renderingModeOptions.length
     ? (
         await select({
           message: 'Which rendering mode do you prefer?',
-          options: [
-            { value: 'ssr', label: 'Server-side Rendering \t(SSR)' },
-            { value: 'ssg', label: 'Static Site Generation \t(SSG)' },
-          ],
+          options: renderingModeOptions,
           initialValue: AppModes.SSR,
         })
       ).toString()
-    : AppModes.SSR;
+    : undefined;
 
-  await switchModeInPageDirectory(projectPath, appMode as AppModes);
+  if (appMode) {
+    await switchModeInPageDirectory(projectPath, appMode as AppModes, ['revalidate.ts']);
+  }
 
   const projectVariantsModulesRequire = demosVariantsModulesRequire[project];
   const installModules = projectVariantsModulesRequire?.[variant];

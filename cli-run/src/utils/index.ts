@@ -84,11 +84,11 @@ const findModeOptions = async (projectPath: string, mode: string): Promise<boole
     .readdir(projectPath, { withFileTypes: true })
     .then(r => r.some(node => (node.isFile() ? node.name.endsWith(mode) : false)));
 
-export const switchModeInPageDirectory = async (projectPath: string, mode: AppModes) => {
-  await switchModeTo(path.resolve(projectPath, 'src', 'pages'), mode);
-  await switchModeTo(path.resolve(projectPath, 'src', 'pages', 'api'), mode);
+export const switchModeInPageDirectory = async (projectPath: string, mode: AppModes, removalList?: string[]) => {
+  await switchModeTo(path.resolve(projectPath, 'src', 'pages'), mode, removalList);
+  await switchModeTo(path.resolve(projectPath, 'src', 'pages', 'api'), mode, removalList);
 };
-const switchModeTo = async (projectPath: string, mode: string) => {
+const switchModeTo = async (projectPath: string, mode: string, removalList?: string[]) => {
   const listOfFilesNames = (await fs.promises.readdir(projectPath, { withFileTypes: true }))
     .filter(node => node.isFile())
     .map(item => item.name);
@@ -98,7 +98,7 @@ const switchModeTo = async (projectPath: string, mode: string) => {
       await remove(path.resolve(projectPath, destinationFileName));
       await fs.promises.cp(path.resolve(projectPath, fileName), path.resolve(projectPath, destinationFileName));
       await remove(path.resolve(projectPath, fileName));
-    } else if (fileName.endsWith(AppModes.SSR) || fileName.endsWith(AppModes.SSG)) {
+    } else if (fileName.endsWith(AppModes.SSR) || fileName.endsWith(AppModes.SSG) || removalList?.includes(fileName)) {
       await remove(path.resolve(projectPath, fileName));
     }
   }
