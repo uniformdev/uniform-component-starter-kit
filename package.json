@@ -1,6 +1,6 @@
 {
   "name": "component-starter-kit",
-  "version": "5.0.8",
+  "version": "5.0.9",
   "private": true,
   "engines": {
     "npm": ">=8.19.0",
@@ -85,7 +85,7 @@
     "@uniformdev/cli": "19.69.0",
     "autoprefixer": "^10.4.14",
     "eslint": "^8.47.0",
-    "eslint-config-next": "^13.4.19",
+    "eslint-config-next": "13.5.6",
     "eslint-config-prettier": "^9.0.0",
     "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-storybook": "^0.6.11",
