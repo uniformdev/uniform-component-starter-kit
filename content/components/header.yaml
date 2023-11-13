@@ -19,7 +19,7 @@ parameters:
     name: Global
     type: group
     typeConfig:
-      collapsed: true
+      collapsed: false
       childrenParams:
         - theme
         - primaryFont
