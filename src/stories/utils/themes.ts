@@ -55,7 +55,7 @@ const javaDripTheme = {
       {
         label: 'Primary',
         name: 'primary',
-        value: '#000000',
+        value: '#55493b',
       },
       {
         label: 'Primary Content',
@@ -65,7 +65,7 @@ const javaDripTheme = {
       {
         label: 'Secondary',
         name: 'secondary',
-        value: '#F7DF1E',
+        value: '#ffffff',
       },
       {
         label: 'Secondary Content',
@@ -95,7 +95,7 @@ const javaDripTheme = {
       {
         label: 'Base 300',
         name: 'base-300',
-        value: '#000000',
+        value: '#372f26',
       },
     ],
     themeName: 'javadrip',
