@@ -19334,7 +19334,7 @@
           },
           "favicon": {
             "type": "image",
-            "value": "https://res.cloudinary.com/uniform-demos/image/upload/v1692279602/csk-marketing/LaunchArt_LI_uikeod_stwidx.png"
+            "value": "https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-icons/favicon"
           },
           "primaryFont": {
             "type": "select",
