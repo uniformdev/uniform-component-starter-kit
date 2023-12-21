@@ -1,4 +1,5 @@
 import { registerUniformComponent, ComponentProps } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { Video } from './Video';
 
 export type VideoProps = ComponentProps<{
@@ -6,7 +7,7 @@ export type VideoProps = ComponentProps<{
   loop?: boolean;
   controls: boolean;
   lazyLoad?: boolean;
-  placeholderImage?: string;
+  placeholderImage?: string | Asset;
   muted: boolean;
 }>;
 

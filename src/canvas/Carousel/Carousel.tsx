@@ -1,8 +1,8 @@
 import { FC, useEffect, useRef, useState, createContext } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
-import { fromCamelCaseText } from '../../utilities';
+import { fromCamelCaseText, getMediaUrl } from '../../utilities';
 import { CarouselProps, CarouselVariants } from '.';
 import { CarouselInner } from './CarouselInner';
 
@@ -60,25 +60,27 @@ export const Carousel: FC<CarouselProps> = ({ component }) => {
             <UniformSlot name="carouselItem" wrapperComponent={CarouselInner} />
           </div>
           <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2 z-50">
-            <a
+            <button
               onClick={() => onGoPrevious()}
-              className={classNames('btn btn-circle', { 'btn-disabled': currentIndex === 0 })}
+              className={classNames('btn btn-circle text-primary-content', { 'btn-disabled': currentIndex === 0 })}
             >
               ❮
-            </a>
-            <a
+            </button>
+            <button
               onClick={() => onGoNext()}
-              className={classNames('btn btn-circle', { 'btn-disabled': totalCountOfItems - 1 === currentIndex })}
+              className={classNames('btn btn-circle btn-primary', {
+                'btn-disabled': totalCountOfItems - 1 === currentIndex,
+              })}
             >
               ❯
-            </a>
+            </button>
           </div>
         </div>
         {variant === CarouselVariants.ImageGallery && !!carouselItem?.length && (
           <div className="pt-2 flex flex-row gap-2 flex-wrap">
             {carouselItem.map((item, index) => {
               const { src } = item.parameters || {};
-              const srcImage = src?.value as string | undefined;
+              const srcImage = getMediaUrl(src?.value as string | undefined);
 
               return (
                 <button

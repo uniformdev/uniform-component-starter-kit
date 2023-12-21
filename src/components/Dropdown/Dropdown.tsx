@@ -1,5 +1,5 @@
 import { FC, useCallback, useMemo, useState } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { DropdownOption } from './DropdownOption';
 import { DropdownProps } from './';
@@ -56,7 +56,7 @@ const Dropdown: FC<DropdownProps> = ({
       >
         {selectedLabel || title}
         <Image
-          className={classNames('w-auto', { 'rotate-180': isOpen })}
+          className={classNames('w-auto ml-1', { 'rotate-180': isOpen })}
           width={18}
           height={11}
           src="https://res.cloudinary.com/uniform-demos/image/upload/v1692358232/csk-icons/icon-dropdown_fpirma_dns0cw.svg"

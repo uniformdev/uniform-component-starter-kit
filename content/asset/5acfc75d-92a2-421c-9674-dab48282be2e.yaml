@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 5acfc75d-92a2-421c-9674-dab48282be2e
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: icon_content_w.svg
+    file:
+      type: file
+      value: c494d889-4d96-4d86-baa0-7182e978c473
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/QnJsaQK0Sp6D559iuqb__w-icon_content_w.svg
+      type: text
+    size:
+      value: 611
+      type: number
+    width:
+      value: 165
+      type: number
+    height:
+      value: 165
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:34.731915+00:00'
+modified: '2023-12-20T11:17:34.731915+00:00'

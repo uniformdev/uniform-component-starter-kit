@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: d094a8b2-2993-4ec5-8665-60902503a848
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: person_photo_2.jpg
+    file:
+      type: file
+      value: b126a95f-4b37-4dc9-b679-ba0c49e32f42
+    mediaType:
+      value: image/jpeg
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/ANwcR1frReOwwHw5H5pKHQ-person_photo_2.jpg
+      type: text
+    size:
+      value: 18613
+      type: number
+    width:
+      value: 256
+      type: number
+    height:
+      value: 256
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:30.550147+00:00'
+modified: '2023-12-20T11:17:30.550147+00:00'

@@ -1,8 +1,13 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import { RichText } from './RichText';
 
+type Styles = {
+  content: string;
+};
+
 export type RichTextProps = ComponentProps<{
   content?: string;
+  styles?: Styles;
 }>;
 
 export enum RichTextVariants {

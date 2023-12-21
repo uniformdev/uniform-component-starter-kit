@@ -57,17 +57,17 @@ export const getButtonAnimationClass = (style: Types.ButtonStyles, animationType
 export const getTextClass = (style?: Types.HeadingStyles) => {
   switch (style) {
     case 'h1':
-      return 'text-5xl';
+      return 'text-4xl md:text-5xl';
     case 'h2':
-      return 'text-4xl';
+      return 'text-3xl md:text-4xl';
     case 'h3':
-      return 'text-3xl';
+      return 'text-2xl md:text-3xl';
     case 'h4':
-      return 'text-2xl';
+      return 'text-xl md:text-2xl';
     case 'h5':
-      return 'text-xl';
+      return 'text-lg md:text-xl';
     case 'h6':
-      return 'text-lg';
+      return 'text-base md:text-lg';
     default:
       return 'text-base';
   }

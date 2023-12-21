@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationMenuSectionLink
+name: Navigation Menu Section Link
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281090/csk-icons/component-icons-v2/CSKicon_header_eu1k3o_n0rurn.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: icon
+    name: Icon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Navigation_menu_section_link_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-12-20T11:17:41.966945+00:00'
+updated: '2023-12-20T11:17:41.966945+00:00'
+variants:
+  - id: iconLeft
+    name: Icon Left

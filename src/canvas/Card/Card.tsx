@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
@@ -76,7 +76,7 @@ export const Card: FC<CardProps> = ({
   return (
     <CardWrapper
       className={classNames(
-        'card w-96 max-w-full min-h-full mx-0 md:mx-2 border border-gray-200',
+        'card min-w-full md:min-w-0 w-80 md:w-96 max-w-full min-h-full border border-gray-200',
         getContentClass(variant),
         {
           relative: isBackgroundImage,
@@ -156,6 +156,8 @@ export const Card: FC<CardProps> = ({
               animationType={buttonAnimationType}
               copy={
                 useCustomTextElements ? (
+                  // onClick exists only in canvas view mode
+                  // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
                   <div onClick={isContextualEditing ? e => e.preventDefault() : undefined}>{buttonCopy}</div>
                 ) : (
                   <UniformText

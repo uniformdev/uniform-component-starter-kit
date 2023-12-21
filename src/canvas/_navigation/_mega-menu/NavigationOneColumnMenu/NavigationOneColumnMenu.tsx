@@ -14,8 +14,8 @@ export const NavigationOneColumnMenu: FC<NavigationOneColumnMenuProps> = ({
 }) => (
   <div className="relative">
     <UniformSlot name="menuLinks" />
-    <div className="grid grid-cols-12">
-      <div className="col-span-4 px-8 py-2">
+    <div className="grid md:grid-cols-12 grid-cols-5">
+      <div className="col-span-5 p-4">
         {Boolean(primaryButtonCopy && primaryButtonLink) && (
           <Button
             className="mx-1"
@@ -33,9 +33,11 @@ export const NavigationOneColumnMenu: FC<NavigationOneColumnMenuProps> = ({
           />
         )}
       </div>
-      <div className="col-span-8 bg-white">
-        <div className="absolute w-full max-w-[60%] z-30 top-[10%] right-0">
-          <UniformSlot name="defaultContent" />
+      <div className="hidden absolute w-[calc(100%*7/12)] h-full right-0 top-0 md:block col-span-7 bg-white z-20">
+        <div className="flex h-full items-center">
+          <div className="w-full [&>*]:overflow-x-hidden [&>*]:mx-auto">
+            <UniformSlot name="defaultContent" />
+          </div>
         </div>
       </div>
     </div>

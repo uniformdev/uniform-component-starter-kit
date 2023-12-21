@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import NextImage from 'next/image';
+import BaseImage from '../../components/Image';
 import classNames from 'classnames';
 import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../../utilities/styling';
 import { getMediaUrl } from '../../utilities';
@@ -28,17 +28,17 @@ export const Image: FC<ImageProps> = ({
   return (
     <div
       className={classNames(
-        'relative max-w-max h-max',
+        'relative max-w-full h-max',
         getBorderColorStyle(borderColor),
         getBorderRadiusStyle(borderRadius)
       )}
       style={{ borderWidth: borderWidth }}
     >
-      <NextImage
+      <BaseImage
         src={getMediaUrl(src)}
         width={width}
         height={height}
-        className={classNames(getBorderRadiusStyle(borderRadius), getObjectFitClass(objectFit))}
+        className={classNames('w-full', getBorderRadiusStyle(borderRadius), getObjectFitClass(objectFit))}
         alt={alt ?? 'image'}
         fill={fill}
         quality={quality}

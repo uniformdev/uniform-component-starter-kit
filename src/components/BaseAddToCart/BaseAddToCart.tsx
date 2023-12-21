@@ -24,7 +24,7 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
 
   return (
     <div className="flex flex-row justify-between items-center py-6 flex-wrap gap-5">
-      <div className="flex items-center justify-between w-auto gap-4 grow">
+      <div className="flex flex-wrap items-center justify-between w-auto gap-4 grow">
         <div className="inline font-bold text-secondary-content">QUANTITY:</div>
         <ProductQuantityItem
           animationType={animationType}
@@ -34,11 +34,13 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
           onClickIncrement={onClickIncrement}
         />
       </div>
-      <div
+      <button
         className={classNames('btn rounded-none ml-auto w-full flex-1 min-w-[200px]', getButtonClass(buttonStyle))}
         onClick={handleButtonClick}
       >
         {useCustomTextElements ? (
+          // This onClick is used only to cancel the action of the parent event for the label in preview mode on the canvas
+          // eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions
           <div onClick={isContextualEditing ? e => e.preventDefault() : undefined}>{buttonCopy}</div>
         ) : (
           <UniformText
@@ -47,7 +49,7 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
             onClick={isContextualEditing ? e => e.preventDefault() : undefined}
           />
         )}
-      </div>
+      </button>
     </div>
   );
 };

@@ -1,0 +1,283 @@
+composition:
+  _name: Search Provider
+  _id: cd8d3791-4aa9-4a85-aa4b-1ab1242d7b07
+  type: coveo-searchProvider
+  slots:
+    searchContent:
+      - _id: 452e63e8-ac65-4da0-a3da-d90ae52bde62
+        type: coveo-searchBox
+        parameters:
+          title:
+            type: text
+            value: Search Input
+          placeholder:
+            type: text
+            value: start searching for your ...
+        _overridability:
+          parameters:
+            title: 'yes'
+            placeholder: 'yes'
+      - _id: 2099df93-c283-4a87-95cb-a79d13043e98
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 20px
+        _overridability:
+          variants: true
+          parameters:
+            thickness: 'yes'
+      - _id: 7e90b038-d813-4e63-8b07-c1ef02815e3a
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 3952b5e7-40d4-43d7-bcd0-ad2614416ec5
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 1d701942-4218-4aea-bb7b-e203c36152d3
+                    type: coveo-sort
+                    parameters:
+                      title:
+                        type: text
+                        value: Sort by
+                      fieldsForSort:
+                        type: json
+                        value:
+                          - price
+                    _overridability:
+                      parameters:
+                        title: 'yes'
+                        fieldsForSort: 'yes'
+                  - _id: 1272a1a1-445c-4acf-92d4-0448385ddedb
+                    type: coveo-facet
+                    parameters:
+                      facet:
+                        type: headless-components
+                        value:
+                          facetConfiguration:
+                            field: ec_category
+                      title:
+                        type: text
+                        value: Category
+                    _overridability:
+                      parameters:
+                        facet: 'yes'
+                        title: 'yes'
+                  - _id: 0c169fce-acf5-4e13-851e-73221661e3b6
+                    type: coveo-facet
+                    parameters:
+                      facet:
+                        type: headless-components
+                        value:
+                          facetConfiguration:
+                            field: sub_category
+                      title:
+                        type: text
+                        value: Subcategory
+                    _overridability:
+                      parameters:
+                        facet: 'yes'
+                        title: 'yes'
+              parameters:
+                title:
+                  type: text
+                  value: Left Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '3'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+              _overridability:
+                parameters:
+                  title: 'yes'
+                  rowSpan: 'yes'
+                  rowStart: 'yes'
+                  columnSpan: 'yes'
+                  columnStart: 'yes'
+            - _id: f28af013-8646-4435-b154-77ebb3611b44
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 17261e7a-52f4-4136-9429-f1362a2ebc22
+                    type: coveo-resultList
+                    slots:
+                      resultItemComponent:
+                        - _id: 07abd980-0a41-492c-b364-dc2f19c3d7b1
+                          type: coveo-resultListItem
+                          variant: ''
+                          parameters:
+                            badgeSize:
+                              type: select
+                              value: md
+                            objectFit:
+                              type: select
+                              value: cover
+                            badgeStyle:
+                              type: tp-badge-style-parameter
+                              value: accent
+                            overlayColor:
+                              type: tp-color-style-parameter
+                              value: base-300
+                            overlayOpacity:
+                              type: tp-slider-parameter
+                              value: 10%
+                            textColorVariant:
+                              type: select
+                              value: Dark
+                            lineCountRestriction:
+                              type: tp-slider-parameter
+                              value: '5'
+                          _overridability:
+                            variants: true
+                            parameters:
+                              badgeSize: 'yes'
+                              objectFit: 'yes'
+                              badgeStyle: 'yes'
+                              buttonCopy: 'yes'
+                              buttonLink: 'yes'
+                              buttonStyle: 'yes'
+                              overlayColor: 'yes'
+                              overlayOpacity: 'yes'
+                              textColorVariant: 'yes'
+                              lineCountRestriction: 'yes'
+                  - _id: 83c30e47-ac80-44f1-aeac-e29469f4994d
+                    type: spacer
+                    parameters:
+                      thickness:
+                        type: tp-slider-parameter
+                        value: 20px
+                    _overridability:
+                      variants: true
+                      parameters:
+                        thickness: 'yes'
+                  - _id: 2983ed32-63cb-4bf3-8a0a-bfdcdd746da8
+                    type: coveo-pager
+                    parameters:
+                      title:
+                        type: text
+                        value: Pager
+                      numberOfPages:
+                        type: number
+                        value: '3'
+                      numberOfResults:
+                        type: number
+                        value: '9'
+                    _overridability:
+                      parameters:
+                        title: 'yes'
+                        numberOfPages: 'yes'
+                        numberOfResults: 'yes'
+              parameters:
+                title:
+                  type: text
+                  value: Right Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '9'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: '4'
+              _overridability:
+                parameters:
+                  title: 'yes'
+                  rowSpan: 'yes'
+                  rowStart: 'yes'
+                  columnSpan: 'yes'
+                  columnStart: 'yes'
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: small
+          gapY:
+            type: tp-slider-parameter
+            value: none
+          title:
+            type: text
+            value: Products List
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '12'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+        _overridability:
+          parameters:
+            gapX: 'yes'
+            gapY: 'yes'
+            title: 'yes'
+            marginTop: 'yes'
+            paddingTop: 'yes'
+            columnsCount: 'yes'
+            marginBottom: 'yes'
+            paddingBottom: 'yes'
+            backgroundType: 'yes'
+            containerVariant: 'yes'
+      - _id: d05b2745-69c8-475c-a95e-4ec29f9adc15
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 20px
+        _overridability:
+          variants: true
+          parameters:
+            thickness: 'yes'
+      - _id: 47ab3b8a-2686-4def-8682-4906ab3fd97d
+        type: coveo-querySummary
+        parameters:
+          title:
+            type: text
+            value: Query Summary
+          durationSettings:
+            type: select
+            value: milliseconds
+        _overridability:
+          parameters:
+            title: 'yes'
+            durationSettings: 'yes'
+      - _id: b81fcb19-bab8-4b4e-b0d0-43cc5ecd5f71
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 20px
+        _overridability:
+          variants: true
+          parameters:
+            thickness: 'yes'
+      - _id: 201aecff-350e-44da-98ea-b554789dded0
+        type: coveo-breadcrumbManager
+        parameters:
+          title:
+            type: text
+            value: Breadcrumb Manager
+        _overridability:
+          parameters:
+            title: 'yes'
+created: '2023-11-14T16:57:49.878601+00:00'
+modified: '2023-11-14T16:57:49.878601+00:00'
+pattern: true
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667

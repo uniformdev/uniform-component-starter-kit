@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 28ee8793-25b5-4f08-8edd-7accaaf4a9a5
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: icon_image.svg
+    file:
+      type: file
+      value: 39f351fb-f7c8-4bcb-9e5a-c59df6cb9df2
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/apaD7GprQ1uLYxB-tUh3TA-icon_image.svg
+      type: text
+    size:
+      value: 1076
+      type: number
+    width:
+      value: 165
+      type: number
+    height:
+      value: 165
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:32.825464+00:00'
+modified: '2023-12-20T11:17:32.825464+00:00'

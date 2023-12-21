@@ -182,33 +182,33 @@ export const getUniformAccessTokenEnvs = async (): Promise<{
 export const getAlgoliaEnvs = async (
   project: string
 ): Promise<{
-  ALGOLIA_APPLICATION_ID: string;
-  ALGOLIA_SEARCH_KEY: string;
+  NEXT_PUBLIC_ALGOLIA_APPLICATION_ID: string;
+  NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: string;
 }> => {
   if (!isDevMode) {
     return {
-      ALGOLIA_APPLICATION_ID: process.env.CLI_ALGOLIA_APPLICATION_ID || '',
-      ALGOLIA_SEARCH_KEY: process.env.CLI_ALGOLIA_SEARCH_KEY || '',
+      NEXT_PUBLIC_ALGOLIA_APPLICATION_ID: process.env.CLI_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID || '',
+      NEXT_PUBLIC_ALGOLIA_SEARCH_KEY: process.env.CLI_NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || '',
     };
   }
 
-  const ALGOLIA_APPLICATION_ID = (
+  const NEXT_PUBLIC_ALGOLIA_APPLICATION_ID = (
     await text({
       message: `Your ${project} algolia application id:`,
       validate,
-      initialValue: process.env.CLI_ALGOLIA_APPLICATION_ID || '',
+      initialValue: process.env.CLI_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID || '',
     })
   ).toString();
 
-  const ALGOLIA_SEARCH_KEY = (
+  const NEXT_PUBLIC_ALGOLIA_SEARCH_KEY = (
     await text({
       message: `Your ${project} algolia search key:`,
       validate,
-      initialValue: process.env.CLI_ALGOLIA_SEARCH_KEY || '',
+      initialValue: process.env.CLI_NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || '',
     })
   ).toString();
 
-  return { ALGOLIA_APPLICATION_ID, ALGOLIA_SEARCH_KEY };
+  return { NEXT_PUBLIC_ALGOLIA_APPLICATION_ID, NEXT_PUBLIC_ALGOLIA_SEARCH_KEY };
 };
 
 export const getCoveoEnvs = async (
@@ -219,8 +219,8 @@ export const getCoveoEnvs = async (
 }> => {
   if (!isDevMode) {
     return {
-      NEXT_PUBLIC_COVEO_ORGANIZATION_ID: process.env.CLI_COVEO_ORGANIZATION_ID || '',
-      NEXT_PUBLIC_COVEO_API_KEY: process.env.CLI_COVEO_API_KEY || '',
+      NEXT_PUBLIC_COVEO_ORGANIZATION_ID: process.env.CLI_NEXT_PUBLIC_COVEO_ORGANIZATION_ID || '',
+      NEXT_PUBLIC_COVEO_API_KEY: process.env.CLI_NEXT_PUBLIC_COVEO_API_KEY || '',
     };
   }
 
@@ -228,7 +228,7 @@ export const getCoveoEnvs = async (
     await text({
       message: `Your ${project} coveo organization id:`,
       validate,
-      initialValue: process.env.CLI_COVEO_ORGANIZATION_ID || '',
+      initialValue: process.env.CLI_NEXT_PUBLIC_COVEO_ORGANIZATION_ID || '',
     })
   ).toString();
 
@@ -236,131 +236,11 @@ export const getCoveoEnvs = async (
     await text({
       message: `Your ${project} coveo api key:`,
       validate,
-      initialValue: process.env.CLI_COVEO_API_KEY || '',
+      initialValue: process.env.CLI_NEXT_PUBLIC_COVEO_API_KEY || '',
     })
   ).toString();
 
   return { NEXT_PUBLIC_COVEO_ORGANIZATION_ID, NEXT_PUBLIC_COVEO_API_KEY };
-};
-
-export const getCommercetoolsEnvs = async (
-  project: string
-): Promise<{
-  COMMERCETOOLS_PROJECT_KEY: string;
-  COMMERCETOOLS_CLIENT_ID: string;
-  COMMERCETOOLS_CLIENT_SECRET: string;
-  COMMERCETOOLS_API_URL: string;
-  COMMERCETOOLS_AUTH_URL: string;
-}> => {
-  if (!isDevMode) {
-    return {
-      COMMERCETOOLS_PROJECT_KEY: process.env.CLI_COMMERCETOOLS_PROJECT_KEY || '',
-      COMMERCETOOLS_CLIENT_ID: process.env.CLI_COMMERCETOOLS_CLIENT_ID || '',
-      COMMERCETOOLS_CLIENT_SECRET: process.env.CLI_COMMERCETOOLS_CLIENT_SECRET || '',
-      COMMERCETOOLS_API_URL: process.env.CLI_COMMERCETOOLS_API_URL || '',
-      COMMERCETOOLS_AUTH_URL: process.env.CLI_COMMERCETOOLS_AUTH_URL || '',
-    };
-  }
-
-  const COMMERCETOOLS_PROJECT_KEY = (
-    await text({
-      message: `Your ${project} Commercetools project key:`,
-      validate,
-      initialValue: process.env.CLI_COMMERCETOOLS_PROJECT_KEY,
-    })
-  ).toString();
-
-  const COMMERCETOOLS_CLIENT_ID = (
-    await text({
-      message: `Your ${project} Commercetools client id:`,
-      validate,
-      initialValue: process.env.CLI_COMMERCETOOLS_CLIENT_ID,
-    })
-  ).toString();
-
-  const COMMERCETOOLS_CLIENT_SECRET = (
-    await text({
-      message: `Your ${project} Commercetools client secret:`,
-      validate,
-      initialValue: process.env.CLI_COMMERCETOOLS_CLIENT_SECRET,
-    })
-  ).toString();
-
-  const COMMERCETOOLS_API_URL = (
-    await text({
-      message: `Your ${project} Commercetools API URL:`,
-      validate,
-      initialValue: process.env.CLI_COMMERCETOOLS_API_URL,
-    })
-  ).toString();
-
-  const COMMERCETOOLS_AUTH_URL = (
-    await text({
-      message: `Your ${project} Commercetools AUTH URL:`,
-      validate,
-      initialValue: process.env.CLI_COMMERCETOOLS_AUTH_URL,
-    })
-  ).toString();
-
-  return {
-    COMMERCETOOLS_PROJECT_KEY,
-    COMMERCETOOLS_CLIENT_ID,
-    COMMERCETOOLS_CLIENT_SECRET,
-    COMMERCETOOLS_API_URL,
-    COMMERCETOOLS_AUTH_URL,
-  };
-};
-
-export const getContentfulEnvs = async (
-  project: string
-): Promise<{
-  CONTENTFUL_SPACE_ID: string;
-  CONTENTFUL_ENVIRONMENT: string;
-  CONTENTFUL_CDA_ACCESS_TOKEN: string;
-  CONTENTFUL_CPA_ACCESS_TOKEN: string;
-}> => {
-  if (!isDevMode) {
-    return {
-      CONTENTFUL_SPACE_ID: process.env.CLI_CONTENTFUL_SPACE_ID || '',
-      CONTENTFUL_ENVIRONMENT: process.env.CLI_CONTENTFUL_CLASSIC_ENVIRONMENT || '',
-      CONTENTFUL_CDA_ACCESS_TOKEN: process.env.CLI_CONTENTFUL_CDA_ACCESS_TOKEN || '',
-      CONTENTFUL_CPA_ACCESS_TOKEN: process.env.CLI_CONTENTFUL_CPA_ACCESS_TOKEN || '',
-    };
-  }
-
-  const CONTENTFUL_SPACE_ID = (
-    await text({
-      message: `Your ${project} contentful space id:`,
-      validate,
-      initialValue: process.env.CLI_CONTENTFUL_SPACE_ID || '',
-    })
-  ).toString();
-
-  const CONTENTFUL_ENVIRONMENT = (
-    await text({
-      message: `Your ${project} contentful environment:`,
-      validate,
-      initialValue: process.env.CLI_CONTENTFUL_CLASSIC_ENVIRONMENT || '',
-    })
-  ).toString();
-
-  const CONTENTFUL_CDA_ACCESS_TOKEN = (
-    await text({
-      message: `Your ${project} contentful cda access token:`,
-      validate,
-      initialValue: process.env.CLI_CONTENTFUL_CDA_ACCESS_TOKEN || '',
-    })
-  ).toString();
-
-  const CONTENTFUL_CPA_ACCESS_TOKEN = (
-    await text({
-      message: `Your ${project} contentful cpa access token:`,
-      validate,
-      initialValue: process.env.CLI_CONTENTFUL_CPA_ACCESS_TOKEN || '',
-    })
-  ).toString();
-
-  return { CONTENTFUL_SPACE_ID, CONTENTFUL_ENVIRONMENT, CONTENTFUL_CDA_ACCESS_TOKEN, CONTENTFUL_CPA_ACCESS_TOKEN };
 };
 
 export const getSegmentEnvs = async (
@@ -412,7 +292,7 @@ export const getGoogleAnalyticsEnvs = async (
 }> => {
   if (!isDevMode) {
     return {
-      NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: process.env.CLI_GOOGLE_ANALYTICS_ID || '',
+      NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: process.env.CLI_NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '',
     };
   }
 
@@ -420,11 +300,63 @@ export const getGoogleAnalyticsEnvs = async (
     await text({
       message: `Your ${project} google analytics write key:`,
       validate,
-      initialValue: process.env.CLI_GOOGLE_ANALYTICS_ID,
+      initialValue: process.env.CLI_NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
     })
   ).toString();
 
   return { NEXT_PUBLIC_GOOGLE_ANALYTICS_ID };
+};
+
+export const getSupabaseEnvs = async (
+  project: string
+): Promise<{
+  NEXT_PUBLIC_SUPABASE_URL: string;
+  NEXT_PUBLIC_SUPABASE_KEY: string;
+  SUPABASE_USER_EMAIL: string;
+  SUPABASE_USER_PASSWORD: string;
+}> => {
+  if (!isDevMode) {
+    return {
+      NEXT_PUBLIC_SUPABASE_URL: process.env.CLI_NEXT_PUBLIC_SUPABASE_URL || '',
+      NEXT_PUBLIC_SUPABASE_KEY: process.env.CLI_NEXT_PUBLIC_SUPABASE_KEY || '',
+      SUPABASE_USER_EMAIL: process.env.CLI_SUPABASE_USER_EMAIL || '',
+      SUPABASE_USER_PASSWORD: process.env.CLI_SUPABASE_USER_PASSWORD || '',
+    };
+  }
+
+  const NEXT_PUBLIC_SUPABASE_URL = (
+    await text({
+      message: `Your ${project} supabase url:`,
+      validate,
+      initialValue: process.env.CLI_NEXT_PUBLIC_SUPABASE_URL,
+    })
+  ).toString();
+
+  const NEXT_PUBLIC_SUPABASE_KEY = (
+    await text({
+      message: `Your ${project} supabase key:`,
+      validate,
+      initialValue: process.env.CLI_NEXT_PUBLIC_SUPABASE_KEY,
+    })
+  ).toString();
+
+  const SUPABASE_USER_EMAIL = (
+    await text({
+      message: `Your ${project} supabase user email:`,
+      validate,
+      initialValue: process.env.CLI_SUPABASE_USER_EMAIL,
+    })
+  ).toString();
+
+  const SUPABASE_USER_PASSWORD = (
+    await text({
+      message: `Your ${project} supabase user password`,
+      validate,
+      initialValue: process.env.CLI_SUPABASE_USER_PASSWORD,
+    })
+  ).toString();
+
+  return { NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_KEY, SUPABASE_USER_EMAIL, SUPABASE_USER_PASSWORD };
 };
 
 export const additionalModulesForComponentStarterKit =

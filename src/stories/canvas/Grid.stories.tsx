@@ -2,6 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Grid, GridProps } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
+import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
 
 const columnCountOptions = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'];
 const gapXOptions = ['none', 'small', 'medium', 'large'];
@@ -15,10 +16,16 @@ const meta: Meta<GridProps> = {
 export default meta;
 type Story = StoryObj<typeof Grid>;
 
-const BASE_PROPS: Omit<GridProps, 'component'> = {
+const BASE_PROPS: Omit<GridProps, 'component' | 'children'> = {
   columnsCount: '3',
   gapX: 'small',
   gapY: 'small',
+  marginTop: PaddingSize.Medium,
+  marginBottom: PaddingSize.Medium,
+  backgroundType: BackgroundTypes.Light,
+  containerVariant: '',
+  paddingTop: PaddingSize.Medium,
+  paddingBottom: PaddingSize.Medium,
 };
 
 const argTypes = {

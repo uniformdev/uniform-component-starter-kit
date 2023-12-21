@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: db9ddb53-7047-4889-b5cb-31b7319b8de7
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: icon_twocolumn.svg
+    file:
+      type: file
+      value: 36c4b1cf-13a6-405f-b094-bde0cbe6772d
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/orCGnFICR-qivN-t_7xopQ-icon_twocolumn.svg
+      type: text
+    size:
+      value: 1089
+      type: number
+    width:
+      value: 165
+      type: number
+    height:
+      value: 165
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:31.678731+00:00'
+modified: '2023-12-20T11:17:31.678731+00:00'

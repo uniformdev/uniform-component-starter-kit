@@ -10,12 +10,11 @@ declare namespace Types {
 
   type CloudinaryImage = {
     url: string;
-    src?: string;
   }[];
 
-  type UniformImage = {
-    id: string;
-    url: string;
+  type UniformOldImage = {
+    id?: string;
+    url?: string;
   };
 
   type ButtonStyles = 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
@@ -59,6 +58,14 @@ declare namespace Types {
   type HorizontalAlignment = 'left' | 'center' | 'right';
 
   type SupportedThemes = 'uniform' | 'javadrip' | 'custom';
+
+  type TabSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type TableSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type CountdownSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type TabStyle = 'bordered' | 'lifted' | 'boxed';
 
   type ThemeColors = {
     value: string;

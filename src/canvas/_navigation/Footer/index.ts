@@ -1,4 +1,5 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { Footer } from './Footer';
 
 type Styles = {
@@ -8,7 +9,7 @@ type Styles = {
 };
 
 export type FooterProps = ComponentProps<{
-  logo: string | Types.CloudinaryImage;
+  logo?: string | Asset | Types.CloudinaryImage;
   displayBuildTimestamp?: boolean;
   copyright: string;
   footerText?: string;

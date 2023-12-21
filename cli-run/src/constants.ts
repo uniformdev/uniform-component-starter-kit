@@ -1,9 +1,8 @@
 export enum AvailableProjects {
   ComponentStarterKit = 'component-starter-kit',
+  ComponentStarterKitRsc = 'component-starter-kit-rsc',
   CommerceAlgoliaDemo = 'commerce-algolia',
-  CommerceCoveoDemo = 'commerce-coveo',
-  CommerceCommercetoolsDemo = 'commerce-commercetools',
-  Localization = 'localization',
+  SalesDemo = 'sales-demo',
   CommerceStarter = 'commerce-starter',
 }
 

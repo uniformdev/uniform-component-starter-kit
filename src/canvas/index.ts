@@ -6,9 +6,13 @@ import './Breadcrumbs';
 import './Button';
 import './CallToAction';
 import './Card';
+import './Countdown';
+import './Tabs';
+import './Tab';
 import './CardBlock';
 import './Carousel';
 import './_containers/Container';
+import './_containers/Box';
 import './_containers/Grid';
 import './_containers/GridItem';
 import './ContentBlock';
@@ -17,6 +21,7 @@ import './Feature';
 import './FeaturedCallout';
 import './Hero';
 import './Image';
+import './Table';
 import './Modal';
 import './_navigation/Footer';
 import './_navigation/FooterSection';
@@ -32,7 +37,7 @@ import './_navigation/_mega-menu/NavigationTwoColumnMenu';
 import './Price';
 import './ProductDetails';
 import './ProductInfo';
-import './ProductGallery';
+import './ImageGallery';
 import './Review';
 import './RichText';
 import './Spacer';
@@ -69,8 +74,8 @@ export { default as Carousel, CarouselVariants } from './Carousel';
 export { default as Container } from './_containers/Container';
 export type { ContainerProps } from './_containers/Container';
 
-export { default as ProductGallery } from './ProductGallery';
-export type { BaseProductGalleryProps } from './ProductGallery';
+export { default as ImageGallery } from './ImageGallery';
+export type { BaseImageGalleryProps } from './ImageGallery';
 
 export { default as ContentBlock } from './ContentBlock';
 export type { ContentBlockProps } from './ContentBlock';
@@ -103,3 +108,15 @@ export { default as RichText } from './RichText';
 
 export { default as Video } from './Video';
 export type { VideoProps } from './Video';
+
+export { default as Tabs } from './Tabs';
+export { TabsVariant } from './Tabs';
+export type { TabsProps } from './Tabs';
+
+export { default as Table } from './Table';
+export { TableVariant } from './Table';
+export type { TableProps } from './Table';
+
+export { default as Countdown } from './Countdown';
+export { CountdownVariant } from './Countdown';
+export type { CountdownProps } from './Countdown';

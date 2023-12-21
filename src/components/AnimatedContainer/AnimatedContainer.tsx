@@ -1,5 +1,5 @@
 import { FC, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { m as motion, useInView } from 'framer-motion';
 import { AnimatedContainerProps } from './';
 import { getAnimationParams } from './helpers';
 
@@ -21,7 +21,7 @@ const AnimatedContainer: FC<AnimatedContainerProps> = ({
     fadeInOffset,
   });
 
-  return animationParams ? (
+  return animationParams && !Boolean(process.env.NEXT_PUBLIC_E2E_TEST) ? (
     <motion.div className={className} ref={ref} {...animationParams}>
       {children}
     </motion.div>

@@ -19,8 +19,6 @@ that allows you to export and run demos from your demos monorepo. The tool is de
 
 This will start the CLI and prompt you with a menu of options to choose from.
 
-### Supported features
-
 ### Run Exported Demo
 
 The Run Exported Demo feature allows you to run an exported demo locally. To use this feature, follow these steps:

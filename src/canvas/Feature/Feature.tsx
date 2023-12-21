@@ -1,5 +1,5 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import Link from 'next/link';
 import { UniformText } from '@uniformdev/canvas-react';
 import { getMediaUrl } from '../../utilities';

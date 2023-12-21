@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: uniform_csk_logo.png
+    file:
+      type: file
+      value: b98b5a83-eaba-42ee-8567-4634ef5924a1
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+      type: text
+    size:
+      value: 6041
+      type: number
+    width:
+      value: 432
+      type: number
+    height:
+      value: 79
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:30.141882+00:00'
+modified: '2023-12-20T11:17:30.141882+00:00'

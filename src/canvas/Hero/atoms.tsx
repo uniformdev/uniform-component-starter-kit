@@ -1,6 +1,7 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import {
+  PaddingSize,
   getImageOverlayColorStyle,
   getImageOverlayOpacityStyle,
   getObjectFitClass,
@@ -9,7 +10,7 @@ import {
 import { UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import BaseContainer, { ContainerVariants, ContainerProps, ScreenContainer } from '../../components/Container';
 import { HeroProps } from './';
 
@@ -104,7 +105,7 @@ export const BackgroundImage: FC<
   if (!imageUrl && !videoUrl) return null;
   return (
     <>
-      {videoUrl ? (
+      {videoUrl && !Boolean(process.env.NEXT_PUBLIC_E2E_TEST) ? (
         <video
           autoPlay
           muted
@@ -146,7 +147,7 @@ export const SideImage: FC<
   if (!imageUrl && !videoUrl) return null;
 
   return (
-    <div className={classNames('relative shrink-0 relative w-[500px] h-[500px]', className)}>
+    <div className={classNames('relative shrink-0 relative w-full md:w-[500px] h-[500px]', className)}>
       {video ? (
         <video
           autoPlay
@@ -182,8 +183,8 @@ export const Container: FC<PropsWithChildren<ContainerProps & { fullHeight?: boo
   containerVariant,
   marginBottom,
   marginTop,
-  paddingBottom,
-  paddingTop,
+  paddingBottom = PaddingSize.None,
+  paddingTop = PaddingSize.None,
   backgroundType,
 }) => {
   const isFluid = containerVariant === ContainerVariants.FluidContent;

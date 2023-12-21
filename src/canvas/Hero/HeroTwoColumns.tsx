@@ -70,7 +70,7 @@ export const HeroTwoColumns: FC<HeroProps> = ({
         />
 
         <div className={classNames('flex flex-row mx-1 md:mx-10 z-20')}>
-          <div className="grid grid-cols-2 gap-x-28">
+          <div className="grid md:grid-cols-2 gap-x-28">
             <div className="flex flex-col">
               <ElementWrapper
                 duration={duration}

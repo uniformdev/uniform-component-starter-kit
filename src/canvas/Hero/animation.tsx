@@ -26,7 +26,11 @@ const useElementsWrapperKeys = (animationType: Types.AnimationType | undefined, 
 
   return useCallback(
     ({ children, ...props }: PropsWithChildren<AnimatedContainerProps>) =>
-      animationType ? <AnimatedContainer {...props}>{children}</AnimatedContainer> : <Fragment>{children}</Fragment>,
+      animationType && !Boolean(process.env.NEXT_PUBLIC_E2E_TEST) ? (
+        <AnimatedContainer {...props}>{children}</AnimatedContainer>
+      ) : (
+        <Fragment>{children}</Fragment>
+      ),
     // eslint-disable-next-line react-hooks/exhaustive-deps
     [runAnimationToggle]
   );
