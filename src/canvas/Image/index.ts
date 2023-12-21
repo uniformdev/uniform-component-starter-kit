@@ -4,8 +4,8 @@ import { Image } from './Image';
 
 export type ImageProps = ComponentProps<{
   src: string | Asset | Types.CloudinaryImage;
-  width: number;
-  height: number;
+  width: string | number;
+  height: string | number;
   alt?: string;
   fill?: boolean;
   quality?: number;

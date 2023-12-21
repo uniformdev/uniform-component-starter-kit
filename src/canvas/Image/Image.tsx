@@ -1,6 +1,7 @@
 import { FC } from 'react';
-import BaseImage from '../../components/Image';
+import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import classNames from 'classnames';
+import BaseImage from '../../components/Image';
 import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../../utilities/styling';
 import { getMediaUrl } from '../../utilities';
 import { getBorderColorStyle, getBorderRadiusStyle } from './helpers';
@@ -21,8 +22,13 @@ export const Image: FC<ImageProps> = ({
   borderRadius,
   objectFit,
 }) => {
-  if ((fill && (width || height)) || ((!width || !height) && !fill)) {
-    return null;
+  const { isContextualEditing } = useUniformContextualEditingState();
+
+  const widthWithDefault = width ? Number.parseInt(width as string) : 500;
+  const heightWithDefault = height ? Number.parseInt(height as string) : 300;
+
+  if (!src && isContextualEditing) {
+    return <span className="font-bold text-2xl italic">ℹ️ Please add an asset to display an image.</span>;
   }
 
   return (
@@ -32,12 +38,16 @@ export const Image: FC<ImageProps> = ({
         getBorderColorStyle(borderColor),
         getBorderRadiusStyle(borderRadius)
       )}
-      style={{ borderWidth: borderWidth }}
+      style={{
+        borderWidth: borderWidth,
+        minHeight: fill ? heightWithDefault : undefined,
+        minWidth: fill ? widthWithDefault : undefined,
+      }}
     >
       <BaseImage
         src={getMediaUrl(src)}
-        width={width}
-        height={height}
+        width={fill ? undefined : widthWithDefault}
+        height={fill ? undefined : heightWithDefault}
         className={classNames('w-full', getBorderRadiusStyle(borderRadius), getObjectFitClass(objectFit))}
         alt={alt ?? 'image'}
         fill={fill}

@@ -17,6 +17,29 @@ parameters:
     type: text
     helpText: alt text for image
     typeConfig: null
+  - id: group_dimensions
+    name: Dimensions
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - fill
+        - height
+        - width
+        - objectFit
+  - id: fill
+    name: Fill
+    type: checkbox
+    helpText: >-
+      A boolean that causes the image to fill the parent element instead of
+      setting width and height.
+    typeConfig: null
+  - id: height
+    name: Height
+    type: number
+    helpText: Set this only when the 'fill' property is unchecked.
+    typeConfig:
+      min: '1'
   - id: width
     name: Width
     type: number
@@ -24,19 +47,31 @@ parameters:
     typeConfig:
       min: '1'
       required: false
-  - id: height
-    name: Height
-    type: number
-    helpText: Set this only when the 'fill' property is unchecked.
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
     typeConfig:
-      min: '1'
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
   - id: group_styling
-    name: Overlay
+    name: Presentation
     type: group
     typeConfig:
+      collapsed: true
       childrenParams:
         - overlayColor
         - overlayOpacity
+        - borderWidth
+        - borderRadius
+        - borderColor
   - id: overlayColor
     name: Overlay Color
     type: tp-color-style-parameter
@@ -54,19 +89,6 @@ parameters:
       options: []
       maxValue: 100
       minValue: 0
-  - id: group_border
-    name: Border
-    type: group
-    typeConfig:
-      childrenParams:
-        - borderWidth
-        - borderColor
-        - borderRadius
-  - id: borderColor
-    name: Border Color
-    type: tp-color-style-parameter
-    helpText: ''
-    typeConfig: null
   - id: borderWidth
     name: Border Width
     type: tp-slider-parameter
@@ -99,6 +121,11 @@ parameters:
           value: full
       maxValue: 10
       minValue: 0
+  - id: borderColor
+    name: Border Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
   - id: group_advanced
     name: Rendering & loading
     type: group
@@ -107,29 +134,6 @@ parameters:
       childrenParams:
         - quality
         - priority
-        - fill
-        - objectFit
-  - id: objectFit
-    name: Object Fit
-    type: select
-    helpText: ''
-    typeConfig:
-      options:
-        - text: Contain
-          value: contain
-        - text: Cover
-          value: cover
-        - text: Fill
-          value: fill
-        - text: None
-          value: none
-  - id: fill
-    name: Fill
-    type: checkbox
-    helpText: >-
-      A boolean that causes the image to fill the parent element instead of
-      setting width and height.
-    typeConfig: null
   - id: quality
     name: Quality
     type: number
@@ -151,5 +155,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: alt
 canBeComposition: false
-created: '2023-12-20T11:17:42.303067+00:00'
-updated: '2023-12-20T11:17:42.303067+00:00'
+created: '2023-12-21T18:35:24.731143+00:00'
+updated: '2023-12-21T18:55:37.831163+00:00'
