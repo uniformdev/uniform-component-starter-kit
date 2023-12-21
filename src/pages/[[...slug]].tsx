@@ -7,7 +7,8 @@ export { default } from '../components/BasePage';
 
 export const getStaticProps = withUniformGetStaticProps({
   requestOptions: context => ({
-    state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    state:
+      process.env.NODE_ENV === 'development' || Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   }),
   param: 'slug',
   client: getRouteClient(),
