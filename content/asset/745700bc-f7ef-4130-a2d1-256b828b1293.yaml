@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 745700bc-f7ef-4130-a2d1-256b828b1293
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: uniform_logo_black.svg
+    file:
+      type: file
+      value: 7c040852-6112-46e2-98fd-e387f2b6b57c
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/WhcbAA4oTc29_-MG_Qvy5w-uniform_logo_black.svg
+      type: text
+    size:
+      value: 2288
+      type: number
+    width:
+      value: 608
+      type: number
+    height:
+      value: 192
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:26.824342+00:00'
+modified: '2023-12-20T11:17:26.824342+00:00'

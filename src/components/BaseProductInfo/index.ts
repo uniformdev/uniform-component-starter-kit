@@ -1,3 +1,5 @@
+import type { Asset } from '@uniformdev/assets';
+
 type Styles = {
   eyebrow?: string;
   title?: string;
@@ -13,7 +15,7 @@ export type Props = {
   subTitle: string;
   description: string;
   highlightText: string;
-  image?: string;
+  image?: string | Asset;
   primaryButtonCopy: string;
   primaryButtonStyle: Types.ButtonStyles;
   primaryButtonLink?: Types.ProjectMapLink;

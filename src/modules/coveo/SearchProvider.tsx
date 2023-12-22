@@ -16,7 +16,7 @@ type SearchProviderProps = ComponentProps<{
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const SearchProvider: FC<SearchProviderProps> = ({ component, ...facet }) => {
   const rootFacetName = Object.keys(facet)?.[0];
-  const rootFacetValue = facet[0] || '';
+  const rootFacetValue = facet[rootFacetName] || '';
 
   const headlessEngine = useMemo(() => getHeadlessEngine(), []);
   const headlessFacets = useMemo(

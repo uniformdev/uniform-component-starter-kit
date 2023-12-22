@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import Image from '../../../components/Image';
 import { getMediaUrl } from '../../../utilities';
 import { IconLinkProps } from '.';
 

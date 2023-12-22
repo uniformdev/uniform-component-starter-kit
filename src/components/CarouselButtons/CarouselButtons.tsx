@@ -33,7 +33,8 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
 
   return totalItems > slidesToShow ? (
     <div className="flex justify-center sm:justify-end items-center my-6 lg:mt-9">
-      <div
+      <button
+        aria-label="Go to previous"
         className={classNames(
           'btn rounded-none',
           buttonAnimationStyle
@@ -43,11 +44,12 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
         onClick={handlePrevious}
       >
         <IconArrow direction="left" />
-      </div>
+      </button>
       <p className={classNames('min-w-[90px] text-center font-bold', colorClassName)}>
         {currentSlide + 1} / {totalItems - slidesToShow + 1}
       </p>
-      <div
+      <button
+        aria-label="Go to next"
         className={classNames(
           'btn rounded-none',
           buttonAnimationStyle
@@ -57,7 +59,7 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
         onClick={handleNext}
       >
         <IconArrow direction="right" />
-      </div>
+      </button>
     </div>
   ) : null;
 };

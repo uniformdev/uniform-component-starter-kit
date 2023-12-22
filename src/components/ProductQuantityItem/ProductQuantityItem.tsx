@@ -13,7 +13,8 @@ const ProductQuantityItem: FC<ProductQuantityItemProps> = ({
   animationType,
 }) => (
   <div className="flex justify-between flex-row w-44 h-13 border border-gray-100">
-    <div
+    <button
+      aria-label="decrement"
       className={classNames(
         'btn rounded-none',
         animationType ? getButtonAnimationClass(buttonStyle, animationType) : getButtonClass(buttonStyle),
@@ -24,11 +25,12 @@ const ProductQuantityItem: FC<ProductQuantityItemProps> = ({
       onClick={onClickDecrement}
     >
       <IconMinus />
-    </div>
+    </button>
     <div className="flex justify-center items-center w-full border-x border-gray-100">
       <span className="font-bold text-secondary-content select-none">{quantity}</span>
     </div>
-    <div
+    <button
+      aria-label="increment"
       className={classNames(
         'btn rounded-none',
         animationType ? getButtonAnimationClass(buttonStyle, animationType) : getButtonClass(buttonStyle)
@@ -36,7 +38,7 @@ const ProductQuantityItem: FC<ProductQuantityItemProps> = ({
       onClick={onClickIncrement}
     >
       <IconPlus />
-    </div>
+    </button>
   </div>
 );
 

@@ -1,30 +1,50 @@
-import { FC, useMemo } from 'react';
-import Link from 'next/link';
+import { FC, useMemo, useCallback, useState } from 'react';
 import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { UniformSlot } from '@uniformdev/canvas-react';
+import { checkIsCurrentRoute } from './helpers';
 import { NavigationMenuProps } from '.';
 
 export const NavigationMenu: FC<NavigationMenuProps> = ({ link, title }) => {
   const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
+  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
 
-  const isCurrentRoute = useMemo(() => {
-    const { asPath } = router;
-    const [pathWithoutQuery] = asPath.split('?');
-    return link?.path === '/' ? asPath === link?.path : pathWithoutQuery.includes(link?.path);
-  }, [router, link]);
+  const onMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const onMouseLeave = useCallback(() => {
+    setIsHovered(false);
+  }, []);
 
   return (
-    <li tabIndex={0}>
-      <Link className={classNames('!rounded-none', { 'font-extrabold': isCurrentRoute })} href={link?.path || '#'}>
-        {title}
-        <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-          <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-        </svg>
-      </Link>
-      <ul className="w-max bg-primary text-white -right-6 !rounded-none z-40">
-        <UniformSlot name="content" />
-      </ul>
+    <li className="h-full !static" onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <details open={isHovered}>
+        <summary
+          className={classNames(
+            '!rounded-none px-6 text-base hover:text-primary-content hover:opacity-80',
+
+            {
+              'font-extrabold': isCurrentRoute,
+            }
+          )}
+        >
+          {title}
+        </summary>
+
+        <ul
+          className={classNames(
+            'lg:w-full text-primary-content !bg-transparent left-0 !rounded-none !mt-0 !p-0 lg:!pt-3 !p-0'
+          )}
+        >
+          <div className={classNames('lg:bg-gray-200 [&>*]:max-w-screen-xl [&>*]:mx-auto')}>
+            <div className="bg-primary">
+              <UniformSlot name="content" />
+            </div>
+          </div>
+        </ul>
+      </details>
     </li>
   );
 };

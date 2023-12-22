@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import { UniformPlaygroundDecorator } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { getObjectFitClass } from '../../utilities/styling';

@@ -1,5 +1,5 @@
 import { useCallback } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import { UniformPlaygroundDecorator } from '@uniformdev/canvas-react';
 
 // This decorator is used as a display of the FeatureCallout component around the Feature component

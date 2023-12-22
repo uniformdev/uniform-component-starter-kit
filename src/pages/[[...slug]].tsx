@@ -1,5 +1,5 @@
 import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
-import { withUniformGetStaticProps, withUniformGetStaticPaths } from '@uniformdev/canvas-next/route';
+import { withUniformGetStaticProps } from '@uniformdev/canvas-next/route';
 import { getBreadcrumbs, getProjectMapClient, getRouteClient } from '../utilities/canvas/canvasClients';
 export { default } from '../components/BasePage';
 
@@ -7,7 +7,8 @@ export { default } from '../components/BasePage';
 
 export const getStaticProps = withUniformGetStaticProps({
   requestOptions: context => ({
-    state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    state:
+      process.env.NODE_ENV === 'development' || Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   }),
   param: 'slug',
   client: getRouteClient(),
@@ -33,13 +34,12 @@ export const getStaticProps = withUniformGetStaticProps({
 });
 
 export const getStaticPaths = async () => {
-  const nodePaths = await withUniformGetStaticPaths({
-    preview: process.env.NODE_ENV === 'development',
-    client: getProjectMapClient(),
+  const { nodes } = await getProjectMapClient().getNodes({
+    state: process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
   });
-  const { paths } = await nodePaths();
+
   return {
-    paths,
+    paths: nodes?.reduce((acc: string[], { path, type }) => (type === 'composition' ? [...acc, path] : acc), []) || [],
     fallback: 'blocking',
   };
 };

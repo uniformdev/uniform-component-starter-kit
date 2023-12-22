@@ -9,6 +9,7 @@ import {
 
 interface ConfigureIntegration {
   displayName: string;
+  defaultType?: string;
   teamId: string;
   projectId: string;
   integrationParams?: Record<string, string>;
@@ -21,6 +22,7 @@ interface ConfigureIntegration {
 interface ConfigureDataSource {
   teamId: string;
   projectId: string;
+  integrationType?: string;
   integrationDisplayName: string;
   headers: Record<string, string>;
   connectorType: string;
@@ -33,6 +35,7 @@ interface ConfigureDataSource {
 
 export const configureIntegration = async ({
   displayName,
+  defaultType,
   teamId,
   projectId,
   integrationParams,
@@ -50,20 +53,21 @@ export const configureIntegration = async ({
     });
   }
 
-  const integration = await getIntegrationDefinitionByDisplayName({
-    displayName,
-    teamId,
-    apiHost,
-    headers,
-  });
+  const { type = defaultType } =
+    (await getIntegrationDefinitionByDisplayName({
+      displayName,
+      teamId,
+      apiHost,
+      headers,
+    })) || {};
 
-  if (!integration) {
+  if (!type) {
     throw new Error(`Integration definition is not available: ${displayName}`);
   }
 
   const installedIntegration = await getInstalledIntegration({
     projectId,
-    type: integration.type,
+    type,
     apiHost,
     headers,
   });
@@ -76,7 +80,7 @@ export const configureIntegration = async ({
 
   const newInstalledIntegration = await installIntegration({
     projectId,
-    type: integration.type,
+    type,
     data: dynamicIntegrationParams || integrationParams,
     apiHost,
     headers,
@@ -90,6 +94,7 @@ export const configureIntegration = async ({
 export const configureDataSource = async ({
   teamId,
   projectId,
+  integrationType,
   integrationDisplayName,
   headers,
   connectorType,
@@ -112,6 +117,7 @@ export const configureDataSource = async ({
   await addDataSource({
     teamId,
     projectId,
+    integrationType,
     integrationDisplayName,
     headers,
     connectorType,

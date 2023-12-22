@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import Image from '../../../components/Image';
 import classNames from 'classnames';
 import { UniformRichText, UniformSlot } from '@uniformdev/canvas-react';
 import { ScreenContainer } from '../../../components/Container';

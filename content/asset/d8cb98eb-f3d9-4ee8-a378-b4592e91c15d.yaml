@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: d8cb98eb-f3d9-4ee8-a378-b4592e91c15d
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: blog_header_cmc_comparison_guide.png
+    file:
+      type: file
+      value: c1d6e00e-df84-4f82-bfdc-67ec32ee8125
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/iYwKhUitTHyW72p3d0q5Fg-blog_header_cmc_comparison_guide.png
+      type: text
+    size:
+      value: 57386
+      type: number
+    width:
+      value: 819
+      type: number
+    height:
+      value: 461
+      type: number
+    custom: {}
+created: '2023-12-20T11:17:31.714157+00:00'
+modified: '2023-12-20T11:17:31.714157+00:00'

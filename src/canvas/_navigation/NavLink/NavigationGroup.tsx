@@ -1,6 +1,5 @@
-import { FC, useMemo } from 'react';
+import { FC, useMemo, useState, useCallback } from 'react';
 import classNames from 'classnames';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { UniformSlot } from '@uniformdev/canvas-react';
 import { checkIsCurrentRoute } from './helpers';
@@ -8,25 +7,37 @@ import { LinkProps } from '.';
 
 export const NavigationGroup: FC<LinkProps> = ({ title, link, styles }) => {
   const router = useRouter();
+  const [isHovered, setIsHovered] = useState(false);
   const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
 
+  const onMouseEnter = useCallback(() => {
+    setIsHovered(true);
+  }, []);
+
+  const onMouseLeave = useCallback(() => {
+    setIsHovered(false);
+  }, []);
+
   return (
-    <li tabIndex={0}>
-      <Link
-        className={classNames('!rounded-none', styles?.link, {
-          'font-extrabold': isCurrentRoute,
-          [styles?.activeLink || '']: isCurrentRoute,
-        })}
-        href={link?.path || '#'}
-      >
-        {title}
-        <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
-          <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-        </svg>
-      </Link>
-      <ul className="p-2 bg-primary !rounded-none z-50">
-        <UniformSlot name="subNavItems" />
-      </ul>
+    <li className="h-full" tabIndex={0} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>
+      <details open={isHovered}>
+        <summary
+          className={classNames(
+            '!rounded-none px-6 text-base hover:text-primary-content hover:opacity-60',
+            styles?.link,
+            {
+              'font-extrabold': isCurrentRoute,
+              [styles?.activeLink || '']: isCurrentRoute,
+            }
+          )}
+        >
+          {title}
+        </summary>
+
+        <ul className="p-2 bg-primary !rounded-none z-50 !mt-0 [&>*]:w-full [&>*]:min-w-max [&_a]:w-full [&_a]:py-4">
+          <UniformSlot name="subNavItems" />
+        </ul>
+      </details>
     </li>
   );
 };

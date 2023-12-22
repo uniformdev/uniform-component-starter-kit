@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-react';
 import { getMediaUrl } from '../../utilities';

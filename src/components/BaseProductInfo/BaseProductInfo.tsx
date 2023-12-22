@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image from '../Image';
 import classNames from 'classnames';
 import { UniformText } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
@@ -53,7 +53,7 @@ const ProductInfo: FC<Props> = ({
 
   return (
     <div
-      className={classNames('hero relative w-full h-full flex justify-end', {
+      className={classNames('hero relative w-full h-full flex justify-end px-4 md:px-0', {
         'min-h-[700px]': !fullHeight,
         'min-h-[calc(100vh-64px)]': fullHeight,
       })}
@@ -79,7 +79,7 @@ const ProductInfo: FC<Props> = ({
           />
         </>
       )}
-      <div className={classNames('flex w-1/2 flex-col mx-1 md:mx-10 z-20 text-primary-content')}>
+      <div className={classNames('flex w-full md:w-1/2 flex-col mx-1 md:mx-10 z-20 text-primary-content')}>
         <ElementWrapper
           duration={duration}
           delay={getDelayValue(0)}
@@ -157,7 +157,7 @@ const ProductInfo: FC<Props> = ({
             />
           )}
         </ElementWrapper>
-        <div className="w-1/3 py-10">
+        <div className="lg:w-1/3 py-10">
           <ElementWrapper
             duration={duration}
             delay={getDelayValue(9)}
@@ -205,11 +205,11 @@ const ProductInfo: FC<Props> = ({
           delay={getDelayValue(13)}
           animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
         >
-          <div className="flex justify-between w-3/4">
+          <div className="flex justify-between lg:w-3/4">
             {(features || []).map(feature => (
               <div className="flex items-center" key={feature}>
                 <FeatureIcon />
-                <p className="ml-2">{feature}</p>
+                <p className="ml-2 text-sm md:text-base">{feature}</p>
               </div>
             ))}
           </div>
@@ -219,4 +219,4 @@ const ProductInfo: FC<Props> = ({
   );
 };
 
-export default withoutContainer(ProductInfo, true);
+export default withoutContainer(ProductInfo, { withoutPaddings: true });

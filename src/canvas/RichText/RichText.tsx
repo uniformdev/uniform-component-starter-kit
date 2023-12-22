@@ -5,13 +5,17 @@ import Container from '../../components/Container';
 import { PaddingSize } from '../../utilities/styling';
 import { RichTextProps, RichTextVariants } from '.';
 
-export const RichText: FC<RichTextProps> = ({ component }) => (
-  <Container paddingTop={PaddingSize.Small} paddingBottom={PaddingSize.Small}>
+export const RichText: FC<RichTextProps> = ({ component, styles }) => (
+  <Container paddingTop={PaddingSize.None} paddingBottom={PaddingSize.None}>
     <div
-      className={classNames('prose max-w-full', {
-        'text-primary-content': component?.variant === RichTextVariants.Light,
-        'text-secondary-content': component?.variant !== RichTextVariants.Light,
-      })}
+      className={classNames(
+        'prose max-w-full',
+        {
+          'text-primary-content': component?.variant === RichTextVariants.Light,
+          'text-secondary-content': component?.variant !== RichTextVariants.Light,
+        },
+        styles?.content
+      )}
     >
       <UniformRichText
         className={classNames({

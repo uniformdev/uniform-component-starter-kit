@@ -1,15 +1,11 @@
 import {
   additionalModulesForComponentStarterKit,
   getAlgoliaEnvs,
-  getCommercetoolsEnvs,
-  getContentfulEnvs,
-  getCoveoEnvs,
   getGoogleAnalyticsEnvs,
   getSegmentEnvs,
+  getSupabaseEnvs,
 } from './informationCollector';
 import { AvailableProjects, CommonVariants } from './constants';
-import commercetoolsIntegration from './customIntegrations/commercetools';
-import openAIIntegration from './customIntegrations/openAI';
 import { composeGetEnvFns, fetchThemePackThemes } from './utils';
 
 export const demosVariantsGetEnvsMap: {
@@ -20,23 +16,20 @@ export const demosVariantsGetEnvsMap: {
     >
   >;
 } = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: getContentfulEnvs,
-  },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: () => undefined,
   },
   [AvailableProjects.ComponentStarterKit]: {
     [CommonVariants.Default]: () => undefined,
   },
+  [AvailableProjects.ComponentStarterKitRsc]: {
+    [CommonVariants.Default]: () => undefined,
+  },
   [AvailableProjects.CommerceAlgoliaDemo]: {
-    [CommonVariants.Default]: composeGetEnvFns(getAlgoliaEnvs, getSegmentEnvs, getGoogleAnalyticsEnvs),
+    [CommonVariants.Default]: composeGetEnvFns(getAlgoliaEnvs, getSegmentEnvs, getSupabaseEnvs),
   },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: composeGetEnvFns(getCoveoEnvs, getSegmentEnvs, getGoogleAnalyticsEnvs),
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: getCommercetoolsEnvs,
+  [AvailableProjects.SalesDemo]: {
+    [CommonVariants.Default]: composeGetEnvFns(getAlgoliaEnvs, getSegmentEnvs, getGoogleAnalyticsEnvs, getSupabaseEnvs),
   },
 };
 
@@ -52,12 +45,11 @@ export const Integrations = {
   Contentful: {
     name: 'Contentful',
   },
-  ContentfulClassic: {
-    name: 'Contentful Classic',
-    link: 'https://docs.uniform.app/docs/integrations/content/contentful/contentful-classic/uniform-in-contentful/uniformconf-nextjs-tutorial',
-  },
   Contentstack: {
     name: `Contentstack`,
+  },
+  KontentAi: {
+    name: `Kontent.ai`,
   },
   ThemePackUniform: {
     name: `Theme Pack`,
@@ -83,58 +75,69 @@ export const Integrations = {
   Algolia: {
     name: 'Algolia',
     data: {
-      applicationId: process.env.CLI_ALGOLIA_APPLICATION_ID,
-      searchKey: process.env.CLI_ALGOLIA_SEARCH_KEY,
-      indexName: process.env.CLI_ALGOLIA_INDEX_NAME,
-    },
-  },
-  Commercetools: {
-    name: 'Commercetools',
-    customManifest: commercetoolsIntegration,
-    data: {
-      projectKey: process.env.CLI_COMMERCETOOLS_PROJECT_KEY,
-      clientId: process.env.CLI_COMMERCETOOLS_CLIENT_ID,
-      clientSecret: process.env.CLI_COMMERCETOOLS_CLIENT_SECRET,
-      apiUrl: process.env.CLI_COMMERCETOOLS_API_URL,
-      authUrl: process.env.CLI_COMMERCETOOLS_AUTH_URL,
+      applicationId: process.env.CLI_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID,
+      searchKey: process.env.CLI_NEXT_PUBLIC_ALGOLIA_SEARCH_KEY,
+      allowedIndices: [process.env.CLI_ALGOLIA_INDEX_NAME],
     },
   },
   Coveo: {
     name: 'Coveo',
     data: {
-      organizationId: process.env.CLI_COVEO_ORGANIZATION_ID as string,
-      apiKey: process.env.CLI_COVEO_API_KEY as string,
+      organizationId: process.env.CLI_NEXT_PUBLIC_COVEO_ORGANIZATION_ID as string,
+      apiKey: process.env.CLI_NEXT_PUBLIC_COVEO_API_KEY as string,
     },
   },
   OpenAI: {
     name: 'OpenAI',
-    customManifest: openAIIntegration,
+    data: {
+      organization: process.env.CLI_OPEN_AI_ORGANIZATION,
+      token: process.env.CLI_OPEN_AI_TOKEN,
+    },
+  },
+  Writer: {
+    name: 'Writer',
+    data: {
+      organization: process.env.CLI_WRITER_ORGANIZATION,
+      team: process.env.CLI_WRITER_TEAM,
+      token: process.env.CLI_WRITER_API_KEY,
+    },
+  },
+  OctoAI: {
+    name: 'OctoAI Stable Diffusion',
+    data: {
+      endpoint: process.env.CLI_OCTO_AI_ENDPOINT,
+      token: process.env.CLI_OCTO_AI_API_KEY,
+    },
+  },
+  GoogleAnalytics: {
+    name: 'Google Analytics V4',
+    type: 'google-analytics-v4',
+    data: {
+      dataStreamName: `properties/${process.env.CLI_GOOGLE_ANALYTICS_PROPERTY_ID}/dataStreams/${process.env.CLI_GOOGLE_ANALYTICS_DATA_STREAMS_ID}`,
+      measurementId: process.env.CLI_NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
+      propertyId: `properties/${process.env.CLI_GOOGLE_ANALYTICS_PROPERTY_ID}`,
+    },
   },
 };
-
-export const notMeshIntegrations = [Integrations.ContentfulClassic.name];
 
 const BASE_URL = 'http://localhost:3000/api/preview?secret=';
 
 export const demosPreviewUrlMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, string>>;
 } = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: `${BASE_URL}javadrip`,
-  },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: `${BASE_URL}javadrip`,
   },
   [AvailableProjects.CommerceAlgoliaDemo]: {
     [CommonVariants.Default]: `${BASE_URL}javadrip`,
   },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: `${BASE_URL}javadrip`,
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
+  [AvailableProjects.SalesDemo]: {
     [CommonVariants.Default]: `${BASE_URL}javadrip`,
   },
   [AvailableProjects.ComponentStarterKit]: {
+    [CommonVariants.Default]: `${BASE_URL}hello-world`,
+  },
+  [AvailableProjects.ComponentStarterKitRsc]: {
     [CommonVariants.Default]: `${BASE_URL}hello-world`,
   },
 };
@@ -142,9 +145,6 @@ export const demosPreviewUrlMap: {
 export const demosRequiredIntegrationsMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, CLI.Integration[] | undefined>>;
 } = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: [Integrations.ThemePackJavadrip, Integrations.ContentfulClassic, Integrations.Cloudinary],
-  },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: [Integrations.ThemePackJavadrip, Integrations.UniformFakeCommerce],
   },
@@ -152,31 +152,33 @@ export const demosRequiredIntegrationsMap: {
     [CommonVariants.Default]: [
       Integrations.ThemePackJavadripBlack,
       Integrations.Algolia,
+      Integrations.KontentAi,
       Integrations.Cloudinary,
       Integrations.Contentful,
       Integrations.Contentstack,
       Integrations.OpenAI,
+      Integrations.Writer,
+      Integrations.OctoAI,
     ],
   },
-  [AvailableProjects.CommerceCoveoDemo]: {
+  [AvailableProjects.SalesDemo]: {
     [CommonVariants.Default]: [
       Integrations.ThemePackJavadripBlack,
-      Integrations.Coveo,
+      Integrations.Algolia,
+      Integrations.KontentAi,
       Integrations.Cloudinary,
-      Integrations.Contentful,
-      Integrations.OpenAI,
-    ],
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: [
-      Integrations.ThemePackJavadripBlack,
-      Integrations.Commercetools,
       Integrations.Contentful,
       Integrations.Contentstack,
-      Integrations.Cloudinary,
+      Integrations.OpenAI,
+      Integrations.Writer,
+      Integrations.OctoAI,
+      Integrations.GoogleAnalytics,
     ],
   },
   [AvailableProjects.ComponentStarterKit]: {
+    [CommonVariants.Default]: [Integrations.ThemePackUniform],
+  },
+  [AvailableProjects.ComponentStarterKitRsc]: {
     [CommonVariants.Default]: [Integrations.ThemePackUniform],
   },
 };
@@ -228,17 +230,32 @@ const DataSource: {
       ],
     },
   },
+  KontentAi: {
+    integrationDisplayName: 'Kontent.ai',
+    dataSourceDisplayName: 'Kontent.ai Data Source',
+    dataSourceId: 'kontentAiDataSource',
+    connectorType: 'kontent-ai-data-connection',
+    baseUrl: 'https://deliver.kontent.ai/bf6fb8b9-53e1-004f-964b-5aaa52ee073c',
+    dataProperties: {
+      headers: [
+        { key: 'Content-Type', value: 'application/json' },
+        { key: 'Authorization', value: `Bearer ${process.env.CLI_KONTENT_AI_DELIVERY_API_KEY}` },
+        { key: 'apiKey', value: process.env.CLI_KONTENT_AI_DELIVERY_API_KEY },
+        { key: 'environmentId', value: process.env.CLI_KONTENT_AI_ENVIRONMENT_ID },
+      ],
+    },
+  },
   Algolia: {
     integrationDisplayName: 'Algolia',
     dataSourceDisplayName: 'Algolia Data Source',
     dataSourceId: 'algoliaDataSource',
     connectorType: 'algolia-data-connection',
-    baseUrl: `https://${process.env.CLI_ALGOLIA_APPLICATION_ID}-dsn.algolia.net/1/indexes`,
+    baseUrl: `https://${process.env.CLI_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID}-dsn.algolia.net/1/indexes`,
     dataProperties: {
       headers: [
         { key: 'Content-Type', value: 'application/json' },
-        { key: 'X-Algolia-Application-Id', value: process.env.CLI_ALGOLIA_APPLICATION_ID },
-        { key: 'X-Algolia-API-Key', value: process.env.CLI_ALGOLIA_SEARCH_KEY },
+        { key: 'X-Algolia-Application-Id', value: process.env.CLI_NEXT_PUBLIC_ALGOLIA_APPLICATION_ID },
+        { key: 'X-Algolia-API-Key', value: process.env.CLI_NEXT_PUBLIC_ALGOLIA_SEARCH_KEY },
       ],
     },
   },
@@ -247,11 +264,11 @@ const DataSource: {
     dataSourceDisplayName: 'Coveo Data Source',
     dataSourceId: 'coveoDataSource',
     connectorType: 'coveo-data-connection',
-    baseUrl: `https://${process.env.CLI_COVEO_ORGANIZATION_ID}.org.coveo.com/rest/search/v2`,
+    baseUrl: `https://${process.env.CLI_NEXT_PUBLIC_COVEO_ORGANIZATION_ID}.org.coveo.com/rest/search/v2`,
     dataProperties: {
       headers: [
         { key: 'Content-Type', value: 'application/json' },
-        { key: 'Authorization', value: `Bearer ${process.env.CLI_COVEO_API_KEY}` },
+        { key: 'Authorization', value: `Bearer ${process.env.CLI_NEXT_PUBLIC_COVEO_API_KEY}` },
       ],
     },
   },
@@ -263,6 +280,24 @@ const DataSource: {
     baseUrl: process.env.CLI_UNIFORM_FAKE_COMMERCE_NGM_API_URL || '',
     dataProperties: {},
   },
+  UniformContent: {
+    integrationType: 'canvas',
+    integrationDisplayName: '',
+    dataSourceDisplayName: 'Uniform Content',
+    dataSourceId: 'uniformContent',
+    connectorType: 'uniformContent',
+    baseUrl: 'https://content.uniform.app',
+    dataProperties: {},
+  },
+  BrandData: {
+    integrationType: 'canvas',
+    integrationDisplayName: '',
+    dataSourceDisplayName: 'Brand Data',
+    dataSourceId: 'brandData',
+    connectorType: 'staticData',
+    baseUrl: 'https://uniform.app',
+    dataProperties: {},
+  },
 };
 
 export const demosRequiredDataSourceMap: {
@@ -270,45 +305,32 @@ export const demosRequiredDataSourceMap: {
     Record<CLI.CommonVariants, CLI.DataSourceConfiguration[] | undefined>
   >;
 } = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: [],
-  },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: [DataSource.UniformFakeCommerce],
   },
   [AvailableProjects.CommerceAlgoliaDemo]: {
-    [CommonVariants.Default]: [DataSource.Contentful, DataSource.Contentstack, DataSource.Algolia],
+    [CommonVariants.Default]: [
+      DataSource.Contentful,
+      DataSource.UniformContent,
+      DataSource.Contentstack,
+      DataSource.Algolia,
+      DataSource.KontentAi,
+    ],
   },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: [DataSource.Contentful, DataSource.Coveo],
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: [DataSource.Contentful, DataSource.Contentstack],
-  },
-  [AvailableProjects.ComponentStarterKit]: {
-    [CommonVariants.Default]: [],
-  },
-};
-
-export const demosVariantsRequiredLocales: {
-  [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, string[]>>;
-} = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: ['en-US', 'de-DE', 'es-ES'],
-  },
-  [AvailableProjects.CommerceStarter]: {
-    [CommonVariants.Default]: [],
-  },
-  [AvailableProjects.CommerceAlgoliaDemo]: {
-    [CommonVariants.Default]: [],
-  },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: [],
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
-    [CommonVariants.Default]: [],
+  [AvailableProjects.SalesDemo]: {
+    [CommonVariants.Default]: [
+      DataSource.Contentful,
+      DataSource.UniformContent,
+      DataSource.Contentstack,
+      DataSource.Algolia,
+      DataSource.BrandData,
+      DataSource.KontentAi,
+    ],
   },
   [AvailableProjects.ComponentStarterKit]: {
+    [CommonVariants.Default]: [],
+  },
+  [AvailableProjects.ComponentStarterKitRsc]: {
     [CommonVariants.Default]: [],
   },
 };
@@ -318,9 +340,6 @@ export const demosVariantsModulesRequire: {
     Record<CLI.CommonVariants, (props: CLI.AdditionalModulesExecutorProps) => Promise<void> | undefined>
   >;
 } = {
-  [AvailableProjects.Localization]: {
-    [CommonVariants.Default]: () => undefined,
-  },
   [AvailableProjects.CommerceStarter]: {
     [CommonVariants.Default]: () => undefined,
   },
@@ -330,13 +349,16 @@ export const demosVariantsModulesRequire: {
       packagesList: ['@coveo/headless@2.31.0'],
     }),
   },
+  [AvailableProjects.ComponentStarterKitRsc]: {
+    [CommonVariants.Default]: additionalModulesForComponentStarterKit({
+      integrationList: [Integrations.Coveo],
+      packagesList: ['@coveo/headless@2.31.0'],
+    }),
+  },
   [AvailableProjects.CommerceAlgoliaDemo]: {
     [CommonVariants.Default]: () => undefined,
   },
-  [AvailableProjects.CommerceCoveoDemo]: {
-    [CommonVariants.Default]: () => undefined,
-  },
-  [AvailableProjects.CommerceCommercetoolsDemo]: {
+  [AvailableProjects.SalesDemo]: {
     [CommonVariants.Default]: () => undefined,
   },
 };

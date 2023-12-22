@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import Image from '../../../components/Image';
 import { ScreenContainer } from '../../../components/Container';
 
 const BuildTimestamp = dynamic(() => import('../../../components/BuildTimestamp'), { ssr: false });

@@ -1,11 +1,12 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { NavigationMenuSectionLink } from './NavigationMenuSectionLink';
 
 export type NavigationMenuSectionLinkProps = ComponentProps<{
   title: string;
   link: Types.ProjectMapLink;
   description?: string;
-  icon?: string;
+  icon?: string | Asset;
 }>;
 
 export enum NavigationMenuSectionLinkVariant {

@@ -2,9 +2,12 @@ import Head from 'next/head';
 import { UniformAppProps } from '@uniformdev/context-next';
 import { UniformContext } from '@uniformdev/context-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
+import type { Asset } from '@uniformdev/assets';
+import { LazyMotion, domAnimation } from 'framer-motion';
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
 import '../styles/globals.scss';
+import { getMediaUrl } from '../utilities';
 
 const clientContext = createUniformContext();
 
@@ -38,16 +41,20 @@ const App = ({
 
   const compositionHeader = composition?.slots?.pageHeader?.[0];
 
-  const favicon = compositionHeader?.parameters?.favicon;
+  const favicon = compositionHeader?.parameters?.favicon?.value as Asset | undefined;
+  const faviconHref = getMediaUrl(favicon);
+
+  const openGraphImageSrc = getMediaUrl(openGraphImage?.value as Asset | undefined);
+  const twitterImageSrc = getMediaUrl(twitterImage?.value as Asset | undefined);
 
   const renderOgImageElement = () => {
-    if (overlayTitleToOgImage?.value && openGraphImage?.value) {
+    if (overlayTitleToOgImage?.value && openGraphImageSrc) {
       return (
         <meta
           property="og:image"
-          content={`${VERCEL_URL}/api/og?title=${ogTitle ?? title?.replaceAll?.(' ', '%20')}&image=${
-            openGraphImage.value
-          }`}
+          content={`${VERCEL_URL}/api/og?title=${
+            ogTitle ?? title?.replaceAll?.(' ', '%20')
+          }&image=${openGraphImageSrc}`}
         />
       );
     }
@@ -55,17 +62,15 @@ const App = ({
   };
 
   const renderTwitterImageElement = () => {
-    if (overlayTitleToTwitterImage?.value && twitterImage?.value) {
+    if (overlayTitleToTwitterImage?.value && twitterImageSrc) {
       return (
         <meta
           property="twitter:image"
-          content={`${VERCEL_URL}/api/og?title=${twTitle ?? title?.replaceAll?.(' ', '%20')}&image=${
-            twitterImage.value
-          }`}
+          content={`${VERCEL_URL}/api/og?title=${twTitle ?? title?.replaceAll?.(' ', '%20')}&image=${twitterImageSrc}`}
         />
       );
     }
-    if (twitterImage?.value) return <meta property="twitter:image" content={twitterImage?.value as string} />;
+    if (twitterImageSrc) return <meta property="twitter:image" content={twitterImageSrc} />;
   };
 
   return (
@@ -73,7 +78,7 @@ const App = ({
       <Head>
         {/* page metadata */}
         <title>{(pageTitle?.value as string) ?? 'Uniform Component Starter Kit'}</title>
-        <meta property="og:description" content={pageMetaDescription?.value as string} />
+        <meta name="description" content={pageMetaDescription?.value as string} />
         <meta name="keywords" content={pageKeywords?.value as string} />
         {/* Open Graph */}
         <meta property="og:title" content={(openGraphTitle?.value as string) ?? pageTitle?.value} />
@@ -93,11 +98,13 @@ const App = ({
         {/* Other stuff */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="version" content={process.env.NEXT_PUBLIC_APP_VERSION} />
-        {favicon?.value && <link rel="shortcut icon" href={favicon?.value as string} />}
+        {faviconHref && <link rel="shortcut icon" href={faviconHref} />}
       </Head>
-      <UniformContext context={serverUniformContext ?? clientContext}>
-        <Component {...pageProps} />
-      </UniformContext>
+      <LazyMotion features={domAnimation}>
+        <UniformContext context={serverUniformContext ?? clientContext}>
+          <Component {...pageProps} />
+        </UniformContext>
+      </LazyMotion>
     </>
   );
 };

@@ -36,8 +36,7 @@ const renderStory = (args: ContainerProps) => {
         variant: 'backgroundImage',
         parameters: createUniformParameter({
           title: 'Are developers stuck with outdated tech and custom code to maintain?',
-          image:
-            'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+          image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
           description:
             "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
           eyebrowText: 'Hero component',

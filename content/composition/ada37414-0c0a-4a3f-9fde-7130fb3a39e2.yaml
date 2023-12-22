@@ -1,0 +1,2825 @@
+composition:
+  _name: Header component
+  _id: ada37414-0c0a-4a3f-9fde-7130fb3a39e2
+  _slug: headers
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Header component
+    pageMetaDescription:
+      type: text
+      value: >-
+        The Header component is a crucial element of any web page, encompassing
+        branding elements and navigation menus.
+  slots:
+    pageFooter:
+      - _id: b757a5db-03dc-4679-9f5f-1130d34f1974
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 39f5a46c-64ed-4b8e-9c64-04fc67205b41
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 5d2d4405-e658-4151-be24-e49e8eba0135
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: b209321b-c038-4ef4-ac8d-f20cd5a9b872
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/Tcjiz9LUQW-p5qsF_l7cAw-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 0f63724b-fefc-4e0c-8bf5-f69ca432d352
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Header component
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              The Header component is a crucial element of any web page,
+              encompassing branding elements and navigation menus.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColorVariant:
+            type: select
+            value: Light
+      - _id: 599ba18f-c5f3-4174-a676-6fb4bd360226
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: c2d7f2b9-a6ba-4076-8a94-2b3fc8d9c397
+        type: content
+        parameters:
+          text:
+            type: text
+            value: >-
+              You can have left, center and right alignment of nav items. Check
+              it out:
+          title:
+            type: text
+            value: Left-aligned content
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: bb6c33e9-f9b2-4ed6-bb5c-ec6306bbae5f
+        type: header
+        slots:
+          links:
+            - _id: e70f03a1-06d5-47d1-b884-369e90917e25
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Home
+            - _id: 3f06ea4f-093f-48de-ac13-d36e06e461ca
+              type: navigationGroup
+              slots:
+                subNavItems:
+                  - _id: 39b2a5f1-7779-433d-9f2c-ac6eb91a6c0d
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/heroes
+                          type: projectMapNode
+                          nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Heroes
+                  - _id: 28f5ceba-45d4-45c1-aa0c-f53d9fe50ae2
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/calls-to-action
+                          type: projectMapNode
+                          nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Calls to Action
+                  - _id: 8d61bbac-56ee-420f-896f-589d6ccf0b58
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/card-blocks
+                          type: projectMapNode
+                          nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Card Blocks
+                  - _id: 32283bc9-d04f-43c4-9b47-2ca7481d7ab4
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/featured-callouts
+                          type: projectMapNode
+                          nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Featured Callouts
+                  - _id: ebbdc3e3-5054-4308-8e2f-a20169b2765f
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/accordions
+                          type: projectMapNode
+                          nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Accordions
+                  - _id: a9e9e031-19e4-46ea-b0d7-8235b05d1897
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/content-blocks
+                          type: projectMapNode
+                          nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Content Blocks
+                  - _id: 5472f65e-b793-42ea-b2d0-9e7721123349
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/layouts-container
+                          type: projectMapNode
+                          nodeId: a99b4044-8f9a-48fc-9f58-6c2fe4fb7534
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Layouts & Containers
+                  - _id: 83db1793-dcd5-41eb-8be9-de65f4b94c8a
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/images
+                          type: projectMapNode
+                          nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Images
+                  - _id: 9c5e250b-05c1-4944-8815-860846aa71c6
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Carousels
+                  - _id: bf0101c0-3e92-4c72-9fe7-9bf275f2e27e
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/headers-topnav
+                          type: projectMapNode
+                          nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Headers
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Components
+        parameters:
+          logo:
+            type: asset
+            value:
+              - _id: c88fca83-f31f-43c9-92c7-37096b869dd1
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
+                  size:
+                    value: 6041
+                    type: number
+                  title:
+                    type: text
+                    value: uniform_csk_logo.png
+                  width:
+                    value: 432
+                    type: number
+                  height:
+                    value: 79
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          theme:
+            type: tp-set-up-theme-parameter
+            value:
+              colors:
+                - name: primary
+                  label: Primary
+                  value: '#0052ED'
+                - name: primary-content
+                  label: Primary Content
+                  value: '#FFFFFF'
+                - name: secondary
+                  label: Secondary
+                  value: '#ffffff'
+                - name: secondary-content
+                  label: Secondary Content
+                  value: '#000000'
+                - name: accent
+                  label: Accent
+                  value: '#DF0000'
+                - name: accent-content
+                  label: Accent Content
+                  value: '#FFFFFF'
+                - name: info-content
+                  label: Info Content
+                  value: '#99C6FF'
+                - name: base-200
+                  label: Base 200
+                  value: '#6b8ff0'
+                - name: base-300
+                  label: Base 300
+                  value: '#001242'
+              themeName: uniform
+              themeLabel: Uniform
+          syntheticGap:
+            type: tp-slider-parameter
+            value: None
+          linksAlignment:
+            type: tp-horizontal-align-parameter
+            value: left
+      - _id: 593cc868-558b-4083-b6fa-bee21fde8614
+        type: content
+        parameters:
+          text:
+            type: text
+            value: >-
+              On top of content alignment, you can also pick from Light or Dark
+              variant. Check it out:
+          title:
+            type: text
+            value: Center-aligned in light variant and icon links
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 97e8439a-ae97-425a-8a15-322cc5aff769
+        type: header
+        slots:
+          links:
+            - _id: 500ac6b0-78f1-4d10-8ccd-a9055a18da9f
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Home
+            - _id: 9f6c50d3-f352-4cad-a756-c8b90d1eae27
+              type: navigationGroup
+              slots:
+                subNavItems:
+                  - _id: 118c0a7c-4a4d-45ac-b576-ab016bf3f811
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/heroes
+                          type: projectMapNode
+                          nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Heroes
+                  - _id: b61adf42-6cad-4b2d-a567-88211ef96927
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/calls-to-action
+                          type: projectMapNode
+                          nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Calls to Action
+                  - _id: caef54e7-452d-4989-ba7d-02bf378a407f
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/card-blocks
+                          type: projectMapNode
+                          nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Card Blocks
+                  - _id: f097ecce-2bb3-4cee-afae-909afcacfd0a
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/featured-callouts
+                          type: projectMapNode
+                          nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Featured Callouts
+                  - _id: 5c912108-7e99-46ec-9984-761afc009069
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/accordions
+                          type: projectMapNode
+                          nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Accordions
+                  - _id: ec2c81b6-2492-4128-a229-a2ae51aa74aa
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/content-blocks
+                          type: projectMapNode
+                          nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Content Blocks
+                  - _id: b349f4c1-dd93-4afb-89f2-a75df135a23f
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/layouts-container
+                          type: projectMapNode
+                          nodeId: a99b4044-8f9a-48fc-9f58-6c2fe4fb7534
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Layouts & Containers
+                  - _id: 83506683-660d-4728-8896-bf4a6af9d821
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/images
+                          type: projectMapNode
+                          nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Images
+                  - _id: e68fd330-6e1d-43ac-8854-122e33c48dc2
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Carousels
+                  - _id: 6a277720-278f-4b37-a7eb-8b275bad52df
+                    type: navigationLink
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: /components/headers-topnav
+                          type: projectMapNode
+                          nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      title:
+                        type: text
+                        value: Headers
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Components
+          iconLinks:
+            - _id: e0056294-6b2e-4c3f-b883-f01a9142c55b
+              type: iconLink
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: ebffce8a-3958-40a9-b55d-088a862f5f67
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 6e4df38e-7e0f-4f10-a490-d91ebc6ef84a
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/szQ4nIOlSW6XLzNDhdk7fw-storybook_icon.svg
+                          type: text
+                        file:
+                          type: file
+                          value: a7e2a12d-7ee3-4250-a44d-aa1289aa8d1c
+                        size:
+                          value: 7943
+                          type: number
+                        title:
+                          type: text
+                          value: storybook_icon.svg
+                        width:
+                          value: 38
+                          type: number
+                        height:
+                          value: 38
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                link:
+                  type: link
+                  value:
+                    path: https://components-storybook.uniform.app/
+                    type: url
+            - _id: 90d6f3da-2556-4982-a7be-7b03cd2715cb
+              type: iconLink
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 8eed50ba-dc2f-4af4-918d-8ab3e6d50eac
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: f02a73de-bab2-48da-a138-7463c1f82257
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/Tbi0AAcVTWyO9asuKJHbyg-github_icon.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 9a9e288a-69a0-43f5-b8c9-68076300b0b4
+                        size:
+                          value: 1325
+                          type: number
+                        title:
+                          type: text
+                          value: github_icon.svg
+                        width:
+                          value: 35
+                          type: number
+                        height:
+                          value: 34
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                link:
+                  type: link
+                  value:
+                    path: >-
+                      https://github.com/uniformdev/uniform-component-starter-kit
+                    type: url
+        variant: light
+        parameters:
+          logo:
+            type: asset
+            value:
+              - _id: 5a437c34-d7c6-4e89-85ac-834a6964780f
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
+                  size:
+                    value: 6041
+                    type: number
+                  title:
+                    type: text
+                    value: uniform_csk_logo.png
+                  width:
+                    value: 432
+                    type: number
+                  height:
+                    value: 79
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          theme:
+            type: tp-set-up-theme-parameter
+            value:
+              colors:
+                - name: primary
+                  label: Primary
+                  value: '#0052ED'
+                - name: primary-content
+                  label: Primary Content
+                  value: '#FFFFFF'
+                - name: secondary
+                  label: Secondary
+                  value: '#ffffff'
+                - name: secondary-content
+                  label: Secondary Content
+                  value: '#000000'
+                - name: accent
+                  label: Accent
+                  value: '#DF0000'
+                - name: accent-content
+                  label: Accent Content
+                  value: '#FFFFFF'
+                - name: info-content
+                  label: Info Content
+                  value: '#99C6FF'
+                - name: base-200
+                  label: Base 200
+                  value: '#6b8ff0'
+                - name: base-300
+                  label: Base 300
+                  value: '#001242'
+              themeName: uniform
+              themeLabel: Uniform
+          syntheticGap:
+            type: tp-slider-parameter
+            value: None
+          linksAlignment:
+            type: tp-horizontal-align-parameter
+            value: center
+      - _id: ee15a5b8-9862-4b5c-a9be-0e4de9cae0ff
+        type: content
+        parameters:
+          text:
+            type: text
+            value: 'hover over the Components item and see mega menu pop up:'
+          title:
+            type: text
+            value: Mega menu
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: d9c1667b-b729-4b5a-b64d-3e4bc462ae99
+        type: header
+        slots:
+          links:
+            - _id: 3a5f6dbe-fe07-4554-915d-5ccc268f380f
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Home
+            - _id: e8b015aa-ac39-4a18-b72b-10969c54a618
+              type: navigationMenu
+              slots:
+                content:
+                  - _id: c4ad4602-ad8b-44e2-a6a2-b2bf41bf0b33
+                    type: navigationOneColumnMenu
+                    slots:
+                      menuLinks:
+                        - _id: d754c46b-4f99-4195-9b46-ad9b1c9b6b13
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: caa1799c-217b-4972-9a98-82e1e3fa0a76
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 9e0f0b66-c7ba-49a9-84e7-36f3a1e22a81
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 3c9460c0-d3b3-41dd-a6f9-f20f87b3ecae
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/a4Az8Bq4RHqYHk7IsnDCZA-icon_hero.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 1494b1dc-7f3c-4a35-9408-86a5d92f178a
+                                          size:
+                                            value: 1696
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_hero.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Heroes
+                                  description:
+                                    type: text
+                                    value: Everyone needs a hero, sometimes a couple.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/heroes
+                                type: projectMapNode
+                                nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Heroes
+                        - _id: 5a5750c0-29f0-416d-b923-eef67f5dbb38
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: bda25ee8-a074-45f4-98c2-7bcc11825f8e
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: e4d2ef90-7474-4e96-8880-ec81db62cc2b
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: c05ce5fb-7c0b-4dcf-9324-6bfb1deeb2a0
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/WPpbQqDITOqzVetteMOplQ-icon_CTA.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 10a58469-f1a6-4ba7-a0f2-5c080c9b5cb4
+                                          size:
+                                            value: 1571
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_CTA.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Calls to action, or CTAs
+                                  description:
+                                    type: text
+                                    value: Who are you going to call?
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/calls-to-action
+                                type: projectMapNode
+                                nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Calls to Action
+                        - _id: c72e0955-e51e-4be0-9332-049723882388
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: af05b112-137c-44da-aa8d-3790348e65c7
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 2014cc65-808c-48fc-97b3-e26144745241
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 1e729c12-25c9-46a2-aeb2-33ce3e47fecb
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/BDn9_iQVQoW3ON9oBeva1w-icon_cardblock.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ffbaa7d3-93ec-4faa-bb64-a1e3ce3c9194
+                                          size:
+                                            value: 2587
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_cardblock.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Card Blocks
+                                  description:
+                                    type: text
+                                    value: List of cards and title / text
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/card-blocks
+                                type: projectMapNode
+                                nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Card Blocks
+                        - _id: 0511d3fa-e82f-479f-82b4-4ae4d5c40797
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 0ab16753-629d-4a0c-a9a1-419305f0fb92
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 7e6bb666-9234-4658-b4bd-f1ccfd1b1787
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: ebb86899-7d34-4261-a085-dbf50629bfb9
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/pVvW91MjRT2_w3sKscqZ8Q-icon_featured_callout.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: b7b13bb7-4b8d-4156-94ed-42a11f8ad882
+                                          size:
+                                            value: 6109
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_featured_callout.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Featured Callouts
+                                  description:
+                                    type: text
+                                    value: >-
+                                      Featured image, title, text and icon
+                                      bullets.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/featured-callouts
+                                type: projectMapNode
+                                nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Featured Callouts
+                        - _id: d2e32477-6bf3-4acc-b6d3-f6b0978c21f1
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: f1617be6-1065-4f18-9a69-5c9853230660
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: dcffb522-9d59-4bc9-815b-b91529a6827d
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 2c99b69f-1506-43ea-8d33-67fee8f9fe8f
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/u6ypPCVARHyN-A00uqY_2A-icon_accordion.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 876db3fe-76d6-48bb-9373-6f9fb71d6fbb
+                                          size:
+                                            value: 718
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_accordion.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Accordions
+                                  description:
+                                    type: text
+                                    value: Not your grandpa's accordion!
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/accordions
+                                type: projectMapNode
+                                nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Accordions
+                        - _id: f45d3ca0-a980-4ef5-a720-d14015dda78b
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: ef1ecc32-65e1-4134-9c58-acdb2481e229
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: d66b334d-2dc5-4aaf-b55c-9e4049c8e1c6
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: cf82c484-3f0b-4cea-8249-ed99b6757ae5
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/xGJHPJc8Ss-RR5JYpYjJKw-icon_content.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: d7298e19-075e-475a-8cbf-bc1d414b2a31
+                                          size:
+                                            value: 614
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_content.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Content Blocks
+                                  description:
+                                    type: text
+                                    value: title ❤️ text rendezvous
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/content-blocks
+                                type: projectMapNode
+                                nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Content Blocks
+                        - _id: b2bb7dd1-656b-46c4-9b1c-22456a767434
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 62355172-1bb3-4220-a0f2-479e7a140dc8
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 2b69dc28-225e-4356-9b8f-989432d27090
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: db9ddb53-7047-4889-b5cb-31b7319b8de7
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/orCGnFICR-qivN-t_7xopQ-icon_twocolumn.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 54ea7740-c374-4324-a815-efd99f5f16df
+                                          size:
+                                            value: 1089
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_twocolumn.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Layouts & Containers
+                                  description:
+                                    type: text
+                                    value: >-
+                                      After seeing this, you won't be able to
+                                      contain yourself.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/layouts-container
+                                type: projectMapNode
+                                nodeId: a99b4044-8f9a-48fc-9f58-6c2fe4fb7534
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Layouts & Containers
+                        - _id: 6272cf7e-03a5-470f-842d-90b236f44a8e
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 71ab8cf8-b3e0-43a1-ba58-a14002f0d263
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: a088bd1f-681a-49f3-9a62-e684c5276766
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 28ee8793-25b5-4f08-8edd-7accaaf4a9a5
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/apaD7GprQ1uLYxB-tUh3TA-icon_image.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: eea721f7-b259-4726-bf5c-2f2de81f4e95
+                                          size:
+                                            value: 1076
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_image.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Responsive Image
+                                  description:
+                                    type: text
+                                    value: >-
+                                      You can't build a website without one, you
+                                      know?
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/images
+                                type: projectMapNode
+                                nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Images
+                        - _id: a12a9798-5d0c-4160-a8c6-221c29128682
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: f1ef3f37-81ef-4736-8101-02e3f4d96975
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 5d5e964e-9b19-43d9-b8f0-3b820bf621b0
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 1e729c12-25c9-46a2-aeb2-33ce3e47fecb
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/BDn9_iQVQoW3ON9oBeva1w-icon_cardblock.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ffbaa7d3-93ec-4faa-bb64-a1e3ce3c9194
+                                          size:
+                                            value: 2587
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_cardblock.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Carousel
+                                  description:
+                                    type: text
+                                    value: >-
+                                      The Carousel component is a slideshow-like
+                                      element that enables the display of
+                                      multiple pieces of content or images in a
+                                      visually engaging and interactive manner.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/carousels
+                                type: projectMapNode
+                                nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Carousels
+                        - _id: c4e99a64-1ec4-481e-852b-a224000739f2
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 31b25a9c-d50c-448a-bd81-dd9ae483bdcc
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 03659519-a5bc-4a76-a5b2-c32f10183a52
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: db9ddb53-7047-4889-b5cb-31b7319b8de7
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/orCGnFICR-qivN-t_7xopQ-icon_twocolumn.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 54ea7740-c374-4324-a815-efd99f5f16df
+                                          size:
+                                            value: 1089
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_twocolumn.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Headers
+                                  description:
+                                    type: text
+                                    value: >-
+                                      The Website Header component is a crucial
+                                      element at the top of a web page,
+                                      encompassing branding elements, navigation
+                                      menus, and key information, offering users
+                                      a consistent and recognizable interface
+                                      for seamless browsing and navigation.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            link:
+                              type: link
+                              value:
+                                path: /components/headers-topnav
+                                type: projectMapNode
+                                nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Headers
+                      defaultContent:
+                        - _id: d3560c84-1763-410e-93fd-db651578358a
+                          type: card
+                          variant: backgroundImage
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 59082893-5eea-4b43-948c-c1dc16dde90d
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: cec6bce4-01f4-4159-a780-ab35e2411cb8
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/g1Arhb-HRJCFoWxHTrOoLw-corel_DESIGNER_lines_halo.jpg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: bb26afab-4ca3-4003-8b0f-3dafbc1c1fc7
+                                    size:
+                                      value: 107909
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: corel_DESIGNER_lines_halo.jpg
+                                    width:
+                                      value: 555
+                                      type: number
+                                    height:
+                                      value: 381
+                                      type: number
+                                    mediaType:
+                                      value: image/jpeg
+                                      type: text
+                                  _source: uniform-assets
+                            title:
+                              type: text
+                              value: Browse Components
+                            objectFit:
+                              type: select
+                              value: fill
+                            description:
+                              type: text
+                              value: >-
+                                Browse all the components and variants grouped
+                                by family
+                            overlayColor:
+                              type: tp-color-style-parameter
+                              value: base-300
+                            overlayOpacity:
+                              type: tp-slider-parameter
+                              value: 50%
+                    parameters:
+                      title:
+                        type: text
+                        value: One Column Menu
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Components
+        parameters:
+          logo:
+            type: asset
+            value:
+              - _id: dd3ad755-aac9-48fe-8374-fc5d364a06b5
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
+                  size:
+                    value: 6041
+                    type: number
+                  title:
+                    type: text
+                    value: uniform_csk_logo.png
+                  width:
+                    value: 432
+                    type: number
+                  height:
+                    value: 79
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          theme:
+            type: tp-set-up-theme-parameter
+            value:
+              colors:
+                - name: primary
+                  label: Primary
+                  value: '#0052ED'
+                - name: primary-content
+                  label: Primary Content
+                  value: '#FFFFFF'
+                - name: secondary
+                  label: Secondary
+                  value: '#ffffff'
+                - name: secondary-content
+                  label: Secondary Content
+                  value: '#000000'
+                - name: accent
+                  label: Accent
+                  value: '#DF0000'
+                - name: accent-content
+                  label: Accent Content
+                  value: '#FFFFFF'
+                - name: info-content
+                  label: Info Content
+                  value: '#99C6FF'
+                - name: base-200
+                  label: Base 200
+                  value: '#6b8ff0'
+                - name: base-300
+                  label: Base 300
+                  value: '#001242'
+              themeName: uniform
+              themeLabel: Uniform
+          syntheticGap:
+            type: tp-slider-parameter
+            value: None
+          linksAlignment:
+            type: tp-horizontal-align-parameter
+            value: right
+      - _id: bc786ce5-a02e-4ca0-ace4-0c0b67d1d326
+        type: content
+        parameters:
+          text:
+            type: text
+            value: 'Hover over the Components nav item to see it in action:'
+          title:
+            type: text
+            value: Mega menu with CTA links
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 5ead9d9c-3cec-4c63-bb9e-13d9aa2a2e0b
+        type: header
+        slots:
+          links:
+            - _id: 14fab75d-5d0a-4b70-aabf-f46298df22d0
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Home
+            - _id: 626743b1-72c0-4eef-bcc5-61dd4483a944
+              type: navigationMenu
+              slots:
+                content:
+                  - _id: 4dbfa66a-94d3-45be-ad5a-60d997e90315
+                    type: navigationOneColumnMenu
+                    slots:
+                      menuLinks:
+                        - _id: bf0d57a0-3fde-4ebb-9653-9c35502d345b
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 7502e90f-b3b7-42c9-a5ec-fc201f88081c
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: c7003fe5-911e-419d-9354-46bbc968eb2e
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 3c9460c0-d3b3-41dd-a6f9-f20f87b3ecae
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/a4Az8Bq4RHqYHk7IsnDCZA-icon_hero.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 1494b1dc-7f3c-4a35-9408-86a5d92f178a
+                                          size:
+                                            value: 1696
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_hero.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Heroes
+                                  description:
+                                    type: text
+                                    value: Everyone needs a hero, sometimes a couple.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: 3a5ef9fe-639c-464a-853b-cc7ecbfefa5c
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 4050736c-421b-4910-8595-c914b4693be6
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/bVS6UNTBQp2PQFC5Bc11Bw-icon_hero_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e353a1d1-56ab-43e8-9ce3-cae24e3f0b99
+                                    size:
+                                      value: 1693
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_hero_w.svg
+                                    width:
+                                      value: 165
+                                      type: number
+                                    height:
+                                      value: 165
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/heroes
+                                type: projectMapNode
+                                nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Heroes
+                            description:
+                              type: text
+                              value: Everyone needs a hero
+                        - _id: c86d4d45-3de8-44b7-a716-e6ec734b0843
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 358fd772-b4aa-4422-864f-88eb9360f278
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 7696e0ef-b0c0-4dd0-bc55-ff4ef68b3f1b
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: c05ce5fb-7c0b-4dcf-9324-6bfb1deeb2a0
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/WPpbQqDITOqzVetteMOplQ-icon_CTA.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 10a58469-f1a6-4ba7-a0f2-5c080c9b5cb4
+                                          size:
+                                            value: 1571
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_CTA.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Calls to action, or CTAs
+                                  description:
+                                    type: text
+                                    value: Who are you going to call?
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: e6d176c2-320e-45f7-8818-47b6bae61ae5
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 541df06f-1366-4874-9ab3-54e435ac68f8
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/_KyXTo3jT0W1sxyzgXeR6w-icon_CTA_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: c63acbd3-6aa9-4879-bf2b-c8abf400c458
+                                    size:
+                                      value: 1568
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_CTA_w.svg
+                                    width:
+                                      value: 220
+                                      type: number
+                                    height:
+                                      value: 220
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/calls-to-action
+                                type: projectMapNode
+                                nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Calls to Action
+                            description:
+                              type: text
+                              value: Who are you going to call?
+                        - _id: df9ab204-87b9-4705-9b0d-806ece26fd81
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 1b7b698c-90c0-40fb-b78d-fe46a72457ee
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 19144707-76be-4970-b961-444c0d226d88
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 1e729c12-25c9-46a2-aeb2-33ce3e47fecb
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/BDn9_iQVQoW3ON9oBeva1w-icon_cardblock.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ffbaa7d3-93ec-4faa-bb64-a1e3ce3c9194
+                                          size:
+                                            value: 2587
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_cardblock.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Card Blocks
+                                  description:
+                                    type: text
+                                    value: List of cards and title / text
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: 431914de-0837-455a-a560-2699e011d396
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 321b5ac1-0cce-435d-baff-bb00838a832a
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/P6LPSdGKR_iv4xA8lJjI0w-icon_cardblock_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e60fef6b-e6a7-459d-b77f-4951e461eb24
+                                    size:
+                                      value: 2584
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_cardblock_w.svg
+                                    width:
+                                      value: 220
+                                      type: number
+                                    height:
+                                      value: 220
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/card-blocks
+                                type: projectMapNode
+                                nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Card Blocks
+                            description:
+                              type: text
+                              value: List of cards and title / text
+                        - _id: 0ba07778-6a39-4d64-9454-9357df8ef39c
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 437bfc4e-ddfa-412e-82be-a438fac702b4
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 63e049a4-f84b-4fad-9996-c1cbcc614af9
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: ebb86899-7d34-4261-a085-dbf50629bfb9
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/pVvW91MjRT2_w3sKscqZ8Q-icon_featured_callout.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: b7b13bb7-4b8d-4156-94ed-42a11f8ad882
+                                          size:
+                                            value: 6109
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_featured_callout.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Featured Callouts
+                                  description:
+                                    type: text
+                                    value: >-
+                                      Featured image, title, text and icon
+                                      bullets.
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: 266af9e5-f2c0-4469-a1b0-00274cc0b8a9
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 49dc166e-07c5-4a77-ab0c-61ee94238b2c
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/kdmuzTV-SrCqXbxDkgpcdw-icon_featured_callout_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: 925445f2-865a-4298-854c-0621a5584353
+                                    size:
+                                      value: 6076
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_featured_callout_w.svg
+                                    width:
+                                      value: 220
+                                      type: number
+                                    height:
+                                      value: 220
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/featured-callouts
+                                type: projectMapNode
+                                nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Featured Callouts
+                            description:
+                              type: text
+                              value: Featured image, title, text and icon bullets.
+                        - _id: 7fd73510-f551-4e58-81a5-3c47111b6b2e
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: afed3b4c-efee-4da1-bdd0-6dbee130b5b9
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 03b58000-3298-4f59-a362-a36026768bc1
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 2c99b69f-1506-43ea-8d33-67fee8f9fe8f
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/u6ypPCVARHyN-A00uqY_2A-icon_accordion.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 876db3fe-76d6-48bb-9373-6f9fb71d6fbb
+                                          size:
+                                            value: 718
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_accordion.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Accordions
+                                  description:
+                                    type: text
+                                    value: Not your grandpa's accordion!
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: 7b9f772c-e4dd-4131-83af-6d325afb7792
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 51704f77-248b-4ab7-915b-4bb43436f74d
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/CVUcL6S0SZGftrLhHmHOcA-icon_accordion_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: 2bc30588-d738-43e4-b9a6-2710f6992ad5
+                                    size:
+                                      value: 715
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_accordion_w.svg
+                                    width:
+                                      value: 220
+                                      type: number
+                                    height:
+                                      value: 220
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/accordions
+                                type: projectMapNode
+                                nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Accordions
+                            description:
+                              type: text
+                              value: Not your grandpa's accordion!
+                        - _id: 59b99026-9bf6-4d53-97fd-44e81ea322a9
+                          type: navigationOneColumnMenuLink
+                          slots:
+                            hoverContent:
+                              - _id: 366a194b-081e-46b1-a5a2-fd408057ea22
+                                type: card
+                                variant: backgroundImage
+                                parameters:
+                                  image:
+                                    type: asset
+                                    value:
+                                      - _id: 6e2e6313-f904-4ba3-b40c-52ee361808c4
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: cf82c484-3f0b-4cea-8249-ed99b6757ae5
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/xGJHPJc8Ss-RR5JYpYjJKw-icon_content.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: d7298e19-075e-475a-8cbf-bc1d414b2a31
+                                          size:
+                                            value: 614
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_content.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  title:
+                                    type: text
+                                    value: Content Blocks
+                                  description:
+                                    type: text
+                                    value: title ❤️ text rendezvous
+                                  overlayColor:
+                                    type: tp-color-style-parameter
+                                    value: base-300
+                                  overlayOpacity:
+                                    type: tp-slider-parameter
+                                    value: 50%
+                          parameters:
+                            icon:
+                              type: asset
+                              value:
+                                - _id: b3d976b5-7149-48c6-9b2d-c5b9ea529c75
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 5acfc75d-92a2-421c-9674-dab48282be2e
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/QnJsaQK0Sp6D559iuqb__w-icon_content_w.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e0f8770a-ce0a-46fc-8b03-9149028b54ef
+                                    size:
+                                      value: 611
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: icon_content_w.svg
+                                    width:
+                                      value: 165
+                                      type: number
+                                    height:
+                                      value: 165
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            link:
+                              type: link
+                              value:
+                                path: /components/content-blocks
+                                type: projectMapNode
+                                nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                                projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                            title:
+                              type: text
+                              value: Content Blocks
+                            description:
+                              type: text
+                              value: title ❤️ text rendezvous
+                      defaultContent:
+                        - _id: 4484f814-75cd-47bd-9491-839de61ded58
+                          type: card
+                          variant: backgroundImage
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 0fc4796d-f226-4a35-bd73-e0bfa33d16de
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: cec6bce4-01f4-4159-a780-ab35e2411cb8
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/g1Arhb-HRJCFoWxHTrOoLw-corel_DESIGNER_lines_halo.jpg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: bb26afab-4ca3-4003-8b0f-3dafbc1c1fc7
+                                    size:
+                                      value: 107909
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: corel_DESIGNER_lines_halo.jpg
+                                    width:
+                                      value: 555
+                                      type: number
+                                    height:
+                                      value: 381
+                                      type: number
+                                    mediaType:
+                                      value: image/jpeg
+                                      type: text
+                                  _source: uniform-assets
+                            title:
+                              type: text
+                              value: Browse Components
+                            description:
+                              type: text
+                              value: >-
+                                Browse all the components and variants grouped
+                                by family
+                            overlayColor:
+                              type: tp-color-style-parameter
+                              value: base-300
+                            overlayOpacity:
+                              type: tp-slider-parameter
+                              value: 50%
+                    parameters:
+                      title:
+                        type: text
+                        value: Featured One Column Menu
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components
+                          type: projectMapNode
+                          nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: accent
+                      secondaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: secondary
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Components
+        parameters:
+          logo:
+            type: asset
+            value:
+              - _id: baead91d-30bd-4b6c-931e-27359678a885
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
+                  size:
+                    value: 6041
+                    type: number
+                  title:
+                    type: text
+                    value: uniform_csk_logo.png
+                  width:
+                    value: 432
+                    type: number
+                  height:
+                    value: 79
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          theme:
+            type: tp-set-up-theme-parameter
+            value:
+              colors:
+                - name: primary
+                  label: Primary
+                  value: '#0052ED'
+                - name: primary-content
+                  label: Primary Content
+                  value: '#FFFFFF'
+                - name: secondary
+                  label: Secondary
+                  value: '#ffffff'
+                - name: secondary-content
+                  label: Secondary Content
+                  value: '#000000'
+                - name: accent
+                  label: Accent
+                  value: '#DF0000'
+                - name: accent-content
+                  label: Accent Content
+                  value: '#FFFFFF'
+                - name: info-content
+                  label: Info Content
+                  value: '#99C6FF'
+                - name: base-200
+                  label: Base 200
+                  value: '#6b8ff0'
+                - name: base-300
+                  label: Base 300
+                  value: '#001242'
+              themeName: uniform
+              themeLabel: Uniform
+          syntheticGap:
+            type: tp-slider-parameter
+            value: None
+          linksAlignment:
+            type: tp-horizontal-align-parameter
+            value: center
+      - _id: 05789820-c91e-41ea-b637-57057592cd76
+        type: content
+        parameters:
+          text:
+            type: text
+            value: 'Hover over the Components nav item to see it in action:'
+          title:
+            type: text
+            value: 2-column mega menu with two CTA links
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 944c8666-5763-4db7-98c7-d5d113cf9740
+        type: header
+        slots:
+          links:
+            - _id: c5153442-2a5b-4abd-bf62-3bea6b6e8fe7
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Home
+            - _id: f1aefc1e-9ea3-4985-8011-52e35427e107
+              type: navigationMenu
+              slots:
+                content:
+                  - _id: 3c54f181-f0ea-4739-99ae-7498c89329bb
+                    type: navigationTwoColumnsMenu
+                    slots:
+                      content:
+                        - _id: 8e7fa5ae-8f4a-4fa1-bd15-84b03de76b3d
+                          type: card
+                          variant: backgroundImage
+                          parameters:
+                            badge:
+                              type: text
+                              value: 'New '
+                            image:
+                              type: asset
+                              value:
+                                - _id: 4d440086-eb9b-432a-89a0-ab2f7f41447c
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: cec6bce4-01f4-4159-a780-ab35e2411cb8
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/g1Arhb-HRJCFoWxHTrOoLw-corel_DESIGNER_lines_halo.jpg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: bb26afab-4ca3-4003-8b0f-3dafbc1c1fc7
+                                    size:
+                                      value: 107909
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: corel_DESIGNER_lines_halo.jpg
+                                    width:
+                                      value: 555
+                                      type: number
+                                    height:
+                                      value: 381
+                                      type: number
+                                    mediaType:
+                                      value: image/jpeg
+                                      type: text
+                                  _source: uniform-assets
+                            title:
+                              type: text
+                              value: Browse Components
+                            badgeSize:
+                              type: select
+                              value: md
+                            badgeStyle:
+                              type: tp-badge-style-parameter
+                              value: accent
+                            description:
+                              type: text
+                              value: >-
+                                Browse all the components and variants grouped
+                                by family
+                            overlayColor:
+                              type: tp-color-style-parameter
+                              value: base-300
+                            overlayOpacity:
+                              type: tp-slider-parameter
+                              value: 50%
+                      leftColumn:
+                        - _id: c8cfc851-909f-4943-9fd2-8d99f80d7e54
+                          type: navigationMenuSection
+                          slots:
+                            links:
+                              - _id: 9dcad473-3f35-48bc-84d7-633af9fb3d29
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: 2c4bb966-7cf2-4255-a366-50c8dd74afc3
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 4050736c-421b-4910-8595-c914b4693be6
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/bVS6UNTBQp2PQFC5Bc11Bw-icon_hero_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: e353a1d1-56ab-43e8-9ce3-cae24e3f0b99
+                                          size:
+                                            value: 1693
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_hero_w.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/heroes
+                                      type: projectMapNode
+                                      nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Heroes
+                                  description:
+                                    type: text
+                                    value: Everyone needs a hero
+                              - _id: 45a51563-a49d-4d01-bd7f-efead4aaf31e
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: b363d26e-2a1f-4e55-8250-cafcd552de8b
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 541df06f-1366-4874-9ab3-54e435ac68f8
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/_KyXTo3jT0W1sxyzgXeR6w-icon_CTA_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: c63acbd3-6aa9-4879-bf2b-c8abf400c458
+                                          size:
+                                            value: 1568
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_CTA_w.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/calls-to-action
+                                      type: projectMapNode
+                                      nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Calls to Action
+                                  description:
+                                    type: text
+                                    value: Who are you going to call?
+                              - _id: 5a3e4d95-31c8-4d7a-aa52-53823a7d6690
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: 83216c00-31cd-4b74-811c-bdcf78b747cf
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 321b5ac1-0cce-435d-baff-bb00838a832a
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/P6LPSdGKR_iv4xA8lJjI0w-icon_cardblock_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: e60fef6b-e6a7-459d-b77f-4951e461eb24
+                                          size:
+                                            value: 2584
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_cardblock_w.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/carousels
+                                      type: projectMapNode
+                                      nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Carousels
+                                  description:
+                                    type: text
+                                    value: >-
+                                      slideshow-like element that enables the
+                                      display of multiple pieces of content
+                          parameters:
+                            title:
+                              type: text
+                              value: Promotion Components
+                      rightColumn:
+                        - _id: 296b6618-673d-48f9-a101-fe03ad35ff6f
+                          type: navigationMenuSection
+                          slots:
+                            links:
+                              - _id: 6f313fc3-db13-4d7b-8e46-38a49c90dacf
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: f00dde3d-328b-4d14-858e-1427ff8a6e38
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 5acfc75d-92a2-421c-9674-dab48282be2e
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/QnJsaQK0Sp6D559iuqb__w-icon_content_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: e0f8770a-ce0a-46fc-8b03-9149028b54ef
+                                          size:
+                                            value: 611
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_content_w.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/content-blocks
+                                      type: projectMapNode
+                                      nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Content Blocks
+                                  description:
+                                    type: text
+                                    value: title ❤️ text rendezvous
+                              - _id: 21ea29d4-baba-404b-af99-ebb4d1acaf0a
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: de30faae-4f04-435c-ba51-15d679ad2bb5
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 321b5ac1-0cce-435d-baff-bb00838a832a
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/P6LPSdGKR_iv4xA8lJjI0w-icon_cardblock_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: e60fef6b-e6a7-459d-b77f-4951e461eb24
+                                          size:
+                                            value: 2584
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_cardblock_w.svg
+                                          width:
+                                            value: 220
+                                            type: number
+                                          height:
+                                            value: 220
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/card-blocks
+                                      type: projectMapNode
+                                      nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Card Blocks
+                                  description:
+                                    type: text
+                                    value: List of cards and title / text
+                              - _id: 808ea4e6-065b-4324-98d9-0ea21e233c3b
+                                type: navigationMenuSectionLink
+                                variant: ''
+                                parameters:
+                                  icon:
+                                    type: asset
+                                    value:
+                                      - _id: e7ef991e-2d7f-4076-9548-1078fe24155b
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 5eee1d86-265f-41e4-820c-125535f3d7e8
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/0Ug7Q_h4Sc6lyz-gmW5YjQ-icon_image_w.svg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 649c8dd3-467b-424f-b3ba-ed03505e814f
+                                          size:
+                                            value: 1070
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: icon_image_w.svg
+                                          width:
+                                            value: 165
+                                            type: number
+                                          height:
+                                            value: 165
+                                            type: number
+                                          mediaType:
+                                            value: image/svg+xml
+                                            type: text
+                                        _source: uniform-assets
+                                  link:
+                                    type: link
+                                    value:
+                                      path: /components/images
+                                      type: projectMapNode
+                                      nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                                      projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                                  title:
+                                    type: text
+                                    value: Images
+                                  description:
+                                    type: text
+                                    value: >-
+                                      You can't build a website without one, you
+                                      know?
+                          parameters:
+                            title:
+                              type: text
+                              value: Helpers Components
+                    parameters:
+                      title:
+                        type: text
+                        value: 'Two columns '
+                      primaryButtonCopy:
+                        type: text
+                        value: First CTA
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: secondary
+                      secondaryButtonCopy:
+                        type: text
+                        value: Second CTA
+                      secondaryButtonLink:
+                        type: link
+                        value:
+                          path: /components
+                          type: projectMapNode
+                          nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      secondaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: accent
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Components
+        parameters:
+          logo:
+            type: asset
+            value:
+              - _id: 3fd38862-31f3-456c-8f8d-feb35b8d8874
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/A5DYMr8OQA2UEm_hxxV-uQ/-I8QKZouQe2ZGEYEumGJEQ-uniform_csk_logo.png
+                    type: text
+                  file:
+                    type: file
+                    value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
+                  size:
+                    value: 6041
+                    type: number
+                  title:
+                    type: text
+                    value: uniform_csk_logo.png
+                  width:
+                    value: 432
+                    type: number
+                  height:
+                    value: 79
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          theme:
+            type: tp-set-up-theme-parameter
+            value:
+              colors:
+                - name: primary
+                  label: Primary
+                  value: '#0052ED'
+                - name: primary-content
+                  label: Primary Content
+                  value: '#FFFFFF'
+                - name: secondary
+                  label: Secondary
+                  value: '#ffffff'
+                - name: secondary-content
+                  label: Secondary Content
+                  value: '#000000'
+                - name: accent
+                  label: Accent
+                  value: '#DF0000'
+                - name: accent-content
+                  label: Accent Content
+                  value: '#FFFFFF'
+                - name: info-content
+                  label: Info Content
+                  value: '#99C6FF'
+                - name: base-200
+                  label: Base 200
+                  value: '#6b8ff0'
+                - name: base-300
+                  label: Base 300
+                  value: '#001242'
+              themeName: uniform
+              themeLabel: Uniform
+          syntheticGap:
+            type: tp-slider-parameter
+            value: None
+          linksAlignment:
+            type: tp-horizontal-align-parameter
+            value: right
+      - _id: 97547805-d22b-44f2-a726-00d2146246eb
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 230px
+  _overrides:
+    39f5a46c-64ed-4b8e-9c64-04fc67205b41:
+      parameters:
+        syntheticGap:
+          type: tp-slider-parameter
+          value: Small
+created: '2023-12-20T11:18:34.759197+00:00'
+modified: '2023-12-20T11:18:34.759197+00:00'
+pattern: false

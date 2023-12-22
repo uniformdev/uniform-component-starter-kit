@@ -98,9 +98,7 @@ export const setupUniformProject = async (
 
   const integrationsToInstall = demosRequiredIntegrationsMap[project]?.[variant] || [];
 
-  const onlyMeshIntegrations = integrationsToInstall.filter(integration => !integration.link);
-
-  for (const integration of onlyMeshIntegrations) {
+  for (const integration of integrationsToInstall) {
     progressSpinner.start(
       `Start installing ${integration.name} integration.${
         integration.customManifest ? ' Custom manifest will be used.' : ''
@@ -108,6 +106,7 @@ export const setupUniformProject = async (
     );
     await configureIntegration({
       displayName: integration.name,
+      defaultType: integration.type,
       teamId,
       projectId,
       integrationParams: integration.data,
@@ -122,10 +121,11 @@ export const setupUniformProject = async (
   const dataSourceToInstall = demosRequiredDataSourceMap[project]?.[variant] || [];
 
   for (const dataSource of dataSourceToInstall) {
-    progressSpinner.start(`Start installing ${dataSource.dataSourceDisplayName} data source`);
+    progressSpinner.start(`Start installing ${dataSource.dataSourceDisplayName}`);
     await configureDataSource({
       teamId,
       projectId,
+      integrationType: dataSource?.integrationType,
       integrationDisplayName: dataSource.integrationDisplayName,
       connectorType: dataSource.connectorType,
       baseUrl: dataSource.baseUrl,
@@ -135,7 +135,7 @@ export const setupUniformProject = async (
       apiHost: uniformApiHost,
       headers,
     });
-    progressSpinner.stop(`Finished installing ${dataSource.dataSourceDisplayName} data source`);
+    progressSpinner.stop(`Finished installing ${dataSource.dataSourceDisplayName}`);
   }
 
   return {

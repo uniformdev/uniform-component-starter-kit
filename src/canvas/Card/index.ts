@@ -1,4 +1,5 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { Card } from './Card';
 
 type Styles = {
@@ -10,7 +11,7 @@ type Styles = {
 };
 
 export type CardProps = ComponentProps<{
-  image: string | Types.CloudinaryImage;
+  image?: string | Asset | Types.CloudinaryImage;
   badge?: string;
   badgeStyle?: Types.BadgeStyles;
   badgeSize?: Types.BadgeSize;

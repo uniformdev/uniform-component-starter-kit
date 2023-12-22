@@ -4,13 +4,7 @@ import clear from 'clear';
 import color from 'picocolors';
 import path from 'path';
 import { confirm, spinner, cancel, note, select } from './promts';
-import {
-  demosRequiredIntegrationsMap,
-  demosVariantsGetEnvsMap,
-  demosVariantsModulesRequire,
-  demosVariantsRequiredLocales,
-  notMeshIntegrations,
-} from './mappers';
+import { demosVariantsGetEnvsMap, demosVariantsModulesRequire } from './mappers';
 import {
   buildDemo,
   fillEnvFiles,
@@ -27,7 +21,7 @@ import {
 import { getProjectLocation, getUniformEnvs, showDemoHeader, getUniformAccessTokenEnvs } from './informationCollector';
 import { setupUniformProject } from './commands/setupUniform';
 import { AppModes, CommonVariants } from './constants';
-import { scanPageDirectory, switchModeInPageDirectory } from './utils';
+import { scanPageDirectory, switchModeInDirectory } from './utils';
 
 const progressSpinner = spinner();
 
@@ -96,39 +90,6 @@ const runRunDemoJourney = async (
     return process.exit(0);
   }
 
-  const requiredLocales = demosVariantsRequiredLocales[project]?.[variant];
-
-  let hasManualStepsTodo = false;
-
-  if (requiredLocales?.length) {
-    hasManualStepsTodo = true;
-    note(
-      `🚧 🚧 🚧 This demo requires the following locales: \n${requiredLocales.join(
-        ', '
-      )}.\nPlease add them on the Settings -> Canvas Settings page of your project.\n\nPlease make sure that your Contentful account has the administrator role in order to get locales.`,
-      'Locales required'
-    );
-  }
-
-  const requiredIntegrations = demosRequiredIntegrationsMap[project]?.[variant];
-
-  const notMeshIntegration =
-    requiredIntegrations?.filter(integration => notMeshIntegrations.includes(integration.name)) || [];
-
-  if (notMeshIntegration?.length) {
-    hasManualStepsTodo = true;
-    const buildedIntegrationListString = notMeshIntegration.map(
-      integration => `  * ${integration.name}${integration.link ? ` - ${integration.link}` : ''}`
-    );
-
-    note(
-      `🚧 🚧 🚧 This demo requires \n${buildedIntegrationListString.join('\n')}\n${
-        notMeshIntegrations.length > 1 ? 'integrations' : 'integration'
-      } to be installed.`,
-      'Integration required'
-    );
-  }
-
   progressSpinner.start('Checking your dependencies');
 
   if (isNodeModulesExist(projectPath)) {
@@ -171,14 +132,7 @@ const runRunDemoJourney = async (
     await processEnvFile({ ...uniformCredentials, uniformProjectId, uniformApiKey }, project, projectPath, variant);
   }
 
-  const shouldRunPush = await confirm({
-    message: `Do you want to push canvas configuration?${
-      hasManualStepsTodo
-        ? '\n🚧 🚧 🚧 Please make sure you have applied all manual steps which were described above.'
-        : ''
-    }`,
-  });
-
+  const shouldRunPush = await confirm({ message: 'Do you want to push canvas configuration?' });
   if (shouldRunPush) await runResetCanvasJourney(project, projectPath);
 
   progressSpinner.start('Running your demo');
@@ -211,7 +165,7 @@ const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVar
     : undefined;
 
   if (appMode) {
-    await switchModeInPageDirectory(projectPath, appMode as AppModes, ['revalidate.ts']);
+    await switchModeInDirectory(projectPath, appMode as AppModes, ['revalidate.ts', 'profile.tsx']);
   }
 
   const projectVariantsModulesRequire = demosVariantsModulesRequire[project];
@@ -237,7 +191,6 @@ const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVar
     note(color.red('Looks like you metadata.json file is not configured. Please check it and try again.'));
     return process.exit(0);
   }
-
   try {
     const { project, variant } = await parseMetadata();
 

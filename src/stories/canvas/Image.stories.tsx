@@ -14,7 +14,7 @@ type Story = StoryObj<typeof UniformImage>;
 const BASE_PROPS: Omit<UniformImageProps, 'component'> = {
   width: 200,
   height: 200,
-  src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+  src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
 };
 
 const renderStory = (args: UniformImageProps) => {
