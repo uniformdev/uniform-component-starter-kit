@@ -1,0 +1,126 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: text
+name: Text
+icon: format-heading
+parameters:
+  - id: text
+    name: Text
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: tag
+    name: HTML Tag
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: H1
+          value: h1
+        - label: H2
+          value: h2
+        - label: H3
+          value: h3
+        - label: H4
+          value: h4
+        - label: H5
+          value: h5
+        - label: H6
+          value: h6
+        - label: P
+          value: p
+        - label: Span
+          value: span
+      defaultValue: p
+    localizable: false
+  - id: color
+    name: Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#000'
+      isAllowCustomColor: true
+      isShowAdvancedSettings: true
+    localizable: false
+  - id: size
+    name: Size
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: None
+          value: ''
+        - label: XS
+          value: XS
+        - label: SM
+          value: SM
+        - label: Base
+          value: Base
+        - label: LG
+          value: LG
+        - label: XL
+          value: XL
+        - label: 2XL
+          value: 2XL
+        - label: 3XL
+          value: 3XL
+        - label: 4XL
+          value: 4XL
+        - label: 5XL
+          value: 5XL
+        - label: 6XL
+          value: 6XL
+        - label: 7XL
+          value: 7XL
+        - label: 8XL
+          value: 8XL
+        - label: 9XL
+          value: 9XL
+      required: false
+      defaultValue: ''
+    localizable: false
+  - id: letterSpacing
+    name: Letter Spacing
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: None
+          value: ''
+        - label: Tighter
+          value: tighter
+        - label: Tight
+          value: tight
+        - label: Normal
+          value: normal
+        - label: Wide
+          value: wide
+        - label: Wider
+          value: wider
+        - label: Widest
+          value: widest
+      defaultValue: ''
+    localizable: false
+  - id: group_advanced
+    name: Advanced Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - style
+  - id: style
+    name: Style
+    type: json
+    helpText: ''
+    typeConfig: {}
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Text_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: text
+canBeComposition: false
+created: '2024-01-09T12:40:21.909092+00:00'
+updated: '2024-01-30T16:49:41.007026+00:00'

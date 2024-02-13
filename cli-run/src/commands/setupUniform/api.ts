@@ -131,6 +131,7 @@ export const addDataSource = async (params: UNIFORM_API.AddDataSourceParams) => 
   const {
     teamId,
     projectId,
+    integrationType,
     integrationDisplayName,
     connectorType,
     baseUrl,
@@ -147,13 +148,13 @@ export const addDataSource = async (params: UNIFORM_API.AddDataSourceParams) => 
     headers,
   });
 
-  if (!integrationDefinition) {
+  if (!integrationDefinition && !integrationType) {
     throw new Error(`Unable to find the integration definition: ${integrationDisplayName}.`);
   }
 
   const body = {
     projectId,
-    integrationType: integrationDefinition.type,
+    integrationType: integrationDefinition?.type || integrationType,
     data: {
       id: dataSourceId,
       displayName: dataSourceDisplayName,

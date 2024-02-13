@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-hit
+name: Hit
+icon: play-list-search
+parameters: []
+categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-12-21T10:16:51.317738+00:00'
+updated: '2023-12-21T11:01:46.222934+00:00'

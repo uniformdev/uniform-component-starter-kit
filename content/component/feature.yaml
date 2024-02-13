@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: feature
+name: Feature
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281010/csk-icons/component-icons-v2/CSKicon_feature_eklppa_imtn4z.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+    localizable: true
+  - id: icon
+    name: Icon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Feature_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:18.083717+00:00'
+updated: '2023-12-27T08:51:58.83678+00:00'

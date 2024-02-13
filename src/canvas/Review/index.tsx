@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { MultiColumnReview } from './MultiColumnReview';
 import { DefaultReview } from './Review';
 
@@ -16,7 +17,7 @@ type Style = {
 
 export type ReviewProps = ComponentProps<{
   personName: string;
-  picture: string;
+  picture?: string | Asset;
   date: string;
   stars: number;
   title: string;

@@ -41,7 +41,7 @@ export const ContentBlock: FC<ContentBlockProps> = ({ titleStyle: TitleTag = 'h1
       </Wrapper>
       {content ? (
         <div
-          className="py-6 text-xl"
+          className={classNames('py-6 text-xl prose [&>figure]:max-w-full', styles?.text)}
           dangerouslySetInnerHTML={{
             __html: typeof content === 'string' ? content : documentToHtmlString(content, documentToHtmlStringOptions),
           }}

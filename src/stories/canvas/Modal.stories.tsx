@@ -21,8 +21,7 @@ const HERO_PROPS = {
   primaryButtonLink: {
     path: '/',
   },
-  image:
-    'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+  image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
   primaryButtonStyle: 'primary',
 };
 

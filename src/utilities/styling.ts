@@ -57,17 +57,17 @@ export const getButtonAnimationClass = (style: Types.ButtonStyles, animationType
 export const getTextClass = (style?: Types.HeadingStyles) => {
   switch (style) {
     case 'h1':
-      return 'text-5xl';
+      return 'text-4xl md:text-5xl';
     case 'h2':
-      return 'text-4xl';
+      return 'text-3xl md:text-4xl';
     case 'h3':
-      return 'text-3xl';
+      return 'text-2xl md:text-3xl';
     case 'h4':
-      return 'text-2xl';
+      return 'text-xl md:text-2xl';
     case 'h5':
-      return 'text-xl';
+      return 'text-lg md:text-xl';
     case 'h6':
-      return 'text-lg';
+      return 'text-base md:text-lg';
     default:
       return 'text-base';
   }
@@ -276,5 +276,80 @@ export const getLineClampClass = (maxLineCount?: Types.AvailableMaxLineCount) =>
       return 'line-clamp-none';
     default:
       return '';
+  }
+};
+
+export const getTextColor = (colorName?: Types.ThemeColorsValues) => {
+  switch (colorName) {
+    case 'primary':
+      return 'text-primary';
+    case 'primary-content':
+      return 'text-primary-content';
+    case 'secondary':
+      return 'text-secondary';
+    case 'secondary-content':
+      return 'text-secondary-content';
+    case 'accent':
+      return 'text-accent';
+    case 'accent-content':
+      return 'text-accent-content';
+    case 'info-content':
+      return 'text-info-content';
+    case 'base-200':
+      return 'text-base-200';
+    case 'base-300':
+      return 'text-base-300';
+    default:
+      return 'text-[#000]';
+  }
+};
+
+export const getBackgroundColor = (colorName?: Types.ThemeColorsValues) => {
+  switch (colorName) {
+    case 'primary':
+      return 'bg-primary';
+    case 'primary-content':
+      return 'bg-primary-content';
+    case 'secondary':
+      return 'bg-secondary';
+    case 'secondary-content':
+      return 'bg-secondary-content';
+    case 'accent':
+      return 'bg-accent';
+    case 'accent-content':
+      return 'bg-accent-content';
+    case 'info-content':
+      return 'bg-info-content';
+    case 'base-200':
+      return 'bg-base-200';
+    case 'base-300':
+      return 'bg-base-300';
+    default:
+      return 'bg-[#fff]';
+  }
+};
+
+export const getHoverTextColor = (colorName?: Types.ThemeColorsValues) => {
+  switch (colorName) {
+    case 'primary':
+      return 'hover:text-primary';
+    case 'primary-content':
+      return 'hover:text-primary-content';
+    case 'secondary':
+      return 'hover:text-secondary';
+    case 'secondary-content':
+      return 'hover:text-secondary-content';
+    case 'accent':
+      return 'hover:text-accent';
+    case 'accent-content':
+      return 'hover:text-accent-content';
+    case 'info-content':
+      return 'hover:text-info-content';
+    case 'base-200':
+      return 'hover:text-base-200';
+    case 'base-300':
+      return 'hover:text-base-300';
+    default:
+      return 'hover:text-[#000]';
   }
 };

@@ -5,22 +5,36 @@ import { ComponentProps } from '@uniformdev/canvas-react';
 import { Result } from '@coveo/headless';
 import Card from '../../canvas/Card';
 
+export type ResultItemStyles = {
+  title?: string;
+  description?: string;
+  container?: string;
+  image?: string;
+  cardBody?: string;
+};
+
 type ResultItemProps = ComponentProps<{
   item: Result;
+  styles?: ResultItemStyles;
 }>;
 
-const ResultItem: FC<ResultItemProps> = ({ item, component }) => {
+const ResultItem: FC<ResultItemProps> = ({ item, component, styles }) => {
   const {
     buttonStyle,
     buttonLink,
     buttonCopy,
     badgeSize,
     badgeStyle,
+    buttonAnimationType,
     lineCountRestriction,
     objectFit,
     overlayColor,
     overlayOpacity,
     textColorVariant,
+    animationType,
+    duration,
+    delay,
+    animationPreview,
   } = component.parameters || {};
 
   return (
@@ -37,6 +51,7 @@ const ResultItem: FC<ResultItemProps> = ({ item, component }) => {
       objectFit={objectFit?.value as Types.AvailableObjectFit}
       overlayColor={overlayColor?.value as Types.AvailableColor}
       overlayOpacity={overlayOpacity?.value as Types.AvailableOpacity}
+      buttonAnimationType={buttonAnimationType?.value as Types.AnimationType}
       buttonLink={
         // Emulate dynamic values for categories pages without dynamic input feature
         (buttonLink?.value
@@ -51,6 +66,11 @@ const ResultItem: FC<ResultItemProps> = ({ item, component }) => {
       useCustomTextElements
       textColorVariant={textColorVariant?.value as Types.AvailableTextColorVariant | undefined}
       component={component}
+      animationType={animationType?.value as Types.AnimationType}
+      duration={duration?.value as Types.DurationType}
+      delay={delay?.value as Types.AnimationDelay}
+      animationPreview={animationPreview?.value as boolean}
+      styles={styles}
     />
   );
 };

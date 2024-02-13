@@ -1,9 +1,9 @@
 import { FC, Fragment } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
-import { UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { UniformText } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
-import { formatProjectMapLink } from '../../utilities';
+import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { ScreenContainer } from '../../components/Container';
 import { getPositionClassName, getWidthClassName, getTextAlignmentClassName } from './helpers';
 import { BannerProps, BannerVariant } from '.';
@@ -21,7 +21,6 @@ export const Banner: FC<BannerProps> = ({
   secondaryButtonAnimationType,
   component,
 }) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
   const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
 
   return (
@@ -36,7 +35,7 @@ export const Banner: FC<BannerProps> = ({
       >
         <div className="w-full grid md:grid-cols-12 bg-base-300 gap-x-6 py-5 px-5 xl:px-10">
           <div className="col-span-1">
-            {Boolean(icon) && <Image width={60} height={60} src={icon} alt="banner-icon" />}
+            {Boolean(icon) && <Image width={60} height={60} src={getMediaUrl(icon)} alt="banner-icon" />}
           </div>
           <div
             className={classNames('w-full flex flex-col items-left col-span-7', getTextAlignmentClassName(textAlign))}
@@ -59,13 +58,7 @@ export const Banner: FC<BannerProps> = ({
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(primaryButtonLink)}
-                copy={
-                  <UniformText
-                    placeholder="Button Copy goes here"
-                    parameterId="primaryButtonCopy"
-                    onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-                  />
-                }
+                copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
                 animationType={primaryButtonAnimationType}
                 style={primaryButtonStyle}
               />
@@ -74,13 +67,7 @@ export const Banner: FC<BannerProps> = ({
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(secondaryButtonLink)}
-                copy={
-                  <UniformText
-                    placeholder="Button Copy goes here"
-                    parameterId="secondaryButtonCopy"
-                    onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-                  />
-                }
+                copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
                 animationType={secondaryButtonAnimationType}
                 style={secondaryButtonStyle}
               />

@@ -3,7 +3,9 @@ import classNames from 'classnames';
 import { Container, Description, EyebrowText, PrimaryButton, SecondaryButton, Title } from './atoms';
 import { useHeroAnimation } from './animation';
 import { AnimationVariant } from '../../components/AnimatedContainer';
-import { HeroProps } from './';
+import { DEFAULT_TEXT_COLOR, HeroProps } from './';
+import { REGEX_COLOR_HEX } from '../../utilities';
+import { getHeroTextStyle } from './helpers';
 
 export const HeroDefault: FC<HeroProps> = ({
   title,
@@ -20,18 +22,23 @@ export const HeroDefault: FC<HeroProps> = ({
   animationType,
   duration = 'medium',
   animationOrder,
-  backgroundType,
+  backgroundType, // Deprecated
+  backgroundColor,
   containerVariant,
   paddingBottom,
   paddingTop,
   marginBottom,
   marginTop,
-  textColorVariant = 'Light',
+  textColorVariant, // Deprecated
+  textColor = DEFAULT_TEXT_COLOR,
   animationPreview,
   delay = 'none',
   styles,
 }) => {
-  const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
+  const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
+    ? textColor
+    : undefined;
+  const baseTextStyle = getHeroTextStyle(textColorVariant || textColor);
 
   const { ElementWrapper, getDelayValue } = useHeroAnimation({
     duration,
@@ -44,18 +51,19 @@ export const HeroDefault: FC<HeroProps> = ({
   return (
     <Container
       fullHeight={fullHeight}
-      className={baseTextStyle}
+      className={classNames({ [baseTextStyle]: !currentColor })}
       paddingBottom={paddingBottom}
       paddingTop={paddingTop}
       marginBottom={marginBottom}
       marginTop={marginTop}
-      backgroundType={backgroundType}
+      backgroundType={backgroundColor || backgroundType}
       containerVariant={containerVariant}
     >
       <div
         className={classNames('hero-content text-center p-0', {
           'h-full items-start pt-20': fullHeight,
         })}
+        style={{ color: currentColor }}
       >
         <div className={classNames('flex flex-col mx-1 md:mx-10 z-20')}>
           <ElementWrapper

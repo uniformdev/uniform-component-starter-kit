@@ -38,6 +38,11 @@ const uniformTheme = {
         value: '#99C6FF',
       },
       {
+        label: 'Base 200',
+        name: 'base-200',
+        value: '#6b8ff0',
+      },
+      {
         name: 'base-300',
         label: 'Base 300',
         value: '#001242',

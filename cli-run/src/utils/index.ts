@@ -72,22 +72,27 @@ export const addExamplesCanvasCache = async (projectPath: string) => {
   await remove(path.resolve(projectPath, 'content', 'examples'));
   const pathToCanvasFile = path.resolve(projectPath, 'src', 'canvas', 'index.ts');
   const canvas = await fs.promises.readFile(pathToCanvasFile, 'utf-8');
-  await fs.promises.writeFile(pathToCanvasFile, `import '../modules/coveo';\n${canvas}`);
+
+  await fs.promises.writeFile(pathToCanvasFile, `import '../modules/coveo';import '../modules/algolia';\n${canvas}`);
 };
 
 export const scanPageDirectory = async (projectPath: string, mode: AppModes) =>
+  (await findModeOptions(path.resolve(projectPath, 'src'), mode)) ||
   (await findModeOptions(path.resolve(projectPath, 'src', 'pages'), mode)) ||
   (await findModeOptions(path.resolve(projectPath, 'src', 'pages', 'api'), mode));
 
 const findModeOptions = async (projectPath: string, mode: string): Promise<boolean> =>
   fs.promises
     .readdir(projectPath, { withFileTypes: true })
-    .then(r => r.some(node => (node.isFile() ? node.name.endsWith(mode) : false)));
+    .then(r => r.some(node => (node.isFile() ? node.name.endsWith(mode) : false)))
+    .catch(() => false);
 
-export const switchModeInPageDirectory = async (projectPath: string, mode: AppModes, removalList?: string[]) => {
+export const switchModeInDirectory = async (projectPath: string, mode: AppModes, removalList?: string[]) => {
+  await switchModeTo(path.resolve(projectPath, 'src'), mode, removalList);
   await switchModeTo(path.resolve(projectPath, 'src', 'pages'), mode, removalList);
   await switchModeTo(path.resolve(projectPath, 'src', 'pages', 'api'), mode, removalList);
 };
+
 const switchModeTo = async (projectPath: string, mode: string, removalList?: string[]) => {
   const listOfFilesNames = (await fs.promises.readdir(projectPath, { withFileTypes: true }))
     .filter(node => node.isFile())

@@ -1,11 +1,14 @@
 import { FC } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { withoutContainer } from '../../hocs/withoutContainer';
 import { ContainerProps } from '../../components/Container';
 import { HeroSideImage } from './HeroSideImage';
 import { HeroBackgroundImage } from './HeroBackgroundImage';
 import { HeroTwoColumns } from './HeroTwoColumns';
 import { HeroDefault } from './Hero';
+
+export const DEFAULT_TEXT_COLOR = '#000';
 
 type Styles = {
   eyebrowText?: string;
@@ -22,7 +25,7 @@ export type HeroProps = ComponentProps<
     title: string;
     titleStyle: Types.HeadingStyles;
     description: string;
-    image?: string;
+    image?: string | Asset;
     video?: string;
     primaryButtonCopy: string;
     primaryButtonLink: Types.ProjectMapLink;
@@ -40,7 +43,9 @@ export type HeroProps = ComponentProps<
     animationType?: Types.AnimationType;
     animationOrder?: Types.AnimationOrder;
     duration?: Types.DurationType;
-    textColorVariant: Types.AvailableTextColorVariant;
+    textColorVariant: Types.AvailableTextColorVariant; // Deprecated
+    textColor?: Types.ThemeColorsValues | string;
+    backgroundColor?: Types.ThemeColorsValues | string;
     delay?: Types.AnimationDelay;
     animationPreview?: boolean;
     styles?: Styles;

@@ -8,7 +8,7 @@ export const PlayButton: FC<PlayButtonProps> = ({ onClick }) => (
   <button
     className="absolute w-1/5 transition hover:scale-90 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
     type="button"
-    aria-label="Play Video"
+    aria-label="Play video"
     onClick={onClick}
   >
     <svg className="w-full h-full" viewBox="0 0 123 123" fill="none" xmlns="http://www.w3.org/2000/svg">

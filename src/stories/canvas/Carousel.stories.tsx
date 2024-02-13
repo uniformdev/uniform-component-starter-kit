@@ -22,8 +22,7 @@ const HEROS_PROPS = [
     primaryButtonLink: {
       path: '/',
     },
-    image:
-      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -43,8 +42,7 @@ const HEROS_PROPS = [
     primaryButtonLink: {
       path: '/',
     },
-    image:
-      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -64,8 +62,7 @@ const HEROS_PROPS = [
     primaryButtonLink: {
       path: '/',
     },
-    image:
-      'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     primaryButtonStyle: 'primary',
     secondaryButtonCopy: 'Components',
     secondaryButtonLink: {
@@ -80,19 +77,19 @@ const HEROS_PROPS = [
 const IMAGES_PROPS = [
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     width: '2000',
     height: '2000',
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     width: '2000',
     height: '2000',
   },
   {
     type: 'image',
-    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692276482/csk-marketing/Rectangle_7_2_uupdjo_wm94da.webp',
+    src: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
     width: '2000',
     height: '2000',
   },

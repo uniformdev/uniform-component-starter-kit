@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: coveo-breadcrumbManager
+name: Breadcrumb Manager
+icon: scroll-h
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Coveo/Breadcrumb_manager_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-11-23T08:52:39.013406+00:00'
+updated: '2023-11-23T09:01:47.829848+00:00'

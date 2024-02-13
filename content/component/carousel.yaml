@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: carousel
+name: Carousel
+icon: stories
+parameters: []
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Carousel_preview_image
+useTeamPermissions: true
+slots:
+  - id: carouselItem
+    name: Carousel Item
+    allowedComponents: []
+    allowAllComponents: false
+    inheritAllowedComponents: true
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-08-28T12:30:17.833831+00:00'
+updated: '2024-01-02T07:54:50.143338+00:00'
+variants:
+  - id: imageGallery
+    name: Image Gallery
+  - id: brochure
+    name: Brochure

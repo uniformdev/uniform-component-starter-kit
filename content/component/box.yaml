@@ -1,0 +1,33 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: box
+name: Box
+icon: box
+parameters:
+  - id: group_advancedSettings
+    name: Advanced Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - style
+  - id: style
+    name: Style
+    type: json
+    helpText: ''
+    typeConfig: {}
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Box_preview_image
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2024-01-09T12:40:21.398079+00:00'
+updated: '2024-01-30T18:23:33.008676+00:00'

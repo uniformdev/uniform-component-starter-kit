@@ -75,7 +75,7 @@ const Sort: FC<BreadcrumbManagerProps> = ({ title = '', fieldsForSort = [] }) =>
 
   return (
     <div className="w-full flex justify-center">
-      <div className="pr-10 inline-flex flex-col lg:w-full mb-4">
+      <div className="pr-10 inline-flex flex-col w-full mb-4">
         <UniformText parameterId="title" className="font-extrabold text-lg capitalize text-black mb-2" />
         <Dropdown
           optionsContainerClassName="bg-secondary"
@@ -83,6 +83,7 @@ const Sort: FC<BreadcrumbManagerProps> = ({ title = '', fieldsForSort = [] }) =>
           options={criteriaValue}
           value={getCurrentCriterion()[0]}
           onChange={setCriterionFromName}
+          buttonClassName="ml-2"
         />
       </div>
     </div>

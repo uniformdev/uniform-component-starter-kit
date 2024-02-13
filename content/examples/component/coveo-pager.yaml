@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: coveo-pager
+name: Pager
+icon: format-separator
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: numberOfResults
+    name: Number of Results
+    type: number
+    helpText: The initial number of results to register in state
+    typeConfig:
+      min: '1'
+  - id: numberOfPages
+    name: Number of Pages
+    type: number
+    helpText: The number of pages to display in the pager
+    typeConfig:
+      min: '1'
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Coveo/Pager_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-11-23T08:52:39.18402+00:00'
+updated: '2023-11-23T09:02:13.27358+00:00'

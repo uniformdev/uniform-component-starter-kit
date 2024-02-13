@@ -1,0 +1,42 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: price
+name: Price
+icon: awards
+parameters:
+  - id: label
+    name: Label
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: labelStyle
+    name: Label Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: price
+    name: Price
+    type: number
+    helpText: ''
+    typeConfig:
+      decimal: true
+  - id: currency
+    name: Currency
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: USD
+          value: USD
+        - text: EUR
+          value: EUR
+categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Price_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: label
+canBeComposition: false
+created: '2023-08-28T12:30:19.832319+00:00'
+updated: '2023-12-27T08:57:48.166046+00:00'

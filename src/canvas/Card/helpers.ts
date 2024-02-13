@@ -56,14 +56,3 @@ export const getBadgeSizeClass = (badgeSize: CardProps['badgeSize']) => {
       return '';
   }
 };
-
-export const getImageSizeClassName = (variantId: string | undefined) => {
-  switch (variantId) {
-    case CardVariants.BackgroundImage:
-      return 'h-full';
-    case CardVariants.Featured:
-      return 'h-[80px]';
-    default:
-      return 'h-48';
-  }
-};
