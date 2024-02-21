@@ -5,7 +5,7 @@ import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-rea
 // @ts-ignore: Expected error if the module is not yet installed
 import { buildResultList, Result } from '@coveo/headless';
 import { HeadlessEngineContext } from './Engine';
-import ResultItem from './ResultItem';
+import ResultItem, { ResultItemStyles } from './ResultItem';
 import InformationContent from '../../components/InformationContent';
 
 enum ItemTypes {
@@ -22,8 +22,12 @@ const COVEO_FIELDS_TO_INCLUDE = [
   'sub_category',
 ];
 
+type ResultListProps = ComponentProps<{
+  itemStyles?: ResultItemStyles;
+}>;
+
 // Coveo Result List docs https://docs.coveo.com/en/headless/latest/reference/search/controllers/result-list/
-const ResultList: FC<ComponentProps> = ({ component }) => {
+const ResultList: FC<ResultListProps> = ({ component, itemStyles }) => {
   const headlessEngine = useContext(HeadlessEngineContext);
   const headlessResultList = useMemo(
     () =>
@@ -44,7 +48,7 @@ const ResultList: FC<ComponentProps> = ({ component }) => {
 
     switch (currentComponent?.type) {
       case ItemTypes.Item:
-        return <ResultItem item={item} key={item.uniqueId} component={currentComponent} />;
+        return <ResultItem item={item} key={item.uniqueId} component={currentComponent} styles={itemStyles} />;
       default:
         return (
           <div

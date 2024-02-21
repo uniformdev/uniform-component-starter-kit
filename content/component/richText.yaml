@@ -1,0 +1,59 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: richText
+name: Rich Text
+icon: format-text
+parameters:
+  - id: content
+    name: Content
+    type: richText
+    helpText: ''
+    typeConfig:
+      elements:
+        builtIn:
+          - h1
+          - h2
+          - h3
+          - h4
+          - h5
+          - h6
+          - unorderedList
+          - orderedList
+          - link
+          - quote
+      required: false
+      formatting:
+        builtIn:
+          - bold
+          - italic
+          - underline
+    localizable: true
+  - id: color
+    name: Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      isAllowCustomColor: true
+    localizable: false
+  - id: group_advancedSettings
+    name: Advanced Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - style
+  - id: style
+    name: Style
+    type: json
+    helpText: ''
+    typeConfig: {}
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Rich_text_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: content
+canBeComposition: false
+created: '2024-01-08T08:54:27.282711+00:00'
+updated: '2024-01-10T12:12:55.759664+00:00'

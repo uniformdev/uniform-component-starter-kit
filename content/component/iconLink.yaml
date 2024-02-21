@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: iconLink
+name: Icon Link
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281226/csk-icons/component-icons-v2/CSKicon_headerlink_coaugo_mfcseb.svg
+parameters:
+  - id: icon
+    name: Icon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig:
+      required: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Icon_link_preview_image
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-11-22T09:43:34.562442+00:00'
+updated: '2023-11-22T10:01:31.889078+00:00'

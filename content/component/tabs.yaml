@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tabs
+name: Tabs
+icon: database
+parameters:
+  - id: size
+    name: Size
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: Tiny
+          value: tiny
+        - label: Small
+          value: small
+        - label: Normal
+          value: normal
+        - label: Large
+          value: large
+      maxValue: 10
+      minValue: 0
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Tabs_preview_image
+useTeamPermissions: true
+slots:
+  - id: tabs
+    name: Tabs
+    allowedComponents:
+      - tab
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-11-22T09:43:35.02369+00:00'
+updated: '2023-11-22T10:10:26.504037+00:00'
+variants:
+  - id: boxed
+    name: Boxed
+  - id: lifted
+    name: Lifted
+  - id: bordered
+    name: Bordered

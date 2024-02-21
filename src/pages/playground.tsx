@@ -1,3 +1,4 @@
+import { GetStaticProps } from 'next';
 import { RouteGetResponseEdgehancedComposition } from '@uniformdev/canvas';
 import { getRouteClient } from '../utilities/canvas/canvasClients';
 export { default } from '../components/Playground';
@@ -8,12 +9,14 @@ export { default } from '../components/Playground';
 // First theme from the Theme Pack integration is used by default.
 const HOME_PAGE_PATH = '/'; // Path to the Home page
 const UNIFORM_THEMES_SOURCE =
-  process.env.UNIFORM_THEMES_SOURCE || 'https://theme-pack-mesh-integration.netlify.app/staticThemes.json';
+  process.env.UNIFORM_THEMES_SOURCE || 'https://theme-pack.mesh.uniform.app/staticThemes.json';
 
-export const getServerSideProps = async () => {
+export const getServerSideProps: GetStaticProps = async ({ defaultLocale = '' }) => {
   const routeClient = getRouteClient();
 
-  const routeResponse = await routeClient.getRoute({ path: HOME_PAGE_PATH });
+  const routeResponse = await routeClient.getRoute({
+    path: `${HOME_PAGE_PATH}${defaultLocale}`,
+  });
 
   const compositionApiResponse = (routeResponse as RouteGetResponseEdgehancedComposition)?.compositionApiResponse;
 

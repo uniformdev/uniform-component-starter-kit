@@ -1,0 +1,195 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: imageGallery
+name: Image Gallery
+icon: ui-kit
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: Section title
+    typeConfig: null
+    localizable: true
+  - id: titleStyle
+    name: Title Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '10'
+    localizable: true
+  - id: items
+    name: Items
+    type: asset
+    helpText: ''
+    typeConfig:
+      min: 0
+  - id: maxItems
+    name: Max Items
+    type: number
+    helpText: ''
+    typeConfig:
+      max: '100'
+      min: '1'
+  - id: group_styling
+    name: Styling
+    type: group
+    typeConfig:
+      childrenParams:
+        - backgroundType
+        - paddingTop
+        - paddingBottom
+        - marginTop
+        - marginBottom
+  - id: backgroundType
+    name: Background Type
+    type: tp-background-type-parameter
+    helpText: ''
+    typeConfig: null
+  - id: paddingTop
+    name: Padding Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: paddingBottom
+    name: Padding Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginBottom
+    name: Margin Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: group_animationSettings
+    name: Animation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - animationType
+        - duration
+        - delay
+        - animationOrder
+        - animationPreview
+  - id: animationType
+    name: Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: duration
+    name: Duration
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Slow
+          value: slow
+        - text: Medium
+          value: medium
+        - text: Fast
+          value: fast
+  - id: delay
+    name: Delay
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: None
+          value: none
+        - text: Short (250ms)
+          value: short
+        - text: Medium (500ms)
+          value: medium
+        - text: Long (1000ms)
+          value: long
+  - id: animationOrder
+    name: Animation Order
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: All at once (default)
+          value: allAtOnce
+        - text: One by one
+          value: oneByOne
+  - id: animationPreview
+    name: Animation Preview
+    type: tp-play-animation-parameter
+    helpText: ''
+    typeConfig: null
+categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Image_gallery_preview_image
+useTeamPermissions: true
+slots:
+  - id: images
+    name: Images
+    allowedComponents:
+      - image
+      - $test
+      - $loop
+      - $personalization
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-11-14T16:02:44.058827+00:00'
+updated: '2023-12-27T08:54:50.356376+00:00'
+variants:
+  - id: backgroundInContainer
+    name: Background In Container
+  - id: fluidContent
+    name: Fluid Content

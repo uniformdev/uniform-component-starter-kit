@@ -3,7 +3,9 @@ import classNames from 'classnames';
 import { useHeroAnimation } from './animation';
 import { BackgroundImage, Container, Description, EyebrowText, PrimaryButton, SecondaryButton, Title } from './atoms';
 import { AnimationVariant } from '../../components/AnimatedContainer';
-import { HeroProps } from './';
+import { DEFAULT_TEXT_COLOR, HeroProps } from './';
+import { REGEX_COLOR_HEX } from '../../utilities';
+import { getHeroTextStyle } from './helpers';
 
 export const HeroTwoColumns: FC<HeroProps> = ({
   title,
@@ -24,18 +26,23 @@ export const HeroTwoColumns: FC<HeroProps> = ({
   animationType,
   duration = 'medium',
   animationOrder,
-  backgroundType,
+  backgroundType, // Deprecated
+  backgroundColor,
   containerVariant,
   paddingBottom,
   paddingTop,
   marginBottom,
   marginTop,
-  textColorVariant = 'Light',
+  textColorVariant, // Deprecated
+  textColor = DEFAULT_TEXT_COLOR,
   animationPreview,
   delay = 'none',
   styles,
 }) => {
-  const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
+  const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
+    ? textColor
+    : undefined;
+  const baseTextStyle = getHeroTextStyle(textColorVariant || textColor);
 
   const { ElementWrapper, getDelayValue } = useHeroAnimation({
     duration,
@@ -48,18 +55,19 @@ export const HeroTwoColumns: FC<HeroProps> = ({
   return (
     <Container
       fullHeight={fullHeight}
-      className={baseTextStyle}
+      className={classNames({ [baseTextStyle]: !currentColor })}
       paddingBottom={paddingBottom}
       paddingTop={paddingTop}
       marginBottom={marginBottom}
       marginTop={marginTop}
-      backgroundType={backgroundType}
+      backgroundType={backgroundColor || backgroundType}
       containerVariant={containerVariant}
     >
       <div
         className={classNames('hero-content text-center p-0', {
           'h-full items-start pt-20': fullHeight,
         })}
+        style={{ color: currentColor }}
       >
         <BackgroundImage
           image={image}
@@ -70,7 +78,7 @@ export const HeroTwoColumns: FC<HeroProps> = ({
         />
 
         <div className={classNames('flex flex-row mx-1 md:mx-10 z-20')}>
-          <div className="grid grid-cols-2 gap-x-28">
+          <div className="grid md:grid-cols-2 gap-x-28">
             <div className="flex flex-col">
               <ElementWrapper
                 duration={duration}
@@ -93,7 +101,7 @@ export const HeroTwoColumns: FC<HeroProps> = ({
               </ElementWrapper>
             </div>
 
-            <div className="text-secondary flex flex-col items-start">
+            <div className="flex flex-col items-start">
               <ElementWrapper
                 duration={duration}
                 delay={getDelayValue(3)}

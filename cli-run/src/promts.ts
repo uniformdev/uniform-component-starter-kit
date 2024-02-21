@@ -27,7 +27,7 @@ export const checkIsCancel = (value: unknown) => {
 };
 
 export const select = async (props: SelectOptions<Option<string>[], string>) => {
-  const selectedValue = await baseSelect(props);
+  const selectedValue = await baseSelect({ maxItems: 15, ...props });
 
   checkIsCancel(selectedValue);
 

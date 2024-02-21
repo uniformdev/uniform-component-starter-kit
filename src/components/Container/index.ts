@@ -7,7 +7,7 @@ export enum ContainerVariants {
 }
 
 export type ContainerProps = {
-  backgroundType?: BackgroundTypes;
+  backgroundType?: BackgroundTypes | Types.ThemeColorsValues | string;
   paddingTop?: PaddingSize;
   paddingBottom?: PaddingSize;
   marginTop?: PaddingSize;

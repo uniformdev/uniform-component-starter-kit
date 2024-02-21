@@ -1,15 +1,16 @@
 import { FC, Fragment, PropsWithChildren } from 'react';
 import classNames from 'classnames';
 import {
+  PaddingSize,
   getImageOverlayColorStyle,
   getImageOverlayOpacityStyle,
   getObjectFitClass,
   getTextClass,
 } from '../../utilities/styling';
-import { UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { UniformText } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import BaseContainer, { ContainerVariants, ContainerProps, ScreenContainer } from '../../components/Container';
 import { HeroProps } from './';
 
@@ -53,47 +54,29 @@ export const PrimaryButton: FC<Pick<HeroProps, 'primaryButtonLink' | 'primaryBut
   primaryButtonLink,
   primaryButtonStyle,
   animationType,
-}) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
-  return (
-    <Button
-      className="m-1"
-      animationType={animationType}
-      href={formatProjectMapLink(primaryButtonLink)}
-      copy={
-        <UniformText
-          placeholder="Button Copy goes here"
-          parameterId="primaryButtonCopy"
-          onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-        />
-      }
-      style={primaryButtonStyle}
-    />
-  );
-};
+}) => (
+  <Button
+    className="m-1"
+    animationType={animationType}
+    href={formatProjectMapLink(primaryButtonLink)}
+    copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
+    style={primaryButtonStyle}
+  />
+);
 
 export const SecondaryButton: FC<Pick<HeroProps, 'secondaryButtonLink' | 'secondaryButtonStyle' | 'animationType'>> = ({
   secondaryButtonLink,
   secondaryButtonStyle,
   animationType,
-}) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
-  return (
-    <Button
-      className="m-1"
-      href={formatProjectMapLink(secondaryButtonLink)}
-      animationType={animationType}
-      copy={
-        <UniformText
-          placeholder="Button Copy goes here"
-          parameterId="secondaryButtonCopy"
-          onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-        />
-      }
-      style={secondaryButtonStyle}
-    />
-  );
-};
+}) => (
+  <Button
+    className="m-1"
+    href={formatProjectMapLink(secondaryButtonLink)}
+    animationType={animationType}
+    copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
+    style={secondaryButtonStyle}
+  />
+);
 
 export const BackgroundImage: FC<
   Pick<HeroProps, 'image' | 'video' | 'objectFit' | 'overlayOpacity' | 'overlayColor'>
@@ -104,7 +87,7 @@ export const BackgroundImage: FC<
   if (!imageUrl && !videoUrl) return null;
   return (
     <>
-      {videoUrl ? (
+      {videoUrl && !Boolean(process.env.NEXT_PUBLIC_E2E_TEST) ? (
         <video
           autoPlay
           muted
@@ -146,7 +129,7 @@ export const SideImage: FC<
   if (!imageUrl && !videoUrl) return null;
 
   return (
-    <div className={classNames('relative shrink-0 relative w-[500px] h-[500px]', className)}>
+    <div className={classNames('relative shrink-0 relative w-full md:w-[500px] h-[500px]', className)}>
       {video ? (
         <video
           autoPlay
@@ -182,8 +165,8 @@ export const Container: FC<PropsWithChildren<ContainerProps & { fullHeight?: boo
   containerVariant,
   marginBottom,
   marginTop,
-  paddingBottom,
-  paddingTop,
+  paddingBottom = PaddingSize.None,
+  paddingTop = PaddingSize.None,
   backgroundType,
 }) => {
   const isFluid = containerVariant === ContainerVariants.FluidContent;

@@ -2,8 +2,10 @@ import { registerUniformComponent, ComponentProps } from '@uniformdev/canvas-rea
 import { Divider } from './Divider';
 
 export type DividerProps = ComponentProps<{
-  colorStyle: Types.AvailableColor;
-  thickness: number;
+  colorStyle?: Types.AvailableColor;
+  thickness?: number;
+  width?: Types.AvailableWidth;
+  alignment?: Types.HorizontalAlignment;
 }>;
 
 export default Divider;

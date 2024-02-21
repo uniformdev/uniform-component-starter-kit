@@ -1,0 +1,209 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: grid
+name: Grid
+icon: view-grid
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: Used just to display Title Parameter
+    typeConfig: null
+    localizable: true
+  - id: columnsCount
+    name: Columns Count
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: '1'
+          value: '1'
+        - label: '2'
+          value: '2'
+        - label: '3'
+          value: '3'
+        - label: '4'
+          value: '4'
+        - label: '5'
+          value: '5'
+        - label: '6'
+          value: '6'
+        - label: '7'
+          value: '7'
+        - label: '8'
+          value: '8'
+        - label: '9'
+          value: '9'
+        - label: '10'
+          value: '10'
+        - label: '11'
+          value: '11'
+        - label: '12'
+          value: '12'
+      maxValue: 10
+      minValue: 0
+  - id: gapX
+    name: Gap X
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: none
+        - label: Small
+          value: small
+        - label: Medium
+          value: medium
+        - label: Large
+          value: large
+      maxValue: 10
+      minValue: 0
+  - id: gapY
+    name: Gap Y
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: none
+        - label: Small
+          value: small
+        - label: Medium
+          value: medium
+        - label: Large
+          value: large
+      maxValue: 10
+      minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - fullHeight
+        - textColorVariant
+        - containerVariant
+        - backgroundType
+        - paddingTop
+        - paddingBottom
+        - marginBottom
+        - marginTop
+  - id: containerVariant
+    name: Container Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Background In Container
+          value: backgroundInContainer
+        - text: Fluid Content
+          value: fluidContent
+  - id: backgroundType
+    name: Background Type
+    type: tp-background-type-parameter
+    helpText: ''
+    typeConfig: null
+  - id: paddingTop
+    name: Padding Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: paddingBottom
+    name: Padding Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginBottom
+    name: Margin Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Grid_preview_image
+useTeamPermissions: true
+slots:
+  - id: grid-inner
+    name: Grid Inner
+    allowedComponents:
+      - card
+      - callToAction
+      - carousel
+      - content
+      - divider
+      - featuredCallout
+      - gridItem
+      - hero
+      - image
+      - richText
+      - video
+      - spacer
+      - accordion
+      - grid
+      - $loop
+      - $personalization
+      - $test
+      - price
+      - addToCart
+      - review
+      - coveo-breadcrumbManager
+      - feature
+      - box
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2024-01-12T10:01:47.781205+00:00'
+updated: '2024-01-12T11:42:42.187844+00:00'

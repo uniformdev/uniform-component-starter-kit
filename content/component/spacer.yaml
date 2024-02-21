@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: spacer
+name: Spacer
+icon: merge-horizontal
+parameters:
+  - id: thickness
+    name: Thickness
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      options: []
+      maxValue: 250
+      minValue: 10
+categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Spacer_preview_image
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-11-22T09:43:35.156952+00:00'
+updated: '2023-11-22T10:08:53.13653+00:00'
+variants:
+  - id: vertical
+    name: Vertical

@@ -1,0 +1,160 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: image
+name: Image
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281187/csk-icons/component-icons-v2/CSKicon_image_wxugja_zhatuf.svg
+parameters:
+  - id: src
+    name: Image URL
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: alt
+    name: Alt Text
+    type: text
+    helpText: alt text for image
+    typeConfig: null
+    localizable: true
+  - id: group_dimensions
+    name: Dimensions
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - fill
+        - height
+        - width
+        - objectFit
+  - id: fill
+    name: Fill
+    type: checkbox
+    helpText: >-
+      A boolean that causes the image to fill the parent element instead of
+      setting width and height.
+    typeConfig: null
+  - id: height
+    name: Height
+    type: number
+    helpText: Set this only when the 'fill' property is unchecked.
+    typeConfig:
+      min: '1'
+  - id: width
+    name: Width
+    type: number
+    helpText: Set this only when the 'fill' property is unchecked
+    typeConfig:
+      min: '1'
+      required: false
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: group_styling
+    name: Presentation
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - overlayColor
+        - overlayOpacity
+        - borderWidth
+        - borderRadius
+        - borderColor
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+  - id: borderWidth
+    name: Border Width
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: steps
+      unit: px
+      options: []
+      maxValue: 10
+      minValue: 0
+  - id: borderRadius
+    name: Border Radius
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: none
+        - label: Small
+          value: small
+        - label: Medium
+          value: medium
+        - label: Large
+          value: large
+        - label: Full
+          value: full
+      maxValue: 10
+      minValue: 0
+  - id: borderColor
+    name: Border Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_advanced
+    name: Rendering & loading
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - quality
+        - priority
+  - id: quality
+    name: Quality
+    type: number
+    helpText: >-
+      The quality of the optimized image, where 100 is the best quality and
+      therefore largest file size. Defaults to 75.
+    typeConfig:
+      max: '100'
+      min: '10'
+  - id: priority
+    name: Priority
+    type: checkbox
+    helpText: When checked, the image will be considered high priority and preload.
+    typeConfig: null
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Image_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: alt
+canBeComposition: false
+created: '2023-08-28T12:30:18.596257+00:00'
+updated: '2023-12-27T08:54:35.393303+00:00'

@@ -1,0 +1,170 @@
+composition:
+  _name: Instant Search
+  _id: 165a59c7-84fc-4401-b5d0-ac54e52be1d2
+  type: algolia-instantSearch
+  parameters:
+    instantSearchParams:
+      type: algolia-components
+      value:
+        instantSearchProps:
+          indexName: products-ngm
+          stalledSearchDelay: 200
+  slots:
+    widgets:
+      - _id: ff68cecf-0409-4eb1-bd5f-a7aba65f7c1f
+        type: algolia-searchBox
+        parameters:
+          searchBoxParams:
+            type: algolia-components
+            value:
+              searchBoxProps:
+                searchAsYouType: true
+        _overridability:
+          parameters:
+            searchBoxParams: 'yes'
+      - _id: f3cd1dd1-8906-459e-bfdf-495c912c096f
+        type: grid
+        slots:
+          grid-inner:
+            - _id: ed2f0abb-6743-46aa-97e6-f2c9ebe893ca
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 197773b7-3c85-4d91-b7e9-1c2e557a17a0
+                    type: algolia-refinementList
+                    parameters:
+                      refinementListParams:
+                        type: algolia-components
+                        value:
+                          refinementListProps:
+                            limit: 10
+                            operator: and
+                            showMore: false
+                            attribute: subCategories
+                            searchable: false
+                            allowedIndex: products-ngm
+                            escapeFacetValues: true
+                    _overridability:
+                      parameters:
+                        refinementListParams: 'yes'
+              parameters:
+                title:
+                  type: text
+                  value: Left Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+              _overridability:
+                parameters:
+                  title: 'yes'
+                  rowSpan: 'yes'
+                  rowStart: 'yes'
+                  columnSpan: 'yes'
+                  columnStart: 'yes'
+            - _id: 9faef137-044e-4dda-8b7d-c1d91fb772db
+              type: gridItem
+              slots:
+                inner:
+                  - _id: bc8e46dc-d69c-4ef1-8065-208ba12f015c
+                    type: algolia-hits
+                    slots:
+                      hitComponent:
+                        - _id: 0ff9f424-1edf-477d-b297-09fffa50a6a7
+                          type: algolia-hitProduct
+                          parameters:
+                            textColorVariant:
+                              type: select
+                              value: Dark
+                          _overridability:
+                            variants: true
+                            parameters:
+                              delay: 'yes'
+                              duration: 'yes'
+                              badgeSize: 'yes'
+                              objectFit: 'yes'
+                              badgeStyle: 'yes'
+                              buttonCopy: 'yes'
+                              buttonLink: 'yes'
+                              buttonStyle: 'yes'
+                              overlayColor: 'yes'
+                              animationType: 'yes'
+                              overlayOpacity: 'yes'
+                              animationPreview: 'yes'
+                              textColorVariant: 'yes'
+                              buttonAnimationType: 'yes'
+                              lineCountRestriction: 'yes'
+                    _overridability:
+                      parameters:
+                        hitsParams: 'yes'
+              parameters:
+                title:
+                  type: text
+                  value: Right Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '3'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+              _overridability:
+                parameters:
+                  title: 'yes'
+                  rowSpan: 'yes'
+                  rowStart: 'yes'
+                  columnSpan: 'yes'
+                  columnStart: 'yes'
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: small
+          gapY:
+            type: tp-slider-parameter
+            value: small
+          title:
+            type: text
+            value: Algolia Products List
+          columnsCount:
+            type: tp-slider-parameter
+            value: '4'
+        _overridability:
+          parameters:
+            gapX: 'yes'
+            gapY: 'yes'
+            title: 'yes'
+            marginTop: 'yes'
+            paddingTop: 'yes'
+            columnsCount: 'yes'
+            marginBottom: 'yes'
+            paddingBottom: 'yes'
+            backgroundType: 'yes'
+            containerVariant: 'yes'
+      - _id: 2e9ee216-a239-48f5-91f5-066c33663408
+        type: algolia-pagination
+        _overridability:
+          parameters:
+            pageSize: 'yes'
+            paginationParams: 'yes'
+  _overridability:
+    parameters:
+      instantSearchParams: 'yes'
+created: '2023-12-22T11:47:18.316974+00:00'
+modified: '2023-12-26T09:35:08.722086+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Algolia/Instant_search_default_pattern_preview_image.jpg
+categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c

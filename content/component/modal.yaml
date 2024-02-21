@@ -1,0 +1,67 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: modal
+name: Modal
+icon: desktop
+parameters:
+  - id: closeOnClickOutside
+    name: Close on click outside
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: automaticOpenTimeout
+    name: Automatic Open Timeout
+    type: number
+    helpText: In seconds. This will only be used when the trigger slot is empty.
+    typeConfig: null
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - maxWidth
+  - id: maxWidth
+    name: Max Width
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: None
+        - label: Small
+          value: small
+        - label: Medium
+          value: medium
+        - label: Large
+          value: large
+        - label: X Large
+          value: xLarge
+      maxValue: 10
+      minValue: 0
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Modal_preview_image
+useTeamPermissions: true
+slots:
+  - id: trigger
+    name: Trigger
+    allowedComponents:
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: content
+    name: Content
+    allowedComponents:
+      - callToAction
+      - hero
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-11-22T09:43:33.47125+00:00'
+updated: '2023-11-22T10:04:01.300491+00:00'

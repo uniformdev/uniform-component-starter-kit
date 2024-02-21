@@ -1,0 +1,32 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tab
+name: Tab
+icon: tab
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: isActive
+    name: Is Active
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Tab_preview_image
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2023-10-25T10:12:26.719454+00:00'
+updated: '2023-12-27T09:00:32.323649+00:00'

@@ -1,0 +1,144 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: banner
+name: Banner
+icon: toolbar-bottom
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '5'
+    localizable: true
+  - id: icon
+    name: Icon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - position
+        - inline
+        - textAlign
+  - id: position
+    name: Position
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Top
+          value: top
+        - text: Center
+          value: center
+        - text: Bottom
+          value: bottom
+  - id: inline
+    name: Inline
+    type: checkbox
+    helpText: >-
+      If checked, the banner will not be positioned absolutely, and the position
+      parameter will be ignored.
+    typeConfig: null
+  - id: textAlign
+    name: Text Align
+    type: tp-horizontal-align-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_primaryCta
+    name: Primary CTA
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - primaryButtonCopy
+        - primaryButtonLink
+        - primaryButtonStyle
+        - primaryButtonAnimationType
+  - id: primaryButtonCopy
+    name: Primary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: primaryButtonLink
+    name: Primary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonStyle
+    name: Primary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonAnimationType
+    name: Primary Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: group_secondaryCta
+    name: Secondary CTA
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - secondaryButtonCopy
+        - secondaryButtonLink
+        - secondaryButtonStyle
+        - secondaryButtonAnimationType
+  - id: secondaryButtonCopy
+    name: Secondary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: secondaryButtonLink
+    name: Secondary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonStyle
+    name: Secondary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonAnimationType
+    name: Secondary Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Banner_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: description
+canBeComposition: false
+created: '2023-08-28T12:30:17.690289+00:00'
+updated: '2023-12-27T08:48:25.978965+00:00'
+variants:
+  - id: fullWidth
+    name: Full Width

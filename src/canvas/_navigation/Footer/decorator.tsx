@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import Image from '../../../components/Image';
 import { ScreenContainer } from '../../../components/Container';
 
 const BuildTimestamp = dynamic(() => import('../../../components/BuildTimestamp'), { ssr: false });
@@ -20,7 +20,7 @@ export const FooterPlaceholder = () => (
           <BuildTimestamp />
           <div
             className="footer-content text-secondary-content"
-            dangerouslySetInnerHTML={{ __html: `2023 Uniform Systems, Inc. All rights reserved.` }}
+            dangerouslySetInnerHTML={{ __html: '2024 Uniform Systems, Inc. All rights reserved.' }}
           />
           <div className="footer-content text-secondary-content">
             <span>

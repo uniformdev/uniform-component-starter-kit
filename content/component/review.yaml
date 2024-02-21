@@ -1,0 +1,129 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: review
+name: Review
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281258/csk-icons/component-icons-v2/star_o0rgk8.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '5'
+    localizable: true
+  - id: stars
+    name: Stars
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: '1'
+          value: '1'
+        - label: '2'
+          value: '2'
+        - label: '3'
+          value: '3'
+        - label: '4'
+          value: '4'
+        - label: '5'
+          value: '5'
+      maxValue: 10
+      minValue: 0
+  - id: personName
+    name: Person Name
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: picture
+    name: Picture
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: date
+    name: Date
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: group_reviewDescription
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColorVariant
+        - starsColor
+        - showReviewLabel
+        - lineCountRestriction
+  - id: textColorVariant
+    name: Text Color Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Dark
+          value: Dark
+        - text: Light
+          value: Light
+  - id: starsColor
+    name: Stars Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: showReviewLabel
+    name: Show Label
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: lineCountRestriction
+    name: Line Count Restriction
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: none
+        - label: '6'
+          value: '6'
+        - label: '5'
+          value: '5'
+        - label: '4'
+          value: '4'
+        - label: '3'
+          value: '3'
+        - label: '2'
+          value: '2'
+        - label: '1'
+          value: '1'
+      maxValue: 10
+      minValue: 0
+categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Review_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: personName
+canBeComposition: false
+created: '2023-08-28T12:30:19.579649+00:00'
+updated: '2023-12-27T08:59:05.82411+00:00'
+variants:
+  - id: multiColumn
+    name: Multi Column

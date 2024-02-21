@@ -1,0 +1,261 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: card
+name: Card
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281127/csk-icons/component-icons-v2/CSKicon_card_wtsqok_zadmkv.svg
+parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - title
+        - image
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: group_description
+    name: Description
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - description
+        - lineCountRestriction
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '5'
+    localizable: true
+  - id: lineCountRestriction
+    name: Line Count Restriction
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: none
+        - label: '1'
+          value: '1'
+        - label: '2'
+          value: '2'
+        - label: '3'
+          value: '3'
+        - label: '4'
+          value: '4'
+        - label: '5'
+          value: '5'
+        - label: '6'
+          value: '6'
+      maxValue: 10
+      minValue: 0
+  - id: group_badge
+    name: Badge
+    type: group
+    typeConfig:
+      childrenParams:
+        - badge
+        - badgeSize
+        - badgeStyle
+  - id: badge
+    name: Badge
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: badgeSize
+    name: Badge Size
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Large
+          value: lg
+        - text: Medium
+          value: md
+        - text: Small
+          value: sm
+        - text: Extra small
+          value: xs
+  - id: badgeStyle
+    name: Badge Style
+    type: tp-badge-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_cta
+    name: CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - buttonLink
+        - buttonStyle
+        - buttonCopy
+        - buttonAnimationType
+  - id: buttonLink
+    name: Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: buttonStyle
+    name: Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: buttonCopy
+    name: Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: buttonAnimationType
+    name: Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: group_imageSettings
+    name: Image Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - overlayColor
+        - overlayOpacity
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColorVariant
+  - id: textColorVariant
+    name: Text Color Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Dark
+          value: Dark
+        - text: Light
+          value: Light
+  - id: group_animationSettings
+    name: Animation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - animationType
+        - duration
+        - delay
+        - animationPreview
+  - id: animationType
+    name: Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: duration
+    name: Duration
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Slow
+          value: slow
+        - text: Medium
+          value: medium
+        - text: Fast
+          value: fast
+  - id: delay
+    name: Delay
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: None
+          value: none
+        - text: Short (250ms)
+          value: short
+        - text: Medium (500ms)
+          value: medium
+        - text: Long (1000ms)
+          value: long
+  - id: animationPreview
+    name: Animation Preview
+    type: tp-play-animation-parameter
+    helpText: ''
+    typeConfig: null
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Card_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:17.667255+00:00'
+updated: '2023-12-27T08:50:10.18308+00:00'
+variants:
+  - id: backgroundImage
+    name: Background Image
+  - id: featured
+    name: Featured

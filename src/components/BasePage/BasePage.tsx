@@ -1,4 +1,4 @@
-import { FC, PropsWithChildren } from 'react';
+import { FC, PropsWithChildren, useCallback } from 'react';
 import classNames from 'classnames';
 import {
   createUniformApiEnhancer,
@@ -23,8 +23,11 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
 
   const gap = composition?.slots?.pageHeader?.[0]?.parameters?.syntheticGap?.value as PaddingSize | undefined;
 
-  const ContentProviders = ({ children }: PropsWithChildren) =>
-    Providers ? <Providers styles={{ modal: styles?.modal }}>{children}</Providers> : <>{children}</>;
+  const ContentProviders = useCallback(
+    ({ children }: PropsWithChildren) =>
+      Providers ? <Providers styles={{ modal: styles?.modal }}>{children}</Providers> : <>{children}</>,
+    [Providers, styles?.modal]
+  );
 
   return (
     <ThemeProvider>
@@ -63,13 +66,14 @@ const BasePage: FC<BasePageProps> = ({
   providers,
   styles,
   context,
+  localizationSettings,
 }) => (
   <UniformComposition
     data={composition}
     behaviorTracking="onLoad"
     contextualEditingEnhancer={createUniformApiEnhancer({ apiUrl: '/api/preview' })}
   >
-    <ComponentStarterKitContextProvider {...(context || {})}>
+    <ComponentStarterKitContextProvider {...(context || {})} localizationSettings={localizationSettings}>
       <PageContent
         useUniformComposition={useUniformComposition}
         preview={preview}

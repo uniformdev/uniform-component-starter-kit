@@ -1,0 +1,64 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: divider
+name: Divider
+icon: math-divide
+parameters:
+  - id: colorStyle
+    name: Color Style
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: thickness
+    name: Thickness
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: steps
+      unit: px
+      options: []
+      maxValue: 10
+      minValue: 1
+  - id: width
+    name: Width
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      type: custom
+      options:
+        - label: Full
+          value: 100%
+        - label: 90%
+          value: 90%
+        - label: 80%
+          value: 80%
+        - label: 70%
+          value: 70%
+        - label: 60%
+          value: 60%
+        - label: 50%
+          value: 50%
+        - label: 40%
+          value: 40%
+        - label: 30%
+          value: 30%
+        - label: 20%
+          value: 20%
+        - label: 10%
+          value: 10%
+    localizable: false
+  - id: alignment
+    name: Alignment
+    type: tp-horizontal-align-parameter
+    helpText: ''
+    typeConfig: null
+    localizable: false
+categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Divider_preview_image
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-08-28T12:30:17.952986+00:00'
+updated: '2023-12-21T15:03:39.754923+00:00'

@@ -1,0 +1,52 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: countdown
+name: Countdown
+icon: edit-exposure
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: Used just to display Title Parameter
+    typeConfig: null
+    localizable: true
+  - id: targetDate
+    name: Target Date
+    type: text
+    helpText: >-
+      Format with timezone: YYYY-MM-DDTHH:MM:SS-HH:00. Format in your local
+      timezone: YYYY-MM-DDTHH:MM:SS
+    typeConfig: null
+  - id: size
+    name: Size
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: Tiny
+          value: tiny
+        - label: Small
+          value: small
+        - label: Normal
+          value: normal
+        - label: Large
+          value: large
+      maxValue: 10
+      minValue: 0
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Countdown_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-11-02T13:52:54.609194+00:00'
+updated: '2023-12-27T08:51:41.281499+00:00'
+variants:
+  - id: labelsUnder
+    name: Labels Under
+  - id: labelsInBoxes
+    name: Labels In Boxes

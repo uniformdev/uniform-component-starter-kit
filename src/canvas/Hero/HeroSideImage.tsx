@@ -3,7 +3,9 @@ import classNames from 'classnames';
 import { useHeroAnimation } from './animation';
 import { Container, Description, EyebrowText, PrimaryButton, SecondaryButton, SideImage, Title } from './atoms';
 import { AnimationVariant } from '../../components/AnimatedContainer';
-import { HeroVariant, HeroProps } from './';
+import { HeroVariant, HeroProps, DEFAULT_TEXT_COLOR } from './';
+import { REGEX_COLOR_HEX } from '../../utilities';
+import { getHeroTextStyle } from './helpers';
 
 export const HeroSideImage: FC<HeroProps> = ({
   title,
@@ -26,20 +28,25 @@ export const HeroSideImage: FC<HeroProps> = ({
   animationType,
   duration = 'medium',
   animationOrder,
-  backgroundType,
+  backgroundType, // Deprecated
+  backgroundColor,
   containerVariant,
   paddingBottom,
   paddingTop,
   marginBottom,
   marginTop,
-  textColorVariant = 'Light',
+  textColorVariant, // Deprecated
+  textColor = DEFAULT_TEXT_COLOR,
   animationPreview,
   delay = 'none',
   styles,
 }) => {
   const { variant } = component || {};
 
-  const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
+  const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
+    ? textColor
+    : undefined;
+  const baseTextStyle = getHeroTextStyle(textColorVariant || textColor);
 
   const heroContentClass = variant === HeroVariant.ImageLeft ? 'flex-col lg:flex-row' : 'flex-col lg:flex-row-reverse';
 
@@ -64,18 +71,19 @@ export const HeroSideImage: FC<HeroProps> = ({
   return (
     <Container
       fullHeight={fullHeight}
-      className={baseTextStyle}
+      className={classNames({ [baseTextStyle]: !currentColor })}
       paddingBottom={paddingBottom}
       paddingTop={paddingTop}
       marginBottom={marginBottom}
       marginTop={marginTop}
-      backgroundType={backgroundType}
+      backgroundType={backgroundColor || backgroundType}
       containerVariant={containerVariant}
     >
       <div
         className={classNames('hero-content text-center p-0', heroContentClass, {
           'h-full items-start pt-20': fullHeight,
         })}
+        style={{ color: currentColor }}
       >
         <ElementWrapper
           duration={duration}
@@ -98,7 +106,7 @@ export const HeroSideImage: FC<HeroProps> = ({
             delay={getDelayValue(0)}
             animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : textAnimationSide}
           >
-            <EyebrowText className={classNames('text-primary', styles?.eyebrowText)} />
+            <EyebrowText className={styles?.eyebrowText} />
           </ElementWrapper>
           <ElementWrapper
             duration={duration}

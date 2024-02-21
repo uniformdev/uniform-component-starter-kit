@@ -16,6 +16,7 @@ export type BasePageProps = {
   skipContainerWrappersList?: string[];
   context: Record<string, unknown>;
   styles?: Styles;
+  localizationSettings?: Types.LocalizationSettings;
 };
 
 export * from './decorator';

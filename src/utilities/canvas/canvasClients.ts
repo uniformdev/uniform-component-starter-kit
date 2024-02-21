@@ -18,7 +18,7 @@ export const getRouteClient = () => {
     apiKey,
     projectId,
     edgeApiHost,
-    bypassCache: true,
+    disableSWR: true,
   });
 
   return client;
@@ -37,7 +37,6 @@ export const getProjectMapClient = () => {
     apiKey,
     apiHost,
     projectId,
-    bypassCache: true,
   });
 };
 
@@ -48,16 +47,14 @@ export const getBreadcrumbs = async ({
   compositionId,
   preview,
   dynamicTitle,
-  resolvedUrl,
+  urlSegments,
 }: {
   compositionId: string;
   preview: boolean;
   dynamicTitle?: string;
-  resolvedUrl?: string;
+  urlSegments?: string[];
 }) => {
   const projectMapClient = getProjectMapClient();
-
-  const urlSegments = resolvedUrl?.split('/') || [];
 
   const { nodes: projectMapNodes } = await projectMapClient.getNodes({
     compositionId: compositionId,
@@ -65,14 +62,21 @@ export const getBreadcrumbs = async ({
     state: getState(preview),
   });
 
-  return projectMapNodes?.map((node, index) => {
-    const isDynamicPath = Boolean(node.pathSegment?.includes(':'));
+  const isLocalizedApp = projectMapNodes?.[0]?.type === 'placeholder';
+  const paths = isLocalizedApp ? projectMapNodes?.slice(1) : projectMapNodes;
+
+  return paths?.map((node, index) => {
+    const isDynamicPath = node.path?.includes(':');
+    const shouldShowDynamicTitle = node.pathSegment?.includes(':') && !node.pathSegment?.includes(':locale');
+
+    const generatedPathSegment = isDynamicPath ? urlSegments?.slice(0, index + 1).join('/') || '/' : node.path;
+
     return {
       name: node.name,
-      path: isDynamicPath ? urlSegments.slice(0, index + 1).join('/') || '/' : node.path,
+      path: generatedPathSegment?.startsWith('/') ? generatedPathSegment : `/${generatedPathSegment}`,
       type: node.type,
-      isRoot: node.path === '/',
-      dynamicInputTitle: (isDynamicPath && dynamicTitle) || null,
+      isRoot: node.path === '/' || node.path === '/:locale',
+      dynamicInputTitle: (shouldShowDynamicTitle && dynamicTitle) || null,
     };
   });
 };

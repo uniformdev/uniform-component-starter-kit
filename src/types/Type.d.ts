@@ -10,13 +10,23 @@ declare namespace Types {
 
   type CloudinaryImage = {
     url: string;
-    src?: string;
   }[];
 
-  type UniformImage = {
-    id: string;
-    url: string;
+  type UniformOldImage = {
+    id?: string;
+    url?: string;
   };
+
+  type ThemeColorsValues =
+    | 'primary'
+    | 'primary-content'
+    | 'secondary'
+    | 'secondary-content'
+    | 'accent'
+    | 'accent-content'
+    | 'info-content'
+    | 'base-200'
+    | 'base-300';
 
   type ButtonStyles = 'primary' | 'secondary' | 'accent' | 'ghost' | 'link';
 
@@ -52,13 +62,25 @@ declare namespace Types {
 
   type AvailableRowCount = '1' | '2' | '3' | '4' | '5' | '6';
 
-  type AvailableOpacity = '0%' | '10%' | '20%' | '30%' | '40%' | '50%' | '60%' | '70%' | '80%' | '90%' | '100%';
+  type PercentRange = '0%' | '10%' | '20%' | '30%' | '40%' | '50%' | '60%' | '70%' | '80%' | '90%' | '100%';
+
+  type AvailableOpacity = PercentRange;
+
+  type AvailableWidth = PercentRange;
 
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
   type HorizontalAlignment = 'left' | 'center' | 'right';
 
   type SupportedThemes = 'uniform' | 'javadrip' | 'custom';
+
+  type TabSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type TableSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type CountdownSize = 'tiny' | 'small' | 'normal' | 'large';
+
+  type TabStyle = 'bordered' | 'lifted' | 'boxed';
 
   type ThemeColors = {
     value: string;
@@ -82,5 +104,11 @@ declare namespace Types {
   type ThemeValue = {
     themeName: Types.SupportedThemes;
     colors: Types.ThemeColors[];
+  };
+
+  type LocalizationSettings = {
+    locales: string[];
+    localeNames: Record<string, string>;
+    defaultLocale: string;
   };
 }

@@ -1,11 +1,12 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { withoutContainer } from '../../hocs/withoutContainer';
 import { Banner } from './Banner';
 
 export type BannerProps = ComponentProps<{
   title: string;
   description: string;
-  icon: string;
+  icon?: string | Asset;
   inline: boolean;
   textAlign: Types.HorizontalAlignment;
   position: Types.AvailableBannerPosition;

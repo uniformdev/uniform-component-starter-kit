@@ -1,0 +1,117 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: header
+name: Header
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281090/csk-icons/component-icons-v2/CSKicon_header_eu1k3o_n0rurn.svg
+parameters:
+  - id: logo
+    name: Logo
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: linksAlignment
+    name: Links Alignment
+    type: tp-horizontal-align-parameter
+    helpText: ''
+    typeConfig: null
+  - id: group_global
+    name: Global
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - theme
+        - primaryFont
+        - favicon
+  - id: theme
+    name: Theme
+    type: tp-set-up-theme-parameter
+    helpText: ''
+    typeConfig: null
+  - id: primaryFont
+    name: Primary Font
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Inter
+          value: inter
+        - text: Roboto mono
+          value: roboto_mono
+        - text: Rubik
+          value: rubik
+        - text: DM Mono
+          value: dm_mono
+        - text: Farro
+          value: farro
+        - text: Damion
+          value: damion
+        - text: Advent Pro
+          value: advent_pro
+        - text: Asap
+          value: asap
+        - text: Antonio
+          value: antonio
+        - text: Maven Pro
+          value: maven_pro
+        - text: Lexend Giga
+          value: lexend_giga
+        - text: Metrophobic
+          value: metrophobic
+  - id: favicon
+    name: Favicon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: syntheticGap
+    name: Synthetic Gap
+    type: tp-slider-parameter
+    helpText: Manage spacing between components on the page
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - label: None
+          value: None
+        - label: Small
+          value: Small
+        - label: Medium
+          value: Medium
+        - label: Large
+          value: Large
+      maxValue: 10
+      minValue: 0
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Header_preview_image
+useTeamPermissions: true
+slots:
+  - id: links
+    name: Links
+    allowedComponents:
+      - navigationLink
+      - navigationGroup
+      - navigationMenu
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: iconLinks
+    name: Icon Links
+    allowedComponents:
+      - iconLink
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: linksAlignment
+canBeComposition: false
+created: '2023-11-22T09:43:34.431017+00:00'
+updated: '2023-11-22T10:00:48.910499+00:00'
+variants:
+  - id: light
+    name: Light

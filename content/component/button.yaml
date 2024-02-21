@@ -1,0 +1,41 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: button
+name: Button
+icon: rectangle-rounded
+parameters:
+  - id: copy
+    name: Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: style
+    name: Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: animationType
+    name: Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Button_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: copy
+canBeComposition: false
+created: '2023-08-28T12:30:17.415744+00:00'
+updated: '2023-12-27T08:48:35.985158+00:00'

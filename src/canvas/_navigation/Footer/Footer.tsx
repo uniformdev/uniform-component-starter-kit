@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
-import Image from 'next/image';
+import Image from '../../../components/Image';
 import classNames from 'classnames';
 import { UniformRichText, UniformSlot } from '@uniformdev/canvas-react';
 import { ScreenContainer } from '../../../components/Container';
@@ -23,10 +23,7 @@ export const Footer: FC<FooterProps> = ({ logo, displayBuildTimestamp = false, c
           <div className="w-full md:w-1/2">
             <Image src={imageUrl} width="200" height="50" alt="Uniform" />
             {displayBuildTimestamp && <BuildTimestamp style={styles?.buildTimestamp} />}
-            <div
-              className="footer-content text-secondary-content"
-              dangerouslySetInnerHTML={{ __html: `2023 ${copyright}` }}
-            />
+            <div className="footer-content text-secondary-content" dangerouslySetInnerHTML={{ __html: copyright }} />
             <div className="footer-content text-secondary-content">
               <UniformRichText parameterId="footerText" />
             </div>

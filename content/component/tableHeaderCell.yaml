@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tableHeaderCell
+name: Table Header Cell
+icon: dice-1
+parameters:
+  - id: value
+    name: Value
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_header_cell_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: value
+canBeComposition: false
+created: '2023-10-26T13:12:32.366374+00:00'
+updated: '2023-12-27T09:05:03.276193+00:00'

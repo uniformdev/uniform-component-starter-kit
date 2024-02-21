@@ -1,0 +1,596 @@
+composition:
+  _name: Main Header
+  _id: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+  type: header
+  parameters:
+    logo:
+      type: asset
+      value:
+        - _id: a0e0bbec-1905-42df-83ee-08aa2bd5b23d
+          type: image
+          fields:
+            url:
+              type: text
+              value: >-
+                https://res.cloudinary.com/uniform-demos/image/upload/v1692277338/csk-icons/Logo_amxon7_fb5wxp.png
+          _source: custom-url
+    theme:
+      type: tp-set-up-theme-parameter
+      value:
+        colors:
+          - name: primary
+            label: Primary
+            value: '#0052ED'
+          - name: primary-content
+            label: Primary Content
+            value: '#FFFFFF'
+          - name: secondary
+            label: Secondary
+            value: '#ffffff'
+          - name: secondary-content
+            label: Secondary Content
+            value: '#000000'
+          - name: accent
+            label: Accent
+            value: '#DF0000'
+          - name: accent-content
+            label: Accent Content
+            value: '#FFFFFF'
+          - name: info-content
+            label: Info Content
+            value: '#99C6FF'
+          - name: base-200
+            label: Base 200
+            value: '#6b8ff0'
+          - name: base-300
+            label: Base 300
+            value: '#001242'
+        themeName: uniform
+        themeLabel: Uniform
+    favicon:
+      type: asset
+      value:
+        - _id: be017b22-21bc-4a76-baf6-10ca3aa30abe
+          type: image
+          fields:
+            url:
+              type: text
+              value: >-
+                https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-icons/favicon
+          _source: custom-url
+    primaryFont:
+      type: select
+      value: inter
+    syntheticGap:
+      type: tp-slider-parameter
+      value: Medium
+    linksAlignment:
+      type: tp-horizontal-align-parameter
+      value: center
+  slots:
+    links:
+      - _id: 7e1606da-1b52-4d4d-8896-00a503345736
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: /components
+              type: projectMapNode
+              nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: All components
+      - _id: fa9fde41-a60f-4f5b-9b02-0be9bd390783
+        type: navigationGroup
+        slots:
+          subNavItems:
+            - _id: 942c926a-7c77-4895-9968-0035122b3aaf
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/heroes
+                    type: projectMapNode
+                    nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Heroes
+            - _id: 20b5c320-954b-48d1-941e-c598892336f8
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/calls-to-action
+                    type: projectMapNode
+                    nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Calls to Action
+            - _id: e4e163e7-b584-4532-858e-900b40985474
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/card-blocks
+                    type: projectMapNode
+                    nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Card Blocks
+            - _id: 1e8b5e5a-5e41-46cf-9cfa-097a48c14165
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/featured-callouts
+                    type: projectMapNode
+                    nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Featured Callouts
+            - _id: d0b595c2-4035-47cb-b862-2911cb5a489e
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/carousels
+                    type: projectMapNode
+                    nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Carousels
+            - _id: a1355659-e117-4054-847d-c099d2eea589
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/accordions
+                    type: projectMapNode
+                    nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Accordions
+            - _id: 4c978ad0-c927-405d-ab88-9750923d0821
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/testimonials
+                    type: projectMapNode
+                    nodeId: 6e8d556b-b9b7-4f21-a533-bcb2ef9d5c76
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Testimonials
+        parameters:
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Marketing
+      - _id: 7c6482b9-8ce0-4689-9fb8-f0f976f1806e
+        type: navigationGroup
+        slots:
+          subNavItems:
+            - _id: 9cf340da-aed0-424a-854f-f20e27f4cd58
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/pdp
+                    type: projectMapNode
+                    nodeId: f28599b9-2a0e-4f69-be98-9c32278237d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Product Detail Page
+            - _id: fe803539-1484-4827-a876-060037b4ce1c
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/reviews
+                    type: projectMapNode
+                    nodeId: d42bee8b-afda-49e3-8691-54ce2f39f809
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Reviews
+            - _id: 64690ec2-aaeb-415c-af9e-1ae8b2c6ff10
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/image-gallery
+                    type: projectMapNode
+                    nodeId: ff09deec-49ab-4dee-8431-e9bf6e9a5d37
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Image Gallery
+            - _id: 00aaa89c-c2c2-4018-b207-07ca4ab9bccf
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/product-info
+                    type: projectMapNode
+                    nodeId: c6b270b9-bb82-4d6c-a40c-66cd80939c13
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Product Info
+        parameters:
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Commerce
+      - _id: e878d974-3def-4d9d-8c6b-1a5df6c94b73
+        type: navigationGroup
+        slots:
+          subNavItems:
+            - _id: e9964bf2-aecd-49de-bc15-b92be59f7896
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/headers-topnav
+                    type: projectMapNode
+                    nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Header & Top Nav
+            - _id: 50608254-c677-4030-9ffd-aa4d5f2a93d1
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/breadcrumbs
+                    type: projectMapNode
+                    nodeId: aeed197a-ba51-497f-8f3e-92dc601918f2
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Breadcrumbs
+            - _id: 26774ef2-48fc-4aca-a614-70dff91b4a0a
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/banners
+                    type: projectMapNode
+                    nodeId: 7a7b2f31-988c-47b2-abd9-e601b0ede3d9
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Cookie Banners
+        parameters:
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Global
+      - _id: 64d3acf5-96f3-454a-8d47-52d212bc40d1
+        type: navigationGroup
+        slots:
+          subNavItems:
+            - _id: 166bfbe5-10b0-4a59-a983-19b1816e03d5
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/atomic-components
+                    type: projectMapNode
+                    nodeId: cddada86-6f75-46ad-a520-d2a39f4bf6fa
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Atomic Components
+            - _id: 92bd14aa-6cf3-4c62-88d5-0ede66094c7f
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/layouts-container
+                    type: projectMapNode
+                    nodeId: a99b4044-8f9a-48fc-9f58-6c2fe4fb7534
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Layouts & Containers
+            - _id: 164ab5d3-e420-4b63-a4b7-fcbb352446ad
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/content-blocks
+                    type: projectMapNode
+                    nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Content Blocks
+            - _id: e32f2c31-2751-4e72-adfa-393409f2bd3a
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/rich-texts
+                    type: projectMapNode
+                    nodeId: 00a9c22c-831d-4a04-ac70-d9313cf74f5c
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: 'Rich Texts '
+            - _id: c5ba3067-be0b-4a9d-8804-911727601ac6
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/spacers-dividers
+                    type: projectMapNode
+                    nodeId: 8f4c8afc-f1a0-4443-855d-e5499eb9a91b
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Spacers & Dividers
+            - _id: c59c0167-7892-4089-9066-a467ce6fae0c
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/images
+                    type: projectMapNode
+                    nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Images
+            - _id: fb9580f8-495a-4f50-89fb-21dca93a303c
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/videos
+                    type: projectMapNode
+                    nodeId: 98bc7d92-11bc-491b-9b1c-391760a3c875
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Videos
+            - _id: bcb13ec0-e837-4d98-8316-1541af2b9c76
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/modals
+                    type: projectMapNode
+                    nodeId: db6f4ac5-c28f-4305-a0d6-81e8db74e61c
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Modals
+            - _id: d1f1b35f-4875-4dbe-903f-f11923e32bfd
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/tabs
+                    type: projectMapNode
+                    nodeId: 3c6dc27e-75d9-45ae-890f-dcd15cfca35a
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Tabs
+            - _id: 933b7c57-6b04-4baa-b459-a2c3df570e07
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/tables
+                    type: projectMapNode
+                    nodeId: 5c7e7bf1-e932-4cde-9ca6-414e85aef779
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Tables
+            - _id: 5fcdccfe-3962-4efb-9b8e-c9205c8b8525
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/countdowns
+                    type: projectMapNode
+                    nodeId: c7379e60-ab85-4681-942b-9ed8c8622b53
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Countdowns
+        parameters:
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Atoms
+      - _id: b08be46a-560c-4362-8db8-13a7630d1e13
+        type: navigationLink
+        variant: ''
+        parameters:
+          link:
+            type: link
+            value:
+              path: /examples
+              type: projectMapNode
+              nodeId: b8994dfb-6a7e-4a10-a1af-e8dcf520a758
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Examples
+    iconLinks:
+      - _id: c34a481b-1d36-457d-bc91-a3cf3df2a8c0
+        type: iconLink
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 9e7e7642-7f1e-4169-926c-8646b6ea2af0
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1692277665/csk-icons/storybook_n7x1fd_s5rm32.svg
+                _source: custom-url
+          link:
+            type: link
+            value:
+              path: https://components-storybook.uniform.app/
+              type: url
+      - _id: 1c7db051-f4d6-4970-b077-8dc5f4faea70
+        type: iconLink
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 0165df2b-dccb-4be7-ad8d-894d7b3b4e94
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1692278524/csk-icons/github_l9wqxq_m7eiow.svg
+                _source: custom-url
+          link:
+            type: link
+            value:
+              path: https://github.com/uniformdev/uniform-component-starter-kit
+              type: url
+  _overridability:
+    parameters:
+      syntheticGap: 'yes'
+created: '2023-09-20T09:32:34.688792+00:00'
+modified: '2024-02-02T13:30:33.49929+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Header_pattern_preview_image
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b

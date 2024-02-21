@@ -31,7 +31,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({
             {breadcrumb?.type === 'placeholder' ? (
               <span>{breadcrumb.name}</span>
             ) : (
-              <a href={breadcrumb?.path}>{breadcrumb.dynamicInputTitle || breadcrumb.name}</a>
+              <a href={breadcrumb?.path}>{breadcrumb.dynamicInputTitle || breadcrumb.name || ''}</a>
             )}
           </li>
         ))}

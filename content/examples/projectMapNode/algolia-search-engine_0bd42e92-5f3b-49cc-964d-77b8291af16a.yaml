@@ -1,0 +1,9 @@
+id: 0bd42e92-5f3b-49cc-964d-77b8291af16a
+name: Algolia Search Engine
+type: composition
+data: {}
+order: 600
+path: /examples/algolia-search-engine
+compositionId: 8928055b-ae74-472d-a024-bfcbe6f4f8ca
+pathSegment: algolia-search-engine
+projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

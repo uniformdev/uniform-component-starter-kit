@@ -1,8 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getProjectMapClient } from '../../utilities/canvas/canvasClients';
+import localizationSettings from '@/context/locales.json';
 
 // Vercel specific, Incremental Static Regeneration. more info https://nextjs.org/docs/basic-features/data-fetching/incremental-static-regeneration
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+  const { locales = [] } = localizationSettings || {};
   const secret = req.query.secret as string | undefined;
 
   if (secret !== process.env.UNIFORM_PREVIEW_SECRET) {
@@ -15,7 +17,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   }
 
   const { nodes } = await getProjectMapClient().getNodes({ compositionId });
-  const pathsToRevalidate: string[] | undefined = nodes?.map(n => n?.path);
+  const pathsToRevalidate: string[] | undefined = nodes
+    ?.map(node => node?.path)
+    .map(path => {
+      if (locales?.length) {
+        return locales.map((locale: string) => path.replace(`/:locale`, `/${locale}`));
+      }
+      return [path.replace(`/:locale`, '')];
+    })
+    .flat();
 
   if (!pathsToRevalidate || pathsToRevalidate.length <= 0) {
     return res.status(404).json({ message: 'Paths could not be resolved for composition: ' + compositionId });

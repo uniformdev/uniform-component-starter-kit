@@ -1,6 +1,6 @@
 import { FC, useCallback, useState } from 'react';
 import classNames from 'classnames';
-import { useUniformCurrentComposition, UniformText } from '@uniformdev/canvas-react';
+import { UniformText } from '@uniformdev/canvas-react';
 import { getButtonClass } from '../../utilities/styling';
 import ProductQuantityItem from '../../components/ProductQuantityItem';
 import { BaseAddToCartProps } from './';
@@ -12,7 +12,6 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
   useCustomTextElements = false,
   animationType,
 }) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
   const [quantity, setQuantity] = useState<number>(1);
 
   const onClickIncrement = useCallback(() => setQuantity(quantity => quantity + 1), []);
@@ -24,8 +23,8 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
 
   return (
     <div className="flex flex-row justify-between items-center py-6 flex-wrap gap-5">
-      <div className="flex items-center justify-between w-auto gap-4 grow">
-        <div className="inline font-bold text-secondary-content">QUANTITY:</div>
+      <div className="flex flex-wrap items-center justify-between w-auto gap-4 grow">
+        <div className="inline font-bold text-secondary-content">QUANTITY: </div>
         <ProductQuantityItem
           animationType={animationType}
           buttonStyle={buttonStyle}
@@ -34,20 +33,16 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
           onClickIncrement={onClickIncrement}
         />
       </div>
-      <div
+      <button
         className={classNames('btn rounded-none ml-auto w-full flex-1 min-w-[200px]', getButtonClass(buttonStyle))}
         onClick={handleButtonClick}
       >
         {useCustomTextElements ? (
-          <div onClick={isContextualEditing ? e => e.preventDefault() : undefined}>{buttonCopy}</div>
+          <div>{buttonCopy}</div>
         ) : (
-          <UniformText
-            placeholder="Button copy goes here"
-            parameterId="buttonCopy"
-            onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-          />
+          <UniformText placeholder="Button copy goes here" parameterId="buttonCopy" />
         )}
-      </div>
+      </button>
     </div>
   );
 };

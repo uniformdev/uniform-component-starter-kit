@@ -1,0 +1,74 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: video
+name: Video
+icon: camera
+parameters:
+  - id: url
+    name: Video Url
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+        projectMapNode: false
+  - id: placeholderImage
+    name: Placeholder Image
+    type: asset
+    helpText: >-
+      You can replace video preview image by using this parameter. Work only
+      when light is checked
+    typeConfig:
+      max: 1
+      min: 0
+      required: false
+  - id: group_displaySettings
+    name: Playback settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - autoPlay
+        - lazyLoad
+        - loop
+        - controls
+        - muted
+  - id: autoPlay
+    name: Auto Play
+    type: checkbox
+    helpText: It works only with Lazy Load param  is false and Muted param is true
+    typeConfig: null
+    localizable: false
+  - id: lazyLoad
+    name: Lazy Load
+    type: checkbox
+    helpText: >-
+      Check to show just the video thumbnail, which loads the full player on
+      click
+    typeConfig: null
+  - id: loop
+    name: Loop
+    type: checkbox
+    helpText: Check or unchek to loop the media
+    typeConfig: null
+  - id: controls
+    name: Controls
+    type: checkbox
+    helpText: >-
+      Check or uncheck to display native player controls.  For Vimeo videos,
+      hiding controls must be enabled by the video owner.
+    typeConfig: null
+  - id: muted
+    name: Muted
+    type: checkbox
+    helpText: Mutes the player
+    typeConfig: null
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Video_preview_image
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2024-01-12T10:01:50.792169+00:00'
+updated: '2024-01-12T13:44:16.310506+00:00'

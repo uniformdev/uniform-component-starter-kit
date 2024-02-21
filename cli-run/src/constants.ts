@@ -1,10 +1,7 @@
 export enum AvailableProjects {
   ComponentStarterKit = 'component-starter-kit',
-  CommerceAlgoliaDemo = 'commerce-algolia',
-  CommerceCoveoDemo = 'commerce-coveo',
-  CommerceCommercetoolsDemo = 'commerce-commercetools',
-  Localization = 'localization',
-  CommerceStarter = 'commerce-starter',
+  ComponentStarterKitRsc = 'component-starter-kit-rsc',
+  SalesDemo = 'sales-demo',
 }
 
 export enum CommonVariants {

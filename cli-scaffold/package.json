@@ -1,0 +1,53 @@
+{
+  "name": "demos-scaffold-cli",
+  "version": "1.0.0",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "build": "tsup src --format esm",
+    "dev": "tsup src --format esm --watch",
+    "start": "node dist/index.mjs",
+    "test": "jest",
+    "cli": "echo \"🚧 🚧 🚧 PLEASE RUN CLI FROM THE ROOT FOLDER\" && exit 1"
+  },
+  "engines": {
+    "npm": ">=8.19.0",
+    "node": ">=18.17.0",
+    "yarn": "please-use-npm",
+    "pnpm": "please-use-npm"
+  },
+  "keywords": [
+    "demos-scaffold-cli"
+  ],
+  "bin": {
+    "demos-scaffold-cli": "./dist/index.mjs"
+  },
+  "tsup": {
+    "entry": [
+      "src/index.ts"
+    ],
+    "dts": true,
+    "clean": true,
+    "splitting": false,
+    "skipNodeModulesBundle": true
+  },
+  "dependencies": {
+    "@clack/prompts": "0.7.0",
+    "clear": "^0.1.0",
+    "dotenv": "^16.3.1",
+    "jsonwebtoken": "^9.0.1",
+    "node-fetch": "2.6.7",
+    "open": "^9.1.0",
+    "picocolors": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/clear": "^0.1.2",
+    "@types/jest": "^29.5.0",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/node": "^18.15.11",
+    "@types/node-fetch": "^2.6.4",
+    "jest": "^29.5.0",
+    "ts-jest": "^29.1.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.7.0"
+  }
+}

@@ -1,7 +1,9 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { HeaderLink } from './HeaderLink';
 import { FooterLink } from './FooterLink';
 import { NavigationGroup } from './NavigationGroup';
+import { NavigationMenu } from './NavigationMenu';
 
 export type Styles = {
   link?: string;
@@ -11,6 +13,9 @@ export type Styles = {
 export type LinkProps = ComponentProps<{
   title: string;
   link: Types.ProjectMapLink;
+  icon?: Asset;
+  hideIconBackground: boolean;
+  color?: Types.ThemeColorsValues | string;
   styles?: Styles;
 }>;
 
@@ -37,4 +42,9 @@ registerUniformComponent({
   component: NavigationGroup,
 });
 
-export { HeaderLink, FooterLink, NavigationGroup };
+registerUniformComponent({
+  type: 'navigationMenu',
+  component: NavigationMenu,
+});
+
+export { HeaderLink, FooterLink, NavigationGroup, NavigationMenu };

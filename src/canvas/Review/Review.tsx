@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import { UniformText } from '@uniformdev/canvas-react';
 import Rating from '../../components/Rating';
 import { getLineClampClass } from '../../utilities/styling';
+import { getMediaUrl } from '../../utilities';
 import { ReviewProps } from './';
 
 export const DefaultReview: FC<Omit<ReviewProps, 'component'>> = ({
@@ -16,12 +17,13 @@ export const DefaultReview: FC<Omit<ReviewProps, 'component'>> = ({
   styles,
 }) => {
   const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
+  const pictureSrc = getMediaUrl(picture);
 
   return (
     <div className="flex [&>#reviewContent]:last:border-0">
       <div className={classNames('h-12 w-12 shrink-0', styles?.picture)}>
-        {Boolean(picture) && (
-          <Image className="rounded-full" src={picture} width={48} height={48} alt="reviewer-icon" />
+        {Boolean(pictureSrc) && (
+          <Image className="rounded-full" src={pictureSrc} width={48} height={48} alt="reviewer-icon" />
         )}
       </div>
       <div id="reviewContent" className={classNames('ml-6 border-b-[1px]', { '!ml-0': !picture }, styles?.container)}>
@@ -30,7 +32,7 @@ export const DefaultReview: FC<Omit<ReviewProps, 'component'>> = ({
             className={classNames('font-medium', baseTextStyle)}
             as="p"
             parameterId="personName"
-            placeholder="Reviewer name goes here"
+            placeholder="Reviewer goes here"
           />
           <UniformText
             className={classNames('text-sm', styles?.date)}
@@ -47,13 +49,13 @@ export const DefaultReview: FC<Omit<ReviewProps, 'component'>> = ({
             className={classNames('font-medium', baseTextStyle)}
             as="p"
             parameterId="title"
-            placeholder="Review title goes here"
+            placeholder="Title goes here"
           />
           <UniformText
             className={classNames('mt-4', baseTextStyle, getLineClampClass(lineCountRestriction), styles?.description)}
             as="p"
             parameterId="description"
-            placeholder="Review description goes here"
+            placeholder="Description goes here"
           />
         </div>
       </div>
