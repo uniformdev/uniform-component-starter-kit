@@ -33,6 +33,11 @@ parameters:
     type: tp-color-palette-parameter
     helpText: ''
     typeConfig:
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
       isAllowCustomColor: true
     localizable: false
   - id: group_advancedSettings
@@ -55,5 +60,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: content
 canBeComposition: false
-created: '2024-01-08T08:54:27.282711+00:00'
-updated: '2024-01-10T12:12:55.759664+00:00'
+created: '2023-08-28T12:30:19.537253+00:00'
+updated: '2024-03-22T12:00:08.420048+00:00'

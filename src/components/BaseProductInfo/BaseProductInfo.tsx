@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from '../Image';
 import classNames from 'classnames';
-import { UniformText } from '@uniformdev/canvas-react';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../../utilities/styling';
@@ -42,6 +42,7 @@ const ProductInfo: FC<Props> = ({
   delay = 'none',
   styles,
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
   const imageUrl = getMediaUrl(image);
   const { ElementWrapper, getDelayValue } = useProductInfoAnimation({
     duration,
@@ -158,46 +159,50 @@ const ProductInfo: FC<Props> = ({
           )}
         </ElementWrapper>
         <div className="lg:w-1/3 py-10">
-          <ElementWrapper
-            duration={duration}
-            delay={getDelayValue(9)}
-            animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
-          >
-            <Button
-              className="w-full"
-              href={formatProjectMapLink(primaryButtonLink)}
-              onClick={onClickPrimaryButton}
-              animationType={primaryButtonAnimationType}
-              copy={
-                useCustomTextElements ? (
-                  <div>{primaryButtonCopy}</div>
-                ) : (
-                  <UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />
-                )
-              }
-              style={primaryButtonStyle}
-            />
-          </ElementWrapper>
-          <ElementWrapper
-            duration={duration}
-            delay={getDelayValue(11.5)}
-            animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
-          >
-            <Button
-              href={formatProjectMapLink(secondaryButtonLink)}
-              onClick={onClickSecondaryButton}
-              className={classNames('w-full mt-5', { 'border-secondary': !secondaryButtonAnimationType })}
-              animationType={secondaryButtonAnimationType}
-              copy={
-                useCustomTextElements ? (
-                  <div>{secondaryButtonCopy}</div>
-                ) : (
-                  <UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />
-                )
-              }
-              style={secondaryButtonStyle}
-            />
-          </ElementWrapper>
+          {(Boolean(primaryButtonCopy) || isContextualEditing) && (
+            <ElementWrapper
+              duration={duration}
+              delay={getDelayValue(9)}
+              animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
+            >
+              <Button
+                className="w-full"
+                href={formatProjectMapLink(primaryButtonLink)}
+                onClick={onClickPrimaryButton}
+                animationType={primaryButtonAnimationType}
+                copy={
+                  useCustomTextElements ? (
+                    <div>{primaryButtonCopy}</div>
+                  ) : (
+                    <UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />
+                  )
+                }
+                style={primaryButtonStyle}
+              />
+            </ElementWrapper>
+          )}
+          {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
+            <ElementWrapper
+              duration={duration}
+              delay={getDelayValue(11.5)}
+              animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
+            >
+              <Button
+                href={formatProjectMapLink(secondaryButtonLink)}
+                onClick={onClickSecondaryButton}
+                className={classNames('w-full mt-5', { 'border-secondary': !secondaryButtonAnimationType })}
+                animationType={secondaryButtonAnimationType}
+                copy={
+                  useCustomTextElements ? (
+                    <div>{secondaryButtonCopy}</div>
+                  ) : (
+                    <UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />
+                  )
+                }
+                style={secondaryButtonStyle}
+              />
+            </ElementWrapper>
+          )}
         </div>
 
         <ElementWrapper

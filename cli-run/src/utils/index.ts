@@ -108,3 +108,20 @@ const switchModeTo = async (projectPath: string, mode: string, removalList?: str
     }
   }
 };
+
+export const updatePromptsBasedOnIntegration = async ({ type }: UNIFORM_API.DefineResponse) => {
+  const pathToPromptsFolder = path.resolve('../', 'content', 'prompts');
+  if (!pathToPromptsFolder) return;
+
+  const listOfFilesNames = (await fs.promises.readdir(pathToPromptsFolder, { withFileTypes: true }))
+    .filter(node => node.isFile())
+    .map(item => item.name);
+  for (const fileName of listOfFilesNames) {
+    const pathToPromptFile = path.join(pathToPromptsFolder, fileName);
+    const prompt = await fs.promises.readFile(pathToPromptFile, 'utf-8');
+    await fs.promises.writeFile(
+      path.resolve(pathToPromptFile),
+      prompt.replace(/^(integrationType: .*$\n)/gm, `integrationType: ${type}\n`)
+    );
+  }
+};

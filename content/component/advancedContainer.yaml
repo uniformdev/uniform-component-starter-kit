@@ -27,6 +27,11 @@ parameters:
     helpText: ''
     typeConfig:
       defaultColorHex: '#fff'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
       isAllowCustomColor: true
       isShowAdvancedSettings: true
     localizable: false
@@ -123,8 +128,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: title
 canBeComposition: false
-created: '2024-01-12T10:32:17.613564+00:00'
-updated: '2024-01-17T09:10:42.240102+00:00'
+created: '2024-01-17T11:59:33.87915+00:00'
+updated: '2024-03-22T12:46:00.35498+00:00'
 variants:
   - id: fluidContent
     name: Fluid Content

@@ -165,7 +165,7 @@ const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVar
     : undefined;
 
   if (appMode) {
-    await switchModeInDirectory(projectPath, appMode as AppModes, ['revalidate.ts', 'profile.tsx']);
+    await switchModeInDirectory(projectPath, appMode as AppModes, ['revalidate.ts', 'profile.tsx', 'middleware.ts']);
   }
 
   const projectVariantsModulesRequire = demosVariantsModulesRequire[project];

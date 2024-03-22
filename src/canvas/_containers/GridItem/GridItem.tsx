@@ -8,6 +8,7 @@ import {
   getGridRowsStartClass,
 } from './helpers';
 import { GridItemProps } from '.';
+import EmptyPlaceholder from '../../../components/EmptyPlaceholder';
 
 const GridItem: FC<GridItemProps> = ({ columnStart, columnSpan, rowSpan, rowStart }) => (
   <div
@@ -18,7 +19,7 @@ const GridItem: FC<GridItemProps> = ({ columnStart, columnSpan, rowSpan, rowStar
       getGridRowsSpanClass(rowSpan)
     )}
   >
-    <UniformSlot name="inner" />
+    <UniformSlot name="inner" emptyPlaceholder={<EmptyPlaceholder />} />
   </div>
 );
 

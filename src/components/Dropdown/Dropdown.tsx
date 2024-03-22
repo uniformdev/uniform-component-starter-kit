@@ -64,10 +64,10 @@ const Dropdown: FC<DropdownProps> = ({
           unoptimized
         />
       </button>
-      {isOpen && (
+      {isOpen && Boolean(optionToShow.length) && (
         <div
           className={classNames(
-            'z-50 origin-top-right absolute right-0 w-full rounded-b-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-base-300',
+            'z-50 origin-top-right absolute right-0 w-full  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-base-300',
             optionsContainerClassName
           )}
           role="menu"
@@ -75,7 +75,7 @@ const Dropdown: FC<DropdownProps> = ({
           aria-labelledby="menu-button"
           tabIndex={-1}
         >
-          <div className="py-1" role="none">
+          <div className="flex flex-col gap-1 items-start py-1" role="none">
             {defaultOption && value !== defaultOption.value && (
               <DropdownOption isDefault option={defaultOption} onSelect={onSelect} />
             )}

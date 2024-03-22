@@ -1,5 +1,6 @@
 import { FC, useMemo } from 'react';
 import classNames from 'classnames';
+import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import { useHeroAnimation } from './animation';
 import { Container, Description, EyebrowText, PrimaryButton, SecondaryButton, SideImage, Title } from './atoms';
 import { AnimationVariant } from '../../components/AnimatedContainer';
@@ -13,9 +14,11 @@ export const HeroSideImage: FC<HeroProps> = ({
   description,
   image,
   video,
+  primaryButtonCopy,
   primaryButtonLink,
   primaryButtonStyle = 'primary',
   primaryButtonAnimationType,
+  secondaryButtonCopy,
   secondaryButtonLink,
   secondaryButtonStyle = 'primary',
   secondaryButtonAnimationType,
@@ -41,6 +44,7 @@ export const HeroSideImage: FC<HeroProps> = ({
   delay = 'none',
   styles,
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
   const { variant } = component || {};
 
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
@@ -128,7 +132,7 @@ export const HeroSideImage: FC<HeroProps> = ({
             <Description className={classNames('py-10', styles?.description)} />
           </ElementWrapper>
           <div className={classNames('pb-6', { 'py-6': !description })}>
-            {Boolean(primaryButtonLink) && (
+            {(Boolean(primaryButtonCopy) || isContextualEditing) && (
               <ElementWrapper
                 duration={duration}
                 delay={getDelayValue(3)}
@@ -141,7 +145,7 @@ export const HeroSideImage: FC<HeroProps> = ({
                 />
               </ElementWrapper>
             )}
-            {Boolean(secondaryButtonLink) && (
+            {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
               <ElementWrapper
                 duration={duration}
                 delay={getDelayValue(3)}

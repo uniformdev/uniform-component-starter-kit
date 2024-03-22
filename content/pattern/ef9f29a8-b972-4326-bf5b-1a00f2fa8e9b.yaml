@@ -18,7 +18,7 @@ composition:
       value: Large
     backgroundColor:
       type: tp-color-palette-parameter
-      value: '#fff'
+      value: primary-content
   slots:
     content:
       - _id: 4fffcc72-da42-42b4-9043-b0ff954809ad
@@ -336,7 +336,7 @@ composition:
       paddingBottom: 'yes'
       backgroundColor: 'yes'
 created: '2024-01-17T11:56:52.26844+00:00'
-modified: '2024-01-30T17:06:47.750253+00:00'
+modified: '2024-03-22T12:24:13.425479+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_background_image_preview_image

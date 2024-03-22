@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
-import { UniformText } from '@uniformdev/canvas-react';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import {
   getImageOverlayColorStyle,
@@ -38,6 +38,7 @@ export const Card: FC<CardProps> = ({
   delay,
   styles,
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
   const imageUrl = getMediaUrl(image);
 
   const badgeClassNames = classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize));
@@ -143,7 +144,7 @@ export const Card: FC<CardProps> = ({
         )}
 
         <div className="card-actions justify-end mt-auto">
-          {buttonLink && (
+          {(Boolean(buttonCopy) || isContextualEditing) && (
             <Button
               href={formatProjectMapLink(buttonLink)}
               style={buttonStyle}

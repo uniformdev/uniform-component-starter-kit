@@ -5,6 +5,7 @@ import BaseContainer from '../../../components/Container';
 import { getGapXClass, getGapYClass, getGridColumnsClass } from './helpers';
 import { GridProps } from '.';
 import { PaddingSize } from '../../../utilities/styling';
+import EmptyPlaceholder from '../../../components/EmptyPlaceholder';
 
 export const Grid: FC<GridProps> = ({
   columnsCount,
@@ -28,7 +29,7 @@ export const Grid: FC<GridProps> = ({
     <div
       className={classNames('w-full grid', getGridColumnsClass(columnsCount), getGapXClass(gapX), getGapYClass(gapY))}
     >
-      <UniformSlot name="grid-inner" />
+      <UniformSlot name="grid-inner" emptyPlaceholder={<EmptyPlaceholder />} />
     </div>
   </BaseContainer>
 );

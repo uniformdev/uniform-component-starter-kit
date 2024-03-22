@@ -137,7 +137,7 @@ composition:
                   value: 61 mph
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
+                  value: primary
                 style:
                   type: json
                   value: {}
@@ -283,7 +283,7 @@ composition:
                   value: 124 feet
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
+                  value: primary
                 style:
                   type: json
                   value: {}
@@ -429,7 +429,7 @@ composition:
                   value: 2,800 feet
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
+                  value: primary
                 style:
                   type: json
                   value: {}
@@ -575,7 +575,7 @@ composition:
                   value: 2 minutes, 15 seconds
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
+                  value: primary
                 style:
                   type: json
                   value: {}
@@ -614,7 +614,7 @@ composition:
       backgroundType: 'yes'
       containerVariant: 'yes'
 created: '2024-01-09T12:40:26.682381+00:00'
-modified: '2024-01-30T17:10:43.034383+00:00'
+modified: '2024-03-22T12:27:27.924647+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Stat_preview_image
