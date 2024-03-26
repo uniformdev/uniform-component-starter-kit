@@ -40,19 +40,6 @@ parameters:
         - accent
       isAllowCustomColor: true
     localizable: false
-  - id: group_advancedSettings
-    name: Advanced Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - style
-  - id: style
-    name: Style
-    type: json
-    helpText: ''
-    typeConfig: {}
-    localizable: false
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Rich_text_preview_image
@@ -61,4 +48,4 @@ slots: []
 titleParameter: content
 canBeComposition: false
 created: '2023-08-28T12:30:19.537253+00:00'
-updated: '2024-03-22T12:00:08.420048+00:00'
+updated: '2024-03-26T12:10:17.144708+00:00'

@@ -507,9 +507,6 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: '#fff'
-                style:
-                  type: json
-                  value: {}
                 content:
                   type: richText
                   value:
@@ -864,6 +861,6 @@ composition:
           backgroundType:
             type: tp-background-type-parameter
             value: Dark
-created: '2023-09-21T21:17:19.615725+00:00'
-modified: '2024-02-08T21:15:16.62489+00:00'
+created: '2023-12-04T16:14:22.091444+00:00'
+modified: '2024-03-26T12:12:54.941069+00:00'
 pattern: false

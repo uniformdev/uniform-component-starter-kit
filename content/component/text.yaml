@@ -91,12 +91,35 @@ parameters:
     typeConfig:
       collapsed: true
       childrenParams:
-        - style
-  - id: style
-    name: Style
-    type: json
+        - whiteSpace
+        - fontWeight
+  - id: whiteSpace
+    name: White Space
+    type: tp-segmented-control-parameter
     helpText: ''
-    typeConfig: {}
+    typeConfig:
+      options:
+        - label: Normal
+          value: normal
+        - label: Break Spaces
+          value: break-spaces
+        - label: Nowrap
+          value: nowrap
+      defaultValue: normal
+    localizable: false
+  - id: fontWeight
+    name: Font Weight
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Normal
+          value: normal
+        - label: Bold
+          value: bold
+        - label: Custom
+          value: '700'
+      defaultValue: normal
     localizable: false
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
 previewImageUrl: >-
@@ -106,4 +129,4 @@ slots: []
 titleParameter: text
 canBeComposition: false
 created: '2024-01-09T12:40:21.909092+00:00'
-updated: '2024-03-22T12:38:03.617966+00:00'
+updated: '2024-03-26T11:54:27.326198+00:00'
