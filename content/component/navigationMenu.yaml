@@ -20,7 +20,12 @@ parameters:
     name: Color
     type: tp-color-palette-parameter
     helpText: ''
-    typeConfig: null
+    typeConfig:
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
     localizable: false
   - id: group_iconSettings
     name: Icon Settings

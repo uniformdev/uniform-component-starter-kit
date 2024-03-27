@@ -10,6 +10,7 @@ import {
 } from '../../../utilities/styling';
 import classNames from 'classnames';
 import { REGEX_COLOR_HEX } from '../../../utilities';
+import EmptyPlaceholder from '../../../components/EmptyPlaceholder';
 
 const DEFAULT_COLOR = '#fff';
 
@@ -45,7 +46,7 @@ export const AdvancedContainer: FC<AdvancedContainerProps> = ({
         <UniformSlot name="background" emptyPlaceholder={null} />
       </div>
       <div className="relative z-20">
-        <UniformSlot name="content" />
+        <UniformSlot name="content" emptyPlaceholder={<EmptyPlaceholder />} />
       </div>
     </div>
   );

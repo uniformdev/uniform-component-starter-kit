@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { UniformText } from '@uniformdev/canvas-react';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
@@ -21,6 +21,8 @@ export const CallToAction: FC<CallToActionProps> = ({
   styles,
   component: { variant } = {},
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
+
   const isLightTextColor = textColorVariant === 'Light';
   const eyebrowTextColorStyle = isLightTextColor ? 'text-secondary' : 'text-primary';
   const textColorStyle = isLightTextColor ? 'text-primary-content' : 'text-secondary-content';
@@ -58,7 +60,7 @@ export const CallToAction: FC<CallToActionProps> = ({
           />
         </div>
         <div className="flex justify-between pt-6">
-          {Boolean(primaryButtonLink && primaryButtonCopy) && (
+          {(Boolean(primaryButtonCopy) || isContextualEditing) && (
             <Button
               href={formatProjectMapLink(primaryButtonLink)}
               animationType={primaryButtonAnimationType}
@@ -66,7 +68,7 @@ export const CallToAction: FC<CallToActionProps> = ({
               style={primaryButtonStyle}
             />
           )}
-          {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
+          {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
             <Button
               href={formatProjectMapLink(secondaryButtonLink)}
               animationType={secondaryButtonAnimationType}

@@ -573,10 +573,6 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary
-                style:
-                  type: json
-                  value:
-                    textTransform: euppercase
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -603,9 +599,6 @@ composition:
                 90ddf1c7-e345-4c1d-9999-d7d159a86e6d|9d795a1c-c090-4b2a-8af7-12d2312dbeb9
               type: richText
               parameters:
-                style:
-                  type: json
-                  value: {}
                 content:
                   type: richText
                   value:

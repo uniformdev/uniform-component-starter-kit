@@ -47,6 +47,7 @@ declare namespace CLI {
     fetchDataFn?: (data: any) => Promise<Record<string, string | object>>;
     link?: string;
     customManifest?: Record<string, unknown>;
+    onIntegrationSet?: (integrationInfo: UNIFORM_API.DefineResponse) => Promise<void>;
   };
 }
 

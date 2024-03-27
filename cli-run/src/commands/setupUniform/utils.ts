@@ -17,6 +17,7 @@ interface ConfigureIntegration {
   customManifest?: Record<string, unknown>;
   apiHost: string;
   headers: Record<string, string>;
+  onIntegrationSet?: (integrationInfo: UNIFORM_API.DefineResponse) => Promise<void>;
 }
 
 interface ConfigureDataSource {
@@ -43,6 +44,7 @@ export const configureIntegration = async ({
   customManifest,
   apiHost,
   headers,
+  onIntegrationSet,
 }: ConfigureIntegration) => {
   if (customManifest) {
     await defineIntegration({
@@ -88,6 +90,9 @@ export const configureIntegration = async ({
 
   if (!newInstalledIntegration) {
     return;
+  }
+  if (onIntegrationSet) {
+    await onIntegrationSet(newInstalledIntegration);
   }
 };
 

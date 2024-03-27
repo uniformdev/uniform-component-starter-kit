@@ -4,9 +4,6 @@ composition:
   type: advancedContainer
   variant: fluidContent
   parameters:
-    style:
-      type: json
-      value: {}
     title:
       type: text
       value: Advanced Hero Background Video
@@ -18,7 +15,7 @@ composition:
       value: Large
     backgroundColor:
       type: tp-color-palette-parameter
-      value: '#fff'
+      value: primary-content
   slots:
     content:
       - _id: 3eca0bed-0899-4f7c-9886-98110abbfc60
@@ -40,6 +37,12 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -50,6 +53,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: 60d5aa17-c732-4a85-b4f2-82cda288d1d8
               type: spacer
@@ -112,6 +117,12 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -122,6 +133,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: 88db3829-28d6-4e68-8623-0ae114e104f8
               type: spacer
@@ -246,16 +259,28 @@ composition:
                   backgroundType: 'yes'
                   containerVariant: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
     background:
       - _id: 59768fad-186c-4856-b138-e0ec5d187ce2
         type: video
@@ -324,7 +349,7 @@ composition:
       paddingBottom: 'yes'
       backgroundColor: 'yes'
 created: '2024-01-17T11:56:50.291277+00:00'
-modified: '2024-01-30T17:07:11.24796+00:00'
+modified: '2024-03-26T14:13:08.921444+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_background_video_preview_image

@@ -1,7 +1,7 @@
 import { FC, Fragment } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
-import { UniformText } from '@uniformdev/canvas-react';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { ScreenContainer } from '../../components/Container';
@@ -11,16 +11,19 @@ import { BannerProps, BannerVariant } from '.';
 export const Banner: FC<BannerProps> = ({
   icon,
   inline,
+  primaryButtonCopy,
   primaryButtonLink,
   primaryButtonStyle = 'primary',
   primaryButtonAnimationType,
   position,
   textAlign,
+  secondaryButtonCopy,
   secondaryButtonLink,
   secondaryButtonStyle = 'primary',
   secondaryButtonAnimationType,
   component,
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
   const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
 
   return (
@@ -54,7 +57,7 @@ export const Banner: FC<BannerProps> = ({
             />
           </div>
           <div className="col-span-4 flex items-center justify-between gap-2 flex-col xs:gap-0 xs:flex-row md:flex-col lg:flex-row shrink-0 md:justify-end w-full md:w-auto md:space-x-0 md:space-y-2 lg:space-y-0 lg:space-x-3 mt-4 md:mt-0">
-            {Boolean(primaryButtonLink) && (
+            {(Boolean(primaryButtonCopy) || isContextualEditing) && (
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(primaryButtonLink)}
@@ -63,7 +66,7 @@ export const Banner: FC<BannerProps> = ({
                 style={primaryButtonStyle}
               />
             )}
-            {Boolean(secondaryButtonLink) && (
+            {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(secondaryButtonLink)}

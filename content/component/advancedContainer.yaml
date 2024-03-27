@@ -27,6 +27,11 @@ parameters:
     helpText: ''
     typeConfig:
       defaultColorHex: '#fff'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
       isAllowCustomColor: true
       isShowAdvancedSettings: true
     localizable: false
@@ -86,20 +91,6 @@ parameters:
           value: Large
         - text: None
           value: None
-  - id: group_advancedSettings
-    name: Advanced Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - styles
-        - style
-  - id: style
-    name: Style
-    type: json
-    helpText: ''
-    typeConfig: {}
-    localizable: false
 categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Container_preview_image
@@ -123,8 +114,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: title
 canBeComposition: false
-created: '2024-01-12T10:32:17.613564+00:00'
-updated: '2024-01-17T09:10:42.240102+00:00'
+created: '2024-01-17T11:56:44.437724+00:00'
+updated: '2024-03-26T12:34:30.544475+00:00'
 variants:
   - id: fluidContent
     name: Fluid Content

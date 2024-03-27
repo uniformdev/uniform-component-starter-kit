@@ -9,7 +9,18 @@ import { TextProps } from './';
 const DEFAULT_COLOR = '#000';
 const DEFAULT_TAG = 'p';
 
-export const Text: FC<TextProps> = ({ tag, color = DEFAULT_COLOR, size, letterSpacing, style = {} }) => {
+export const Text: FC<TextProps> = ({
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  text,
+  tag,
+  color = DEFAULT_COLOR,
+  size,
+  letterSpacing,
+  style = {},
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  component,
+  ...restStyles
+}) => {
   const { isContextualEditing } = useUniformCurrentComposition();
 
   const currentColor = REGEX_COLOR_HEX.test(color || DEFAULT_COLOR) ? color : undefined;
@@ -19,7 +30,7 @@ export const Text: FC<TextProps> = ({ tag, color = DEFAULT_COLOR, size, letterSp
     <UniformText
       placeholder="Text goes here"
       parameterId="text"
-      style={{ color: currentColor, ...style }}
+      style={{ color: currentColor, ...style, ...restStyles }}
       as={Tag}
       className={classNames(getDefaultTextStyle(Tag), getTextSize(size), getTextLetterSpacing(letterSpacing), {
         [getTextColor(color as Types.ThemeColorsValues)]: !currentColor,
@@ -29,7 +40,7 @@ export const Text: FC<TextProps> = ({ tag, color = DEFAULT_COLOR, size, letterSp
 
   // ToDo requires refactoring (styles do not apply when сontextual editing)
   return isContextualEditing ? (
-    <div style={{ color: currentColor, ...style }}>
+    <div style={{ color: currentColor, ...style, ...restStyles }}>
       <TextElement />
     </div>
   ) : (

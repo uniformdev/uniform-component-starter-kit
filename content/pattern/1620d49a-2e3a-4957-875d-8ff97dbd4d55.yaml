@@ -16,10 +16,12 @@ composition:
           text:
             type: text
             value: Title
-          style:
-            type: json
-            value:
-              textTransform: euppercase
+          fontWeight:
+            type: tp-segmented-control-parameter
+            value: normal
+          whiteSpace:
+            type: tp-segmented-control-parameter
+            value: normal
           letterSpacing:
             type: tp-segmented-control-parameter
             value: ''
@@ -30,6 +32,8 @@ composition:
             text: 'yes'
             color: 'yes'
             style: 'yes'
+            fontWeight: 'yes'
+            whiteSpace: 'yes'
             letterSpacing: 'yes'
       - _id: 96a16b19-3a32-46a2-b300-048abfba807e
         type: spacer
@@ -56,9 +60,12 @@ composition:
               Content Block Advanced Text Content Block Advanced Text Content
               Block Advanced Text Content Block Advanced Text Content Block
               Advanced Text Content Block Advanced Text
-          style:
-            type: json
-            value: {}
+          fontWeight:
+            type: tp-segmented-control-parameter
+            value: normal
+          whiteSpace:
+            type: tp-segmented-control-parameter
+            value: normal
           letterSpacing:
             type: tp-segmented-control-parameter
             value: ''
@@ -69,9 +76,11 @@ composition:
             text: 'yes'
             color: 'yes'
             style: 'yes'
+            fontWeight: 'yes'
+            whiteSpace: 'yes'
             letterSpacing: 'yes'
 created: '2024-01-09T12:40:25.218257+00:00'
-modified: '2024-01-30T16:33:37.089945+00:00'
+modified: '2024-03-26T12:28:47.6627+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Content_block_simple_text_preview_image

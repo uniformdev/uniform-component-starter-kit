@@ -1422,10 +1422,12 @@ composition:
                                   text:
                                     type: text
                                     value: Atoms
-                                  style:
-                                    type: json
-                                    value:
-                                      white-space: break-spaces
+                                  fontWeight:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
+                                  whiteSpace:
+                                    type: tp-segmented-control-parameter
+                                    value: break-spaces
                                   letterSpacing:
                                     type: tp-segmented-control-parameter
                                     value: ''
@@ -1454,10 +1456,12 @@ composition:
                                       components often encapsulate a single
                                       piece of functionality or a specific
                                       visual element.
-                                  style:
-                                    type: json
-                                    value:
-                                      white-space: break-spaces
+                                  fontWeight:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
+                                  whiteSpace:
+                                    type: tp-segmented-control-parameter
+                                    value: break-spaces
                                   letterSpacing:
                                     type: tp-segmented-control-parameter
                                     value: wider
@@ -1483,7 +1487,6 @@ composition:
                             inner:
                               - _id: a01509ea-53f8-4004-a0bf-b270892d2d85
                                 type: card
-                                variant: ''
                                 parameters:
                                   image:
                                     type: asset
@@ -1569,7 +1572,6 @@ composition:
                             inner:
                               - _id: afb1cb82-35a5-4e21-9fde-7b4e65dcbf70
                                 type: card
-                                variant: ''
                                 parameters:
                                   image:
                                     type: asset
@@ -1656,7 +1658,6 @@ composition:
                             inner:
                               - _id: a73a7653-4c5d-4959-9878-afd191341737
                                 type: card
-                                variant: ''
                                 parameters:
                                   image:
                                     type: asset
@@ -2489,10 +2490,9 @@ composition:
                                                     text:
                                                       type: text
                                                       value: Global
-                                                    style:
-                                                      type: json
-                                                      value:
-                                                        white-space: break-spaces
+                                                    whiteSpace:
+                                                      type: tp-segmented-control-parameter
+                                                      value: break-spaces
                                                     letterSpacing:
                                                       type: tp-segmented-control-parameter
                                                       value: ''
@@ -2525,10 +2525,9 @@ composition:
                                                         digital terrain with Breadcrumbs,
                                                         providing users with a clear path back
                                                         to key pages.
-                                                    style:
-                                                      type: json
-                                                      value:
-                                                        white-space: break-spaces
+                                                    whiteSpace:
+                                                      type: tp-segmented-control-parameter
+                                                      value: break-spaces
                                                     letterSpacing:
                                                       type: tp-segmented-control-parameter
                                                       value: wider
@@ -2823,10 +2822,9 @@ composition:
                                                     text:
                                                       type: text
                                                       value: Atoms
-                                                    style:
-                                                      type: json
-                                                      value:
-                                                        white-space: break-spaces
+                                                    whiteSpace:
+                                                      type: tp-segmented-control-parameter
+                                                      value: break-spaces
                                                     letterSpacing:
                                                       type: tp-segmented-control-parameter
                                                       value: ''
@@ -2855,10 +2853,9 @@ composition:
                                                         components often encapsulate a single
                                                         piece of functionality or a specific
                                                         visual element.
-                                                    style:
-                                                      type: json
-                                                      value:
-                                                        white-space: break-spaces
+                                                    whiteSpace:
+                                                      type: tp-segmented-control-parameter
+                                                      value: break-spaces
                                                     letterSpacing:
                                                       type: tp-segmented-control-parameter
                                                       value: wider
@@ -3014,6 +3011,6 @@ composition:
         syntheticGap:
           type: tp-slider-parameter
           value: Small
-created: '2023-09-21T21:17:20.643304+00:00'
-modified: '2024-02-08T21:16:32.391461+00:00'
+created: '2023-12-04T16:14:24.598638+00:00'
+modified: '2024-03-26T12:24:56.64235+00:00'
 pattern: false

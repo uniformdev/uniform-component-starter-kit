@@ -4,9 +4,6 @@ composition:
   type: advancedContainer
   variant: fluidContent
   parameters:
-    style:
-      type: json
-      value: {}
     title:
       type: text
       value: Advanced Hero Two Columns
@@ -18,7 +15,7 @@ composition:
       value: Large
     backgroundColor:
       type: tp-color-palette-parameter
-      value: '#fff'
+      value: primary-content
   slots:
     content:
       - _id: >-
@@ -57,6 +54,12 @@ composition:
                                   color:
                                     type: tp-color-palette-parameter
                                     value: primary-content
+                                  fontWeight:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
+                                  whiteSpace:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
                                   letterSpacing:
                                     type: tp-segmented-control-parameter
                                     value: ''
@@ -67,6 +70,8 @@ composition:
                                     text: 'yes'
                                     color: 'yes'
                                     style: 'yes'
+                                    fontWeight: 'yes'
+                                    whiteSpace: 'yes'
                                     letterSpacing: 'yes'
                               - _id: >-
                                   ff498b73-55e8-4cb4-b736-babae9314261|a2d0c1e7-5032-4c8d-9347-e29471347da7
@@ -95,6 +100,12 @@ composition:
                                   color:
                                     type: tp-color-palette-parameter
                                     value: primary-content
+                                  fontWeight:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
+                                  whiteSpace:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
                                   letterSpacing:
                                     type: tp-segmented-control-parameter
                                     value: ''
@@ -105,19 +116,35 @@ composition:
                                     text: 'yes'
                                     color: 'yes'
                                     style: 'yes'
+                                    fontWeight: 'yes'
+                                    whiteSpace: 'yes'
                                     letterSpacing: 'yes'
                           parameters:
-                            style:
-                              type: json
-                              value:
-                                display: flex
-                                textAlign: center
-                                alignItems: center
-                                flexDirection: column
-                                justifyContent: center
+                            display:
+                              type: tp-segmented-control-parameter
+                              value: flex
+                            textAlign:
+                              type: tp-segmented-control-parameter
+                              value: center
+                            alignItems:
+                              type: tp-segmented-control-parameter
+                              value: center
+                            flexDirection:
+                              type: tp-segmented-control-parameter
+                              value: column
+                            justifyContent:
+                              type: tp-segmented-control-parameter
+                              value: center
                           _overridability:
                             parameters:
                               style: 'yes'
+                              width: 'yes'
+                              height: 'yes'
+                              display: 'yes'
+                              textAlign: 'yes'
+                              alignItems: 'yes'
+                              flexDirection: 'yes'
+                              justifyContent: 'yes'
                         - _id: >-
                             ff498b73-55e8-4cb4-b736-babae9314261|78737677-d588-45f7-a6a1-de18431b797c
                           type: box
@@ -150,6 +177,12 @@ composition:
                                   color:
                                     type: tp-color-palette-parameter
                                     value: primary-content
+                                  fontWeight:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
+                                  whiteSpace:
+                                    type: tp-segmented-control-parameter
+                                    value: normal
                                   letterSpacing:
                                     type: tp-segmented-control-parameter
                                     value: ''
@@ -160,6 +193,8 @@ composition:
                                     text: 'yes'
                                     color: 'yes'
                                     style: 'yes'
+                                    fontWeight: 'yes'
+                                    whiteSpace: 'yes'
                                     letterSpacing: 'yes'
                               - _id: >-
                                   ff498b73-55e8-4cb4-b736-babae9314261|3fa05cf6-2a3e-4a29-a454-3408dff74329
@@ -290,17 +325,31 @@ composition:
                                     backgroundType: 'yes'
                                     containerVariant: 'yes'
                           parameters:
-                            style:
-                              type: json
-                              value:
-                                display: flex
-                                textAlign: center
-                                alignItems: center
-                                flexDirection: column
-                                justifyContent: center
+                            display:
+                              type: tp-segmented-control-parameter
+                              value: flex
+                            textAlign:
+                              type: tp-segmented-control-parameter
+                              value: center
+                            alignItems:
+                              type: tp-segmented-control-parameter
+                              value: center
+                            flexDirection:
+                              type: tp-segmented-control-parameter
+                              value: column
+                            justifyContent:
+                              type: tp-segmented-control-parameter
+                              value: center
                           _overridability:
                             parameters:
                               style: 'yes'
+                              width: 'yes'
+                              height: 'yes'
+                              display: 'yes'
+                              textAlign: 'yes'
+                              alignItems: 'yes'
+                              flexDirection: 'yes'
+                              justifyContent: 'yes'
                     parameters:
                       gapX:
                         type: tp-slider-parameter
@@ -445,7 +494,7 @@ composition:
       paddingBottom: 'yes'
       backgroundColor: 'yes'
 created: '2024-01-17T11:56:50.754024+00:00'
-modified: '2024-02-12T13:22:31.069456+00:00'
+modified: '2024-03-26T14:14:07.067104+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_two_columns_preview_image.jpg

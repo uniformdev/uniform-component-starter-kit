@@ -47,12 +47,28 @@ export const getUniformTeam = async (availableVariants: { value: string; label: 
 };
 
 export const getUniformProject = async (availableVariants: { value: string; label: string }[]): Promise<string> => {
-  return (
-    await select({
-      message: `Please select your project:`,
+  let selectedProject: string | undefined = undefined;
+
+  while (!selectedProject) {
+    const projectChoice = await select({
+      message: 'Please select your project:',
       options: availableVariants,
-    })
-  ).toString() as CLI.CommonVariants;
+    });
+
+    if (projectChoice !== 'new') {
+      const isOverwriteConfirmed = await confirm({
+        message: 'Your project will be overwritten. Are you sure?',
+      });
+
+      if (isOverwriteConfirmed) {
+        selectedProject = projectChoice.toString();
+      }
+    } else {
+      selectedProject = projectChoice.toString();
+    }
+  }
+
+  return selectedProject;
 };
 
 export const getUniformProjectName = async (): Promise<string> => {
@@ -357,6 +373,38 @@ export const getSupabaseEnvs = async (
   ).toString();
 
   return { NEXT_PUBLIC_SUPABASE_URL, NEXT_PUBLIC_SUPABASE_KEY, SUPABASE_USER_EMAIL, SUPABASE_USER_PASSWORD };
+};
+
+export const getInsightsEnvs = async (
+  project: string
+): Promise<{
+  NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT: string;
+  NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY: string;
+}> => {
+  if (!isDevMode) {
+    return {
+      NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT || '',
+      NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY || '',
+    };
+  }
+
+  const NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT = (
+    await text({
+      message: `Your ${project} insights endpoint:`,
+      validate,
+      initialValue: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT,
+    })
+  ).toString();
+
+  const NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY = (
+    await text({
+      message: `Your ${project} insights key:`,
+      validate,
+      initialValue: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY,
+    })
+  ).toString();
+
+  return { NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT, NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY };
 };
 
 export const additionalModulesForComponentStarterKit =

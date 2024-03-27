@@ -4,9 +4,10 @@ import {
   getGoogleAnalyticsEnvs,
   getSegmentEnvs,
   getSupabaseEnvs,
+  getInsightsEnvs,
 } from './informationCollector';
 import { AvailableProjects, CommonVariants } from './constants';
-import { composeGetEnvFns, fetchThemePackThemes } from './utils';
+import { composeGetEnvFns, fetchThemePackThemes, updatePromptsBasedOnIntegration } from './utils';
 
 export const demosVariantsGetEnvsMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<
@@ -23,7 +24,13 @@ export const demosVariantsGetEnvsMap: {
     [CommonVariants.Default]: () => undefined,
   },
   [AvailableProjects.SalesDemo]: {
-    [CommonVariants.Default]: composeGetEnvFns(getAlgoliaEnvs, getSegmentEnvs, getGoogleAnalyticsEnvs, getSupabaseEnvs),
+    [CommonVariants.Default]: composeGetEnvFns(
+      getAlgoliaEnvs,
+      getSegmentEnvs,
+      getGoogleAnalyticsEnvs,
+      getSupabaseEnvs,
+      getInsightsEnvs
+    ),
   },
 };
 
@@ -81,6 +88,7 @@ export const Integrations = {
       organization: process.env.CLI_OPEN_AI_ORGANIZATION,
       token: process.env.CLI_OPEN_AI_TOKEN,
     },
+    onIntegrationSet: updatePromptsBasedOnIntegration,
   },
   Writer: {
     name: 'Writer',
@@ -180,6 +188,11 @@ const DataSource: {
         spaceId: process.env.CLI_CONTENTFUL_SPACE_ID,
         environmentId: process.env.CLI_CONTENTFUL_ENVIRONMENT,
       },
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
     },
   },
   Contentstack: {
@@ -196,6 +209,9 @@ const DataSource: {
       ],
       localeMapping: {
         'en-US': 'en-us',
+        'en-CA': 'en-us',
+        'en-GB': 'en-us',
+        'en-NL': 'en-us',
         'fr-CA': 'fr-fr',
         'nl-NL': 'nl-nl',
       },
@@ -214,6 +230,11 @@ const DataSource: {
         { key: 'apiKey', value: process.env.CLI_KONTENT_AI_DELIVERY_API_KEY },
         { key: 'environmentId', value: process.env.CLI_KONTENT_AI_ENVIRONMENT_ID },
       ],
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
     },
   },
   Algolia: {
@@ -250,7 +271,13 @@ const DataSource: {
     dataSourceId: 'uniformContent',
     connectorType: 'uniformContent',
     baseUrl: 'https://content.uniform.app',
-    dataProperties: {},
+    dataProperties: {
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
+    },
   },
   BrandData: {
     integrationType: 'canvas',
@@ -259,7 +286,28 @@ const DataSource: {
     dataSourceId: 'brandData',
     connectorType: 'staticData',
     baseUrl: 'https://uniform.app',
-    dataProperties: {},
+    dataProperties: {
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
+    },
+  },
+  JavaDripWordpressBlog: {
+    integrationType: 'canvas',
+    integrationDisplayName: '',
+    dataSourceDisplayName: 'JavaDrip Wordpress Blog',
+    dataSourceId: 'javadripWordpressBlog',
+    connectorType: 'genericrestapi',
+    baseUrl: 'https://public-api.wordpress.com/rest/v1.1/sites',
+    dataProperties: {
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
+    },
   },
 };
 
@@ -275,6 +323,7 @@ export const demosRequiredDataSourceMap: {
       DataSource.Contentstack,
       DataSource.BrandData,
       DataSource.KontentAi,
+      DataSource.JavaDripWordpressBlog,
     ],
   },
   [AvailableProjects.ComponentStarterKit]: {

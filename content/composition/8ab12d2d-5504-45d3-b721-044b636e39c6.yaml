@@ -114,12 +114,6 @@ composition:
         type: advancedContainer
         _pattern: 5b8948bf-c097-4600-9481-696dc8df3eb7
   _overrides:
-    2d54c7b4-1273-4577-b191-fe6f34694ffd|95e0dee2-3cc5-40fb-a77d-47af4da3f744:
-      parameters:
-        style:
-          type: json
-          value:
-            height: 500px
     40ed4957-1d90-4679-8dd5-8ac7773d94d2|37dbaca4-fb95-4515-9a88-d2feb1c5765c:
       parameters:
         text:
@@ -143,12 +137,6 @@ composition:
         color:
           type: tp-color-palette-parameter
           value: secondary-content
-    5335fde9-2bb0-4513-af4f-f10e631ed410|95e0dee2-3cc5-40fb-a77d-47af4da3f744:
-      parameters:
-        style:
-          type: json
-          value:
-            height: 500px
 created: '2024-02-02T13:12:41.147299+00:00'
 modified: '2024-02-08T21:16:04.866935+00:00'
 pattern: false

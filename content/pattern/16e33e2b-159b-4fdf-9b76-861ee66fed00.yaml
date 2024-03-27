@@ -87,15 +87,16 @@ composition:
                         borderRadius: 'yes'
                         overlayColor: 'yes'
                         overlayOpacity: 'yes'
-              parameters:
-                style:
-                  type: json
-                  value:
-                    width: 24px
-                    height: 24px
               _overridability:
                 parameters:
                   style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
             - _id: bf5c3066-8e51-411c-a7c7-be68d4c08d2e
               type: text
               parameters:
@@ -108,10 +109,12 @@ composition:
                 text:
                   type: text
                   value: Max Speed
-                style:
-                  type: json
-                  value:
-                    fontWeight: '700'
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -122,6 +125,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: e0528844-a698-4337-b1a4-cae73ff01ae5
               type: text
@@ -137,10 +142,13 @@ composition:
                   value: 61 mph
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
-                style:
-                  type: json
-                  value: {}
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -151,18 +159,32 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
       - _id: c3d257f2-d4ef-4ece-8a8f-b9cba54ae3d0
         type: box
         slots:
@@ -233,15 +255,16 @@ composition:
                         borderRadius: 'yes'
                         overlayColor: 'yes'
                         overlayOpacity: 'yes'
-              parameters:
-                style:
-                  type: json
-                  value:
-                    width: 24px
-                    height: 24px
               _overridability:
                 parameters:
                   style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
             - _id: 12382352-e9f8-4e37-bb93-9eba5f18a1f2
               type: text
               parameters:
@@ -254,10 +277,12 @@ composition:
                 text:
                   type: text
                   value: Ride Height
-                style:
-                  type: json
-                  value:
-                    fontWeight: '700'
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -268,6 +293,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: b80620bf-fb75-4edb-878a-c19f5c0c09f5
               type: text
@@ -283,10 +310,13 @@ composition:
                   value: 124 feet
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
-                style:
-                  type: json
-                  value: {}
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -297,18 +327,32 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
       - _id: 0025c3cf-8611-4b82-b203-6d9fc8f50e3f
         type: box
         slots:
@@ -379,15 +423,16 @@ composition:
                         borderRadius: 'yes'
                         overlayColor: 'yes'
                         overlayOpacity: 'yes'
-              parameters:
-                style:
-                  type: json
-                  value:
-                    width: 24px
-                    height: 24px
               _overridability:
                 parameters:
                   style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
             - _id: 921ff077-be83-483e-92dc-05339bc8d194
               type: text
               parameters:
@@ -400,10 +445,12 @@ composition:
                 text:
                   type: text
                   value: Ride Length
-                style:
-                  type: json
-                  value:
-                    fontWeight: '700'
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -414,6 +461,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: 9f193f28-598a-4def-ab6e-17973f1faf4a
               type: text
@@ -429,10 +478,13 @@ composition:
                   value: 2,800 feet
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
-                style:
-                  type: json
-                  value: {}
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -443,18 +495,32 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
       - _id: f7643e62-4782-41a7-9790-8fa3276dafd2
         type: box
         slots:
@@ -525,15 +591,16 @@ composition:
                         borderRadius: 'yes'
                         overlayColor: 'yes'
                         overlayOpacity: 'yes'
-              parameters:
-                style:
-                  type: json
-                  value:
-                    width: 24px
-                    height: 24px
               _overridability:
                 parameters:
                   style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
             - _id: ddfd1b96-3690-48c1-b3fc-2b0c43e9247d
               type: text
               parameters:
@@ -546,10 +613,12 @@ composition:
                 text:
                   type: text
                   value: Ride Time
-                style:
-                  type: json
-                  value:
-                    fontWeight: '700'
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -560,6 +629,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: c7168416-f33a-45a5-a37f-de4464548890
               type: text
@@ -575,10 +646,13 @@ composition:
                   value: 2 minutes, 15 seconds
                 color:
                   type: tp-color-palette-parameter
-                  value: '#9ca3af'
-                style:
-                  type: json
-                  value: {}
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -589,18 +663,32 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
   _overridability:
     parameters:
       gapX: 'yes'
@@ -614,7 +702,7 @@ composition:
       backgroundType: 'yes'
       containerVariant: 'yes'
 created: '2024-01-09T12:40:26.682381+00:00'
-modified: '2024-01-30T17:10:43.034383+00:00'
+modified: '2024-03-26T14:14:29.002132+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Stat_preview_image

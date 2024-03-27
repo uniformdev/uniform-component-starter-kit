@@ -14,15 +14,6 @@ export const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => 
 
   const handleHomeButtonClick = useCallback(async () => {
     await router.push('/');
-    /*
-          FixMe: This workaround addresses the issue related to locale change not being reflected inside the next context when running app locally.
-          Our investigation revealed that the middleware is causing this problem. Upon removing the middleware, the locale change functions properly.
-          Surprisingly, even when our middleware remains intact but the middleware matcher is removed, the locale change functions as expected.
-          When deployed to Vercel, works fine
-        */
-    if (!process.env.NEXT_PUBLIC_VERCEL_URL) {
-      window.location.reload();
-    }
   }, [router]);
 
   return (

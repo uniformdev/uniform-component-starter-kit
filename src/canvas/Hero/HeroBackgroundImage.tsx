@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
+import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import { useHeroAnimation } from './animation';
 import { BackgroundImage, Container, Description, EyebrowText, PrimaryButton, SecondaryButton, Title } from './atoms';
 import { AnimationVariant } from '../../components/AnimatedContainer';
@@ -13,9 +14,11 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
   description,
   image,
   video,
+  primaryButtonCopy,
   primaryButtonLink,
   primaryButtonStyle = 'primary',
   primaryButtonAnimationType,
+  secondaryButtonCopy,
   secondaryButtonLink,
   secondaryButtonStyle = 'primary',
   secondaryButtonAnimationType,
@@ -40,6 +43,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
   delay = 'none',
   styles,
 }) => {
+  const { isContextualEditing } = useUniformContextualEditingState();
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
     ? textColor
     : undefined;
@@ -114,7 +118,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
           </ElementWrapper>
 
           <div className="py-6">
-            {Boolean(primaryButtonLink) && (
+            {(Boolean(primaryButtonCopy) || isContextualEditing) && (
               <ElementWrapper
                 duration={duration}
                 delay={getDelayValue(6)}
@@ -127,7 +131,7 @@ export const HeroBackgroundImage: FC<HeroProps> = ({
                 />
               </ElementWrapper>
             )}
-            {Boolean(secondaryButtonLink) && (
+            {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
               <ElementWrapper
                 duration={duration}
                 delay={getDelayValue(9)}

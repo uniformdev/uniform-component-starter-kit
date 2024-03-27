@@ -114,6 +114,7 @@ export const setupUniformProject = async (
       customManifest: integration.customManifest,
       apiHost: uniformApiHost,
       headers,
+      onIntegrationSet: integration.onIntegrationSet,
     });
     progressSpinner.stop(`Finished installing ${integration.name} integration`);
   }

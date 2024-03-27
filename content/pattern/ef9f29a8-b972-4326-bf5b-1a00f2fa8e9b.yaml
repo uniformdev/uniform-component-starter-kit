@@ -4,9 +4,6 @@ composition:
   type: advancedContainer
   variant: fluidContent
   parameters:
-    style:
-      type: json
-      value: {}
     title:
       type: text
       value: Advanced Hero Background Image
@@ -18,7 +15,7 @@ composition:
       value: Large
     backgroundColor:
       type: tp-color-palette-parameter
-      value: '#fff'
+      value: primary-content
   slots:
     content:
       - _id: 4fffcc72-da42-42b4-9043-b0ff954809ad
@@ -40,6 +37,12 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -50,6 +53,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: bd589953-587f-46a4-bd05-93a89124c712
               type: spacer
@@ -76,6 +81,12 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -86,6 +97,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: 414704f4-463c-4a52-bd92-1aaad8e3a57c
               type: spacer
@@ -112,6 +125,12 @@ composition:
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
                 letterSpacing:
                   type: tp-segmented-control-parameter
                   value: ''
@@ -122,6 +141,8 @@ composition:
                   text: 'yes'
                   color: 'yes'
                   style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
                   letterSpacing: 'yes'
             - _id: 5d5d5a59-9514-44e2-830e-37dfa528b40a
               type: spacer
@@ -246,16 +267,25 @@ composition:
                   backgroundType: 'yes'
                   containerVariant: 'yes'
         parameters:
-          style:
-            type: json
-            value:
-              display: flex
-              textAlign: center
-              alignItems: center
-              flexDirection: column
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
         _overridability:
           parameters:
             style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
     background:
       - _id: be22eaa2-0697-4bd4-a193-0945fcf580c4
         type: image
@@ -336,7 +366,7 @@ composition:
       paddingBottom: 'yes'
       backgroundColor: 'yes'
 created: '2024-01-17T11:56:52.26844+00:00'
-modified: '2024-01-30T17:06:47.750253+00:00'
+modified: '2024-03-26T14:13:02.944841+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_background_image_preview_image
