@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: footer
+name: Footer
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692280987/csk-icons/component-icons-v2/CSKicon_footer_s663bz_b4irpm.svg
+parameters:
+  - id: logo
+    name: Logo
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: displayBuildTimestamp
+    name: Display Build Timestamp
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: copyright
+    name: Copyright
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '10'
+    localizable: true
+  - id: footerText
+    name: Footer Text
+    type: richText
+    helpText: ''
+    typeConfig:
+      elements:
+        builtIn:
+          - link
+      required: false
+      formatting:
+        builtIn:
+          - bold
+    localizable: true
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Footer_preview_image
+useTeamPermissions: true
+slots:
+  - id: section
+    name: Section
+    allowedComponents:
+      - navigationSection
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: iconLinks
+    name: Icon Links
+    allowedComponents:
+      - iconLink
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2024-01-15T10:23:14.644378+00:00'
+updated: '2024-01-18T12:16:24.282501+00:00'

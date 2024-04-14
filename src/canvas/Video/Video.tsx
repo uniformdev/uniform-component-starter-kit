@@ -2,13 +2,22 @@ import { FC, useCallback, useState, useRef } from 'react';
 import dynamic from 'next/dynamic';
 import { VideoProps } from '.';
 import { PlayButton } from './PlayButton';
+import { getMediaUrl } from '../../utilities';
 
 const ReactPlayer = dynamic(() => import('react-player/lazy'), { ssr: false });
 
 const ASPECT_RATION_PADDING = '56.25%';
 
-export const Video: FC<VideoProps> = ({ url, loop, controls, lazyLoad, placeholderImage, muted }) => {
-  const [playing, setPlaying] = useState(false);
+export const Video: FC<VideoProps> = ({
+  url,
+  autoPlay = false,
+  loop,
+  controls,
+  lazyLoad = false,
+  placeholderImage,
+  muted,
+}) => {
+  const [playing, setPlaying] = useState(autoPlay);
   const playerRef = useRef(null);
 
   const onPlay = useCallback(() => setPlaying(true), []);
@@ -16,7 +25,7 @@ export const Video: FC<VideoProps> = ({ url, loop, controls, lazyLoad, placehold
   const onPause = useCallback(() => setPlaying(false), []);
 
   return (
-    <div className="border-2 border-white group/video relative">
+    <div className="w-full h-full border-2 border-white group/video relative [&_video]:!object-cover">
       {url && (
         <div style={{ paddingBottom: ASPECT_RATION_PADDING }}>
           <ReactPlayer
@@ -30,8 +39,8 @@ export const Video: FC<VideoProps> = ({ url, loop, controls, lazyLoad, placehold
             controls={controls}
             muted={muted}
             loop={loop}
-            style={{ position: 'absolute' }}
-            light={lazyLoad ? placeholderImage || true : false}
+            style={{ position: 'absolute', left: 0, top: 0 }}
+            light={(lazyLoad && getMediaUrl(placeholderImage)) || lazyLoad}
             playIcon={<PlayButton onClick={onPlay} />}
           />
         </div>

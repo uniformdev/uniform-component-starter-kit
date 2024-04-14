@@ -1,0 +1,132 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: text
+name: Text
+icon: format-heading
+parameters:
+  - id: text
+    name: Text
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: group_presentation
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - tag
+        - size
+        - letterSpacing
+        - color
+  - id: tag
+    name: HTML Tag
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: H1
+          value: h1
+        - label: H2
+          value: h2
+        - label: P
+          value: p
+        - label: Span
+          value: span
+      defaultValue: p
+    localizable: false
+  - id: size
+    name: Size
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: None
+          value: ''
+        - label: Base
+          value: Base
+        - label: XL
+          value: XL
+        - label: 2XL
+          value: 2XL
+        - label: 5XL
+          value: 5XL
+      required: false
+      defaultValue: ''
+    localizable: false
+  - id: letterSpacing
+    name: Letter Spacing
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: None
+          value: ''
+        - label: Tighter
+          value: tighter
+        - label: Normal
+          value: normal
+        - label: Wider
+          value: wider
+      defaultValue: ''
+    localizable: false
+  - id: color
+    name: Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#000'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
+      isAllowCustomColor: false
+      isShowAdvancedSettings: true
+    localizable: false
+  - id: group_advanced
+    name: Advanced Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - whiteSpace
+        - fontWeight
+  - id: whiteSpace
+    name: White Space
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Normal
+          value: normal
+        - label: Break Spaces
+          value: break-spaces
+        - label: Nowrap
+          value: nowrap
+      defaultValue: normal
+    localizable: false
+  - id: fontWeight
+    name: Font Weight
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Normal
+          value: normal
+        - label: Bold
+          value: bold
+        - label: Custom
+          value: '700'
+      defaultValue: normal
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Text_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: text
+canBeComposition: false
+created: '2024-01-09T12:40:21.909092+00:00'
+updated: '2024-03-26T11:54:27.326198+00:00'

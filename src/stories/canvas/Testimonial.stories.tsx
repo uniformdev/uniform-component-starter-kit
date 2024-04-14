@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Testimonial>;
 const args = {
   personName: 'Hector Gibbons',
   picture:
-    'https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.avif',
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.jpg',
   logo: 'https://res.cloudinary.com/uniform-demos/image/upload/v1692277568/csk-icons/Uniform_Logo_Black_hb6a69_kxy6lz.svg',
   description:
     "Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.",

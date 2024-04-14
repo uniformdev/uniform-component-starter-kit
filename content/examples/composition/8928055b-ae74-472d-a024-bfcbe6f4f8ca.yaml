@@ -1,0 +1,93 @@
+composition:
+  _name: Algolia Search Engine
+  _id: 8928055b-ae74-472d-a024-bfcbe6f4f8ca
+  _slug: algolia-search-engine
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Algolia Search Engine
+    pageMetaDescription:
+      type: text
+      value: >-
+        Experience unparalleled search capabilities with Coveo Search Engine.
+        Discover its advanced features
+  slots:
+    pageFooter:
+      - _id: 49e82f7b-9a75-426d-a3df-72ed143398ff
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 02b4ef0e-1e68-447f-9d16-328e7ca8c4d9
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 4a1450e7-0e2a-4a17-b142-15cf425188ce
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: ed2c3b88-d8c2-479b-866d-8a5eb2ffcef8
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da
+                _source: custom-url
+          title:
+            type: text
+            value: Algolia Search Engine components
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+      - _id: 6b1603e1-aa58-4e20-9818-89055ad03ebc
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 361f043d-051b-49e6-832f-c96a53e842aa
+        type: algolia-instantSearch
+        _pattern: 165a59c7-84fc-4401-b5d0-ac54e52be1d2
+  _overrides:
+    361f043d-051b-49e6-832f-c96a53e842aa|2e9ee216-a239-48f5-91f5-066c33663408:
+      parameters:
+        pageSize:
+          type: number
+          value: '9'
+        paginationParams:
+          type: algolia-components
+          value:
+            paginationProps:
+              padding: 3
+              showLast: true
+              showNext: true
+              showFirst: true
+              showPrevious: true
+created: '2023-12-21T10:16:59.494757+00:00'
+modified: '2023-12-21T12:23:43.867238+00:00'
+pattern: false

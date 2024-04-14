@@ -1,0 +1,47 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: breadcrumbs
+name: Breadcrumbs
+icon: border-style-dashed
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: Used just to display Title Parameter
+    typeConfig: null
+    localizable: true
+  - id: colorStyle
+    name: Color Style
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: displayRootNode
+    name: Display Root Node
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: displayPlaceholderNodes
+    name: Display Placeholder Nodes
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+  - id: separator
+    name: Separator
+    type: select
+    helpText: Chevron by default
+    typeConfig:
+      options:
+        - text: Chevron
+          value: chevron
+        - text: Slash
+          value: slash
+        - text: None
+          value: none
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Breadcrumbs_preview_image
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-08-28T12:30:17.342393+00:00'
+updated: '2023-12-27T08:47:33.682923+00:00'

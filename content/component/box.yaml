@@ -1,0 +1,104 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: box
+name: Box
+icon: box
+parameters:
+  - id: group_advancedSettings
+    name: Advanced Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - display
+        - textAlign
+        - alignItems
+        - flexDirection
+        - justifyContent
+  - id: display
+    name: Display
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Block
+          value: block
+        - label: Inline
+          value: inline
+        - label: Flex
+          value: flex
+        - label: Grid
+          value: grid
+    localizable: false
+  - id: textAlign
+    name: Text Align
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Start
+          value: start
+        - label: End
+          value: end
+        - label: Center
+          value: center
+        - label: Justify
+          value: justify
+    localizable: false
+  - id: alignItems
+    name: Align Items
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Stretch
+          value: stretch
+        - label: Center
+          value: center
+        - label: Start
+          value: start
+        - label: End
+          value: end
+    localizable: false
+  - id: flexDirection
+    name: Flex Direction
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Row
+          value: row
+        - label: Row Reverse
+          value: row-reverse
+        - label: Column
+          value: column
+        - label: Column Reverse
+          value: column-reverse
+    localizable: false
+  - id: justifyContent
+    name: Justify Content
+    type: tp-segmented-control-parameter
+    helpText: ''
+    typeConfig:
+      options:
+        - label: Start
+          value: start
+        - label: Center
+          value: center
+        - label: Space-between
+          value: space-between
+    localizable: false
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Box_preview_image
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2024-01-09T12:40:21.398079+00:00'
+updated: '2024-03-26T14:11:29.406631+00:00'

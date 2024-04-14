@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: coveo-sort
+name: Sort
+icon: sort-az
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+  - id: fieldsForSort
+    name: Fields for sort
+    type: json
+    helpText: You can provide the fields to be sorted as an array
+    typeConfig:
+      schema:
+        type: array
+        items:
+          type: string
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Coveo/Sort_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-11-23T08:52:39.147472+00:00'
+updated: '2023-11-23T09:03:28.507283+00:00'

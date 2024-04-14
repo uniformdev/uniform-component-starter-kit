@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-react';
 import { getMediaUrl } from '../../utilities';
@@ -47,7 +47,12 @@ export const FeaturedCallout: FC<FeaturedCalloutProps> = ({
               as={TitleTag}
               className={classNames('font-bold', getTextClass(TitleTag))}
             />
-            <UniformText placeholder="Description goes here" parameterId="description" as="p" className="py-6" />
+            <UniformText
+              placeholder="Description goes here"
+              parameterId="description"
+              as="p"
+              className="py-6 whitespace-break-spaces"
+            />
           </div>
           <div className="w-full">
             <UniformSlot name="feature" />

@@ -3,11 +3,12 @@ import { Carousel } from './Carousel';
 
 export enum CarouselVariants {
   ImageGallery = 'imageGallery',
+  Brochure = 'brochure',
 }
 
 export type CarouselProps = ComponentProps;
 
-[undefined, CarouselVariants.ImageGallery].forEach(variantId => {
+[undefined, CarouselVariants.ImageGallery, CarouselVariants.Brochure].forEach(variantId => {
   registerUniformComponent({
     type: 'carousel',
     component: Carousel,

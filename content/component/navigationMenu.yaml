@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationMenu
+name: Navigation Menu
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281067/csk-icons/component-icons-v2/CSKicon_novgroup1_vwfbxn_b9ycqi.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: color
+    name: Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
+    localizable: false
+  - id: group_iconSettings
+    name: Icon Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - icon
+        - hideIconBackground
+  - id: icon
+    name: Icon
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+    localizable: false
+  - id: hideIconBackground
+    name: Hide Icon Background
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+    localizable: false
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Navigation_menu_preview_image
+useTeamPermissions: true
+slots:
+  - id: content
+    name: Content
+    allowedComponents:
+      - navigationOneColumnMenu
+      - navigationTwoColumnsMenu
+      - grid
+      - tabs
+      - container
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2024-01-15T10:23:16.265702+00:00'
+updated: '2024-01-16T12:22:13.787993+00:00'

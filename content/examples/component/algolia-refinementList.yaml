@@ -1,0 +1,20 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-refinementList
+name: Refinement List
+icon: image-text
+parameters:
+  - id: refinementListParams
+    name: Refinement List Parameters
+    type: algolia-components
+    helpText: ''
+    typeConfig:
+      selectedComponent: Refinement List
+categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Algolia/Refinement_list_preview_image.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-12-22T11:47:15.173338+00:00'
+updated: '2023-12-26T09:35:42.216831+00:00'

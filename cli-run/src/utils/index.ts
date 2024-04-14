@@ -72,22 +72,27 @@ export const addExamplesCanvasCache = async (projectPath: string) => {
   await remove(path.resolve(projectPath, 'content', 'examples'));
   const pathToCanvasFile = path.resolve(projectPath, 'src', 'canvas', 'index.ts');
   const canvas = await fs.promises.readFile(pathToCanvasFile, 'utf-8');
-  await fs.promises.writeFile(pathToCanvasFile, `import '../modules/coveo';\n${canvas}`);
+
+  await fs.promises.writeFile(pathToCanvasFile, `import '../modules/coveo';import '../modules/algolia';\n${canvas}`);
 };
 
 export const scanPageDirectory = async (projectPath: string, mode: AppModes) =>
+  (await findModeOptions(path.resolve(projectPath, 'src'), mode)) ||
   (await findModeOptions(path.resolve(projectPath, 'src', 'pages'), mode)) ||
   (await findModeOptions(path.resolve(projectPath, 'src', 'pages', 'api'), mode));
 
 const findModeOptions = async (projectPath: string, mode: string): Promise<boolean> =>
   fs.promises
     .readdir(projectPath, { withFileTypes: true })
-    .then(r => r.some(node => (node.isFile() ? node.name.endsWith(mode) : false)));
+    .then(r => r.some(node => (node.isFile() ? node.name.endsWith(mode) : false)))
+    .catch(() => false);
 
-export const switchModeInPageDirectory = async (projectPath: string, mode: AppModes, removalList?: string[]) => {
+export const switchModeInDirectory = async (projectPath: string, mode: AppModes, removalList?: string[]) => {
+  await switchModeTo(path.resolve(projectPath, 'src'), mode, removalList);
   await switchModeTo(path.resolve(projectPath, 'src', 'pages'), mode, removalList);
   await switchModeTo(path.resolve(projectPath, 'src', 'pages', 'api'), mode, removalList);
 };
+
 const switchModeTo = async (projectPath: string, mode: string, removalList?: string[]) => {
   const listOfFilesNames = (await fs.promises.readdir(projectPath, { withFileTypes: true }))
     .filter(node => node.isFile())
@@ -101,5 +106,22 @@ const switchModeTo = async (projectPath: string, mode: string, removalList?: str
     } else if (fileName.endsWith(AppModes.SSR) || fileName.endsWith(AppModes.SSG) || removalList?.includes(fileName)) {
       await remove(path.resolve(projectPath, fileName));
     }
+  }
+};
+
+export const updatePromptsBasedOnIntegration = async ({ type }: UNIFORM_API.DefineResponse) => {
+  const pathToPromptsFolder = path.resolve('../', 'content', 'prompts');
+  if (!pathToPromptsFolder) return;
+
+  const listOfFilesNames = (await fs.promises.readdir(pathToPromptsFolder, { withFileTypes: true }))
+    .filter(node => node.isFile())
+    .map(item => item.name);
+  for (const fileName of listOfFilesNames) {
+    const pathToPromptFile = path.join(pathToPromptsFolder, fileName);
+    const prompt = await fs.promises.readFile(pathToPromptFile, 'utf-8');
+    await fs.promises.writeFile(
+      path.resolve(pathToPromptFile),
+      prompt.replace(/^(integrationType: .*$\n)/gm, `integrationType: ${type}\n`)
+    );
   }
 };

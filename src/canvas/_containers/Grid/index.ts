@@ -1,15 +1,19 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import { Grid } from './Grid';
+import { ContainerProps } from '../Container';
+import { withoutContainer } from '../../../hocs/withoutContainer';
 
-export type GridProps = ComponentProps<{
-  columnsCount: Types.AvailableColumnCount;
-  gapY: Types.AvailableGapVariants;
-  gapX: Types.AvailableGapVariants;
-}>;
+export type GridProps = ComponentProps<
+  ContainerProps & {
+    columnsCount: Types.AvailableColumnCount;
+    gapY: Types.AvailableGapVariants;
+    gapX: Types.AvailableGapVariants;
+  }
+>;
 
 registerUniformComponent({
   type: 'grid',
-  component: Grid,
+  component: withoutContainer(Grid, { additionalClassName: 'w-full' }),
 });
 
-export default Grid;
+export default withoutContainer(Grid, { additionalClassName: 'w-full' });

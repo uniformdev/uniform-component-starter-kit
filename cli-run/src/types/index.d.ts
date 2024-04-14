@@ -18,6 +18,7 @@ declare namespace CLI {
 
   type DataSourceConfiguration = {
     integrationDisplayName: string;
+    integrationType?: string;
     dataSourceId: string;
     dataSourceDisplayName: string;
     connectorType: string;
@@ -40,10 +41,13 @@ declare namespace CLI {
 
   type Integration = {
     name: string;
-    data?: Record<string, string>;
+    type?: string;
+    data?: Record<string, string | string[]>;
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fetchDataFn?: (data: any) => Promise<Record<string, string | object>>;
     link?: string;
     customManifest?: Record<string, unknown>;
+    onIntegrationSet?: (integrationInfo: UNIFORM_API.DefineResponse) => Promise<void>;
   };
 }
 
@@ -110,6 +114,7 @@ declare namespace UNIFORM_API {
   type AddDataSourceParams = {
     teamId: string;
     projectId: string;
+    integrationType?: string;
     integrationDisplayName: string;
     connectorType: string;
     baseUrl: string;

@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tableRow
+name: Table Row
+icon: view-list
+parameters:
+  - id: highlightsOnHover
+    name: Highlights on hover
+    type: checkbox
+    helpText: ''
+    typeConfig: null
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_row_preview_image
+useTeamPermissions: true
+slots:
+  - id: cells
+    name: Cells
+    allowedComponents:
+      - tableDataCell
+      - tableHeaderCell
+      - $loop
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-11-22T09:43:35.301465+00:00'
+updated: '2023-11-22T10:10:11.583477+00:00'

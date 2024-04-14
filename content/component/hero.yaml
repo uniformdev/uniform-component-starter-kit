@@ -1,0 +1,365 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: hero
+name: Hero
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281207/csk-icons/component-icons-v2/CSKicon_hero_odv0f6_ipen7r.svg
+parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - eyebrowText
+        - title
+        - titleStyle
+        - description
+        - image
+        - video
+  - id: eyebrowText
+    name: Eyebrow text
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '3'
+    localizable: true
+  - id: titleStyle
+    name: Title Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '10'
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: video
+    name: Video
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+        projectMapNode: false
+  - id: group_primaryCta
+    name: Primary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - primaryButtonCopy
+        - primaryButtonLink
+        - primaryButtonStyle
+        - primaryButtonAnimationType
+  - id: primaryButtonCopy
+    name: Primary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: primaryButtonLink
+    name: Primary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonStyle
+    name: Primary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: primaryButtonAnimationType
+    name: Primary Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: group_secondaryCta
+    name: Secondary CTA
+    type: group
+    typeConfig:
+      childrenParams:
+        - secondaryButtonCopy
+        - secondaryButtonLink
+        - secondaryButtonStyle
+        - secondaryButtonAnimationType
+  - id: secondaryButtonCopy
+    name: Secondary Button Copy
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: secondaryButtonLink
+    name: Secondary Button Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonStyle
+    name: Secondary Button Style
+    type: tp-button-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: secondaryButtonAnimationType
+    name: Secondary Button Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: group_imageSettings
+    name: Image Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - overlayColor
+        - overlayOpacity
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - fullHeight
+        - textColor
+        - containerVariant
+        - backgroundColor
+        - paddingTop
+        - paddingBottom
+        - marginBottom
+        - marginTop
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    helpText: If enabled, other components will appear below the fold
+    typeConfig: null
+  - id: textColor
+    name: Text Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#000'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
+      isAllowCustomColor: true
+    localizable: false
+  - id: containerVariant
+    name: Container Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Background In Container
+          value: backgroundInContainer
+        - text: Fluid Content
+          value: fluidContent
+  - id: backgroundColor
+    name: Background Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#fff'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
+      isAllowCustomColor: true
+    localizable: false
+  - id: paddingTop
+    name: Padding Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: paddingBottom
+    name: Padding Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginBottom
+    name: Margin Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: group_animationSettings
+    name: Animation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - animationType
+        - duration
+        - delay
+        - animationOrder
+        - animationPreview
+  - id: animationType
+    name: Animation Type
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Fade-In
+          value: fadeIn
+        - text: Fly-In
+          value: flyIn
+  - id: duration
+    name: Duration
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Slow
+          value: slow
+        - text: Medium
+          value: medium
+        - text: Fast
+          value: fast
+  - id: delay
+    name: Delay
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: None
+          value: none
+        - text: Short (250ms)
+          value: short
+        - text: Medium (500ms)
+          value: medium
+        - text: Long (1000ms)
+          value: long
+  - id: animationOrder
+    name: Animation Order
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: All at once (default)
+          value: allAtOnce
+        - text: One by one
+          value: oneByOne
+  - id: animationPreview
+    name: Animation Preview
+    type: tp-play-animation-parameter
+    helpText: ''
+    typeConfig: null
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-09-20T09:32:28.581394+00:00'
+updated: '2024-03-22T12:46:00.724471+00:00'
+variants:
+  - id: imageLeft
+    name: Image Left
+  - id: imageRight
+    name: Image Right
+  - id: twoColumns
+    name: Two Columns
+  - id: backgroundImage
+    name: Background Image

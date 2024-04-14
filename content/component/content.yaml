@@ -1,0 +1,46 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: content
+name: Content
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692280887/csk-icons/component-icons-v2/CSKicon_content_bhinpv_cwikeu.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+    localizable: true
+  - id: titleStyle
+    name: Title Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: link
+    name: Link
+    type: link
+    helpText: ''
+    typeConfig: null
+  - id: text
+    name: Text
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '5'
+    localizable: true
+  - id: content
+    name: Content
+    type: json
+    helpText: ''
+    typeConfig: {}
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Content_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: title
+canBeComposition: false
+created: '2023-08-28T12:30:18.084771+00:00'
+updated: '2023-12-27T08:51:24.267549+00:00'

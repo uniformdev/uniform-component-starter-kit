@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { UniformSlot, UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { UniformSlot, UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
@@ -8,6 +8,7 @@ import { getColorClassName } from './helpers';
 import { CardBlockProps } from '.';
 
 export const CardBlockDefault: FC<CardBlockProps> = ({
+  buttonCopy,
   buttonLink,
   titleStyle: TitleTag = 'h1',
   buttonStyle,
@@ -15,8 +16,7 @@ export const CardBlockDefault: FC<CardBlockProps> = ({
   textColorVariant,
   styles,
 }) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
-
+  const { isContextualEditing } = useUniformContextualEditingState();
   const colorClassName = getColorClassName(textColorVariant);
 
   return (
@@ -42,22 +42,18 @@ export const CardBlockDefault: FC<CardBlockProps> = ({
             className={classNames('py-6', styles?.description)}
           />
         </div>
-        {Boolean(buttonLink) && (
+        {(Boolean(buttonCopy) || isContextualEditing) && (
           <Button
             href={formatProjectMapLink(buttonLink)}
             animationType={buttonAnimationType}
-            copy={
-              <UniformText
-                placeholder="Button copy goes here"
-                parameterId="buttonCopy"
-                onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-              />
-            }
+            copy={<UniformText placeholder="Button copy goes here" parameterId="buttonCopy" />}
             style={buttonStyle}
           />
         )}
       </div>
-      <UniformSlot name="cardBlockInner" />
+      <div className="w-full flex flex-row flex-wrap justify-center gap-6">
+        <UniformSlot name="cardBlockInner" />
+      </div>
     </div>
   );
 };
