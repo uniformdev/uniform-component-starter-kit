@@ -9,18 +9,21 @@ import {
 
 interface ConfigureIntegration {
   displayName: string;
+  defaultType?: string;
   teamId: string;
   projectId: string;
-  integrationParams?: Record<string, string>;
+  integrationParams?: Record<string, string | string[]>;
   fetchIntegrationParamsFn?: (data?: object) => Promise<Record<string, string | object>>;
   customManifest?: Record<string, unknown>;
   apiHost: string;
   headers: Record<string, string>;
+  onIntegrationSet?: (integrationInfo: UNIFORM_API.DefineResponse) => Promise<void>;
 }
 
 interface ConfigureDataSource {
   teamId: string;
   projectId: string;
+  integrationType?: string;
   integrationDisplayName: string;
   headers: Record<string, string>;
   connectorType: string;
@@ -33,6 +36,7 @@ interface ConfigureDataSource {
 
 export const configureIntegration = async ({
   displayName,
+  defaultType,
   teamId,
   projectId,
   integrationParams,
@@ -40,6 +44,7 @@ export const configureIntegration = async ({
   customManifest,
   apiHost,
   headers,
+  onIntegrationSet,
 }: ConfigureIntegration) => {
   if (customManifest) {
     await defineIntegration({
@@ -50,20 +55,21 @@ export const configureIntegration = async ({
     });
   }
 
-  const integration = await getIntegrationDefinitionByDisplayName({
-    displayName,
-    teamId,
-    apiHost,
-    headers,
-  });
+  const { type = defaultType } =
+    (await getIntegrationDefinitionByDisplayName({
+      displayName,
+      teamId,
+      apiHost,
+      headers,
+    })) || {};
 
-  if (!integration) {
+  if (!type) {
     throw new Error(`Integration definition is not available: ${displayName}`);
   }
 
   const installedIntegration = await getInstalledIntegration({
     projectId,
-    type: integration.type,
+    type,
     apiHost,
     headers,
   });
@@ -76,7 +82,7 @@ export const configureIntegration = async ({
 
   const newInstalledIntegration = await installIntegration({
     projectId,
-    type: integration.type,
+    type,
     data: dynamicIntegrationParams || integrationParams,
     apiHost,
     headers,
@@ -85,11 +91,15 @@ export const configureIntegration = async ({
   if (!newInstalledIntegration) {
     return;
   }
+  if (onIntegrationSet) {
+    await onIntegrationSet(newInstalledIntegration);
+  }
 };
 
 export const configureDataSource = async ({
   teamId,
   projectId,
+  integrationType,
   integrationDisplayName,
   headers,
   connectorType,
@@ -112,6 +122,7 @@ export const configureDataSource = async ({
   await addDataSource({
     teamId,
     projectId,
+    integrationType,
     integrationDisplayName,
     headers,
     connectorType,

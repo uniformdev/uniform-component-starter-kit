@@ -1,0 +1,1119 @@
+composition:
+  _name: Components
+  _id: 6a9389b6-3495-4a08-b6d6-f0dce73e4606
+  _slug: components
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Browse all components
+    openGraphTitle:
+      type: text
+      value: Uniform Components
+    pageMetaDescription:
+      type: text
+      value: Explore rich component library
+  slots:
+    pageFooter:
+      - _id: 1b782de3-0dfe-458c-861a-55ea0454d6fe
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: b9d272ab-899f-4150-bbf6-dc1569e835e3
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 899acb18-ca1c-4c7c-a90c-b02fd0621b5f
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 28d2a1b5-e2a2-4dc4-a623-97bc06af06e1
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Browse all components
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Browse all the components and variants grouped by type
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: d6d78453-7951-4515-b685-ddcefccdb423
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 3b019958-ca9c-49b6-9414-9d69c5d892ef
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 41c6b7b2-7416-448c-acf0-4c2907fd4944
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 5befc3e3-c35b-4bd6-a26c-efdab8b1cb02
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Heroes
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/heroes
+                          type: projectMapNode
+                          nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Everyone needs a hero, sometimes a couple.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 27feb075-2783-48fb-b4ec-3bd527318418
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Calls to action, or CTAs
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/calls-to-action
+                          type: projectMapNode
+                          nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Who are you going to call?
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 609f17c7-75aa-473d-8dbf-36c75702a096
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Featured Callouts
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/featured-callouts
+                          type: projectMapNode
+                          nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Featured image, title, text and icon bullets.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 79169748-e906-4aa7-994d-4da64d8181e9
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Card Blocks
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/card-blocks
+                          type: projectMapNode
+                          nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: List of cards and title / text
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 7b92e0a4-89b7-4a1c-b187-9875c8f343ad
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Accordions
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/accordions
+                          type: projectMapNode
+                          nodeId: 626584c7-ec70-45eb-80ee-a4cda36d0a58
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Not your grandpa's accordion!
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 49452133-e11e-47ea-beb4-c4c15f172a43
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Content Blocks
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/content-blocks
+                          type: projectMapNode
+                          nodeId: 435b7a20-cf5a-4e2a-a1ce-f674fe7ee044
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: title ❤️ text rendezvous
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 31795c37-a3f4-4a2b-a380-3e4a0c0cf5f8
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Responsive Image
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/images
+                          type: projectMapNode
+                          nodeId: ef6da4d5-cb59-4d0a-91b5-1c8021bbb786
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: You can't build a website without one, you know?
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 299dea7c-f79c-43f7-8d6b-c8c7074a2a08
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Layouts & Containers
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/layouts-container
+                          type: projectMapNode
+                          nodeId: a99b4044-8f9a-48fc-9f58-6c2fe4fb7534
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          After seeing this, you won't be able to contain
+                          yourself.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 8c509d5d-7c9b-4a6a-a317-3c151b75ab2d
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Carousels
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Universal carousels allowing you to use any child
+                          component for slides.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 1d58108c-808d-4985-acb9-469f68e0591b
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Header and Top (Mega) Navigation
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/headers-topnav
+                          type: projectMapNode
+                          nodeId: e0558074-87bb-41c9-962d-814853d8f829
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Collection of headers with different kinds of
+                          navigation styles, even mega-nav!
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 997bf33b-ab6b-4300-9927-75a3382be817
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Breadcrumbs...
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/breadcrumbs
+                          type: projectMapNode
+                          nodeId: aeed197a-ba51-497f-8f3e-92dc601918f2
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Want to confuse a Zoomer? Talk to them about the
+                          breadcrumbs and rotary phones.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: df07ee3e-5d22-4992-8c2d-2d715a1e5cae
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Spacers & Dividers
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/spacers-dividers
+                          type: projectMapNode
+                          nodeId: 8f4c8afc-f1a0-4443-855d-e5499eb9a91b
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: We all need a little bit of space sometimes.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: de76b3ca-4a3b-421e-a7d8-2ffa23b20365
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Page Meta Data & Open Graph
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      description:
+                        type: text
+                        value: >-
+                          For all your CEO needs, oh, sorry SEO needs. All
+                          compositions have open graph meta-data, featuring
+                          fully dynamic og:image generation!
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: 1e4e6751-2759-4e11-94df-b7052946974b
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Rich Texts
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See all
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/rich-texts
+                          type: projectMapNode
+                          nodeId: 00a9c22c-831d-4a04-ac70-d9313cf74f5c
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Enhance your content with the versatile Rich Text
+                          component, allowing you to create visually appealing
+                          and formatted text with ease.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: f0d4a60c-868a-4f0d-ab4d-34324d5a3d78
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Video Player
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/videos
+                          type: projectMapNode
+                          nodeId: 98bc7d92-11bc-491b-9b1c-391760a3c875
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Universal, performance-optimized video player for your
+                          YouTube, Vimeo content. Doesn't work with Apple Vision
+                          Pro.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                  - _id: bf7118da-cfee-4f06-bd20-d9f6a9a51714
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Product Detail Page
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/pdp
+                          type: projectMapNode
+                          nodeId: f28599b9-2a0e-4f69-be98-9c32278237d4
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Usual suspect components found on PDPs - image
+                          gallery, add to cart, price...
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: fe25fa3f-8656-4f43-8a37-5a23bb8c753a
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Cookie Banners
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/banners
+                          type: projectMapNode
+                          nodeId: 7a7b2f31-988c-47b2-abd9-e601b0ede3d9
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Ron LaFlamme will tell you need one.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 52e298c8-5534-4f68-b70b-58cac0ed528c
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Reviews
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/reviews
+                          type: projectMapNode
+                          nodeId: d42bee8b-afda-49e3-8691-54ce2f39f809
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Count those stars in your reviews.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 85293e30-911e-41dd-b8f5-19b651c177c3
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Modals
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/modals
+                          type: projectMapNode
+                          nodeId: db6f4ac5-c28f-4305-a0d6-81e8db74e61c
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Modal is a cutting-edge modal component designed to
+                          enhance user experiences on websites and applications.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: bb0a1648-cf1c-428d-a917-174864363a19
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Quotes / Testimonials
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/testimonials
+                          type: projectMapNode
+                          nodeId: 6e8d556b-b9b7-4f21-a533-bcb2ef9d5c76
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Proof points and famous quotes that help boost your
+                          company valuation instantly.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 5d61a21c-24da-4546-802e-9bd0719b3479
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Product Info
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/product-info
+                          type: projectMapNode
+                          nodeId: c6b270b9-bb82-4d6c-a40c-66cd80939c13
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Show the basic product information
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 40066a4c-eef7-4649-a41c-2438f2166b5d
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Image Gallery
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/image-gallery
+                          type: projectMapNode
+                          nodeId: ff09deec-49ab-4dee-8431-e9bf6e9a5d37
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          The Image Gallery component is designed to display the
+                          images in a gallery view
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: e6792a3a-5f0b-45ac-a3fd-0c0d8967488a
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Tabs
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/tabs
+                          type: projectMapNode
+                          nodeId: 3c6dc27e-75d9-45ae-890f-dcd15cfca35a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Tabs are a convenient way to present a list of links
+                          in a tabbed format.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: aa97543e-5bac-40db-bf71-bfae91338c34
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Tables
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/tables
+                          type: projectMapNode
+                          nodeId: 5c7e7bf1-e932-4cde-9ca6-414e85aef779
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Table can be used to show a list of data in a table
+                          format.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 3cbf4f2a-0472-4f7f-9dd1-7248e2a705bd
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      title:
+                        type: text
+                        value: Countdowns
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/countdowns
+                          type: projectMapNode
+                          nodeId: c7379e60-ab85-4681-942b-9ed8c8622b53
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: >-
+                          Countdown gives you a transition effect of changing
+                          numbers.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: small
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Available components
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 1b0986fd-b024-4010-aec2-338334f0f15e
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 8b13a082-8f39-45f6-8b8e-a4c46c0fbff1
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 07b7de21-f04a-4bca-9af0-118fd5b672ff
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: Coming Soon
+                      title:
+                        type: text
+                        value: Lists
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      description:
+                        type: text
+                        value: 1, 2, n lists with paging and stuff.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                      textColorVariant:
+                        type: select
+                        value: Light
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Coming soon...
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: This is just a glimpse of what's around the corner.
+created: '2023-11-14T16:50:09.259555+00:00'
+modified: '2024-02-08T21:15:57.126979+00:00'
+pattern: false

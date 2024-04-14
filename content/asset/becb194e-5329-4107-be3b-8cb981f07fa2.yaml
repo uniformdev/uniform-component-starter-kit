@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: becb194e-5329-4107-be3b-8cb981f07fa2
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: block-svgrepo-com-(1).svg
+    file:
+      type: file
+      value: a5355dfc-e864-43b6-b70b-17f5649d83b4
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/mz7rjvIeRHGbZyypPL9qMg/PiRUWFk-RI6C7ts-c6kl7Q-block-svgrepo-com-(1).svg
+      type: text
+    size:
+      value: 932
+      type: number
+    width:
+      value: 800
+      type: number
+    height:
+      value: 800
+      type: number
+    custom: {}
+created: '2024-01-15T11:15:53.59601+00:00'
+modified: '2024-01-15T11:15:53.59601+00:00'

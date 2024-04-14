@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { useUniformCurrentComposition, UniformText } from '@uniformdev/canvas-react';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
@@ -21,7 +21,7 @@ export const CallToAction: FC<CallToActionProps> = ({
   styles,
   component: { variant } = {},
 }) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
+  const { isContextualEditing } = useUniformContextualEditingState();
 
   const isLightTextColor = textColorVariant === 'Light';
   const eyebrowTextColorStyle = isLightTextColor ? 'text-secondary' : 'text-primary';
@@ -52,34 +52,27 @@ export const CallToAction: FC<CallToActionProps> = ({
             as={TitleTag}
             className={classNames('font-medium', getTextClass(TitleTag))}
           />
-          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="py-6 text-xl" />
+          <UniformText
+            placeholder="Description goes here"
+            parameterId="description"
+            as="p"
+            className="pt-6 text-xl whitespace-break-spaces"
+          />
         </div>
-        <div className="flex justify-between">
-          {Boolean(primaryButtonLink && primaryButtonCopy) && (
+        <div className="flex justify-between pt-6">
+          {(Boolean(primaryButtonCopy) || isContextualEditing) && (
             <Button
               href={formatProjectMapLink(primaryButtonLink)}
               animationType={primaryButtonAnimationType}
-              copy={
-                <UniformText
-                  placeholder="Description goes here"
-                  parameterId="primaryButtonCopy"
-                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-                />
-              }
+              copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
               style={primaryButtonStyle}
             />
           )}
-          {Boolean(secondaryButtonCopy && secondaryButtonLink) && (
+          {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
             <Button
               href={formatProjectMapLink(secondaryButtonLink)}
               animationType={secondaryButtonAnimationType}
-              copy={
-                <UniformText
-                  placeholder="Description goes here"
-                  parameterId="secondaryButtonCopy"
-                  onClick={isContextualEditing ? e => e.preventDefault() : undefined}
-                />
-              }
+              copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
               style={secondaryButtonStyle}
             />
           )}

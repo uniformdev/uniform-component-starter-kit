@@ -1,0 +1,121 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: advancedContainer
+name: Advanced Container
+icon: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1692281032/csk-icons/component-icons-v2/CSKicon_container_p810p1_x6zrrm.svg
+parameters:
+  - id: title
+    name: Title
+    type: text
+    helpText: Section title
+    typeConfig: null
+    localizable: true
+  - id: group_styling
+    name: Styling
+    type: group
+    typeConfig:
+      childrenParams:
+        - backgroundColor
+        - paddingTop
+        - paddingBottom
+        - marginTop
+        - marginBottom
+  - id: backgroundColor
+    name: Background Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#fff'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - secondary-content
+        - accent
+      isAllowCustomColor: true
+      isShowAdvancedSettings: true
+    localizable: false
+  - id: paddingTop
+    name: Padding Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: paddingBottom
+    name: Padding Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginBottom
+    name: Margin Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Container_preview_image
+useTeamPermissions: true
+slots:
+  - id: background
+    name: Background
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - image
+      - video
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: content
+    name: Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: title
+canBeComposition: false
+created: '2024-01-17T11:56:44.437724+00:00'
+updated: '2024-03-26T12:34:30.544475+00:00'
+variants:
+  - id: fluidContent
+    name: Fluid Content

@@ -1,0 +1,29 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-hits
+name: Hits
+icon: play-list-search
+parameters:
+  - id: hitsParams
+    name: Hits Parameters
+    type: algolia-components
+    helpText: ''
+    typeConfig:
+      selectedComponent: Hits
+categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Algolia/Hits_preview_image.jpg
+useTeamPermissions: true
+slots:
+  - id: hitComponent
+    name: Hit Component
+    maxComponents: 1
+    minComponents: 1
+    allowedComponents:
+      - algolia-hitProduct
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-12-22T11:47:16.222018+00:00'
+updated: '2023-12-26T09:33:38.260733+00:00'

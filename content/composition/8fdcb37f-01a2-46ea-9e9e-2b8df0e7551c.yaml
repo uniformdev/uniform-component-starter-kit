@@ -1,0 +1,210 @@
+composition:
+  _name: Product Info
+  _id: 8fdcb37f-01a2-46ea-9e9e-2b8df0e7551c
+  _slug: product-info
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Product Review
+    pageMetaDescription:
+      type: text
+      value: 'Show basic information about your product '
+  slots:
+    pageFooter:
+      - _id: d56aadf0-273f-4ce0-810a-5cb9aaf77988
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 46798534-b176-42c1-81b9-925c7de928c3
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 3d609d31-c81f-44ef-b1d2-1ca3c655c22a
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: f22cf07a-6c23-4485-936b-c8c784fc61a5
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Product Info
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: 'Show basic information about your product '
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: c8a7182b-97e3-439b-8833-a229d272c8e1
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: de60ee03-5434-41b9-8084-7b232ed96721
+        type: callToAction
+        parameters:
+          title:
+            type: text
+            value: Basic Product Information
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Please provide an overview of the fundamental details pertaining
+              to your product, including but not limited to its key features,
+              specifications, pricing, and any other relevant information that
+              helps potential customers gain a comprehensive understanding of
+              what your product has to offer.
+      - _id: a77c604d-6cf6-4fc2-9913-cba06965f753
+        type: container
+        slots:
+          container-inner:
+            - _id: 3a7fa1ae-2a6d-44a1-9844-2470b747d9cc
+              type: productInfo
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 9594444c-0cf8-474d-bd24-4cbfd3cadab8
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: f6e7a90a-7050-42c2-8f73-d868c6fb5feb
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/e49FBS7iQw-XQbg6isdlBg-cup_delicious_coffee.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: f7c2fc85-2192-4563-b275-b789b9ad0a69
+                        size:
+                          value: 2396183
+                          type: number
+                        title:
+                          type: text
+                          value: cup_delicious_coffee.jpg
+                        width:
+                          value: 4608
+                          type: number
+                        height:
+                          value: 3072
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: EspressoGPT
+                features:
+                  type: json
+                  value:
+                    - Free shipping
+                    - 3 year warranty
+                    - Starter bean kit
+                subTitle:
+                  type: text
+                  value: Where modern technology meets timeless taste
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+                description:
+                  type: text
+                  value: >-
+                    Experience coffee like never before. From the moment you
+                    power up the EspressoGPT, you're not just brewing an
+                    espresso—you're entering the future of coffee. Welcome to a
+                    universe of unparalleled taste and sophistication.
+                eyebrowText:
+                  type: text
+                  value: EXPERIENCE A REVOLUTION
+                highlightText:
+                  type: text
+                  value: $1,899.95
+                primaryButtonCopy:
+                  type: text
+                  value: Buy now
+                primaryButtonStyle:
+                  type: tp-button-style-parameter
+                  value: accent
+                secondaryButtonCopy:
+                  type: text
+                  value: Taste the future
+                secondaryButtonLink:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                secondaryButtonStyle:
+                  type: tp-button-style-parameter
+                  value: secondary
+        parameters:
+          title:
+            type: text
+            value: Product Info Container
+          paddingTop:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: Small
+created: '2023-09-21T21:17:20.05565+00:00'
+modified: '2024-02-08T21:16:13.908305+00:00'
+pattern: false

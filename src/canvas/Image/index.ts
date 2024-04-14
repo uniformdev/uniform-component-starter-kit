@@ -1,10 +1,11 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import type { Asset } from '@uniformdev/assets';
 import { Image } from './Image';
 
 export type ImageProps = ComponentProps<{
-  src: string | Types.CloudinaryImage;
-  width: number;
-  height: number;
+  src: string | Asset | Types.CloudinaryImage;
+  width?: string;
+  height?: string;
   alt?: string;
   fill?: boolean;
   quality?: number;

@@ -1,0 +1,128 @@
+composition:
+  _name: Content Block (RichText)
+  _id: 10a5245c-fb64-419d-bdc8-89f1abec3ecd
+  type: box
+  slots:
+    content:
+      - _id: >-
+          02c702fa-c53a-429b-8713-42e521693569|1e8815fa-ef65-4ab3-8036-75926c9a97ba
+        type: text
+        parameters:
+          tag:
+            type: tp-segmented-control-parameter
+            value: h1
+          size:
+            type: tp-segmented-control-parameter
+            value: ''
+          text:
+            type: text
+            value: Title
+          fontWeight:
+            type: tp-segmented-control-parameter
+            value: normal
+          whiteSpace:
+            type: tp-segmented-control-parameter
+            value: normal
+          letterSpacing:
+            type: tp-segmented-control-parameter
+            value: ''
+        _overridability:
+          parameters:
+            tag: 'yes'
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+            style: 'yes'
+            fontWeight: 'yes'
+            whiteSpace: 'yes'
+            letterSpacing: 'yes'
+      - _id: >-
+          02c702fa-c53a-429b-8713-42e521693569|96a16b19-3a32-46a2-b300-048abfba807e
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 20px
+        _overridability:
+          variants: true
+          parameters:
+            thickness: 'yes'
+      - _id: 9d795a1c-c090-4b2a-8af7-12d2312dbeb9
+        type: richText
+        parameters:
+          content:
+            type: richText
+            value:
+              root:
+                type: root
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - tag: h1
+                    type: heading
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Content Block Advanced Text
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - tag: h2
+                    type: heading
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Content Block Advanced Text
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - tag: h3
+                    type: heading
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Content Block Advanced Text
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                  - tag: h4
+                    type: heading
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: Content Block Advanced Text
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                direction: ltr
+        _overridability:
+          parameters:
+            color: 'yes'
+            style: 'yes'
+            content: 'yes'
+created: '2024-01-09T12:40:25.1017+00:00'
+modified: '2024-03-26T12:28:35.938804+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Content_block_rich_text_preview_image

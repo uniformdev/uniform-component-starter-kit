@@ -1,0 +1,214 @@
+composition:
+  _name: Spacers & Dividers
+  _id: 75fe2464-d7c9-4373-a65b-2f63768a3646
+  _slug: spacers-dividers
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Spacers & Dividers
+    pageMetaDescription:
+      type: text
+      value: >-
+        Configurable spacers and dividers when you need to add more breathing
+        room.
+  slots:
+    pageFooter:
+      - _id: 364ab8ea-744a-48ca-b5e6-614afb7e0bf8
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 682cf52c-e921-4262-88ee-f6ffefea35d0
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 22b79c2c-3eee-464d-be2a-a192131f38ff
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7562d60d-0249-42f5-aa87-43b54ba1954e
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Spacers & Dividers
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              configurable spacers and dividers when you need to add more
+              breathing room.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 4ecbb06f-f63b-4083-bbf1-2e5504968c3e
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 39f409cc-6333-4142-8123-e41ab1d1d9cb
+        type: callToAction
+        parameters:
+          title:
+            type: text
+            value: Divider component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >-
+              The Divider component allows adding hairline dividers between
+              components using desired thickness and color from the currently
+              selected theme. Thickness options are configurable by the
+              developer on the parameter settings.
+      - _id: a2c927fb-5668-4296-9deb-641e9f3172b8
+        type: content
+        parameters:
+          title:
+            type: text
+            value: 'Example: a 1px divider in primary color'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: dcfeda77-86aa-4232-a8a4-0a4377ea46a1
+        type: divider
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 1px
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+      - _id: b5ccfee7-ff31-4905-9929-d0f4ab21a54d
+        type: content
+        parameters:
+          title:
+            type: text
+            value: 'Example: a 10px divider in accent color'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: 17f4a772-185b-4b96-afaa-42c6b4ac60d1
+        type: divider
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 10px
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+      - _id: 4da9dd40-7881-46a2-9777-546ec722f191
+        type: callToAction
+        parameters:
+          title:
+            type: text
+            value: Spacer component
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >-
+              The Spacer component allows adding spacing between components
+              using transparent space. Spacing is configurable by the developer
+              on parameter settings. With vertical and horizontal variants, it
+              gives you complete control over content arrangement and layout.
+              Whether you want to create a breathing room or organize elements
+              with precision, this feature lets you fine-tune the spacing to
+              suit your needs.
+      - _id: d7348291-1a29-4193-a74c-84c8530eee58
+        type: content
+        parameters:
+          title:
+            type: text
+            value: 'Example: a 100px horizontal spacer:'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: 559855bb-5676-4def-877d-80e1fbe861e9
+        type: content
+        parameters:
+          text:
+            type: text
+            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          title:
+            type: text
+            value: Before content
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h4
+      - _id: 51d3b558-cdf5-42ad-8bd1-ba4a8ed629b6
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: 97a117f3-eddd-4e84-b126-a2c5d839b587
+        type: content
+        parameters:
+          text:
+            type: text
+            value: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          title:
+            type: text
+            value: After content
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h4
+created: '2023-09-21T21:17:20.338194+00:00'
+modified: '2024-02-08T21:15:57.446324+00:00'
+pattern: false

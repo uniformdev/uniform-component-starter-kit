@@ -1,0 +1,658 @@
+composition:
+  _name: Product Detail Page
+  _id: 2e1bdedd-d37d-4230-97e2-f44913faaf2f
+  _slug: commerce-components
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: 'Product Detail Page components : CSK'
+    pageMetaDescription:
+      type: text
+      value: for your PDPs... you know... TCB - taking care of business.
+  slots:
+    pageFooter:
+      - _id: 1922df93-abc4-4543-9efe-f58b7976da2a
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 5cafbd07-065a-4f58-9cce-cb0b3ee3746a
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 78814777-6cc8-4b03-8ea4-4f0c31ca1250
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: e51856ae-33d4-4817-88b4-dce93b971c9f
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Product Detail Page components
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: for your PDPs... you know... TCB - taking care of business.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 061745c0-bded-43c7-9780-948b0342f8f9
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: e1ccb313-29da-4a2b-a7c4-62a83e5b65c6
+        type: container
+        slots:
+          container-inner:
+            - _id: 61af57e8-5896-48bc-b660-215544fc39f9
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: 'An example of a PDP page with an image gallery on the right '
+                title:
+                  type: text
+                  value: "PDP with\_image gallery on the right"
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 2688f035-0b8b-4b5d-8f79-23d2a8ef61c6
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 28f28909-368f-4652-853e-66c5f842e70c
+                    type: gridItem
+                    slots:
+                      inner:
+                        - _id: df0bc5ea-dfda-420a-876f-7f3cee738fb3
+                          type: content
+                          parameters:
+                            text:
+                              type: text
+                              value: Espresso
+                            title:
+                              type: text
+                              value: >-
+                                Cervello di Caffe® - SmartHQ enabled espresso
+                                machine
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                        - _id: 7d821f7d-5e0b-46c4-86ee-aff5844c5242
+                          type: price
+                          parameters:
+                            label:
+                              type: text
+                              value: 'Price:'
+                            price:
+                              type: number
+                              value: '113.66'
+                            currency:
+                              type: select
+                              value: USD
+                            labelStyle:
+                              type: tp-title-style-parameter
+                              value: h4
+                        - _id: b92b85aa-98ac-4ace-b93d-b993f963807a
+                          type: divider
+                          parameters:
+                            thickness:
+                              type: tp-slider-parameter
+                              value: 1px
+                            colorStyle:
+                              type: tp-color-style-parameter
+                              value: primary
+                        - _id: 3f008bbc-f1cc-4964-88f8-753e454e69be
+                          type: addToCart
+                          parameters:
+                            buttonCopy:
+                              type: text
+                              value: Add to Cart
+                            buttonStyle:
+                              type: tp-button-style-parameter
+                              value: primary
+                        - _id: 26aa3681-efc7-4401-b281-02adfd5b32c6
+                          type: divider
+                          parameters:
+                            thickness:
+                              type: tp-slider-parameter
+                              value: 1px
+                            colorStyle:
+                              type: tp-color-style-parameter
+                              value: primary
+                    parameters:
+                      title:
+                        type: text
+                        value: Left Section
+                      rowSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      rowStart:
+                        type: tp-slider-parameter
+                        value: None
+                      columnSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      columnStart:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: cb4032a5-d3a7-4c66-97b7-c4ab8fc5588d
+                    type: gridItem
+                    slots:
+                      inner:
+                        - _id: b503ec3c-e9cc-427a-904c-9ef544531749
+                          type: carousel
+                          slots:
+                            carouselItem:
+                              - _id: d4c3a1c4-dfab-437d-90eb-82c1914cf841
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 1
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 40750777-7633-40cc-bbe7-2df76b62bb9f
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: fb5c01d0-bfe4-4c1d-94cb-419f0580fa35
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/REeAxlJsQSC_xoObZtjoTg-cervello_di_caffe_1.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ea091a67-b2a8-4f88-9595-d1698c4162b0
+                                          size:
+                                            value: 113554
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_1.jpg
+                                          width:
+                                            value: 987
+                                            type: number
+                                          height:
+                                            value: 987
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                              - _id: 985c4f13-9d1a-4f09-a32d-39119a475be9
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 2
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 1fe4ddf1-4ec9-4757-a477-cb9c1f50a24d
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: c777a60e-b29e-4f94-a56c-307d6d46ccee
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/gieO2Fe8Ts-mAide_iOEXA-cervello_di_caffe_2.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: c183f5c0-1c0e-4b96-9dfd-3c9fe468f8c0
+                                          size:
+                                            value: 122566
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_2.jpg
+                                          width:
+                                            value: 980
+                                            type: number
+                                          height:
+                                            value: 1021
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                              - _id: 6fc57c73-5080-4b04-b7bf-fe6aaad6986a
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 3
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 8a5e2562-237a-41f7-a9f1-ce33e4c3c8bb
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 92ff34cd-1810-45fd-bab6-cc2d583eba9d
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/GWwpq42AQyGcDrmCRrTQtw-cervello_di_caffe_3.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 62891c2e-93c2-444a-a40e-3e7602d7548d
+                                          size:
+                                            value: 116001
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_3.jpg
+                                          width:
+                                            value: 980
+                                            type: number
+                                          height:
+                                            value: 1021
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                          variant: imageGallery
+                    parameters:
+                      title:
+                        type: text
+                        value: Right Section
+                      rowSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      rowStart:
+                        type: tp-slider-parameter
+                        value: None
+                      columnSpan:
+                        type: tp-slider-parameter
+                        value: '2'
+                      columnStart:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: 'Product Detail Page '
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+            - _id: a9d9fb16-1b83-43db-9e96-548e01341f3d
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 80px
+            - _id: 536c16d2-8e10-45b1-a143-d9165e2e2e64
+              type: divider
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 1px
+                colorStyle:
+                  type: tp-color-style-parameter
+                  value: primary
+        parameters:
+          title:
+            type: text
+            value: 'Product Detail Page '
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: c5f00b82-088a-403f-a969-a873f6b42dc9
+        type: container
+        slots:
+          container-inner:
+            - _id: c007e7fd-fb4f-4a1d-8ddd-868cfe339b51
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: An example of a PDP page with an image gallery on the left
+                title:
+                  type: text
+                  value: "PDP with\_image gallery on the left"
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 1c0bd7bd-cf07-49e4-8c88-3fcf975a3883
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: ced16a5b-5036-40e3-985b-0eb4d7d646b2
+                    type: gridItem
+                    slots:
+                      inner:
+                        - _id: fff95563-6341-4eca-a6b1-264565038167
+                          type: carousel
+                          slots:
+                            carouselItem:
+                              - _id: be7c529d-f95f-476f-8cd8-83ceee558c32
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 1
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: a0d12830-3627-4fdf-96f1-1d4a6c2975fd
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: fb5c01d0-bfe4-4c1d-94cb-419f0580fa35
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/REeAxlJsQSC_xoObZtjoTg-cervello_di_caffe_1.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: ea091a67-b2a8-4f88-9595-d1698c4162b0
+                                          size:
+                                            value: 113554
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_1.jpg
+                                          width:
+                                            value: 987
+                                            type: number
+                                          height:
+                                            value: 987
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                              - _id: 775ebcad-0309-45c3-8dff-9aedbebb70de
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 2
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 05aae8ea-7a62-400f-9d99-b9908d23107e
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: c777a60e-b29e-4f94-a56c-307d6d46ccee
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/gieO2Fe8Ts-mAide_iOEXA-cervello_di_caffe_2.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: c183f5c0-1c0e-4b96-9dfd-3c9fe468f8c0
+                                          size:
+                                            value: 122566
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_2.jpg
+                                          width:
+                                            value: 980
+                                            type: number
+                                          height:
+                                            value: 1021
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                              - _id: 1578e9e5-dc8b-4e8a-baab-e2b34ddd0172
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Product Image 3
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 1a16f26b-26e4-43c7-a54b-67705d4ec68d
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 92ff34cd-1810-45fd-bab6-cc2d583eba9d
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/GWwpq42AQyGcDrmCRrTQtw-cervello_di_caffe_3.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 62891c2e-93c2-444a-a40e-3e7602d7548d
+                                          size:
+                                            value: 116001
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cervello_di_caffe_3.jpg
+                                          width:
+                                            value: 980
+                                            type: number
+                                          height:
+                                            value: 1021
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                          variant: imageGallery
+                    parameters:
+                      title:
+                        type: text
+                        value: Left Section
+                      rowSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      rowStart:
+                        type: tp-slider-parameter
+                        value: None
+                      columnSpan:
+                        type: tp-slider-parameter
+                        value: '2'
+                      columnStart:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 5f3934cc-051c-410f-baef-122a2b64abaf
+                    type: gridItem
+                    slots:
+                      inner:
+                        - _id: 54a2948f-eb68-4ce7-9e81-b512f7628d2b
+                          type: content
+                          parameters:
+                            text:
+                              type: text
+                              value: Espresso
+                            title:
+                              type: text
+                              value: >-
+                                Cervello di Caffe® - SmartHQ enabled espresso
+                                machine
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                        - _id: 5d1cf365-cbb8-433e-8435-4e4fbdd710e1
+                          type: price
+                          parameters:
+                            label:
+                              type: text
+                              value: 'Price:'
+                            price:
+                              type: number
+                              value: '113.66'
+                            currency:
+                              type: select
+                              value: USD
+                            labelStyle:
+                              type: tp-title-style-parameter
+                              value: h4
+                        - _id: a549f20c-33ce-430c-84e1-65f044ba0757
+                          type: divider
+                          parameters:
+                            thickness:
+                              type: tp-slider-parameter
+                              value: 1px
+                            colorStyle:
+                              type: tp-color-style-parameter
+                              value: primary
+                        - _id: 42164ba4-ea1d-40d4-8c49-91620459ec16
+                          type: addToCart
+                          parameters:
+                            buttonCopy:
+                              type: text
+                              value: Add to Cart
+                        - _id: 7cbc5344-6381-4fce-af5a-5047d6913bd2
+                          type: divider
+                          parameters:
+                            thickness:
+                              type: tp-slider-parameter
+                              value: 1px
+                            colorStyle:
+                              type: tp-color-style-parameter
+                              value: primary
+                    parameters:
+                      title:
+                        type: text
+                        value: Right Section
+                      rowSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      rowStart:
+                        type: tp-slider-parameter
+                        value: None
+                      columnSpan:
+                        type: tp-slider-parameter
+                        value: '1'
+                      columnStart:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: 'Product Detail Page '
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: 'Product Detail Page '
+          marginTop:
+            type: select
+            value: ''
+          marginBottom:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: ''
+created: '2023-09-21T21:17:19.403376+00:00'
+modified: '2024-02-08T21:15:42.408366+00:00'
+pattern: false

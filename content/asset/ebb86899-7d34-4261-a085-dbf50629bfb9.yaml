@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: ebb86899-7d34-4261-a085-dbf50629bfb9
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: icon_featured_callout.svg
+    file:
+      type: file
+      value: 1cc4de0d-7d65-4830-b780-7f68230b2c9e
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/JOcz8rCfSESwsbqv5KWf7g-icon_featured_callout.svg
+      type: text
+    size:
+      value: 6109
+      type: number
+    width:
+      value: 220
+      type: number
+    height:
+      value: 220
+      type: number
+    custom: {}
+created: '2023-12-12T13:37:05.044322+00:00'
+modified: '2023-12-12T13:37:05.044322+00:00'

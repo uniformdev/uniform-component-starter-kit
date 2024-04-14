@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 2f846de5-74be-41a3-a181-a7fc7b7c38ca
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: clock.svg
+    file:
+      type: file
+      value: b31b3cda-42fc-4a56-a64b-d259c468d24f
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/KcF-bFdcRtyheUhNLlEDJA/U_1YTpmIRHmWfg7M0HUx-g-clock.svg
+      type: text
+    size:
+      value: 414
+      type: number
+    width:
+      value: 24
+      type: number
+    height:
+      value: 24
+      type: number
+    custom: {}
+created: '2024-01-09T08:52:54.159232+00:00'
+modified: '2024-01-09T08:52:54.159232+00:00'

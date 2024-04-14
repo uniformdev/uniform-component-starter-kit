@@ -1,0 +1,282 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: page
+name: Page
+icon: file-document
+parameters:
+  - id: pageTitle
+    name: Page Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: true
+  - id: group_metaData
+    name: Meta Data
+    type: group
+    typeConfig:
+      childrenParams:
+        - pageMetaDescription
+        - pageKeywords
+  - id: pageMetaDescription
+    name: Page Meta Description
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+      linesCount: '5'
+  - id: pageKeywords
+    name: Page Keywords
+    type: text
+    helpText: ''
+    typeConfig:
+      multiline: true
+  - id: group_openGraph
+    name: Open Graph
+    type: group
+    typeConfig:
+      childrenParams:
+        - openGraphTitle
+        - openGraphImage
+        - openGraphType
+        - openGraphDescription
+        - overlayTitleToOgImage
+  - id: openGraphTitle
+    name: Open Graph Title
+    type: text
+    helpText: page head title
+    typeConfig: null
+  - id: openGraphDescription
+    name: Open Graph Description
+    type: text
+    helpText: >-
+      used to set `og:description`. If not set, `Page Meta Description` will be
+      used.
+    typeConfig:
+      multiline: true
+      linesCount: '5'
+  - id: openGraphImage
+    name: Open Graph Image
+    type: asset
+    helpText: This will set og:image
+    typeConfig:
+      max: 1
+      min: 0
+  - id: overlayTitleToOgImage
+    name: Overlay Title over Open Graph Image?
+    type: checkbox
+    helpText: if set, renders the `og:title` over the image dynamically
+    typeConfig: null
+  - id: openGraphType
+    name: Open Graph Type
+    type: select
+    helpText: sets the value of `og:type` (defalts to "website" if not specified)
+    typeConfig:
+      options:
+        - text: website
+          value: website
+        - text: video
+          value: video
+        - text: article
+          value: article
+  - id: group_twitter
+    name: Twitter
+    type: group
+    typeConfig:
+      childrenParams:
+        - twitterDescription
+        - twitterTitle
+        - twitterImage
+        - overlayTitleToTwitterImage
+        - twitterCard
+  - id: twitterTitle
+    name: Twitter Title
+    type: text
+    helpText: Sets `twitter:title`. Fallback to Page Title if not set.
+    typeConfig: null
+  - id: twitterDescription
+    name: Twitter Description
+    type: text
+    helpText: >-
+      Sets `twitter:description`. Falls back to `Page Meta Description` if not
+      set
+    typeConfig:
+      multiline: true
+      linesCount: '5'
+  - id: twitterImage
+    name: Twitter Image
+    type: asset
+    helpText: Sets `twitter:image`. Fallsback to `og:image` if not set.
+    typeConfig:
+      max: 1
+      min: 0
+  - id: overlayTitleToTwitterImage
+    name: Overlay Title to Twitter Image?
+    type: checkbox
+    helpText: if set, overlays content of `twitter:title` over the image dynamically
+    typeConfig: null
+  - id: twitterCard
+    name: Twitter Card
+    type: select
+    helpText: Sets the value of `twitter:card`. If not set, defaults to `summary`.
+    typeConfig:
+      options:
+        - text: summary
+          value: summary
+        - text: summary_large_image
+          value: summary_large_image
+        - text: app
+          value: app
+        - text: player
+          value: player
+categoryId: 31fcffb0-aead-4256-8e49-4d50cc28aa29
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Page_preview_image
+useTeamPermissions: true
+slots:
+  - id: pageHeader
+    name: Page Header
+    maxComponents: 1
+    minComponents: 1
+    allowedComponents:
+      - header
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: pageContent
+    name: Page Content
+    allowedComponents:
+      - content
+      - accordion
+      - callToAction
+      - cardBlock
+      - container
+      - featuredCallout
+      - hero
+      - $test
+      - $loop
+      - $personalization
+      - image
+      - divider
+      - carousel
+      - breadcrumbs
+      - header
+      - spacer
+      - richText
+      - video
+      - grid
+      - price
+      - addToCart
+      - banner
+      - review
+      - modal
+      - button
+      - testimonial
+      - imageGallery
+      - productInfo
+      - tabs
+      - table
+      - countdown
+      - text
+      - box
+      - advancedContainer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: pageFooter
+    name: Page Footer
+    maxComponents: 1
+    allowedComponents:
+      - footer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+defaults:
+  type: page
+  slots:
+    pageFooter:
+      - type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+        _overridability:
+          parameters:
+            syntheticGap: 'yes'
+    pageContent:
+      - type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 749a0108-de12-493f-a28d-f9a77e854d30
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    type: text
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                  file:
+                    type: file
+                    value: 417f72e5-d0bc-47c8-8633-eb537728e2ec
+                  size:
+                    type: number
+                    value: 49092
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    type: number
+                    value: 1600
+                  height:
+                    type: number
+                    value: 689
+                  mediaType:
+                    type: text
+                    value: image/webp
+                _source: uniform-assets
+          title:
+            type: text
+            value: Page Title
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Some page description
+          eyebrowText:
+            type: text
+            value: eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+      - type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+titleParameter: pageTitle
+canBeComposition: true
+created: '2024-01-12T10:01:49.037078+00:00'
+updated: '2024-01-12T11:13:29.923824+00:00'

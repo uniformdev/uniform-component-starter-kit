@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 8f48f9c0-83d7-4e1c-84c7-b4bac24ab9ee
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: analytics-svgrepo-com.svg
+    file:
+      type: file
+      value: 4c1dc744-9c9c-40c2-ab22-527bfc830829
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/mz7rjvIeRHGbZyypPL9qMg/8-nc02DpRuW5GFR-FIU_SQ-analytics-svgrepo-com.svg
+      type: text
+    size:
+      value: 647
+      type: number
+    width:
+      value: 800
+      type: number
+    height:
+      value: 800
+      type: number
+    custom: {}
+created: '2024-01-15T10:59:06.191024+00:00'
+modified: '2024-01-15T10:59:06.191024+00:00'

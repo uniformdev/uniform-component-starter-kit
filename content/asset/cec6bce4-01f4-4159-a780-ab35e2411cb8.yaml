@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: cec6bce4-01f4-4159-a780-ab35e2411cb8
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: corel_DESIGNER_lines_halo.jpg
+    file:
+      type: file
+      value: 0a8eda28-02ad-4274-ab5c-548aa096d20e
+    mediaType:
+      value: image/jpeg
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/h2hksKx3Sv-pUlAeNBbBEg-corel_DESIGNER_lines_halo.jpg
+      type: text
+    size:
+      value: 107909
+      type: number
+    width:
+      value: 555
+      type: number
+    height:
+      value: 381
+      type: number
+    custom: {}
+created: '2023-12-12T13:37:05.244709+00:00'
+modified: '2023-12-12T13:37:05.244709+00:00'

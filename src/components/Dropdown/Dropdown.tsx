@@ -1,5 +1,5 @@
 import { FC, useCallback, useMemo, useState } from 'react';
-import Image from 'next/image';
+import Image from '../../components/Image';
 import classNames from 'classnames';
 import { DropdownOption } from './DropdownOption';
 import { DropdownProps } from './';
@@ -56,7 +56,7 @@ const Dropdown: FC<DropdownProps> = ({
       >
         {selectedLabel || title}
         <Image
-          className={classNames('w-auto', { 'rotate-180': isOpen })}
+          className={classNames('w-auto ml-1', { 'rotate-180': isOpen })}
           width={18}
           height={11}
           src="https://res.cloudinary.com/uniform-demos/image/upload/v1692358232/csk-icons/icon-dropdown_fpirma_dns0cw.svg"
@@ -64,10 +64,10 @@ const Dropdown: FC<DropdownProps> = ({
           unoptimized
         />
       </button>
-      {isOpen && (
+      {isOpen && Boolean(optionToShow.length) && (
         <div
           className={classNames(
-            'z-50 origin-top-right absolute right-0 w-full rounded-b-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-base-300',
+            'z-50 origin-top-right absolute right-0 w-full  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-base-300',
             optionsContainerClassName
           )}
           role="menu"
@@ -75,7 +75,7 @@ const Dropdown: FC<DropdownProps> = ({
           aria-labelledby="menu-button"
           tabIndex={-1}
         >
-          <div className="py-1" role="none">
+          <div className="flex flex-col gap-1 items-start py-1" role="none">
             {defaultOption && value !== defaultOption.value && (
               <DropdownOption isDefault option={defaultOption} onSelect={onSelect} />
             )}

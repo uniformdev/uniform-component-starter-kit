@@ -1,0 +1,866 @@
+composition:
+  _name: Rich Texts
+  _id: 1dced7dd-66d4-428f-8ae2-fcfeb084027d
+  _slug: rich-texts
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Rich Texts
+    pageMetaDescription:
+      type: text
+      value: >-
+        Enhance your content with the versatile Rich Text component, allowing
+        you to create visually appealing and formatted text with ease.
+  slots:
+    pageFooter:
+      - _id: de354f34-e447-4c1e-a0da-12cb0121c9fb
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 0f29c2ce-1bcf-485d-9869-ce49f05ddbe9
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 3f8990b3-d44f-4ec4-9ff9-88c6847a8e4f
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: fde80945-ea6b-4e2e-a779-ba58e6d930c8
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Rich Text Component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Enhance your content with the versatile Rich Text component,
+              allowing you to create visually appealing and formatted text with
+              ease.
+          eyebrowText:
+            type: text
+            value: 🤑
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 281e829c-86b8-4aa4-a7bf-cd51145955e3
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: acaa0c03-e3cf-48ac-bc4f-e6f5ced5ce65
+        type: callToAction
+        parameters:
+          title:
+            type: text
+            value: Rich Text on a light background
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: ''
+          eyebrowText:
+            type: text
+            value: Variant 1
+      - _id: 25165a42-1009-4cdc-b5f4-57d9f6325778
+        type: container
+        slots:
+          container-inner:
+            - _id: 924a8373-d14f-4c59-9555-11bb69336131
+              type: richText
+              parameters:
+                content:
+                  type: richText
+                  value:
+                    root:
+                      type: root
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - tag: h1
+                          type: heading
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Exploring the Power of Rich Text: Unlocking
+                                Creative Content Creation
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Rich Text
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' components are '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: powerful tools
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 8
+                              version: 1
+                            - mode: normal
+                              text: ' that enable users to enhance their content with a wide range of formatting options, transforming ordinary text into visually appealing and dynamic representations. With their versatile capabilities, Rich Text components offer numerous benefits to users, making them a valuable asset in various '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: contexts
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 2
+                              version: 1
+                            - mode: normal
+                              text: .
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: h2
+                          type: heading
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Benefits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: ol
+                          type: list
+                          start: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - type: listitem
+                              value: 1
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Enhanced Visual Appeal: Rich Text components
+                                    allow users to apply formatting options such
+                                    as bold, italics, underlining, font styles,
+                                    sizes, and colors, resulting in visually
+                                    appealing and attractive content.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 2
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Improved Readability: By utilizing headings,
+                                    subheadings, bullet points, and numbered
+                                    lists, Rich Text components help users
+                                    organize and structure their content, making
+                                    it easier to read and comprehend.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 3
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Emphasizing Key Points: With features like
+                                    bold and italics, Rich Text components
+                                    enable users to highlight important
+                                    information and emphasize key points,
+                                    ensuring that crucial details stand out to
+                                    the reader.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 4
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Flexibility in Content Organization: Rich
+                                    Text components offer the flexibility to
+                                    align text, adjust margins, create indents,
+                                    and format paragraphs, allowing users to
+                                    optimize the layout and presentation of
+                                    their content.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                          listType: number
+                          direction: ltr
+                        - tag: h2
+                          type: heading
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Why we should use it?
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: ul
+                          type: list
+                          start: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - type: listitem
+                              value: 1
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Multimedia Integration: Users can seamlessly
+                                    incorporate multimedia elements such as
+                                    images, videos, audio files, hyperlinks, and
+                                    interactive elements into their text,
+                                    enriching the content and enhancing the user
+                                    experience.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 2
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Collaboration and Version Control: Rich Text
+                                    components facilitate collaborative work by
+                                    allowing multiple users to make real-time
+                                    edits, track changes, add comments, and
+                                    revert to previous versions, promoting
+                                    efficient teamwork and effective
+                                    communication.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 3
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Accessibility: Rich Text components often
+                                    support accessibility features such as
+                                    screen readers, making the content
+                                    accessible to individuals with disabilities
+                                    and ensuring inclusivity.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 4
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Cross-Platform Compatibility: Rich Text
+                                    components are compatible with various
+                                    platforms and devices, allowing users to
+                                    access and edit their content seamlessly
+                                    across desktop computers, laptops, tablets,
+                                    and mobile phones.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                          listType: bullet
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Time Efficiency: With intuitive interfaces and
+                                user-friendly controls, Rich Text components
+                                simplify the content creation process, saving
+                                users time and effort in formatting and
+                                structuring their text.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Rich Text
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' components are also '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: user-friendly
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' and accessible. Users with limited technical knowledge can easily navigate the intuitive interface, and the formatting options are often presented in a familiar and straightforward manner. Additionally, '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: quote
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Rich Text components usually support screen
+                                readers and other assistive technologies,
+                                enabling individuals with disabilities to access
+                                and interact with the content effectively.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: start
+                          indent: 0
+                          version: 1
+                          children: []
+                          direction: ltr
+                      direction: ltr
+        parameters:
+          title:
+            type: text
+            value: Default RichText
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Medium
+      - _id: c641f515-571d-43bc-a444-25de824969c3
+        type: callToAction
+        parameters:
+          title:
+            type: text
+            value: Rich Text on a dark background
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: ''
+          eyebrowText:
+            type: text
+            value: variant 2
+      - _id: 44b36650-bd7b-4dbc-9f8f-e002c1ce40c4
+        type: container
+        slots:
+          container-inner:
+            - _id: 5790c66a-fd85-484e-9ab5-2a5fb04a3212
+              type: richText
+              parameters:
+                color:
+                  type: tp-color-palette-parameter
+                  value: '#fff'
+                content:
+                  type: richText
+                  value:
+                    root:
+                      type: root
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - tag: h1
+                          type: heading
+                          format: start
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Exploring the Power of Rich Text: Unlocking
+                                Creative Content Creation
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - type: linebreak
+                              version: 1
+                            - mode: normal
+                              text: Rich Text
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' components are '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: powerful tools
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 8
+                              version: 1
+                            - mode: normal
+                              text: ' that enable users to enhance their content with a wide range of formatting options, transforming ordinary text into visually appealing and dynamic representations. With their versatile capabilities, Rich Text components offer numerous benefits to users, making them a valuable asset in various contexts.'
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: h2
+                          type: heading
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Benefits
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: ol
+                          type: list
+                          start: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - type: listitem
+                              value: 1
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Enhanced Visual Appeal: Rich Text components
+                                    allow users to apply formatting options such
+                                    as bold, italics, underlining, font styles,
+                                    sizes, and colors, resulting in visually
+                                    appealing and attractive content.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 2
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Improved Readability: By utilizing headings,
+                                    subheadings, bullet points, and numbered
+                                    lists, Rich Text components help users
+                                    organize and structure their content, making
+                                    it easier to read and comprehend.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 3
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Emphasizing Key Points: With features like
+                                    bold and italics, Rich Text components
+                                    enable users to highlight important
+                                    information and emphasize key points,
+                                    ensuring that crucial details stand out to
+                                    the reader.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 4
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Flexibility in Content Organization: Rich
+                                    Text components offer the flexibility to
+                                    align text, adjust margins, create indents,
+                                    and format paragraphs, allowing users to
+                                    optimize the layout and presentation of
+                                    their content.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                          listType: number
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children: []
+                          direction: null
+                        - tag: h2
+                          type: heading
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Why we should use it?
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - tag: ul
+                          type: list
+                          start: 1
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - type: listitem
+                              value: 1
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Multimedia Integration: Users can seamlessly
+                                    incorporate multimedia elements such as
+                                    images, videos, audio files, hyperlinks, and
+                                    interactive elements into their text,
+                                    enriching the content and enhancing the user
+                                    experience.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 2
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Collaboration and Version Control: Rich Text
+                                    components facilitate collaborative work by
+                                    allowing multiple users to make real-time
+                                    edits, track changes, add comments, and
+                                    revert to previous versions, promoting
+                                    efficient teamwork and effective
+                                    communication.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 3
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Accessibility: Rich Text components often
+                                    support accessibility features such as
+                                    screen readers, making the content
+                                    accessible to individuals with disabilities
+                                    and ensuring inclusivity.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                            - type: listitem
+                              value: 4
+                              format: ''
+                              indent: 0
+                              version: 1
+                              children:
+                                - mode: normal
+                                  text: >-
+                                    Cross-Platform Compatibility: Rich Text
+                                    components are compatible with various
+                                    platforms and devices, allowing users to
+                                    access and edit their content seamlessly
+                                    across desktop computers, laptops, tablets,
+                                    and mobile phones.
+                                  type: text
+                                  style: ''
+                                  detail: 0
+                                  format: 0
+                                  version: 1
+                              direction: ltr
+                          listType: bullet
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Time Efficiency: With intuitive interfaces and
+                                user-friendly controls, Rich Text components
+                                simplify the content creation process, saving
+                                users time and effort in formatting and
+                                structuring their text.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: Rich Text
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' components are also '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                            - mode: normal
+                              text: user-friendly
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 1
+                              version: 1
+                            - mode: normal
+                              text: ' and accessible. Users with limited technical knowledge can easily navigate the intuitive interface, and the formatting options are often presented in a familiar and straightforward manner. Additionally, '
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: quote
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Rich Text components usually support screen
+                                readers and other assistive technologies,
+                                enabling individuals with disabilities to access
+                                and interact with the content effectively.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                        - type: paragraph
+                          format: start
+                          indent: 0
+                          version: 1
+                          children: []
+                          direction: ltr
+                      direction: ltr
+        parameters:
+          title:
+            type: text
+            value: Dark RichText
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Dark
+created: '2023-12-04T16:14:22.091444+00:00'
+modified: '2024-03-26T12:12:54.941069+00:00'
+pattern: false

@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: rectangle.webp
+    file:
+      type: file
+      value: 417f72e5-d0bc-47c8-8633-eb537728e2ec
+    mediaType:
+      value: image/webp
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+      type: text
+    size:
+      value: 49092
+      type: number
+    width:
+      value: 1600
+      type: number
+    height:
+      value: 689
+      type: number
+    custom: {}
+created: '2023-12-12T13:37:03.650345+00:00'
+modified: '2023-12-12T13:37:03.650345+00:00'

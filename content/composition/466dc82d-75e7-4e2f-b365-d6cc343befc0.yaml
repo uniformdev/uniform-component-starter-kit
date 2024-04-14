@@ -1,0 +1,963 @@
+composition:
+  _name: Layout & Containers
+  _id: 466dc82d-75e7-4e2f-b365-d6cc343befc0
+  _slug: layouts-container
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Layouts and Containers
+    pageMetaDescription:
+      type: text
+      value: >-
+        Collection of non-functional container components. Simple container with
+        controlled padding, Grid Container and Flex Container for more advanced
+        layout control.
+  slots:
+    pageFooter:
+      - _id: 2512c00b-72a0-46f0-a281-b6e2b9d3dc4e
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 394eac6f-7331-4b4e-8497-f6cdd70c4540
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 30aade7d-8148-4c88-855c-ac599e650a1c
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 20ed1d71-7740-48a2-9c6e-2966774f42fd
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Layouts & Containers
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Collection of non-functional container components. Simple
+              container with controlled padding, Grid Container and Flex
+              Container for more advanced layout control.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 322d533c-8bf0-41a2-83ad-2fd0d353bbd7
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 4d2a68bd-a8ff-4d7f-9727-243416e58742
+        type: container
+        slots:
+          container-inner:
+            - _id: ad09cf96-f01e-4328-94eb-dee7c047e693
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    any component can be placed here, content is just for a
+                    demo.
+                title:
+                  type: text
+                  value: Light Container with Small Padding
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          title:
+            type: text
+            value: Light Container with Small Padding
+          paddingTop:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: Small
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Light
+      - _id: 8cea84bd-7795-44b4-acee-24b6ebc576a3
+        type: container
+        slots:
+          container-inner:
+            - _id: 79c18135-6a4f-4826-bad9-f49248a513cd
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    any component can be placed here, content is just for a
+                    demo.
+                title:
+                  type: text
+                  value: 'Background in container variant '
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        variant: backgroundInContainer
+        parameters:
+          title:
+            type: text
+            value: 'Background in container variant '
+          marginTop:
+            type: select
+            value: Small
+          paddingTop:
+            type: select
+            value: Large
+          marginBottom:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: Large
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Medium
+      - _id: 3ddd16a5-84d9-4c46-bd19-2eb17c3cd2c2
+        type: container
+        slots:
+          container-inner:
+            - _id: 914d4413-fd8d-4d25-b973-4d261fda8d56
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    any component can be placed here, content is just for a
+                    demo.
+                title:
+                  type: text
+                  value: 'Fluid content variant '
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: 'Fluid content variant '
+          marginTop:
+            type: select
+            value: Small
+          paddingTop:
+            type: select
+            value: Medium
+          marginBottom:
+            type: select
+            value: Small
+          paddingBottom:
+            type: select
+            value: Medium
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Medium
+      - _id: d5a158bf-39a7-4ee8-9585-34277cf92fca
+        type: container
+        slots:
+          container-inner:
+            - _id: 3abaffcd-3e40-4bf5-b138-1456eb534e94
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    any component can be placed here, content is just for a
+                    demo.
+                title:
+                  type: text
+                  value: Medium color Container with Medium padding
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          title:
+            type: text
+            value: Medium Container with medium background
+          marginTop:
+            type: select
+            value: ''
+          paddingTop:
+            type: select
+            value: Medium
+          marginBottom:
+            type: select
+            value: ''
+          paddingBottom:
+            type: select
+            value: Medium
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Medium
+      - _id: d683af85-b1e4-4c4c-8836-0bb2506dc85e
+        type: container
+        slots:
+          container-inner:
+            - _id: b88dcc49-6d6f-4d19-a8eb-98e34fd44ca4
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    any component can be placed here, content is just for a
+                    demo.
+                title:
+                  type: text
+                  value: Container with Large Padding
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Dark Container with Large Padding
+          marginTop:
+            type: select
+            value: ''
+          paddingTop:
+            type: select
+            value: Large
+          marginBottom:
+            type: select
+            value: ''
+          paddingBottom:
+            type: select
+            value: Large
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Medium
+      - _id: 7fcae71c-98a7-46b3-96f4-1655f9e8cff7
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 216322f6-a11b-4a96-b719-91b55af2bf77
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Lorem Ipsum is simply dummy text of the printing and
+                    typesetting industry. Lorem Ipsum has been the industry's
+                    standard dummy text ever since the 1500s, when an unknown
+                    printer took a galley of type and scrambled it to make a
+                    type specimen book.
+                title:
+                  type: text
+                  value: Section with Two Column
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: b1660aaf-918d-439c-9c6b-d5938a970191
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: any component can be placed here
+                title:
+                  type: text
+                  value: Section with Two Column
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: small
+          gapY:
+            type: tp-slider-parameter
+            value: none
+          title:
+            type: text
+            value: Grid two columns
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '2'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 9ce556a1-19ab-4ea6-b2d2-5cd8ce6eee79
+        type: grid
+        slots:
+          grid-inner:
+            - _id: dee25e44-7abd-4327-9a9f-57d48a446f8e
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 9afc3eea-8ce7-40e3-bd1c-e8ac4c071ba2
+                    type: content
+                    parameters:
+                      text:
+                        type: text
+                        value: any component can be placed here
+                      title:
+                        type: text
+                        value: Section with One Column
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: 1ffc8c0c-1904-440a-8f81-a31dbc85f0f6
+                    type: content
+                    parameters:
+                      text:
+                        type: text
+                        value: any component can be placed here
+                      title:
+                        type: text
+                        value: Section with One Column
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+              parameters:
+                title:
+                  type: text
+                  value: Central Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: '2'
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: none
+          gapY:
+            type: tp-slider-parameter
+            value: none
+          title:
+            type: text
+            value: Grid one column
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 7697eaa8-6dc1-43d9-89c8-e7c3582c13db
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 9c9eb3e2-a245-4661-8acc-8d4890dc5ea9
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: b4fcf630-9e9d-45dd-baa2-7b1af5dad623
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: e0c13a4f-07a6-494a-8b83-415d16117101
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 87139d3f-dbb3-4137-8520-ab4b8711c37b
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: c4503585-3518-47c3-908c-d3c28c70030b
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: c9a4103a-63b3-434c-9c79-f6fa7dba6521
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: medium
+          title:
+            type: text
+            value: Grid Horizontal
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: f4fa956f-d4f8-420c-880f-5b87d8797c3d
+        type: grid
+        slots:
+          grid-inner:
+            - _id: f1fc7edc-30c0-404f-ad99-cda3991ac79d
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: dd5866a9-35f6-4145-bb62-f74c40160aef
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 5b182731-9ac0-4216-b0d7-255b925bbb13
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: bcc7e65a-6e75-4f5e-9d1d-dc2857d78ed8
+              type: gridItem
+              slots:
+                inner:
+                  - _id: dbe629fd-c2e1-4ee6-8067-5e8ec3748724
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+              parameters:
+                title:
+                  type: text
+                  value: Grouped Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '2'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: '1'
+            - _id: 99674727-739f-4297-8813-d6cfe3d17390
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: medium
+          title:
+            type: text
+            value: Grid Horizontal With Column Span
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 9c0003cc-f245-461c-9d68-180b399fd198
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 37b9e17d-8b1f-4b34-8b98-88eb482937e8
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: a1ab161d-7de4-4ae5-b68c-37196e7195c2
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 298bdb97-db35-4f99-8151-7f6869d64bad
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 56ec0b19-b821-480a-b3f3-7521d624587f
+              type: gridItem
+              slots:
+                inner:
+                  - _id: e12571c9-cbdc-4863-a80a-eb225feba9a6
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: >-
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Aeneaneleifend.
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+              parameters:
+                title:
+                  type: text
+                  value: Grouped Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '2'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: 4dbf8eff-3aef-4f02-ab46-78b59b19fe4e
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: eac25ffc-dd8c-473b-8645-410c8467ce4f
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: f08b73ba-b922-40e9-9e00-5ac53bf59183
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: cbf412de-a5ed-454b-b39f-3d9dc6c5d482
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Grid Container demo
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: medium
+          title:
+            type: text
+            value: Grid Horizontal With Row Span
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: b42d881d-d97e-4f67-95ab-2f8e228496f4
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 3c4f28e4-0527-49f9-aca6-82616e13cfd6
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: ea982f07-f0a7-4fc9-a149-2c15c3888a15
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: 689fe919-6f1b-4724-abc9-28f2e72c6c0a
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: 207c33cc-d844-497a-97f9-08c305723a1a
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: ff6fb292-2202-4d61-a452-dad235a6b037
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: 46e46f11-d38c-460c-9be4-8b3a8afa1701
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+                  - _id: 92be724a-8c83-47c0-94ea-429278a04f00
+                    type: content
+                    parameters:
+                      title:
+                        type: text
+                        value: Grid Container demo
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h1
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: none
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '1'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: medium
+          title:
+            type: text
+            value: Grid Vertical
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: a848f8db-0fe9-4db5-8aa7-e9eb6d56e139
+        type: grid
+        slots:
+          grid-inner:
+            - _id: a31fca96-6fcf-4c59-84a8-dbd868f77d14
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 7b515ad1-f0b4-499f-92c4-83b2fe674695
+                    type: grid
+                    slots:
+                      grid-inner:
+                        - _id: 3bc2e7b9-3458-49c6-92df-e6ab02165cca
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                        - _id: 392332e4-394a-40b0-9d9e-07dad530ddd5
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                        - _id: 7c48a6dd-9098-44d3-9357-f48bc928f74e
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                        - _id: 7f0cc01f-bb59-4c47-b4f6-d097ac736e1e
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                        - _id: a0f4630c-4b6f-4888-933c-3b2bb3f0a1c4
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                        - _id: 543eaff2-dbc1-414b-b706-428ed53c2549
+                          type: content
+                          parameters:
+                            title:
+                              type: text
+                              value: Grid Container demo
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                    parameters:
+                      gapX:
+                        type: tp-slider-parameter
+                        value: none
+                      gapY:
+                        type: tp-slider-parameter
+                        value: none
+                      title:
+                        type: text
+                        value: Inner Grid
+                      marginTop:
+                        type: select
+                        value: None
+                      paddingTop:
+                        type: select
+                        value: None
+                      columnsCount:
+                        type: tp-slider-parameter
+                        value: '1'
+                      marginBottom:
+                        type: select
+                        value: None
+                      paddingBottom:
+                        type: select
+                        value: None
+              parameters:
+                title:
+                  type: text
+                  value: Central Section
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: '2'
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: medium
+          title:
+            type: text
+            value: Grid Vertical Centered
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '3'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+created: '2023-09-21T21:17:19.684725+00:00'
+modified: '2024-02-08T21:15:42.779716+00:00'
+pattern: false

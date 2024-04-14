@@ -1,0 +1,28 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: algolia-pagination
+name: Pagination
+icon: browser
+parameters:
+  - id: paginationParams
+    name: Pagination Parameters
+    type: algolia-components
+    helpText: ''
+    typeConfig:
+      selectedComponent: Pagination
+  - id: pageSize
+    name: Page Size
+    type: number
+    helpText: >-
+      This parameter provides a way to set number of hits returned for each
+      page. By default, its value is 20.
+    typeConfig:
+      min: '1'
+categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Algolia/Algolia_pagination_preview_image.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2023-12-22T11:47:15.372329+00:00'
+updated: '2023-12-26T09:35:30.049552+00:00'

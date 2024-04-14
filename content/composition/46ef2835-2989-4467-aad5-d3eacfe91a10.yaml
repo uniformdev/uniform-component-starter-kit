@@ -1,0 +1,375 @@
+composition:
+  _name: Modals
+  _id: 46ef2835-2989-4467-aad5-d3eacfe91a10
+  _slug: modals
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Modals
+    pageMetaDescription:
+      type: text
+      value: >-
+        Modal is a cutting-edge modal component designed to enhance user
+        experiences on websites and applications. With its versatility and
+        interactivity, ModalX provides a seamless way to display important
+        information, notifications, or interactive content while keeping the
+        user engaged.
+  slots:
+    pageFooter:
+      - _id: 5947d74a-58f3-46e4-8d34-0e66bbd243fe
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 6f8597a8-10f1-46b3-a572-f811e594ed36
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 437cc38e-a638-46e2-a34d-957da592930e
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 36e64cdc-cadd-4ac6-aa6f-f575f1cbcf02
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: 'Modal: A Versatile and Interactive component'
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Modal is a cutting-edge modal component designed to enhance user
+              experiences on websites and applications. With its versatility and
+              interactivity, ModalX provides a seamless way to display important
+              information, notifications, or interactive content while keeping
+              the user engaged.
+          eyebrowText:
+            type: text
+            value: eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: a2f369a2-9640-4102-b948-cdeb3a1a2a0a
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 946ee04f-1cf0-4be4-b5f8-3fac21c98adb
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: Customize the Modal Content to Your Preference
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              The power of modals lies in their flexibility, enabling you to
+              seamlessly integrate any component you desire as its content.
+              Whether it's a captivating image, an engaging video, informative
+              text, interactive forms, or even dynamic widgets, the
+              possibilities are virtually endless
+      - _id: be2e5bef-fe4d-43fa-becf-167d46892c9f
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: Call to action
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Discover How to Harness the Power of "Call to Action" in Modal
+              Content
+      - _id: 881561dc-ce95-4c1f-bea6-f7ff518e1691
+        type: modal
+        slots:
+          content:
+            - _id: 3eea70c6-b1e9-47c1-845e-f0208a7104d8
+              type: callToAction
+              variant: ''
+              parameters:
+                title:
+                  type: text
+                  value: Special Offer Inside
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+                description:
+                  type: text
+                  value: >-
+                    We have a surprise just for you! As a token of our
+                    appreciation, we're offering an exclusive discount on your
+                    next purchase. Treat yourself or your loved ones to
+                    something special from our latest collection. Don't miss
+                    this fantastic opportunity to save big and spread some joy.
+                    Grab your discount code and start shopping now!
+                eyebrowText:
+                  type: text
+                  value: Exciting News!
+          trigger:
+            - _id: e5ce1d5e-f7e0-463a-b777-6a33604d7ac8
+              type: button
+              parameters:
+                copy:
+                  type: text
+                  value: EXCITING NEWS! Click me to see more!
+        parameters:
+          maxWidth:
+            type: tp-slider-parameter
+            value: large
+          closeOnClickOutside:
+            type: checkbox
+            value: true
+      - _id: 76162179-46b3-402e-ab7e-902baf4ecaf8
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: Hero
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Discover How to Harness the Power of "Hero" in Modal Content
+      - _id: db3ea827-15ef-4029-8fe4-d904b6dd1206
+        type: modal
+        slots:
+          content:
+            - _id: 7117b39e-9fe1-45a7-a361-810f4c74af48
+              type: hero
+              variant: imageLeft
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 918692c6-2a63-4a53-8dd0-98c65d1c4a2a
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                          type: text
+                        file:
+                          type: file
+                          value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                        size:
+                          value: 49092
+                          type: number
+                        title:
+                          type: text
+                          value: rectangle.webp
+                        width:
+                          value: 1600
+                          type: number
+                        height:
+                          value: 689
+                          type: number
+                        mediaType:
+                          value: image/webp
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Special Offer Inside
+                objectFit:
+                  type: select
+                  value: cover
+                paddingTop:
+                  type: select
+                  value: None
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+                description:
+                  type: text
+                  value: >-
+                    We have a surprise just for you! As a token of our
+                    appreciation, we're offering an exclusive discount on your
+                    next purchase. Treat yourself or your loved ones to
+                    something special from our latest collection. Don't miss
+                    this fantastic opportunity to save big and spread some joy.
+                    Grab your discount code and start shopping now!
+                eyebrowText:
+                  type: text
+                  value: Exciting News!
+                paddingBottom:
+                  type: select
+                  value: None
+                containerVariant:
+                  type: select
+                  value: fluidContent
+          trigger:
+            - _id: 9e8a67c7-7ff2-4ae0-98a2-4bb62f019906
+              type: button
+              parameters:
+                copy:
+                  type: text
+                  value: EXCITING NEWS! Click me to see more!
+        parameters:
+          maxWidth:
+            type: tp-slider-parameter
+            value: None
+          closeOnClickOutside:
+            type: checkbox
+            value: true
+      - _id: 48eb3b9a-1e60-43c1-bb5b-2aa97f7873f0
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: Automatically triggered
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Configure the trigger timeout, and the modal will automatically
+              appear.
+      - _id: 180d490f-15ad-413e-bc51-c206837676a2
+        type: modal
+        slots:
+          content:
+            - _id: 5948e559-7ce7-4152-b9d2-5010aa71f775
+              type: hero
+              variant: imageLeft
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: 809ae081-082f-4c99-a409-a7436b9469b9
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                          type: text
+                        file:
+                          type: file
+                          value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                        size:
+                          value: 49092
+                          type: number
+                        title:
+                          type: text
+                          value: rectangle.webp
+                        width:
+                          value: 1600
+                          type: number
+                        height:
+                          value: 689
+                          type: number
+                        mediaType:
+                          value: image/webp
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Automatically triggered
+                objectFit:
+                  type: select
+                  value: cover
+                paddingTop:
+                  type: select
+                  value: None
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+                description:
+                  type: text
+                  value: >-
+                    We have a surprise just for you! As a token of our
+                    appreciation, we're offering an exclusive discount on your
+                    next purchase. Treat yourself or your loved ones to
+                    something special from our latest collection. Don't miss
+                    this fantastic opportunity to save big and spread some joy.
+                    Grab your discount code and start shopping now!
+                eyebrowText:
+                  type: text
+                  value: Exciting News!
+                paddingBottom:
+                  type: select
+                  value: None
+                containerVariant:
+                  type: select
+                  value: fluidContent
+        parameters:
+          maxWidth:
+            type: tp-slider-parameter
+            value: None
+          closeOnClickOutside:
+            type: checkbox
+            value: true
+          automaticOpenTimeout:
+            type: number
+            value: '5'
+created: '2024-02-06T11:13:56.285907+00:00'
+modified: '2024-02-08T16:25:38.210345+00:00'
+pattern: false

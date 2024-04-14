@@ -1,0 +1,142 @@
+composition:
+  _name: Atomic Components
+  _id: 8ab12d2d-5504-45d3-b721-044b636e39c6
+  _slug: heroes-copy
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Atomic Components
+    pageMetaDescription:
+      type: text
+      value: The Examples are fully built using atoms.
+  slots:
+    pageFooter:
+      - _id: 8273a4a0-f343-4874-bf32-222c785e8659
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 2ee6ce67-d980-4bb4-b094-50fe83e90a94
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: f87c0e6a-47ec-4b44-a271-6ed26841cd61
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7e4d1cc3-2f66-414d-b15b-338d2df93dff
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Atomic Components
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: The Examples are fully built using atoms.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 3fefa476-3a61-4b60-843a-8e4b83fb5b80
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 63c7a853-644a-4682-abe8-dc196c4b1376
+        type: advancedContainer
+        _pattern: ef9f29a8-b972-4326-bf5b-1a00f2fa8e9b
+      - _id: 40ed4957-1d90-4679-8dd5-8ac7773d94d2
+        type: advancedContainer
+        _pattern: ef9f29a8-b972-4326-bf5b-1a00f2fa8e9b
+      - _id: 5335fde9-2bb0-4513-af4f-f10e631ed410
+        type: advancedContainer
+        _pattern: 283447b2-9b21-45ee-8336-8cf0e99b49b4
+      - _id: 2d54c7b4-1273-4577-b191-fe6f34694ffd
+        type: advancedContainer
+        _pattern: 3db27e9c-6008-4d18-92c8-c32ee0513ec6
+      - _id: ff498b73-55e8-4cb4-b736-babae9314261
+        type: advancedContainer
+        _pattern: 6db7d5ba-6e46-44a4-9418-48e4f9437915
+      - _id: 647dc843-5f86-4b91-9f7e-94d44734f9ba
+        type: advancedContainer
+        _pattern: 5b8948bf-c097-4600-9481-696dc8df3eb7
+  _overrides:
+    40ed4957-1d90-4679-8dd5-8ac7773d94d2|37dbaca4-fb95-4515-9a88-d2feb1c5765c:
+      parameters:
+        text:
+          type: text
+          value: Background Image Hero variant with dark text
+        color:
+          type: tp-color-palette-parameter
+          value: secondary-content
+    40ed4957-1d90-4679-8dd5-8ac7773d94d2|be22eaa2-0697-4bd4-a193-0945fcf580c4:
+      parameters:
+        overlayOpacity:
+          type: tp-slider-parameter
+          value: 50%
+    40ed4957-1d90-4679-8dd5-8ac7773d94d2|ea499a44-cff9-4208-981c-a1ed4fb9e7be:
+      parameters:
+        color:
+          type: tp-color-palette-parameter
+          value: secondary-content
+    40ed4957-1d90-4679-8dd5-8ac7773d94d2|ea89db6a-f014-4816-970c-0075d8d10a50:
+      parameters:
+        color:
+          type: tp-color-palette-parameter
+          value: secondary-content
+created: '2024-02-02T13:12:41.147299+00:00'
+modified: '2024-02-08T21:16:04.866935+00:00'
+pattern: false

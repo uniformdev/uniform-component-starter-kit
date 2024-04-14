@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 4d79494d-e979-4be6-86a2-b99ef311a6fc
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: accordion-vertical-svgrepo-com.svg
+    file:
+      type: file
+      value: d78ab64d-a2f4-4eb0-b2ec-aacd3f5e9402
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/mz7rjvIeRHGbZyypPL9qMg/4F1U1XujQauiy1bG8C4mXA-accordion-vertical-svgrepo-com.svg
+      type: text
+    size:
+      value: 943
+      type: number
+    width:
+      value: 800
+      type: number
+    height:
+      value: 800
+      type: number
+    custom: {}
+created: '2024-01-15T11:20:16.562926+00:00'
+modified: '2024-01-15T11:20:16.562926+00:00'

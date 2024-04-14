@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 3c9460c0-d3b3-41dd-a6f9-f20f87b3ecae
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: icon_hero.svg
+    file:
+      type: file
+      value: d4f84f8b-9d27-4bff-81c5-015ace6d6c45
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/4O5J8hYiT3ior_4suG6XxA-icon_hero.svg
+      type: text
+    size:
+      value: 1696
+      type: number
+    width:
+      value: 165
+      type: number
+    height:
+      value: 165
+      type: number
+    custom: {}
+created: '2023-12-12T13:37:03.629042+00:00'
+modified: '2023-12-12T13:37:03.629042+00:00'

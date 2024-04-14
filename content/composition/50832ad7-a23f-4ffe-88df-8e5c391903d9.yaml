@@ -1,0 +1,241 @@
+composition:
+  _name: Breadcrumbs
+  _id: 50832ad7-a23f-4ffe-88df-8e5c391903d9
+  _slug: breadcrumbs
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Breadcrumb component
+    openGraphTitle:
+      type: text
+      value: Breadcrumb component demo
+    pageMetaDescription:
+      type: text
+      value: >-
+        This is an essential navigation component. With Uniform, it is built
+        dynamically from project map.
+  slots:
+    pageFooter:
+      - _id: 1bd95b59-28c2-43e8-a3f4-ed7d18bd5ad5
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: e12d21c8-1e57-446f-a338-af4e586cd306
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: ef42e7ca-93f5-45c0-82b2-03d32dc99fc5
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: c7a13388-e7e9-48ea-9889-cfcb3e8f2008
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Breadcrumb component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              This is an essential navigation component. With Uniform, it is
+              built dynamically from project map.
+          eyebrowText:
+            type: text
+            value: ...
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: f3774ba0-0a24-437e-a477-4f3ed93313e2
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: 'Example: a breadcrumb with the color control'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >-
+              Adjust the color of the links to match your website or
+              application's branding and design scheme:
+      - _id: edd1c3d4-5571-444c-b5c6-f4db7f6d5708
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Primary Color Style
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 41d1a5e4-9829-467b-a20b-b111f19a1544
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Base 300 Color Style
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-300
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 0a0299c8-6247-4591-9ce7-b703129a368e
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Accent Color Style
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 072af4f6-d3fe-4d64-ad25-d7bba274d725
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: 'Example: a breadcrumb with root node control'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: 'Toggle the display of the root node on/off:'
+      - _id: 245db8ac-9dd4-4415-912d-a9d6564cc5ab
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Without Root Node
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayPlaceholderNodes:
+            type: checkbox
+            value: true
+      - _id: ab1cb493-e21c-4f9b-b429-223bac16dd25
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: 'Example: breadcrumb with separator control'
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: control the separator between links in your breadcrumbs
+      - _id: ccdcd3f6-873d-41de-8c24-72bfe84bd4e5
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Slash as  separator
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: d5aad244-e8dd-4367-8c7d-6f4dfa896787
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Slash as  separator
+          separator:
+            type: select
+            value: slash
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 1ceec607-848b-4874-b694-dde4ea6bb368
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Slash as  separator
+          separator:
+            type: select
+            value: none
+          colorStyle:
+            type: tp-color-style-parameter
+            value: accent
+          displayRootNode:
+            type: checkbox
+            value: true
+created: '2023-09-21T21:17:20.213654+00:00'
+modified: '2024-02-08T21:15:53.711054+00:00'
+pattern: false

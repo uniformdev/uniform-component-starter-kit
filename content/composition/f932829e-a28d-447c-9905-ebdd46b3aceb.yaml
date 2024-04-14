@@ -1,0 +1,273 @@
+composition:
+  _name: Calls to Action
+  _id: f932829e-a28d-447c-9905-ebdd46b3aceb
+  _slug: calls-to-action
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Call to Action component
+    pageMetaDescription:
+      type: text
+      value: >-
+        Call to Action - contains two titles and two buttons with the ability to
+        select the style for each button.
+  slots:
+    pageFooter:
+      - _id: c5ee6e20-9ff8-463c-8f5c-117d23aeb76a
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 3c0e99bc-b876-44b2-b225-439d11e828a2
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 55dd3fe6-899d-4ebe-8d78-8f986d85ca47
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 72843ea1-3234-417a-b0ed-cdeacb12120f
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Call to Action component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Contains two titles and two buttons with the ability to select the
+              style for each button.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 4a51debb-e779-484b-a4e8-7bd8bbdea512
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 8288c966-298b-46e0-811f-782c4d0c9a8a
+        type: callToAction
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Default Call to Action variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: Compelling CTA text
+          eyebrowText:
+            type: text
+            value: Eyebrow Text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: primary
+          secondaryButtonCopy:
+            type: text
+            value: Components
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+      - _id: 75b498ea-4f3e-4b2e-8c24-f5865762287f
+        type: divider
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 1px
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-300
+      - _id: c30a7c04-c2a8-4161-a49e-e2968e69389b
+        type: callToAction
+        variant: alignLeft
+        parameters:
+          title:
+            type: text
+            value: Align Left Call to Action variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: Compelling CTA text
+          eyebrowText:
+            type: text
+            value: Eyebrow Text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: b04cff14-aff1-4e89-8a93-aa8905b112eb
+        type: divider
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 1px
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-300
+      - _id: 87c62c67-79f2-4c6f-9a6e-ad8c07f1210e
+        type: callToAction
+        variant: alignRight
+        parameters:
+          title:
+            type: text
+            value: Align Right Call to Action variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: Compelling CTA text
+          eyebrowText:
+            type: text
+            value: Eyebrow Text
+          primaryButtonCopy:
+            type: text
+            value: Home
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: e6c2eac2-0a8f-4a53-9826-d95cc0d25879
+        type: divider
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 1px
+          colorStyle:
+            type: tp-color-style-parameter
+            value: base-300
+      - _id: 6180b276-ea09-4a19-bd8c-5f1756249f9b
+        type: callToAction
+        variant: featured
+        parameters:
+          title:
+            type: text
+            value: Featured Call to Action variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: Compelling CTA text
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: secondary
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/calls-to-action
+              type: projectMapNode
+              nodeId: 408d4a7c-de15-4029-9521-05df3f20bdfc
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+created: '2023-09-21T21:17:20.94402+00:00'
+modified: '2024-02-08T21:16:33.227269+00:00'
+pattern: false

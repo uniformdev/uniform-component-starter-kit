@@ -1,0 +1,21 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tableDataCell
+name: Table Data Cell
+icon: dice-1
+parameters:
+  - id: value
+    name: Value
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_data_cell_preview_image
+useTeamPermissions: true
+slots: []
+titleParameter: value
+canBeComposition: false
+created: '2023-10-26T13:12:32.380868+00:00'
+updated: '2023-12-27T09:04:48.241052+00:00'

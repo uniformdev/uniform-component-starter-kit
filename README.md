@@ -11,7 +11,7 @@ Built with love by Uniform folks, standing on the shoulders of TailwindCSS, Dais
 
 ### Prerequisites
 
-- A Uniform account with the ability to create a new empty project. If you don't have a Uniform account, you can request a trial account [here](https://uniform.dev/try?utm_source=component-starter-kit).
+- A Uniform account with the ability to create a new empty project. If you don't have a Uniform account, you can request a trial account [here](https://uniform.dev/try).
 
 ### Setup own project and start locally
 
@@ -57,9 +57,23 @@ This integration brings Canvas UI extensions for theme management and new useful
 
 Important: in order to apply theme changes, you must re-publish the "Main Header" pattern after every time you change the `theme` on the integration settings page.
 
+### Scaffold
+
+For the convenient and fast generation of React components based on your canvas components, you can use the Scaffold CLI. Follow the instructions:
+
+1. In your terminal, from the project root, run the following command:
+
+   ```bash
+   npm run scaffold
+   ```
+
+1. Select necessary component from list. All necessary files as well as registration of this component will be added automatically
+1. If the application is running in build mode, you must re-run the build command and start it again (`npm run build && npm start`). For an application running in development mode, just enjoy the new component
+1. You can also customize new components. They will be located in the common canvas folder
+
 ### Additional examples
 
 This package contains an additional set of examples based on the Component Starter Kit components:
 
 1. Coveo Search Page
-1. Algolia Search Page (soon...)
+1. Algolia Search Page

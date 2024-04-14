@@ -1,0 +1,692 @@
+composition:
+  _name: Images
+  _id: 2516f825-86ee-4e8a-a686-8ce31e49adb6
+  _slug: images
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Image component demo
+    pageMetaDescription:
+      type: text
+      value: >-
+        The Image Component is built on top of next/image and is used in
+        combination with other components.
+  slots:
+    pageFooter:
+      - _id: 83b0fce7-a94f-4c5a-9e0a-e7cdcf44ef05
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 1df5a71e-8db3-4d80-945f-5f294ceb68c5
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: c3a0e58a-3fa2-4e52-b29c-62725cf8f824
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: e2626c93-ecd6-4652-9b9b-6da37170edb5
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              The Image Component is built on top of next/image and is used in
+              combination with other components.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: f27985bc-e259-4ec4-aff6-4deb3775bb5a
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 58517387-5e7e-4ece-a29a-a4d8fa69d140
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Images in a grid
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 40438b92-b4ce-4ac4-bcc0-a8417a60b406
+        type: container
+        slots:
+          container-inner:
+            - _id: ea52fbf8-63c6-428e-85df-e6486bf3f106
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: e265f699-71e2-48af-bb11-fd633349427e
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 0c221af5-7e45-458f-971d-e6504344c75a
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderWidth:
+                        type: tp-slider-parameter
+                        value: 0px
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                  - _id: 81af4e5a-5134-42c3-9e74-ae0f76d3690d
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: a06aaf6e-24fb-4e7c-8295-f293a412957e
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 660e1c09-e687-48ad-afc0-f30933613003
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 15dec4f9-7327-4a18-9e2c-e58b5ecb7ae7
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: small
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Images
+          paddingTop:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 55d94dbf-e754-45b6-8611-273d28913dab
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: 1b1ef393-eb3a-4832-9da7-37f767d18efa
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Images with overlays
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 5e8446a5-ff3f-46c1-bb70-032a3bed7365
+        type: container
+        slots:
+          container-inner:
+            - _id: ac52c552-e868-4d42-b7e4-a1953b6f66a6
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: b90e4a7a-d755-4af9-9f3b-5d984627e38b
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 88ab31f4-47c5-437d-b86d-75828312a4ec
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: secondary
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 60%
+                  - _id: 6ddec69f-04c9-4001-aa8d-3950b2c6cf32
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 44d34b9e-b80d-434d-8a7d-159e58827104
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderColor:
+                        type: tp-color-style-parameter
+                        value: secondary
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: medium
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-200
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 40%
+                  - _id: 89d3a155-5646-4a36-83be-c33366a513cd
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 2434d3ae-05a0-4b58-9688-d1f08ddfc665
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: medium
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 80%
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: small
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Images
+          paddingTop:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 6f42feb3-5341-4a04-8ad7-346a04b0f032
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: 4111ffa9-dca5-4ef7-bd35-46b5d20baa4e
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Images with customizable borders
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+      - _id: 220602f5-6d09-4158-ab00-96acca673893
+        type: container
+        slots:
+          container-inner:
+            - _id: 40e78081-6d88-40a6-8842-e415f6f12be7
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 4376fae0-88dd-4545-9071-2fa493d45d0b
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: ab6b3830-b90b-4206-8df3-294f8867560b
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderColor:
+                        type: tp-color-style-parameter
+                        value: base-200
+                      borderWidth:
+                        type: tp-slider-parameter
+                        value: 9px
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: full
+                  - _id: 250d1af7-954c-4661-bb8a-2a07a6dd7cc5
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: 51960f7a-5d7f-4bd9-81b7-e2e0c4cb8e8c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      borderWidth:
+                        type: tp-slider-parameter
+                        value: 6px
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: medium
+                  - _id: c41b9f0b-71b8-4e31-a950-8c298e1695ae
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Uniform CSK
+                      src:
+                        type: asset
+                        value:
+                          - _id: c46e6909-95cb-448d-a895-fca759e94a3d
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      borderColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      borderWidth:
+                        type: tp-slider-parameter
+                        value: 7px
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: medium
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: small
+                title:
+                  type: text
+                  value: Inner Grid
+                marginTop:
+                  type: select
+                  value: None
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                marginBottom:
+                  type: select
+                  value: None
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Images
+          paddingTop:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: c1b667de-8094-4963-a08b-c844dab031ba
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 80px
+created: '2023-12-04T16:14:23.493879+00:00'
+modified: '2024-02-08T21:29:15.925247+00:00'
+pattern: false

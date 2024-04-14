@@ -1,0 +1,1307 @@
+composition:
+  _name: Card Blocks
+  _id: 80717902-05d3-49ac-8a8b-017b31074615
+  _slug: card-blocks
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Card Blocks component
+    pageMetaDescription:
+      type: text
+      value: >-
+        A composite component that allows adding any number of cards within
+        child slots. You can constrain the amount of child card components
+        allowed.
+  slots:
+    pageFooter:
+      - _id: 4c3f6d2b-ee78-4a6c-b520-a71dc846801d
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: c555f62b-a503-4413-9d82-3f8eef39f1d5
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: da299e8b-5554-41e5-aa62-40b468e5e024
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: e17eed48-582e-4a9f-aafa-d1d7d9da69cc
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Card Blocks component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              A composite component that allows adding any number of cards
+              within child slots. You can constrain the amount of child card
+              components allowed.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 7700ea98-131f-44f8-9ccd-47ce3470289b
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 4ced7075-c9fa-46f2-be37-70eb31341a01
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: e8f5bbbe-9d31-45e5-90e4-0ddd9beae615
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: f080cee4-e66b-4b86-8db7-28af2038dc84
+                    type: card
+                    variant: ''
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 138ecaca-56eb-41f2-b857-ed856fb36890
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Compelling description
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: d1e18bb4-d96c-4e9b-a76c-b5554c8e5ffa
+                    type: card
+                    variant: ''
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 98481044-1a2b-44f1-a3c2-655f406581b1
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: primary
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Compelling description
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: c9c05201-0f60-400a-b501-aee661022dc4
+                    type: card
+                    variant: ''
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 3d42fff5-a1e6-404d-bca8-c5508f8b3270
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: outline
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Compelling description
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: 3 Columns
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Default variant cards
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: ac7f1fe8-92fc-48a6-b85c-326aafbce3c1
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: b97b1f53-b076-4289-88aa-d8d6e82fa8bb
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 739a9bbf-d0ec-439d-bb9c-187219d91f97
+                    type: card
+                    variant: featured
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 4d3a421b-d36c-4a92-b630-51cc0fd4de36
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 68b4d970-8062-4a91-965b-97d2587811fc
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MIWsDoPXSw-zFY1_TdqD_g-icon_improve.svg
+                                type: text
+                              file:
+                                type: file
+                                value: d519e4d4-2759-478d-a3f7-7708c7477ae5
+                              size:
+                                value: 729
+                                type: number
+                              title:
+                                type: text
+                                value: icon_improve.svg
+                              width:
+                                value: 35
+                                type: number
+                              height:
+                                value: 48
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Quantum heating technology
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: contain
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Say goodbye to waiting. The EspressoGPT harnesses
+                          quantum mechanics to heat your water in a fraction of
+                          a second, ensuring the perfect temperature for your
+                          espresso every time.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: fa20ddfb-84d0-4eef-adb9-a1ab5bb9175f
+                    type: card
+                    variant: featured
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 37647692-0f79-4b65-b1a0-50a9a7bd147c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: d24ae6cc-a180-449d-9a0e-255e851f8fd8
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/lrBrZBZPRy6Ze4wZzKYi1w-icon_understand.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 03317140-8ed1-47c7-830a-bf22f64811d4
+                              size:
+                                value: 1402
+                                type: number
+                              title:
+                                type: text
+                                value: icon_understand.svg
+                              width:
+                                value: 44
+                                type: number
+                              height:
+                                value: 42
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: AI-powered taste customization
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: contain
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: primary
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Say goodbye to waiting. The EspressoGPT harnesses
+                          quantum mechanics to heat your water in a fraction of
+                          a second, ensuring the perfect temperature for your
+                          espresso every time.
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 54f223ba-31db-4657-a8e6-7aa0d83da8bf
+                    type: card
+                    variant: featured
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 3fd64bbd-69a2-4f23-945d-e4a75989b1fe
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: b2332a2e-dea3-4d16-9f67-e709bb5c98b8
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/B-cA8CrRTsG-Wmp2_5qdkQ-icon_drive.svg
+                                type: text
+                              file:
+                                type: file
+                                value: d0ffffbc-0c01-4bbf-ba57-40f78e232e9a
+                              size:
+                                value: 1669
+                                type: number
+                              title:
+                                type: text
+                                value: icon_drive.svg
+                              width:
+                                value: 58
+                                type: number
+                              height:
+                                value: 44
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Holographic interface
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: contain
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: outline
+                      buttonCopy:
+                        type: text
+                        value: Home
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Say goodbye to waiting. The EspressoGPT harnesses
+                          quantum mechanics to heat your water in a fraction of
+                          a second, ensuring the perfect temperature for your
+                          espresso every time.
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: 3 Columns
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Featured variant cards
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: 0a602db6-ccc7-4032-a490-bd69c6f2dc61
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: f93ad2de-0ea5-4b52-8190-988bbc12d1b7
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 2158b1bb-c13d-45d7-9df2-33ed11b0f4f3
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 7f297b6c-31c9-44cb-a6d7-80d96228c810
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Background Image variant
+                      badgeSize:
+                        type: select
+                        value: lg
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit. Aenean commodo ligula eget dolor. Aenean massa.
+                          Cum sociis natoque penatibus et magnis dis parturient
+                          montes, nascetur ridiculus mus. Donec quam felis,
+                          ultricies nec, pellentesque eu, pretium quis, sem.
+                          Nulla consequat massa quis enim. Donec pede justo,
+                          fringilla vel, aliquet nec, vulputate eget, arcu.Lorem
+                          ipsum dolor sit amet, consectetuer adipiscing elit.
+                          Aenean commodo ligula eget dolor. Aenean massa.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '6'
+                  - _id: 9bc73157-2b80-4603-8cdd-1ec30b084e29
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 12bbc2c2-66f2-4083-90b4-80173cb0f1aa
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Background Image variant
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit. Aenean commodo ligula eget dolor. Aenean massa.
+                          Cum sociis natoque penatibus et magnis dis parturient
+                          montes, nascetur ridiculus mus. Donec quam felis,
+                          ultricies nec.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: e2d440ce-5895-46b9-9eab-e6d7ef4f8b0b
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 4055b5ab-6c96-44d2-87fa-9aaa74f6570a
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Background Image variant
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: secondary
+                      description:
+                        type: text
+                        value: >-
+                          Lorem ipsum dolor sit amet, consectetuer adipiscing
+                          elit. Aenean commodo ligula eget dolor. Aenean massa.
+                          Cum sociis natoque penatibus et magnis dis parturient
+                          montes, nascetur ridiculus mus. Donec quam felis,
+                          ultricies nec.
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: 3 Columns
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Cards with background images
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: e013d63a-6467-4c2f-bf7b-c8124c663edb
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 8afad314-ce11-464c-8970-e60ad76b03e1
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 578fc81c-6927-498f-bb4c-3b13e4567f5a
+                    type: card
+                    variant: ''
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 0d6b6127-468b-48ab-b9e1-1cb8872a6b0f
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: Primary CTA
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Compelling description
+                  - _id: 07e08f4f-aab8-47ef-ae2a-59f784a8285e
+                    type: card
+                    variant: ''
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 13768166-df54-4a0e-bac3-4c21dfa2e581
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: Primary CTA
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Compelling description
+                  - _id: e83620dc-f969-4d56-94dd-200f6f50a5b7
+                    type: card
+                    variant: ''
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 23c2b727-d8b8-48f1-bf56-c512b020cb72
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Default variant
+                      objectFit:
+                        type: select
+                        value: cover
+                      buttonCopy:
+                        type: text
+                        value: Primary CTA
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /
+                          type: projectMapNode
+                          nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      description:
+                        type: text
+                        value: Compelling description
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: '# Columns'
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Cards with CTA in a Flex Container
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+      - _id: 6a313a9f-1600-4b29-89af-adb566cb9640
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 25aaf9b2-d34d-4be0-93fe-f0a12839ebbf
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: asset
+                  value:
+                    - _id: af09e8cb-0f88-46ea-86f2-550141aa77aa
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                          type: text
+                        file:
+                          type: file
+                          value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                        size:
+                          value: 76327
+                          type: number
+                        title:
+                          type: text
+                          value: hero_rectangle.png
+                        width:
+                          value: 510
+                          type: number
+                        height:
+                          value: 496
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: 'Card #1'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                textColorVariant:
+                  type: select
+                  value: Light
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: 434e347c-f704-4511-a406-ce4b266828e1
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: asset
+                  value:
+                    - _id: 3acec570-838d-4b95-8e75-1056c2e76bec
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                          type: text
+                        file:
+                          type: file
+                          value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                        size:
+                          value: 76327
+                          type: number
+                        title:
+                          type: text
+                          value: hero_rectangle.png
+                        width:
+                          value: 510
+                          type: number
+                        height:
+                          value: 496
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: 'Card #2'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 0%
+                textColorVariant:
+                  type: select
+                  value: Light
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: c33030f7-04b1-4bfc-877d-1b5e8a21e2a5
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: asset
+                  value:
+                    - _id: e81f2df8-a4ed-498a-977b-a84dff0bec68
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                          type: text
+                        file:
+                          type: file
+                          value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                        size:
+                          value: 76327
+                          type: number
+                        title:
+                          type: text
+                          value: hero_rectangle.png
+                        width:
+                          value: 510
+                          type: number
+                        height:
+                          value: 496
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: 'Card #3'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                textColorVariant:
+                  type: select
+                  value: Light
+                lineCountRestriction:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: 4252e8b6-ea48-4715-9a2f-4892256e10e1
+              type: card
+              variant: backgroundImage
+              parameters:
+                badge:
+                  type: text
+                  value: New
+                image:
+                  type: asset
+                  value:
+                    - _id: 58dc553a-4dbf-4249-b53c-16265cf4e02e
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                          type: text
+                        file:
+                          type: file
+                          value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                        size:
+                          value: 76327
+                          type: number
+                        title:
+                          type: text
+                          value: hero_rectangle.png
+                        width:
+                          value: 510
+                          type: number
+                        height:
+                          value: 496
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: 'Card #4'
+                badgeSize:
+                  type: select
+                  value: lg
+                objectFit:
+                  type: select
+                  value: cover
+                badgeStyle:
+                  type: tp-badge-style-parameter
+                  value: secondary
+                description:
+                  type: text
+                  value: Compelling text
+                overlayOpacity:
+                  type: tp-slider-parameter
+                  value: 0%
+                textColorVariant:
+                  type: select
+                  value: Light
+        variant: carousel
+        parameters:
+          title:
+            type: text
+            value: Cards in a Carousel container
+          buttonCopy:
+            type: text
+            value: CTA title
+          buttonLink:
+            type: link
+            value:
+              path: /components/card-blocks
+              type: projectMapNode
+              nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h3
+          description:
+            type: text
+            value: You spin me right round
+created: '2023-09-21T21:17:20.542687+00:00'
+modified: '2024-02-08T21:16:14.62473+00:00'
+pattern: false

@@ -1,0 +1,131 @@
+composition:
+  _name: Reviews
+  _id: 42b0381e-8643-4aa4-a3b6-c49ab21344fd
+  _slug: reviews
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Reviews
+    pageMetaDescription:
+      type: text
+      value: >-
+        Star reviews are pretty popular in commerce scenarios. This component
+        comes in two variants now.
+  slots:
+    pageFooter:
+      - _id: 375ca5d7-8579-4322-b018-e311a1afed1e
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 13e73105-9f7b-4d41-9965-0b34f44b0f47
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: da2629b8-d924-4e4a-a027-cb3dcea7a180
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: df2bcc55-2ea9-4d25-98a2-8e72bfb0454b
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Reviews component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Star reviews are pretty popular in commerce scenarios. This
+              component comes in two variants now.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: c0fccd1b-a581-4178-99a8-0c05ae7481dd
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: aee676d0-488c-4d44-9122-ae182a3c751b
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Default variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 49e2de71-3827-4b0a-b541-99ee2c5c513d
+        type: grid
+        _pattern: e244a7a9-309a-4fbf-ab85-c4c2eb4cf75e
+      - _id: 82ee2143-6698-481b-af25-58fdb7b5c4ef
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: e62bf666-9de5-4cbc-9080-59925eca8465
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Column view variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+      - _id: 578c67b0-3be3-43e7-9af3-d24c2ebc5db3
+        type: grid
+        _pattern: fea7255e-6ce0-4d94-9092-f39323ebbeee
+created: '2023-09-21T21:17:19.615648+00:00'
+modified: '2024-02-08T21:15:41.306979+00:00'
+pattern: false

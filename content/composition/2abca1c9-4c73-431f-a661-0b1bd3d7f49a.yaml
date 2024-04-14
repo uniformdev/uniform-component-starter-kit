@@ -1,0 +1,458 @@
+composition:
+  _name: Featured Callouts
+  _id: 2abca1c9-4c73-431f-a661-0b1bd3d7f49a
+  _slug: featured-callouts
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Featured Callout component
+    openGraphTitle:
+      type: text
+      value: Featured Callouts
+    pageMetaDescription:
+      type: text
+      value: >-
+        Featured Callout component allows to add any number of features as child
+        components into the Feature slot. Contains optional image, title and
+        description parameters.
+  slots:
+    pageFooter:
+      - _id: efca84d0-4b4e-477f-9372-34ea9a59e80d
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 1db3fd36-8ffd-4b55-b1a2-641278473143
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 485e7c34-89a0-4e6a-8d62-aa1a9ece02bf
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 2df51359-6463-4454-a320-05a5222a0c99
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Featured Callout component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >
+              A composite component allows to add any number of features as
+              child components into the Feature slot. Contains optional image,
+              title and description parameters.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: f26bf1e8-a6de-414a-98e2-002a8f550522
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: a87676ce-dab6-4fd7-916b-bef32a7f26e1
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 20ecba28-8458-4a50-8ab6-0d539819700a
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 609286f2-a229-4215-820d-f415bcdea57c
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: d24ae6cc-a180-449d-9a0e-255e851f8fd8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/lrBrZBZPRy6Ze4wZzKYi1w-icon_understand.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 03317140-8ed1-47c7-830a-bf22f64811d4
+                        size:
+                          value: 1402
+                          type: number
+                        title:
+                          type: text
+                          value: icon_understand.svg
+                        width:
+                          value: 44
+                          type: number
+                        height:
+                          value: 42
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                link:
+                  type: link
+                  value:
+                    path: /
+                    type: projectMapNode
+                    nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: c086778f-0827-49f1-8f95-529fe175dc87
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 0262417a-3af7-4c1a-a815-f66852c68d57
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 68b4d970-8062-4a91-965b-97d2587811fc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MIWsDoPXSw-zFY1_TdqD_g-icon_improve.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d519e4d4-2759-478d-a3f7-7708c7477ae5
+                        size:
+                          value: 729
+                          type: number
+                        title:
+                          type: text
+                          value: icon_improve.svg
+                        width:
+                          value: 35
+                          type: number
+                        height:
+                          value: 48
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 50dfd1fe-cbc1-4b82-99b3-0a498ba12a15
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 3d9f45a3-2c71-4880-b2cf-b63d73c9dd71
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b2332a2e-dea3-4d16-9f67-e709bb5c98b8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/B-cA8CrRTsG-Wmp2_5qdkQ-icon_drive.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d0ffffbc-0c01-4bbf-ba57-40f78e232e9a
+                        size:
+                          value: 1669
+                          type: number
+                        title:
+                          type: text
+                          value: icon_drive.svg
+                        width:
+                          value: 58
+                          type: number
+                        height:
+                          value: 44
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7ceeca28-3e66-4e60-a806-b4e0737afcc2
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Default variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Some compelling description
+          eyebrowText:
+            type: text
+            value: EYEBROW Text
+      - _id: 15d90ef7-441c-4926-9d6c-cd2a808c5af2
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 0e03de14-ba1b-4dc4-8a37-9e610467d604
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: d14d5991-a510-47a7-b71c-58ccd12b56ac
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: d24ae6cc-a180-449d-9a0e-255e851f8fd8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/lrBrZBZPRy6Ze4wZzKYi1w-icon_understand.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 03317140-8ed1-47c7-830a-bf22f64811d4
+                        size:
+                          value: 1402
+                          type: number
+                        title:
+                          type: text
+                          value: icon_understand.svg
+                        width:
+                          value: 44
+                          type: number
+                        height:
+                          value: 42
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 6769303a-afc8-4c61-be09-6f28b445bec6
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: f84ff16a-50dd-412e-a940-e8692fe05957
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 68b4d970-8062-4a91-965b-97d2587811fc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MIWsDoPXSw-zFY1_TdqD_g-icon_improve.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d519e4d4-2759-478d-a3f7-7708c7477ae5
+                        size:
+                          value: 729
+                          type: number
+                        title:
+                          type: text
+                          value: icon_improve.svg
+                        width:
+                          value: 35
+                          type: number
+                        height:
+                          value: 48
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+            - _id: 3463723d-fa71-4d57-917f-06c17da64042
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 0e264b80-c8f0-4508-925c-c7cdd21c085e
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b2332a2e-dea3-4d16-9f67-e709bb5c98b8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/B-cA8CrRTsG-Wmp2_5qdkQ-icon_drive.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d0ffffbc-0c01-4bbf-ba57-40f78e232e9a
+                        size:
+                          value: 1669
+                          type: number
+                        title:
+                          type: text
+                          value: icon_drive.svg
+                        width:
+                          value: 58
+                          type: number
+                        height:
+                          value: 44
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Title
+                description:
+                  type: text
+                  value: Description
+        variant: imageRight
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 60ae3512-699e-4a34-9c59-c11178424f32
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image Right variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Some compelling description
+created: '2023-09-21T21:17:19.601045+00:00'
+modified: '2024-02-08T21:15:33.149662+00:00'
+pattern: false

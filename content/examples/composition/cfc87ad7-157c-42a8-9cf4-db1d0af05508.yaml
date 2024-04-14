@@ -1,0 +1,209 @@
+composition:
+  _name: Examples
+  _id: cfc87ad7-157c-42a8-9cf4-db1d0af05508
+  _slug: examples
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Browse all our examples
+    pageMetaDescription:
+      type: text
+      value: 'Explore rich integration options with our components '
+  slots:
+    pageFooter:
+      - _id: b3a2b677-89a8-4fba-9208-9b0e9d73c3af
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: d0fcaa81-cfee-40ed-ac2f-5007240eba21
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 66d8c2fc-bc87-415c-9ed4-dd8e4e5f34b3
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: c27a19be-0228-42b4-afc8-0b2d1a826e47
+                type: image
+                fields:
+                  url:
+                    type: text
+                    value: >-
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da
+                _source: custom-url
+          title:
+            type: text
+            value: Browse all our examples
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: 'Explore rich integration options with our components '
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+      - _id: 8091f61f-89b8-442f-b606-19b391db4abb
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: e549e220-6f78-4a27-a59e-5b83e7319620
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: 8aefe81a-6106-4526-ac0e-dc3526cb25df
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: ba96b1ed-f58b-46ca-ad81-de3f4a850c98
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 7d02b66e-02fc-491a-9b17-3a97fce487df
+                            type: image
+                            fields:
+                              url:
+                                type: text
+                                value: >-
+                                  https://res.cloudinary.com/uniform-demos/image/upload/v1695207294/csk-icons/coveo_kfhhua.png
+                            _source: custom-url
+                      title:
+                        type: text
+                        value: Coveo
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /examples/coveo-search-engine
+                          type: projectMapNode
+                          nodeId: 61eb34d5-f2b4-4169-8d29-b316a89487be
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Let's look at the search possibilities together with
+                          Coveo components
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: af05310c-379d-48a8-a174-fe4948892ed0
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: e09356e6-4391-4a67-8935-ff88d3e8e7ed
+                            type: image
+                            fields:
+                              url:
+                                type: text
+                                value: >-
+                                  https://res.cloudinary.com/uniform-demos/image/upload/v1695207295/csk-icons/algolia_azailk.png
+                            _source: custom-url
+                      title:
+                        type: text
+                        value: Algolia
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See All
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /examples/algolia-search-engine
+                          type: projectMapNode
+                          nodeId: 0bd42e92-5f3b-49cc-964d-77b8291af16a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: >-
+                          Revolutionize your search capabilities with Algolia
+                          and our components
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: Cards
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+        parameters:
+          title:
+            type: text
+            value: Available search engines
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+created: '2023-12-22T11:47:25.522074+00:00'
+modified: '2023-12-22T11:51:10.119947+00:00'
+pattern: false

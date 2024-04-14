@@ -1,0 +1,140 @@
+composition:
+  _name: Accordions
+  _id: d7af4c54-9a0c-41af-9eda-4075a9e6dbec
+  _slug: accordions
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Accordions component
+    pageMetaDescription:
+      type: text
+      value: >-
+        Effortlessly organize content and enhance user experience with accordion
+        components
+  slots:
+    pageFooter:
+      - _id: 59779d6a-ea96-4630-9fe8-46a1cae46fcf
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: eeec382c-08f1-40ef-a6be-d600b4ab6d78
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 7744d2cb-72d5-4904-a701-18b33f7c99da
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: ff4279b3-4c9c-4ebe-a4bc-dfe03d5f147f
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Accordion component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: with expandable text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: c9bee888-b048-42fc-b95f-263740c2c4b1
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: ebf7db31-5e01-4874-afb4-d8d668457ba8
+        type: accordion
+        slots:
+          items:
+            - _id: a4119d6b-efcb-47c3-97cc-f81e4250c505
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: 'Accordion item #1 title'
+                description:
+                  type: text
+                  value: Some accordion item text
+            - _id: 0bd4bf43-76d0-44d9-9903-78d206aa74d4
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: 'Accordion item #2 title'
+                description:
+                  type: text
+                  value: Some accordion item text
+            - _id: 18f9d84b-690d-4e0a-94e8-c3f596b212c7
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: 'Accordion item #3 title'
+                description:
+                  type: text
+                  value: Some accordion item text
+        parameters:
+          title:
+            type: text
+            value: Accordion title
+          description:
+            type: text
+            value: Some compelling text
+created: '2023-09-21T21:17:21.366724+00:00'
+modified: '2024-02-08T21:16:32.204161+00:00'
+pattern: false

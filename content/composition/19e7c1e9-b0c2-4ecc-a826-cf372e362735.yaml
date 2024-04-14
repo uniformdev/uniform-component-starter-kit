@@ -1,0 +1,971 @@
+composition:
+  _name: Carousels
+  _id: 19e7c1e9-b0c2-4ecc-a826-cf372e362735
+  _slug: carousel
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Carousel component
+    pageMetaDescription:
+      type: text
+      value: >-
+        A Carousel component is versatile since it can render any child
+        component, allowing for interactive content display in a confined space.
+  slots:
+    pageFooter:
+      - _id: bd0ebd63-5130-4215-bc33-8923d4397ea9
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: da43e4da-93ff-40d9-a1e0-9aa5a66089b4
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: b923c09f-c005-4add-81d7-3dbf760c394b
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 91d0ac0a-9adb-459a-b0b3-e3998aaf40da
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Carousel component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: "A Carousel component is versatile since\_it can render any child component, allowing for interactive content display in a confined space."
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 0cdff197-2f93-4103-bba2-9486991817af
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: f28f53f5-45c1-4e3f-b224-13eacb570b84
+        type: container
+        slots:
+          container-inner:
+            - _id: 98bad369-af48-4832-80af-027c07f1724f
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains a Hero as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Heroes
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: e705914d-a2ef-4bb4-938e-3c6503b1f384
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 4a2ecb27-dbde-4f6f-97ed-596c7f60a818
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: abcc1938-e8be-4f3a-91c9-36dbfac2b1bf
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Increased Visibility and Engagement
+                      objectFit:
+                        type: select
+                        value: cover
+                      paddingTop:
+                        type: select
+                        value: None
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          A Carousel component allows you to showcase a larger
+                          number of content items within a limited space,
+                          ensuring that your audience can easily view and engage
+                          with a variety of content without overwhelming the
+                          user interface.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+                  - _id: 6905b8c0-4d1a-42ae-9514-4033221d9abf
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: f22e367e-9da5-4a8a-80be-7c34e2dd6f4b
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Enhanced User Interaction
+                      objectFit:
+                        type: select
+                        value: cover
+                      paddingTop:
+                        type: select
+                        value: None
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          With navigation controls, such as arrow buttons or
+                          indicators, users can actively navigate through the
+                          Carousel, giving them control over the displayed
+                          content and creating an engaging and interactive
+                          experience.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+                  - _id: 6f4a9432-a405-4e11-92cd-99f208f64caa
+                    type: hero
+                    variant: imageLeft
+                    parameters:
+                      image:
+                        type: asset
+                        value:
+                          - _id: 69ebbc00-71e7-40db-a165-6d015df97189
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Optimal Space Utilization
+                      objectFit:
+                        type: select
+                        value: cover
+                      paddingTop:
+                        type: select
+                        value: None
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h3
+                      description:
+                        type: text
+                        value: >-
+                          Carousels are ideal for situations where space is
+                          limited. By presenting multiple components within a
+                          single container, a Carousel maximizes the use of
+                          available screen real estate, allowing you to display
+                          a diverse range of content without cluttering the
+                          interface.
+                      paddingBottom:
+                        type: select
+                        value: None
+                      containerVariant:
+                        type: select
+                        value: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Carousel with Heroes
+      - _id: 03f05a0e-2b9c-4a6e-81d1-d979d905fe21
+        type: container
+        slots:
+          container-inner:
+            - _id: 401777c8-f9eb-4a27-b457-2c8aa251e3aa
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains a custom brochure
+                    component as a child component
+                title:
+                  type: text
+                  value: Brochure Carousel
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 17e502fa-3a28-4809-ad89-a7a70a736799
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 2b5edb26-652c-4d65-9286-33602bdd62e7
+                    type: grid
+                    slots:
+                      grid-inner:
+                        - _id: c716d343-5caf-449f-b990-3a7108eb8168
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: 8f16105c-f70a-4723-a78e-ef7325cb946e
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Slide 1 Image
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 0b5992c3-c63a-46ab-af83-ea0582925443
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: f6e7a90a-7050-42c2-8f73-d868c6fb5feb
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/e49FBS7iQw-XQbg6isdlBg-cup_delicious_coffee.jpg
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 27f1147d-f7e7-45e6-b6d0-94bc9732e3b9
+                                          size:
+                                            value: 2396183
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: cup_delicious_coffee.jpg
+                                          width:
+                                            value: 4608
+                                            type: number
+                                          height:
+                                            value: 3072
+                                            type: number
+                                          mediaType:
+                                            value: image/jpeg
+                                            type: text
+                                        _source: uniform-assets
+                                  width:
+                                    type: number
+                                    value: '1200'
+                                  borderRadius:
+                                    type: tp-slider-parameter
+                                    value: none
+                          parameters:
+                            title:
+                              type: text
+                              value: Image Wrapper
+                            rowSpan:
+                              type: tp-slider-parameter
+                              value: '1'
+                            rowStart:
+                              type: tp-slider-parameter
+                              value: None
+                            columnSpan:
+                              type: tp-slider-parameter
+                              value: '7'
+                            columnStart:
+                              type: tp-slider-parameter
+                              value: none
+                        - _id: 45ff5e6c-06ca-4ecd-8fd2-ade2f7fc1137
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: 01cc2be7-2d94-4517-b25c-742043528d9e
+                                type: content
+                                parameters:
+                                  text:
+                                    type: text
+                                    value: >-
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna
+                                      aliqua. Ut enim ad minim veniam, quis
+                                      nostrud exercitation ullamco laboris nisi
+                                      ut aliquip ex ea commodo consequat. Duis
+                                      aute irure dolor in reprehenderit in
+                                      voluptate velit esse cillum dolore eu
+                                      fugiat nulla pariatur. Excepteur sint
+                                      occaecat cupidatat non proident, sunt in
+                                      culpa qui officia deserunt mollit anim id
+                                      est laborum.
+                                  title:
+                                    type: text
+                                    value: Slide 1
+                                  titleStyle:
+                                    type: tp-title-style-parameter
+                                    value: h1
+                          parameters:
+                            title:
+                              type: text
+                              value: Content Wrapper
+                            rowSpan:
+                              type: tp-slider-parameter
+                              value: '1'
+                            rowStart:
+                              type: tp-slider-parameter
+                              value: None
+                            columnSpan:
+                              type: tp-slider-parameter
+                              value: '4'
+                            columnStart:
+                              type: tp-slider-parameter
+                              value: '8'
+                    parameters:
+                      gapX:
+                        type: tp-slider-parameter
+                        value: large
+                      gapY:
+                        type: tp-slider-parameter
+                        value: none
+                      title:
+                        type: text
+                        value: Brochure
+                      columnsCount:
+                        type: tp-slider-parameter
+                        value: '12'
+                  - _id: fd6e0a1c-f718-4809-8743-3d8c53f33977
+                    type: grid
+                    slots:
+                      grid-inner:
+                        - _id: 80bc3719-7105-4d77-be72-775202925199
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: bb378f10-0dad-41af-8e85-744fb061790a
+                                type: image
+                                parameters:
+                                  alt:
+                                    type: text
+                                    value: Slide 2 Image
+                                  src:
+                                    type: asset
+                                    value:
+                                      - _id: 6060266f-7245-4fd8-9329-c0244e629e9f
+                                        type: image
+                                        fields:
+                                          id:
+                                            type: text
+                                            value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                                          url:
+                                            value: >-
+                                              https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                            type: text
+                                          file:
+                                            type: file
+                                            value: 417f72e5-d0bc-47c8-8633-eb537728e2ec
+                                          size:
+                                            value: 49092
+                                            type: number
+                                          title:
+                                            type: text
+                                            value: rectangle.webp
+                                          width:
+                                            value: 1600
+                                            type: number
+                                          height:
+                                            value: 689
+                                            type: number
+                                          mediaType:
+                                            value: image/webp
+                                            type: text
+                                        _source: uniform-assets
+                                  width:
+                                    type: number
+                                    value: '1200'
+                                  borderRadius:
+                                    type: tp-slider-parameter
+                                    value: none
+                          parameters:
+                            title:
+                              type: text
+                              value: Image Wrapper
+                            rowSpan:
+                              type: tp-slider-parameter
+                              value: '1'
+                            rowStart:
+                              type: tp-slider-parameter
+                              value: None
+                            columnSpan:
+                              type: tp-slider-parameter
+                              value: '7'
+                            columnStart:
+                              type: tp-slider-parameter
+                              value: none
+                        - _id: 92570aae-9c5f-43bb-ae15-f0c0b29f7c95
+                          type: gridItem
+                          slots:
+                            inner:
+                              - _id: 5564c0d7-5cee-4af1-bc6f-d3091ffcd584
+                                type: content
+                                parameters:
+                                  text:
+                                    type: text
+                                    value: >-
+                                      Lorem ipsum dolor sit amet, consectetur
+                                      adipiscing elit, sed do eiusmod tempor
+                                      incididunt ut labore et dolore magna
+                                      aliqua. Ut enim ad minim veniam, quis
+                                      nostrud exercitation ullamco laboris nisi
+                                      ut aliquip ex ea commodo consequat.
+                                  title:
+                                    type: text
+                                    value: Slide 2
+                                  titleStyle:
+                                    type: tp-title-style-parameter
+                                    value: h1
+                          parameters:
+                            title:
+                              type: text
+                              value: Content Wrapper
+                            rowSpan:
+                              type: tp-slider-parameter
+                              value: '1'
+                            rowStart:
+                              type: tp-slider-parameter
+                              value: None
+                            columnSpan:
+                              type: tp-slider-parameter
+                              value: '4'
+                            columnStart:
+                              type: tp-slider-parameter
+                              value: '8'
+                    parameters:
+                      gapX:
+                        type: tp-slider-parameter
+                        value: large
+                      gapY:
+                        type: tp-slider-parameter
+                        value: none
+                      title:
+                        type: text
+                        value: Brochure
+                      columnsCount:
+                        type: tp-slider-parameter
+                        value: '12'
+              variant: brochure
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Brochure Carousel
+      - _id: 95d8e763-e41b-4c18-9a04-6a7fee0aaf22
+        type: container
+        slots:
+          container-inner:
+            - _id: a3f75819-02d3-4c47-beb5-b5a839542065
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains an Image as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Images
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: c66dea05-b28f-49b8-849b-fdfb3bffa32e
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: ff01f2cd-1956-4bff-8cb8-69491f133155
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: c71a8bc0-62b3-411e-8dd3-f9842b588f73
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+                  - _id: 15313a2a-b69e-4376-b79d-7d9004d5998e
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: 5ed12871-a75b-42b0-83f6-23aa08ab18af
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+                  - _id: 5ea169c9-d287-49d5-a4e7-2a7bafe7ddf6
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: 367a847e-6efd-404d-b17e-74653fbf7fb9
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+        parameters:
+          title:
+            type: text
+            value: Carousel with Images
+      - _id: 8d2d6580-a2c3-467a-b49d-5cefa6098ed3
+        type: container
+        slots:
+          container-inner:
+            - _id: d3a653a0-015e-4856-814e-abe66f29ca29
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains 3 Call to Actions as a
+                    child components
+                title:
+                  type: text
+                  value: Carousel with Call to Actions
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: fa765353-b467-4ca9-a743-21fe5c7d77a2
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 8f822f8e-b916-45c8-8a24-254849b6d6f3
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: First call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the first call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero uno
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                  - _id: 2b8f5d69-46be-4af2-badf-afce5d44683f
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: Second call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the second call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero dos
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: link
+                  - _id: a86f6e2a-473b-4ee3-b79e-ad5fde6ad198
+                    type: callToAction
+                    parameters:
+                      title:
+                        type: text
+                        value: Third call to action
+                      titleStyle:
+                        type: tp-title-style-parameter
+                        value: h2
+                      description:
+                        type: text
+                        value: some compelling content for the third call to action.
+                      eyebrowText:
+                        type: text
+                        value: numero tres
+                      primaryButtonCopy:
+                        type: text
+                        value: Click me now!
+                      primaryButtonLink:
+                        type: link
+                        value:
+                          path: /components/carousels
+                          type: projectMapNode
+                          nodeId: fcebf9c9-e734-4e7b-94e5-be922d36de19
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      primaryButtonStyle:
+                        type: tp-button-style-parameter
+                        value: accent
+        parameters:
+          title:
+            type: text
+            value: Carousel with Call to Actions
+      - _id: 25be7e77-9e2a-4f0b-a133-13b57abeb467
+        type: container
+        slots:
+          container-inner:
+            - _id: 7c95ea33-d85b-44b6-a2ad-47e70cb1541d
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    Each slide in this carousel contains an Image as a child
+                    component
+                title:
+                  type: text
+                  value: Carousel with Images (Image Gallery variant)
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 4eaaae2b-b22d-4091-83e6-3101bf37c452
+              type: carousel
+              slots:
+                carouselItem:
+                  - _id: 30bb8495-0f36-4971-a39a-d81f669949dd
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: 4f4c7b55-9251-41dc-abab-5a08bd46458b
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+                  - _id: 6e9e60b7-3463-430a-85d6-57e62c6596aa
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: eba7c440-b928-4a82-9a40-fdb940781713
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+                  - _id: 3dfa887d-3b96-42ba-b34c-333358db0da7
+                    type: image
+                    parameters:
+                      src:
+                        type: asset
+                        value:
+                          - _id: d8694405-b990-4138-98eb-8e4d91a0b0a7
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                                type: text
+                              file:
+                                type: file
+                                value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                              size:
+                                value: 49092
+                                type: number
+                              title:
+                                type: text
+                                value: rectangle.webp
+                              width:
+                                value: 1600
+                                type: number
+                              height:
+                                value: 689
+                                type: number
+                              mediaType:
+                                value: image/webp
+                                type: text
+                            _source: uniform-assets
+                      objectFit:
+                        type: select
+                        value: cover
+              variant: imageGallery
+created: '2024-02-06T11:14:23.326064+00:00'
+modified: '2024-02-08T15:45:07.809876+00:00'
+pattern: false

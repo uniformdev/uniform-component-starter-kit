@@ -1,0 +1,252 @@
+composition:
+  _name: Countdowns
+  _id: 846209ed-4842-41f9-a4ff-cda23cc871ca
+  _slug: countdowns
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Countdown component
+    pageMetaDescription:
+      type: text
+      value: Countdown gives you a transition effect of changing numbers.
+  slots:
+    pageFooter:
+      - _id: 80cfa09f-33e7-4439-bf39-d00fd9d68a5b
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 0fe05012-c3a5-4cad-9fe3-e91eb092e253
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 3579c1a5-c740-41c6-9fcd-c18ee70d7a89
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: eb46abb3-7e6c-41ed-9544-69bf08120109
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Countdown
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Countdown gives you a transition effect of changing numbers.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 3def3c9e-4421-4a59-988e-c90232383d78
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 3c2b039d-d5d6-47af-9871-3de6352d0798
+        type: container
+        slots:
+          container-inner:
+            - _id: 472ba4b2-c0f9-4616-b50d-7908deab89d1
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: 'The countdown to the your Independence Day:'
+                title:
+                  type: text
+                  value: Default Countdown
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 75f57948-80f6-4a75-aee7-36d46d96d6a4
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 6242032b-3edb-47ce-81e7-262be88d679e
+              type: countdown
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: normal
+                title:
+                  type: text
+                  value: To the Independence Day
+                targetDate:
+                  type: text
+                  value: '2024-07-04T00:00:00'
+        parameters:
+          title:
+            type: text
+            value: Default Countdown
+      - _id: fc92abe1-fb7a-4e4b-9b77-388542208a27
+        type: container
+        slots:
+          container-inner:
+            - _id: f21de35d-c29d-44b0-8e4d-a334320c540f
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: 'The countdown to the your Independence Day:'
+                title:
+                  type: text
+                  value: Labels Under Countdown
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 0a6b8343-78bd-4574-8fe7-5f0111470d93
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: d96d21de-6d8b-46df-9c8c-c6764a491ab1
+              type: countdown
+              variant: labelsUnder
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: normal
+                title:
+                  type: text
+                  value: To the Independence Day
+                targetDate:
+                  type: text
+                  value: '2024-07-04T00:00:00'
+        parameters:
+          title:
+            type: text
+            value: Labels Under Countdown
+      - _id: e0816f27-a0c0-4e1f-ad7e-6c8eb3f96c1f
+        type: container
+        slots:
+          container-inner:
+            - _id: 250f721b-4a62-4d37-8ebb-4291f623d300
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: 'The countdown to the your Independence Day:'
+                title:
+                  type: text
+                  value: Labels In Boxes Countdown
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 08da64e2-7ab3-4af5-a29b-52c31829dd2b
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 5601ffe2-8f9b-474d-be98-e866fb4ea3ea
+              type: countdown
+              variant: labelsInBoxes
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: normal
+                title:
+                  type: text
+                  value: To the Independence Day
+                targetDate:
+                  type: text
+                  value: '2024-07-04T00:00:00'
+        parameters:
+          title:
+            type: text
+            value: Labels under Countdown
+      - _id: 94115d1b-d366-4080-8d76-71b8bf0597c4
+        type: container
+        slots:
+          container-inner:
+            - _id: 7ff8d91a-fd08-40a0-85ce-eba491255df5
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: 'The countdown to the Independence Day in New York:'
+                title:
+                  type: text
+                  value: With timezone example
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 39eb0a26-5f98-44e0-8900-0e9004480193
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 9d6e4a23-e10a-4635-a3eb-9de403298923
+              type: countdown
+              variant: labelsInBoxes
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: normal
+                title:
+                  type: text
+                  value: To the Independence Day
+                targetDate:
+                  type: text
+                  value: '2024-07-04T00:00:00-04:00'
+        parameters:
+          title:
+            type: text
+            value: Labels under Countdown
+created: '2023-12-04T16:14:25.164312+00:00'
+modified: '2024-03-26T14:42:43.919814+00:00'
+pattern: false

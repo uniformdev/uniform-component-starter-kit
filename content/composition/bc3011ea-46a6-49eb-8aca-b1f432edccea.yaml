@@ -1,0 +1,539 @@
+composition:
+  _name: Tabs
+  _id: bc3011ea-46a6-49eb-8aca-b1f432edccea
+  _slug: tabs
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Tabs component
+    pageMetaDescription:
+      type: text
+      value: Tabs are a convenient way to present a list of links in a tabbed format.
+  slots:
+    pageFooter:
+      - _id: c6cb97e0-a780-4028-a631-3263649015ed
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 586a52d4-54c8-45d6-969c-0ac377e5169e
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: d700ee03-42ab-445c-9b87-c5e7f5dcd7d7
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: c05f207d-430b-4566-a15e-7fed1f45fe7d
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Tabs
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Tabs are a convenient way to present a list of links in a tabbed
+              format.
+          eyebrowText:
+            type: text
+            value: eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: f67e3b8b-33d7-4405-9630-dc74c3ae9d76
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: bd4fcc83-d3ac-41f5-99aa-27f0e1f70d92
+        type: container
+        slots:
+          container-inner:
+            - _id: 9a113de3-338c-47b1-90fe-2091ceb76069
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Default Tabs variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: b2a71b93-5404-4a16-ae97-99910bdace37
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 13e4b88b-752f-447a-a895-b88be21b894c
+              type: tabs
+              slots:
+                tabs:
+                  - _id: 8f77bf5f-dfe9-4d14-87de-d3c0d60ba455
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 371912d4-bd53-48a4-98f7-832d25b09761
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Product Features
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                            description:
+                              type: text
+                              value: >-
+                                Explore the key features and functionalities of
+                                our product.
+                            eyebrowText:
+                              type: text
+                              value: Overview
+                    parameters:
+                      title:
+                        type: text
+                        value: Overview
+                  - _id: 7af55047-73b5-4177-8bc8-c06ec85d9eaa
+                    type: tab
+                    slots:
+                      content:
+                        - _id: dde7d672-ca11-439d-a0a1-558d1cddcd5f
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Step-by-Step Guide
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Follow this step-by-step guide to understand how
+                                our product works.
+                            eyebrowText:
+                              type: text
+                              value: How it Works
+                    parameters:
+                      title:
+                        type: text
+                        value: How it Works
+                      isActive:
+                        type: checkbox
+                        value: true
+                  - _id: 3d353fad-4b7b-43c0-ba9f-2a40ad5fa82e
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 36981087-e3d0-4f4e-a305-1b6fa9ca2504
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Advantages of Using Our Product
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Discover the benefits and advantages you can
+                                gain from using our product.
+                            eyebrowText:
+                              type: text
+                              value: Benefits
+                    parameters:
+                      title:
+                        type: text
+                        value: Benefits
+              variant: ''
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Default Tabs variant
+      - _id: 36188c54-e8ae-4b23-8a28-76c4b2331c1e
+        type: container
+        slots:
+          container-inner:
+            - _id: 689ceb07-7368-4c8b-94d8-ddd80b823090
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Boxed Tabs variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: c11778fb-1458-4724-956a-7a76c1907536
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 31ee1cb6-8b78-4462-9547-15ecfe2690fe
+              type: tabs
+              slots:
+                tabs:
+                  - _id: 00a2904d-b077-4b47-82bf-5c0d3009e88b
+                    type: tab
+                    slots:
+                      content:
+                        - _id: f4618476-197b-4e03-8e0c-70a4117ed516
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Product Features
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                            description:
+                              type: text
+                              value: >-
+                                Explore the key features and functionalities of
+                                our product.
+                            eyebrowText:
+                              type: text
+                              value: Overview
+                    parameters:
+                      title:
+                        type: text
+                        value: Overview
+                  - _id: 9ecf1d12-ad80-40d2-a7f1-a8533d31e189
+                    type: tab
+                    slots:
+                      content:
+                        - _id: b5052bba-1e89-46eb-ba35-be3c7186d027
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Step-by-Step Guide
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Follow this step-by-step guide to understand how
+                                our product works.
+                            eyebrowText:
+                              type: text
+                              value: How it Works
+                    parameters:
+                      title:
+                        type: text
+                        value: How it Works
+                  - _id: 9d533ac7-df0f-4bbe-b67a-d7d6f515b6a6
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 9868ad9f-5351-4f48-9ef6-26c1d399040d
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Advantages of Using Our Product
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Discover the benefits and advantages you can
+                                gain from using our product.
+                            eyebrowText:
+                              type: text
+                              value: Benefits
+                    parameters:
+                      title:
+                        type: text
+                        value: Benefits
+              variant: boxed
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: normal
+        parameters:
+          title:
+            type: text
+            value: Boxed Tabs variant
+      - _id: f68edb3b-3341-4e11-90fb-a75f02c8a669
+        type: container
+        slots:
+          container-inner:
+            - _id: 191442c8-fb79-434e-a4bd-e29312a4c16a
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Lifted Tabs variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: 825e4fda-4fcc-4c42-b5c3-20733dc72098
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 7695dcea-c9f4-46df-a797-a06cba83b89e
+              type: tabs
+              slots:
+                tabs:
+                  - _id: 54f2e425-45e8-4aae-9683-4af580b95cc7
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 9e8f2bd4-e68d-4d35-9648-ddff3cf96c7f
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Product Features
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                            description:
+                              type: text
+                              value: >-
+                                Explore the key features and functionalities of
+                                our product.
+                            eyebrowText:
+                              type: text
+                              value: Overview
+                    parameters:
+                      title:
+                        type: text
+                        value: Overview
+                  - _id: db47bd1a-7539-4055-acaf-9b20be421ac4
+                    type: tab
+                    slots:
+                      content:
+                        - _id: f08bc808-16e5-4c9f-b6c8-ef45b8fd130c
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Step-by-Step Guide
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Follow this step-by-step guide to understand how
+                                our product works.
+                            eyebrowText:
+                              type: text
+                              value: How it Works
+                    parameters:
+                      title:
+                        type: text
+                        value: How it Works
+                  - _id: 5f930942-bb8b-4fa4-bf01-e744816f583d
+                    type: tab
+                    slots:
+                      content:
+                        - _id: ef244a70-6b14-41d8-98f7-b13adaf1e400
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Advantages of Using Our Product
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Discover the benefits and advantages you can
+                                gain from using our product.
+                            eyebrowText:
+                              type: text
+                              value: Benefits
+                    parameters:
+                      title:
+                        type: text
+                        value: Benefits
+              variant: lifted
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Lifted Tabs variant
+      - _id: d70a61d8-7f35-4669-ac55-7ff2bb733f1b
+        type: container
+        slots:
+          container-inner:
+            - _id: e265b446-da6a-4c35-b8d9-acc147696507
+              type: content
+              parameters:
+                title:
+                  type: text
+                  value: Bordered Tabs variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h2
+            - _id: a2a586a8-c12a-4fd0-9e4e-b2cf4481c1a6
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 8500aa06-57e5-4ca1-886a-db55710d2507
+              type: tabs
+              slots:
+                tabs:
+                  - _id: f0225270-dec0-4422-929b-127ce134df68
+                    type: tab
+                    slots:
+                      content:
+                        - _id: db1d7dbc-cf2a-412c-be20-4ff522b6d9b6
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Product Features
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h2
+                            description:
+                              type: text
+                              value: >-
+                                Explore the key features and functionalities of
+                                our product.
+                            eyebrowText:
+                              type: text
+                              value: Overview
+                    parameters:
+                      title:
+                        type: text
+                        value: Overview
+                  - _id: 01f478fd-e389-4d97-be31-088912de59c3
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 052b8d75-9440-4dba-9240-04875acc584d
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Step-by-Step Guide
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Follow this step-by-step guide to understand how
+                                our product works.
+                            eyebrowText:
+                              type: text
+                              value: How it Works
+                    parameters:
+                      title:
+                        type: text
+                        value: How it Works
+                  - _id: 519a0b35-a7c9-4691-a93d-34303cb7fea0
+                    type: tab
+                    slots:
+                      content:
+                        - _id: 0a870015-92e0-4152-ae87-8b6118bde4c0
+                          type: callToAction
+                          parameters:
+                            title:
+                              type: text
+                              value: Advantages of Using Our Product
+                            titleStyle:
+                              type: tp-title-style-parameter
+                              value: h1
+                            description:
+                              type: text
+                              value: >-
+                                Discover the benefits and advantages you can
+                                gain from using our product.
+                            eyebrowText:
+                              type: text
+                              value: Benefits
+                    parameters:
+                      title:
+                        type: text
+                        value: Benefits
+              variant: bordered
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Bordered Tabs variant
+  _overrides:
+    586a52d4-54c8-45d6-969c-0ac377e5169e:
+      parameters:
+        syntheticGap:
+          type: tp-slider-parameter
+          value: Small
+created: '2023-10-25T10:23:54.698378+00:00'
+modified: '2024-02-08T21:16:24.581745+00:00'
+pattern: false

@@ -1,0 +1,654 @@
+composition:
+  _name: Tables
+  _id: ef7554a8-4580-4f6f-abe3-da87e2588d0b
+  _slug: tables
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Table component
+    pageMetaDescription:
+      type: text
+      value: Table can be used to show a list of data in a table format.
+  slots:
+    pageFooter:
+      - _id: f8d849f0-a120-4cb1-b5d9-6bba0132b5ac
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 68462f85-2fc7-4503-ade1-aa68a5ddda47
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 3bbe385d-11ad-4d1b-908d-b9d940829dfd
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: f114faf9-11aa-4411-ba68-6c3ec70d92b8
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Table
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Table can be used to show a list of data in a table format.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: e530c5d4-13aa-43ab-b882-c6570b71324a
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 198afd2c-e972-4bf4-9831-8a0755f1c827
+        type: container
+        slots:
+          container-inner:
+            - _id: 2f50b880-2318-4662-ad24-4bbe0125b20e
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    The default variant of the table is designed for simplicity
+                    and clarity.
+                title:
+                  type: text
+                  value: Default Table variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 07cf1244-8a97-4dc9-974a-b783a7aadcc1
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 4588ef4f-c846-4f63-9e3b-3be31b1e2098
+              type: table
+              slots:
+                tableBody:
+                  - _id: eb5e5b16-8057-4ccb-a427-9b63d4c0782d
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: c73eb9c6-accc-499e-9025-26bf71cf20e1
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: John Smith
+                        - _id: d7cdba7f-7026-40fa-a15e-e246302f63a7
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '32'
+                        - _id: ab6b4da6-0b37-4d8d-853f-5ae2f7cfa4a1
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: New York
+                        - _id: 9373a032-ccda-45e8-8f9e-1f837482530c
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Software Engineer
+                  - _id: 9f394eca-4407-4471-a92f-880023e2b232
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 433ec3ad-5669-408b-a9f5-7d180e439602
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Jane Doe
+                        - _id: c47a186d-cb91-4346-969e-803d90450b9a
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '28'
+                        - _id: 6df42e03-6b9c-4596-8375-ac982f34df36
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: 'Los Angeles '
+                        - _id: 915a90a2-7a86-4d82-a6bf-dad3bf3f8ca1
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Graphic Designer
+                  - _id: 02a35602-6875-4aff-9ac5-de69ebba271b
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 71b46908-5b70-4c2a-bbb4-574479a7146f
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Robert Lee
+                        - _id: ea6d6d46-b108-452f-8c88-a8cccddbc4bd
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '45'
+                        - _id: eb2994c2-b6ab-4118-8499-9455e42cccfa
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Chicago
+                        - _id: 5a5905d9-a590-4ca5-91b5-2e5fe0aafd5d
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Accountant
+                  - _id: ed1c0e96-b965-4bf3-bc5f-cebb9b40ef88
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: b750fd33-a82f-4581-bad6-456e63745641
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Sarah Brown
+                        - _id: 065ecdf9-70d1-42aa-8f00-0364dae51726
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '36'
+                        - _id: 56bd0c01-ff7f-45ef-b31e-764cb18876eb
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: San Francisco
+                        - _id: 864eace1-d12b-41f9-81de-c04654328a2a
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Marketing Manager
+                tableHead:
+                  - _id: ce3adcbe-5dd8-41a1-891b-458a6a750429
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: b64fb5e9-eac2-4f77-873c-b245ba29cafc
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Name
+                        - _id: 0e7bfe02-e2e6-464c-8d77-df87f6cf85f7
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Age
+                        - _id: 6a6180ea-6770-4dcb-8c07-79e0916b817a
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Location
+                        - _id: d3b9962d-e67b-4e1a-b1ec-f86d8cc1625a
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Occupation
+              variant: ''
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Default Table variant
+      - _id: 4a80f89d-cf98-402d-a9f1-64098856e0f7
+        type: container
+        slots:
+          container-inner:
+            - _id: dd94dacd-b9d8-4a25-91e6-e7757cd2de9d
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    The default variant of the table is designed for simplicity
+                    and clarity.
+                title:
+                  type: text
+                  value: Highlights rows on hover
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 76e2f019-230b-459c-abe3-5c3c63806c7b
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 0bcb6a69-d5a0-4ffe-ba82-856946a44128
+              type: table
+              slots:
+                tableBody:
+                  - _id: 3534a747-0d48-4107-955a-45094d70b5e5
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 698cc5d3-7fe0-4729-a4c1-27049b02e6a5
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: John Smith
+                        - _id: d3ac9463-67eb-446a-ae79-349a9b749778
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '32'
+                        - _id: 4beedbd7-3f96-42f7-809f-f316874e7f59
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: New York
+                        - _id: e20d2fab-26d8-4ddb-9e4e-59533c6807ad
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Software Engineer
+                    parameters:
+                      highlightsOnHover:
+                        type: checkbox
+                        value: true
+                  - _id: 42f85373-2d98-46b3-9ae9-3d0d75c752ea
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 64f893b3-9009-43c6-add4-91a0d79ca0e1
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Jane Doe
+                        - _id: e6b3725c-d591-484e-8191-478704d3d540
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '28'
+                        - _id: 79706d1b-4b89-414a-ac9e-ec1f1787ad18
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: 'Los Angeles '
+                        - _id: beed38f0-6be5-4722-ae80-e5c5f0520166
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Graphic Designer
+                    parameters:
+                      highlightsOnHover:
+                        type: checkbox
+                        value: true
+                  - _id: 56712ecd-bda8-4a82-bc94-38a03d8c8d31
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 33482636-7c4a-4569-9564-9d1afe5c2018
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Robert Lee
+                        - _id: 87b4fcb2-431f-4d63-bb7d-ea4dac0f6ec7
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '45'
+                        - _id: a863c496-4023-4dcb-846c-ad86ea1b21a9
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Chicago
+                        - _id: 98051f79-7674-4e5a-bf11-2e2dfe4a0a3c
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Accountant
+                    parameters:
+                      highlightsOnHover:
+                        type: checkbox
+                        value: true
+                  - _id: 48c4e646-03e9-4107-937e-11645fee761b
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: e0403e94-facb-4e8d-a65f-b89b26fbb127
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Sarah Brown
+                        - _id: dd726bfb-71ab-44d3-83de-705027aec7f1
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '36'
+                        - _id: c9089dc5-4812-401d-aaa6-0a21f6393d9d
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: San Francisco
+                        - _id: 7a5faab4-09f4-493b-8ba6-c61ea5f2e03b
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Marketing Manager
+                    parameters:
+                      highlightsOnHover:
+                        type: checkbox
+                        value: true
+                tableHead:
+                  - _id: eb436d79-0342-41a7-9f9d-a03fc083edbf
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 3d7b82c2-99b7-463a-9e92-d9c1c17f1ae0
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Name
+                        - _id: d8e4b09f-9b9c-4051-8fb4-b392eeb805fa
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Age
+                        - _id: cdf364b9-ab35-4392-948b-c82e017840c4
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Location
+                        - _id: c39ed41d-b73b-4e7d-ab49-c47663bc6a66
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Occupation
+              variant: ''
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Default Table variant
+      - _id: 2382e01e-7dfa-4a2d-bc50-f3bf78c75042
+        type: container
+        slots:
+          container-inner:
+            - _id: b0b68a3e-862d-4aad-a2ec-984eb88d2b33
+              type: content
+              parameters:
+                text:
+                  type: text
+                  value: >-
+                    The zebra variant of the table is built to enhance
+                    readability and user experience. In this design, alternating
+                    rows are styled with different background colors
+                title:
+                  type: text
+                  value: Zebra Table variant
+                titleStyle:
+                  type: tp-title-style-parameter
+                  value: h1
+            - _id: 75eb5843-9e8b-45e0-82ea-991a34f58620
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 10px
+            - _id: 1d029723-3631-4ffa-9e86-50ea65be43f2
+              type: table
+              slots:
+                tableBody:
+                  - _id: 7918e2e2-b6fb-4c36-98a3-b61b86e40039
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: e6b4abca-3ed3-4a62-90aa-bb9b0d69841c
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: John Smith
+                        - _id: f964983c-0f21-4bae-bedd-06c58f4d584e
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '32'
+                        - _id: 67df941c-a68a-4e0a-be55-87087e0b3149
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: New York
+                        - _id: b8115681-23fc-4e23-aef6-fa95e4dbe2d2
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Software Engineer
+                  - _id: ab196a30-6fd7-4893-ad07-1a37bd83a032
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 416e9f41-e0a8-4c26-9069-a1b2e3f6c494
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Jane Doe
+                        - _id: 0d290b78-81d8-4856-bee1-974e58ebbd96
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '28'
+                        - _id: d52628d5-6c7d-4963-a86f-e0f64a8ff033
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: 'Los Angeles '
+                        - _id: 1345e383-7017-4fda-8775-ab956bf7d4ee
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Graphic Designer
+                  - _id: 7c30b7b9-6672-46d3-9a9a-edbf1cb962e9
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 365f7a14-6948-4df7-8fcd-8725cbbf46a8
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Robert Lee
+                        - _id: 3749b3f5-9cbc-4262-8c84-e4204adce9bf
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '45'
+                        - _id: c77c3d65-4d08-4628-9e06-6ca05717ad38
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Chicago
+                        - _id: 2f7cdb5e-0fd7-48f1-89cd-8820ff2c654c
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Accountant
+                  - _id: 849f8687-a2f3-4305-ab7c-a42e6f87de64
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: 81e203e7-a8de-4710-8e7a-8e3c72a6fb2b
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Sarah Brown
+                        - _id: a615aace-f08d-4a5d-9351-c47d4bd20c97
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: '36'
+                        - _id: a64cf0a5-e50d-4be2-96fd-ed14e8b7f9b0
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: San Francisco
+                        - _id: baa57303-bca4-4c53-8eef-b9ec369f36bc
+                          type: tableDataCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Marketing Manager
+                tableHead:
+                  - _id: dfc21d4d-1472-43b6-9296-dbde9b1d527b
+                    type: tableRow
+                    slots:
+                      cells:
+                        - _id: d21448c7-03dd-485e-ad1f-2687cf7fed7c
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Name
+                        - _id: 30c1b54c-ac29-484d-ad5e-cb02e7d07d84
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Age
+                        - _id: 1e65079a-a381-432e-a006-c894e5708c6d
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Location
+                        - _id: 07f2a1a8-3ef8-4948-a557-06e1756e8a32
+                          type: tableHeaderCell
+                          parameters:
+                            value:
+                              type: text
+                              value: Occupation
+              variant: zebra
+              parameters:
+                size:
+                  type: tp-slider-parameter
+                  value: large
+        parameters:
+          title:
+            type: text
+            value: Zebra Table variant
+  _overrides:
+    68462f85-2fc7-4503-ade1-aa68a5ddda47:
+      parameters:
+        syntheticGap:
+          type: tp-slider-parameter
+          value: Small
+created: '2023-10-26T13:13:17.710746+00:00'
+modified: '2024-02-08T21:16:33.013855+00:00'
+pattern: false

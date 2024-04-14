@@ -1,0 +1,987 @@
+composition:
+  _name: Home
+  _id: 552a8a72-6c47-4993-bc45-f0148ea79904
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Uniform’s Component Starter Kit
+    twitterCard:
+      type: select
+      value: summary_large_image
+    pageKeywords:
+      type: text
+      value: uniform, nextjs, composable, cms, commerce
+    twitterImage:
+      type: asset
+      value:
+        - _id: bc3146db-dc14-4df7-aca8-7985d5ab1c8c
+          type: image
+          fields:
+            id:
+              type: text
+              value: d8cb98eb-f3d9-4ee8-a378-b4592e91c15d
+            url:
+              value: >-
+                https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/xkFygjV3Syy2UNYjFCoRoQ-blog_header_cmc_comparison_guide.png
+              type: text
+            file:
+              type: file
+              value: 4f849099-5307-46e7-b422-94e285713f73
+            size:
+              value: 57386
+              type: number
+            title:
+              type: text
+              value: blog_header_cmc_comparison_guide.png
+            width:
+              value: 819
+              type: number
+            height:
+              value: 461
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    twitterTitle:
+      type: text
+      value: Test Twitter Title
+    openGraphType:
+      type: select
+      value: website
+    openGraphImage:
+      type: asset
+      value:
+        - _id: 9e8a96ff-ff2e-4522-9feb-d4cba2b85e15
+          type: image
+          fields:
+            id:
+              type: text
+              value: d8cb98eb-f3d9-4ee8-a378-b4592e91c15d
+            url:
+              value: >-
+                https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/xkFygjV3Syy2UNYjFCoRoQ-blog_header_cmc_comparison_guide.png
+              type: text
+            file:
+              type: file
+              value: 4f849099-5307-46e7-b422-94e285713f73
+            size:
+              value: 57386
+              type: number
+            title:
+              type: text
+              value: blog_header_cmc_comparison_guide.png
+            width:
+              value: 819
+              type: number
+            height:
+              value: 461
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    openGraphTitle:
+      type: text
+      value: Uniform // Component Starter Kit
+    twitterDescription:
+      type: text
+      value: Test Twitter Description
+    pageMetaDescription:
+      type: text
+      value: >-
+        Essential set of components you need to start building personalizable
+        web experiences with Uniform.
+    overlayTitleToTwitterImage:
+      type: checkbox
+      value: true
+  slots:
+    pageFooter:
+      - _id: a671f401-5678-42be-a5d7-de05de74b2f3
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 62938edd-e33a-45c7-93a6-a2a3e16fa8d7
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 1f352a25-7acb-4893-a11c-f06bd45f27ab
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: d3788ab5-1e29-4fcc-af9b-15665112d7fb
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 69fa8a52-761c-4a8a-977d-346522aa884c
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Uniform’s Component Starter Kit
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              An essential set of components you need to start building
+              personalized web experiences with Uniform.
+          eyebrowText:
+            type: text
+            value: hello and welcome! this is
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          primaryButtonCopy:
+            type: text
+            value: Browse THE components
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components
+              type: projectMapNode
+              nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: primary
+      - _id: 7e072bd7-bbe7-4f97-8707-635f74d6ea8e
+        type: callToAction
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: How will Component Starter Kit help you?
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >-
+              The Component Starter kit gives you the key building blocks to
+              create dynamic and compelling web experiences and demonstrate the
+              power of digital experience composition in Uniform. Just install,
+              customize and start creating.
+          eyebrowText:
+            type: text
+            value: ''
+      - _id: cc1d51b7-9e89-4031-8658-5b0d81ba15a7
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 845be47f-7b29-4061-9383-2461814bdcee
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 88f89486-0170-42ba-b5ad-48b98fd47a94
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: d24ae6cc-a180-449d-9a0e-255e851f8fd8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/lrBrZBZPRy6Ze4wZzKYi1w-icon_understand.svg
+                          type: text
+                        file:
+                          type: file
+                          value: c089d446-e3b2-4ca5-b556-88fed77a65e5
+                        size:
+                          value: 1402
+                          type: number
+                        title:
+                          type: text
+                          value: icon_understand.svg
+                        width:
+                          value: 44
+                          type: number
+                        height:
+                          value: 42
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Clone, run locally, and customize
+                description:
+                  type: text
+                  value: >-
+                    We designed the starter kit for you to take it home and
+                    customize it according to your needs. Go nuts!
+            - _id: 2a2bb40f-f543-4566-97c8-7cd14cb82bc1
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 428b0c14-b724-4bdc-beca-73cf149c35f4
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 68b4d970-8062-4a91-965b-97d2587811fc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MIWsDoPXSw-zFY1_TdqD_g-icon_improve.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 7e74c65b-c100-4d3e-91ad-5e605bf70b79
+                        size:
+                          value: 729
+                          type: number
+                        title:
+                          type: text
+                          value: icon_improve.svg
+                        width:
+                          value: 35
+                          type: number
+                        height:
+                          value: 48
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Optimized for performance
+                description:
+                  type: text
+                  value: >-
+                    Lightweight React components help keep your Core Web Vitals
+                    green.
+            - _id: 19438067-1453-4709-9346-914fdac47fe0
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 21915458-ff90-4f54-a789-3491ead3e2bd
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b2332a2e-dea3-4d16-9f67-e709bb5c98b8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/B-cA8CrRTsG-Wmp2_5qdkQ-icon_drive.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 192d5d29-3c89-43fe-8357-0cead3c7b921
+                        size:
+                          value: 1669
+                          type: number
+                        title:
+                          type: text
+                          value: icon_drive.svg
+                        width:
+                          value: 58
+                          type: number
+                        height:
+                          value: 44
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Completely adaptable
+                description:
+                  type: text
+                  value: >-
+                    The whole library is open source and based on TailwindCSS
+                    and DaisyUI, making it easy for you to adapt to your brand
+                    style.
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 78eaa239-74c5-4ffa-b9e8-748bae255ab9
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Built with the modern stack!
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >+
+              Our Component Starter Kit is built on a TNT stack - Typescript,
+              Next.js, and TailwindCSS. That means it’s completely customizable
+              and adaptable for what you need to build.
+
+          eyebrowText:
+            type: text
+            value: something for the developers
+      - _id: 45ca2e18-6110-4047-8f54-2f9ae43d047b
+        type: featuredCallout
+        slots:
+          feature:
+            - _id: 068668d5-520c-4bc5-b72a-9bda8beb189f
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: f46c6c87-77cf-4dfe-8b91-a1a0c9d7913f
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b2332a2e-dea3-4d16-9f67-e709bb5c98b8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/B-cA8CrRTsG-Wmp2_5qdkQ-icon_drive.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 192d5d29-3c89-43fe-8357-0cead3c7b921
+                        size:
+                          value: 1669
+                          type: number
+                        title:
+                          type: text
+                          value: icon_drive.svg
+                        width:
+                          value: 58
+                          type: number
+                        height:
+                          value: 44
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Bring your CMS and commerce content
+                description:
+                  type: text
+                  value: >-
+                    Leverage our latest integrations to bring content from your
+                    own Headless CMS and/or Commerce systems without any glue
+                    code.
+            - _id: b637acaa-f979-4bde-aa94-086c1ccf9c02
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: fa3e72b4-997b-489b-8fb1-f82206fd3fcd
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: d24ae6cc-a180-449d-9a0e-255e851f8fd8
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/lrBrZBZPRy6Ze4wZzKYi1w-icon_understand.svg
+                          type: text
+                        file:
+                          type: file
+                          value: c089d446-e3b2-4ca5-b556-88fed77a65e5
+                        size:
+                          value: 1402
+                          type: number
+                        title:
+                          type: text
+                          value: icon_understand.svg
+                        width:
+                          value: 44
+                          type: number
+                        height:
+                          value: 42
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: ' No integration? No problem. No code required.'
+                description:
+                  type: text
+                  value: >-
+                    Bring content from any REST API without a single developer
+                    ticket.
+            - _id: c8205ca3-c293-4338-8392-83574cf74dd0
+              type: feature
+              parameters:
+                icon:
+                  type: asset
+                  value:
+                    - _id: 0d86e7e6-6552-45ff-ace7-f03b88067b8d
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 68b4d970-8062-4a91-965b-97d2587811fc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MIWsDoPXSw-zFY1_TdqD_g-icon_improve.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 7e74c65b-c100-4d3e-91ad-5e605bf70b79
+                        size:
+                          value: 729
+                          type: number
+                        title:
+                          type: text
+                          value: icon_improve.svg
+                        width:
+                          value: 35
+                          type: number
+                        height:
+                          value: 48
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                title:
+                  type: text
+                  value: Build web experiences visually with real-time preview
+                description:
+                  type: text
+                  value: >-
+                    Create new pages from existing components, try different
+                    variants and customize the theme.
+        variant: imageRight
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7fef684c-39d1-46e2-b160-3b3ad0cdac8a
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Unleash your content. Unchain from the backlog.
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: >+
+              Our Component Starter Kit is built on a TNT stack - Typescript,
+              Next.js, and TailwindCSS. That means it’s completely customizable
+              and adaptable for what you need to build.
+
+          eyebrowText:
+            type: text
+            value: something for the marketer
+      - _id: a952a7c9-697c-4dc4-a8e5-4614fef5419b
+        type: cardBlock
+        slots:
+          cardBlockInner:
+            - _id: f0d8e26b-683f-4ae8-b335-426c894a0931
+              type: grid
+              slots:
+                grid-inner:
+                  - _id: 5aa9b20e-3146-455e-a88d-a5c8769a5c6c
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 6441e6db-cf49-4754-80fb-91859b9dd426
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Heroes
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: See all heroes
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/heroes
+                          type: projectMapNode
+                          nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: |
+                          Not just for one day
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: fc361f40-ad1a-4950-a03c-4a84f5cfc423
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: 8eea1b56-4a64-41a2-980f-849d57527ca4
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Card Blocks
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: Play with more cards
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/card-blocks
+                          type: projectMapNode
+                          nodeId: 88ede0b7-bb7c-4d6b-b3f8-10b545bd986b
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: Pick a card, any card…
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+                  - _id: 4316b6f4-c818-4f33-9d6a-094f6c01818d
+                    type: card
+                    variant: backgroundImage
+                    parameters:
+                      badge:
+                        type: text
+                        value: New
+                      image:
+                        type: asset
+                        value:
+                          - _id: aab37658-1329-4fa2-a5d5-56500aa6a4cb
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                                type: text
+                              file:
+                                type: file
+                                value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                              size:
+                                value: 76327
+                                type: number
+                              title:
+                                type: text
+                                value: hero_rectangle.png
+                              width:
+                                value: 510
+                                type: number
+                              height:
+                                value: 496
+                                type: number
+                              mediaType:
+                                value: image/png
+                                type: text
+                            _source: uniform-assets
+                      title:
+                        type: text
+                        value: Featured Callouts
+                      objectFit:
+                        type: select
+                        value: cover
+                      badgeStyle:
+                        type: tp-badge-style-parameter
+                        value: accent
+                      buttonCopy:
+                        type: text
+                        value: All Featured Callouts
+                      buttonLink:
+                        type: link
+                        value:
+                          path: /components/featured-callouts
+                          type: projectMapNode
+                          nodeId: 97c2b0b3-66d9-4ecd-88dd-36bf5ce8144a
+                          projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                      buttonStyle:
+                        type: tp-button-style-parameter
+                        value: primary
+                      description:
+                        type: text
+                        value: |
+                          The call of the wild
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: base-300
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 50%
+                      textColorVariant:
+                        type: select
+                        value: Light
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: none
+              parameters:
+                gapX:
+                  type: tp-slider-parameter
+                  value: small
+                gapY:
+                  type: tp-slider-parameter
+                  value: none
+                title:
+                  type: text
+                  value: Inner Grid
+                paddingTop:
+                  type: select
+                  value: None
+                columnsCount:
+                  type: tp-slider-parameter
+                  value: '3'
+                paddingBottom:
+                  type: select
+                  value: None
+        parameters:
+          title:
+            type: text
+            value: Featured components
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          buttonStyle:
+            type: tp-button-style-parameter
+            value: primary
+          description:
+            type: text
+            value: >-
+              There are lots of components to choose from, but these are our
+              favorites. There are more coming, so it's always worth checking
+              again.
+      - _id: 5baddcdc-228e-4013-9243-ccfcfd7d8a17
+        type: accordion
+        slots:
+          items:
+            - _id: 92d7f00f-d300-4fee-8f02-45305892ac4c
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: How much does the Component Starter Kit cost?
+                description:
+                  type: text
+                  value: >-
+                    Exactly $0. These components are totally open source and
+                    available for anyone to use.
+            - _id: 40feaadf-2bb2-4d6c-87d7-d72487a6aab8
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: Can I use these components for commercial projects?
+                description:
+                  type: text
+                  value: Yes you can! We’d be very happy if you do.
+            - _id: 6ef4f9f8-90e5-4fc6-8290-6a48b0f8046b
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: Are there more components coming?
+                description:
+                  type: text
+                  value: >-
+                    There will be, and we have some big ideas. Get in touch if
+                    there’s anything you want to see here.
+            - _id: 68387eb3-5d35-4f58-99aa-3dcc7f628cfc
+              type: accordionItem
+              parameters:
+                title:
+                  type: text
+                  value: Can I connect my own content and data to these components?
+                description:
+                  type: text
+                  value: >-
+                    Of course! You can use a pre-built Uniform integration or
+                    connect to any REST-based API source using Uniform. You can
+                    learn more in our documentation.
+        parameters:
+          title:
+            type: text
+            value: Frequently Asked Questions
+          description:
+            type: text
+            value: >-
+              Answer your customers possible questions here, it will increase
+              the conversion rate as well as support or chat requests.
+      - _id: 8fff3946-2b9b-45c4-ab24-c56e5ef09d19
+        type: hero
+        variant: imageRight
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 0956ce89-e3e5-43b2-b72e-f34475a9722c
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 27494b32-5697-465f-8c36-db62a2ab45ce
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: >-
+              Now it's time to see how Uniform can help you accelerate building
+              modern digital experiences.
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: |
+              We’d love to show you.
+          eyebrowText:
+            type: text
+            value: Now this is Empowering!
+          paddingBottom:
+            type: select
+            value: Medium
+          primaryButtonCopy:
+            type: text
+            value: Book a free demo now
+          primaryButtonLink:
+            type: link
+            value:
+              path: https://uniform.dev/demo?utm_source=component-starter-kit
+              type: url
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: primary
+          secondaryButtonCopy:
+            type: text
+            value: No Uniform access? Request one
+          secondaryButtonLink:
+            type: link
+            value:
+              path: https://uniform.dev/try?utm_source=component-starter-kit
+              type: url
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+created: '2024-02-06T11:14:33.660819+00:00'
+modified: '2024-02-08T16:28:46.082643+00:00'
+pattern: false

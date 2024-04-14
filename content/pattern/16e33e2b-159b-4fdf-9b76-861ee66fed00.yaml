@@ -1,0 +1,708 @@
+composition:
+  _name: Stat component
+  _id: 16e33e2b-159b-4fdf-9b76-861ee66fed00
+  type: grid
+  parameters:
+    gapX:
+      type: tp-slider-parameter
+      value: none
+    gapY:
+      type: tp-slider-parameter
+      value: none
+    title:
+      type: text
+      value: Stats items
+    columnsCount:
+      type: tp-slider-parameter
+      value: '4'
+  slots:
+    grid-inner:
+      - _id: bdb808a9-65be-48f2-90fd-2a3b4e854ec0
+        type: box
+        slots:
+          content:
+            - _id: 323ad567-ca7d-41ac-ba3a-256cff2357a8
+              type: box
+              slots:
+                content:
+                  - _id: 1056efa6-0d64-4a1f-8016-4e6a08b658ab
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Image 1
+                      src:
+                        type: asset
+                        value:
+                          - _id: eb1c1578-f75d-4912-9211-047f814d334d
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 77f67343-7bcc-412a-bd21-fc33636f3764
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/lSr7wGxZQjOfN1bxtC2wXA/LwLRbREdR4iI4p9wMlwHiw-next.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 5d019bf9-dc0c-44d2-92f9-fa93cf37feb8
+                              size:
+                                value: 327
+                                type: number
+                              title:
+                                type: text
+                                value: next.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                    _overridability:
+                      parameters:
+                        alt: 'yes'
+                        src: 'yes'
+                        fill: 'yes'
+                        width: 'yes'
+                        height: 'yes'
+                        quality: 'yes'
+                        priority: 'yes'
+                        objectFit: 'yes'
+                        borderColor: 'yes'
+                        borderWidth: 'yes'
+                        borderRadius: 'yes'
+                        overlayColor: 'yes'
+                        overlayOpacity: 'yes'
+              _overridability:
+                parameters:
+                  style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
+            - _id: bf5c3066-8e51-411c-a7c7-be68d4c08d2e
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: span
+                size:
+                  type: tp-segmented-control-parameter
+                  value: XL
+                text:
+                  type: text
+                  value: Max Speed
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+            - _id: e0528844-a698-4337-b1a4-cae73ff01ae5
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: p
+                size:
+                  type: tp-segmented-control-parameter
+                  value: Base
+                text:
+                  type: text
+                  value: 61 mph
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+        parameters:
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
+        _overridability:
+          parameters:
+            style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
+      - _id: c3d257f2-d4ef-4ece-8a8f-b9cba54ae3d0
+        type: box
+        slots:
+          content:
+            - _id: f96cc978-7a24-4310-9a09-f007de916a82
+              type: box
+              slots:
+                content:
+                  - _id: d9d790e9-5030-4390-b93f-c820642bd9eb
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Image 2
+                      src:
+                        type: asset
+                        value:
+                          - _id: 05dd1d4c-b0c9-4e8f-85ff-bfb0a8e99b66
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 28b936d7-4c98-414d-b1fa-d3594ed08082
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/lSr7wGxZQjOfN1bxtC2wXA/SVuEkEWJSoWA1_T2IHiHsA-mount.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 8cc10310-5784-4001-b5a9-d0c1e2195878
+                              size:
+                                value: 223
+                                type: number
+                              title:
+                                type: text
+                                value: mount.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                    _overridability:
+                      parameters:
+                        alt: 'yes'
+                        src: 'yes'
+                        fill: 'yes'
+                        width: 'yes'
+                        height: 'yes'
+                        quality: 'yes'
+                        priority: 'yes'
+                        objectFit: 'yes'
+                        borderColor: 'yes'
+                        borderWidth: 'yes'
+                        borderRadius: 'yes'
+                        overlayColor: 'yes'
+                        overlayOpacity: 'yes'
+              _overridability:
+                parameters:
+                  style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
+            - _id: 12382352-e9f8-4e37-bb93-9eba5f18a1f2
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: span
+                size:
+                  type: tp-segmented-control-parameter
+                  value: XL
+                text:
+                  type: text
+                  value: Ride Height
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+            - _id: b80620bf-fb75-4edb-878a-c19f5c0c09f5
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: p
+                size:
+                  type: tp-segmented-control-parameter
+                  value: Base
+                text:
+                  type: text
+                  value: 124 feet
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+        parameters:
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
+        _overridability:
+          parameters:
+            style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
+      - _id: 0025c3cf-8611-4b82-b203-6d9fc8f50e3f
+        type: box
+        slots:
+          content:
+            - _id: 6055b76f-ce18-4cbd-aa30-b842b5d665a8
+              type: box
+              slots:
+                content:
+                  - _id: 42d13517-eb44-4e54-8f79-98ba253d0027
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Image 3
+                      src:
+                        type: asset
+                        value:
+                          - _id: a5e2ce8a-2258-466b-bb78-adb07cddd2e4
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 0adb96e6-fb1e-40b5-a352-14ce73091bef
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/lSr7wGxZQjOfN1bxtC2wXA/45Y6bFypRSuv22GRPwVpyg-gear.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 1fa4f424-1003-4090-9a3b-a83452a43ad6
+                              size:
+                                value: 1109
+                                type: number
+                              title:
+                                type: text
+                                value: gear.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                    _overridability:
+                      parameters:
+                        alt: 'yes'
+                        src: 'yes'
+                        fill: 'yes'
+                        width: 'yes'
+                        height: 'yes'
+                        quality: 'yes'
+                        priority: 'yes'
+                        objectFit: 'yes'
+                        borderColor: 'yes'
+                        borderWidth: 'yes'
+                        borderRadius: 'yes'
+                        overlayColor: 'yes'
+                        overlayOpacity: 'yes'
+              _overridability:
+                parameters:
+                  style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
+            - _id: 921ff077-be83-483e-92dc-05339bc8d194
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: span
+                size:
+                  type: tp-segmented-control-parameter
+                  value: XL
+                text:
+                  type: text
+                  value: Ride Length
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+            - _id: 9f193f28-598a-4def-ab6e-17973f1faf4a
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: p
+                size:
+                  type: tp-segmented-control-parameter
+                  value: Base
+                text:
+                  type: text
+                  value: 2,800 feet
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+        parameters:
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
+        _overridability:
+          parameters:
+            style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
+      - _id: f7643e62-4782-41a7-9790-8fa3276dafd2
+        type: box
+        slots:
+          content:
+            - _id: 878736c2-679a-41db-841e-c9bcf6aa3b72
+              type: box
+              slots:
+                content:
+                  - _id: 7623395e-90e6-4691-8e03-69a8878cba8e
+                    type: image
+                    parameters:
+                      alt:
+                        type: text
+                        value: Image 4
+                      src:
+                        type: asset
+                        value:
+                          - _id: aab79615-69e8-4f68-a819-ab5e7330230c
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 2f846de5-74be-41a3-a181-a7fc7b7c38ca
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/lSr7wGxZQjOfN1bxtC2wXA/vebDcO3gQtGKYE2SErmgGw-clock.svg
+                                type: text
+                              file:
+                                type: file
+                                value: 3b469cc5-2bda-45ca-9be0-631f60bdf396
+                              size:
+                                value: 414
+                                type: number
+                              title:
+                                type: text
+                                value: clock.svg
+                              width:
+                                value: 24
+                                type: number
+                              height:
+                                value: 24
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      borderRadius:
+                        type: tp-slider-parameter
+                        value: none
+                      overlayColor:
+                        type: tp-color-style-parameter
+                        value: accent
+                      overlayOpacity:
+                        type: tp-slider-parameter
+                        value: 0%
+                    _overridability:
+                      parameters:
+                        alt: 'yes'
+                        src: 'yes'
+                        fill: 'yes'
+                        width: 'yes'
+                        height: 'yes'
+                        quality: 'yes'
+                        priority: 'yes'
+                        objectFit: 'yes'
+                        borderColor: 'yes'
+                        borderWidth: 'yes'
+                        borderRadius: 'yes'
+                        overlayColor: 'yes'
+                        overlayOpacity: 'yes'
+              _overridability:
+                parameters:
+                  style: 'yes'
+                  width: 'yes'
+                  height: 'yes'
+                  display: 'yes'
+                  textAlign: 'yes'
+                  alignItems: 'yes'
+                  flexDirection: 'yes'
+                  justifyContent: 'yes'
+            - _id: ddfd1b96-3690-48c1-b3fc-2b0c43e9247d
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: span
+                size:
+                  type: tp-segmented-control-parameter
+                  value: XL
+                text:
+                  type: text
+                  value: Ride Time
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: '700'
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+            - _id: c7168416-f33a-45a5-a37f-de4464548890
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: p
+                size:
+                  type: tp-segmented-control-parameter
+                  value: Base
+                text:
+                  type: text
+                  value: 2 minutes, 15 seconds
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary
+                fontWeight:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                whiteSpace:
+                  type: tp-segmented-control-parameter
+                  value: normal
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  fontWeight: 'yes'
+                  whiteSpace: 'yes'
+                  letterSpacing: 'yes'
+        parameters:
+          display:
+            type: tp-segmented-control-parameter
+            value: flex
+          textAlign:
+            type: tp-segmented-control-parameter
+            value: center
+          alignItems:
+            type: tp-segmented-control-parameter
+            value: center
+          flexDirection:
+            type: tp-segmented-control-parameter
+            value: column
+        _overridability:
+          parameters:
+            style: 'yes'
+            width: 'yes'
+            height: 'yes'
+            display: 'yes'
+            textAlign: 'yes'
+            alignItems: 'yes'
+            flexDirection: 'yes'
+            justifyContent: 'yes'
+  _overridability:
+    parameters:
+      gapX: 'yes'
+      gapY: 'yes'
+      title: 'yes'
+      marginTop: 'yes'
+      paddingTop: 'yes'
+      columnsCount: 'yes'
+      marginBottom: 'yes'
+      paddingBottom: 'yes'
+      backgroundType: 'yes'
+      containerVariant: 'yes'
+created: '2024-04-14T20:01:41.457365+00:00'
+modified: '2024-04-14T20:14:44.382063+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Stat_preview_image

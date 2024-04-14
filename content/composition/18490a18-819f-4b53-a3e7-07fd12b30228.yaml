@@ -1,0 +1,283 @@
+composition:
+  _name: Video Player
+  _id: 18490a18-819f-4b53-a3e7-07fd12b30228
+  _slug: videos
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: 'Video Player component : CSK'
+    pageMetaDescription:
+      type: text
+      value: >-
+        Performance-optimized video players that are multi-source capable. Get
+        your YouTube, Vimeo, etc. content rendered.
+  slots:
+    pageFooter:
+      - _id: e07dc46e-9c51-4491-8640-eb1814d8385d
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: d6d302e1-880f-462c-826f-6e8889873405
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 1da0b500-f7d4-4305-ae61-0043c5aad2ec
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: d56b3220-61ca-4972-86bb-58261a16c6a9
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Video Player component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              Performance-optimized video players that are multi-source capable.
+              Get your YouTube, Vimeo, etc. content rendered.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: f7481bc7-7689-48c5-8613-8a6c418834ae
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: fb175877-755d-4c21-818b-32f266713215
+        type: content
+        parameters:
+          text:
+            type: text
+            value: >-
+              Lazy loaded, without controls, unmuted. See more playback
+              settings...
+          title:
+            type: text
+            value: Video Player variant - YouTube
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 7371b384-b44f-41a5-af04-8ee18c921a06
+        type: container
+        slots:
+          container-inner:
+            - _id: 8ed78e36-e6cc-4712-98a0-906d0f1219e2
+              type: video
+              parameters:
+                url:
+                  type: link
+                  value:
+                    path: https://www.youtube.com/watch?v=qh_ekk7CfZw
+                    type: url
+                lazyLoad:
+                  type: checkbox
+                  value: true
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: YouTube Video
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 4114e606-cedd-404c-9333-ec9f4c53e35f
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: ad6bce49-677b-4f84-a5cc-cb5ae1694b25
+        type: content
+        parameters:
+          text:
+            type: text
+            value: >-
+              Lazy loaded, without controls, unmuted. See more playback
+              settings...
+          title:
+            type: text
+            value: Video Player variant - YouTube with placeholder image
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 1623fc32-d00e-454d-a347-90e3c1589dee
+        type: container
+        slots:
+          container-inner:
+            - _id: f2fbe6a0-9e3f-43dc-8cf0-f43edadf1c3f
+              type: video
+              parameters:
+                url:
+                  type: link
+                  value:
+                    path: https://www.youtube.com/watch?v=HjQ--q22sxw
+                    type: url
+                lazyLoad:
+                  type: checkbox
+                  value: true
+                placeholderImage:
+                  type: asset
+                  value:
+                    - _id: 28c7aecf-8812-43c6-add2-fee5435feaca
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 98f4cb70-ea7b-4aa0-9224-38a9c35e5056
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/P66exJASRfSDsxJpc9HnGw-webinar_poster.png
+                          type: text
+                        file:
+                          type: file
+                          value: 7f114d45-a4cf-43a1-9ab1-93f8eda0a311
+                        size:
+                          value: 197218
+                          type: number
+                        title:
+                          type: text
+                          value: webinar_poster.png
+                        width:
+                          value: 1280
+                          type: number
+                        height:
+                          value: 720
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: YouTube with placeholder image
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: e7db4ef7-2e12-46d3-b6cf-be9712e3540d
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: b81fd61e-f33f-4f0c-afbf-8b759f806a8a
+        type: content
+        parameters:
+          text:
+            type: text
+            value: >-
+              Lazy loaded, without controls, unmuted. See more playback
+              settings...
+          title:
+            type: text
+            value: Video Player Variant - Vimeo
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 0ec4643e-283d-4d85-95ef-a3901bb0f03b
+        type: container
+        slots:
+          container-inner:
+            - _id: 1a69353c-2a72-4fdd-9243-a9647cef1b56
+              type: video
+              parameters:
+                url:
+                  type: link
+                  value:
+                    path: https://vimeo.com/838451446
+                    type: url
+                lazyLoad:
+                  type: checkbox
+                  value: true
+        variant: ''
+        parameters:
+          title:
+            type: text
+            value: Vimeo Video
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+created: '2023-09-21T21:17:19.51565+00:00'
+modified: '2024-02-08T21:15:14.294266+00:00'
+pattern: false

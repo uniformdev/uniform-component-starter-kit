@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 98f4cb70-ea7b-4aa0-9224-38a9c35e5056
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: webinar_poster.png
+    file:
+      type: file
+      value: 7f114d45-a4cf-43a1-9ab1-93f8eda0a311
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/P66exJASRfSDsxJpc9HnGw-webinar_poster.png
+      type: text
+    size:
+      value: 197218
+      type: number
+    width:
+      value: 1280
+      type: number
+    height:
+      value: 720
+      type: number
+    custom: {}
+created: '2023-12-13T13:42:15.130872+00:00'
+modified: '2023-12-13T13:42:15.130872+00:00'

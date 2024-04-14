@@ -1,0 +1,23 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: coveo-resultList
+name: Result List
+icon: play-list-search
+parameters: []
+categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Coveo/Result_list_preview_image
+useTeamPermissions: true
+slots:
+  - id: resultItemComponent
+    name: Result Item Component
+    maxComponents: 1
+    minComponents: 1
+    allowedComponents:
+      - coveo-resultListItem
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+canBeComposition: false
+created: '2023-11-23T08:52:40.039422+00:00'
+updated: '2023-11-23T09:02:46.560143+00:00'

@@ -15,7 +15,7 @@ type Story = StoryObj<typeof Review>;
 const args = {
   personName: 'Hector Gibbons',
   picture:
-    'https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.avif',
+    'https://res.cloudinary.com/uniform-demos/image/upload/v1692279682/csk-marketing/photo-1500648767791-00dcc994a43e_h3two9_jylmf3.jpg',
   date: 'July 12, 2021',
   stars: 5,
   title: "Can't say enough good things",

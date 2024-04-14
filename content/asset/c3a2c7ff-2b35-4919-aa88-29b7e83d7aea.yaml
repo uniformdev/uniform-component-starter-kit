@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: c3a2c7ff-2b35-4919-aa88-29b7e83d7aea
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: touch-press-click-svgrepo-com.svg
+    file:
+      type: file
+      value: 9d90b889-557a-4b4e-ac71-0e59b180754f
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/mz7rjvIeRHGbZyypPL9qMg/LVVYWngJQkij1zDGN59QIg-touch-press-click-svgrepo-com.svg
+      type: text
+    size:
+      value: 2772
+      type: number
+    width:
+      value: 800
+      type: number
+    height:
+      value: 800
+      type: number
+    custom: {}
+created: '2024-01-15T11:11:31.30533+00:00'
+modified: '2024-01-15T11:11:31.30533+00:00'

@@ -1,0 +1,347 @@
+composition:
+  _name: Banners
+  _id: c88ff38b-1703-4c03-bdeb-17c1e3133202
+  _slug: banners
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Banners
+    pageMetaDescription:
+      type: text
+      value: Custom banners if you need something to show as banner.
+  slots:
+    pageFooter:
+      - _id: 02fcb21b-3272-4206-b289-db65c0c1c6ef
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: f844c710-6426-4b67-bbdc-da7f97533135
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 6b530dff-d417-4a3b-84bc-305f9465b47d
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 908c2780-ee05-408a-9240-8c43700f3610
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Banners
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Custom banners if you need something to show as banner.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: a60834b7-ae62-4392-ba28-5193bed6d454
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: bc5fd4a9-d7db-4232-8fee-12a83d60b67b
+        type: content
+        parameters:
+          text:
+            type: text
+            value: banner with top position
+          title:
+            type: text
+            value: Top Variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: d6a1a40d-d431-4e64-a302-8e56a5c63579
+        type: banner
+        variant: ''
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 26149ac8-35a4-468a-abb1-a13205fb1a0d
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: eed5aadc-e335-4f1b-a9c5-dec180489cf4
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/mK1VMuKERPGI3gFQh3ow7Q-cookie_icon.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 64766ead-cf6f-4d66-81c7-4d5e5997e511
+                  size:
+                    value: 3617
+                    type: number
+                  title:
+                    type: text
+                    value: cookie_icon.svg
+                  width:
+                    value: 59
+                    type: number
+                  height:
+                    value: 59
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Top Variant Cookie Banner
+          inline:
+            type: checkbox
+            value: true
+          position:
+            type: select
+            value: top
+          textAlign:
+            type: tp-horizontal-align-parameter
+            value: left
+          description:
+            type: text
+            value: Description can be added here
+          primaryButtonCopy:
+            type: text
+            value: Go Home
+          primaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+      - _id: 75a51a43-e1e9-41fc-9bd0-a13a565c05a6
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: 3130bd1b-5a5a-4d0f-b16d-0fe5097f02cd
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Center full width variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 37446514-f486-4632-aca2-80f20e13573d
+        type: banner
+        variant: fullWidth
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 8b3fddf6-9fd8-4db0-a067-4249b99682cf
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: eed5aadc-e335-4f1b-a9c5-dec180489cf4
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/mK1VMuKERPGI3gFQh3ow7Q-cookie_icon.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 64766ead-cf6f-4d66-81c7-4d5e5997e511
+                  size:
+                    value: 3617
+                    type: number
+                  title:
+                    type: text
+                    value: cookie_icon.svg
+                  width:
+                    value: 59
+                    type: number
+                  height:
+                    value: 59
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Center Full Width Variant
+          inline:
+            type: checkbox
+            value: true
+          position:
+            type: select
+            value: center
+          textAlign:
+            type: tp-horizontal-align-parameter
+            value: left
+          description:
+            type: text
+            value: Description can be added here
+          primaryButtonCopy:
+            type: text
+            value: Accept
+          primaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: primary
+      - _id: fe6116a5-18a9-4b40-b1da-85de8fc6508b
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Bottom variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 5dd016a6-2917-4f4a-895d-326f9ed35764
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 100px
+      - _id: e00b2645-21e6-4c36-b7b8-d4a25690505b
+        type: banner
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 839e4cfd-55d7-41a0-9533-55ae6cea21a6
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: eed5aadc-e335-4f1b-a9c5-dec180489cf4
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/mK1VMuKERPGI3gFQh3ow7Q-cookie_icon.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 64766ead-cf6f-4d66-81c7-4d5e5997e511
+                  size:
+                    value: 3617
+                    type: number
+                  title:
+                    type: text
+                    value: cookie_icon.svg
+                  width:
+                    value: 59
+                    type: number
+                  height:
+                    value: 59
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Bottom Variant
+          position:
+            type: select
+            value: bottom
+          textAlign:
+            type: tp-horizontal-align-parameter
+            value: left
+          description:
+            type: text
+            value: Description can be added here
+          primaryButtonCopy:
+            type: text
+            value: Accept
+          primaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+          secondaryButtonCopy:
+            type: text
+            value: Decline
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+created: '2023-09-21T21:17:20.435654+00:00'
+modified: '2024-02-08T21:16:28.029113+00:00'
+pattern: false

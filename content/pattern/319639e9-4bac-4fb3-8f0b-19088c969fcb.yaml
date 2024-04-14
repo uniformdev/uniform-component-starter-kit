@@ -1,0 +1,346 @@
+composition:
+  _name: Main Footer
+  _id: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+  type: footer
+  parameters:
+    logo:
+      type: asset
+      value:
+        - _id: ffeb38a1-39bf-454d-9dad-2b440d8f2ffb
+          type: image
+          fields:
+            id:
+              type: text
+              value: 745700bc-f7ef-4130-a2d1-256b828b1293
+            url:
+              value: >-
+                https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/QHYSVIh3Rb-lTXlusBNvPQ-uniform_logo_black.svg
+              type: text
+            file:
+              type: file
+              value: f88f392d-9f0c-43f2-bdcb-4cd855f907a5
+            size:
+              value: 2288
+              type: number
+            title:
+              type: text
+              value: uniform_logo_black.svg
+            width:
+              value: 608
+              type: number
+            height:
+              value: 192
+              type: number
+            mediaType:
+              value: image/svg+xml
+              type: text
+          _source: uniform-assets
+    copyright:
+      type: text
+      value: 2024 Uniform Systems, Inc. All rights reserved.
+    footerText:
+      type: richText
+      value:
+        root:
+          type: root
+          format: ''
+          indent: 0
+          version: 1
+          children:
+            - type: paragraph
+              format: ''
+              indent: 0
+              version: 1
+              children:
+                - mode: normal
+                  text: 'Built with 💙 by folks at '
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://uniform.dev
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: Uniform
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: >-
+                    , standing on the shoulders of these awesome open source
+                    projects:
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://tailwindcss.com/
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: TailwindCSS
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: ', '
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://daisyui.com/
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: DaisyUI
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: ', '
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://react.dev/
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: React
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: ', and '
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://nextjs.org/
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: Next.js
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: '. Deployed to '
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+                - link:
+                    path: https://vercel.com/
+                    type: url
+                  type: link
+                  format: ''
+                  indent: 0
+                  version: 1
+                  children:
+                    - mode: normal
+                      text: Vercel
+                      type: text
+                      style: ''
+                      detail: 0
+                      format: 0
+                      version: 1
+                  direction: ltr
+                - mode: normal
+                  text: .
+                  type: text
+                  style: ''
+                  detail: 0
+                  format: 0
+                  version: 1
+              direction: ltr
+            - type: paragraph
+              format: ''
+              indent: 0
+              version: 1
+              children: []
+              direction: ltr
+          direction: ltr
+    displayBuildTimestamp:
+      type: checkbox
+      value: true
+  slots:
+    section:
+      - _id: 6cc0d519-b1d5-4330-91ff-8f0a95fa6cd5
+        type: navigationSection
+        slots:
+          links:
+            - _id: 6e5548bb-f480-4930-aa19-475a0b05f431
+              type: navigationLink
+              variant: footer
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: >-
+                      https://docs.uniform.app/docs/get-started/component-starter-kit
+                    type: url
+                title:
+                  type: text
+                  value: Documentation
+            - _id: 5b5c7862-e6f7-40f6-9a51-f06299d3ecd7
+              type: navigationLink
+              variant: footer
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: https://components-storybook.uniform.app/
+                    type: url
+                title:
+                  type: text
+                  value: Storybook
+            - _id: e5365d0c-00d9-42d2-90eb-4446084cc3c0
+              type: navigationLink
+              variant: footer
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: https://components.uniform.app/
+                    type: url
+                title:
+                  type: text
+                  value: Demo
+        parameters:
+          title:
+            type: text
+            value: Key resources
+    iconLinks:
+      - _id: 5ebfeac4-2e19-42fa-b71c-e3ffb179bc61
+        type: iconLink
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: 622cc594-e795-44a7-9643-fe468f0c4e0b
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 6e4df38e-7e0f-4f10-a490-d91ebc6ef84a
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/HwXZcb0XQWW8W17eUNo6lQ-storybook_icon.svg
+                    type: text
+                  file:
+                    type: file
+                    value: a7e2a12d-7ee3-4250-a44d-aa1289aa8d1c
+                  size:
+                    value: 7943
+                    type: number
+                  title:
+                    type: text
+                    value: storybook_icon.svg
+                  width:
+                    value: 38
+                    type: number
+                  height:
+                    value: 38
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          link:
+            type: link
+            value:
+              path: https://components-storybook.uniform.app/
+              type: url
+      - _id: a743d3e8-28d6-4d44-adfb-71590eba0118
+        type: iconLink
+        parameters:
+          icon:
+            type: asset
+            value:
+              - _id: ab6227e7-e44c-493c-8ba7-d7f9c5e09889
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3fc503ba-876c-4f9a-bb7e-2161de64ef87
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/fO3GkjsgSW-33LOxx6O4Jw-github_icon_black.svg
+                    type: text
+                  file:
+                    type: file
+                    value: 27a9e2a4-bdaf-45a0-ada1-26d7cc09b31a
+                  size:
+                    value: 1327
+                    type: number
+                  title:
+                    type: text
+                    value: github_icon_black.svg
+                  width:
+                    value: 35
+                    type: number
+                  height:
+                    value: 34
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          link:
+            type: link
+            value:
+              path: https://github.com/uniformdev/uniform-component-starter-kit
+              type: url
+created: '2024-01-15T10:23:20.017366+00:00'
+modified: '2024-01-18T12:16:53.649326+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Footer_preview_image
+categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b

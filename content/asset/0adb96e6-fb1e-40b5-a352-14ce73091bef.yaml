@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 0adb96e6-fb1e-40b5-a352-14ce73091bef
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: gear.svg
+    file:
+      type: file
+      value: d506907c-1ecf-4b57-bfc6-256cf3a876a5
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/KcF-bFdcRtyheUhNLlEDJA/GEi3VuE4TB-duH9JrJ8Txg-gear.svg
+      type: text
+    size:
+      value: 1109
+      type: number
+    width:
+      value: 24
+      type: number
+    height:
+      value: 24
+      type: number
+    custom: {}
+created: '2024-01-09T08:55:59.545573+00:00'
+modified: '2024-01-09T08:55:59.545573+00:00'

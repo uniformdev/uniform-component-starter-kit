@@ -1,0 +1,599 @@
+composition:
+  _name: Testimonials
+  _id: cb29df8c-6573-44f4-ad0a-f037faa9f561
+  _slug: testimonials
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Component Starter Kit Testimonials
+    pageMetaDescription:
+      type: text
+      value: >-
+        Elevate credibility and trust with compelling testimonials. Explore the
+        significance of testimonials in building credibility, boosting
+        conversions, and enhancing brand reputation.
+  slots:
+    pageFooter:
+      - _id: 375ca5d7-8579-4322-b018-e311a1afed1e
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 13e73105-9f7b-4d41-9965-0b34f44b0f47
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: da2629b8-d924-4e4a-a027-cb3dcea7a180
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 13e9dd00-e853-4199-924c-06b0bfe7285a
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Testimonials component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: c0fccd1b-a581-4178-99a8-0c05ae7481dd
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 6e5dcb8f-3674-4750-826d-625d50e1ca90
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Default variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 56a20100-ff7d-44e1-aed7-181a02ffa364
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 55fbd218-325a-43ec-a4aa-cf469cdf972f
+              type: gridItem
+              slots:
+                inner:
+                  - _id: d99bd068-3b10-4fe2-a0eb-aa59dc439742
+                    type: testimonial
+                    parameters:
+                      logo:
+                        type: asset
+                        value:
+                          - _id: b4cbaecf-ff20-4ce7-bf37-2e9b3ad9fcd8
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 745700bc-f7ef-4130-a2d1-256b828b1293
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/QHYSVIh3Rb-lTXlusBNvPQ-uniform_logo_black.svg
+                                type: text
+                              file:
+                                type: file
+                                value: c36bd6a5-5075-4e49-991e-346764096e6c
+                              size:
+                                value: 2288
+                                type: number
+                              title:
+                                type: text
+                                value: uniform_logo_black.svg
+                              width:
+                                value: 608
+                                type: number
+                              height:
+                                value: 192
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      picture:
+                        type: asset
+                        value:
+                          - _id: 73078890-1be9-450f-a835-536585324196
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 52d383d4-1db8-4349-aff4-75182d6f6361
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/xy5UkA6vTfeH7fd7Hnj0fA-person_photo_1.jpg
+                                type: text
+                              file:
+                                type: file
+                                value: f2cb1df1-8d3f-4e6c-b7e0-627e228936ba
+                              size:
+                                value: 8294
+                                type: number
+                              title:
+                                type: text
+                                value: person_photo_1.jpg
+                              width:
+                                value: 256
+                                type: number
+                              height:
+                                value: 256
+                                type: number
+                              mediaType:
+                                value: image/jpeg
+                                type: text
+                            _source: uniform-assets
+                      personName:
+                        type: text
+                        value: Hector Gibbons
+                      description:
+                        type: text
+                        value: >-
+                          Amet amet eget scelerisque tellus sit neque faucibus
+                          non eleifend. Integer eu praesent at a. Ornare arcu
+                          gravida natoque erat et cursus tortor consequat at.
+                          Vulputate gravida sociis enim nullam ultricies
+                          habitant malesuada lorem ac. Tincidunt urna dui
+                          pellentesque sagittis.Ornare arcu gravida natoque erat
+                          et cursus tortor consequat at
+                      personPosition:
+                        type: text
+                        value: CEO of Uniform
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+              parameters:
+                title:
+                  type: text
+                  value: First testimonial
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: 1c847894-37cc-4217-99fb-3fd4aa8dc3cb
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 35da5e26-8da6-4fca-b428-4476132ec912
+                    type: testimonial
+                    parameters:
+                      logo:
+                        type: asset
+                        value:
+                          - _id: f50419cf-7890-4b34-81f2-d152340f2a03
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 745700bc-f7ef-4130-a2d1-256b828b1293
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/QHYSVIh3Rb-lTXlusBNvPQ-uniform_logo_black.svg
+                                type: text
+                              file:
+                                type: file
+                                value: c36bd6a5-5075-4e49-991e-346764096e6c
+                              size:
+                                value: 2288
+                                type: number
+                              title:
+                                type: text
+                                value: uniform_logo_black.svg
+                              width:
+                                value: 608
+                                type: number
+                              height:
+                                value: 192
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      picture:
+                        type: asset
+                        value:
+                          - _id: 5e124617-f44b-4da4-9e75-b2466e223b0a
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: d094a8b2-2993-4ec5-8665-60902503a848
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/gbqtvjl0SHSKZpmb70j6iA-person_photo_2.jpg
+                                type: text
+                              file:
+                                type: file
+                                value: c36dc7a8-b0d8-4dad-a2b3-2c0e37f24421
+                              size:
+                                value: 18613
+                                type: number
+                              title:
+                                type: text
+                                value: person_photo_2.jpg
+                              width:
+                                value: 256
+                                type: number
+                              height:
+                                value: 256
+                                type: number
+                              mediaType:
+                                value: image/jpeg
+                                type: text
+                            _source: uniform-assets
+                      personName:
+                        type: text
+                        value: Emily Selman
+                      description:
+                        type: text
+                        value: >-
+                          Excepteur veniam labore ullamco eiusmod. Pariatur
+                          consequat proident duis dolore nulla veniam
+                          reprehenderit nisi officia voluptate incididunt
+                          exercitation exercitation elit. Nostrud veniam sint
+                          dolor nisi ullamco.Pariatur consequat proident duis
+                          dolore nulla veniam reprehenderit nisi officia
+                          voluptate incididunt exercitation exercitation elit.
+                      personPosition:
+                        type: text
+                        value: CTO of Uniform
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+              parameters:
+                title:
+                  type: text
+                  value: First testimonial
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: none
+          title:
+            type: text
+            value: Testimonial Container
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '2'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: aee676d0-488c-4d44-9122-ae182a3c751b
+        type: content
+        parameters:
+          title:
+            type: text
+            value: Card Wrapper variant
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+      - _id: 8c07a0fa-66f4-4ada-b8eb-09715636a76b
+        type: grid
+        slots:
+          grid-inner:
+            - _id: 1f9285ef-988e-431e-a90b-8e18ced9419f
+              type: gridItem
+              slots:
+                inner:
+                  - _id: dd4cc151-f952-41b9-ad47-cf95dfda10e3
+                    type: testimonial
+                    variant: cardWrapped
+                    parameters:
+                      logo:
+                        type: asset
+                        value:
+                          - _id: 9ae8b360-34e2-453c-ba4d-8cec07278f78
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 745700bc-f7ef-4130-a2d1-256b828b1293
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/QHYSVIh3Rb-lTXlusBNvPQ-uniform_logo_black.svg
+                                type: text
+                              file:
+                                type: file
+                                value: c36bd6a5-5075-4e49-991e-346764096e6c
+                              size:
+                                value: 2288
+                                type: number
+                              title:
+                                type: text
+                                value: uniform_logo_black.svg
+                              width:
+                                value: 608
+                                type: number
+                              height:
+                                value: 192
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      picture:
+                        type: asset
+                        value:
+                          - _id: 12eeb7bf-b817-4417-a4e1-5d9401fece92
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 52d383d4-1db8-4349-aff4-75182d6f6361
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/xy5UkA6vTfeH7fd7Hnj0fA-person_photo_1.jpg
+                                type: text
+                              file:
+                                type: file
+                                value: f2cb1df1-8d3f-4e6c-b7e0-627e228936ba
+                              size:
+                                value: 8294
+                                type: number
+                              title:
+                                type: text
+                                value: person_photo_1.jpg
+                              width:
+                                value: 256
+                                type: number
+                              height:
+                                value: 256
+                                type: number
+                              mediaType:
+                                value: image/jpeg
+                                type: text
+                            _source: uniform-assets
+                      personName:
+                        type: text
+                        value: Hector Gibbons
+                      description:
+                        type: text
+                        value: >-
+                          Amet amet eget scelerisque tellus sit neque faucibus
+                          non eleifend. Integer eu praesent at a. Ornare arcu
+                          gravida natoque erat et cursus tortor consequat at.
+                          Vulputate gravida sociis enim nullam ultricies
+                          habitant malesuada lorem ac. Tincidunt urna dui
+                          pellentesque sagittis.Ornare arcu gravida natoque erat
+                          et cursus tortor consequat at
+                      personPosition:
+                        type: text
+                        value: CEO of Uniform
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+              parameters:
+                title:
+                  type: text
+                  value: First testimonial
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+            - _id: 3760c496-85ab-42b1-bd65-f3dba79e2344
+              type: gridItem
+              slots:
+                inner:
+                  - _id: 071fde5f-306d-44bb-8cfe-78d94282341d
+                    type: testimonial
+                    variant: cardWrapped
+                    parameters:
+                      logo:
+                        type: asset
+                        value:
+                          - _id: b9b60ca8-1844-4af9-805d-18286f73c863
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: 745700bc-f7ef-4130-a2d1-256b828b1293
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/QHYSVIh3Rb-lTXlusBNvPQ-uniform_logo_black.svg
+                                type: text
+                              file:
+                                type: file
+                                value: c36bd6a5-5075-4e49-991e-346764096e6c
+                              size:
+                                value: 2288
+                                type: number
+                              title:
+                                type: text
+                                value: uniform_logo_black.svg
+                              width:
+                                value: 608
+                                type: number
+                              height:
+                                value: 192
+                                type: number
+                              mediaType:
+                                value: image/svg+xml
+                                type: text
+                            _source: uniform-assets
+                      picture:
+                        type: asset
+                        value:
+                          - _id: 0e640ae9-bed8-4c28-aa27-557a32b9fcd6
+                            type: image
+                            fields:
+                              id:
+                                type: text
+                                value: d094a8b2-2993-4ec5-8665-60902503a848
+                              url:
+                                value: >-
+                                  https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/gbqtvjl0SHSKZpmb70j6iA-person_photo_2.jpg
+                                type: text
+                              file:
+                                type: file
+                                value: c36dc7a8-b0d8-4dad-a2b3-2c0e37f24421
+                              size:
+                                value: 18613
+                                type: number
+                              title:
+                                type: text
+                                value: person_photo_2.jpg
+                              width:
+                                value: 256
+                                type: number
+                              height:
+                                value: 256
+                                type: number
+                              mediaType:
+                                value: image/jpeg
+                                type: text
+                            _source: uniform-assets
+                      personName:
+                        type: text
+                        value: Emily Selman
+                      description:
+                        type: text
+                        value: >-
+                          Excepteur veniam labore ullamco eiusmod. Pariatur
+                          consequat proident duis dolore nulla veniam
+                          reprehenderit nisi officia voluptate incididunt
+                          exercitation exercitation elit. Nostrud veniam sint
+                          dolor nisi ullamco.Pariatur consequat proident duis
+                          dolore nulla veniam reprehenderit nisi officia
+                          voluptate incididunt exercitation exercitation elit.
+                      personPosition:
+                        type: text
+                        value: CTO of Uniform
+                      lineCountRestriction:
+                        type: tp-slider-parameter
+                        value: '5'
+              parameters:
+                title:
+                  type: text
+                  value: First testimonial
+                rowSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                rowStart:
+                  type: tp-slider-parameter
+                  value: None
+                columnSpan:
+                  type: tp-slider-parameter
+                  value: '1'
+                columnStart:
+                  type: tp-slider-parameter
+                  value: none
+        parameters:
+          gapX:
+            type: tp-slider-parameter
+            value: medium
+          gapY:
+            type: tp-slider-parameter
+            value: none
+          title:
+            type: text
+            value: Testimonial Container
+          marginTop:
+            type: select
+            value: None
+          paddingTop:
+            type: select
+            value: None
+          columnsCount:
+            type: tp-slider-parameter
+            value: '2'
+          marginBottom:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+created: '2023-09-21T21:17:21.350796+00:00'
+modified: '2024-02-08T21:16:32.784393+00:00'
+pattern: false

@@ -1,0 +1,660 @@
+composition:
+  _name: Heroes
+  _id: 8e0d242a-4ba6-45c5-a57a-e13f0b2cc193
+  _slug: heroes
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Heroes component
+    pageMetaDescription:
+      type: text
+      value: >-
+        A classic hero component with optional image, button and multiple
+        variants.
+  slots:
+    pageFooter:
+      - _id: 8273a4a0-f343-4874-bf32-222c785e8659
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 2ee6ce67-d980-4bb4-b094-50fe83e90a94
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: f87c0e6a-47ec-4b44-a271-6ed26841cd61
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7e4d1cc3-2f66-414d-b15b-338d2df93dff
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Hero components
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              A classic hero component with optional image, button and multiple
+              variants.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 3fefa476-3a61-4b60-843a-8e4b83fb5b80
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: c2e11a2c-e714-45a6-9b07-78e2b3e1aa10
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 30e337b5-2279-45f0-9018-e98e5a5166dc
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Background Image Hero variant with light text
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+      - _id: 3d70a978-47f9-487a-9a3b-55fb72f71b4b
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 9fea1226-ea9b-473a-b06c-08ebb66df26c
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Background Image Hero variant with dark text
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          overlayColor:
+            type: tp-color-style-parameter
+            value: secondary
+          paddingBottom:
+            type: select
+            value: None
+          overlayOpacity:
+            type: tp-slider-parameter
+            value: 70%
+          containerVariant:
+            type: select
+            value: fluidContent
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: 8658506c-a098-49ff-8f98-4708e2f63f40
+        type: hero
+        variant: imageLeft
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 4bdb263b-4e04-4731-8708-7df260c5632c
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image Left Hero variant
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: link
+      - _id: 6b102555-9ce3-4410-a1e5-8a5b00084385
+        type: hero
+        variant: imageRight
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: f0338bc1-471d-4817-8fd5-68e6c377e395
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: e3963aca-5918-41b5-9ab7-db6785f7bbe3
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/Uq1cHqUkQ-KHkWlCMo7m6w-hero_rectangle.png
+                    type: text
+                  file:
+                    type: file
+                    value: 2fe1e500-57d6-40d1-acf8-d8767f4afc6b
+                  size:
+                    value: 76327
+                    type: number
+                  title:
+                    type: text
+                    value: hero_rectangle.png
+                  width:
+                    value: 510
+                    type: number
+                  height:
+                    value: 496
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image Right Hero variant
+          objectFit:
+            type: select
+            value: cover
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: 1d555785-2f00-4a3a-850f-ee487357d158
+        type: hero
+        variant: twoColumns
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 98bb6d47-373b-4680-98d2-64e53c23c2fc
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Two Columns Hero variant
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonCopy:
+            type: text
+            value: Secondary CTA
+          secondaryButtonLink:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: 5a9c6cac-a0cd-43ca-b2df-8706b1f4ba81
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          secondaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: 50bb2530-163c-429c-87da-77d577058c78
+        type: hero
+        variant: backgroundImage
+        parameters:
+          title:
+            type: text
+            value: Hero with video variant
+          video:
+            type: link
+            value:
+              path: >-
+                https://res.cloudinary.com/uniform-demos/video/upload/v1693387616/videos/pexels-cristian-rojas.mp4
+              type: url
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Very compelling human generated text
+          eyebrowText:
+            type: text
+            value: Eyebrow text
+          overlayColor:
+            type: tp-color-style-parameter
+            value: base-300
+          paddingBottom:
+            type: select
+            value: None
+          overlayOpacity:
+            type: tp-slider-parameter
+            value: 60%
+          containerVariant:
+            type: select
+            value: fluidContent
+          primaryButtonCopy:
+            type: text
+            value: Primary CTA
+          primaryButtonLink:
+            type: link
+            value:
+              path: /components/heroes
+              type: projectMapNode
+              nodeId: fc8a9187-2ae6-4a07-b6e4-6a81b97b0779
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          primaryButtonStyle:
+            type: tp-button-style-parameter
+            value: accent
+      - _id: 90ddf1c7-e345-4c1d-9999-d7d159a86e6d
+        type: box
+        slots:
+          content:
+            - _id: >-
+                90ddf1c7-e345-4c1d-9999-d7d159a86e6d|02c702fa-c53a-429b-8713-42e521693569|1e8815fa-ef65-4ab3-8036-75926c9a97ba
+              type: text
+              parameters:
+                tag:
+                  type: tp-segmented-control-parameter
+                  value: h2
+                size:
+                  type: tp-segmented-control-parameter
+                  value: ''
+                text:
+                  type: text
+                  value: Have you seen the latest atomic components?
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary
+                letterSpacing:
+                  type: tp-segmented-control-parameter
+                  value: ''
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  size: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                  style: 'yes'
+                  letterSpacing: 'yes'
+            - _id: >-
+                90ddf1c7-e345-4c1d-9999-d7d159a86e6d|02c702fa-c53a-429b-8713-42e521693569|96a16b19-3a32-46a2-b300-048abfba807e
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 20px
+              _overridability:
+                variants: true
+                parameters:
+                  thickness: 'yes'
+            - _id: >-
+                90ddf1c7-e345-4c1d-9999-d7d159a86e6d|9d795a1c-c090-4b2a-8af7-12d2312dbeb9
+              type: richText
+              parameters:
+                content:
+                  type: richText
+                  value:
+                    root:
+                      type: root
+                      format: ''
+                      indent: 0
+                      version: 1
+                      children:
+                        - type: paragraph
+                          format: ''
+                          indent: 0
+                          version: 1
+                          children:
+                            - mode: normal
+                              text: >-
+                                Uniform is flexible and allows you to build
+                                experiences with molecule-level components, like
+                                Hero, or build new molecule components without
+                                code using a few atomic components. This
+                                empowers digital teams to move even faster.
+                              type: text
+                              style: ''
+                              detail: 0
+                              format: 0
+                              version: 1
+                          direction: ltr
+                      direction: ltr
+              _overridability:
+                parameters:
+                  color: 'yes'
+                  style: 'yes'
+                  content: 'yes'
+            - _id: aa5972f0-89de-4df3-abab-6fe2c2e07cc9
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 20px
+              _overridability:
+                variants: true
+                parameters:
+                  thickness: 'yes'
+            - _id: 5bf9a29a-074e-440a-be51-ef93ac590cb3
+              type: button
+              parameters:
+                copy:
+                  type: text
+                  value: See atomic component demos
+                link:
+                  type: link
+                  value:
+                    path: /components/atomic-components
+                    type: projectMapNode
+                    nodeId: cddada86-6f75-46ad-a520-d2a39f4bf6fa
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+created: '2024-02-06T11:14:15.896201+00:00'
+modified: '2024-02-08T15:23:59.054828+00:00'
+pattern: false

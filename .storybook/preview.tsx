@@ -1,10 +1,11 @@
 import React from 'react';
-import '../src/styles/globals.scss';
-import '../src/canvas';
+import type { Preview } from '@storybook/react';
 
 import { ThemeProvider } from '../src/components';
 import { getTheme } from '../src/stories/utils/themes';
-import type { Preview } from '@storybook/react';
+
+import '../src/styles/globals.scss';
+import '../src/canvas';
 
 const preview: Preview = {
   decorators: [

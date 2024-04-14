@@ -1,0 +1,235 @@
+composition:
+  _name: Content Blocks
+  _id: 92392ca2-400b-46bb-8892-b775a150b124
+  _slug: content-blocks
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Content Block component
+    pageMetaDescription:
+      type: text
+      value: Components with optional title and text parameters.
+  slots:
+    pageFooter:
+      - _id: ac5ed332-b72b-4271-b928-e5ba518a2642
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: a099e432-2919-4202-ad77-e879d9db086f
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 437a7144-db99-42ca-805a-9e13f033eed2
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: e82d5656-156c-4d90-b666-d5fe6ee09c66
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Content Block component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: Components with optional title and text parameters.
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 601278a7-bf6d-4419-81d3-d8abad514ce3
+        type: breadcrumbs
+        parameters:
+          title:
+            type: text
+            value: Page Breadcrumbs
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: 1add81b4-94b5-4a24-aaf9-aba0ff49e99b
+        type: container
+        slots:
+          container-inner:
+            - _id: 68e80178-78bd-42d7-bfba-72178909e4f5
+              type: box
+              _pattern: 1620d49a-2e3a-4957-875d-8ff97dbd4d55
+            - _id: 0ee2df39-3311-4e07-b83e-e2457fed71a8
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 40px
+            - _id: 29a84e2d-90d2-4fce-a3a8-bf9dcfe2f414
+              type: box
+              _pattern: 1620d49a-2e3a-4957-875d-8ff97dbd4d55
+            - _id: 4671caec-6256-4697-9ba9-ea0696f8e224
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 40px
+            - _id: 0592f417-9376-4fee-b009-520675713bef
+              type: box
+              _pattern: 1620d49a-2e3a-4957-875d-8ff97dbd4d55
+            - _id: 5cfcc4ef-a063-414f-9ee0-f2e9f7f808df
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 40px
+            - _id: 9f595064-3305-43d8-9d35-cf008d210559
+              type: box
+              _pattern: 1620d49a-2e3a-4957-875d-8ff97dbd4d55
+            - _id: 526497f9-1a27-44e5-8297-756398c3102f
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 40px
+            - _id: db6c7896-99bc-48fc-97f3-e0d50d94e22a
+              type: divider
+              parameters:
+                width:
+                  type: tp-slider-parameter
+                  value: 50%
+                alignment:
+                  type: tp-horizontal-align-parameter
+                  value: center
+            - _id: b8383e4a-5982-4538-864d-253e22e1fe85
+              type: spacer
+              parameters:
+                thickness:
+                  type: tp-slider-parameter
+                  value: 40px
+            - _id: 02c702fa-c53a-429b-8713-42e521693569
+              type: box
+              _pattern: 10a5245c-fb64-419d-bdc8-89f1abec3ecd
+        variant: backgroundInContainer
+        parameters:
+          title:
+            type: text
+            value: Content Blocks
+          paddingTop:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+      - _id: 048ced9b-9220-46bc-9dd6-1a3befe13959
+        type: divider
+        parameters:
+          width:
+            type: tp-slider-parameter
+            value: 100%
+          alignment:
+            type: tp-horizontal-align-parameter
+            value: left
+      - _id: 10cc6c80-3f11-4ee3-a161-57dae29d9c7e
+        type: container
+        slots:
+          container-inner:
+            - _id: 133dd058-2e3c-48f8-a4e5-1ce9cf8985f1
+              type: grid
+              _pattern: 16e33e2b-159b-4fdf-9b76-861ee66fed00
+        parameters:
+          title:
+            type: text
+            value: Stat component
+          paddingTop:
+            type: select
+            value: None
+          paddingBottom:
+            type: select
+            value: None
+  _overrides:
+    02c702fa-c53a-429b-8713-42e521693569|1e8815fa-ef65-4ab3-8036-75926c9a97ba:
+      parameters:
+        text:
+          type: text
+          value: H1 Title
+    02c702fa-c53a-429b-8713-42e521693569|9d795a1c-c090-4b2a-8af7-12d2312dbeb9:
+      parameters:
+        color:
+          type: text
+          value: null
+    0592f417-9376-4fee-b009-520675713bef|1e8815fa-ef65-4ab3-8036-75926c9a97ba:
+      parameters:
+        tag:
+          type: select
+          value: h3
+        text:
+          type: text
+          value: H3 Title
+    29a84e2d-90d2-4fce-a3a8-bf9dcfe2f414|1e8815fa-ef65-4ab3-8036-75926c9a97ba:
+      parameters:
+        tag:
+          type: select
+          value: h2
+        text:
+          type: text
+          value: H2 Title
+    68e80178-78bd-42d7-bfba-72178909e4f5|1e8815fa-ef65-4ab3-8036-75926c9a97ba:
+      parameters:
+        text:
+          type: text
+          value: H1 Title
+    9f595064-3305-43d8-9d35-cf008d210559|1e8815fa-ef65-4ab3-8036-75926c9a97ba:
+      parameters:
+        tag:
+          type: select
+          value: h4
+        text:
+          type: text
+          value: H4 Title
+created: '2023-09-21T21:17:20.457049+00:00'
+modified: '2024-02-08T21:16:14.238997+00:00'
+pattern: false

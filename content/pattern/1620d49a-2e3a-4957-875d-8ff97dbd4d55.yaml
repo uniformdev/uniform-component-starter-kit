@@ -1,0 +1,86 @@
+composition:
+  _name: Content Block (Simple Text)
+  _id: 1620d49a-2e3a-4957-875d-8ff97dbd4d55
+  type: box
+  slots:
+    content:
+      - _id: 1e8815fa-ef65-4ab3-8036-75926c9a97ba
+        type: text
+        parameters:
+          tag:
+            type: tp-segmented-control-parameter
+            value: h1
+          size:
+            type: tp-segmented-control-parameter
+            value: ''
+          text:
+            type: text
+            value: Title
+          fontWeight:
+            type: tp-segmented-control-parameter
+            value: normal
+          whiteSpace:
+            type: tp-segmented-control-parameter
+            value: normal
+          letterSpacing:
+            type: tp-segmented-control-parameter
+            value: ''
+        _overridability:
+          parameters:
+            tag: 'yes'
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+            style: 'yes'
+            fontWeight: 'yes'
+            whiteSpace: 'yes'
+            letterSpacing: 'yes'
+      - _id: 96a16b19-3a32-46a2-b300-048abfba807e
+        type: spacer
+        parameters:
+          thickness:
+            type: tp-slider-parameter
+            value: 20px
+        _overridability:
+          variants: true
+          parameters:
+            thickness: 'yes'
+      - _id: 8e9501d4-1de5-4eb3-8fe2-98dcfe9ef55a
+        type: text
+        parameters:
+          tag:
+            type: tp-segmented-control-parameter
+            value: span
+          size:
+            type: tp-segmented-control-parameter
+            value: ''
+          text:
+            type: text
+            value: >-
+              Content Block Advanced Text Content Block Advanced Text Content
+              Block Advanced Text Content Block Advanced Text Content Block
+              Advanced Text Content Block Advanced Text
+          fontWeight:
+            type: tp-segmented-control-parameter
+            value: normal
+          whiteSpace:
+            type: tp-segmented-control-parameter
+            value: normal
+          letterSpacing:
+            type: tp-segmented-control-parameter
+            value: ''
+        _overridability:
+          parameters:
+            tag: 'yes'
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+            style: 'yes'
+            fontWeight: 'yes'
+            whiteSpace: 'yes'
+            letterSpacing: 'yes'
+created: '2024-01-09T12:40:25.218257+00:00'
+modified: '2024-03-26T12:28:47.6627+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Content_block_simple_text_preview_image

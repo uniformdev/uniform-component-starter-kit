@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: b0f5e4f1-46a0-4a04-b74a-5fdbfb38bb74
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: espressoGPT_image_5.jpg
+    file:
+      type: file
+      value: f068e480-292f-4dc1-ab30-6ac9d2f23baa
+    mediaType:
+      value: image/jpeg
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/pCLRowAuQa-KoGVmn9ZKKg-espressoGPT_image_5.jpg
+      type: text
+    size:
+      value: 29957
+      type: number
+    width:
+      value: 743
+      type: number
+    height:
+      value: 480
+      type: number
+    custom: {}
+created: '2023-12-12T13:37:04.944564+00:00'
+modified: '2023-12-12T13:37:04.944564+00:00'

@@ -1,0 +1,931 @@
+composition:
+  _name: Image Gallery
+  _id: 2c4530ee-29f6-4497-9a96-4b51f3786241
+  _slug: image-gallery
+  type: page
+  parameters:
+    pageTitle:
+      type: text
+      value: Image Gallery component
+    pageMetaDescription:
+      type: text
+      value: >-
+        The Image Gallery component is designed to display images in a gallery
+        view
+  slots:
+    pageFooter:
+      - _id: 63e1fc78-77a2-49f7-967c-5b31841612e7
+        type: footer
+        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
+    pageHeader:
+      - _id: 2e650f79-08eb-459e-a5b9-d844ae1823b9
+        type: header
+        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
+    pageContent:
+      - _id: 71c567f9-bfa9-45d4-981e-846b38dbe7db
+        type: hero
+        variant: backgroundImage
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 95c2265e-1d22-479f-b3e4-345cabb9abd4
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
+                    type: text
+                  file:
+                    type: file
+                    value: 03c5c490-b78f-4b4f-b33c-158da14205c1
+                  size:
+                    value: 49092
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.webp
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/webp
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image Gallery component
+          objectFit:
+            type: select
+            value: cover
+          textColor:
+            type: tp-color-palette-parameter
+            value: primary-content
+          paddingTop:
+            type: select
+            value: None
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h1
+          description:
+            type: text
+            value: >-
+              The Image Gallery component is designed to display images in a
+              gallery view
+          paddingBottom:
+            type: select
+            value: None
+          containerVariant:
+            type: select
+            value: fluidContent
+      - _id: 8afcdbe8-bdc6-402a-8de6-2469540d3a93
+        type: breadcrumbs
+        parameters:
+          separator:
+            type: select
+            value: chevron
+          colorStyle:
+            type: tp-color-style-parameter
+            value: primary
+          displayRootNode:
+            type: checkbox
+            value: true
+      - _id: ab51159d-9cf3-4adc-85cd-09fc625f66be
+        type: imageGallery
+        slots:
+          images:
+            - _id: 20ad7461-34e8-4a9e-b347-69fbf5d41400
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: asset
+                  value:
+                    - _id: 1db0386b-f871-4620-b42b-8460749d584f
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 2b177d20-9e27-4d48-ac55-978474111c59
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/81F57fuRR32gjeEX0RMczQ-espressoGPT_image_1.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: beb5c866-34e2-4c7e-8bb9-a59588b2bcd9
+                        size:
+                          value: 123117
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_1.jpg
+                        width:
+                          value: 1486
+                          type: number
+                        height:
+                          value: 960
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 0a0c3b4c-81cd-47c2-9106-a2227161cecd
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: asset
+                  value:
+                    - _id: b34253e2-a2a4-46d7-a3a2-64e76d782bdf
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b7160380-470a-4888-a4fe-0b448e11a1a9
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/bDUJF9rFRbCVHBBSWH70Dw-espressoGPT_image_2.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 0f37d0bb-f8b4-47dd-b8f5-e0356cead353
+                        size:
+                          value: 74607
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_2.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 37baf0fc-2323-47b5-b983-8ac600221554
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: asset
+                  value:
+                    - _id: ec56ee72-a95b-4c25-845b-a4d8d491763c
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 56e6a0a9-e384-4f73-b172-f2b742406566
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/OivA9y_dR_6t5RQfQi79jg-espressoGPT_image_3.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 685adb01-e387-40a1-b71a-23690209eb88
+                        size:
+                          value: 132926
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_3.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: ee483f56-4a8f-47de-a951-c5122924c339
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: asset
+                  value:
+                    - _id: c32493ea-2c68-41e7-abf4-801651298c40
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: a9c96894-0f74-4b1c-89c4-4a9930c919dc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/h6l6r6WoTJGvPxTxCakc4Q-espressoGPT_image_4.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 55a15d8d-da4d-4441-bf3a-e01e4df93685
+                        size:
+                          value: 18991
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_4.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 2440fd8c-35e8-4950-b809-9198b55f4e2b
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: asset
+                  value:
+                    - _id: c24c2581-1a1e-49cc-b107-3f2a317bfe4a
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b0f5e4f1-46a0-4a04-b74a-5fdbfb38bb74
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/pCLRowAuQa-KoGVmn9ZKKg-espressoGPT_image_5.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 68fbdd44-5ba8-4ac2-9b9d-d15c5b01b575
+                        size:
+                          value: 29957
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_5.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Image Gallery
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: 'Image Gallery without animation '
+          paddingBottom:
+            type: select
+            value: Medium
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Dark
+      - _id: db482920-e4c1-4018-b2d0-86f3528d91e8
+        type: imageGallery
+        slots:
+          images:
+            - _id: dff6b11c-dd8e-4933-8311-fcddd635bb81
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: asset
+                  value:
+                    - _id: d33c05ad-f8ff-4a1b-a2df-3855e331aeab
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 2b177d20-9e27-4d48-ac55-978474111c59
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/81F57fuRR32gjeEX0RMczQ-espressoGPT_image_1.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: beb5c866-34e2-4c7e-8bb9-a59588b2bcd9
+                        size:
+                          value: 123117
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_1.jpg
+                        width:
+                          value: 1486
+                          type: number
+                        height:
+                          value: 960
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 295f8813-0838-496a-b63f-712b756fa4dc
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: asset
+                  value:
+                    - _id: 0971f98a-92ea-43d2-ba7d-c8e05c10b6cf
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b7160380-470a-4888-a4fe-0b448e11a1a9
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/bDUJF9rFRbCVHBBSWH70Dw-espressoGPT_image_2.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 0f37d0bb-f8b4-47dd-b8f5-e0356cead353
+                        size:
+                          value: 74607
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_2.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: f0f468e9-f4b9-4eb8-a151-932f82a59597
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: asset
+                  value:
+                    - _id: 75f01a29-732e-4c62-a40b-2bec5042980f
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 56e6a0a9-e384-4f73-b172-f2b742406566
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/OivA9y_dR_6t5RQfQi79jg-espressoGPT_image_3.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 685adb01-e387-40a1-b71a-23690209eb88
+                        size:
+                          value: 132926
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_3.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 71ca05dc-bcd7-4835-82a4-86fbf705e47a
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: asset
+                  value:
+                    - _id: 528fcd15-5fcc-4ed9-b420-6499fe5d8d6f
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: a9c96894-0f74-4b1c-89c4-4a9930c919dc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/h6l6r6WoTJGvPxTxCakc4Q-espressoGPT_image_4.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 55a15d8d-da4d-4441-bf3a-e01e4df93685
+                        size:
+                          value: 18991
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_4.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: fc21e811-e539-4ef9-a395-28f6bd21893e
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: asset
+                  value:
+                    - _id: 72c81d49-7d52-489b-b165-255dd0bf8dd5
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b0f5e4f1-46a0-4a04-b74a-5fdbfb38bb74
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/pCLRowAuQa-KoGVmn9ZKKg-espressoGPT_image_5.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 68fbdd44-5ba8-4ac2-9b9d-d15c5b01b575
+                        size:
+                          value: 29957
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_5.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Image Gallery
+          duration:
+            type: select
+            value: slow
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: 'Image Gallery with static animation '
+          animationType:
+            type: select
+            value: fadeIn
+          paddingBottom:
+            type: select
+            value: Medium
+          animationOrder:
+            type: select
+            value: oneByOne
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Light
+      - _id: 42e0053a-06ef-482d-9dd5-8e73a948069c
+        type: imageGallery
+        slots:
+          images:
+            - _id: 4b1cdfb8-4056-4033-adb8-061114a08eaa
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 1
+                src:
+                  type: asset
+                  value:
+                    - _id: 6b5293df-d4bc-4702-8d5f-0435989e6dec
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 2b177d20-9e27-4d48-ac55-978474111c59
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/81F57fuRR32gjeEX0RMczQ-espressoGPT_image_1.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: beb5c866-34e2-4c7e-8bb9-a59588b2bcd9
+                        size:
+                          value: 123117
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_1.jpg
+                        width:
+                          value: 1486
+                          type: number
+                        height:
+                          value: 960
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: acabc783-d7e4-4365-bb7c-aa7a9e3cf2cf
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 2
+                src:
+                  type: asset
+                  value:
+                    - _id: bc5627fc-1131-4164-8bd1-fc656c2330cd
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b7160380-470a-4888-a4fe-0b448e11a1a9
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/bDUJF9rFRbCVHBBSWH70Dw-espressoGPT_image_2.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 0f37d0bb-f8b4-47dd-b8f5-e0356cead353
+                        size:
+                          value: 74607
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_2.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 1b0f0f8a-1aed-478f-8c08-a8c8385f8209
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 3
+                src:
+                  type: asset
+                  value:
+                    - _id: 0651c5c3-75b5-4dce-b584-c25377ae5782
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 56e6a0a9-e384-4f73-b172-f2b742406566
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/OivA9y_dR_6t5RQfQi79jg-espressoGPT_image_3.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 685adb01-e387-40a1-b71a-23690209eb88
+                        size:
+                          value: 132926
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_3.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 49bdb830-4346-4b51-96df-b4c921587332
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 4
+                src:
+                  type: asset
+                  value:
+                    - _id: df415462-6c9f-42ad-9d10-c9604a6b4aee
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: a9c96894-0f74-4b1c-89c4-4a9930c919dc
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/h6l6r6WoTJGvPxTxCakc4Q-espressoGPT_image_4.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 55a15d8d-da4d-4441-bf3a-e01e4df93685
+                        size:
+                          value: 18991
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_4.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+            - _id: 5fcd2eb8-f76e-4577-9dcb-3ecb1b265f5d
+              type: image
+              parameters:
+                alt:
+                  type: text
+                  value: Image 5
+                src:
+                  type: asset
+                  value:
+                    - _id: 4ccded3e-0ec6-4a9a-9092-f7c9f42064c1
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: b0f5e4f1-46a0-4a04-b74a-5fdbfb38bb74
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/pCLRowAuQa-KoGVmn9ZKKg-espressoGPT_image_5.jpg
+                          type: text
+                        file:
+                          type: file
+                          value: 68fbdd44-5ba8-4ac2-9b9d-d15c5b01b575
+                        size:
+                          value: 29957
+                          type: number
+                        title:
+                          type: text
+                          value: espressoGPT_image_5.jpg
+                        width:
+                          value: 743
+                          type: number
+                        height:
+                          value: 480
+                          type: number
+                        mediaType:
+                          value: image/jpeg
+                          type: text
+                      _source: uniform-assets
+        variant: fluidContent
+        parameters:
+          title:
+            type: text
+            value: Image Gallery
+          duration:
+            type: select
+            value: slow
+          paddingTop:
+            type: select
+            value: Medium
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: 'Image Gallery with dynamic animation '
+          animationType:
+            type: select
+            value: flyIn
+          paddingBottom:
+            type: select
+            value: Medium
+          animationOrder:
+            type: select
+            value: oneByOne
+          backgroundType:
+            type: tp-background-type-parameter
+            value: Dark
+      - _id: 419d648a-4134-4379-8801-d586a79d1b72
+        type: imageGallery
+        variant: fluidContent
+        parameters:
+          items:
+            type: asset
+            value:
+              - _id: 087cbf2d-c7f5-4ab7-b1c1-f96db909d54b
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 2b177d20-9e27-4d48-ac55-978474111c59
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/81F57fuRR32gjeEX0RMczQ-espressoGPT_image_1.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: beb5c866-34e2-4c7e-8bb9-a59588b2bcd9
+                  size:
+                    value: 123117
+                    type: number
+                  title:
+                    type: text
+                    value: espressoGPT_image_1.jpg
+                  width:
+                    value: 1486
+                    type: number
+                  height:
+                    value: 960
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+              - _id: 797b550c-0573-4d58-8c6a-16cc288847e6
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: b7160380-470a-4888-a4fe-0b448e11a1a9
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/bDUJF9rFRbCVHBBSWH70Dw-espressoGPT_image_2.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 0f37d0bb-f8b4-47dd-b8f5-e0356cead353
+                  size:
+                    value: 74607
+                    type: number
+                  title:
+                    type: text
+                    value: espressoGPT_image_2.jpg
+                  width:
+                    value: 743
+                    type: number
+                  height:
+                    value: 480
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+              - _id: dd77c49b-283d-40f0-bcc5-69377b5d8af6
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 56e6a0a9-e384-4f73-b172-f2b742406566
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/OivA9y_dR_6t5RQfQi79jg-espressoGPT_image_3.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 685adb01-e387-40a1-b71a-23690209eb88
+                  size:
+                    value: 132926
+                    type: number
+                  title:
+                    type: text
+                    value: espressoGPT_image_3.jpg
+                  width:
+                    value: 743
+                    type: number
+                  height:
+                    value: 480
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+              - _id: 7a807c36-cfa0-4062-a7d3-934fb686e868
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: a9c96894-0f74-4b1c-89c4-4a9930c919dc
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/h6l6r6WoTJGvPxTxCakc4Q-espressoGPT_image_4.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 55a15d8d-da4d-4441-bf3a-e01e4df93685
+                  size:
+                    value: 18991
+                    type: number
+                  title:
+                    type: text
+                    value: espressoGPT_image_4.jpg
+                  width:
+                    value: 743
+                    type: number
+                  height:
+                    value: 480
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+              - _id: 4a12994a-2cbc-469c-8297-21a147e7ddc5
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: b0f5e4f1-46a0-4a04-b74a-5fdbfb38bb74
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/pCLRowAuQa-KoGVmn9ZKKg-espressoGPT_image_5.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 68fbdd44-5ba8-4ac2-9b9d-d15c5b01b575
+                  size:
+                    value: 29957
+                    type: number
+                  title:
+                    type: text
+                    value: espressoGPT_image_5.jpg
+                  width:
+                    value: 743
+                    type: number
+                  height:
+                    value: 480
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+          title:
+            type: text
+            value: Image Gallery
+          duration:
+            type: select
+            value: slow
+          titleStyle:
+            type: tp-title-style-parameter
+            value: h2
+          description:
+            type: text
+            value: Using Digital Assets Manager
+          animationType:
+            type: select
+            value: flyIn
+          animationOrder:
+            type: select
+            value: oneByOne
+created: '2023-11-14T16:50:10.360663+00:00'
+modified: '2024-02-08T21:15:54.562126+00:00'
+pattern: false
