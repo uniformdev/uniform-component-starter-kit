@@ -40,6 +40,7 @@ const renderStory = (args: ContainerProps) => {
           description:
             "Use this paragraph to share information about your company or brand. Make it as engaging as possible, and showcase your brand's unique personality.",
           eyebrowText: 'Hero component',
+          textColor: '#fff',
         }),
       },
     ],

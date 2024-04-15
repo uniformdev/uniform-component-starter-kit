@@ -23,6 +23,7 @@ const HERO_PROPS = {
   },
   image: 'https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-marketing/Rectangle_7_2_uupdjo_wm94da',
   primaryButtonStyle: 'primary',
+  textColor: '#fff',
 };
 
 const BASE_PROPS: Omit<ModalProps, 'component'> = {
@@ -53,7 +54,7 @@ const renderStory = (args: ModalProps) => {
   });
   return (
     <UniformComposition data={fakeComposition}>
-      <Modal {...args} />
+      <Modal {...args} component={fakeComposition} />
     </UniformComposition>
   );
 };

@@ -1,4 +1,3 @@
-import React from 'react';
 import type { Preview } from '@storybook/react';
 
 import { ThemeProvider } from '../src/components';
@@ -6,15 +5,18 @@ import { getTheme } from '../src/stories/utils/themes';
 
 import '../src/styles/globals.scss';
 import '../src/canvas';
+import { domAnimation, LazyMotion } from 'framer-motion';
 
 const preview: Preview = {
   decorators: [
     (Story, context) => {
       const theme = context.parameters.theme || context.globals.theme || 'uniform';
       return (
-        <ThemeProvider data={getTheme(theme)}>
-          <Story />
-        </ThemeProvider>
+        <LazyMotion features={domAnimation}>
+          <ThemeProvider data={getTheme(theme)}>
+            <Story />
+          </ThemeProvider>
+        </LazyMotion>
       );
     },
   ],

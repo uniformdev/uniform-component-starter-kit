@@ -4,7 +4,7 @@ import { ProductInfoProps } from '.';
 
 export const ProductInfo: FC<ProductInfoProps> = props => {
   const handlePrimaryButtonClick = useCallback(() => {
-    window.alert(window.alert('This is add to cart event placeholder'));
+    window.alert('This is add to cart event placeholder');
   }, []);
 
   return <BaseProductInfo {...props} onClickPrimaryButton={handlePrimaryButtonClick} />;

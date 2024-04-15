@@ -12,7 +12,7 @@ export default meta;
 type Story = StoryObj<typeof Countdown>;
 
 const BASE_PROPS: Omit<CountdownProps, 'component'> = {
-  targetDate: '2024-01-01T00:00:00-04:00',
+  targetDate: '2024-07-04T00:00:00',
 };
 
 const renderStory = (args: CountdownProps) => {
