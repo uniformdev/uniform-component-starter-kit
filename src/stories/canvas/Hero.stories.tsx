@@ -3,7 +3,7 @@ import { UniformComposition } from '@uniformdev/canvas-react';
 import { Hero, HeroProps, HeroVariant } from '@/canvas';
 import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
 import { createFakeCompositionData } from '../utils';
-import { buttonStyleOptions, titleStyleOptions } from '../constants';
+import { animationOrder, animationType, buttonStyleOptions, titleStyleOptions } from '../constants';
 
 const meta: Meta<typeof Hero> = {
   title: 'Hero',
@@ -47,6 +47,8 @@ const argTypes = {
   titleStyle: { control: 'select', options: titleStyleOptions },
   primaryButtonStyle: { control: 'select', options: buttonStyleOptions },
   secondaryButtonStyle: { control: 'select', options: buttonStyleOptions },
+  animationType: { control: 'select', options: animationType },
+  animationOrder: { control: 'select', options: animationOrder },
 };
 
 const renderStory = (args: HeroProps) => {
