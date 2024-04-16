@@ -8,7 +8,8 @@ Built with love by Uniform folks, standing on the shoulders of TailwindCSS, Dais
 
 - [Demo](https://components.uniform.app/)
 - [Storybook](https://components-storybook.uniform.app/)
-
+- [Complete tutorial](https://docs.uniform.app/docs/learn/tutorials/csk)
+ 
 ### Prerequisites
 
 - A Uniform account with the ability to create a new empty project. If you don't have a Uniform account, you can request a trial account [here](https://uniform.dev/try).
@@ -77,3 +78,7 @@ This package contains an additional set of examples based on the Component Start
 
 1. Coveo Search Page
 1. Algolia Search Page
+
+## Documentation
+
+For the complete walkthrough tutorial, check out [this doc](https://docs.uniform.app/docs/learn/tutorials/csk).
