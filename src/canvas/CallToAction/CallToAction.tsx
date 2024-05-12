@@ -21,7 +21,8 @@ export const CallToAction: FC<CallToActionProps> = ({
   styles,
   component: { variant } = {},
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   const isLightTextColor = textColorVariant === 'Light';
   const eyebrowTextColorStyle = isLightTextColor ? 'text-secondary' : 'text-primary';

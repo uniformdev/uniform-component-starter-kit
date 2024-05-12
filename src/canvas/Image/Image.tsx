@@ -22,7 +22,8 @@ export const Image: FC<ImageProps> = ({
   borderRadius,
   objectFit,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const imgSrc = getMediaUrl(src);
   const defaultWidth = isMediaAsset(src) ? src.fields?.width?.value : 500;
   const defaultHeight = isMediaAsset(src) ? src.fields?.height?.value : 300;

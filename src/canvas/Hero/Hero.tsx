@@ -38,7 +38,8 @@ export const HeroDefault: FC<HeroProps> = ({
   delay = 'none',
   styles,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
     ? textColor

@@ -23,7 +23,8 @@ export const Banner: FC<BannerProps> = ({
   secondaryButtonAnimationType,
   component,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
 
   return (

@@ -16,7 +16,8 @@ export const CardBlockDefault: FC<CardBlockProps> = ({
   textColorVariant,
   styles,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const colorClassName = getColorClassName(textColorVariant);
 
   return (

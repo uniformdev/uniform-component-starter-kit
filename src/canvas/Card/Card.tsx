@@ -38,7 +38,8 @@ export const Card: FC<CardProps> = ({
   delay,
   styles,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const imageUrl = getMediaUrl(image);
 
   const badgeClassNames = classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize));
@@ -81,7 +82,6 @@ export const Card: FC<CardProps> = ({
           className={classNames(
             {
               'relative h-48': !isBackgroundImage && Boolean(imageUrl),
-              'w-20 h-20 flex justify-start ml-8': variant === CardVariants.Featured && Boolean(imageUrl),
             },
             styles?.imageContainer
           )}

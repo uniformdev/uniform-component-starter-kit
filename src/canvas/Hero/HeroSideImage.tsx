@@ -44,7 +44,8 @@ export const HeroSideImage: FC<HeroProps> = ({
   delay = 'none',
   styles,
 }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const { variant } = component || {};
 
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)

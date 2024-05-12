@@ -4,7 +4,8 @@ import { useUniformContextualEditingState, UniformSlotProps } from '@uniformdev/
 import { CarouselContext } from './Carousel';
 
 export const CarouselInner: UniformSlotProps<string>['wrapperComponent'] = ({ items }) => {
-  const { isContextualEditing } = useUniformContextualEditingState();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
   const { currentIndex } = useContext(CarouselContext);
 
   return (
