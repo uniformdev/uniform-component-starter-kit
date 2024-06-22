@@ -2,10 +2,12 @@ import { FC, Fragment, PropsWithChildren } from 'react';
 import Image from '../../components/Image';
 import Link from 'next/link';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { getMediaUrl } from '../../utilities';
 import { FeatureProps } from '.';
 
 export const Feature: FC<FeatureProps> = ({ icon, link }) => {
+  const t = useTranslations();
   const imageUrl = getMediaUrl(icon);
 
   const Wrapper = link?.path
@@ -23,9 +25,9 @@ export const Feature: FC<FeatureProps> = ({ icon, link }) => {
       )}
       <div>
         <Wrapper>
-          <UniformText placeholder="Title goes here" parameterId="title" as="p" className="text-xl font-bold" />
+          <UniformText placeholder={t('Title goes here')} parameterId="title" as="p" className="text-xl font-bold" />
         </Wrapper>
-        <UniformText placeholder="Description goes here" parameterId="description" as="p" />
+        <UniformText placeholder={t('Description goes here')} parameterId="description" as="p" />
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import { NextIntlClientProvider } from 'next-intl';
 import type { Preview } from '@storybook/react';
 import { domAnimation, LazyMotion } from 'framer-motion';
 import { ThemeProvider } from '../src/components';
@@ -11,11 +12,14 @@ const preview: Preview = {
     (Story, context) => {
       const theme = context.parameters.theme || context.globals.theme || 'uniform';
       return (
-        <LazyMotion features={domAnimation}>
-          <ThemeProvider data={getTheme(theme)}>
-            <Story />
-          </ThemeProvider>
-        </LazyMotion>
+        <NextIntlClientProvider locale="en-US">
+          <LazyMotion features={domAnimation}>
+            <ThemeProvider data={getTheme(theme)}>
+              <Story />
+            </ThemeProvider>
+          </LazyMotion>
+          );
+        </NextIntlClientProvider>
       );
     },
   ],

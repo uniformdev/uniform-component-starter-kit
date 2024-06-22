@@ -4,6 +4,7 @@ import { ComponentInstance, RootComponentInstance } from '@uniformdev/canvas';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 // @ts-ignore: Expected error if the module is not yet installed
 import { buildResultList, Result } from '@coveo/headless';
+import { useTranslations } from 'next-intl';
 import { HeadlessEngineContext } from './Engine';
 import ResultItem, { ResultItemStyles } from './ResultItem';
 import InformationContent from '../../components/InformationContent';
@@ -28,6 +29,7 @@ type ResultListProps = ComponentProps<{
 
 // Coveo Result List docs https://docs.coveo.com/en/headless/latest/reference/search/controllers/result-list/
 const ResultList: FC<ResultListProps> = ({ component, itemStyles }) => {
+  const t = useTranslations();
   const headlessEngine = useContext(HeadlessEngineContext);
   const headlessResultList = useMemo(
     () =>
@@ -55,13 +57,14 @@ const ResultList: FC<ResultListProps> = ({ component, itemStyles }) => {
             className="border border-gray-300 p-4 rounded-md mb-4 flex items-center justify-center"
             key={item.uniqueId}
           >
-            <span>Add your custom Result Item</span>
+            <span>{t('Add your custom Result Item')}</span>
           </div>
         );
     }
   };
 
-  if (!resultState.results?.length) return <InformationContent title="Sorry there are no products for this filter" />;
+  if (!resultState.results?.length)
+    return <InformationContent title={t('Sorry there are no products for this filter') || ''} />;
 
   return (
     <div className="grid gap-y-3 mb-8 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-8 sm:gap-y-6 lg:gap-x-8 lg:gap-y-5 sm:mb-0">

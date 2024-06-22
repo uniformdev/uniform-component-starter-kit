@@ -32,16 +32,13 @@ const BaseImageGallery: FC<BaseImageGalleryProps> = ({
   ...props
 }) => {
   const [runAnimationToggle, setRunAnimationToggle] = useState(false);
-  const delayValue = DelayVariants[delay];
+  const delayValue = DelayVariants[delay as keyof typeof DelayVariants];
 
   const imagesToDisplay = useMemo(
     () =>
-      (items || []).map((image, index) => {
-        const key = (() => {
-          if ('_id' in image) return image?._id;
-          if ('id' in image) return image?.id;
-          return `image-${index}`;
-        })();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      (items || []).map((image: any, index: number) => {
+        const key = `image-${image?._id ?? image?.id ?? index}`;
         const imgSrc = getMediaUrl(image);
         const { defaultWidth, defaultHeight } = (() => {
           if (isMediaAsset(image)) {

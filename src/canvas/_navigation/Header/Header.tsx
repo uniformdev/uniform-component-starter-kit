@@ -33,7 +33,7 @@ export const Header: FC<HeaderProps> = ({ logo, component, linksAlignment }) => 
               />
             </div>
             <button className="ml-8 lg:ml-0" onClick={handleHomeButtonClick}>
-              <Image src={getMediaUrl(logo)} width="270" height="43" alt="Uniform" />
+              <Image className="h-[43px]" src={getMediaUrl(logo)} width="270" height="43" alt="Uniform" />
             </button>
             <div className={classNames('hidden lg:flex w-full', getLinksAlignment(linksAlignment))}>
               <ul className="menu menu-horizontal px-1 py-0 shrink-0">

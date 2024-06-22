@@ -12,6 +12,7 @@ import {
   buildFieldSortCriterion,
   // @ts-ignore: Expected error if the module is not yet installed
 } from '@coveo/headless';
+import { useTranslations } from 'next-intl';
 import { HeadlessEngineContext } from './Engine';
 import Dropdown from '../../components/Dropdown';
 
@@ -22,6 +23,7 @@ type BreadcrumbManagerProps = ComponentProps<{
 
 // Coveo Sort docs https://docs.coveo.com/en/headless/latest/reference/search/controllers/sort/
 const Sort: FC<BreadcrumbManagerProps> = ({ title = '', fieldsForSort = [] }) => {
+  const t = useTranslations();
   const headlessEngine = useContext(HeadlessEngineContext);
 
   const headlessSort = useMemo(() => buildSort(headlessEngine), [headlessEngine]);
@@ -33,26 +35,26 @@ const Sort: FC<BreadcrumbManagerProps> = ({ title = '', fieldsForSort = [] }) =>
       fieldsForSort
         .map(field => [
           [
-            `${field[0].toUpperCase() + field.slice(1)} (Ascending)`,
+            `${field[0].toUpperCase() + field.slice(1)} (${t('Ascending')})`,
             buildFieldSortCriterion(field, SortOrder.Ascending),
           ] as [string, SortCriterion],
           [
-            `${field[0].toUpperCase() + field.slice(1)} (Descending)`,
+            `${field[0].toUpperCase() + field.slice(1)} (${t('Descending')})`,
             buildFieldSortCriterion(field, SortOrder.Descending),
           ] as [string, SortCriterion],
         ])
         .flat(),
-    [fieldsForSort]
+    [fieldsForSort, t]
   );
 
   const criteria: [string, SortCriterion][] = useMemo(
     () => [
-      ['Relevance', buildRelevanceSortCriterion()],
-      ['Date (Ascending)', buildDateSortCriterion(SortOrder.Ascending)],
-      ['Date (Descending)', buildDateSortCriterion(SortOrder.Descending)],
+      [`${t('Relevance')}`, buildRelevanceSortCriterion()],
+      [`${t('Date')} (${t('Ascending')})`, buildDateSortCriterion(SortOrder.Ascending)],
+      [`${t('Date')} (${t('Descending')})`, buildDateSortCriterion(SortOrder.Descending)],
       ...additionalCriteria,
     ],
-    [additionalCriteria]
+    [additionalCriteria, t]
   );
 
   const criteriaValue = useMemo(

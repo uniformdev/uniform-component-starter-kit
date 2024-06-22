@@ -3,6 +3,7 @@ import { FC } from 'react';
 // @ts-ignore: Expected error if the module is not yet installed
 import { RefinementList } from 'react-instantsearch';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { withErrorCallout } from '../../hocs/withErrorCallout';
 import ErrorPropertyCallout from '../../components/ErrorPropertyCallout';
 
@@ -26,10 +27,13 @@ type Props = {
 const REGEX_PREFIX = /^(sub|root)/g;
 
 const AlgoliaRefinementList: FC<ComponentProps<Props>> = ({ refinementListParams }) => {
+  const t = useTranslations();
   const { refinementListProps } = refinementListParams || {};
 
   if (!refinementListProps || !refinementListProps.attribute) {
-    return <ErrorPropertyCallout classNames="py-3" title="Property 'attribute' was not defined for component." />;
+    return (
+      <ErrorPropertyCallout classNames="py-3" title={t("Property 'attribute' was not defined for component.") || ''} />
+    );
   }
 
   // allowedIndex attribute is absent in the RefinementList properties of the Algolia component.

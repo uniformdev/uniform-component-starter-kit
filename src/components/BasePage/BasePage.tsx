@@ -6,6 +6,7 @@ import {
   UniformSlot,
   useUniformCurrentComposition,
 } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import ComponentStarterKitContextProvider from '../../context/ComponentStarterKitContext';
 import UniformPreviewIcon from '../UniformPreviewIcon';
 import ThemeProvider from '../ThemeProvider';
@@ -19,6 +20,7 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
   providers: Providers,
   styles,
 }) => {
+  const t = useTranslations();
   const { data: composition } = useUniformCurrentComposition();
 
   const gap = composition?.slots?.pageHeader?.[0]?.parameters?.syntheticGap?.value as PaddingSize | undefined;
@@ -37,7 +39,9 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
           <UniformSlot name="pageHeader" />
         </div>
         {/* useUniformComposition is always true only for global composition preview */}
-        {useUniformComposition && <h1 className="flex-1 flex justify-center items-center">Page content placeholder</h1>}
+        {useUniformComposition && (
+          <h1 className="flex-1 flex justify-center items-center">{t('Page content placeholder')}</h1>
+        )}
         <div
           className={classNames(
             'flex flex-col flex-1',

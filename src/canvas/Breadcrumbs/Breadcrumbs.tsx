@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import { useComponentStarterKitContext } from '../../context/ComponentStarterKitContext';
 import { getColorStyle, getSeparator } from './helpers';
 import { BreadcrumbsProps } from '.';
@@ -11,6 +12,8 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({
   separator,
   styles,
 }) => {
+  const t = useTranslations();
+
   const { breadcrumbs = [] } = useComponentStarterKitContext();
 
   const breadcrumbsToShow = breadcrumbs
@@ -31,7 +34,7 @@ export const Breadcrumbs: FC<BreadcrumbsProps> = ({
             {breadcrumb?.type === 'placeholder' ? (
               <span>{breadcrumb.name}</span>
             ) : (
-              <a href={breadcrumb?.path}>{breadcrumb.dynamicInputTitle || breadcrumb.name || ''}</a>
+              <a href={breadcrumb?.path}>{breadcrumb.dynamicInputTitle || t(breadcrumb.name || '')}</a>
             )}
           </li>
         ))}

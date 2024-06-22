@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import classNames from 'classnames';
 import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import Button from '../../components/Button';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
@@ -21,6 +22,7 @@ export const CallToAction: FC<CallToActionProps> = ({
   styles,
   component: { variant } = {},
 }) => {
+  const t = useTranslations();
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
 
@@ -39,7 +41,7 @@ export const CallToAction: FC<CallToActionProps> = ({
       <div className={classNames('flex', getCallToActionContentClass(variant))}>
         <div className={getCallToActionTextWrappersClass(variant)}>
           <UniformText
-            placeholder="Eyebrow text goes here"
+            placeholder={t('Eyebrow text goes here')}
             parameterId="eyebrowText"
             as="div"
             className={classNames(
@@ -48,13 +50,13 @@ export const CallToAction: FC<CallToActionProps> = ({
             )}
           />
           <UniformText
-            placeholder="Title goes here"
+            placeholder={t('Title goes here')}
             parameterId="title"
             as={TitleTag}
             className={classNames('font-medium', getTextClass(TitleTag))}
           />
           <UniformText
-            placeholder="Description goes here"
+            placeholder={t('Description goes here')}
             parameterId="description"
             as="p"
             className="pt-6 text-xl whitespace-break-spaces"
@@ -65,7 +67,7 @@ export const CallToAction: FC<CallToActionProps> = ({
             <Button
               href={formatProjectMapLink(primaryButtonLink)}
               animationType={primaryButtonAnimationType}
-              copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
+              copy={<UniformText placeholder={t('Button copy goes here')} parameterId="primaryButtonCopy" />}
               style={primaryButtonStyle}
             />
           )}
@@ -73,7 +75,7 @@ export const CallToAction: FC<CallToActionProps> = ({
             <Button
               href={formatProjectMapLink(secondaryButtonLink)}
               animationType={secondaryButtonAnimationType}
-              copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
+              copy={<UniformText placeholder={t('Button copy goes here')} parameterId="secondaryButtonCopy" />}
               style={secondaryButtonStyle}
             />
           )}

@@ -2,6 +2,7 @@ import { FC, Fragment } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { ScreenContainer } from '../../components/Container';
@@ -23,8 +24,10 @@ export const Banner: FC<BannerProps> = ({
   secondaryButtonAnimationType,
   component,
 }) => {
+  const t = useTranslations();
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
 
   return (
@@ -45,13 +48,13 @@ export const Banner: FC<BannerProps> = ({
             className={classNames('w-full flex flex-col items-left col-span-7', getTextAlignmentClassName(textAlign))}
           >
             <UniformText
-              placeholder="Title goes here"
+              placeholder={t('Title goes here')}
               parameterId="title"
               as="p"
               className="text-primary-content text-xl"
             />
             <UniformText
-              placeholder="Description goes here"
+              placeholder={t('Description goes here')}
               parameterId="description"
               as="p"
               className="py-6 text-xl text-primary-content"
@@ -62,7 +65,7 @@ export const Banner: FC<BannerProps> = ({
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(primaryButtonLink)}
-                copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
+                copy={<UniformText placeholder={t('Button copy goes here')} parameterId="primaryButtonCopy" />}
                 animationType={primaryButtonAnimationType}
                 style={primaryButtonStyle}
               />
@@ -71,7 +74,7 @@ export const Banner: FC<BannerProps> = ({
               <Button
                 className="mx-1"
                 href={formatProjectMapLink(secondaryButtonLink)}
-                copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
+                copy={<UniformText placeholder={t('Button copy goes here')} parameterId="secondaryButtonCopy" />}
                 animationType={secondaryButtonAnimationType}
                 style={secondaryButtonStyle}
               />

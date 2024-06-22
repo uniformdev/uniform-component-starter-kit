@@ -1,5 +1,6 @@
 import { FC, useCallback, useMemo } from 'react';
 import classNames from 'classnames';
+import { useTranslations } from 'next-intl';
 import IconArrow from '../../components/IconArrow';
 import { getButtonAnimationClass, getButtonClass } from '../../utilities/styling';
 import { CarouselButtonProps } from './';
@@ -13,6 +14,7 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
   buttonAnimationStyle,
   colorClassName,
 }) => {
+  const t = useTranslations();
   const { totalItems = 0, currentSlide = 0, slidesToShow = 0 } = carouselState || {};
   const isLastSlide = useMemo(
     () => currentSlide + 1 === totalItems - slidesToShow + 1,
@@ -34,7 +36,7 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
   return totalItems > slidesToShow ? (
     <div className="flex justify-center sm:justify-end items-center my-6 lg:mt-9">
       <button
-        aria-label="Go to previous"
+        aria-label={t('Go to previous')}
         className={classNames(
           'btn rounded-none',
           buttonAnimationStyle
@@ -49,7 +51,7 @@ const CarouselButtons: FC<CarouselButtonProps> = ({
         {currentSlide + 1} / {totalItems - slidesToShow + 1}
       </p>
       <button
-        aria-label="Go to next"
+        aria-label={t('Go to next')}
         className={classNames(
           'btn rounded-none',
           buttonAnimationStyle

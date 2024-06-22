@@ -5,6 +5,7 @@ import algoliasearch from 'algoliasearch/lite';
 // @ts-ignore: Expected error if the module is not yet installed
 import { Configure, InstantSearch } from 'react-instantsearch';
 import { useScores } from '@uniformdev/context-react';
+import { useTranslations } from 'next-intl';
 import { ComponentProps, UniformSlot, registerUniformComponent } from '@uniformdev/canvas-react';
 import { fromCamelCaseText } from '../../utilities';
 import ErrorPropertyCallout from '../../components/ErrorPropertyCallout';
@@ -28,6 +29,7 @@ type Props = {
 const prefixScore = 'subCategory_';
 
 const AlgoliaInstantSearch: FC<ComponentProps<Props>> = ({ instantSearchParams, rootCategory = '' }) => {
+  const t = useTranslations();
   const scores = useScores();
   const { instantSearchProps } = instantSearchParams || {};
 
@@ -41,7 +43,9 @@ const AlgoliaInstantSearch: FC<ComponentProps<Props>> = ({ instantSearchParams, 
   );
 
   if (!instantSearchProps || !instantSearchProps.indexName) {
-    return <ErrorPropertyCallout classNames="py-3" title="Property 'indexName' was not defined for component." />;
+    return (
+      <ErrorPropertyCallout classNames="py-3" title={t(`Property 'indexName' was not defined for component.`) || ''} />
+    );
   }
 
   return (

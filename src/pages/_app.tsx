@@ -3,13 +3,15 @@ import { UniformAppProps } from '@uniformdev/context-next';
 import { UniformContext } from '@uniformdev/context-react';
 import type { RootComponentInstance } from '@uniformdev/canvas';
 import type { Asset } from '@uniformdev/assets';
+import { NextIntlClientProvider } from 'next-intl';
+import { useRouter } from 'next/router';
 import { LazyMotion, domAnimation } from 'framer-motion';
+
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
-import '../styles/globals.scss';
-import { getMediaUrl } from '../utilities';
+import { getManifestFromDOM, getMediaUrl } from '@/utilities';
 
-const clientContext = createUniformContext();
+import '../styles/globals.scss';
 
 const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
 
@@ -17,7 +19,8 @@ const App = ({
   Component,
   pageProps,
   serverUniformContext,
-}: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => {
+}: UniformAppProps<{ data: RootComponentInstance; context: unknown; translations?: Record<string, string> }>) => {
+  const router = useRouter();
   const { data: composition } = pageProps || {};
   const {
     pageTitle,
@@ -46,6 +49,9 @@ const App = ({
 
   const openGraphImageSrc = getMediaUrl(openGraphImage?.value as Asset | undefined);
   const twitterImageSrc = getMediaUrl(twitterImage?.value as Asset | undefined);
+
+  const manifest = getManifestFromDOM();
+  const clientContext = createUniformContext(manifest);
 
   const renderOgImageElement = () => {
     if (overlayTitleToOgImage?.value && openGraphImageSrc) {
@@ -102,7 +108,15 @@ const App = ({
       </Head>
       <LazyMotion features={domAnimation}>
         <UniformContext context={serverUniformContext ?? clientContext}>
-          <Component {...pageProps} />
+          {/* FixMe: Think what timezone to use */}
+          <NextIntlClientProvider
+            locale={router.locale || 'en-US'}
+            messages={pageProps.translations}
+            timeZone="America/Chicago"
+            onError={process.env.NODE_ENV !== 'development' ? () => null : undefined}
+          >
+            <Component {...pageProps} />
+          </NextIntlClientProvider>
         </UniformContext>
       </LazyMotion>
     </>

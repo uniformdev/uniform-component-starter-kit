@@ -5,6 +5,7 @@ import { ComponentInstance } from '@uniformdev/canvas';
 import classNames from 'classnames';
 // @ts-ignore: Expected error if the module is not yet installed
 import { useInstantSearch, Hits } from 'react-instantsearch';
+import { useTranslations } from 'next-intl';
 import InformationContent from '../../components/InformationContent';
 import ErrorPropertyCallout from '../../components/ErrorPropertyCallout';
 import { withErrorCallout } from '../../hocs/withErrorCallout';
@@ -110,6 +111,7 @@ type AlgoliaHitsProps = ComponentProps<{
 }>;
 
 const AlgoliaHits: FC<AlgoliaHitsProps> = ({ component, hitStyles }) => {
+  const t = useTranslations();
   const {
     results: { hits, processingTimeMS },
     status,
@@ -124,7 +126,7 @@ const AlgoliaHits: FC<AlgoliaHitsProps> = ({ component, hitStyles }) => {
     const currentComponent = component?.slots?.hitComponent?.[0];
 
     if (!hits.length && status === 'idle' && processingTimeMS) {
-      return <InformationContent title="Sorry there are no products for this filter" />;
+      return <InformationContent title={t('Sorry there are no products for this filter') || ''} />;
     }
 
     switch (currentComponent?.type) {

@@ -2,11 +2,13 @@ import { FC } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { getLineClampClass } from '../../utilities/styling';
 import { getMediaUrl } from '../../utilities';
 import { TestimonialProps, TestimonialVariant } from '.';
 
 export const Testimonial: FC<TestimonialProps> = ({ picture, logo, lineCountRestriction, component }) => {
+  const t = useTranslations();
   const isCardWrapperVariant = component?.variant === TestimonialVariant.CardWrapped;
   return (
     <div className={classNames('flex flex-col', { 'card shadow-xl p-4': isCardWrapperVariant })}>
@@ -16,7 +18,7 @@ export const Testimonial: FC<TestimonialProps> = ({ picture, logo, lineCountRest
           className={classNames('text-secondary-content mt-4', getLineClampClass(lineCountRestriction))}
           as="p"
           parameterId="description"
-          placeholder="Description goes here"
+          placeholder={t('Description goes here')}
           render={content => (content ? `"${content}"` : content)}
         />
       </div>
@@ -30,9 +32,9 @@ export const Testimonial: FC<TestimonialProps> = ({ picture, logo, lineCountRest
             className="text-secondary-content font-bold"
             as="p"
             parameterId="personName"
-            placeholder="Person Name goes here"
+            placeholder={t('Person Name goes here')}
           />
-          <UniformText as="p" parameterId="personPosition" placeholder="Person Position goes here" />
+          <UniformText as="p" parameterId="personPosition" placeholder={t('Person Position goes here')} />
         </div>
       </div>
     </div>

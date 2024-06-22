@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import Button from '../../components/Button';
 import {
   getImageOverlayColorStyle,
@@ -38,8 +39,10 @@ export const Card: FC<CardProps> = ({
   delay,
   styles,
 }) => {
+  const t = useTranslations();
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const imageUrl = getMediaUrl(image);
 
   const badgeClassNames = classNames('badge', getBadgeStyleClass(badgeStyle), getBadgeSizeClass(badgeSize));
@@ -82,6 +85,7 @@ export const Card: FC<CardProps> = ({
           className={classNames(
             {
               'relative h-48': !isBackgroundImage && Boolean(imageUrl),
+              'w-20 h-20 flex justify-start ml-8': variant === CardVariants.Featured && Boolean(imageUrl),
             },
             styles?.imageContainer
           )}
@@ -105,7 +109,8 @@ export const Card: FC<CardProps> = ({
               { 'rounded-t-xl': !isBackgroundImage },
               { 'rounded-xl': isBackgroundImage },
               getImageOverlayOpacityStyle(overlayOpacity),
-              getImageOverlayColorStyle(overlayColor)
+              getImageOverlayColorStyle(overlayColor),
+              styles?.image
             )}
           />
         </figure>
@@ -123,20 +128,20 @@ export const Card: FC<CardProps> = ({
           {useCustomTextElements ? (
             <div className={badgeClassNames}>{badge}</div>
           ) : (
-            <UniformText placeholder="Badge goes here" parameterId="badge" as="div" className={badgeClassNames} />
+            <UniformText placeholder={t('Badge goes here')} parameterId="badge" as="div" className={badgeClassNames} />
           )}
 
           {useCustomTextElements ? (
             <h2 className={titleClassNames}>{title}</h2>
           ) : (
-            <UniformText placeholder="Title goes here" parameterId="title" as="h2" className={titleClassNames} />
+            <UniformText placeholder={t('Title goes here')} parameterId="title" as="h2" className={titleClassNames} />
           )}
         </TitleWrapper>
         {useCustomTextElements ? (
           <div className={descriptionClassNames} dangerouslySetInnerHTML={{ __html: description }} />
         ) : (
           <UniformText
-            placeholder="Description goes here"
+            placeholder={t('Description goes here')}
             parameterId="description"
             className={descriptionClassNames}
             render={(value = '') => <div dangerouslySetInnerHTML={{ __html: value }} />}
@@ -153,7 +158,7 @@ export const Card: FC<CardProps> = ({
                 useCustomTextElements ? (
                   <div>{buttonCopy}</div>
                 ) : (
-                  <UniformText placeholder="Button copy goes here" parameterId="buttonCopy" />
+                  <UniformText placeholder={t('Button copy goes here')} parameterId="buttonCopy" />
                 )
               }
             />

@@ -1,6 +1,7 @@
 import { FC, useCallback, useState } from 'react';
 import classNames from 'classnames';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { getButtonClass } from '../../utilities/styling';
 import ProductQuantityItem from '../../components/ProductQuantityItem';
 import { BaseAddToCartProps } from './';
@@ -12,6 +13,7 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
   useCustomTextElements = false,
   animationType,
 }) => {
+  const t = useTranslations();
   const [quantity, setQuantity] = useState<number>(1);
 
   const onClickIncrement = useCallback(() => setQuantity(quantity => quantity + 1), []);
@@ -24,7 +26,7 @@ const BaseAddToCart: FC<BaseAddToCartProps> = ({
   return (
     <div className="flex flex-row justify-between items-center py-6 flex-wrap gap-5">
       <div className="flex flex-wrap items-center justify-between w-auto gap-4 grow">
-        <div className="inline font-bold text-secondary-content">QUANTITY: </div>
+        <div className="inline font-bold text-secondary-content">{t('QUANTITY')}: </div>
         <ProductQuantityItem
           animationType={animationType}
           buttonStyle={buttonStyle}

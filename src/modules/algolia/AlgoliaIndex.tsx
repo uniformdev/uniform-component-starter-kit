@@ -2,6 +2,7 @@
 // @ts-ignore: Expected error if the module is not yet installed
 import { Index } from 'react-instantsearch';
 import { ComponentProps, registerUniformComponent, UniformSlot } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import ErrorPropertyCallout from '../../components/ErrorPropertyCallout';
 import { withErrorCallout } from '../../hocs/withErrorCallout';
 
@@ -15,11 +16,12 @@ type CanvasIndexProps = {
 };
 
 const AlgoliaIndex = (componentProps: ComponentProps<CanvasIndexProps>) => {
+  const t = useTranslations();
   const { indexProps } = componentProps?.indexParams || {};
   const indexName = indexProps?.indexName;
 
   if (!indexName) {
-    return <ErrorPropertyCallout title="Property 'indexName' was not defined for component." />;
+    return <ErrorPropertyCallout title={t("Property 'indexName' was not defined for component.") || ''} />;
   }
 
   return (

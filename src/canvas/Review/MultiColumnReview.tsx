@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import Rating from '../../components/Rating';
 import { getLineClampClass } from '../../utilities/styling';
 import { getMediaUrl } from '../../utilities';
@@ -16,6 +17,7 @@ export const MultiColumnReview: FC<Omit<ReviewProps, 'component'>> = ({
   lineCountRestriction,
   styles,
 }) => {
+  const t = useTranslations();
   const baseTextStyle = textColorVariant === 'Light' ? 'text-primary-content' : 'text-secondary-content';
   const pictureSrc = getMediaUrl(picture);
 
@@ -29,7 +31,7 @@ export const MultiColumnReview: FC<Omit<ReviewProps, 'component'>> = ({
           className={classNames('font-medium mt-2', baseTextStyle)}
           as="p"
           parameterId="personName"
-          placeholder="Reviewer goes here"
+          placeholder={t('Reviewer goes here')}
         />
         <UniformText
           className={classNames('text-sm mt-1', styles?.date)}
@@ -46,13 +48,13 @@ export const MultiColumnReview: FC<Omit<ReviewProps, 'component'>> = ({
           className={classNames('font-medium', baseTextStyle)}
           as="p"
           parameterId="title"
-          placeholder="Title goes here"
+          placeholder={t('Title goes here')}
         />
         <UniformText
           className={classNames('mt-4', baseTextStyle, getLineClampClass(lineCountRestriction), styles?.description)}
           as="p"
           parameterId="description"
-          placeholder="Description goes here"
+          placeholder={t('Description goes here')}
         />
       </div>
     </div>

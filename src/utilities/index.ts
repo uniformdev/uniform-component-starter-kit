@@ -106,3 +106,14 @@ const deepEqual = <T>(a: T, b: T): boolean => {
 
   return true;
 };
+
+export const getManifestFromDOM = () => {
+  let manifest = { project: {} };
+  if (typeof window !== 'undefined') {
+    const json = document.getElementById('manifest')?.innerHTML;
+    if (json) {
+      manifest = JSON.parse(json);
+    }
+  }
+  return manifest;
+};

@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { UniformText, useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
+import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import { REGEX_COLOR_HEX } from '../../../utilities';
 import { getTextColor } from '../../../utilities/styling';
 import { getDefaultTextStyle, getTextLetterSpacing, getTextSize } from './helpers';
@@ -21,14 +22,16 @@ export const Text: FC<TextProps> = ({
   component,
   ...restStyles
 }) => {
-  const { isContextualEditing } = useUniformCurrentComposition();
+  const t = useTranslations();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   const currentColor = REGEX_COLOR_HEX.test(color || DEFAULT_COLOR) ? color : undefined;
   const Tag = tag || DEFAULT_TAG;
 
   const TextElement = () => (
     <UniformText
-      placeholder="Text goes here"
+      placeholder={t('Text goes here')}
       parameterId="text"
       style={{ color: currentColor, ...style, ...restStyles }}
       as={Tag}

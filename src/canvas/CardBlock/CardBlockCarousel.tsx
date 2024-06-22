@@ -2,6 +2,7 @@ import { FC, useCallback } from 'react';
 import classNames from 'classnames';
 import MultiCarousel from 'react-multi-carousel';
 import { UniformText, UniformSlot, UniformSlotWrapperComponentProps } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import 'react-multi-carousel/lib/styles.css';
 import CarouselButtons from '../../components/CarouselButtons';
 import Button from '../../components/Button';
@@ -33,6 +34,8 @@ export const CardBlockCarousel: FC<CardBlockProps> = ({
   textColorVariant,
   styles,
 }) => {
+  const t = useTranslations();
+
   const colorClassName = getColorClassName(textColorVariant);
 
   const carouselInner = useCallback(
@@ -74,19 +77,19 @@ export const CardBlockCarousel: FC<CardBlockProps> = ({
       >
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
           <UniformText
-            placeholder={'Title goes here'}
+            placeholder={t('Title goes here')}
             parameterId="title"
             as={TitleTag}
             className={classNames('font-bold', getTextClass(TitleTag))}
           />
-          <UniformText placeholder={'Description goes here'} parameterId="description" as="p" className="sm:pr-8" />
+          <UniformText placeholder={t('Description goes here')} parameterId="description" as="p" className="sm:pr-8" />
         </div>
         {Boolean(buttonLink) && (
           <Button
             href={formatProjectMapLink(buttonLink)}
             style={buttonStyle}
             animationType={buttonAnimationType}
-            copy={<UniformText placeholder="Button copy goes here" parameterId="buttonCopy" />}
+            copy={<UniformText placeholder={t('Button copy goes here')} parameterId="buttonCopy" />}
           />
         )}
       </div>

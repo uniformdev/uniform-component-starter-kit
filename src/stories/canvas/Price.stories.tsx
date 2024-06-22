@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Price, PriceProps } from '@/canvas';
 import { Container } from '@/components';
@@ -21,7 +21,7 @@ const BASE_PROPS: Omit<PriceProps, 'component'> = {
   currency: 'USD',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<PriceProps>> = {
   labelStyle: { control: 'select', options: titleStyleOptions },
   currency: { control: 'select', options: currencyOptions },
 };

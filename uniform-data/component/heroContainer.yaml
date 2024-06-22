@@ -1,0 +1,239 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: heroContainer
+name: Hero Container
+icon: folder-add
+parameters:
+  - id: group_content
+    name: Content
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - eyebrowText
+        - title
+        - titleStyle
+        - description
+        - image
+        - video
+  - id: eyebrowText
+    name: Eyebrow text
+    type: text
+    helpText: ''
+    typeConfig: null
+    localizable: true
+  - id: title
+    name: Title
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '3'
+    localizable: true
+  - id: titleStyle
+    name: Title Style
+    type: tp-title-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: description
+    name: Description
+    type: text
+    helpText: ''
+    typeConfig:
+      required: false
+      multiline: true
+      linesCount: '10'
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    helpText: ''
+    typeConfig:
+      max: 1
+      min: 0
+  - id: video
+    name: Video
+    type: link
+    helpText: ''
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+        projectMapNode: false
+    localizable: false
+  - id: group_imageSettings
+    name: Image Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - overlayColor
+        - overlayOpacity
+  - id: objectFit
+    name: Object Fit
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Contain
+          value: contain
+        - text: Cover
+          value: cover
+        - text: Fill
+          value: fill
+        - text: None
+          value: none
+  - id: overlayColor
+    name: Overlay Color
+    type: tp-color-style-parameter
+    helpText: ''
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp-slider-parameter
+    helpText: ''
+    typeConfig:
+      step: 10
+      type: steps
+      unit: px
+      units: '%'
+      options: []
+      maxValue: 100
+      minValue: 0
+  - id: group_presentationSettings
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - textColor
+        - backgroundColor
+        - fullHeight
+        - containerVariant
+        - paddingTop
+        - paddingBottom
+        - marginBottom
+        - marginTop
+  - id: textColor
+    name: Text Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#000'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - accent
+      isAllowCustomColor: false
+    localizable: false
+  - id: backgroundColor
+    name: Background Color
+    type: tp-color-palette-parameter
+    helpText: ''
+    typeConfig:
+      defaultColorHex: '#fff'
+      allowThemeColors:
+        - primary
+        - primary-content
+        - accent
+      isAllowCustomColor: false
+    localizable: false
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    helpText: If enabled, other components will appear below the fold
+    typeConfig: null
+  - id: containerVariant
+    name: Container Variant
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Background In Container
+          value: backgroundInContainer
+        - text: Fluid Content
+          value: fluidContent
+  - id: paddingTop
+    name: Padding Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: paddingBottom
+    name: Padding Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginBottom
+    name: Margin Bottom
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+  - id: marginTop
+    name: Margin Top
+    type: select
+    helpText: ''
+    typeConfig:
+      options:
+        - text: Small
+          value: Small
+        - text: Medium
+          value: Medium
+        - text: Large
+          value: Large
+        - text: None
+          value: None
+categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Hero_preview_image
+useTeamPermissions: true
+slots:
+  - id: buttonsSection
+    name: Buttons Section
+    maxComponents: 4
+    allowedComponents:
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: title
+canBeComposition: false
+created: '2024-06-22T18:20:54.331462+00:00'
+updated: '2024-06-22T18:47:48.517505+00:00'
+variants:
+  - id: imageLeft
+    name: Image Left
+  - id: imageRight
+    name: Image Right
+  - id: twoColumns
+    name: Two Columns
+  - id: backgroundImage
+    name: Background Image

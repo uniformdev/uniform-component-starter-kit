@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { Next, documentToHtmlString, Options } from '@contentful/rich-text-html-renderer';
 import { BLOCKS, NodeData } from '@contentful/rich-text-types';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { getTextClass } from '../../utilities/styling';
 import { ContentBlockProps } from '.';
 
@@ -21,6 +22,7 @@ const documentToHtmlStringOptions: Options = {
 };
 
 export const ContentBlock: FC<ContentBlockProps> = ({ titleStyle: TitleTag = 'h1', content = '', link, styles }) => {
+  const t = useTranslations();
   const Wrapper = link?.path
     ? ({ children }: PropsWithChildren) => {
         return <Link href={link?.path}>{children}</Link>;
@@ -33,7 +35,7 @@ export const ContentBlock: FC<ContentBlockProps> = ({ titleStyle: TitleTag = 'h1
     >
       <Wrapper>
         <UniformText
-          placeholder="Title goes here"
+          placeholder={t('Title goes here')}
           parameterId="title"
           as={TitleTag}
           className={classNames('font-medium', getTextClass(TitleTag), styles?.title)}
@@ -48,7 +50,7 @@ export const ContentBlock: FC<ContentBlockProps> = ({ titleStyle: TitleTag = 'h1
         />
       ) : (
         <UniformText
-          placeholder="Text goes here"
+          placeholder={t('Text goes here')}
           parameterId="text"
           as={TitleTag}
           className={classNames('py-6 text-xl', styles?.text)}

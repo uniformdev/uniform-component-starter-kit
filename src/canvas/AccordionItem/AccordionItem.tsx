@@ -1,11 +1,13 @@
 import { FC, useCallback, useState } from 'react';
 import classNames from 'classnames';
 import { UniformText } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import { AccordionItemProps } from '.';
 
 export const AccordionItem: FC<AccordionItemProps> = ({ styles }) => {
   const [isOpened, setOpened] = useState(false);
   const toggleAccordion = useCallback(() => setOpened(isOpened => !isOpened), []);
+  const t = useTranslations();
 
   return (
     <div className={classNames('card rounded-none mb-6 last:mb-0', styles?.container)}>
@@ -17,7 +19,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({ styles }) => {
         )}
       >
         <UniformText
-          placeholder="Title goes here"
+          placeholder={t('Title goes here')}
           parameterId="title"
           as="p"
           className={classNames('text-start pr-2 text-primary-content', styles?.title)}
@@ -46,7 +48,7 @@ export const AccordionItem: FC<AccordionItemProps> = ({ styles }) => {
       </button>
       {isOpened && (
         <UniformText
-          placeholder="Description goes here"
+          placeholder={t('Description goes here')}
           parameterId="description"
           as="p"
           className={classNames('p-10 text-secondary-content', styles?.description)}

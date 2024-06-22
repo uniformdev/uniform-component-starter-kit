@@ -1,5 +1,6 @@
 import { FC, useEffect, useState } from 'react';
 import classnames from 'classnames';
+import { useTranslations } from 'next-intl';
 import { CountdownProps } from '.';
 import { getLabelStyle, getLabelWrapperStyle } from './helpers';
 
@@ -45,6 +46,7 @@ const calculateTimeRemaining = (targetDate: string) => {
 };
 
 export const CountdownEntry: FC<CountdownProps> = ({ targetDate, size, component }) => {
+  const t = useTranslations();
   const [timeRemaining, setTimeRemaining] = useState(calculateTimeRemaining(targetDate));
 
   useEffect(() => {
@@ -65,26 +67,26 @@ export const CountdownEntry: FC<CountdownProps> = ({ targetDate, size, component
             <span className={classnames('countdown font-mono', getLabelStyle(size))}>
               <CountdownItem value={timeRemaining.days} />
             </span>
-            days
+            {t('days')}
           </div>
         )}
         <div className={classnames('flex', getLabelWrapperStyle(component?.variant))}>
           <span className={classnames('countdown font-mono', getLabelStyle(size))}>
             <CountdownItem value={timeRemaining.hours} />
           </span>
-          hours
+          {t('hours')}
         </div>
         <div className={classnames('flex', getLabelWrapperStyle(component?.variant))}>
           <span className={classnames('countdown font-mono', getLabelStyle(size))}>
             <CountdownItem value={timeRemaining.minutes} />
           </span>
-          minutes
+          {t('minutes')}
         </div>
         <div className={classnames('flex', getLabelWrapperStyle(component?.variant))}>
           <span className={classnames('countdown font-mono', getLabelStyle(size))}>
             <CountdownItem value={timeRemaining.seconds} />
           </span>
-          seconds
+          {t('seconds')}
         </div>
       </div>
     </>

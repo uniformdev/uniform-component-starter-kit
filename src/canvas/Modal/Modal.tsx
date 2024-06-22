@@ -7,7 +7,8 @@ import { ModalProps } from '.';
 export const Modal: FC<ModalProps> = ({ closeOnClickOutside, automaticOpenTimeout, maxWidth, component }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const { isContextualEditing, selectedComponentReference } = useUniformContextualEditingState();
+  const { previewMode, selectedComponentReference } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   const onToggleModal = useCallback(() => {
     if (!isContextualEditing) setShowModal(prev => !prev);

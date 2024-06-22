@@ -28,8 +28,12 @@ export const getStaticProps = withUniformGetStaticProps({
       urlSegments: typeof slug === 'string' ? slug?.split('/') : slug,
     });
 
+    const translations = await import(`@/locales/${_context.locale || 'en-US'}.json`)
+      .then(m => m.default)
+      .catch(() => ({}));
+
     return {
-      props: { preview, data: composition || null, context: { breadcrumbs } },
+      props: { preview, data: composition || null, context: { breadcrumbs }, translations },
     };
   },
 });

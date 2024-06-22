@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Container, ContainerProps } from '@/canvas';
 import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
@@ -22,7 +22,7 @@ const BASE_PROPS: Omit<ContainerProps, 'children' | 'component'> = {
   paddingBottom: PaddingSize.Medium,
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<ContainerProps>> = {
   backgroundType: { control: 'select', options: containerBackgroundTypeOptions },
   paddingTop: { control: 'select', options: containerPaddingOptions },
   paddingBottom: { control: 'select', options: containerPaddingOptions },

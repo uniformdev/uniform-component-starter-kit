@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { ComponentProps, UniformText, registerUniformComponent } from '@uniformdev/canvas-react';
 // @ts-ignore: Expected error if the module is not yet installed
 import { FacetState, buildFacet, FacetValue, buildSearchBox } from '@coveo/headless';
+import { useTranslations } from 'next-intl';
 import { HeadlessEngineContext } from './Engine';
 
 type FacetProps = {
@@ -85,10 +86,11 @@ type FacetConfigurationProps = ComponentProps<{
 }>;
 
 const FacetConfiguration: FC<FacetConfigurationProps> = ({ facet }) => {
+  const t = useTranslations();
   const { field = '' } = facet?.facetConfiguration || {};
 
   if (!field) {
-    return <p className="text-black">Facet field must be provided</p>;
+    return <p className="text-black">{t('Facet field must be provided')}</p>;
   }
 
   return (
@@ -96,7 +98,7 @@ const FacetConfiguration: FC<FacetConfigurationProps> = ({ facet }) => {
       <div className="pt-12 pr-10 inline-flex flex-col w-full first:pt-2 min-h-[250px]">
         <UniformText
           parameterId="title"
-          placeholder="Title goes here"
+          placeholder={t('Title goes here')}
           className="font-extrabold text-lg capitalize text-black"
         />
         <Facet key={field} field={field} />

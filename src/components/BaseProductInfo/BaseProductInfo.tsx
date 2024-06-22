@@ -2,6 +2,7 @@ import { FC } from 'react';
 import Image from '../Image';
 import classNames from 'classnames';
 import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { useTranslations } from 'next-intl';
 import Button from '../../components/Button';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../../utilities/styling';
@@ -42,8 +43,10 @@ const ProductInfo: FC<Props> = ({
   delay = 'none',
   styles,
 }) => {
+  const t = useTranslations();
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const imageUrl = getMediaUrl(image);
   const { ElementWrapper, getDelayValue } = useProductInfoAnimation({
     duration,
@@ -91,7 +94,7 @@ const ProductInfo: FC<Props> = ({
             <p className={classNames('uppercase text-lg mb-5', styles?.eyebrow)}>{eyebrowText}</p>
           ) : (
             <UniformText
-              placeholder="Eyebrow text goes here"
+              placeholder={t('Eyebrow text goes here')}
               parameterId="eyebrowText"
               as="p"
               className={classNames('uppercase text-lg mb-5', styles?.eyebrow)}
@@ -107,7 +110,7 @@ const ProductInfo: FC<Props> = ({
             <TitleTag className={classNames('text-secondary font-bold text-4xl mb-5', styles?.title)}>{title}</TitleTag>
           ) : (
             <UniformText
-              placeholder="Title goes here"
+              placeholder={t('Title goes here')}
               parameterId="title"
               as={TitleTag}
               className={classNames('text-secondary font-bold text-4xl mb-5', styles?.title)}
@@ -123,7 +126,7 @@ const ProductInfo: FC<Props> = ({
             <div className={classNames('text-xl font-light mb-5', styles?.subtitle)}>{subTitle}</div>
           ) : (
             <UniformText
-              placeholder="Subtitle goes here"
+              placeholder={t('Subtitle goes here')}
               parameterId="subTitle"
               className={classNames('text-xl font-light mb-5', styles?.subtitle)}
             />
@@ -138,7 +141,7 @@ const ProductInfo: FC<Props> = ({
             <div className={classNames('text-lg mb-5', styles?.description)}>{description}</div>
           ) : (
             <UniformText
-              placeholder="Description goes here"
+              placeholder={t('Description goes here')}
               parameterId="description"
               className={classNames('text-lg mb-5', styles?.description)}
             />
@@ -154,7 +157,7 @@ const ProductInfo: FC<Props> = ({
           ) : (
             <UniformText
               className={styles?.highlightText}
-              placeholder="Highlight text goes here"
+              placeholder={t('Highlight text goes here')}
               parameterId="highlightText"
             />
           )}
@@ -175,7 +178,7 @@ const ProductInfo: FC<Props> = ({
                   useCustomTextElements ? (
                     <div>{primaryButtonCopy}</div>
                   ) : (
-                    <UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />
+                    <UniformText placeholder={t('Button copy goes here')} parameterId="primaryButtonCopy" />
                   )
                 }
                 style={primaryButtonStyle}
@@ -197,7 +200,7 @@ const ProductInfo: FC<Props> = ({
                   useCustomTextElements ? (
                     <div>{secondaryButtonCopy}</div>
                   ) : (
-                    <UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />
+                    <UniformText placeholder={t('Button copy goes here')} parameterId="secondaryButtonCopy" />
                   )
                 }
                 style={secondaryButtonStyle}

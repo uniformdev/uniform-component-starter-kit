@@ -3,6 +3,7 @@ import { FC, useContext, useEffect, useMemo, useState } from 'react';
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 // @ts-ignore: Expected error if the module is not yet installed
 import { buildQuerySummary, QuerySummaryState } from '@coveo/headless';
+import { useTranslations } from 'next-intl';
 import { HeadlessEngineContext } from './Engine';
 
 enum DurationSetting {
@@ -17,6 +18,7 @@ type QuerySummaryProps = ComponentProps<{
 
 // Coveo Pager docs https://docs.coveo.com/en/headless/latest/reference/search/controllers/query-summary/
 const QuerySummary: FC<QuerySummaryProps> = ({ title, durationSettings = DurationSetting.seconds }) => {
+  const t = useTranslations();
   const headlessEngine = useContext(HeadlessEngineContext);
 
   const headlessQuerySummary = useMemo(() => buildQuerySummary(headlessEngine), [headlessEngine]);
@@ -42,17 +44,17 @@ const QuerySummary: FC<QuerySummaryProps> = ({ title, durationSettings = Duratio
     return null;
   }
 
-  const summary = [`Results ${firstResult}-${lastResult} of ${total}`];
+  const summary = [`${t('Results')} ${firstResult}-${lastResult} ${t('of')} ${total}`];
 
   if (hasQuery) {
-    summary.push(`for ${query}`);
+    summary.push(`${t('for')} ${query}`);
   }
 
   if (hasDuration) {
     summary.push(
       durationSettings === DurationSetting.milliseconds
-        ? `in ${durationInMilliseconds} milliseconds`
-        : `in ${durationInSeconds} seconds`
+        ? `${t('in')} ${durationInMilliseconds} ${t('milliseconds')}`
+        : `${t('in')} ${durationInSeconds} ${t('seconds')}`
     );
   }
 
