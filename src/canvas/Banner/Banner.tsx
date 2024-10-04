@@ -1,8 +1,10 @@
-import { FC, Fragment } from 'react';
-import Image from '../../components/Image';
+import { FC, Fragment, MouseEvent } from 'react';
+import { getCookie, setCookie } from 'cookies-next';
 import classNames from 'classnames';
 import { UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import { useUniformContext } from '@uniformdev/context-react';
 import Button from '../../components/Button';
+import Image from '../../components/Image';
 import { formatProjectMapLink, getMediaUrl } from '../../utilities';
 import { ScreenContainer } from '../../components/Container';
 import { getPositionClassName, getWidthClassName, getTextAlignmentClassName } from './helpers';
@@ -23,9 +25,38 @@ export const Banner: FC<BannerProps> = ({
   secondaryButtonAnimationType,
   component,
 }) => {
+  const { context } = useUniformContext();
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
   const Wrapper = inline && component?.variant !== BannerVariant.FullWidth ? ScreenContainer : Fragment;
+
+  const handleConsentAcceptClick = (e: MouseEvent<HTMLButtonElement> | undefined) => {
+    e?.preventDefault();
+    context.storage.updateData([
+      {
+        type: 'consent',
+        data: true,
+      },
+    ]);
+    setCookie('CONSENT_BANNER_HIDE', '1');
+    window.location.reload();
+  };
+
+  const handleConsentDenyClick = (e: MouseEvent<HTMLButtonElement> | undefined) => {
+    e?.preventDefault();
+    context.storage.updateData([
+      {
+        type: 'consent',
+        data: false,
+      },
+    ]);
+    setCookie('CONSENT_BANNER_HIDE', '1');
+    window.location.reload();
+  };
+
+  if (getCookie('CONSENT_BANNER_HIDE')) {
+    return null;
+  }
 
   return (
     <Wrapper>
@@ -65,6 +96,7 @@ export const Banner: FC<BannerProps> = ({
                 copy={<UniformText placeholder="Button copy goes here" parameterId="primaryButtonCopy" />}
                 animationType={primaryButtonAnimationType}
                 style={primaryButtonStyle}
+                onClick={handleConsentAcceptClick}
               />
             )}
             {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
@@ -74,6 +106,7 @@ export const Banner: FC<BannerProps> = ({
                 copy={<UniformText placeholder="Button copy goes here" parameterId="secondaryButtonCopy" />}
                 animationType={secondaryButtonAnimationType}
                 style={secondaryButtonStyle}
+                onClick={handleConsentDenyClick}
               />
             )}
           </div>
@@ -82,3 +115,5 @@ export const Banner: FC<BannerProps> = ({
     </Wrapper>
   );
 };
+
+export default Banner;

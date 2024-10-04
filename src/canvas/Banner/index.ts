@@ -1,7 +1,9 @@
 import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
 import type { Asset } from '@uniformdev/assets';
 import { withoutContainer } from '../../hocs/withoutContainer';
-import { Banner } from './Banner';
+import dynamic from 'next/dynamic';
+
+const Banner = dynamic(() => import('./Banner'), { ssr: false });
 
 export type BannerProps = ComponentProps<{
   title: string;
