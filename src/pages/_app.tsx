@@ -13,11 +13,7 @@ const clientContext = createUniformContext();
 
 const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
 
-const App = ({
-  Component,
-  pageProps,
-  serverUniformContext,
-}: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => {
+const App = ({ Component, pageProps }: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => {
   const { data: composition } = pageProps || {};
   const {
     pageTitle,
@@ -101,7 +97,7 @@ const App = ({
         {faviconHref && <link rel="shortcut icon" href={faviconHref} />}
       </Head>
       <LazyMotion features={domAnimation}>
-        <UniformContext context={serverUniformContext ?? clientContext}>
+        <UniformContext context={clientContext} outputType={process.env.NODE_ENV === 'development' ? 'edge' : 'edge'}>
           <Component {...pageProps} />
         </UniformContext>
       </LazyMotion>

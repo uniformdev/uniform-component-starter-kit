@@ -15,4 +15,5 @@ module.exports = {
     ],
     'react/display-name': 'off',
   },
+  ignorePatterns: ['src/context/*.js', 'netlify/edge-functions/context-middleware.ts'],
 };

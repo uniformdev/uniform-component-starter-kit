@@ -1,6 +1,29 @@
 {
   "project": {
-    "pz": {},
+    "pz": {
+      "sig": {
+        "fallCampaign": {
+          "str": 50,
+          "cap": 100,
+          "dur": "s",
+          "crit": {
+            "op": "&",
+            "type": "G",
+            "clauses": [
+              {
+                "type": "QS",
+                "match": {
+                  "cs": false,
+                  "op": "=",
+                  "rhs": "fall"
+                },
+                "queryName": "utm_campaign"
+              }
+            ]
+          }
+        }
+      }
+    },
     "test": {}
   }
 }
