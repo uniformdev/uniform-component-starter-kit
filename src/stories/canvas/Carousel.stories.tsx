@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition, ComponentProps } from '@uniformdev/canvas-react';
-import { Carousel, CarouselVariants } from '@/canvas';
+import { Carousel, CarouselProps, CarouselVariants } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
 
 const meta: Meta<typeof Carousel> = {
@@ -95,7 +95,7 @@ const IMAGES_PROPS = [
   },
 ];
 
-const argTypes = {};
+const argTypes: Partial<ArgTypes<CarouselProps>> = {};
 
 const renderStory = (args: ComponentProps) => {
   const fakeComposition = createFakeCompositionData('carousel', args, { ...args.component.slots });

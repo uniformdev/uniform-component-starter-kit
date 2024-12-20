@@ -106,8 +106,26 @@ composition:
         type: header
         _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
     pageContent:
-      - _id: 1f352a25-7acb-4893-a11c-f06bd45f27ab
-        type: hero
+      - _id: deaf4fa3-1d8e-4193-8264-9474c84e72fe
+        type: heroContainer
+        slots:
+          buttonsSection:
+            - _id: acefd6fe-4b56-4194-adcb-93120942a708
+              type: button
+              parameters:
+                copy:
+                  type: text
+                  value: Browse the components
+                link:
+                  type: link
+                  value:
+                    path: /components
+                    type: projectMapNode
+                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                style:
+                  type: tp-button-style-parameter
+                  value: secondary
         variant: backgroundImage
         parameters:
           image:
@@ -151,9 +169,6 @@ composition:
           textColor:
             type: tp-color-palette-parameter
             value: primary-content
-          paddingTop:
-            type: select
-            value: None
           titleStyle:
             type: tp-title-style-parameter
             value: h1
@@ -164,29 +179,18 @@ composition:
               personalized web experiences with Uniform.
           eyebrowText:
             type: text
-            value: hello and welcome! this is
-          paddingBottom:
-            type: select
-            value: None
+            value: supercharge your new project with
+          overlayColor:
+            type: tp-color-style-parameter
+            value: base-300
+          overlayOpacity:
+            type: tp-slider-parameter
+            value: 20%
           containerVariant:
             type: select
             value: fluidContent
-          primaryButtonCopy:
-            type: text
-            value: Browse THE components
-          primaryButtonLink:
-            type: link
-            value:
-              path: /components
-              type: projectMapNode
-              nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
-          primaryButtonStyle:
-            type: tp-button-style-parameter
-            value: primary
       - _id: 7e072bd7-bbe7-4f97-8707-635f74d6ea8e
         type: callToAction
-        variant: ''
         parameters:
           title:
             type: text
@@ -201,9 +205,6 @@ composition:
               create dynamic and compelling web experiences and demonstrate the
               power of digital experience composition in Uniform. Just install,
               customize and start creating.
-          eyebrowText:
-            type: text
-            value: ''
       - _id: cc1d51b7-9e89-4031-8658-5b0d81ba15a7
         type: featuredCallout
         slots:
@@ -982,6 +983,6 @@ composition:
           secondaryButtonStyle:
             type: tp-button-style-parameter
             value: link
-created: '2024-02-06T11:14:33.660819+00:00'
-modified: '2024-02-08T16:28:46.082643+00:00'
+created: '2024-06-22T18:01:24.816856+00:00'
+modified: '2024-06-22T18:36:33.966665+00:00'
 pattern: false

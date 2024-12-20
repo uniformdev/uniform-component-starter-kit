@@ -1,6 +1,6 @@
 repo: demo-v-next
-branch: develop
-commit: a687cd38018ab556253851d1bb3dd64ce763b378
+branch: release
+commit: 40c8283148660891571f2e46a13dfed62728d281
 project: component-starter-kit
 variant: default
-date/time: 4/12/2024, 1:20:56 PM
+date/time: 12/20/2024, 2:44:21 PM

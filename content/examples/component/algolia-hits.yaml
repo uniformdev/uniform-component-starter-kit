@@ -7,7 +7,6 @@ parameters:
   - id: hitsParams
     name: Hits Parameters
     type: algolia-components
-    helpText: ''
     typeConfig:
       selectedComponent: Hits
 categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
@@ -25,5 +24,5 @@ slots:
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 canBeComposition: false
-created: '2023-12-22T11:47:16.222018+00:00'
-updated: '2023-12-26T09:33:38.260733+00:00'
+created: '2024-08-16T11:22:02.793657+00:00'
+updated: '2024-08-16T11:22:02.793657+00:00'

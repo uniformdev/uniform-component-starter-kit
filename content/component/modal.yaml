@@ -7,7 +7,6 @@ parameters:
   - id: closeOnClickOutside
     name: Close on click outside
     type: checkbox
-    helpText: ''
     typeConfig: null
   - id: automaticOpenTimeout
     name: Automatic Open Timeout
@@ -24,7 +23,6 @@ parameters:
   - id: maxWidth
     name: Max Width
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: custom
@@ -63,5 +61,5 @@ slots:
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 canBeComposition: false
-created: '2023-11-22T09:43:33.47125+00:00'
-updated: '2023-11-22T10:04:01.300491+00:00'
+created: '2023-08-28T12:30:18.564086+00:00'
+updated: '2024-08-16T11:17:12.35156+00:00'

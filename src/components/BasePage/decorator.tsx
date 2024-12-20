@@ -10,6 +10,16 @@ export const BackgroundDecorator: UniformPlaygroundDecorator = ({ data, children
   const isFooterComponents = ['footer'].includes(data.type);
   const isHeaderComponents = ['header'].includes(data.type);
 
+  const isCompositionPattern = [
+    'page',
+    'productDetailsPage',
+    'landingPage',
+    'productCategoryPage',
+    'articleDetailsPage',
+  ].includes(data.type);
+
+  if (isCompositionPattern) return <>{children}</>;
+
   return (
     <div className="min-h-screen overflow-x-hidden flex flex-col relative">
       {!isHeaderComponents && (

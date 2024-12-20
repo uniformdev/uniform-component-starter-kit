@@ -57,6 +57,7 @@ declare namespace UNIFORM_API {
     uniformAccessToken: string;
     project: CLI.AvailableProjects;
     variant: CLI.CommonVariants;
+    shouldCreateAdminKey: boolean;
   };
 
   type IntegrationDefinitionParams = {
@@ -64,6 +65,7 @@ declare namespace UNIFORM_API {
     teamId: string;
     apiHost?: string;
     headers: Record<string, string>;
+    skipDeepCheck?: boolean;
   };
 
   type IntegrationDefinitionResponse = {
@@ -146,6 +148,7 @@ declare namespace UNIFORM_API {
     projectId: string;
     apiHost: string;
     headers: Record<string, string>;
+    shouldCreateAdminKey: boolean;
   };
 
   type CreateApiKeysResponse = {

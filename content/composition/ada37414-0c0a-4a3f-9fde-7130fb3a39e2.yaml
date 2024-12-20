@@ -298,13 +298,6 @@ composition:
                         type: text
                         value: Headers
               parameters:
-                link:
-                  type: link
-                  value:
-                    path: /components
-                    type: projectMapNode
-                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
@@ -838,13 +831,6 @@ composition:
                         type: text
                         value: Images
               parameters:
-                link:
-                  type: link
-                  value:
-                    path: /components
-                    type: projectMapNode
-                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
@@ -1241,7 +1227,7 @@ composition:
                                       persuasive copywriting to data-driven
                                       analytics, our toolkit empowers you to
                                       create targeted campaigns, engage your
-                                      audience, and drive measurable results.
+                                      audience, and drive measurable results. 
                                   eyebrowText:
                                     type: text
                                     value: One Column Menu
@@ -1281,13 +1267,6 @@ composition:
                         type: select
                         value: Small
               parameters:
-                link:
-                  type: link
-                  value:
-                    path: /components
-                    type: projectMapNode
-                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
@@ -1758,13 +1737,6 @@ composition:
                         type: select
                         value: Small
               parameters:
-                link:
-                  type: link
-                  value:
-                    path: /components
-                    type: projectMapNode
-                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
@@ -2149,7 +2121,7 @@ composition:
                                                         persuasive copywriting to data-driven
                                                         analytics, our toolkit empowers you to
                                                         create targeted campaigns, engage your
-                                                        audience, and drive measurable results.
+                                                        audience, and drive measurable results. 
                                                     eyebrowText:
                                                       type: text
                                                       value: One Column Menu
@@ -2914,13 +2886,6 @@ composition:
                         type: select
                         value: Small
               parameters:
-                link:
-                  type: link
-                  value:
-                    path: /components
-                    type: projectMapNode
-                    nodeId: cab3997c-e1bb-4846-be31-9afeae37c5d4
-                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
                 color:
                   type: tp-color-palette-parameter
                   value: primary-content
@@ -3012,5 +2977,5 @@ composition:
           type: tp-slider-parameter
           value: Small
 created: '2023-12-04T16:14:24.598638+00:00'
-modified: '2024-03-26T12:24:56.64235+00:00'
+modified: '2024-06-18T12:48:34.89169+00:00'
 pattern: false

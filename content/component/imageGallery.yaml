@@ -13,12 +13,10 @@ parameters:
   - id: titleStyle
     name: Title Style
     type: tp-title-style-parameter
-    helpText: ''
     typeConfig: null
   - id: description
     name: Description
     type: text
-    helpText: ''
     typeConfig:
       multiline: true
       linesCount: '10'
@@ -26,13 +24,11 @@ parameters:
   - id: items
     name: Items
     type: asset
-    helpText: ''
     typeConfig:
       min: 0
   - id: maxItems
     name: Max Items
     type: number
-    helpText: ''
     typeConfig:
       max: '100'
       min: '1'
@@ -49,12 +45,10 @@ parameters:
   - id: backgroundType
     name: Background Type
     type: tp-background-type-parameter
-    helpText: ''
     typeConfig: null
   - id: paddingTop
     name: Padding Top
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -68,7 +62,6 @@ parameters:
   - id: paddingBottom
     name: Padding Bottom
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -82,7 +75,6 @@ parameters:
   - id: marginTop
     name: Margin Top
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -96,7 +88,6 @@ parameters:
   - id: marginBottom
     name: Margin Bottom
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -121,7 +112,6 @@ parameters:
   - id: animationType
     name: Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -131,7 +121,6 @@ parameters:
   - id: duration
     name: Duration
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Slow
@@ -143,7 +132,6 @@ parameters:
   - id: delay
     name: Delay
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: None
@@ -157,7 +145,6 @@ parameters:
   - id: animationOrder
     name: Animation Order
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: All at once (default)
@@ -167,7 +154,6 @@ parameters:
   - id: animationPreview
     name: Animation Preview
     type: tp-play-animation-parameter
-    helpText: ''
     typeConfig: null
 categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
 previewImageUrl: >-
@@ -187,7 +173,7 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-11-14T16:02:44.058827+00:00'
-updated: '2023-12-27T08:54:50.356376+00:00'
+updated: '2024-08-16T11:17:12.225778+00:00'
 variants:
   - id: backgroundInContainer
     name: Background In Container

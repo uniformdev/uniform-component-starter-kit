@@ -8,6 +8,7 @@ import { NavigationMenu } from './NavigationMenu';
 export type Styles = {
   link?: string;
   activeLink?: string;
+  mobileBackgroundType?: 'static' | 'custom';
 };
 
 export type LinkProps = ComponentProps<{

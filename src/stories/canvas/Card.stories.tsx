@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Card, CardProps, CardVariants } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
@@ -34,7 +34,7 @@ const BASE_PROPS: Omit<CardProps, 'component'> = {
   textColorVariant: 'Dark',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<CardProps>> = {
   badgeStyle: { control: 'select', options: badgeStyleOptions },
   buttonStyle: { control: 'select', options: buttonStyleOptions },
   badgeSize: { control: 'select', options: badgeSizeOptions },

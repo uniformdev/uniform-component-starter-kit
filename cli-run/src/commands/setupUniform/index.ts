@@ -11,6 +11,7 @@ import {
   getUniformTeamName,
 } from '../../informationCollector';
 import { demosRequiredIntegrationsMap, demosRequiredDataSourceMap, demosPreviewUrlMap } from '../../mappers';
+import { note } from '../../promts';
 
 const getAvailableProjectTypes = async (params: UNIFORM_API.GetProjectTypesParams) => {
   const { uniformAccessToken, uniformApiHost, teamId } = params;
@@ -33,7 +34,7 @@ export const setupUniformProject = async (
   params: UNIFORM_API.SetupUniformProject,
   progressSpinner: { start: (message: string) => void; stop: (message: string) => void }
 ) => {
-  const { uniformApiHost, uniformAccessToken, project, variant } = params;
+  const { uniformApiHost, uniformAccessToken, project, variant, shouldCreateAdminKey } = params;
   const headers = {
     accept: 'application/json',
     authorization: `Bearer ${uniformAccessToken}`,
@@ -63,11 +64,14 @@ export const setupUniformProject = async (
 
   if (projectId === 'new') {
     const { projectTypes } = await getAvailableProjectTypes({ uniformApiHost, uniformAccessToken, teamId });
-    if (projectTypes.length === 0) {
+
+    const avaliableProjectTypes = projectTypes.filter(type => type.limit > type.used);
+
+    if (avaliableProjectTypes.length === 0) {
       console.log('Your Uniform team is not licensed for any additional projects.');
       return {};
     }
-    const projectTypeId = await getUniformProjectTypeId(projectTypes);
+    const projectTypeId = await getUniformProjectTypeId(avaliableProjectTypes);
 
     const projectName = await getUniformProjectName();
 
@@ -88,9 +92,21 @@ export const setupUniformProject = async (
     progressSpinner.stop(`Finished creating uniform project. Id: ${projectId}. Preview url set to ${previewUrl}`);
   }
 
-  progressSpinner.start('Start creating uniform api keys');
+  if (shouldCreateAdminKey) {
+    note(
+      'Since your project has workflows, we will create an admin key for you. Please keep this key secure and refrain from sharing it with anyone.'
+    );
+  }
 
-  const createdKeys = await createApiKeys({ teamId, projectId, apiHost: uniformApiHost, headers });
+  progressSpinner.start(`Start creating uniform api keys. ${shouldCreateAdminKey ? 'Admin key will be created.' : ''}`);
+
+  const createdKeys = await createApiKeys({
+    teamId,
+    projectId,
+    apiHost: uniformApiHost,
+    headers,
+    shouldCreateAdminKey,
+  });
 
   const { writeApiKey } = createdKeys;
 

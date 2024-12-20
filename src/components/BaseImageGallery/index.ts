@@ -1,4 +1,4 @@
-import { ComponentProps } from '@uniformdev/canvas-react/dist';
+import { ComponentProps } from '@uniformdev/canvas-react';
 import type { Asset } from '@uniformdev/assets';
 import { ContainerProps } from '../Container';
 

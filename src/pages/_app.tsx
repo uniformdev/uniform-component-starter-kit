@@ -7,9 +7,7 @@ import { LazyMotion, domAnimation } from 'framer-motion';
 import createUniformContext from '@/context/createUniformContext';
 import '@/canvas';
 import '../styles/globals.scss';
-import { getMediaUrl } from '../utilities';
-
-const clientContext = createUniformContext();
+import { getManifestFromDOM, getMediaUrl } from '../utilities';
 
 const VERCEL_URL = process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : '';
 
@@ -17,7 +15,7 @@ const App = ({
   Component,
   pageProps,
   serverUniformContext,
-}: UniformAppProps<{ data: RootComponentInstance; context: unknown }>) => {
+}: UniformAppProps<{ data: RootComponentInstance; context: unknown; translations?: Record<string, string> }>) => {
   const { data: composition } = pageProps || {};
   const {
     pageTitle,
@@ -46,6 +44,9 @@ const App = ({
 
   const openGraphImageSrc = getMediaUrl(openGraphImage?.value as Asset | undefined);
   const twitterImageSrc = getMediaUrl(twitterImage?.value as Asset | undefined);
+
+  const manifest = getManifestFromDOM();
+  const clientContext = createUniformContext(manifest);
 
   const renderOgImageElement = () => {
     if (overlayTitleToOgImage?.value && openGraphImageSrc) {

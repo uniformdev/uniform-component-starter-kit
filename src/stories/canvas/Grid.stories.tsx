@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Grid, GridProps } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
@@ -28,7 +28,7 @@ const BASE_PROPS: Omit<GridProps, 'component' | 'children'> = {
   paddingBottom: PaddingSize.Medium,
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<GridProps>> = {
   columnsCount: { control: 'select', options: columnCountOptions },
   gapX: { control: 'select', options: gapXOptions },
   gapY: { control: 'select', options: gapYOptions },

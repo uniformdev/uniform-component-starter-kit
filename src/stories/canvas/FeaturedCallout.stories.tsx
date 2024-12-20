@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { FeaturedCallout, FeaturedCalloutProps, FeaturedCalloutVariant } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
@@ -22,7 +22,7 @@ const BASE_PROPS: Omit<FeaturedCalloutProps, 'component'> = {
     'https://res.cloudinary.com/uniform-demos/image/upload/v1692276539/csk-marketing/Hero-Rectangle_nof1km_qy2ow6.png',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<FeaturedCalloutProps>> = {
   titleStyle: { control: 'select', options: titleStyleOptions },
 };
 

@@ -1,13 +1,15 @@
 import { FC, useCallback, useState, useEffect, MouseEvent } from 'react';
 import classNames from 'classnames';
 import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { getModalMaxWidth } from './helpers';
 import { ModalProps } from '.';
 
 export const Modal: FC<ModalProps> = ({ closeOnClickOutside, automaticOpenTimeout, maxWidth, component }) => {
   const [showModal, setShowModal] = useState(false);
 
-  const { isContextualEditing, selectedComponentReference } = useUniformContextualEditingState();
+  const { previewMode, selectedComponentReference } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   const onToggleModal = useCallback(() => {
     if (!isContextualEditing) setShowModal(prev => !prev);
@@ -56,7 +58,7 @@ export const Modal: FC<ModalProps> = ({ closeOnClickOutside, automaticOpenTimeou
     <div>
       {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-static-element-interactions */}
       <div onClick={onToggleModal} className="max-w-screen-xl mx-auto">
-        <UniformSlot name="trigger" />
+        <UniformSlot name="trigger" emptyPlaceholder={<EmptyPlaceholder />} />
       </div>
       {isModalContentPlaceholder ? (
         <UniformSlot name="content" />

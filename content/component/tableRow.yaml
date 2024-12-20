@@ -7,7 +7,6 @@ parameters:
   - id: highlightsOnHover
     name: Highlights on hover
     type: checkbox
-    helpText: ''
     typeConfig: null
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
 previewImageUrl: >-
@@ -24,5 +23,5 @@ slots:
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
 canBeComposition: false
-created: '2023-11-22T09:43:35.301465+00:00'
-updated: '2023-11-22T10:10:11.583477+00:00'
+created: '2023-10-26T13:12:30.805788+00:00'
+updated: '2024-08-16T11:17:12.164033+00:00'

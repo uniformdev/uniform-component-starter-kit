@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { ProductInfo, ProductInfoProps } from '@/canvas';
 import { Container } from '@/components';
@@ -31,7 +31,7 @@ const BASE_PROPS: Omit<ProductInfoProps, 'component'> = {
   features: ['Free shipping', '3 year warranty', 'Starter bean kit'],
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<ProductInfoProps>> = {
   titleStyle: { control: 'select', options: titleStyleOptions },
 };
 

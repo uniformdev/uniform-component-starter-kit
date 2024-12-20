@@ -66,6 +66,18 @@ export const fillEnvFiles = async (
   );
 };
 
+export const isWorkflowsExist = (projectPath: string) => {
+  const workflowsPath = path.join(projectPath, 'content', 'workflow');
+
+  if (!fs.existsSync(workflowsPath)) {
+    return false;
+  }
+
+  const workflows = fs.readdirSync(workflowsPath);
+
+  return workflows.length > 0;
+};
+
 export const getExistDemoPath = (destination: string, project: string) => {
   return path.join(os.homedir(), destination, project);
 };
@@ -75,7 +87,7 @@ export const installDependencies = (projectPath: string) => {
 };
 
 export const buildDemo = (projectPath: string) => {
-  return execPromise(`cd ${projectPath} && npm run build`);
+  return execPromise(`cd ${projectPath} && npm run build`, { maxBuffer: 1024 * 1000000 });
 };
 
 export const runDemo = (projectPath: string) => {
@@ -91,5 +103,5 @@ export const installPackages = (projectPath: string, packages: string[]) => {
 };
 
 export const fixEslint = (projectPath: string) => {
-  return execPromise(`cd ${projectPath} && npm run lint:fix`);
+  return execPromise(`cd ${projectPath} && npm run lint:fix && npm run format`);
 };

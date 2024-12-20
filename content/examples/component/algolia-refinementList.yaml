@@ -7,7 +7,6 @@ parameters:
   - id: refinementListParams
     name: Refinement List Parameters
     type: algolia-components
-    helpText: ''
     typeConfig:
       selectedComponent: Refinement List
 categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
@@ -16,5 +15,5 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-12-22T11:47:15.173338+00:00'
-updated: '2023-12-26T09:35:42.216831+00:00'
+created: '2024-08-16T11:22:02.723219+00:00'
+updated: '2024-08-16T11:22:02.723219+00:00'

@@ -1,13 +1,12 @@
-import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
 import { withUniformGetServerSideProps, prependLocale } from '@uniformdev/canvas-next/route';
-import { getBreadcrumbs, getRouteClient } from '../utilities/canvas/canvasClients';
+import { getBreadcrumbs, getRouteClient, getState } from '../utilities/canvas/canvasClients';
 export { default } from '../components/BasePage';
 
 // Doc: https://docs.uniform.app/docs/guides/composition/url-management/routing/slug-based-routing
 
 export const getServerSideProps = withUniformGetServerSideProps({
   requestOptions: context => ({
-    state: Boolean(context.preview) ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    state: getState(Boolean(context.preview)),
   }),
   client: getRouteClient(),
   modifyPath: prependLocale,

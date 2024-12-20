@@ -1,8 +1,9 @@
 import { FC } from 'react';
-import { useUniformCurrentComposition } from '@uniformdev/canvas-react';
+import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 
 const UniformPreviewIcon: FC = () => {
-  const { isContextualEditing } = useUniformCurrentComposition();
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
 
   if (isContextualEditing) return null;
 
