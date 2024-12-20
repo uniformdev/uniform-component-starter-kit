@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Hero, HeroProps, HeroVariant } from '@/canvas';
 import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
@@ -43,7 +43,7 @@ const BASE_PROPS: Omit<HeroProps, 'component' | 'children'> = {
   textColorVariant: 'Dark',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<HeroProps>> = {
   titleStyle: { control: 'select', options: titleStyleOptions },
   primaryButtonStyle: { control: 'select', options: buttonStyleOptions },
   secondaryButtonStyle: { control: 'select', options: buttonStyleOptions },

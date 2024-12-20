@@ -34,6 +34,15 @@ export const demosVariantsGetEnvsMap: {
   },
 };
 
+const getInsightsIntegrationEndpoint = (insightsEndpoint?: string) => {
+  switch (insightsEndpoint) {
+    case 'https://api.us-east.aws.tinybird.co':
+      return 'aws-us-east-1';
+    default:
+      return 'aws-us-east-1';
+  }
+};
+
 export const Integrations = {
   Cloudinary: {
     name: 'Cloudinary',
@@ -66,6 +75,21 @@ export const Integrations = {
     name: `Theme Pack`,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     fetchDataFn: (data: any) => fetchThemePackThemes('custom', data),
+  },
+  Smartling: {
+    name: 'Smartling',
+    data: {
+      accountUID: process.env.CLI_SMARTLING_ACCOUNT_ID as string,
+      projectId: process.env.CLI_SMARTLING_PROJECT_ID as string,
+      userId: process.env.CLI_SMARTLING_USER_ID as string,
+      userSecret: process.env.CLI_SMARTLING_USER_SECRET as string,
+      localeMapping: {
+        'en-US': 'en-US',
+        'es-US': 'es-US',
+        'fr-CA': 'fr-CA',
+        'nl-NL': 'nl-NL',
+      },
+    },
   },
   Algolia: {
     name: 'Algolia',
@@ -105,13 +129,14 @@ export const Integrations = {
       token: process.env.CLI_OCTO_AI_API_KEY,
     },
   },
-  GoogleAnalytics: {
-    name: 'Google Analytics V4',
-    type: 'google-analytics-v4',
+  UniformFakeCommerce: {
+    name: 'Uniform Fake Commerce',
+  },
+  Insights: {
+    name: 'Insights',
+    type: 'tinybird',
     data: {
-      dataStreamName: `properties/${process.env.CLI_GOOGLE_ANALYTICS_PROPERTY_ID}/dataStreams/${process.env.CLI_GOOGLE_ANALYTICS_DATA_STREAMS_ID}`,
-      measurementId: process.env.CLI_NEXT_PUBLIC_GOOGLE_ANALYTICS_ID,
-      propertyId: `properties/${process.env.CLI_GOOGLE_ANALYTICS_PROPERTY_ID}`,
+      endpoint: getInsightsIntegrationEndpoint(process.env.CLI_UNIFORM_INSIGHTS_ENDPOINT),
     },
   },
 };
@@ -132,13 +157,26 @@ export const demosPreviewUrlMap: {
   },
 };
 
+export const demosProjectMapBaseUlrMap: {
+  [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, string>>;
+} = {
+  [AvailableProjects.SalesDemo]: {
+    [CommonVariants.Default]: 'http://localhost:3000',
+  },
+  [AvailableProjects.ComponentStarterKit]: {
+    [CommonVariants.Default]: 'http://localhost:3000',
+  },
+  [AvailableProjects.ComponentStarterKitRsc]: {
+    [CommonVariants.Default]: 'http://localhost:3000',
+  },
+};
+
 export const demosRequiredIntegrationsMap: {
   [availableProjects in CLI.AvailableProjects]: Partial<Record<CLI.CommonVariants, CLI.Integration[] | undefined>>;
 } = {
   [AvailableProjects.SalesDemo]: {
     [CommonVariants.Default]: [
       Integrations.ThemePackJavadripBlack,
-      Integrations.Algolia,
       Integrations.KontentAi,
       Integrations.Cloudinary,
       Integrations.Contentful,
@@ -146,7 +184,9 @@ export const demosRequiredIntegrationsMap: {
       Integrations.OpenAI,
       Integrations.Writer,
       Integrations.OctoAI,
-      Integrations.GoogleAnalytics,
+      Integrations.UniformFakeCommerce,
+      Integrations.Insights,
+      Integrations.Smartling,
     ],
   },
   [AvailableProjects.ComponentStarterKit]: {
@@ -309,6 +349,20 @@ const DataSource: {
       },
     },
   },
+  UniformFakeCommerce: {
+    integrationDisplayName: 'Uniform Fake Commerce',
+    dataSourceDisplayName: 'PIM',
+    dataSourceId: 'pim',
+    connectorType: 'fake-commerce-data-connection',
+    baseUrl: `https://canary-fake-commerce-mesh-integration.netlify.app`,
+    dataProperties: {
+      localeMapping: {
+        'en-CA': 'en-US',
+        'en-GB': 'en-US',
+        'en-NL': 'en-US',
+      },
+    },
+  },
 };
 
 export const demosRequiredDataSourceMap: {
@@ -324,6 +378,7 @@ export const demosRequiredDataSourceMap: {
       DataSource.BrandData,
       DataSource.KontentAi,
       DataSource.JavaDripWordpressBlog,
+      DataSource.UniformFakeCommerce,
     ],
   },
   [AvailableProjects.ComponentStarterKit]: {

@@ -24,12 +24,10 @@ parameters:
   - id: backgroundType
     name: Background Type
     type: tp-background-type-parameter
-    helpText: ''
     typeConfig: null
   - id: paddingTop
     name: Padding Top
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -43,7 +41,6 @@ parameters:
   - id: paddingBottom
     name: Padding Bottom
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -57,7 +54,6 @@ parameters:
   - id: marginTop
     name: Margin Top
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -71,7 +67,6 @@ parameters:
   - id: marginBottom
     name: Margin Bottom
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Small
@@ -96,7 +91,7 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:17.822277+00:00'
-updated: '2023-12-27T08:49:25.331813+00:00'
+updated: '2024-08-16T11:17:11.503842+00:00'
 variants:
   - id: backgroundInContainer
     name: Background In Container

@@ -86,7 +86,6 @@ parameters:
   - id: rowStart
     name: Row Start
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: custom
@@ -169,5 +168,5 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: title
 canBeComposition: false
-created: '2024-01-15T10:23:16.67583+00:00'
-updated: '2024-01-16T11:10:58.511655+00:00'
+created: '2023-08-28T12:30:17.828063+00:00'
+updated: '2024-08-16T11:17:11.140717+00:00'

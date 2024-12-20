@@ -7,7 +7,6 @@ parameters:
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig: null
   - id: numberOfResults
     name: Number of Results
@@ -28,5 +27,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
-created: '2023-11-23T08:52:39.18402+00:00'
-updated: '2023-11-23T09:02:13.27358+00:00'
+created: '2024-08-16T11:22:02.874949+00:00'
+updated: '2024-08-16T11:22:02.874949+00:00'

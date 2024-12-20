@@ -1,32 +1,15 @@
 import { FC } from 'react';
-import { ComponentProps, registerUniformComponent } from '@uniformdev/canvas-react';
-import type { Asset } from '@uniformdev/assets';
+import { registerUniformComponent, useUniformContextualEditingState, ComponentProps } from '@uniformdev/canvas-react';
 import { withoutContainer } from '../../hocs/withoutContainer';
-import { ContainerProps } from '../../components/Container';
-import { HeroSideImage } from './HeroSideImage';
-import { HeroBackgroundImage } from './HeroBackgroundImage';
-import { HeroTwoColumns } from './HeroTwoColumns';
-import { HeroDefault } from './Hero';
+import { useHeroAnimation } from '../../components/BaseHero/animation';
+import BaseHero, { BaseHeroProps, BaseHeroVariant } from '../../components/BaseHero';
+import { AnimationVariant } from '../../components/AnimatedContainer';
+import { PrimaryButton, SecondaryButton } from './atoms';
 
-export const DEFAULT_TEXT_COLOR = '#000';
-
-type Styles = {
-  eyebrowText?: string;
-  title?: string;
-  description?: string;
-  descriptionSeparator?: string;
-  sideImage?: string;
-  textAlign?: string;
-};
+export { BaseHeroVariant as HeroVariant } from '../../components/BaseHero';
 
 export type HeroProps = ComponentProps<
-  ContainerProps & {
-    eyebrowText: string;
-    title: string;
-    titleStyle: Types.HeadingStyles;
-    description: string;
-    image?: string | Asset;
-    video?: string;
+  BaseHeroProps & {
     primaryButtonCopy: string;
     primaryButtonLink: Types.ProjectMapLink;
     primaryButtonStyle: Types.ButtonStyles;
@@ -35,53 +18,83 @@ export type HeroProps = ComponentProps<
     secondaryButtonLink: Types.ProjectMapLink;
     secondaryButtonStyle: Types.ButtonStyles;
     secondaryButtonAnimationType?: Types.AnimationType;
-    overlayColor?: Types.AvailableColor;
-    overlayOpacity?: Types.AvailableOpacity;
-    objectFit?: Types.AvailableObjectFit;
-    useCustomTextElements?: boolean;
-    fullHeight?: boolean;
-    animationType?: Types.AnimationType;
-    animationOrder?: Types.AnimationOrder;
-    duration?: Types.DurationType;
-    textColorVariant: Types.AvailableTextColorVariant; // Deprecated
-    textColor?: Types.ThemeColorsValues | string;
-    backgroundColor?: Types.ThemeColorsValues | string;
-    delay?: Types.AnimationDelay;
-    animationPreview?: boolean;
-    styles?: Styles;
   }
 >;
 
-export enum HeroVariant {
-  ImageLeft = 'imageLeft',
-  ImageRight = 'imageRight',
-  BackgroundImage = 'backgroundImage',
-  TwoColumns = 'twoColumns',
-}
+const Hero: FC<HeroProps> = ({
+  primaryButtonCopy,
+  primaryButtonAnimationType,
+  primaryButtonLink,
+  primaryButtonStyle,
+  secondaryButtonCopy,
+  secondaryButtonAnimationType,
+  secondaryButtonLink,
+  secondaryButtonStyle,
+  component,
+  ...baseProps
+}) => {
+  const { previewMode } = useUniformContextualEditingState();
+  const isContextualEditing = previewMode === 'editor';
+  const { duration = 'medium', animationOrder, delay = 'none', animationType, animationPreview } = baseProps || {};
 
-const Hero: FC<HeroProps> = props => {
-  const { variant } = props.component || {};
-  switch (variant) {
-    case HeroVariant.ImageRight:
-    case HeroVariant.ImageLeft:
-      return <HeroSideImage {...props} />;
-    case HeroVariant.BackgroundImage:
-      return <HeroBackgroundImage {...props} />;
-    case HeroVariant.TwoColumns:
-      return <HeroTwoColumns {...props} />;
-    default:
-      return <HeroDefault {...props} />;
-  }
+  const { ElementWrapper, getDelayValue } = useHeroAnimation({
+    duration,
+    animationOrder,
+    delay,
+    animationType,
+    animationPreview,
+  });
+
+  return (
+    <BaseHero
+      {...baseProps}
+      variant={component?.variant}
+      buttonsSlot={
+        <>
+          {(Boolean(primaryButtonCopy) || isContextualEditing) && (
+            <ElementWrapper
+              duration={duration}
+              delay={getDelayValue(4.5)}
+              animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInLeft}
+            >
+              <PrimaryButton
+                animationType={primaryButtonAnimationType}
+                primaryButtonLink={primaryButtonLink}
+                primaryButtonStyle={primaryButtonStyle}
+              />
+            </ElementWrapper>
+          )}
+          {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
+            <ElementWrapper
+              duration={duration}
+              delay={getDelayValue(6)}
+              animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInLeft}
+            >
+              <SecondaryButton
+                animationType={secondaryButtonAnimationType}
+                secondaryButtonLink={secondaryButtonLink}
+                secondaryButtonStyle={secondaryButtonStyle}
+              />
+            </ElementWrapper>
+          )}
+        </>
+      }
+    />
+  );
 };
 
-[undefined, HeroVariant.ImageLeft, HeroVariant.ImageRight, HeroVariant.BackgroundImage, HeroVariant.TwoColumns].forEach(
-  variantId => {
-    registerUniformComponent({
-      type: 'hero',
-      component: withoutContainer(Hero),
-      variantId,
-    });
-  }
-);
+[
+  undefined,
+  BaseHeroVariant.ImageLeft,
+  BaseHeroVariant.ImageRight,
+  BaseHeroVariant.BackgroundImage,
+  BaseHeroVariant.TwoColumns,
+].forEach(variantId => {
+  registerUniformComponent({
+    type: 'hero',
+    component: withoutContainer(Hero),
+    variantId,
+  });
+});
 
 export default withoutContainer(Hero);

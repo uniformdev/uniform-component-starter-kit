@@ -7,7 +7,6 @@ parameters:
   - id: paginationParams
     name: Pagination Parameters
     type: algolia-components
-    helpText: ''
     typeConfig:
       selectedComponent: Pagination
   - id: pageSize
@@ -24,5 +23,5 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-12-22T11:47:15.372329+00:00'
-updated: '2023-12-26T09:35:30.049552+00:00'
+created: '2024-08-16T11:22:02.803748+00:00'
+updated: '2024-08-16T11:22:02.803748+00:00'

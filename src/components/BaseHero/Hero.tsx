@@ -1,25 +1,16 @@
 import { FC } from 'react';
 import classNames from 'classnames';
-import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
-import { Container, Description, EyebrowText, PrimaryButton, SecondaryButton, Title } from './atoms';
+import { Container, Description, EyebrowText, Title } from './atoms';
 import { useHeroAnimation } from './animation';
 import { AnimationVariant } from '../../components/AnimatedContainer';
-import { DEFAULT_TEXT_COLOR, HeroProps } from './';
+import { DEFAULT_TEXT_COLOR, BaseHeroProps } from './';
 import { REGEX_COLOR_HEX } from '../../utilities';
 import { getHeroTextStyle } from './helpers';
 
-export const HeroDefault: FC<HeroProps> = ({
+export const HeroDefault: FC<BaseHeroProps> = ({
   title,
   titleStyle = 'h1',
   description,
-  primaryButtonCopy,
-  primaryButtonLink,
-  primaryButtonStyle = 'primary',
-  primaryButtonAnimationType,
-  secondaryButtonCopy,
-  secondaryButtonLink,
-  secondaryButtonStyle = 'primary',
-  secondaryButtonAnimationType,
   useCustomTextElements = false,
   fullHeight,
   animationType,
@@ -36,11 +27,9 @@ export const HeroDefault: FC<HeroProps> = ({
   textColor = DEFAULT_TEXT_COLOR,
   animationPreview,
   delay = 'none',
+  buttonsSlot,
   styles,
 }) => {
-  const { previewMode } = useUniformContextualEditingState();
-  const isContextualEditing = previewMode === 'editor';
-
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
     ? textColor
     : undefined;
@@ -98,34 +87,7 @@ export const HeroDefault: FC<HeroProps> = ({
           >
             <Description className={styles?.description} />
           </ElementWrapper>
-          <div className={classNames('pb-6', { 'py-6': !description })}>
-            {(Boolean(primaryButtonCopy) || isContextualEditing) && (
-              <ElementWrapper
-                duration={duration}
-                delay={getDelayValue(4.5)}
-                animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
-              >
-                <PrimaryButton
-                  animationType={primaryButtonAnimationType}
-                  primaryButtonLink={primaryButtonLink}
-                  primaryButtonStyle={primaryButtonStyle}
-                />
-              </ElementWrapper>
-            )}
-            {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
-              <ElementWrapper
-                duration={duration}
-                delay={getDelayValue(6)}
-                animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : AnimationVariant.FadeInTop}
-              >
-                <SecondaryButton
-                  animationType={secondaryButtonAnimationType}
-                  secondaryButtonLink={secondaryButtonLink}
-                  secondaryButtonStyle={secondaryButtonStyle}
-                />
-              </ElementWrapper>
-            )}
-          </div>
+          <div className={classNames('pb-6', { 'py-6': !description })}>{buttonsSlot}</div>
         </div>
       </div>
     </Container>

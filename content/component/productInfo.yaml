@@ -8,9 +8,7 @@ parameters:
   - id: productKey
     name: Product Key
     type: text
-    helpText: ''
     typeConfig: null
-    localizable: false
   - id: group_content
     name: Content
     type: group
@@ -28,13 +26,11 @@ parameters:
   - id: eyebrowText
     name: Eyebrow text
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig:
       required: false
       multiline: true
@@ -43,18 +39,15 @@ parameters:
   - id: titleStyle
     name: Title Style
     type: tp-title-style-parameter
-    helpText: ''
     typeConfig: null
   - id: subTitle
     name: Sub Title
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: description
     name: Description
     type: text
-    helpText: ''
     typeConfig:
       required: false
       multiline: true
@@ -63,20 +56,17 @@ parameters:
   - id: highlightText
     name: Highlight Text
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: image
     name: Image
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
   - id: features
     name: Features
     type: json
-    helpText: ''
     typeConfig:
       schema:
         type: array
@@ -94,23 +84,19 @@ parameters:
   - id: primaryButtonCopy
     name: Primary Button Copy
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: primaryButtonStyle
     name: Primary Button Style
     type: tp-button-style-parameter
-    helpText: ''
     typeConfig: null
   - id: primaryButtonLink
     name: Primary Button Link
     type: link
-    helpText: ''
     typeConfig: null
   - id: primaryButtonAnimationType
     name: Primary Button Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -129,23 +115,19 @@ parameters:
   - id: secondaryButtonCopy
     name: Secondary Button Copy
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: secondaryButtonStyle
     name: Secondary Button Style
     type: tp-button-style-parameter
-    helpText: ''
     typeConfig: null
   - id: secondaryButtonLink
     name: Secondary Button Link
     type: link
-    helpText: ''
     typeConfig: null
   - id: secondaryButtonAnimationType
     name: Secondary Button Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -164,7 +146,6 @@ parameters:
   - id: objectFit
     name: Object Fit
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Contain
@@ -178,12 +159,10 @@ parameters:
   - id: overlayColor
     name: Overlay Color
     type: tp-color-style-parameter
-    helpText: ''
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 10
       type: steps
@@ -202,7 +181,6 @@ parameters:
   - id: fullHeight
     name: Full Height
     type: checkbox
-    helpText: ''
     typeConfig: null
   - id: group_animationSettings
     name: Animation Settings
@@ -218,7 +196,6 @@ parameters:
   - id: animationType
     name: Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -228,7 +205,6 @@ parameters:
   - id: duration
     name: Duration
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Slow
@@ -240,7 +216,6 @@ parameters:
   - id: delay
     name: Delay
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: None
@@ -254,7 +229,6 @@ parameters:
   - id: animationOrder
     name: Animation Order
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: All at once (default)
@@ -264,7 +238,6 @@ parameters:
   - id: animationPreview
     name: Animation Preview
     type: tp-play-animation-parameter
-    helpText: ''
     typeConfig: null
 categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
 previewImageUrl: >-
@@ -274,4 +247,4 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-09-04T19:16:21.62694+00:00'
-updated: '2023-12-27T08:58:27.252107+00:00'
+updated: '2024-08-16T11:17:11.57186+00:00'

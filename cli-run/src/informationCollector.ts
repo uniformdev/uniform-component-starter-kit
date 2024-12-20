@@ -80,12 +80,10 @@ export const getUniformProjectName = async (): Promise<string> => {
 };
 
 export const getUniformProjectTypeId = async (projectTypes: UNIFORM_API.ProjectType[]): Promise<string> => {
-  const options = projectTypes
-    .filter(type => type.limit > type.used)
-    .map(type => ({
-      value: type.id,
-      label: `${type.name}${type.is_prod !== true ? ' [NON PROD]' : ''} (${type.limit - type.used} remaining)`,
-    }));
+  const options = projectTypes.map(type => ({
+    value: type.id,
+    label: `${type.name}${type.is_prod !== true ? ' [NON PROD]' : ''} (${type.limit - type.used} remaining)`,
+  }));
   return (await select({ message: 'Select your Uniform project type:', options })).toString();
 };
 
@@ -378,33 +376,33 @@ export const getSupabaseEnvs = async (
 export const getInsightsEnvs = async (
   project: string
 ): Promise<{
-  NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT: string;
-  NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY: string;
+  UNIFORM_INSIGHTS_ENDPOINT: string;
+  UNIFORM_INSIGHTS_KEY: string;
 }> => {
   if (!isDevMode) {
     return {
-      NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT || '',
-      NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY || '',
+      UNIFORM_INSIGHTS_ENDPOINT: process.env.CLI_UNIFORM_INSIGHTS_ENDPOINT || '',
+      UNIFORM_INSIGHTS_KEY: process.env.CLI_UNIFORM_INSIGHTS_KEY || '',
     };
   }
 
-  const NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT = (
+  const UNIFORM_INSIGHTS_ENDPOINT = (
     await text({
       message: `Your ${project} insights endpoint:`,
       validate,
-      initialValue: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT,
+      initialValue: process.env.CLI_UNIFORM_INSIGHTS_ENDPOINT,
     })
   ).toString();
 
-  const NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY = (
+  const UNIFORM_INSIGHTS_KEY = (
     await text({
       message: `Your ${project} insights key:`,
       validate,
-      initialValue: process.env.CLI_NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY,
+      initialValue: process.env.CLI_UNIFORM_INSIGHTS_KEY,
     })
   ).toString();
 
-  return { NEXT_PUBLIC_UNIFORM_INSIGHTS_ENDPOINT, NEXT_PUBLIC_UNIFORM_INSIGHTS_KEY };
+  return { UNIFORM_INSIGHTS_ENDPOINT, UNIFORM_INSIGHTS_KEY };
 };
 
 export const additionalModulesForComponentStarterKit =

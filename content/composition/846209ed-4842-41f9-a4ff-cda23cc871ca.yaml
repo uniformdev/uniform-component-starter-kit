@@ -101,7 +101,7 @@ composition:
               parameters:
                 text:
                   type: text
-                  value: 'The countdown to the your Independence Day:'
+                  value: 'The countdown to the your St Patrick''s Day:'
                 title:
                   type: text
                   value: Default Countdown
@@ -122,10 +122,10 @@ composition:
                   value: normal
                 title:
                   type: text
-                  value: To the Independence Day
+                  value: To the St Patrick's Day
                 targetDate:
                   type: text
-                  value: '2024-07-04T00:00:00'
+                  value: '2025-03-17T00:00:00'
         parameters:
           title:
             type: text
@@ -139,7 +139,7 @@ composition:
               parameters:
                 text:
                   type: text
-                  value: 'The countdown to the your Independence Day:'
+                  value: 'The countdown to the your St Patrick''s Day:'
                 title:
                   type: text
                   value: Labels Under Countdown
@@ -161,10 +161,10 @@ composition:
                   value: normal
                 title:
                   type: text
-                  value: To the Independence Day
+                  value: To the St Patrick's Day
                 targetDate:
                   type: text
-                  value: '2024-07-04T00:00:00'
+                  value: '2025-03-17T00:00:00'
         parameters:
           title:
             type: text
@@ -178,7 +178,7 @@ composition:
               parameters:
                 text:
                   type: text
-                  value: 'The countdown to the your Independence Day:'
+                  value: 'The countdown to the your St Patrick''s Day:'
                 title:
                   type: text
                   value: Labels In Boxes Countdown
@@ -200,10 +200,10 @@ composition:
                   value: normal
                 title:
                   type: text
-                  value: To the Independence Day
+                  value: To the St Patrick's Day
                 targetDate:
                   type: text
-                  value: '2024-07-04T00:00:00'
+                  value: '2025-03-17T00:00:00'
         parameters:
           title:
             type: text
@@ -217,7 +217,7 @@ composition:
               parameters:
                 text:
                   type: text
-                  value: 'The countdown to the Independence Day in New York:'
+                  value: 'The countdown to the St Patrick''s Day in New York:'
                 title:
                   type: text
                   value: With timezone example
@@ -239,14 +239,14 @@ composition:
                   value: normal
                 title:
                   type: text
-                  value: To the Independence Day
+                  value: To the St Patrick's Day
                 targetDate:
                   type: text
-                  value: '2024-07-04T00:00:00-04:00'
+                  value: '2025-03-17T00:00:00-04:00'
         parameters:
           title:
             type: text
             value: Labels under Countdown
 created: '2023-12-04T16:14:25.164312+00:00'
-modified: '2024-03-26T14:42:43.919814+00:00'
+modified: '2024-12-20T11:14:05.617923+00:00'
 pattern: false

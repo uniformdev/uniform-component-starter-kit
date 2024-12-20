@@ -1,7 +1,8 @@
 import { FC, useEffect, useRef, useState, createContext } from 'react';
-import Image from '../../components/Image';
 import classNames from 'classnames';
 import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
+import Image from '../../components/Image';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { fromCamelCaseText, getMediaUrl } from '../../utilities';
 import { CarouselProps, CarouselVariants } from '.';
 import { CarouselInner } from './CarouselInner';
@@ -104,7 +105,11 @@ export const Carousel: FC<CarouselProps> = ({ component }) => {
         <div className="relative overflow-hidden">
           {renderCarouselButtons()}
           <div ref={container} className="flex flex-row items-center scroll-smooth overflow-x-hidden">
-            <UniformSlot name="carouselItem" wrapperComponent={CarouselInner} />
+            <UniformSlot
+              name="carouselItem"
+              emptyPlaceholder={<EmptyPlaceholder className="mx-24" />}
+              wrapperComponent={CarouselInner}
+            />
           </div>
         </div>
         {variant === CarouselVariants.ImageGallery && !!carouselItem?.length && (

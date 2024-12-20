@@ -7,6 +7,12 @@ type ComponentStartKitContextProps = {
   themeName?: Types.SupportedThemes;
   [key: string]: unknown;
   localizationSettings?: Types.LocalizationSettings;
+  initialSearchResults?: {
+    avaliableFilters: Record<string, { label: string; value: string; isDisplayPriority: boolean }[]>;
+    resultEntries: unknown[];
+    totalCount: number;
+    filterBy: unknown[];
+  };
 };
 
 type Props = PropsWithChildren<Record<string, unknown>>;

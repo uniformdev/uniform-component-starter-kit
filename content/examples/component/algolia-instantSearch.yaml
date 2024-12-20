@@ -7,7 +7,6 @@ parameters:
   - id: instantSearchParams
     name: Instant Search Parameters
     type: algolia-components
-    helpText: ''
     typeConfig:
       selectedComponent: Instant Search
 categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
@@ -28,5 +27,5 @@ slots:
       - gridItem
     inheritAllowedComponents: false
 canBeComposition: false
-created: '2023-12-22T11:47:15.340468+00:00'
-updated: '2023-12-26T09:34:48.141572+00:00'
+created: '2024-08-16T11:22:02.800543+00:00'
+updated: '2024-08-16T11:22:02.800543+00:00'

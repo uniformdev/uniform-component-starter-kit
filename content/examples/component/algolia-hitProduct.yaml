@@ -17,22 +17,18 @@ parameters:
   - id: buttonLink
     name: Button Link
     type: link
-    helpText: ''
     typeConfig: null
   - id: buttonStyle
     name: Button Style
     type: tp-button-style-parameter
-    helpText: ''
     typeConfig: null
   - id: buttonCopy
     name: Button Copy
     type: text
-    helpText: ''
     typeConfig: null
   - id: buttonAnimationType
     name: Button Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -50,7 +46,6 @@ parameters:
   - id: badgeSize
     name: Badge Size
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Large
@@ -64,7 +59,6 @@ parameters:
   - id: badgeStyle
     name: Badge Style
     type: tp-badge-style-parameter
-    helpText: ''
     typeConfig: null
   - id: group_description
     name: Description
@@ -76,7 +70,6 @@ parameters:
   - id: lineCountRestriction
     name: Line Count Restriction
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: custom
@@ -110,7 +103,6 @@ parameters:
   - id: objectFit
     name: Object Fit
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Contain
@@ -124,12 +116,10 @@ parameters:
   - id: overlayColor
     name: Overlay Color
     type: tp-color-style-parameter
-    helpText: ''
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 10
       type: steps
@@ -148,7 +138,6 @@ parameters:
   - id: textColorVariant
     name: Text Color Variant
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Dark
@@ -168,7 +157,6 @@ parameters:
   - id: animationType
     name: Animation Type
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Fade-In
@@ -178,7 +166,6 @@ parameters:
   - id: duration
     name: Duration
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Slow
@@ -190,7 +177,6 @@ parameters:
   - id: delay
     name: Delay
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: None
@@ -204,7 +190,6 @@ parameters:
   - id: animationPreview
     name: Animation Preview
     type: tp-play-animation-parameter
-    helpText: ''
     typeConfig: null
 categoryId: d9790aaa-062a-4dd9-ae5e-30b3222a041c
 previewImageUrl: >-
@@ -212,8 +197,8 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-12-22T11:47:14.903897+00:00'
-updated: '2023-12-26T09:34:02.022672+00:00'
+created: '2024-08-16T11:22:02.589921+00:00'
+updated: '2024-08-16T11:22:02.589921+00:00'
 variants:
   - id: backgroundImage
     name: Background Image

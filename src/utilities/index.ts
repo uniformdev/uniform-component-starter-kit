@@ -1,5 +1,5 @@
 import type { Asset } from '@uniformdev/assets';
-import { ComponentInstance } from '@uniformdev/canvas';
+import { ComponentInstance, RootComponentInstance } from '@uniformdev/canvas';
 
 export const REGEX_COLOR_HEX = /#(?:[0-9a-fA-F]{3}){1,2}$/;
 
@@ -105,4 +105,54 @@ const deepEqual = <T>(a: T, b: T): boolean => {
   for (const key of keysA) if (!keysB.includes(key) || !deepEqual(a[key as keyof T], b[key as keyof T])) return false;
 
   return true;
+};
+
+export const getManifestFromDOM = () => {
+  let manifest = { project: {} };
+  if (typeof window !== 'undefined') {
+    const json = document.getElementById('manifest')?.innerHTML;
+    if (json) {
+      manifest = JSON.parse(json);
+    }
+  }
+  return manifest;
+};
+
+export const findSlotsWithType = (composition: RootComponentInstance, targetType: string): ComponentInstance | null => {
+  let result: ComponentInstance | null = null;
+  let found = false;
+
+  function recursiveSearch(node: ComponentInstance): void {
+    if (found) return; // Early exit if we've found the target
+
+    if (node && typeof node === 'object') {
+      // Check if 'node' has 'type' and it matches 'targetType'
+      if (node.type === targetType) {
+        result = node;
+        found = true;
+        return;
+      }
+
+      // Proceed to search in 'slots' if they exist
+      if (node.slots) {
+        for (const key in node.slots) {
+          if (Object.prototype.hasOwnProperty.call(node.slots, key)) {
+            const slotContent = node.slots[key];
+            if (Array.isArray(slotContent)) {
+              for (const item of slotContent) {
+                recursiveSearch(item);
+                if (found) return; // Early exit if found
+              }
+            } else {
+              recursiveSearch(slotContent);
+              if (found) return; // Early exit if found
+            }
+          }
+        }
+      }
+    }
+  }
+
+  recursiveSearch(composition);
+  return result;
 };

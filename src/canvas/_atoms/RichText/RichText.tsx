@@ -26,6 +26,7 @@ export const RichText: FC<RichTextProps> = ({ color = DEFAULT_COLOR, style = {},
         },
         styles?.content
       )}
+      placeholder="Content goes here..."
       parameterId="content"
     />
   );
