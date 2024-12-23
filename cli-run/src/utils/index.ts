@@ -1,13 +1,13 @@
-import childProcess from 'child_process';
+import childProcess, { ExecOptions } from 'child_process';
 import fetch from 'node-fetch';
 import fs from 'fs';
 import path from 'path';
 import { AppModes } from '../constants';
 import { JavaDripBlackTheme } from '../customThemes';
 
-export const execPromise = (command: string) => {
+export const execPromise = (command: string, options?: ExecOptions) => {
   return new Promise(function (resolve, reject) {
-    childProcess.exec(command, (error, stdout) => {
+    childProcess.exec(command, options || {}, (error, stdout) => {
       if (error) {
         reject(error);
         return;
@@ -76,6 +76,19 @@ export const addExamplesCanvasCache = async (projectPath: string) => {
   await fs.promises.writeFile(pathToCanvasFile, `import '../modules/coveo';import '../modules/algolia';\n${canvas}`);
 };
 
+export const replaceProjectMapBaseUrl = async (destination: string, projectMapBaseUrl: string) => {
+  const listOfCanvasCache = await fs.promises.readdir(path.resolve(destination, 'content', 'projectMapDefinition'));
+
+  await Promise.all(
+    listOfCanvasCache.map(async itemName => {
+      const itemPath = path.resolve(destination, 'content', 'projectMapDefinition', itemName);
+      const cacheItem = await fs.promises.readFile(itemPath, 'utf-8');
+      const cacheItemWithBaseUrl = cacheItem.replace(/baseUrl:\s*https?:\/\/[^\s]+/, `baseUrl: ${projectMapBaseUrl}`);
+      await fs.promises.writeFile(itemPath, cacheItemWithBaseUrl);
+    })
+  );
+};
+
 export const scanPageDirectory = async (projectPath: string, mode: AppModes) =>
   (await findModeOptions(path.resolve(projectPath, 'src'), mode)) ||
   (await findModeOptions(path.resolve(projectPath, 'src', 'pages'), mode)) ||
@@ -110,7 +123,7 @@ const switchModeTo = async (projectPath: string, mode: string, removalList?: str
 };
 
 export const updatePromptsBasedOnIntegration = async ({ type }: UNIFORM_API.DefineResponse) => {
-  const pathToPromptsFolder = path.resolve('../', 'content', 'prompts');
+  const pathToPromptsFolder = path.resolve('..', 'content', 'prompt');
   if (!pathToPromptsFolder) return;
 
   const listOfFilesNames = (await fs.promises.readdir(pathToPromptsFolder, { withFileTypes: true }))
@@ -121,7 +134,7 @@ export const updatePromptsBasedOnIntegration = async ({ type }: UNIFORM_API.Defi
     const prompt = await fs.promises.readFile(pathToPromptFile, 'utf-8');
     await fs.promises.writeFile(
       path.resolve(pathToPromptFile),
-      prompt.replace(/^(integrationType: .*$\n)/gm, `integrationType: ${type}\n`)
+      prompt.replace(/^(integrationType: .*$)/gm, `integrationType: ${type}\n`)
     );
   }
 };

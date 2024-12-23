@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Modal, ModalProps, HeroVariant } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
@@ -32,7 +32,7 @@ const BASE_PROPS: Omit<ModalProps, 'component'> = {
   automaticOpenTimeout: 5,
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<ModalProps>> = {
   maxWidth: { control: 'select', options: ['none', 'small', 'medium', 'large', 'xLarge'] },
 };
 

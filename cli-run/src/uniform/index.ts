@@ -33,7 +33,13 @@ const WRITE_PERMISSIONS = [
   'PRM_SCHEMA',
 ];
 
-const makeApiKey = (teamId: string, projectId: string, name: string, permissions: string[]) => ({
+const makeApiKey = (
+  teamId: string,
+  projectId: string,
+  name: string,
+  permissions: string[],
+  shouldCreateAdminKey: boolean
+) => ({
   name,
   teamId,
   projects: [
@@ -46,8 +52,8 @@ const makeApiKey = (teamId: string, projectId: string, name: string, permissions
   ],
   email: '',
   identity_subject: '',
-  isAdmin: false,
+  isAdmin: shouldCreateAdminKey,
 });
 
-export const makeWriteApiKey = (teamId: string, projectId: string) =>
-  makeApiKey(teamId, projectId, 'Created by Demos CLI (write)', WRITE_PERMISSIONS);
+export const makeWriteApiKey = (teamId: string, projectId: string, shouldCreateAdminKey: boolean) =>
+  makeApiKey(teamId, projectId, 'Created by Demos CLI (write)', WRITE_PERMISSIONS, shouldCreateAdminKey);

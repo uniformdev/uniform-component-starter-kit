@@ -7,7 +7,6 @@ parameters:
   - id: indexParams
     name: Index Parameters
     type: algolia-components
-    helpText: ''
     typeConfig:
       selectedComponent: Index
       indexConfiguration:
@@ -27,5 +26,5 @@ slots:
       - algolia-basicComponents
     inheritAllowedComponents: false
 canBeComposition: false
-created: '2023-12-22T11:47:15.023886+00:00'
-updated: '2023-12-26T09:32:57.962901+00:00'
+created: '2024-08-16T11:22:02.711938+00:00'
+updated: '2024-08-16T11:22:02.711938+00:00'

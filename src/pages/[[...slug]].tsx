@@ -1,14 +1,13 @@
 import { CANVAS_DRAFT_STATE, CANVAS_PUBLISHED_STATE } from '@uniformdev/canvas';
 import { withUniformGetStaticProps, prependLocale } from '@uniformdev/canvas-next/route';
-import { getBreadcrumbs, getProjectMapClient, getRouteClient } from '../utilities/canvas/canvasClients';
+import { getBreadcrumbs, getProjectMapClient, getRouteClient, getState } from '../utilities/canvas/canvasClients';
 export { default } from '../components/BasePage';
 
 // Doc: https://docs.uniform.app/docs/guides/composition/url-management/routing/slug-based-routing
 
 export const getStaticProps = withUniformGetStaticProps({
   requestOptions: context => ({
-    state:
-      Boolean(context.preview) || process.env.NODE_ENV === 'development' ? CANVAS_DRAFT_STATE : CANVAS_PUBLISHED_STATE,
+    state: getState(Boolean(context.preview)),
   }),
   param: 'slug',
   client: getRouteClient(),

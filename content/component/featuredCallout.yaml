@@ -8,25 +8,21 @@ parameters:
   - id: eyebrowText
     name: Eyebrow Text
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig:
       required: false
     localizable: true
   - id: titleStyle
     name: Title Style
     type: tp-title-style-parameter
-    helpText: ''
     typeConfig: null
   - id: description
     name: Description
     type: text
-    helpText: ''
     typeConfig:
       required: false
       multiline: true
@@ -35,7 +31,6 @@ parameters:
   - id: image
     name: Image
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
@@ -57,7 +52,7 @@ slots:
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:18.21042+00:00'
-updated: '2023-12-27T08:52:16.466215+00:00'
+updated: '2024-08-16T11:17:11.03964+00:00'
 variants:
   - id: imageRight
     name: Image Right

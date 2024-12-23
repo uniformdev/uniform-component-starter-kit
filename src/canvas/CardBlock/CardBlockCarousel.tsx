@@ -5,6 +5,7 @@ import { UniformText, UniformSlot, UniformSlotWrapperComponentProps } from '@uni
 import 'react-multi-carousel/lib/styles.css';
 import CarouselButtons from '../../components/CarouselButtons';
 import Button from '../../components/Button';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
 import { getColorClassName } from './helpers';
@@ -74,12 +75,12 @@ export const CardBlockCarousel: FC<CardBlockProps> = ({
       >
         <div className="mb-6 md:mb-0 basis-2/3 xl:basis-auto">
           <UniformText
-            placeholder={'Title goes here'}
+            placeholder="Title goes here"
             parameterId="title"
             as={TitleTag}
             className={classNames('font-bold', getTextClass(TitleTag))}
           />
-          <UniformText placeholder={'Description goes here'} parameterId="description" as="p" className="sm:pr-8" />
+          <UniformText placeholder="Description goes here" parameterId="description" as="p" className="sm:pr-8" />
         </div>
         {Boolean(buttonLink) && (
           <Button
@@ -90,7 +91,11 @@ export const CardBlockCarousel: FC<CardBlockProps> = ({
           />
         )}
       </div>
-      <UniformSlot name="cardBlockInner" wrapperComponent={carouselInner} />
+      <UniformSlot
+        name="cardBlockInner"
+        wrapperComponent={carouselInner}
+        emptyPlaceholder={<EmptyPlaceholder className="!w-full" />}
+      />
     </div>
   );
 };

@@ -8,12 +8,13 @@ import {
 } from '@uniformdev/canvas-react';
 import ComponentStarterKitContextProvider from '../../context/ComponentStarterKitContext';
 import UniformPreviewIcon from '../UniformPreviewIcon';
+import EmptyPlaceholder from '../EmptyPlaceholder';
 import ThemeProvider from '../ThemeProvider';
 import { getGapClass, getMarginBottomClass, PaddingSize } from '../../utilities/styling';
 import { CHILDREN_CONTAINER_STYLES, COMMON_PADDING } from '../../hocs/withoutContainer';
 import { BasePageProps } from './';
 
-const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 'providers' | 'styles'>> = ({
+export const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 'providers' | 'styles'>> = ({
   useUniformComposition,
   preview,
   providers: Providers,
@@ -34,7 +35,7 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
       <ContentProviders>
         {/* Docs: https://docs.uniform.app/reference/packages/uniformdev-canvas-react#slot */}
         <div className={COMMON_PADDING}>
-          <UniformSlot name="pageHeader" />
+          <UniformSlot name="pageHeader" emptyPlaceholder={<EmptyPlaceholder />} />
         </div>
         {/* useUniformComposition is always true only for global composition preview */}
         {useUniformComposition && <h1 className="flex-1 flex justify-center items-center">Page content placeholder</h1>}
@@ -48,10 +49,10 @@ const PageContent: FC<Pick<BasePageProps, 'preview' | 'useUniformComposition' | 
             styles?.pageContentContainer
           )}
         >
-          <UniformSlot name="pageContent" />
+          <UniformSlot name="pageContent" emptyPlaceholder={<EmptyPlaceholder className="flex-1" />} />
         </div>
         <div className={COMMON_PADDING}>
-          <UniformSlot name="pageFooter" />
+          <UniformSlot name="pageFooter" emptyPlaceholder={<EmptyPlaceholder />} />
         </div>
         {preview && <UniformPreviewIcon />}
       </ContentProviders>

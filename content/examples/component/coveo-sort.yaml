@@ -7,7 +7,6 @@ parameters:
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig: null
   - id: fieldsForSort
     name: Fields for sort
@@ -25,5 +24,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
-created: '2023-11-23T08:52:39.147472+00:00'
-updated: '2023-11-23T09:03:28.507283+00:00'
+created: '2024-08-16T11:22:02.883807+00:00'
+updated: '2024-08-16T11:22:02.883807+00:00'

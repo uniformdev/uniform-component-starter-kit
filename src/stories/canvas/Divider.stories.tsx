@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import { Divider } from '@/canvas';
+import { Divider, DividerProps } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 
 const meta: Meta<typeof Divider> = {
@@ -12,7 +12,7 @@ export default meta;
 
 type Story = StoryObj<typeof Divider>;
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<DividerProps>> = {
   colorStyle: { control: 'select', options: ['primary', 'secondary', 'accent', 'base-200', 'base-300'] },
 };
 

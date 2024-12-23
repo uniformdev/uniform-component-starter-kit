@@ -1,9 +1,10 @@
 import { FC } from 'react';
 import dynamic from 'next/dynamic';
-import Image from '../../../components/Image';
 import classNames from 'classnames';
 import { UniformRichText, UniformSlot } from '@uniformdev/canvas-react';
+import Image from '../../../components/Image';
 import { ScreenContainer } from '../../../components/Container';
+import EmptyImagePlaceholder from '../../../components/EmptyImagePlaceholder';
 import { getMediaUrl } from '../../../utilities';
 import { FooterProps } from '.';
 
@@ -25,12 +26,12 @@ export const Footer: FC<FooterProps> = ({ logo, displayBuildTimestamp = false, c
             {displayBuildTimestamp && <BuildTimestamp style={styles?.buildTimestamp} />}
             <div className="footer-content text-secondary-content" dangerouslySetInnerHTML={{ __html: copyright }} />
             <div className="footer-content text-secondary-content">
-              <UniformRichText parameterId="footerText" />
+              <UniformRichText placeholder="Footer text goes here..." parameterId="footerText" />
             </div>
           </div>
-          <UniformSlot name="section" />
+          <UniformSlot name="section" emptyPlaceholder={<EmptyImagePlaceholder />} />
           <div className="flex">
-            <UniformSlot name="iconLinks" />
+            <UniformSlot name="iconLinks" emptyPlaceholder={<EmptyImagePlaceholder />} />
           </div>
         </footer>
       </ScreenContainer>

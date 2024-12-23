@@ -6,35 +6,14 @@ composition:
     logo:
       type: asset
       value:
-        - _id: 2df79d7e-d4b4-4bb2-9b86-82a4d4ed9d96
+        - _id: a0e0bbec-1905-42df-83ee-08aa2bd5b23d
           type: image
           fields:
-            id:
-              type: text
-              value: 89401cb5-7432-4abb-ab3d-0c58a98e7737
             url:
+              type: text
               value: >-
-                https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/MH5AJGrcR5eFgxNc5EUJHA-uniform_csk_logo.png
-              type: text
-            file:
-              type: file
-              value: 9505ad00-f1c8-466b-93bc-22da4374d7f5
-            size:
-              value: 6041
-              type: number
-            title:
-              type: text
-              value: uniform_csk_logo.png
-            width:
-              value: 432
-              type: number
-            height:
-              value: 79
-              type: number
-            mediaType:
-              value: image/png
-              type: text
-          _source: uniform-assets
+                https://res.cloudinary.com/uniform-demos/image/upload/v1692277338/csk-icons/Logo_amxon7_fb5wxp.png
+          _source: custom-url
     theme:
       type: tp-set-up-theme-parameter
       value:
@@ -71,35 +50,14 @@ composition:
     favicon:
       type: asset
       value:
-        - _id: 27a489d8-7e54-4b23-ba0a-4e7bc33c4712
+        - _id: be017b22-21bc-4a76-baf6-10ca3aa30abe
           type: image
           fields:
-            id:
-              type: text
-              value: 88505c93-6df6-4dbd-8ecb-d178f7f2341f
             url:
+              type: text
               value: >-
-                https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/JA7dBpIBRRWtc3K6Bd-ysQ-favicon.png
-              type: text
-            file:
-              type: file
-              value: 1d1135b3-cfed-4513-baf3-a106925f7975
-            size:
-              value: 1676
-              type: number
-            title:
-              type: text
-              value: favicon.png
-            width:
-              value: 32
-              type: number
-            height:
-              value: 32
-              type: number
-            mediaType:
-              value: image/png
-              type: text
-          _source: uniform-assets
+                https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-icons/favicon
+          _source: custom-url
     primaryFont:
       type: select
       value: inter
@@ -404,7 +362,7 @@ composition:
                 title:
                   type: text
                   value: Atomic Components
-            - _id: c54d220f-255a-4f63-b0e3-eb32b434199c
+            - _id: 92bd14aa-6cf3-4c62-88d5-0ede66094c7f
               type: navigationLink
               parameters:
                 link:
@@ -484,6 +442,22 @@ composition:
                 title:
                   type: text
                   value: Images
+            - _id: 93bfbed5-e0cb-4774-b6c0-64c86b296cb9
+              type: navigationLink
+              parameters:
+                link:
+                  type: link
+                  value:
+                    path: /components/hotspots
+                    type: projectMapNode
+                    nodeId: 36dbc81a-a455-4d5b-8b98-16fb4bad234f
+                    projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+                color:
+                  type: tp-color-palette-parameter
+                  value: primary-content
+                title:
+                  type: text
+                  value: Hotspots
             - _id: fb9580f8-495a-4f50-89fb-21dca93a303c
               type: navigationLink
               parameters:
@@ -516,7 +490,7 @@ composition:
                 title:
                   type: text
                   value: Modals
-            - _id: 801bac6f-7fe9-42dc-90eb-a4bfe7705fd6
+            - _id: d1f1b35f-4875-4dbe-903f-f11923e32bfd
               type: navigationLink
               parameters:
                 link:
@@ -532,7 +506,7 @@ composition:
                 title:
                   type: text
                   value: Tabs
-            - _id: 86550661-38e9-4cc2-b803-0a3737ea27f2
+            - _id: 933b7c57-6b04-4baa-b459-a2c3df570e07
               type: navigationLink
               parameters:
                 link:
@@ -548,7 +522,7 @@ composition:
                 title:
                   type: text
                   value: Tables
-            - _id: ae9e6877-ac26-4ce5-86ad-fec21db48223
+            - _id: 5fcdccfe-3962-4efb-9b8e-c9205c8b8525
               type: navigationLink
               parameters:
                 link:
@@ -571,6 +545,22 @@ composition:
           title:
             type: text
             value: Atoms
+      - _id: b08be46a-560c-4362-8db8-13a7630d1e13
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: /examples
+              type: projectMapNode
+              nodeId: b8994dfb-6a7e-4a10-a1af-e8dcf520a758
+              projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431
+          color:
+            type: tp-color-palette-parameter
+            value: primary-content
+          title:
+            type: text
+            value: Examples
     iconLinks:
       - _id: c34a481b-1d36-457d-bc91-a3cf3df2a8c0
         type: iconLink
@@ -578,35 +568,14 @@ composition:
           icon:
             type: asset
             value:
-              - _id: 8f0a6dd6-e1ed-440f-a2fd-e6d9177d37c4
+              - _id: 9e7e7642-7f1e-4169-926c-8646b6ea2af0
                 type: image
                 fields:
-                  id:
-                    type: text
-                    value: 6e4df38e-7e0f-4f10-a490-d91ebc6ef84a
                   url:
+                    type: text
                     value: >-
-                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/HwXZcb0XQWW8W17eUNo6lQ-storybook_icon.svg
-                    type: text
-                  file:
-                    type: file
-                    value: a7e2a12d-7ee3-4250-a44d-aa1289aa8d1c
-                  size:
-                    value: 7943
-                    type: number
-                  title:
-                    type: text
-                    value: storybook_icon.svg
-                  width:
-                    value: 38
-                    type: number
-                  height:
-                    value: 38
-                    type: number
-                  mediaType:
-                    value: image/svg+xml
-                    type: text
-                _source: uniform-assets
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1692277665/csk-icons/storybook_n7x1fd_s5rm32.svg
+                _source: custom-url
           link:
             type: link
             value:
@@ -618,35 +587,14 @@ composition:
           icon:
             type: asset
             value:
-              - _id: b4ccfba5-02f8-47c9-953b-7fb79982ff16
+              - _id: 0165df2b-dccb-4be7-ad8d-894d7b3b4e94
                 type: image
                 fields:
-                  id:
-                    type: text
-                    value: f02a73de-bab2-48da-a138-7463c1f82257
                   url:
+                    type: text
                     value: >-
-                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/La00wu5URKud2JEfpyuZNw-github_icon.svg
-                    type: text
-                  file:
-                    type: file
-                    value: 9a9e288a-69a0-43f5-b8c9-68076300b0b4
-                  size:
-                    value: 1325
-                    type: number
-                  title:
-                    type: text
-                    value: github_icon.svg
-                  width:
-                    value: 35
-                    type: number
-                  height:
-                    value: 34
-                    type: number
-                  mediaType:
-                    value: image/svg+xml
-                    type: text
-                _source: uniform-assets
+                      https://res.cloudinary.com/uniform-demos/image/upload/v1692278524/csk-icons/github_l9wqxq_m7eiow.svg
+                _source: custom-url
           link:
             type: link
             value:
@@ -655,8 +603,8 @@ composition:
   _overridability:
     parameters:
       syntheticGap: 'yes'
-created: '2023-12-04T16:14:20.339128+00:00'
-modified: '2024-02-02T12:10:46.97635+00:00'
+created: '2023-09-20T09:32:34.688792+00:00'
+modified: '2024-06-13T11:58:47.980818+00:00'
 pattern: true
 previewImageUrl: >-
   https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Header_pattern_preview_image

@@ -44,6 +44,7 @@ const ProductInfo: FC<Props> = ({
 }) => {
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const imageUrl = getMediaUrl(image);
   const { ElementWrapper, getDelayValue } = useProductInfoAnimation({
     duration,

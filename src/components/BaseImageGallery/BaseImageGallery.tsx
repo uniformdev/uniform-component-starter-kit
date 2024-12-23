@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { UniformSlot, UniformText, UniformSlotWrapperComponentProps } from '@uniformdev/canvas-react';
 import BaseContainer, { ContainerVariants, ScreenContainer } from '../../components/Container';
 import AnimatedContainer, { AnimationVariant, DelayVariants } from '../../components/AnimatedContainer';
+import EmptyPlaceholder from '../EmptyPlaceholder';
 import { getTextClass } from '../../utilities/styling';
 import Image from '../../canvas/Image';
 import { getMediaUrl, isMediaAsset } from '../../utilities';
@@ -182,7 +183,7 @@ const BaseImageGallery: FC<BaseImageGalleryProps> = ({
         />
       </Wrapper>
       {!isContentPlaceholder ? (
-        <UniformSlot name="images" wrapperComponent={GalleryInner} />
+        <UniformSlot name="images" wrapperComponent={GalleryInner} emptyPlaceholder={<EmptyPlaceholder />} />
       ) : (
         <GalleryInner items={imagesToDisplay} />
       )}

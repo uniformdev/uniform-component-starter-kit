@@ -7,12 +7,10 @@ parameters:
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig: null
   - id: facet
     name: Facet
     type: headless-components
-    helpText: ''
     typeConfig:
       selectedComponent: Facet
 categoryId: 9de490d5-96c4-4808-b51f-eadc2ee12667
@@ -22,5 +20,5 @@ useTeamPermissions: true
 slots: []
 titleParameter: title
 canBeComposition: false
-created: '2023-11-23T08:52:39.337846+00:00'
-updated: '2023-11-23T09:01:59.358833+00:00'
+created: '2024-08-16T11:22:02.89577+00:00'
+updated: '2024-08-16T11:22:02.89577+00:00'

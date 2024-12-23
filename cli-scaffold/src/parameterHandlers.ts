@@ -47,7 +47,8 @@ const richTextParameterHandler: ParameterHandler = {
   supports: ['richText'],
   type: 'RichTextNode',
   hide: true,
-  render: parameter => `<UniformRichText className="max-w-full prose" parameterId="${parameter.id}" />`,
+  render: parameter =>
+    `<UniformRichText placeholder="Content goes here..." className="max-w-full prose" parameterId="${parameter.id}" />`,
 };
 
 const imageParameterHandler: ParameterHandler = {

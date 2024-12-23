@@ -8,9 +8,9 @@ import Image from '../Image';
 
 type Props = {
   title: string;
-  link: Types.ProjectMapLink;
+  link?: Types.ProjectMapLink;
   icon?: Asset;
-  isCurrentRoute: boolean;
+  isCurrentRoute?: boolean;
   hideIconBackground: boolean;
   showArrow?: boolean;
   color?: string;
@@ -69,7 +69,7 @@ const LinkItem: FC<Props> = ({
         )}
         style={{ color: currentColor }}
       >
-        <span>{title}</span>
+        <span className={classNames({ [styles?.activeLink || '']: isCurrentRoute })}>{title}</span>
         {showArrow && (
           <svg
             className={classNames('ml-1 transition-all transform hidden lg:block', {

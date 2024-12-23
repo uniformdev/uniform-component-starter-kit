@@ -1,18 +1,22 @@
 import { FC, useMemo, useState, useCallback } from 'react';
-import { useRouter } from 'next/router';
 import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import LinkItem from '../../../components/LinkItem';
 import MobileMenuLayout from '../../../components/MobileMenuLayout';
 import { getAllChildrenIds } from '../../../utilities';
-import { checkIsCurrentRoute } from './helpers';
 import { LinkProps } from '.';
 
-export const NavigationGroup: FC<LinkProps> = ({ title, link, styles, color, hideIconBackground, icon, component }) => {
-  const router = useRouter();
+export const NavigationGroup: FC<Omit<LinkProps, 'link'>> = ({
+  title,
+  styles,
+  color,
+  hideIconBackground,
+  icon,
+  component,
+}) => {
   const [isHovered, setIsHovered] = useState(false);
-  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
 
-  const { isContextualEditing, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+  const { previewMode, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+  const isContextualEditing = previewMode === 'editor';
 
   const allComponentChildrenIds = useMemo(() => getAllChildrenIds(component), [component]);
 
@@ -38,14 +42,12 @@ export const NavigationGroup: FC<LinkProps> = ({ title, link, styles, color, hid
       <div className="grow px-0">
         <LinkItem
           icon={icon}
-          isCurrentRoute={isCurrentRoute}
           title={title}
           isHovered={isMenuOpened}
           hideIconBackground={hideIconBackground}
           showArrow
           color={color}
           styles={styles}
-          link={link}
         />
 
         {isMenuOpened && (

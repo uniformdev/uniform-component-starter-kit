@@ -9,7 +9,7 @@ type Styles = {
 };
 
 export type BasePageProps = {
-  preview: boolean;
+  preview?: boolean;
   useUniformComposition?: boolean;
   data: RootComponentInstance;
   providers: ElementType;

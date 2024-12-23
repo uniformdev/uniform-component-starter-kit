@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Banner, BannerProps, BannerVariant } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
@@ -33,7 +33,7 @@ const args: Omit<BannerProps, 'component'> = {
   secondaryButtonStyle: 'link',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<BannerProps>> = {
   position: { control: 'select', options: ['top', 'center', 'bottom'] },
   textAlign: { control: 'select', options: ['left', 'center', 'right'] },
   primaryButtonStyle: { control: 'select', options: buttonStyleOptions },

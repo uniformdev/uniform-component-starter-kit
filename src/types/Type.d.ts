@@ -1,4 +1,7 @@
 declare namespace Types {
+  type EntryData = import('@uniformdev/canvas-react').EntryData;
+  type EntryApiResponse = import('@uniformdev/canvas-react').EntryApiResponse;
+
   type ProjectMapLink = {
     path: string;
     type?: string;
@@ -66,6 +69,8 @@ declare namespace Types {
 
   type AvailableOpacity = PercentRange;
 
+  type AvailableTransparency = PercentRange;
+
   type AvailableWidth = PercentRange;
 
   type HeadingStyles = 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
@@ -81,6 +86,21 @@ declare namespace Types {
   type CountdownSize = 'tiny' | 'small' | 'normal' | 'large';
 
   type TabStyle = 'bordered' | 'lifted' | 'boxed';
+
+  type Position =
+    | 'top'
+    | 'top-right'
+    | 'right-top'
+    | 'right'
+    | 'right-bottom'
+    | 'bottom-right'
+    | 'bottom'
+    | 'bottom-left'
+    | 'left-bottom'
+    | 'left'
+    | 'left-top'
+    | 'top-left'
+    | 'center';
 
   type ThemeColors = {
     value: string;
@@ -110,5 +130,18 @@ declare namespace Types {
     locales: string[];
     localeNames: Record<string, string>;
     defaultLocale: string;
+  };
+
+  type UniformParameter<T> = {
+    type: string;
+    value?: T;
+  };
+
+  type UniformEntry<T> = Omit<EntryData, 'fields'> & {
+    fields: T;
+  };
+
+  type UniformEntryApiResponse<T> = Omit<EntryApiResponse, 'entry'> & {
+    entry: UniformEntry<T>;
   };
 }

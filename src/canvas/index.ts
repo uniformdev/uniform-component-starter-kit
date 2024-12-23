@@ -11,6 +11,7 @@ import './Tabs';
 import './Tab';
 import './_atoms/Text';
 import './_atoms/RichText';
+import './_atoms/Hotspot';
 import './CardBlock';
 import './Carousel';
 import './_containers/Container';
@@ -23,6 +24,7 @@ import './Divider';
 import './Feature';
 import './FeaturedCallout';
 import './Hero';
+import './HeroContainer';
 import './Image';
 import './Table';
 import './Modal';
@@ -31,6 +33,7 @@ import './_navigation/NavigationSection';
 import './_navigation/Header';
 import './_navigation/IconLink';
 import './_navigation/NavLink';
+import './Hotspots';
 import './Price';
 import './ProductDetails';
 import './ProductInfo';
@@ -39,6 +42,8 @@ import './Review';
 import './Spacer';
 import './Testimonial';
 import './Video';
+import './EnrichmentSetter';
+import './Page';
 
 export { default as Accordion } from './Accordion';
 
@@ -58,6 +63,7 @@ export { default as ProductInfo } from './ProductInfo';
 export type { ProductInfoProps } from './ProductInfo';
 
 export { default as Breadcrumbs } from './Breadcrumbs';
+export type { BreadcrumbsProps } from './Breadcrumbs';
 
 export { default as Card, CardVariants } from './Card';
 export type { CardProps } from './Card';
@@ -66,6 +72,7 @@ export { default as CardBlock, CardBlockVariants } from './CardBlock';
 export type { CardBlockProps } from './CardBlock';
 
 export { default as Carousel, CarouselVariants } from './Carousel';
+export type { CarouselProps } from './Carousel';
 
 export { default as Container } from './_containers/Container';
 export type { ContainerProps } from './_containers/Container';
@@ -77,6 +84,7 @@ export { default as ContentBlock } from './ContentBlock';
 export type { ContentBlockProps } from './ContentBlock';
 
 export { default as Divider } from './Divider';
+export type { DividerProps } from './Divider';
 
 export { default as FeaturedCallout, FeaturedCalloutVariant } from './FeaturedCallout';
 export type { FeaturedCalloutProps } from './FeaturedCallout';
@@ -97,6 +105,7 @@ export { default as Price } from './Price';
 export type { PriceProps } from './Price';
 
 export { default as Review, ReviewVariant } from './Review';
+export type { ReviewProps } from './Review';
 
 export { default as Testimonial, TestimonialVariant } from './Testimonial';
 
