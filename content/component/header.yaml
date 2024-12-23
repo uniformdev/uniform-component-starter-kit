@@ -8,14 +8,12 @@ parameters:
   - id: logo
     name: Logo
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
   - id: linksAlignment
     name: Links Alignment
     type: tp-horizontal-align-parameter
-    helpText: ''
     typeConfig: null
   - id: group_global
     name: Global
@@ -29,12 +27,10 @@ parameters:
   - id: theme
     name: Theme
     type: tp-set-up-theme-parameter
-    helpText: ''
     typeConfig: null
   - id: primaryFont
     name: Primary Font
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Inter
@@ -64,7 +60,6 @@ parameters:
   - id: favicon
     name: Favicon
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
@@ -110,8 +105,8 @@ slots:
     patternsInAllowedComponents: false
 titleParameter: linksAlignment
 canBeComposition: false
-created: '2023-11-22T09:43:34.431017+00:00'
-updated: '2023-11-22T10:00:48.910499+00:00'
+created: '2023-08-28T12:30:18.569126+00:00'
+updated: '2024-08-16T11:17:10.813038+00:00'
 variants:
   - id: light
     name: Light

@@ -4,6 +4,7 @@ import classNames from 'classnames';
 import { UniformSlot, UniformText } from '@uniformdev/canvas-react';
 import { getMediaUrl } from '../../utilities';
 import { getTextClass } from '../../utilities/styling';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { FeaturedCalloutProps } from '.';
 import { getFeaturedCalloutContentClass, getFeaturedCalloutTextContentClass } from './helpers';
 
@@ -55,7 +56,7 @@ export const FeaturedCallout: FC<FeaturedCalloutProps> = ({
             />
           </div>
           <div className="w-full">
-            <UniformSlot name="feature" />
+            <UniformSlot name="feature" emptyPlaceholder={<EmptyPlaceholder className="!h-11" />} />
           </div>
         </div>
       </div>

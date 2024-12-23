@@ -1,16 +1,21 @@
 import { FC, useMemo, useCallback, useState } from 'react';
-import { useRouter } from 'next/router';
 import classNames from 'classnames';
 import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import LinkItem from '../../../components/LinkItem';
 import MobileMenuLayout from '../../../components/MobileMenuLayout';
 import { getAllChildrenIds } from '../../../utilities';
-import { checkIsCurrentRoute } from './helpers';
 import { LinkProps } from '.';
 
-export const NavigationMenu: FC<LinkProps> = ({ link, title, color, icon, hideIconBackground, styles, component }) => {
-  const router = useRouter();
-  const { isContextualEditing, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+export const NavigationMenu: FC<Omit<LinkProps, 'link'>> = ({
+  title,
+  color,
+  icon,
+  hideIconBackground,
+  styles,
+  component,
+}) => {
+  const { previewMode, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+  const isContextualEditing = previewMode === 'editor';
 
   const allComponentChildrenIds = useMemo(() => getAllChildrenIds(component), [component]);
 
@@ -18,8 +23,6 @@ export const NavigationMenu: FC<LinkProps> = ({ link, title, color, icon, hideIc
     selectedComponentReference && allComponentChildrenIds.includes(selectedComponentReference?.id);
 
   const [isHovered, setIsHovered] = useState(false);
-
-  const isCurrentRoute = useMemo(() => checkIsCurrentRoute(router, link), [router, link]);
 
   const onMouseEnter = useCallback(() => {
     if (!isContextualEditing) {
@@ -40,14 +43,12 @@ export const NavigationMenu: FC<LinkProps> = ({ link, title, color, icon, hideIc
       <div className="grow px-0">
         <LinkItem
           icon={icon}
-          isCurrentRoute={isCurrentRoute}
           title={title}
           showArrow
           isHovered={isMenuOpened}
           hideIconBackground={hideIconBackground}
           color={color}
           styles={styles}
-          link={link}
         />
 
         {isMenuOpened && (
@@ -66,7 +67,7 @@ export const NavigationMenu: FC<LinkProps> = ({ link, title, color, icon, hideIc
               isMegaMenu
               content={<UniformSlot name="content" />}
               onClickBack={onMouseLeave}
-              backgroundType="static"
+              backgroundType={styles?.mobileBackgroundType || 'static'}
             />
           </>
         )}

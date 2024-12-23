@@ -4,7 +4,13 @@ import clear from 'clear';
 import color from 'picocolors';
 import path from 'path';
 import { confirm, spinner, cancel, note, select } from './promts';
-import { demosVariantsGetEnvsMap, demosVariantsModulesRequire } from './mappers';
+import {
+  demosProjectMapBaseUlrMap,
+  demosRequiredIntegrationsMap,
+  demosVariantsGetEnvsMap,
+  demosVariantsModulesRequire,
+  Integrations,
+} from './mappers';
 import {
   buildDemo,
   fillEnvFiles,
@@ -14,6 +20,7 @@ import {
   isMetaDataExist,
   isNodeModulesExist,
   isProjectExist,
+  isWorkflowsExist,
   parseMetadata,
   runDemo,
   runPush,
@@ -21,7 +28,7 @@ import {
 import { getProjectLocation, getUniformEnvs, showDemoHeader, getUniformAccessTokenEnvs } from './informationCollector';
 import { setupUniformProject } from './commands/setupUniform';
 import { AppModes, CommonVariants } from './constants';
-import { scanPageDirectory, switchModeInDirectory } from './utils';
+import { replaceProjectMapBaseUrl, scanPageDirectory, switchModeInDirectory } from './utils';
 
 const progressSpinner = spinner();
 
@@ -83,7 +90,7 @@ const runRunDemoJourney = async (
   project: CLI.AvailableProjects,
   variant: CLI.CommonVariants = CommonVariants.Default
 ) => {
-  const projectPath = path.resolve('../');
+  const projectPath = path.resolve('..');
 
   if (!isProjectExist(projectPath)) {
     cancel(`${project} does not exist in ${projectPath}, please run script again and export your demo first`);
@@ -102,6 +109,14 @@ const runRunDemoJourney = async (
 
     progressSpinner.stop('Dependencies installed');
   }
+
+  const isWorkflowsPresentInProject = isWorkflowsExist(projectPath);
+
+  const projectIntegrations = demosRequiredIntegrationsMap[project]?.[variant] || [];
+
+  const isSmartlingPresentInProject = projectIntegrations.find(
+    integration => integration.name === Integrations.Smartling.name
+  );
 
   if (IS_MANUAL_CREATING) {
     const { uniformApiKey, uniformCliBaseUrl, uniformEdgeApiHost, uniformProjectId } = await getUniformEnvs(project);
@@ -122,6 +137,7 @@ const runRunDemoJourney = async (
         uniformAccessToken: uniformCredentials.uniformAccessToken,
         project,
         variant,
+        shouldCreateAdminKey: isWorkflowsPresentInProject,
       },
       progressSpinner
     );
@@ -130,6 +146,18 @@ const runRunDemoJourney = async (
       return;
     }
     await processEnvFile({ ...uniformCredentials, uniformProjectId, uniformApiKey }, project, projectPath, variant);
+  }
+
+  if (isWorkflowsPresentInProject) {
+    note(
+      'Before pushing canvas data, please ensure you have the standard roles defined in your team: developer, editor and viewer.'
+    );
+  }
+
+  if (isSmartlingPresentInProject) {
+    note(
+      `You have Smartling integration set up in your project.\nHowever, the integration will not work until your code is deployed.\nPlease deploy your code to a live environment first.\nAfter deployment, configure the Webhook URL in the Smartling integration settings.\nThe URL should be in the following format: https://{YOUR_DOMAIN}/api/smartling/job-completed-webhook.\nBe sure to replace {YOUR_DOMAIN} with your actual domain.`
+    );
   }
 
   const shouldRunPush = await confirm({ message: 'Do you want to push canvas configuration?' });
@@ -142,10 +170,16 @@ const runRunDemoJourney = async (
 };
 
 const preSetDemo = async (project: CLI.AvailableProjects, variant: CLI.CommonVariants = CommonVariants.Default) => {
-  const projectPath = path.resolve('../');
+  const projectPath = path.resolve('..');
   const renderingModeOptions = [];
   const isSSRModeAvailable = await scanPageDirectory(projectPath, AppModes.SSR);
   const isSSGModeAvailable = await scanPageDirectory(projectPath, AppModes.SSG);
+
+  const projectMapBaseUrl = demosProjectMapBaseUlrMap[project][variant];
+
+  if (projectMapBaseUrl) {
+    replaceProjectMapBaseUrl(projectPath, projectMapBaseUrl);
+  }
 
   if (isSSRModeAvailable) {
     renderingModeOptions.push({ value: 'ssr', label: 'Server-side Rendering \t(SSR)' });

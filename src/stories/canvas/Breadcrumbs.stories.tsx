@@ -1,10 +1,10 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { ArgTypes, Meta, StoryObj } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { ComponentStarterKitContextProvider } from '@/context';
-import { Breadcrumbs } from '@/canvas';
+import { Breadcrumbs, BreadcrumbsProps } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<BreadcrumbsProps>> = {
   colorStyle: { control: 'select', options: ['primary', 'secondary', 'accent', 'base-200', 'base-300'] },
   separator: { control: 'select', options: ['chevron', 'slash', 'none'] },
 };

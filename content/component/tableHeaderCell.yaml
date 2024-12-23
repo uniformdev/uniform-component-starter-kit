@@ -7,7 +7,6 @@ parameters:
   - id: value
     name: Value
     type: text
-    helpText: ''
     typeConfig: null
     localizable: true
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
@@ -18,4 +17,4 @@ slots: []
 titleParameter: value
 canBeComposition: false
 created: '2023-10-26T13:12:32.366374+00:00'
-updated: '2023-12-27T09:05:03.276193+00:00'
+updated: '2024-08-16T11:17:12.457523+00:00'

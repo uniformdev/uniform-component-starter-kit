@@ -31,7 +31,7 @@ export const createUniformProject = async (params: UNIFORM_API.CreateUniformProj
 };
 
 export const getIntegrationDefinitionByDisplayName = async (params: UNIFORM_API.IntegrationDefinitionParams) => {
-  const { displayName, teamId, apiHost = 'https://uniform.app', headers } = params;
+  const { displayName, teamId, apiHost = 'https://uniform.app', headers, skipDeepCheck } = params;
 
   const url = new URL('/api/v1/integration-definitions', apiHost);
 
@@ -47,7 +47,20 @@ export const getIntegrationDefinitionByDisplayName = async (params: UNIFORM_API.
 
   if (!Array.isArray(availableIntegrations)) return;
 
-  return availableIntegrations.find(integration => integration.displayName === displayName);
+  if (!displayName) return;
+
+  if (skipDeepCheck) {
+    return availableIntegrations.find(integration => integration.displayName === displayName);
+  }
+
+  return availableIntegrations.find(integration => {
+    if (integration.displayName === displayName) {
+      return true;
+    } else if (integration.displayName.includes('(canary)')) {
+      return integration.displayName.includes(displayName);
+    }
+    return false;
+  });
 };
 
 export const defineIntegration = async (params: UNIFORM_API.DefineIntegrationParams) => {
@@ -180,13 +193,13 @@ export const addDataSource = async (params: UNIFORM_API.AddDataSourceParams) => 
 };
 
 export const createApiKeys = async (params: UNIFORM_API.CreateApiKeysParams) => {
-  const { teamId, projectId, apiHost = 'https://uniform.app', headers } = params;
+  const { teamId, projectId, apiHost = 'https://uniform.app', headers, shouldCreateAdminKey } = params;
   const url = new URL('/api/v1/members', apiHost);
 
   const writeApiKeyResponse = await fetch(url, {
     method: 'PUT',
     headers,
-    body: JSON.stringify(makeWriteApiKey(teamId, projectId)),
+    body: JSON.stringify(makeWriteApiKey(teamId, projectId, shouldCreateAdminKey)),
   }).then(res => res.json());
 
   return {

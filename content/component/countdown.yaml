@@ -20,7 +20,6 @@ parameters:
   - id: size
     name: Size
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: custom
@@ -44,7 +43,7 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-11-02T13:52:54.609194+00:00'
-updated: '2023-12-27T08:51:41.281499+00:00'
+updated: '2024-08-16T11:17:11.872575+00:00'
 variants:
   - id: labelsUnder
     name: Labels Under

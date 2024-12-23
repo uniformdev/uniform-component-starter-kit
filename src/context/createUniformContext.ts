@@ -8,13 +8,11 @@ import {
 } from '@uniformdev/context';
 import { NextCookieTransitionDataStore } from '@uniformdev/context-next';
 
-import manifest from './manifest.json';
-
-export default function createUniformContext(serverContext?: NextPageContext): Context {
+export default function createUniformContext(manifest: ManifestV2, serverContext?: NextPageContext): Context {
   const plugins: ContextPlugin[] = [enableContextDevTools(), enableDebugConsoleLogDrain('debug')];
   const context = new Context({
     defaultConsent: true,
-    manifest: manifest as ManifestV2,
+    manifest,
     transitionStore: new NextCookieTransitionDataStore({
       serverContext,
     }),

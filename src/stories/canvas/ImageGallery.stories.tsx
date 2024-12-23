@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { ImageGallery, BaseImageGalleryProps } from '@/canvas';
 import { BackgroundTypes, PaddingSize } from '@/utilities/styling';
@@ -39,7 +39,7 @@ const BASE_PROPS: Omit<BaseImageGalleryProps, 'children' | 'component'> = {
   })),
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<BaseImageGalleryProps>> = {
   backgroundType: { control: 'select', options: containerBackgroundTypeOptions },
   paddingTop: { control: 'select', options: containerPaddingOptions },
   paddingBottom: { control: 'select', options: containerPaddingOptions },

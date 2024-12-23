@@ -8,24 +8,20 @@ parameters:
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig:
       required: false
     localizable: true
   - id: titleStyle
     name: Title Style
     type: tp-title-style-parameter
-    helpText: ''
     typeConfig: null
   - id: link
     name: Link
     type: link
-    helpText: ''
     typeConfig: null
   - id: text
     name: Text
     type: text
-    helpText: ''
     typeConfig:
       multiline: true
       linesCount: '5'
@@ -33,7 +29,6 @@ parameters:
   - id: content
     name: Content
     type: json
-    helpText: ''
     typeConfig: {}
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
 previewImageUrl: >-
@@ -43,4 +38,4 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:18.084771+00:00'
-updated: '2023-12-27T08:51:24.267549+00:00'
+updated: '2024-08-16T11:17:11.521525+00:00'

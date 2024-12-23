@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { ComponentProps, UniformComposition } from '@uniformdev/canvas-react';
 import { CardBlock, CardBlockProps, CardBlockVariants } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
@@ -23,7 +23,7 @@ const BASE_PROPS: Omit<CardBlockProps, 'component'> = {
   textColorVariant: 'Dark',
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<CardBlockProps>> = {
   titleStyle: { control: 'select', options: titleStyleOptions },
   buttonStyle: { control: 'select', options: buttonStyleOptions },
 };

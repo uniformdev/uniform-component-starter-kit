@@ -8,10 +8,10 @@ export type SpacerProps = ComponentProps<{
 }>;
 
 export enum SpacerVariants {
-  Vertical = 'vertical',
+  Horizontal = 'horizontal',
 }
 
-[undefined, SpacerVariants.Vertical].forEach(variantId => {
+[undefined, SpacerVariants.Horizontal].forEach(variantId => {
   registerUniformComponent({
     type: 'spacer',
     component: withoutContainer(Spacer),

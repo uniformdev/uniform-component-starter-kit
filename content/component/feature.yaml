@@ -8,26 +8,22 @@ parameters:
   - id: title
     name: Title
     type: text
-    helpText: ''
     typeConfig:
       required: false
     localizable: true
   - id: link
     name: Link
     type: link
-    helpText: ''
     typeConfig: null
   - id: description
     name: Description
     type: text
-    helpText: ''
     typeConfig:
       required: false
     localizable: true
   - id: icon
     name: Icon
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
@@ -39,4 +35,4 @@ slots: []
 titleParameter: title
 canBeComposition: false
 created: '2023-08-28T12:30:18.083717+00:00'
-updated: '2023-12-27T08:51:58.83678+00:00'
+updated: '2024-08-16T11:17:11.571951+00:00'

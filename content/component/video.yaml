@@ -7,7 +7,6 @@ parameters:
   - id: url
     name: Video Url
     type: link
-    helpText: ''
     typeConfig:
       linkTypes:
         tel: false
@@ -39,7 +38,6 @@ parameters:
     type: checkbox
     helpText: It works only with Lazy Load param  is false and Muted param is true
     typeConfig: null
-    localizable: false
   - id: lazyLoad
     name: Lazy Load
     type: checkbox
@@ -70,5 +68,5 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2024-01-12T10:01:50.792169+00:00'
-updated: '2024-01-12T13:44:16.310506+00:00'
+created: '2023-08-28T12:30:20.573353+00:00'
+updated: '2024-08-16T11:17:12.351634+00:00'

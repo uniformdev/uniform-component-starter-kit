@@ -6,6 +6,7 @@ import {
 } from '@uniformdev/canvas-react';
 import classnames from 'classnames';
 import { getAllChildrenIds } from '../../utilities';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { TabsProps } from '.';
 import { TabTitle } from '../Tab/TabTitle';
 import { getTabStyle } from './helpers';
@@ -66,6 +67,7 @@ export const Tabs: FC<TabsProps> = ({ component, size, styles }) => {
       </div>
       <UniformSlot
         name="tabs"
+        emptyPlaceholder={<EmptyPlaceholder className="!h-11" />}
         wrapperComponent={({ items }: UniformSlotWrapperComponentProps) =>
           <>{items[activeTabIndex]}</> ?? <div>no tab found</div>
         }

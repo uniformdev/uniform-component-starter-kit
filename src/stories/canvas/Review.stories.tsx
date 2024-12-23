@@ -1,6 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
-import { Review, ReviewVariant } from '@/canvas';
+import { Review, ReviewVariant, ReviewProps } from '@/canvas';
 import { createFakeCompositionData } from '../utils';
 
 const meta: Meta<typeof Review> = {
@@ -23,7 +23,7 @@ const args = {
     "Blown away by how polished this icon pack is. Everything looks so consistent and each SVG is optimized out of the box so I can use it directly with confidence. It would take me several hours to create a single icon this good, so it's a steal at this price.",
 };
 
-const argTypes = {
+const argTypes: Partial<ArgTypes<ReviewProps>> = {
   starsColor: { control: 'select', options: ['primary', 'secondary', 'accent', 'base-200', 'base-300'] },
 };
 

@@ -2,6 +2,7 @@ import { FC } from 'react';
 import classNames from 'classnames';
 import { UniformSlot, UniformText, useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import Button from '../../components/Button';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { getTextClass } from '../../utilities/styling';
 import { formatProjectMapLink } from '../../utilities';
 import { getColorClassName } from './helpers';
@@ -18,6 +19,7 @@ export const CardBlockDefault: FC<CardBlockProps> = ({
 }) => {
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const colorClassName = getColorClassName(textColorVariant);
 
   return (
@@ -53,7 +55,7 @@ export const CardBlockDefault: FC<CardBlockProps> = ({
         )}
       </div>
       <div className="w-full flex flex-row flex-wrap justify-center gap-6">
-        <UniformSlot name="cardBlockInner" />
+        <UniformSlot name="cardBlockInner" emptyPlaceholder={<EmptyPlaceholder className="w-full" />} />
       </div>
     </div>
   );

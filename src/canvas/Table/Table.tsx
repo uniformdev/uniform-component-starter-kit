@@ -1,6 +1,7 @@
 import { FC } from 'react';
 import classnames from 'classnames';
 import { UniformSlot } from '@uniformdev/canvas-react';
+import EmptyPlaceholder from '../../components/EmptyPlaceholder';
 import { TableProps, TableVariant } from '.';
 import { getTableSize } from './helpers';
 
@@ -12,10 +13,10 @@ export const Table: FC<TableProps> = ({ size, component }) => (
       })}
     >
       <thead>
-        <UniformSlot name="tableHead" />
+        <UniformSlot name="tableHead" emptyPlaceholder={<EmptyPlaceholder className="!h-11 !w-full" />} />
       </thead>
       <tbody>
-        <UniformSlot name="tableBody" />
+        <UniformSlot name="tableBody" emptyPlaceholder={<EmptyPlaceholder className="!w-full" />} />
       </tbody>
     </table>
   </div>

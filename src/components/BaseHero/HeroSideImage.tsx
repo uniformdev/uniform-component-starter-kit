@@ -1,28 +1,18 @@
 import { FC, useMemo } from 'react';
 import classNames from 'classnames';
-import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import { useHeroAnimation } from './animation';
-import { Container, Description, EyebrowText, PrimaryButton, SecondaryButton, SideImage, Title } from './atoms';
+import { Container, Description, EyebrowText, SideImage, Title } from './atoms';
 import { AnimationVariant } from '../../components/AnimatedContainer';
-import { HeroVariant, HeroProps, DEFAULT_TEXT_COLOR } from './';
+import { BaseHeroVariant, BaseHeroProps, DEFAULT_TEXT_COLOR } from './';
 import { REGEX_COLOR_HEX } from '../../utilities';
 import { getHeroTextStyle } from './helpers';
 
-export const HeroSideImage: FC<HeroProps> = ({
+export const HeroSideImage: FC<BaseHeroProps> = ({
   title,
   titleStyle = 'h1',
   description,
   image,
   video,
-  primaryButtonCopy,
-  primaryButtonLink,
-  primaryButtonStyle = 'primary',
-  primaryButtonAnimationType,
-  secondaryButtonCopy,
-  secondaryButtonLink,
-  secondaryButtonStyle = 'primary',
-  secondaryButtonAnimationType,
-  component,
   overlayOpacity,
   overlayColor,
   objectFit,
@@ -42,18 +32,17 @@ export const HeroSideImage: FC<HeroProps> = ({
   textColor = DEFAULT_TEXT_COLOR,
   animationPreview,
   delay = 'none',
+  variant,
+  buttonsSlot,
   styles,
 }) => {
-  const { previewMode } = useUniformContextualEditingState();
-  const isContextualEditing = previewMode === 'editor';
-  const { variant } = component || {};
-
   const currentColor = REGEX_COLOR_HEX.test(textColorVariant || textColor || DEFAULT_TEXT_COLOR)
     ? textColor
     : undefined;
   const baseTextStyle = getHeroTextStyle(textColorVariant || textColor);
 
-  const heroContentClass = variant === HeroVariant.ImageLeft ? 'flex-col lg:flex-row' : 'flex-col lg:flex-row-reverse';
+  const heroContentClass =
+    variant === BaseHeroVariant.ImageLeft ? 'flex-col lg:flex-row' : 'flex-col lg:flex-row-reverse';
 
   const { ElementWrapper, getDelayValue } = useHeroAnimation({
     duration,
@@ -64,12 +53,12 @@ export const HeroSideImage: FC<HeroProps> = ({
   });
 
   const textAnimationSide = useMemo(
-    () => (variant === HeroVariant.ImageLeft ? AnimationVariant.FadeInLeft : AnimationVariant.FadeInRight),
+    () => (variant === BaseHeroVariant.ImageLeft ? AnimationVariant.FadeInLeft : AnimationVariant.FadeInRight),
     [variant]
   );
 
   const imageAnimationSide = useMemo(
-    () => (variant === HeroVariant.ImageLeft ? AnimationVariant.FadeInRight : AnimationVariant.FadeInLeft),
+    () => (variant === BaseHeroVariant.ImageLeft ? AnimationVariant.FadeInRight : AnimationVariant.FadeInLeft),
     [variant]
   );
 
@@ -132,34 +121,7 @@ export const HeroSideImage: FC<HeroProps> = ({
           >
             <Description className={classNames('py-10', styles?.description)} />
           </ElementWrapper>
-          <div className={classNames('pb-6', { 'py-6': !description })}>
-            {(Boolean(primaryButtonCopy) || isContextualEditing) && (
-              <ElementWrapper
-                duration={duration}
-                delay={getDelayValue(3)}
-                animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : textAnimationSide}
-              >
-                <PrimaryButton
-                  animationType={primaryButtonAnimationType}
-                  primaryButtonLink={primaryButtonLink}
-                  primaryButtonStyle={primaryButtonStyle}
-                />
-              </ElementWrapper>
-            )}
-            {(Boolean(secondaryButtonCopy) || isContextualEditing) && (
-              <ElementWrapper
-                duration={duration}
-                delay={getDelayValue(3)}
-                animationVariant={animationType === 'fadeIn' ? AnimationVariant.FadeIn : textAnimationSide}
-              >
-                <SecondaryButton
-                  animationType={secondaryButtonAnimationType}
-                  secondaryButtonLink={secondaryButtonLink}
-                  secondaryButtonStyle={secondaryButtonStyle}
-                />
-              </ElementWrapper>
-            )}
-          </div>
+          <div className={classNames('pb-6', { 'py-6': !description })}>{buttonsSlot}</div>
         </div>
       </div>
     </Container>

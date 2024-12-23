@@ -8,14 +8,12 @@ parameters:
   - id: icon
     name: Icon
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
   - id: link
     name: Link
     type: link
-    helpText: ''
     typeConfig:
       required: false
 categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
@@ -24,5 +22,5 @@ previewImageUrl: >-
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-11-22T09:43:34.562442+00:00'
-updated: '2023-11-22T10:01:31.889078+00:00'
+created: '2023-08-28T12:30:18.548641+00:00'
+updated: '2024-08-16T11:17:11.315+00:00'

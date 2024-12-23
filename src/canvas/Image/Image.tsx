@@ -2,9 +2,15 @@ import { FC } from 'react';
 import classNames from 'classnames';
 import { useUniformContextualEditingState } from '@uniformdev/canvas-react';
 import BaseImage from '../../components/Image';
-import { getImageOverlayColorStyle, getImageOverlayOpacityStyle, getObjectFitClass } from '../../utilities/styling';
+import EmptyImagePlaceholder from '../../components/EmptyImagePlaceholder';
+import {
+  getBorderColorStyle,
+  getBorderRadiusStyle,
+  getImageOverlayColorStyle,
+  getImageOverlayOpacityStyle,
+  getObjectFitClass,
+} from '../../utilities/styling';
 import { getMediaUrl, isMediaAsset } from '../../utilities';
-import { getBorderColorStyle, getBorderRadiusStyle } from './helpers';
 import { ImageProps } from '.';
 
 export const Image: FC<ImageProps> = ({
@@ -24,26 +30,13 @@ export const Image: FC<ImageProps> = ({
 }) => {
   const { previewMode } = useUniformContextualEditingState();
   const isContextualEditing = previewMode === 'editor';
+
   const imgSrc = getMediaUrl(src);
   const defaultWidth = isMediaAsset(src) ? src.fields?.width?.value : 500;
   const defaultHeight = isMediaAsset(src) ? src.fields?.height?.value : 300;
 
   if (!imgSrc && isContextualEditing) {
-    return (
-      <div className="flex flex-col gap-2">
-        <div className="mx-auto">
-          <BaseImage
-            src="https://res.cloudinary.com/uniform-demos/image/upload/v1/csk-icons/empty_image.png"
-            width="369"
-            height="369"
-            alt="empty_image"
-          />
-        </div>
-        <div className="mx-auto">
-          <span className="font-bold text-2xl italic">Please add an asset to display an image</span>
-        </div>
-      </div>
-    );
+    return <EmptyImagePlaceholder />;
   }
 
   const widthWithDefault = width ? Number.parseInt(width) : defaultWidth;

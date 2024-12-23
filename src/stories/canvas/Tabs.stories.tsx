@@ -1,4 +1,4 @@
-import type { Meta, StoryObj } from '@storybook/react';
+import type { Meta, StoryObj, ArgTypes } from '@storybook/react';
 import { UniformComposition } from '@uniformdev/canvas-react';
 import { Tabs, TabsVariant, TabsProps } from '@/canvas';
 import { createFakeCompositionData, createUniformParameter } from '../utils';
@@ -80,7 +80,7 @@ const BASE_PROPS: TabsProps = {
   },
 };
 
-const argTypes = {};
+const argTypes: Partial<ArgTypes<TabsProps>> = {};
 
 const renderStory = (args: TabsProps) => {
   const fakeComposition = createFakeCompositionData('tabs', args, { ...args.component.slots });

@@ -8,7 +8,6 @@ parameters:
   - id: src
     name: Image URL
     type: asset
-    helpText: ''
     typeConfig:
       max: 1
       min: 0
@@ -51,7 +50,6 @@ parameters:
   - id: objectFit
     name: Object Fit
     type: select
-    helpText: ''
     typeConfig:
       options:
         - text: Contain
@@ -76,12 +74,10 @@ parameters:
   - id: overlayColor
     name: Overlay Color
     type: tp-color-style-parameter
-    helpText: ''
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 10
       type: steps
@@ -93,7 +89,6 @@ parameters:
   - id: borderWidth
     name: Border Width
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: steps
@@ -104,7 +99,6 @@ parameters:
   - id: borderRadius
     name: Border Radius
     type: tp-slider-parameter
-    helpText: ''
     typeConfig:
       step: 1
       type: custom
@@ -125,7 +119,6 @@ parameters:
   - id: borderColor
     name: Border Color
     type: tp-color-style-parameter
-    helpText: ''
     typeConfig: null
   - id: group_advanced
     name: Rendering & loading
@@ -157,4 +150,4 @@ slots: []
 titleParameter: alt
 canBeComposition: false
 created: '2023-08-28T12:30:18.596257+00:00'
-updated: '2023-12-27T08:54:35.393303+00:00'
+updated: '2024-08-16T11:17:12.094938+00:00'

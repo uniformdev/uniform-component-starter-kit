@@ -5,6 +5,7 @@ import { UniformSlot, useUniformContextualEditingState } from '@uniformdev/canva
 import { ComponentInstance } from '@uniformdev/canvas';
 import useLockScroll from '../../../hooks/useLockScroll';
 import { getAllChildrenIds } from '../../../utilities';
+import EmptyPlaceholder from '../../../components/EmptyPlaceholder';
 
 type Props = {
   wrapperClassName?: string;
@@ -19,7 +20,8 @@ export const MobileView: FC<Props> = ({ wrapperClassName, logo, component }) => 
 
   const toggleMenu = useCallback(() => setIsMenuOpen(prevState => !prevState), []);
 
-  const { isContextualEditing, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+  const { previewMode, selectedComponentReference } = useUniformContextualEditingState({ global: true });
+  const isContextualEditing = previewMode === 'editor';
 
   const allComponentChildrenIds = useMemo(() => getAllChildrenIds(component), [component]);
 
@@ -61,10 +63,10 @@ export const MobileView: FC<Props> = ({ wrapperClassName, logo, component }) => 
             {logo}
           </div>
           <div className="flex flex-col items-center gap-y-4 !text-xl mt-4">
-            <UniformSlot name="links" />
+            <UniformSlot name="links" emptyPlaceholder={<EmptyPlaceholder className="w-full" />} />
           </div>
           <div className="flex justify-center items-center gap-x-4 !text-xl mt-4 [&_.dropdown>ul]:fixed [&_.dropdown>ul]:left-0">
-            <UniformSlot name="iconLinks" />
+            <UniformSlot name="iconLinks" emptyPlaceholder={<EmptyPlaceholder className="w-full" />} />
           </div>
         </ul>
       )}
