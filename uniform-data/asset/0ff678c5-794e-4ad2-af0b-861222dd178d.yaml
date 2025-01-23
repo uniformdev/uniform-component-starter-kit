@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 0ff678c5-794e-4ad2-af0b-861222dd178d
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: meta-image.png
+    file:
+      type: file
+      value: 28f307bf-569a-446d-9700-39e855892108
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/4L0ujrn8QOS10hZ7V213jw-meta-image.png
+      type: text
+    size:
+      value: 171834
+      type: number
+    width:
+      value: 1200
+      type: number
+    height:
+      value: 630
+      type: number
+    custom: {}
+created: '2024-10-24T10:16:49.270833+00:00'
+modified: '2024-10-24T10:16:49.270833+00:00'

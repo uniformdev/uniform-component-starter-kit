@@ -1,0 +1,75 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: card
+name: Card
+icon: card-hearts
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: d17cf463-2fe4-4d1b-b0c5-c97ed1bf5a43
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/card-default.jpg
+useTeamPermissions: true
+slots:
+  - id: cardMedia
+    name: Card Media
+    maxComponents: 1
+    allowedComponents:
+      - image
+      - video
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: cardContent
+    name: Card Content
+    allowedComponents:
+      - badge
+      - button
+      - text
+      - richText
+      - spacer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-12-06T14:01:14.105927+00:00"
+updated: "2024-12-11T21:50:56.343737+00:00"
+variants:
+  - id: backgroundImage
+    name: Background Image

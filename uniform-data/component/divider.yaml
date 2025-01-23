@@ -1,0 +1,50 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: divider
+name: Divider
+icon: merge-horizontal
+parameters:
+  - id: color
+    name: Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: thickness
+    name: Thickness
+    type: tp2-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: steps
+      units: px
+      maxValue: 25
+      minValue: 1
+      defaultValue: 1px
+  - id: width
+    name: Width
+    type: tp2-slider-control-parameter
+    typeConfig:
+      step: 10
+      type: steps
+      units: "%"
+      maxValue: 100
+      minValue: 10
+      defaultValue: 100%
+  - id: alignment
+    name: Alignment
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: start
+        - key: Center
+          value: center
+        - key: Right
+          value: end
+      defaultValue: center
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/divider.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: "2024-09-23T09:39:16.287419+00:00"
+updated: "2024-10-29T13:18:27.867733+00:00"

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: modal
+name: Modal
+icon: desktop
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: disableCloseModalOnClickOutside
+    name: Disable Close Modal On Click Outside
+    type: checkbox
+    typeConfig: null
+  - id: 71cf65b3-5e47-4f97-9811-5cac1435fcab
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - maxWidth
+        - backgroundColor
+        - closeIconColor
+  - id: maxWidth
+    name: Max Width
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Small
+          value: small
+        - key: Medium
+          value: medium
+        - key: Large
+          value: large
+      defaultValue: medium
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: closeIconColor
+    name: Close Icon Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/modal-default.jpg
+useTeamPermissions: true
+slots:
+  - id: trigger
+    name: Trigger
+    allowedComponents:
+      - button
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: modalContent
+    name: Modal Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: modalActions
+    name: Modal Actions
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-09-25T15:32:43.755267+00:00"
+updated: "2024-10-29T13:22:25.516247+00:00"

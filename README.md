@@ -1,84 +1,57 @@
-## Uniform Component Starter Kit
+# Uniform Component Starter Kit v6
 
-The Component Starter kit gives you the key building blocks to create dynamic and compelling web experiences and demonstrate the power of digital experience composition in Uniform. Just install, customize and start creating.
+This starter is using the latest Next.js 14 (App Router).
 
-Built with love by Uniform folks, standing on the shoulders of TailwindCSS, DaisyUI, React and Next.js.
-
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funiformdev%2Funiform-component-starter-kit&env=UNIFORM_API_KEY,UNIFORM_PROJECT_ID"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
-
-- [Demo](https://components.uniform.app/)
-- [Storybook](https://components-storybook.uniform.app/)
-- [Complete tutorial](https://docs.uniform.app/docs/learn/tutorials/csk)
- 
-### Prerequisites
+## Prerequisites
 
 - A Uniform account with the ability to create a new empty project. If you don't have a Uniform account, you can request a trial account [here](https://uniform.dev/try).
+- Node.js LTS and `git` installed on your machine.
 
-### Setup own project and start locally
+## Getting started
 
-1. In your terminal, from the project root, run the following command and follow the instructions:
+### 1. Initial setup
 
-   ```bash
-   npm run cli
-   ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-The project is connected to your Uniform project. Changes you make an publish on Uniform will reflect in this local project.
-
-### Manual Uniform Project Setup
-
-1. Clone this repo onto your local machine
-2. Create a new project at https://uniform.app. Give it a name and select "Empty Project".
-3. Under your team's Security settings, create an API Key with full permissions to Canvas and Context.
-4. Copy your API Key, Project ID, and Quick Connect Key. You will add these to your `.env` file (see below) and to the Uniform Chrome extension respectively. It is important to note that once you close the API Key window you're unable to copy the API or Quick Connect key values again. If you do close the API Key window before copying you will need to go through the API Key creation process again.
-5. In your new project, navigate to "Settings -> Canvas Settings" and add `http://localhost:3000/api/preview?secret=hello-world` into the Preview URL and click "Save". This allows you to preview your project as you develop.
-
-6. Setup your .env file (see .env.example for reference)
+1. Setup your .env file (see .env.example for reference)
    ```bash
    UNIFORM_API_KEY=
    UNIFORM_PROJECT_ID=
    UNIFORM_PREVIEW_SECRET=hello-world
    ```
-7. `npm install`
-8. Run `npm run uniform:push` and `npm run uniform:publish` to push the content from this starter kit (components, compositions and project map) into your project.
-9. Run `npm run dev` to run in dev mode locally, or `npm run build && npm start` to run in prod mode locally.
+   > Make sure your API key has "Developer" role to be able to push content.
+1. `npm install && npm run init && npm run dev` to install dependencies, set up project and run in dev mode.
 
-### Manual Theme Pack integration Setup
+### 2. Run locally in dev mode
+
+`npm run dev` to run locally.
+At this point, you should be able to browse your site on localhost:3000 and open it in Uniform Canvas.
+
+### 3. Configure Preview URL
+
+Besides live preview, setting the preview URL enables visual in-line editing and experience management of your Next.js app within the Uniform environment. Enabling this is easy:
+
+1. Open your Uniform project's Settings.
+1. Open `Canvas Settings` and configure the preview URL to your localhost endpoint: `http://localhost:3000` and use this for your preview path: `/api/preview?secret=hello-world`
+   > Consider changing the `secret` in your .env file. That value must match the `secret` query string used in preview url. The preview can point to a local or deployed version of your Next.js app.
+
+### 4. Install the Theme Pack 2 integration
 
 This integration brings Canvas UI extensions for theme management and new useful visual parameters to help control the look and feel of your components.
 
-1. Open your Uniform project.
-1. Head over to Settings > Canvas and configure preview to http://your-host/api/preview?secret=hello-world
-1. Navigate to `Manage Integrations` tab and Install `Theme Pack` integration
-1. Select on of the themes or create your own and press `Save`
-1. Go to Components list, find the "Header" component - "Main Header" pattern and edit it.
-1. In order to apply theme changes, press `Publish` (even if the pattern itself is not changed).
-   > Optionally, you can change the main font that will be used along with the theme.
-   > Here you can also manage your header and footer content - logo and navigation links.
+1. Open your current team page.
+   ![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
+1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Theme Pack 2` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/theme-pack-2/mesh-manifest.stable.json).
+1. Open your project.
+   ![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
+1. Navigate to the `Integrations` tab, find the `Theme Pack 2` integration and install it.
+1. Provide your oun color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
+1. Provide your oun dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
+1. Provide your oun fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
+1. Provide your oun border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
 
-Important: in order to apply theme changes, you must re-publish the "Main Header" pattern after every time you change the `theme` on the integration settings page.
+⚠️ Important: After each adding new color or font keys you have to rebuild your application, in order to simplify this process you can use Webhook Settings tab to provide rebuild webhook.
 
-### Scaffold
+### 5. Uniform Data sync
 
-For the convenient and fast generation of React components based on your canvas components, you can use the Scaffold CLI. Follow the instructions:
-
-1. In your terminal, from the project root, run the following command:
-
-   ```bash
-   npm run scaffold
-   ```
-
-1. Select necessary component from list. All necessary files as well as registration of this component will be added automatically
-1. If the application is running in build mode, you must re-run the build command and start it again (`npm run build && npm start`). For an application running in development mode, just enjoy the new component
-1. You can also customize new components. They will be located in the common canvas folder
-
-### Additional examples
-
-This package contains an additional set of examples based on the Component Starter Kit components:
-
-1. Coveo Search Page
-1. Algolia Search Page
-
-## Documentation
-
-For the complete walkthrough tutorial, check out [this doc](https://docs.uniform.app/docs/learn/tutorials/csk).
+1. Run `npm run push:data` to push data from disk (see `./uniform-data`) to your project.
+1. Run `npm run publish:manifest` to publish the manifest with personalization configuration.
+1. Run `npm run pull:data` to pull data from uniform to `./uniform-data` folder.

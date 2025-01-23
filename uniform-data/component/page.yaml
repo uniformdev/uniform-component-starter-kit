@@ -1,0 +1,177 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: page
+name: Page
+icon: card
+parameters:
+  - id: acb00032-a954-464b-ac5c-8fdf6bd9f53f
+    name: Meta Data
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - pageTitle
+        - pageDescription
+        - pageKeywords
+  - id: pageTitle
+    name: Page Title
+    type: text
+    typeConfig:
+      required: false
+  - id: pageDescription
+    name: Page Description
+    type: text
+    typeConfig:
+      multiline: true
+      linesCount: 5
+  - id: pageKeywords
+    name: Page Keywords
+    type: text
+    typeConfig: null
+  - id: f4f80134-525c-4989-b414-145f14500d3d
+    name: Open Graph
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - openGraphTitle
+        - openGraphDescription
+        - openGraphImage
+        - openGraphType
+  - id: openGraphTitle
+    name: Open Graph Title
+    type: text
+    helpText: Fallback to Page Title when the value is not set.
+    typeConfig: null
+  - id: openGraphDescription
+    name: Open Graph Description
+    type: text
+    helpText: Fallback to Page Description when the value is not set.
+    typeConfig:
+      multiline: true
+      linesCount: 5
+  - id: openGraphImage
+    name: Open Graph Image
+    type: asset
+    typeConfig:
+      max: 1
+  - id: openGraphType
+    name: Open Graph Type
+    type: select
+    typeConfig:
+      options:
+        - text: website
+          value: website
+        - text: video
+          value: video
+        - text: article
+          value: article
+  - id: 609a7913-350c-4420-b94f-e408e40e96d9
+    name: Twitter
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - twitterTitle
+        - twitterDescription
+        - twitterImage
+        - twitterCard
+  - id: twitterTitle
+    name: Twitter Title
+    type: text
+    helpText: Fallback to Page Title when the value is not set.
+    typeConfig: null
+    localizable: true
+  - id: twitterDescription
+    name: Twitter Description
+    type: text
+    helpText: Fallback to Page Description when the value is not set.
+    typeConfig: null
+  - id: twitterImage
+    name: Twitter Image
+    type: asset
+    helpText: Fallback to Open Graph Image when the correct value is not set.
+    typeConfig:
+      max: 1
+  - id: twitterCard
+    name: Twitter Card
+    type: select
+    typeConfig:
+      options:
+        - text: summary
+          value: summary
+        - text: summary_large_image
+          value: summary_large_image
+        - text: app
+          value: app
+        - text: player
+          value: player
+  - id: b6c69a16-66e8-4037-981a-bdd9cb019399
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - favicon
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: favicon
+    name: Favicon
+    type: asset
+    typeConfig:
+      max: 1
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/page.jpg
+useTeamPermissions: true
+slots:
+  - id: pageHeader
+    name: Page Header
+    minComponents: 1
+    allowedComponents:
+      - header
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: pageContent
+    name: Page Content
+    allowedComponents:
+      - accordion
+      - banner
+      - card
+      - carousel
+      - container
+      - fixedHero
+      - flex
+      - flexibleHero
+      - grid
+      - $p:eea0b9bb-82f4-4de6-9aa5-af290540615d
+      - imageGallery
+      - review
+      - section
+      - table
+      - tabs
+      - testimonial
+      - $p:6fc97589-a549-4105-8b4f-387f64ea2780
+      - $test
+      - $localization
+      - $loop
+      - $personalization
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: pageFooter
+    name: Page Footer
+    allowedComponents:
+      - footer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: pageTitle
+thumbnailParameter: openGraphImage
+canBeComposition: true
+created: '2024-07-03T11:19:33.881251+00:00'
+updated: '2025-01-21T11:16:00.993144+00:00'

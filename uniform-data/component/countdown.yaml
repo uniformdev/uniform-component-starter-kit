@@ -1,0 +1,76 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: countdown
+name: Countdown
+icon: timer
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: targetDate
+    name: Target Date
+    type: datetime
+    typeConfig: null
+  - id: fd19ac02-577c-4300-8eb9-45862e7a5cf5
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - size
+        - backgroundColor
+        - textColor
+        - border
+  - id: size
+    name: Size
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      defaultValue: {}
+      withViewPort: true
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig:
+      allowColors: []
+  - id: textColor
+    name: Text Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/countdown-default.jpg
+useTeamPermissions: true
+slots:
+  - id: countdownComplete
+    name: Countdown Complete
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-10-02T10:39:19.592475+00:00"
+updated: "2024-10-29T13:18:09.607232+00:00"
+variants:
+  - id: labelsUnder
+    name: Labels Under

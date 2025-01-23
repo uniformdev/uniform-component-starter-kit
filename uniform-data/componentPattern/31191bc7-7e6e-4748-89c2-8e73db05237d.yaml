@@ -1,0 +1,75 @@
+composition:
+  _name: Link Button
+  _id: 31191bc7-7e6e-4748-89c2-8e73db05237d
+  type: button
+  variant: link
+  parameters:
+    icon:
+      type: asset
+      value:
+        - _id: 547d9183-255a-4fe9-adc4-74700ab519cb
+          type: image
+          fields:
+            id:
+              type: text
+              value: bf9daf10-949d-4589-8726-0168d567e0d5
+            url:
+              value: >-
+                https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/Vkl_UhwtSt6BpFx-mbvKsQ-arrow-right.svg
+              type: text
+            file:
+              type: file
+              value: 519443cd-5f84-460f-a57c-778bbe1d3daa
+            size:
+              value: 300
+              type: number
+            title:
+              type: text
+              value: arrow-right.svg
+            width:
+              value: 29
+              type: number
+            height:
+              value: 29
+              type: number
+            mediaType:
+              value: image/svg+xml
+              type: text
+          _source: uniform-assets
+    size:
+      type: tp2-token-selector-parameter
+      value: ''
+    textSize:
+      type: tp2-segmented-control-parameter
+      value:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+    textColor:
+      type: tp2-color-palette-parameter
+      value: text-tertiary
+    textWeight:
+      type: tp2-segmented-control-parameter
+      value: normal
+    iconPosition:
+      type: tp2-segmented-control-parameter
+      value: right
+    textTransform:
+      type: tp2-segmented-control-parameter
+      value: uppercase
+  _overridability:
+    variants: false
+    parameters:
+      icon: 'no'
+      link: 'yes'
+      text: 'yes'
+      textColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2024-11-16T22:44:13.016563+00:00'
+modified: '2024-12-22T23:26:24.782725+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-link.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

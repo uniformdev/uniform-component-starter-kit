@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 50ae1d5c-2983-4fa1-8f32-5cc7cf6ad69d
+  _name: Uniform-Icon-Library_Adapt-1.png
+  fields:
+    title:
+      type: text
+      value: adapt
+    file:
+      type: file
+      value: 8e6d7094-4b3d-4f90-a573-7c766bbe00e7
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/KGfkYCX7RhOaxzM2HrS0Sw-Uniform-Icon-Library_Adapt-1.png
+      type: text
+    size:
+      value: 8322
+      type: number
+    width:
+      value: 114
+      type: number
+    height:
+      value: 114
+      type: number
+    custom: {}
+created: '2024-10-02T14:34:26.167865+00:00'
+modified: '2024-10-04T11:28:20.26846+00:00'

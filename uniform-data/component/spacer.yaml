@@ -1,0 +1,25 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: spacer
+name: Spacer
+icon: arrows-expand-right-alt
+parameters:
+  - id: size
+    name: Size
+    type: tp2-token-selector-parameter
+    typeConfig:
+      defaultValue: spacer-small
+      selectedGroup: spacer
+      allowDimensions: []
+      selectedTokenType: dimension
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/spacer.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: "2024-09-23T09:39:14.722874+00:00"
+updated: "2024-10-29T13:26:34.711534+00:00"
+variants:
+  - id: horizontal
+    name: Horizontal

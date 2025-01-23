@@ -1,0 +1,8 @@
+id: theme
+name: Theme
+description: ''
+options:
+  - name: Light
+    value: light
+  - name: Dark
+    value: dark

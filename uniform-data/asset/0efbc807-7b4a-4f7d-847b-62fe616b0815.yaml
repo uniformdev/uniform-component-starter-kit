@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 0efbc807-7b4a-4f7d-847b-62fe616b0815
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: uniform-dark-logo.svg
+    file:
+      type: file
+      value: 47b0c945-547f-48b4-a161-2b26884d4f32
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/xVy7DexLQp6tgXxNH-Z6Jw-uniform-dark-logo.svg
+      type: text
+    size:
+      value: 1697
+      type: number
+    width:
+      value: 204
+      type: number
+    height:
+      value: 52
+      type: number
+    custom: {}
+created: '2024-10-15T11:01:42.440329+00:00'
+modified: '2024-10-15T11:01:42.440329+00:00'

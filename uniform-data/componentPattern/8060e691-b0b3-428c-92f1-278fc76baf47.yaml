@@ -1,0 +1,45 @@
+composition:
+  _name: Tertiary Button
+  _id: 8060e691-b0b3-428c-92f1-278fc76baf47
+  type: button
+  parameters:
+    size:
+      type: tp2-token-selector-parameter
+      value: button-medium
+    textSize:
+      type: tp2-segmented-control-parameter
+      value:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+    textColor:
+      type: tp2-color-palette-parameter
+      value: text-dark
+    textWeight:
+      type: tp2-segmented-control-parameter
+      value: normal
+    buttonColor:
+      type: tp2-color-palette-parameter
+      value: button-tertiary
+    iconPosition:
+      type: tp2-segmented-control-parameter
+      value: right
+    hoverButtonColor:
+      type: tp2-color-palette-parameter
+      value: button-tertiary-hover
+  _overridability:
+    variants: true
+    parameters:
+      icon: 'yes'
+      link: 'yes'
+      text: 'yes'
+      textColor: 'no'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2024-11-16T22:44:13.036949+00:00'
+modified: '2024-12-22T23:26:54.092824+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button-tertiary.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

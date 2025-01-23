@@ -1,0 +1,119 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: grid
+name: Grid
+icon: view-grid
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: columnsCount
+    name: Columns Count
+    type: tp2-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: steps
+      units: ""
+      options: []
+      maxValue: 12
+      minValue: 1
+      defaultValue:
+        mobile: "1"
+        tablet: "1"
+        desktop: "1"
+      withViewPort: true
+  - id: gapX
+    name: Gap X
+    type: tp2-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - key: XSmall
+          value: "2"
+        - key: Small
+          value: "4"
+        - key: Medium
+          value: "8"
+        - key: Large
+          value: "16"
+        - key: XLarge
+          value: "32"
+      maxValue: 10
+      minValue: 0
+      defaultValue: {}
+      withViewPort: true
+  - id: gapY
+    name: Gap Y
+    type: tp2-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      unit: px
+      options:
+        - key: XSmall
+          value: "2"
+        - key: Small
+          value: "4"
+        - key: Medium
+          value: "8"
+        - key: Large
+          value: "16"
+        - key: Xlarge
+          value: "32"
+      maxValue: 10
+      minValue: 0
+      defaultValue: {}
+      withViewPort: true
+  - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
+    name: More Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/grid.jpg
+useTeamPermissions: true
+slots:
+  - id: gridInner
+    name: Grid Inner
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-09-23T09:39:14.658353+00:00"
+updated: "2024-10-29T13:19:46.052735+00:00"

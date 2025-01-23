@@ -1,0 +1,708 @@
+composition:
+  _name: Global Footer
+  _id: 68136a90-0d34-4dbb-a34e-6e324179998a
+  type: footer
+  parameters:
+    border:
+      type: tp2-token-selector-parameter
+      value: border-footer
+    spacing:
+      type: tp2-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: container-medium
+        marginRight: ''
+        paddingLeft: ''
+        marginBottom: ''
+        paddingRight: ''
+        paddingBottom: container-medium
+    displayName:
+      type: text
+      value: Footer
+  slots:
+    footerLogo:
+      - _id: bd107466-c7e2-4b3b-8d59-5d1ff0c0c8bf
+        type: link
+        slots:
+          linkContent:
+            - _id: cf36ced3-02e4-4c0d-a07b-350e72851772
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: is
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: 59f609e7-91ae-42f9-91c4-57e0f6ea03f7
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0ecfb786-6b93-4023-9af6-7693a309a484
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/yAc8oRghSnSOHRtkPeCeLQ-uniform-light-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: a66c8bd1-864a-4d5a-8e84-0d210f4855d8
+                        size:
+                          value: 1681
+                          type: number
+                        title:
+                          type: text
+                          value: uniform-light-logo.svg
+                        width:
+                          value: 204
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '180'
+                height:
+                  type: number
+                  value: '47'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+            - _id: ee663cd6-37e5-4b5e-b629-fdf9a4667eba
+              type: image
+              parameters:
+                $viz:
+                  type: $viz
+                  value:
+                    criteria:
+                      clauses:
+                        - op: '!is'
+                          rule: $qk
+                          value: dark
+                          source: theme
+                image:
+                  type: asset
+                  value:
+                    - _id: f760e22b-3627-4211-bd91-f9a5afa90420
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0efbc807-7b4a-4f7d-847b-62fe616b0815
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/xVy7DexLQp6tgXxNH-Z6Jw-uniform-dark-logo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: 47b0c945-547f-48b4-a161-2b26884d4f32
+                        size:
+                          value: 1697
+                          type: number
+                        title:
+                          type: text
+                          value: uniform-dark-logo.svg
+                        width:
+                          value: 204
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '180'
+                height:
+                  type: number
+                  value: '47'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://www.uniform.dev
+              type: url
+          displayName:
+            type: text
+            value: Uniform Link
+          openInNewTab:
+            type: checkbox
+            value: true
+        _overridability:
+          hideLockedParameters: true
+    footerContent:
+      - _id: 757f8498-9331-4b59-9723-95cdd187b2f1
+        type: flex
+        slots:
+          flexItem:
+            - _id: e033c4fe-3be7-4ec0-b434-d352e5d7cc0f
+              type: flexItem
+              slots:
+                inner:
+                  - _id: 1f790254-5284-4802-be05-4d206cb719ce
+                    type: text
+                    parameters:
+                      tag:
+                        type: tp2-segmented-control-parameter
+                        value: h1
+                      size:
+                        type: tp2-segmented-control-parameter
+                        value:
+                          desktop: base
+                      text:
+                        type: text
+                        value: Key resources
+                      color:
+                        type: tp2-color-palette-parameter
+                        value: text-tertiary
+                      weight:
+                        type: tp2-segmented-control-parameter
+                        value: bold
+                      transform:
+                        type: tp2-segmented-control-parameter
+                        value: uppercase
+                  - _id: 1f09d082-3757-4cd9-a9ec-74b681a7cd99
+                    type: spacer
+                    parameters:
+                      size:
+                        type: tp2-token-selector-parameter
+                        value: spacer-extra-small
+                  - _id: 5ea543ff-a1fa-478a-86d7-fe31e2153ccb
+                    type: flex
+                    slots:
+                      flexItem:
+                        - _id: 88e9100e-b99d-4084-82a8-368fb15b4f20
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://docs.uniform.app/docs
+                                  type: url
+                            size:
+                              type: tp2-segmented-control-parameter
+                              value: base
+                            text:
+                              type: text
+                              value: Documentation
+                            color:
+                              type: tp2-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: tp2-segmented-control-parameter
+                              value: bold
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 74e7610c-8a1d-4b03-824e-2ed660425e58
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: >-
+                                    https://dev-csk-v-next-approuter-storybook.vercel.app
+                                  type: url
+                            size:
+                              type: tp2-segmented-control-parameter
+                              value: base
+                            text:
+                              type: text
+                              value: Storybook
+                            color:
+                              type: tp2-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: tp2-segmented-control-parameter
+                              value: bold
+                          _overridability:
+                            hideLockedParameters: true
+                        - _id: 52841642-6197-491e-b3b9-34d7d8586d3d
+                          type: navigationLink
+                          parameters:
+                            link:
+                              type: link
+                              locales:
+                                en:
+                                  path: https://www.uniform.dev/demo
+                                  type: url
+                            size:
+                              type: tp2-segmented-control-parameter
+                              value: base
+                            text:
+                              type: text
+                              value: Demo
+                            color:
+                              type: tp2-color-palette-parameter
+                              value: text-primary
+                            weight:
+                              type: tp2-segmented-control-parameter
+                              value: bold
+                          _overridability:
+                            hideLockedParameters: true
+                    parameters:
+                      gap:
+                        type: tp2-slider-control-parameter
+                        value:
+                          mobile: '2'
+                          tablet: '2'
+                          desktop: '2'
+                      spacing:
+                        type: tp2-space-control-parameter
+                        value: {}
+                      direction:
+                        type: tp2-segmented-control-parameter
+                        value:
+                          mobile: col
+                          tablet: col
+                          desktop: col
+                      alignItems:
+                        type: tp2-segmented-control-parameter
+                        value: {}
+                      displayName:
+                        type: text
+                        value: Links
+                      fluidContent:
+                        type: checkbox
+                        value: true
+                      justifyContent:
+                        type: tp2-segmented-control-parameter
+                        value: {}
+              parameters:
+                shrink:
+                  type: tp2-segmented-control-parameter
+                  value: '0'
+                alignSelf:
+                  type: tp2-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  value: Resources
+            - _id: 04a71df4-1cc7-4597-9a7e-fcf8ec1cd326
+              type: flex
+              slots:
+                flexItem:
+                  - _id: 1d050b85-1622-44c2-ac6f-8f36d8022ebb
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 87ed9168-80db-408d-b271-4cbff4d1f913
+                          type: image
+                          parameters:
+                            image:
+                              type: asset
+                              value:
+                                - _id: 5e6a0737-768a-47ae-b3b6-2f1beaad53df
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 804fa820-df03-40ec-8efa-ddf36b976c70
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/hZ04UUPDTiCGGKA6mDycrA-storybook-icon.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: e2b11dba-8b68-492d-9f8f-14116702bd2b
+                                    size:
+                                      value: 5499
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: storybook-icon.svg
+                                    width:
+                                      value: 29
+                                      type: number
+                                    height:
+                                      value: 29
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: >-
+                            https://dev-csk-v-next-approuter-storybook.vercel.app
+                          type: url
+                      displayName:
+                        type: text
+                        value: Storybook Link
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+                  - _id: 6f18283f-d276-46e0-a8bb-20749b65a744
+                    type: link
+                    slots:
+                      linkContent:
+                        - _id: 6636b1df-de2f-465b-b8e2-71968fc5c063
+                          type: image
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: is
+                                      rule: $qk
+                                      value: dark
+                                      source: theme
+                            image:
+                              type: asset
+                              value:
+                                - _id: 2af9bb94-1d79-4a69-9c1a-d2fb0134446e
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/MvkG-JokTn6f1UR-E408gQ-github-light-logo.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: 95d6ad35-091b-4a0e-8c9f-ad1c398c4f83
+                                    size:
+                                      value: 1326
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: github-light-logo.svg
+                                    width:
+                                      value: 35
+                                      type: number
+                                    height:
+                                      value: 34
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
+                        - _id: 261e0c54-fda9-4380-96a1-0dd3f8781371
+                          type: image
+                          parameters:
+                            $viz:
+                              type: $viz
+                              value:
+                                criteria:
+                                  clauses:
+                                    - op: '!is'
+                                      rule: $qk
+                                      value: dark
+                                      source: theme
+                            image:
+                              type: asset
+                              value:
+                                - _id: 035087c7-e38b-42d4-8c77-2e632151230a
+                                  type: image
+                                  fields:
+                                    id:
+                                      type: text
+                                      value: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
+                                    url:
+                                      value: >-
+                                        https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/RhO3ui_DQkC3EMfGy3N1Ug-github-dark-logo.svg
+                                      type: text
+                                    file:
+                                      type: file
+                                      value: f6f351b7-03eb-4a20-a6b1-327132c4baff
+                                    size:
+                                      value: 1327
+                                      type: number
+                                    title:
+                                      type: text
+                                      value: github-dark-logo.svg
+                                    width:
+                                      value: 35
+                                      type: number
+                                    height:
+                                      value: 34
+                                      type: number
+                                    mediaType:
+                                      value: image/svg+xml
+                                      type: text
+                                  _source: uniform-assets
+                            width:
+                              type: number
+                              value: '30'
+                            height:
+                              type: number
+                              value: '30'
+                            objectFit:
+                              type: tp2-segmented-control-parameter
+                              value: ''
+                    parameters:
+                      link:
+                        type: link
+                        value:
+                          path: https://github.com/uniformdev/csk-v-next
+                          type: url
+                      displayName:
+                        type: text
+                        value: GitHub Link
+                      openInNewTab:
+                        type: checkbox
+                        value: true
+                    _overridability:
+                      hideLockedParameters: true
+              parameters:
+                gap:
+                  type: tp2-slider-control-parameter
+                  value:
+                    mobile: '4'
+                    tablet: '4'
+                    desktop: '8'
+                spacing:
+                  type: tp2-space-control-parameter
+                  value: {}
+                direction:
+                  type: tp2-segmented-control-parameter
+                  value:
+                    mobile: row
+                    tablet: row
+                    desktop: row
+                alignItems:
+                  type: tp2-segmented-control-parameter
+                  value: {}
+                displayName:
+                  type: text
+                  value: Icons
+                fluidContent:
+                  type: checkbox
+                  value: true
+                justifyContent:
+                  type: tp2-segmented-control-parameter
+                  value:
+                    mobile: end
+        parameters:
+          gap:
+            type: tp2-slider-control-parameter
+            value:
+              mobile: '16'
+              tablet: '16'
+              desktop: '32'
+          spacing:
+            type: tp2-space-control-parameter
+            value: {}
+          direction:
+            type: tp2-segmented-control-parameter
+            value:
+              mobile: row
+              tablet: row
+              desktop: row
+          alignItems:
+            type: tp2-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Content
+          fluidContent:
+            type: checkbox
+            value: true
+          justifyContent:
+            type: tp2-segmented-control-parameter
+            value:
+              mobile: between
+    footerCopyright:
+      - _id: 6377c95c-1a69-4347-9296-f7a726f27baa
+        type: richText
+        parameters:
+          font:
+            type: tp2-token-selector-parameter
+            value: ''
+          text:
+            type: richText
+            value:
+              root:
+                type: root
+                format: ''
+                indent: 0
+                version: 1
+                children:
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: '2025 Uniform Systems, Inc. All rights reserved. '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                  - type: paragraph
+                    format: ''
+                    indent: 0
+                    version: 1
+                    children:
+                      - mode: normal
+                        text: "Built with 💙 by folks at\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://www.uniform.dev/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: Uniform
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ' leveraging the '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - mode: normal
+                        text: 'TNT Stack:'
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 2
+                        version: 1
+                      - mode: normal
+                        text: ' '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://www.typescriptlang.org/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: TypeScript
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ",\_"
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://nextjs.org/docs/app
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: Next.js App Router
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: ' and '
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                      - link:
+                          path: https://tailwindcss.com/
+                          type: url
+                        type: link
+                        format: ''
+                        indent: 0
+                        version: 1
+                        children:
+                          - mode: normal
+                            text: TailwindCSS
+                            type: text
+                            style: ''
+                            detail: 0
+                            format: 0
+                            version: 1
+                        direction: ltr
+                      - mode: normal
+                        text: .
+                        type: text
+                        style: ''
+                        detail: 0
+                        format: 0
+                        version: 1
+                    direction: ltr
+                    textStyle: ''
+                    textFormat: 0
+                direction: ltr
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+  _locales:
+    - en
+created: '2024-11-16T22:44:14.07717+00:00'
+modified: '2024-12-22T23:13:29.393465+00:00'
+pattern: true
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

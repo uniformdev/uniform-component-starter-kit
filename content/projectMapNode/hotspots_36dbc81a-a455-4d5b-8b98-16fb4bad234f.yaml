@@ -1,9 +1,0 @@
-id: 36dbc81a-a455-4d5b-8b98-16fb4bad234f
-name: Hotspots
-order: 650
-path: /components/hotspots
-type: composition
-pathSegment: hotspots
-data: {}
-compositionId: a75ef1fe-ee25-4c7a-aff5-9a5e1d700a42
-projectMapId: 40535f31-cdc1-4ac3-bb4d-2a008493b431

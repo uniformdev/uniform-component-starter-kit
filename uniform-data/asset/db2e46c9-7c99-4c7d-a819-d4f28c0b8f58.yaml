@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: db2e46c9-7c99-4c7d-a819-d4f28c0b8f58
+  _name: Group-673-(1).png
+  fields:
+    title:
+      type: text
+      value: marketers
+    file:
+      type: file
+      value: 90fd33c5-c660-4384-bdb4-87c348e49f79
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/GspHl5a1Q3Csb0JLRu8QIA-Group-673-(1).png
+      type: text
+    size:
+      value: 158075
+      type: number
+    width:
+      value: 1092
+      type: number
+    height:
+      value: 1040
+      type: number
+    custom: {}
+created: '2024-10-02T14:51:37.141805+00:00'
+modified: '2024-10-04T11:26:46.495+00:00'

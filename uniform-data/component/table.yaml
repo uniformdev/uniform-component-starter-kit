@@ -1,0 +1,82 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: table
+name: Table
+icon: view-grid
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: size
+    name: Size
+    type: tp2-token-selector-parameter
+    typeConfig:
+      allowTokens: []
+      selectedGroup: table
+      allowDimensions: []
+      selectedTokenType: dimension
+  - id: textColor
+    name: Text Color
+    type: tp2-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/table-default-variant.jpg
+useTeamPermissions: true
+slots:
+  - id: tableHead
+    name: Table Head
+    allowedComponents:
+      - tableRow
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: tableBody
+    name: Table Body
+    allowedComponents:
+      - tableRow
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-09-25T13:43:09.601916+00:00"
+updated: "2024-10-29T13:27:09.614386+00:00"

@@ -1,0 +1,160 @@
+composition:
+  _name: Global Header
+  _id: 021762f3-8a06-41b4-a4fb-08a837c74415
+  type: header
+  variant: sticky
+  parameters:
+    color:
+      type: tp2-color-palette-parameter
+      value: text-primary
+    spacing:
+      type: tp2-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingBottom: container-small
+    displayName:
+      type: text
+      value: Header
+    backgroundColor:
+      type: tp2-color-palette-parameter
+      value: general-color-1
+  slots:
+    headerLeftContent:
+      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
+        type: link
+        slots:
+          linkContent:
+            - _id: 1d80a3d5-a57a-44e5-9ac8-0b665124f55c
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: bf66f619-6751-47ba-8249-28a233e15360
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0f0670b4-a425-40d3-842b-c7c895d500a5
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/Pwf9WdkMT2e7-O__xKLulg/87GUb2yUTTuswAP4cEpl2A-uniformlogo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d7405da9-bafe-4158-836d-f9994daa1ed1
+                        size:
+                          value: 454
+                          type: number
+                        title:
+                          type: text
+                          value: uniformlogo.svg
+                        width:
+                          value: 45
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '50'
+                height:
+                  type: number
+                  value: '40'
+                objectFit:
+                  type: tp2-segmented-control-parameter
+                  value: contain
+        parameters:
+          link:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          displayName:
+            type: text
+            value: Logo
+        _overridability:
+          hideLockedParameters: true
+    headerCenterContent:
+      - _id: 5832d439-1459-4a01-b422-fd1e66a71cbb
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/get-started
+              type: url
+          text:
+            type: text
+            value: Get Started
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: af6efa0f-26ba-4ff6-9106-247c35a60f2d
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/components
+              type: url
+          text:
+            type: text
+            value: Components
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: b2345a75-1c06-4596-8e50-8163e76287b6
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/templates
+              type: url
+          text:
+            type: text
+            value: Templates
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+      - _id: 6f33478e-d7c1-4a8c-8c24-82a1792217d0
+        type: navigationLink
+        parameters:
+          link:
+            type: link
+            value:
+              path: https://dev-csk-marketing-site.vercel.app/recipes
+              type: url
+          text:
+            type: text
+            value: Recipes
+          color:
+            type: tp2-color-palette-parameter
+            value: text-primary
+          weight:
+            type: tp2-segmented-control-parameter
+            value: medium
+  _locales:
+    - en
+created: '2024-10-15T08:05:41.05485+00:00'
+modified: '2024-12-12T07:37:52.416586+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

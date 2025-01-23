@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 5fb5390d-c1a1-4506-a586-d4ba42c20f7b
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: github-light-logo.svg
+    file:
+      type: file
+      value: 95d6ad35-091b-4a0e-8c9f-ad1c398c4f83
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/MvkG-JokTn6f1UR-E408gQ-github-light-logo.svg
+      type: text
+    size:
+      value: 1326
+      type: number
+    width:
+      value: 35
+      type: number
+    height:
+      value: 34
+      type: number
+    custom: {}
+created: '2024-10-15T11:20:56.553141+00:00'
+modified: '2024-10-15T11:20:56.553141+00:00'

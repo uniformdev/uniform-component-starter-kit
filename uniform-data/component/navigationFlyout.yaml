@@ -1,0 +1,152 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: navigationFlyout
+name: Navigation Flyout
+icon: image-text
+parameters:
+  - id: icon
+    name: Icon
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+    localizable: true
+  - id: text
+    name: Text
+    type: text
+    typeConfig: null
+  - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - border
+        - size
+        - color
+        - weight
+        - font
+        - transform
+        - decoration
+        - letterSpacing
+        - alignment
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: size
+    name: Size
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: false
+  - id: color
+    name: Color
+    type: tp2-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: weight
+    name: Weight
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: font
+    name: Font
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: transform
+    name: Transform
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: decoration
+    name: Decoration
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Underline
+          value: underline
+        - key: Overline
+          value: overline
+        - key: Line Through
+          value: line-through
+  - id: letterSpacing
+    name: Letter Spacing
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Tighter
+          value: tighter
+        - key: Tight
+          value: tight
+        - key: Wide
+          value: wide
+        - key: Wider
+          value: wider
+  - id: alignment
+    name: Alignment
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
+useTeamPermissions: true
+slots:
+  - id: navigationFlyoutLeftContent
+    name: Navigation Flyout Left Content
+    allowedComponents:
+      - navigationLink
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: navigationFlyoutRightContent
+    name: Navigation Flyout Right Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: text
+canBeComposition: false
+created: "2024-10-02T12:30:33.604387+00:00"
+updated: "2024-10-03T11:41:06.543939+00:00"

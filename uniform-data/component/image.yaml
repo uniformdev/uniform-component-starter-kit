@@ -1,0 +1,120 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: image
+name: Image
+icon: image
+parameters:
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+      min: 1
+  - id: cca23341-d3d6-448d-9c5d-16b2324881bc
+    name: Dimensions
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - objectFit
+        - width
+        - height
+  - id: objectFit
+    name: Object Fit
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Fill
+          value: fill
+        - key: Contain
+          value: contain
+        - key: Cover
+          value: cover
+        - key: None
+          value: none
+        - key: Scale Down
+          value: scale-down
+      defaultValue: cover
+  - id: width
+    name: Width
+    type: number
+    typeConfig: null
+  - id: height
+    name: Height
+    type: number
+    typeConfig: null
+  - id: 6a821149-f836-49f2-806c-db36ecc79dc8
+    name: Loading Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - unoptimized
+        - priority
+  - id: unoptimized
+    name: Unoptimized
+    type: checkbox
+    typeConfig: null
+  - id: priority
+    name: Priority
+    type: checkbox
+    typeConfig: null
+  - id: b15f5d41-2729-4c94-9cf3-3930ad7d1122
+    name: Presentation
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - overlayColor
+        - overlayOpacity
+        - border
+  - id: overlayColor
+    name: Overlay Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: overlayOpacity
+    name: Overlay Opacity
+    type: tp2-slider-control-parameter
+    typeConfig:
+      type: custom
+      options:
+        - key: 0%
+          value: "0"
+        - key: 10%
+          value: "0.1"
+        - key: 20%
+          value: "0.2"
+        - key: 30%
+          value: "0.3"
+        - key: 40%
+          value: "0.4"
+        - key: 50%
+          value: "0.5"
+        - key: 60%
+          value: "0.6"
+        - key: 70%
+          value: "0.7"
+        - key: 80%
+          value: "0.8"
+        - key: 90%
+          value: "0.9"
+        - key: 100%
+          value: "1"
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      allowTokens:
+        - border-image-radius-small
+        - border-image-radius-medium
+      selectedTokenType: border
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/image.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: image
+thumbnailParameter: image
+canBeComposition: false
+created: "2024-09-23T09:39:16.721387+00:00"
+updated: "2024-10-29T13:21:20.146092+00:00"

@@ -1,0 +1,71 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tabs
+name: Tabs
+icon: database
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: color
+    name: Color
+    type: tp2-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
+    name: More Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/tabs-default.jpg
+useTeamPermissions: true
+slots:
+  - id: tabItems
+    name: Tab Items
+    minComponents: 1
+    allowedComponents:
+      - tab
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-09-23T09:39:15.159922+00:00"
+updated: "2024-10-29T13:29:41.890353+00:00"
+variants:
+  - id: bordered
+    name: Bordered

@@ -1,0 +1,70 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: footer
+name: Footer
+icon: border-bottom
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: c3eed7c5-3aaf-4857-9934-1eda1d204b7e
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
+useTeamPermissions: true
+slots:
+  - id: footerLogo
+    name: Footer Logo
+    allowedComponents:
+      - image
+      - link
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: footerCopyright
+    name: Footer Copyright
+    maxComponents: 1
+    allowedComponents:
+      - text
+      - richText
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: footerContent
+    name: Footer Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-12-06T14:01:13.322694+00:00"
+updated: "2024-12-11T21:52:39.159971+00:00"

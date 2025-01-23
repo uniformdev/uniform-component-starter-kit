@@ -1,0 +1,48 @@
+composition:
+  _name: Primary Button
+  _id: 53b59aed-e378-4fcb-9135-20247d92074e
+  type: button
+  parameters:
+    size:
+      type: tp2-token-selector-parameter
+      value: button-medium
+    textSize:
+      type: tp2-segmented-control-parameter
+      value:
+        mobile: sm
+        tablet: sm
+        desktop: sm
+    textColor:
+      type: tp2-color-palette-parameter
+      value: text-light
+    textWeight:
+      type: tp2-segmented-control-parameter
+      value: normal
+    buttonColor:
+      type: tp2-color-palette-parameter
+      value: button-primary
+    iconPosition:
+      type: tp2-segmented-control-parameter
+      value: left
+    textTransform:
+      type: tp2-segmented-control-parameter
+      value: uppercase
+    hoverButtonColor:
+      type: tp2-color-palette-parameter
+      value: button-primary-hover
+  _overridability:
+    variants: true
+    parameters:
+      icon: 'yes'
+      link: 'yes'
+      text: 'yes'
+      iconPosition: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2024-11-16T22:44:12.325356+00:00'
+modified: '2024-12-22T23:25:58.411001+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/button.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

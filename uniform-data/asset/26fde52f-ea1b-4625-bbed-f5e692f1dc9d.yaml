@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 26fde52f-ea1b-4625-bbed-f5e692f1dc9d
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: rectangle.jpg
+    file:
+      type: file
+      value: 29c50181-91f5-43df-9160-4ac208003bfe
+    mediaType:
+      value: image/jpeg
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/Pwf9WdkMT2e7-O__xKLulg/EHTHqfgKSqWkR3A7kCWLtg-rectangle.jpg
+      type: text
+    size:
+      value: 148846
+      type: number
+    width:
+      value: 1600
+      type: number
+    height:
+      value: 689
+      type: number
+    custom: {}
+created: '2025-01-02T09:19:13.974972+00:00'
+modified: '2025-01-02T09:19:13.974972+00:00'

@@ -1,0 +1,18 @@
+:root {
+	--border-primary-radius: 25px;
+	--border-primary-width: 1px;
+	--border-primary-color: #E5E7EB;
+	--border-primary-style: solid;
+	--border-secondary-radius: 10px;
+	--border-secondary-width: 1px;
+	--border-secondary-color: #DF0000;
+	--border-secondary-style: solid;
+	--border-footer-radius: 0px;
+	--border-footer-width: 1px 0px 0px 0px;
+	--border-footer-color: #99C6FF;
+	--border-footer-style: solid;
+	--border-image-radius-small-radius: 12px;
+	--border-image-radius-small-width: 0px;
+	--border-image-radius-small-color: #000000;
+	--border-image-radius-small-style: solid;
+	}

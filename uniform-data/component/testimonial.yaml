@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: testimonial
+name: Testimonial
+icon: boy
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: tp2-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: tp2-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/testimonial-default-variant.jpg
+useTeamPermissions: true
+slots:
+  - id: testimonialContent
+    name: Testimonial Content
+    allowedComponents:
+      - text
+      - richText
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialPrimaryImage
+    name: Testimonial Primary Image
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - image
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialSecondaryImage
+    name: Testimonial Secondary Image
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - image
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialAuthor
+    name: Testimonial Author
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: "2024-09-26T12:53:13.591804+00:00"
+updated: "2024-10-29T13:29:57.328054+00:00"
+variants:
+  - id: withLargeAvatar
+    name: With Large Avatar
+  - id: withOverlappingImage
+    name: With Overlapping Image

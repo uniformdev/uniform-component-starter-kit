@@ -1,0 +1,92 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: breadcrumbs
+name: Breadcrumbs
+icon: list-tree
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+  - id: separator
+    name: Separator
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Chevron
+          value: chevron
+        - key: Slash
+          value: slash
+      defaultValue: chevron
+  - id: links
+    name: Links
+    type: $block
+    typeConfig:
+      allowedTypes:
+        - breadcrumbLink
+  - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - alignment
+        - size
+        - color
+        - weight
+        - font
+        - transform
+        - decoration
+        - letterSpacing
+        - backgroundColor
+        - spacing
+  - id: size
+    name: Size
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: false
+  - id: color
+    name: Color
+    type: tp2-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: font
+    name: Font
+    type: tp2-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: transform
+    name: Transform
+    type: tp2-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/breadcrumbs-chevron.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: displayName
+canBeComposition: false
+created: "2024-10-02T10:39:19.576296+00:00"
+updated: "2024-10-29T13:15:24.537691+00:00"

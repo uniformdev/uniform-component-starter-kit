@@ -1,0 +1,139 @@
+composition:
+  _name: Home
+  _id: 852664d7-7d35-4eb5-97ad-e1c23ce940ca
+  _slug: /
+  type: page
+  _overrides:
+    852664d7-7d35-4eb5-97ad-e1c23ce940ca:
+      parameters:
+        pageTitle:
+          type: text
+          value: Component Starter Kit from Uniform
+        twitterCard:
+          type: select
+          value: summary_large_image
+        pageKeywords:
+          type: text
+          value: uniform, nextjs, composable, cms, commerce
+        twitterImage:
+          type: asset
+          value:
+            - _id: 9f8f80e7-4111-4e3e-b13b-55b4ce48b835
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 0ff678c5-794e-4ad2-af0b-861222dd178d
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/4L0ujrn8QOS10hZ7V213jw-meta-image.png
+                file:
+                  type: file
+                  value: 28f307bf-569a-446d-9700-39e855892108
+                size:
+                  type: number
+                  value: 171834
+                title:
+                  type: text
+                  value: meta-image.png
+                width:
+                  type: number
+                  value: 1200
+                height:
+                  type: number
+                  value: 630
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+        twitterTitle:
+          type: text
+          value: Uniform // Component Starter Kit
+        openGraphType:
+          type: select
+          value: website
+        openGraphImage:
+          type: asset
+          value:
+            - _id: 5ea92564-890d-499f-85bb-244817c46534
+              type: image
+              fields:
+                id:
+                  type: text
+                  value: 0ff678c5-794e-4ad2-af0b-861222dd178d
+                url:
+                  type: text
+                  value: >-
+                    https://img.uniform.global/p/IazAOKLVROS83ZIvuAc0ww/4L0ujrn8QOS10hZ7V213jw-meta-image.png
+                file:
+                  type: file
+                  value: 28f307bf-569a-446d-9700-39e855892108
+                size:
+                  type: number
+                  value: 171834
+                title:
+                  type: text
+                  value: meta-image.png
+                width:
+                  type: number
+                  value: 1200
+                height:
+                  type: number
+                  value: 630
+                mediaType:
+                  type: text
+                  value: image/png
+              _source: uniform-assets
+        openGraphTitle:
+          type: text
+          value: Uniform // Component Starter Kit
+        pageDescription:
+          type: text
+          value: >-
+            Essential set of components you need to start building
+            personalizable web experiences with Uniform.
+    852664d7-7d35-4eb5-97ad-e1c23ce940ca|dc2e95be-21b5-4476-a309-f8a34922f528:
+      slots:
+        $slotSectionItems:
+          - _id: eebf1227-58aa-41c5-bfc4-089d94cebdba
+            type: fixedHero
+            parameters:
+              image:
+                type: asset
+                value: []
+              titleTag:
+                type: tp2-segmented-control-parameter
+                value: h1
+              titleText:
+                type: text
+                value: Component Starter Kit
+              displayName:
+                type: text
+                value: Welcome Hero
+              descriptionText:
+                type: text
+                value: >-
+                  A rich set of components to supercharge building fast, modern,
+                  personalized experiences with Uniform DXP.
+              contentAlignment:
+                type: tp2-segmented-control-parameter
+                value: center
+              eyebrowTitleText:
+                type: text
+                value: Get your next project started on the right foot
+              primaryButtonLink:
+                type: link
+                locales:
+                  en:
+                    path: https://dev-csk-marketing-site.vercel.app/components
+                    type: url
+              primaryButtonText:
+                type: text
+                value: Component library
+  _locales:
+    - en
+  _pattern: f9c058ea-c40d-4435-ac5a-53423cf654dc
+created: '2025-01-02T09:30:49.239641+00:00'
+modified: '2025-01-02T09:34:55.205837+00:00'
+pattern: false

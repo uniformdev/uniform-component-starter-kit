@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 5dcf20aa-c3aa-4ad7-8b92-70a385b5e896
+  _name: Uniform-Icon-Library_Migrate-1.png
+  fields:
+    title:
+      type: text
+      value: migrate
+    file:
+      type: file
+      value: fb070c4d-d87a-4f4f-b3a9-afa9775eb4a7
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/5A_6iKlQQJibGiALvLMpow-Uniform-Icon-Library_Migrate-1.png
+      type: text
+    size:
+      value: 2928
+      type: number
+    width:
+      value: 114
+      type: number
+    height:
+      value: 114
+      type: number
+    custom: {}
+created: '2024-10-02T15:11:13.718019+00:00'
+modified: '2024-10-04T11:28:10.703525+00:00'

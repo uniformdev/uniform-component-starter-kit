@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: c97f5a2d-ff0b-4aa7-9b9c-e4449398f790
+  _name: Group-673.png
+  fields:
+    title:
+      type: text
+      value: developers
+    file:
+      type: file
+      value: 4e6ca6f6-9a22-407b-aa65-215ed22d2bea
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/p1YFPp51SU2_Wy4G7-pLQQ/BDdOB0nNQX2kS00O-A0z9Q-Group-673.png
+      type: text
+    size:
+      value: 175484
+      type: number
+    width:
+      value: 1016
+      type: number
+    height:
+      value: 988
+      type: number
+    custom: {}
+created: '2024-10-02T13:15:54.402568+00:00'
+modified: '2024-10-04T11:27:23.452098+00:00'
