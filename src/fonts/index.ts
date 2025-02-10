@@ -1,92 +1,21 @@
-import { NextFont } from 'next/dist/compiled/@next/font';
-import {
-  Inter,
-  Roboto_Mono,
-  Rubik,
-  DM_Mono,
-  Farro,
-  Damion,
-  Advent_Pro,
-  Asap,
-  Antonio,
-  Maven_Pro,
-  Lexend_Giga,
-  Metrophobic,
-} from 'next/font/google';
+import { DM_Sans, Space_Mono } from 'next/font/google';
 
-const inter = Inter({
+export const dm_sans = DM_Sans({
   subsets: ['latin'],
+  variable: '--dm-sans',
   display: 'swap',
+  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+  style: ['italic', 'normal'],
+  preload: true,
 });
 
-const lexend_giga = Lexend_Giga({ subsets: ['latin'] });
-
-export const metrophobic = Metrophobic({ weight: ['400'], subsets: ['latin'], display: 'swap' });
-
-const rubik = Rubik({
+export const space_mono = Space_Mono({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
+  variable: '--space-mono',
   display: 'swap',
+  weight: ['400', '700'],
+  style: ['italic', 'normal'],
+  preload: true,
 });
 
-const roboto_mono = Roboto_Mono({
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const dm_mono = DM_Mono({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const farro = Farro({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const damion = Damion({
-  weight: ['400'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const advent_pro = Advent_Pro({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const asap = Asap({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const antonio = Antonio({
-  weight: ['300', '400', '500'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-const maven_pro = Maven_Pro({
-  weight: ['400', '500', '600'],
-  subsets: ['latin'],
-  display: 'swap',
-});
-
-export const appFonts: Record<Types.SupportedFonts, NextFont> = {
-  inter,
-  roboto_mono,
-  rubik,
-  dm_mono,
-  farro,
-  damion,
-  advent_pro,
-  asap,
-  antonio,
-  maven_pro,
-  lexend_giga,
-  metrophobic,
-};
+export const customFontVariables = [dm_sans.variable, space_mono.variable].join(' ');

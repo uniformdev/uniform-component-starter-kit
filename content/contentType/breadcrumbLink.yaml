@@ -1,0 +1,25 @@
+id: breadcrumbLink
+name: Breadcrumb Link
+created: '2025-01-29T10:47:13.936147+00:00'
+updated: '2025-01-29T10:47:13.936147+00:00'
+slugSettings:
+  required: 'no'
+useTeamPermissions: true
+fields:
+  - id: title
+    name: Title
+    type: text
+    typeConfig:
+      required: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: false
+        email: false
+entryName: title
+description: ''
+icon: link
+type: block
+permissions: []

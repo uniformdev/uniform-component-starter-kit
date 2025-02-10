@@ -4,6 +4,11 @@ id: video
 name: Video
 icon: camera
 parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
   - id: url
     name: Video Url
     type: link
@@ -21,8 +26,7 @@ parameters:
     typeConfig:
       max: 1
       min: 0
-      required: false
-  - id: group_displaySettings
+  - id: e83bb21e-978b-4d8a-b20a-d19a7f0571ec
     name: Playback settings
     type: group
     typeConfig:
@@ -36,7 +40,6 @@ parameters:
   - id: autoPlay
     name: Auto Play
     type: checkbox
-    helpText: It works only with Lazy Load param  is false and Muted param is true
     typeConfig: null
   - id: lazyLoad
     name: Lazy Load
@@ -62,11 +65,13 @@ parameters:
     type: checkbox
     helpText: Mutes the player
     typeConfig: null
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Video_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/video.jpg
 useTeamPermissions: true
 slots: []
+titleParameter: displayName
+thumbnailParameter: placeholderImage
 canBeComposition: false
-created: '2023-08-28T12:30:20.573353+00:00'
-updated: '2024-08-16T11:17:12.351634+00:00'
+created: '2025-01-29T10:47:04.294063+00:00'
+updated: '2025-02-11T12:48:35.698038+00:00'

@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 98a27fc8-3e2b-4574-8588-e15dd0be88ae
+  _name: Uniform-Icon-Library_Integrate-1.png
+  fields:
+    title:
+      type: text
+      value: integrate
+    file:
+      type: file
+      value: 3bb8e4a6-1a1d-457a-9bc6-d79a007e8d26
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/nmXJp6gPRVKoF-PJsIYm3w-Uniform-Icon-Library_Integrate-1.png
+      type: text
+    size:
+      value: 4724
+      type: number
+    width:
+      value: 114
+      type: number
+    height:
+      value: 114
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:53.404546+00:00'
+modified: '2025-01-29T10:46:53.404546+00:00'

@@ -2,57 +2,49 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: divider
 name: Divider
-icon: math-divide
+icon: merge-horizontal
 parameters:
-  - id: colorStyle
-    name: Color Style
-    type: tp-color-style-parameter
+  - id: color
+    name: Color
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: thickness
     name: Thickness
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: steps
-      unit: px
-      options: []
-      maxValue: 10
+      units: px
+      maxValue: 25
       minValue: 1
+      defaultValue: 1px
   - id: width
     name: Width
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
-      type: custom
-      options:
-        - label: Full
-          value: 100%
-        - label: 90%
-          value: 90%
-        - label: 80%
-          value: 80%
-        - label: 70%
-          value: 70%
-        - label: 60%
-          value: 60%
-        - label: 50%
-          value: 50%
-        - label: 40%
-          value: 40%
-        - label: 30%
-          value: 30%
-        - label: 20%
-          value: 20%
-        - label: 10%
-          value: 10%
+      step: 10
+      type: steps
+      units: '%'
+      maxValue: 100
+      minValue: 10
+      defaultValue: 100%
   - id: alignment
     name: Alignment
-    type: tp-horizontal-align-parameter
-    typeConfig: null
-categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: start
+        - key: Center
+          value: center
+        - key: Right
+          value: end
+      defaultValue: center
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Divider_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/divider.jpg
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-08-28T12:30:17.952986+00:00'
-updated: '2024-08-16T11:17:10.316632+00:00'
+created: '2025-01-29T10:47:01.298762+00:00'
+updated: '2025-01-29T10:47:01.298762+00:00'

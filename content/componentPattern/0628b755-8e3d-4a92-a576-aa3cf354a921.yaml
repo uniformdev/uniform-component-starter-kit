@@ -1,0 +1,108 @@
+composition:
+  _name: Stat Item With Background
+  _id: 0628b755-8e3d-4a92-a576-aa3cf354a921
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value: {}
+    border:
+      type: dex-token-selector-parameter
+      value: ''
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-small
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: col
+        tablet: col
+        desktop: col
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: center
+    displayName:
+      type: text
+      value: 44 million transactions every 24 hours
+    fluidContent:
+      type: checkbox
+      value: true
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value: {}
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-5
+  slots:
+    flexItem:
+      - _id: 29b74799-cf5d-4d42-9f9a-4a4b240f4388
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 5xl
+              tablet: 5xl
+              desktop: 2xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: a3e5599c-88d4-4ff2-a81a-cdee12bfa8ff
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: base
+          color:
+            type: dex-color-palette-parameter
+            value: text-secondary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      border: 'no'
+      spacing: 'no'
+      alignItems: 'yes'
+      displayName: 'yes'
+      backgroundColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:06.445784+00:00'
+modified: '2025-01-29T10:47:06.445784+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/stat-item-with-background.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

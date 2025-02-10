@@ -2,65 +2,64 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: image
 name: Image
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692281187/csk-icons/component-icons-v2/CSKicon_image_wxugja_zhatuf.svg
+icon: image
 parameters:
-  - id: src
-    name: Image URL
+  - id: image
+    name: Image
     type: asset
     typeConfig:
       max: 1
-      min: 0
-  - id: alt
-    name: Alt Text
-    type: text
-    helpText: alt text for image
-    typeConfig: null
-    localizable: true
-  - id: group_dimensions
+      min: 1
+  - id: cca23341-d3d6-448d-9c5d-16b2324881bc
     name: Dimensions
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
-        - fill
-        - height
-        - width
         - objectFit
-  - id: fill
-    name: Fill
-    type: checkbox
-    helpText: >-
-      A boolean that causes the image to fill the parent element instead of
-      setting width and height.
+        - width
+        - height
+  - id: objectFit
+    name: Object Fit
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Fill
+          value: fill
+        - key: Contain
+          value: contain
+        - key: Cover
+          value: cover
+        - key: None
+          value: none
+        - key: Scale Down
+          value: scale-down
+      defaultValue: cover
+  - id: width
+    name: Width
+    type: number
     typeConfig: null
   - id: height
     name: Height
     type: number
-    helpText: Set this only when the 'fill' property is unchecked.
+    typeConfig: null
+  - id: 6a821149-f836-49f2-806c-db36ecc79dc8
+    name: Loading Settings
+    type: group
     typeConfig:
-      min: '1'
-  - id: width
-    name: Width
-    type: number
-    helpText: Set this only when the 'fill' property is unchecked
-    typeConfig:
-      min: '1'
-      required: false
-  - id: objectFit
-    name: Object Fit
-    type: select
-    typeConfig:
-      options:
-        - text: Contain
-          value: contain
-        - text: Cover
-          value: cover
-        - text: Fill
-          value: fill
-        - text: None
-          value: none
-  - id: group_styling
+      collapsed: true
+      childrenParams:
+        - unoptimized
+        - priority
+  - id: unoptimized
+    name: Unoptimized
+    type: checkbox
+    typeConfig: null
+  - id: priority
+    name: Priority
+    type: checkbox
+    typeConfig: null
+  - id: b15f5d41-2729-4c94-9cf3-3930ad7d1122
     name: Presentation
     type: group
     typeConfig:
@@ -68,86 +67,54 @@ parameters:
       childrenParams:
         - overlayColor
         - overlayOpacity
-        - borderWidth
-        - borderRadius
-        - borderColor
+        - border
   - id: overlayColor
     name: Overlay Color
-    type: tp-color-style-parameter
+    type: dex-color-palette-parameter
     typeConfig: null
   - id: overlayOpacity
     name: Overlay Opacity
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
-      step: 10
-      type: steps
-      unit: px
-      units: '%'
-      options: []
-      maxValue: 100
-      minValue: 0
-  - id: borderWidth
-    name: Border Width
-    type: tp-slider-parameter
-    typeConfig:
-      step: 1
-      type: steps
-      unit: px
-      options: []
-      maxValue: 10
-      minValue: 0
-  - id: borderRadius
-    name: Border Radius
-    type: tp-slider-parameter
-    typeConfig:
-      step: 1
       type: custom
-      unit: px
       options:
-        - label: None
-          value: none
-        - label: Small
-          value: small
-        - label: Medium
-          value: medium
-        - label: Large
-          value: large
-        - label: Full
-          value: full
-      maxValue: 10
-      minValue: 0
-  - id: borderColor
-    name: Border Color
-    type: tp-color-style-parameter
-    typeConfig: null
-  - id: group_advanced
-    name: Rendering & loading
-    type: group
+        - key: 0%
+          value: '0'
+        - key: 10%
+          value: '0.1'
+        - key: 20%
+          value: '0.2'
+        - key: 30%
+          value: '0.3'
+        - key: 40%
+          value: '0.4'
+        - key: 50%
+          value: '0.5'
+        - key: 60%
+          value: '0.6'
+        - key: 70%
+          value: '0.7'
+        - key: 80%
+          value: '0.8'
+        - key: 90%
+          value: '0.9'
+        - key: 100%
+          value: '1'
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
     typeConfig:
-      collapsed: true
-      childrenParams:
-        - quality
-        - priority
-  - id: quality
-    name: Quality
-    type: number
-    helpText: >-
-      The quality of the optimized image, where 100 is the best quality and
-      therefore largest file size. Defaults to 75.
-    typeConfig:
-      max: '100'
-      min: '10'
-  - id: priority
-    name: Priority
-    type: checkbox
-    helpText: When checked, the image will be considered high priority and preload.
-    typeConfig: null
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+      allowTokens:
+        - border-image-radius-small
+        - border-image-radius-medium
+      selectedTokenType: border
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Image_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/image.jpg
 useTeamPermissions: true
 slots: []
-titleParameter: alt
+titleParameter: image
+thumbnailParameter: image
 canBeComposition: false
-created: '2023-08-28T12:30:18.596257+00:00'
-updated: '2024-08-16T11:17:12.094938+00:00'
+created: '2025-01-29T10:47:03.370279+00:00'
+updated: '2025-01-29T10:47:03.370279+00:00'

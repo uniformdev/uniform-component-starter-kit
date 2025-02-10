@@ -1,0 +1,35 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: tableCustomCell
+name: Table Custom Cell
+icon: dice-1
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: alignment
+    name: Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+useTeamPermissions: true
+slots:
+  - id: tableCustomCellContent
+    name: Table Custom Cell Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: '2025-01-29T10:47:03.563474+00:00'
+updated: '2025-02-11T12:48:35.130953+00:00'

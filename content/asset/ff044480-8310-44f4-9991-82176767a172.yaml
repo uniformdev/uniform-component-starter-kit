@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: ff044480-8310-44f4-9991-82176767a172
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: featured-bg.png
+    file:
+      type: file
+      value: 014eef90-3293-4758-9382-4a9928827675
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/fUU0Ip-VRpOGWHiS3Xg84A-featured-bg.png
+      type: text
+    size:
+      value: 63589
+      type: number
+    width:
+      value: 806
+      type: number
+    height:
+      value: 432
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:52.647031+00:00'
+modified: '2025-01-29T10:46:52.647031+00:00'

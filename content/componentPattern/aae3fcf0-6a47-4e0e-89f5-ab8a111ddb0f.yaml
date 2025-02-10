@@ -1,0 +1,124 @@
+composition:
+  _name: Card Example
+  _id: aae3fcf0-6a47-4e0e-89f5-ab8a111ddb0f
+  type: card
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: ''
+        marginRight: ''
+        paddingLeft: ''
+        marginBottom: ''
+        paddingRight: ''
+        paddingBottom: ''
+    displayName:
+      type: text
+      value: Card Example
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    cardMedia:
+      - _id: fbb7fcd0-5300-4ab2-90e4-492181d65867
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: 7aeee203-1857-4dd2-b88d-9dea77906eb2
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 26fde52f-ea1b-4625-bbed-f5e692f1dc9d
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/ZowW4KFkQs6c205dq-2rFg-rectangle.jpg
+                    type: text
+                  file:
+                    type: file
+                    value: 29c50181-91f5-43df-9160-4ac208003bfe
+                  size:
+                    value: 148846
+                    type: number
+                  title:
+                    type: text
+                    value: rectangle.jpg
+                  width:
+                    value: 1600
+                    type: number
+                  height:
+                    value: 689
+                    type: number
+                  mediaType:
+                    value: image/jpeg
+                    type: text
+                _source: uniform-assets
+          border:
+            type: dex-token-selector-parameter
+            value: border-image-radius-small
+          height:
+            type: number
+            value: '220'
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+          overlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-5
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0.6'
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    cardContent:
+      - _id: 06f3f1a7-27c7-4928-beee-233d720b84c0
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 2xl
+              tablet: 2xl
+              desktop: 2xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          parameters:
+            tag: 'yes'
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: e0b7bb8e-b912-4c20-97eb-7831d87eb739
+        type: button
+        _pattern: 31191bc7-7e6e-4748-89c2-8e73db05237d
+  _overrides:
+    e0b7bb8e-b912-4c20-97eb-7831d87eb739:
+      parameters:
+        text:
+          type: text
+          value: null
+  _overridability:
+    variants: false
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:08.507167+00:00'
+modified: '2025-01-29T10:47:08.507167+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/examples-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

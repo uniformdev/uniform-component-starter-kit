@@ -4,78 +4,90 @@ id: testimonial
 name: Testimonial
 icon: boy
 parameters:
-  - id: logo
-    name: Logo
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-  - id: description
-    name: Description
-    type: text
-    typeConfig:
-      required: false
-      multiline: true
-      linesCount: '5'
-    localizable: true
-  - id: personName
-    name: Person Name
+  - id: displayName
+    name: Display Name
     type: text
     typeConfig: null
     localizable: true
-  - id: personPosition
-    name: Person Position
-    type: text
-    typeConfig: null
-    localizable: true
-  - id: picture
-    name: Picture
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-  - id: group_reviewDescription
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
-        - starsColor
-        - showReviewLabel
-        - lineCountRestriction
-  - id: lineCountRestriction
-    name: Line Count Restriction
-    type: tp-slider-parameter
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: none
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-      maxValue: 10
-      minValue: 0
-categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Testimonial_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/testimonial-default-variant.jpg
 useTeamPermissions: true
-slots: []
-titleParameter: personName
+slots:
+  - id: testimonialContent
+    name: Testimonial Content
+    allowedComponents:
+      - text
+      - richText
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialPrimaryImage
+    name: Testimonial Primary Image
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - image
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialSecondaryImage
+    name: Testimonial Secondary Image
+    maxComponents: 1
+    minComponents: 0
+    allowedComponents:
+      - image
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: testimonialAuthor
+    name: Testimonial Author
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:19.555695+00:00'
-updated: '2024-08-16T11:17:12.175264+00:00'
+created: '2025-01-29T10:47:04.285267+00:00'
+updated: '2025-02-11T12:48:35.691102+00:00'
 variants:
-  - id: cardWrapped
-    name: Card Wrapped
+  - id: withLargeAvatar
+    name: With Large Avatar
+  - id: withOverlappingImage
+    name: With Overlapping Image

@@ -4,196 +4,117 @@ id: grid
 name: Grid
 icon: view-grid
 parameters:
-  - id: title
-    name: Title
+  - id: displayName
+    name: Display Name
     type: text
-    helpText: Used just to display Title Parameter
     typeConfig: null
     localizable: true
   - id: columnsCount
     name: Columns Count
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
-      type: custom
-      unit: px
-      options:
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-        - label: '7'
-          value: '7'
-        - label: '8'
-          value: '8'
-        - label: '9'
-          value: '9'
-        - label: '10'
-          value: '10'
-        - label: '11'
-          value: '11'
-        - label: '12'
-          value: '12'
-      maxValue: 10
-      minValue: 0
+      type: steps
+      units: ''
+      options: []
+      maxValue: 12
+      minValue: 1
+      defaultValue:
+        mobile: '1'
+        tablet: '1'
+        desktop: '1'
+      withViewPort: true
   - id: gapX
     name: Gap X
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
       unit: px
       options:
-        - label: None
-          value: none
-        - label: Small
-          value: small
-        - label: Medium
-          value: medium
-        - label: Large
-          value: large
+        - key: XSmall
+          value: '2'
+        - key: Small
+          value: '4'
+        - key: Medium
+          value: '8'
+        - key: Large
+          value: '16'
+        - key: XLarge
+          value: '32'
       maxValue: 10
       minValue: 0
+      defaultValue: {}
+      withViewPort: true
   - id: gapY
     name: Gap Y
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
       unit: px
       options:
-        - label: None
-          value: none
-        - label: Small
-          value: small
-        - label: Medium
-          value: medium
-        - label: Large
-          value: large
+        - key: XSmall
+          value: '2'
+        - key: Small
+          value: '4'
+        - key: Medium
+          value: '8'
+        - key: Large
+          value: '16'
+        - key: Xlarge
+          value: '32'
       maxValue: 10
       minValue: 0
-  - id: group_presentationSettings
-    name: Presentation Settings
+      defaultValue: {}
+      withViewPort: true
+  - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
+    name: More Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
         - fullHeight
-        - textColorVariant
-        - containerVariant
-        - backgroundType
-        - paddingTop
-        - paddingBottom
-        - marginBottom
-        - marginTop
-  - id: containerVariant
-    name: Container Variant
-    type: select
-    typeConfig:
-      options:
-        - text: Background In Container
-          value: backgroundInContainer
-        - text: Fluid Content
-          value: fluidContent
-  - id: backgroundType
-    name: Background Type
-    type: tp-background-type-parameter
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
     typeConfig: null
-  - id: paddingTop
-    name: Padding Top
-    type: select
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
     typeConfig:
-      options:
-        - text: Small
-          value: Small
-        - text: Medium
-          value: Medium
-        - text: Large
-          value: Large
-        - text: None
-          value: None
-  - id: paddingBottom
-    name: Padding Bottom
-    type: select
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
     typeConfig:
-      options:
-        - text: Small
-          value: Small
-        - text: Medium
-          value: Medium
-        - text: Large
-          value: Large
-        - text: None
-          value: None
-  - id: marginBottom
-    name: Margin Bottom
-    type: select
-    typeConfig:
-      options:
-        - text: Small
-          value: Small
-        - text: Medium
-          value: Medium
-        - text: Large
-          value: Large
-        - text: None
-          value: None
-  - id: marginTop
-    name: Margin Top
-    type: select
-    typeConfig:
-      options:
-        - text: Small
-          value: Small
-        - text: Medium
-          value: Medium
-        - text: Large
-          value: Large
-        - text: None
-          value: None
-categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Grid_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/grid.jpg
 useTeamPermissions: true
 slots:
-  - id: grid-inner
+  - id: gridInner
     name: Grid Inner
-    allowedComponents:
-      - card
-      - callToAction
-      - carousel
-      - content
-      - divider
-      - featuredCallout
-      - gridItem
-      - hero
-      - image
-      - richText
-      - video
-      - spacer
-      - accordion
-      - grid
-      - $loop
-      - $personalization
-      - $test
-      - price
-      - addToCart
-      - review
-      - feature
-      - box
-      - button
-    allowAllComponents: false
+    allowedComponents: []
+    allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-titleParameter: title
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:17.829058+00:00'
-updated: '2024-08-16T11:17:11.861941+00:00'
+created: '2025-01-29T10:47:01.756246+00:00'
+updated: '2025-02-11T12:48:34.055353+00:00'

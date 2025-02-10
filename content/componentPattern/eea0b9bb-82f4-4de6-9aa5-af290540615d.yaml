@@ -1,0 +1,273 @@
+composition:
+  _name: Hero Section (atomic)
+  _id: eea0b9bb-82f4-4de6-9aa5-af290540615d
+  type: section
+  parameters:
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-large
+        paddingLeft: container-small
+        paddingRight: container-small
+        paddingBottom: container-large
+    displayName:
+      type: text
+      value: Hero Section
+    fluidContent:
+      type: checkbox
+      value: true
+    contentAlignment:
+      type: dex-segmented-control-parameter
+      value: center
+  slots:
+    sectionCTA:
+      - _id: 804f6eac-3561-4f4d-87fc-80ce979d7c2b
+        type: $slotSection
+        parameters:
+          max:
+            type: text
+            value: 2
+          name:
+            type: text
+            value: CTAs
+          specific:
+            type: array
+            value:
+              - button
+              - $p:646faee6-b476-43c6-a1a8-eebe85699889
+              - $p:53b59aed-e378-4fcb-9135-20247d92074e
+          groupType:
+            type: text
+            value: specific
+        _overridability:
+          hideLockedParameters: true
+    sectionMedia:
+      - _id: 412246da-ecc8-4363-b9cf-ae51830dd358
+        type: image
+        parameters:
+          $viz:
+            type: $viz
+            value:
+              criteria:
+                clauses:
+                  - op: is
+                    rule: $qk
+                    value: dark
+                    source: theme
+          image:
+            type: asset
+            value: []
+          priority:
+            type: checkbox
+            value: true
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+          unoptimized:
+            type: checkbox
+            value: true
+          overlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-1
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0.1'
+        _overridability:
+          parameters:
+            image: 'yes'
+            width: 'yes'
+            height: 'yes'
+            priority: 'yes'
+            objectFit: 'yes'
+            unoptimized: 'yes'
+            overlayColor: 'yes'
+            overlayOpacity: 'yes'
+          hideLockedParameters: true
+      - _id: 056a6d83-e242-4ddc-b318-f1f06d5a5fd1
+        type: image
+        parameters:
+          $viz:
+            type: $viz
+            value:
+              criteria:
+                clauses:
+                  - op: '!is'
+                    rule: $qk
+                    value: dark
+                    source: theme
+          image:
+            type: asset
+            value:
+              - _id: e73613cf-e2f1-47ef-a5aa-a015bee46436
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: 246a9113-763f-4330-b55e-dfa654743828
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/69krTvsVTEezu6ZcotziZg-Rectangle-1-(2).svg
+                    type: text
+                  file:
+                    type: file
+                    value: 5285bd5f-77fe-4950-b389-4a7a4da7f4a4
+                  size:
+                    value: 423
+                    type: number
+                  title:
+                    type: text
+                    value: hero-bg-gradient-light.svg
+                  width:
+                    value: 1016
+                    type: number
+                  height:
+                    value: 330
+                    type: number
+                  mediaType:
+                    value: image/svg+xml
+                    type: text
+                _source: uniform-assets
+          priority:
+            type: checkbox
+            value: true
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+          unoptimized:
+            type: checkbox
+            value: true
+          overlayColor:
+            type: dex-color-palette-parameter
+            value: general-color-1
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: '0.1'
+        _overridability:
+          parameters:
+            image: 'yes'
+            width: 'yes'
+            height: 'yes'
+            priority: 'yes'
+            objectFit: 'yes'
+            unoptimized: 'yes'
+            overlayColor: 'yes'
+            overlayOpacity: 'yes'
+          hideLockedParameters: true
+    sectionContent:
+      - _id: 96c5e248-ac86-47b5-a00e-8679f1842f26
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: xl
+              tablet: xl
+              desktop: xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+          transform:
+            type: dex-segmented-control-parameter
+            value: uppercase
+        _overridability:
+          parameters:
+            tag: 'yes'
+            size: 'no'
+            text: 'yes'
+            color: 'no'
+          hideLockedParameters: true
+      - _id: 90aa2fcd-bc65-4d44-828b-7e888218a025
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 5xl
+              tablet: 5xl
+              desktop: 7xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            tag: 'yes'
+            $viz: 'yes'
+            font: 'no'
+            size: 'no'
+            text: 'yes'
+            color: 'no'
+          hideLockedParameters: true
+      - _id: 59786267-3106-4c8c-8670-9c56f9b07199
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          font:
+            type: dex-token-selector-parameter
+            value: dm-sans
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: xl
+              tablet: xl
+              desktop: xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-primary
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          alignment:
+            type: dex-segmented-control-parameter
+            value: center
+        _overridability:
+          parameters:
+            tag: 'yes'
+            $viz: 'no'
+            font: 'no'
+            size: 'no'
+            text: 'yes'
+            color: 'no'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      $viz: 'yes'
+      title: 'yes'
+      spacing: 'yes'
+      fullHeight: 'yes'
+      fluidContent: 'yes'
+      backgroundColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:08.446904+00:00'
+modified: '2025-01-29T10:47:08.446904+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-hero.jpg
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af

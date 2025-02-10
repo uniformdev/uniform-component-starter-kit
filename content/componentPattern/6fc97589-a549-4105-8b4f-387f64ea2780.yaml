@@ -1,0 +1,98 @@
+composition:
+  _name: Title+Text Container
+  _id: 6fc97589-a549-4105-8b4f-387f64ea2780
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '4'
+        tablet: '4'
+        desktop: '4'
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: col
+        tablet: col
+        desktop: col
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: ''
+    displayName:
+      type: text
+      value: Title
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value:
+        desktop: center
+  slots:
+    flexItem:
+      - _id: e0c61059-c78d-4ea6-8beb-7f3eed84f227
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+              tablet: 3xl
+              desktop: 3xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-tertiary
+          weight:
+            type: dex-segmented-control-parameter
+            value: bold
+        _overridability:
+          parameters:
+            tag: 'yes'
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: 9d02d05f-d50a-42bc-90bc-b7d411362280
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: p
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 3xl
+              tablet: 3xl
+              desktop: base
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+        _overridability:
+          parameters:
+            size: 'yes'
+            text: 'yes'
+            color: 'yes'
+          hideLockedParameters: true
+      - _id: 7a757740-ee67-40ff-9128-13284d173be2
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Container Content
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      spacing: 'yes'
+      displayName: 'yes'
+      fluidContent: 'yes'
+      backgroundColor: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:07.436254+00:00'
+modified: '2025-01-29T10:47:07.436254+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/titled-container.jpg
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01

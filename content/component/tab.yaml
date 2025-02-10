@@ -4,27 +4,24 @@ id: tab
 name: Tab
 icon: tab
 parameters:
-  - id: title
-    name: Title
+  - id: text
+    name: Text
     type: text
     typeConfig: null
     localizable: true
-  - id: isActive
-    name: Is Active
-    type: checkbox
-    typeConfig: null
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Tab_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/tab.jpg
 useTeamPermissions: true
 slots:
-  - id: content
-    name: Content
+  - id: tabContent
+    name: Tab Content
+    minComponents: 1
     allowedComponents: []
     allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-titleParameter: title
+titleParameter: text
 canBeComposition: false
-created: '2023-10-25T10:12:26.719454+00:00'
-updated: '2024-08-16T11:17:11.246678+00:00'
+created: '2025-01-29T10:47:04.474476+00:00'
+updated: '2025-01-29T10:47:04.474476+00:00'

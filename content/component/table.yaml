@@ -4,27 +4,63 @@ id: table
 name: Table
 icon: view-grid
 parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
   - id: size
     name: Size
-    type: tp-slider-parameter
+    type: dex-token-selector-parameter
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: Tiny
-          value: tiny
-        - label: Small
-          value: small
-        - label: Normal
-          value: normal
-        - label: Large
-          value: large
-      maxValue: 10
-      minValue: 0
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+      allowTokens: []
+      selectedGroup: table
+      allowDimensions: []
+      selectedTokenType: dimension
+  - id: textColor
+    name: Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/table-default-variant.jpg
 useTeamPermissions: true
 slots:
   - id: tableHead
@@ -38,13 +74,10 @@ slots:
     name: Table Body
     allowedComponents:
       - tableRow
-      - $loop
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-10-26T13:12:32.441575+00:00'
-updated: '2024-08-16T11:17:12.457967+00:00'
-variants:
-  - id: zebra
-    name: Zebra
+created: '2025-01-29T10:47:03.283758+00:00'
+updated: '2025-02-11T12:48:35.011113+00:00'

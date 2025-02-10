@@ -1,0 +1,175 @@
+composition:
+  _name: Feature Item
+  _id: 0315f542-1052-4ba4-829d-f0949328f8a2
+  type: flex
+  parameters:
+    gap:
+      type: dex-slider-control-parameter
+      value:
+        mobile: '2'
+        tablet: '8'
+        desktop: '8'
+    spacing:
+      type: dex-space-control-parameter
+      value: {}
+    direction:
+      type: dex-segmented-control-parameter
+      value:
+        mobile: row
+        tablet: row
+        desktop: row
+    alignItems:
+      type: dex-segmented-control-parameter
+      value: {}
+    displayName:
+      type: text
+      value: Feature item
+    fluidContent:
+      type: checkbox
+      value: true
+    justifyContent:
+      type: dex-segmented-control-parameter
+      value: {}
+  slots:
+    flexItem:
+      - _id: fe27259d-349e-42e6-aa3e-ef73bea56eb5
+        type: flexItem
+        slots:
+          inner:
+            - _id: c7e9f81d-39e2-455e-8a0a-3aeb6e3cb8ec
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: d6dceca8-0c80-49d0-b2f9-fe540c6a8d77
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: f9da45f7-168b-4d00-b43b-f2cc28365985
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/YfVl6ySsQH6TJbZlSS61ug-Uniform-Icon-Library_Composability-1.png
+                          type: text
+                        file:
+                          type: file
+                          value: a76b1ea4-ff39-4652-8cac-8ef72ef8454e
+                        size:
+                          value: 6420
+                          type: number
+                        title:
+                          type: text
+                          value: composability
+                        width:
+                          value: 114
+                          type: number
+                        height:
+                          value: 114
+                          type: number
+                        mediaType:
+                          value: image/png
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '60'
+                height:
+                  type: number
+                  value: '60'
+              _overridability:
+                parameters:
+                  image: 'yes'
+                hideLockedParameters: true
+        parameters:
+          shrink:
+            type: dex-segmented-control-parameter
+            value: '0'
+          alignSelf:
+            type: dex-segmented-control-parameter
+            value:
+              desktop: ''
+          displayName:
+            type: text
+            value: Image
+      - _id: 40d28ca1-3727-486a-b5bb-d7f8084581a1
+        type: flexItem
+        slots:
+          inner:
+            - _id: d79d2138-ec8e-4942-aba0-07497a65c056
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: 2xl
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: bold
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  font: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                hideLockedParameters: true
+            - _id: 2f107b85-f620-45e2-ab3a-ec5352767960
+              type: spacer
+              parameters:
+                size:
+                  type: dex-token-selector-parameter
+                  value: spacer-extra-small
+              _overridability:
+                variants: false
+                parameters:
+                  $viz: 'no'
+                  size: 'no'
+            - _id: af1e197e-c242-4a84-835f-0471d89d775f
+              type: text
+              parameters:
+                tag:
+                  type: dex-segmented-control-parameter
+                  value: p
+                size:
+                  type: dex-segmented-control-parameter
+                  value:
+                    desktop: lg
+                color:
+                  type: dex-color-palette-parameter
+                  value: text-primary
+                weight:
+                  type: dex-segmented-control-parameter
+                  value: normal
+              _overridability:
+                parameters:
+                  tag: 'yes'
+                  font: 'yes'
+                  text: 'yes'
+                  color: 'yes'
+                hideLockedParameters: true
+        parameters:
+          alignSelf:
+            type: dex-segmented-control-parameter
+            value: {}
+          displayName:
+            type: text
+            value: Right Content
+  _overridability:
+    parameters:
+      title: 'yes'
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:07.63502+00:00'
+modified: '2025-01-29T10:47:07.63502+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/feature-item.jpg
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

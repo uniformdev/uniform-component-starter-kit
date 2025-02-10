@@ -1,0 +1,63 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: badge
+name: Badge
+icon: loadbar
+parameters:
+  - id: text
+    name: Text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: size
+    name: Size
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedGroup: badge
+      allowDimensions: []
+      selectedTokenType: dimension
+  - id: pill
+    name: Pill
+    type: checkbox
+    helpText: >-
+      When checked, the badge will have fully rounded corners, giving it a
+      pill-like appearance
+    typeConfig: null
+  - id: 0063f736-ade1-4cc8-95e6-8616cafca3df
+    name: Colors
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - textColor
+        - borderColor
+        - dotColor
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+  - id: textColor
+    name: Text Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+  - id: borderColor
+    name: Border Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: dotColor
+    name: Dot Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/badge-large.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: text
+canBeComposition: false
+created: '2025-01-29T10:47:01.265179+00:00'
+updated: '2025-01-29T10:47:01.265179+00:00'

@@ -1,0 +1,95 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: section
+name: Section
+icon: image-text
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: contentAlignment
+    name: Content Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+      defaultValue: center
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/section-columns-reverse-variant-with-image.jpg
+useTeamPermissions: true
+slots:
+  - id: sectionMedia
+    name: Section Media
+    allowedComponents:
+      - image
+      - video
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: sectionContent
+    name: Section Content
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: sectionCTA
+    name: Section CTA
+    allowedComponents:
+      - $p:53b59aed-e378-4fcb-9135-20247d92074e
+      - $p:646faee6-b476-43c6-a1a8-eebe85699889
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: displayName
+canBeComposition: false
+created: '2025-01-29T10:47:03.282855+00:00'
+updated: '2025-02-11T12:48:35.244642+00:00'
+variants:
+  - id: columns
+    name: Columns
+  - id: columnsReverse
+    name: Columns Reverse

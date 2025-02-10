@@ -1,0 +1,18 @@
+:root {
+	--container-small: 24px;
+	--container-medium: 48px;
+	--container-large: 96px;
+	--container-xlarge: 120px;
+	--table-small: 4px 8px;
+	--table-medium: 12px 16px;
+	--table-large: 16px 24px;
+	--badge-small: 2px 6px;
+	--badge-large: 4px 8px;
+	--button-small: 8px 24px;
+	--button-medium: 12px 32px;
+	--button-large: 18px 40px;
+	--spacer-extra-small: 10px;
+	--spacer-small: 20px;
+	--spacer-medium: 40px;
+	--spacer-large: 80px;
+	}

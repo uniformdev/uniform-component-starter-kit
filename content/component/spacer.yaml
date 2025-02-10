@@ -2,26 +2,24 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: spacer
 name: Spacer
-icon: merge-horizontal
+icon: arrows-expand-right-alt
 parameters:
-  - id: thickness
-    name: Thickness
-    type: tp-slider-parameter
+  - id: size
+    name: Size
+    type: dex-token-selector-parameter
     typeConfig:
-      step: 10
-      type: steps
-      unit: px
-      options: []
-      maxValue: 250
-      minValue: 10
-categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+      defaultValue: spacer-small
+      selectedGroup: spacer
+      allowDimensions: []
+      selectedTokenType: dimension
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Spacer_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/spacer.jpg
 useTeamPermissions: true
 slots: []
 canBeComposition: false
-created: '2023-08-28T12:30:19.533721+00:00'
-updated: '2024-08-16T11:17:11.427099+00:00'
+created: '2025-01-29T10:47:03.280021+00:00'
+updated: '2025-01-29T10:47:03.280021+00:00'
 variants:
   - id: horizontal
     name: Horizontal

@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 246a9113-763f-4330-b55e-dfa654743828
+  _name: Rectangle-1-(2).svg
+  fields:
+    title:
+      type: text
+      value: hero-bg-gradient-light.svg
+    file:
+      type: file
+      value: f59b36c9-1607-4597-ba43-c5e4f1e6ba0c
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/69krTvsVTEezu6ZcotziZg-Rectangle-1-(2).svg
+      type: text
+    size:
+      value: 423
+      type: number
+    width:
+      value: 1016
+      type: number
+    height:
+      value: 330
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:52.453506+00:00'
+modified: '2025-01-29T10:46:52.453506+00:00'

@@ -1,84 +1,71 @@
-## Uniform Component Starter Kit
+# Uniform Component Starter Kit (CSK6) (Deprecated, please use https://github.com/uniformdev/component-starter-kit-next-approuter/tree/release/6.0.0 repository or npx @uniformdev/cli@20.4.1-alpha.5 new)
 
-The Component Starter kit gives you the key building blocks to create dynamic and compelling web experiences and demonstrate the power of digital experience composition in Uniform. Just install, customize and start creating.
+This repository is the latest version 6 of the Uniform Component Starter Kit (CSK).
+It is built using Next.js 15 App Router, TailwindCSS and TypeScript.
 
-Built with love by Uniform folks, standing on the shoulders of TailwindCSS, DaisyUI, React and Next.js.
+Check out more about CSK and what you can do with it at https://components.uniform.app
 
-<a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Funiformdev%2Funiform-component-starter-kit&env=UNIFORM_API_KEY,UNIFORM_PROJECT_ID"><img src="https://vercel.com/button" alt="Deploy with Vercel"/></a>
-
-- [Demo](https://components.uniform.app/)
-- [Storybook](https://components-storybook.uniform.app/)
-- [Complete tutorial](https://docs.uniform.app/docs/learn/tutorials/csk)
- 
-### Prerequisites
+## Prerequisites
 
 - A Uniform account with the ability to create a new empty project. If you don't have a Uniform account, you can request a trial account [here](https://uniform.dev/try).
+- Node.js LTS and `git` installed on your machine.
 
-### Setup own project and start locally
+## Getting started
 
-1. In your terminal, from the project root, run the following command and follow the instructions:
+### Step 1. Initial setup
 
-   ```bash
-   npm run cli
-   ```
+#### Option 1: via Uniform CLI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-The project is connected to your Uniform project. Changes you make an publish on Uniform will reflect in this local project.
+Run `npx @uniformdev/cli new` and pick `Next.js` -> `Component Starter Kit` from the interactive prompt. Complete the process to deploy a new instance of CSK to your 
 
-### Manual Uniform Project Setup
-
-1. Clone this repo onto your local machine
-2. Create a new project at https://uniform.app. Give it a name and select "Empty Project".
-3. Under your team's Security settings, create an API Key with full permissions to Canvas and Context.
-4. Copy your API Key, Project ID, and Quick Connect Key. You will add these to your `.env` file (see below) and to the Uniform Chrome extension respectively. It is important to note that once you close the API Key window you're unable to copy the API or Quick Connect key values again. If you do close the API Key window before copying you will need to go through the API Key creation process again.
-5. In your new project, navigate to "Settings -> Canvas Settings" and add `http://localhost:3000/api/preview?secret=hello-world` into the Preview URL and click "Save". This allows you to preview your project as you develop.
-
-6. Setup your .env file (see .env.example for reference)
+#### Option 2: manually
+1. `git clone` this repo.
+1. Create an empty Uniform project in your team.
+1. Setup your .env file using your Uniform project connection details (see .env.example for reference)
    ```bash
    UNIFORM_API_KEY=
    UNIFORM_PROJECT_ID=
    UNIFORM_PREVIEW_SECRET=hello-world
    ```
-7. `npm install`
-8. Run `npm run uniform:push` and `npm run uniform:publish` to push the content from this starter kit (components, compositions and project map) into your project.
-9. Run `npm run dev` to run in dev mode locally, or `npm run build && npm start` to run in prod mode locally.
+   > Make sure your API key has "Developer" role to be able to push content.
+1. `npm install` to install dependencies
+1. Run `npm run init` to initialize your project. This will push all content from disk (`.\content` folder) and your design settings (colors, fonts, borders, etc. for this default theme).
 
-### Manual Theme Pack integration Setup
+### Step 2. Run locally in dev mode
 
-This integration brings Canvas UI extensions for theme management and new useful visual parameters to help control the look and feel of your components.
+Use `npm run dev` to run locally.
+At this point, you should be able to browse your site on localhost:3000 and open your Uniform projects compositions for preview and visual editing.
 
-1. Open your Uniform project.
-1. Head over to Settings > Canvas and configure preview to http://your-host/api/preview?secret=hello-world
-1. Navigate to `Manage Integrations` tab and Install `Theme Pack` integration
-1. Select on of the themes or create your own and press `Save`
-1. Go to Components list, find the "Header" component - "Main Header" pattern and edit it.
-1. In order to apply theme changes, press `Publish` (even if the pattern itself is not changed).
-   > Optionally, you can change the main font that will be used along with the theme.
-   > Here you can also manage your header and footer content - logo and navigation links.
+### Step 3. Install the Design Extensions integration
 
-Important: in order to apply theme changes, you must re-publish the "Main Header" pattern after every time you change the `theme` on the integration settings page.
+This integration brings new parameter types for design and layout control via Uniform UI extensions to help control and manage the look and feel of your components.
 
-### Scaffold
+1. Open your current team page.
+   ![Team page](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/team_page.png)
+1. Navigate to the `Settings` tab, than `Custom Integrations` and add `Design Extensions` as a custom integration using this [manifest](https://github.com/uniformdev/uniform-mesh-integrations/blob/canary/integrations/design-extensions/mesh-manifest.stable.json).
+1. Open your project.
+   ![Your project](https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/doc/project_page.png)
+1. Navigate to the `Integrations` tab, find the `Design Extensions` integration and install it.
 
-For the convenient and fast generation of React components based on your canvas components, you can use the Scaffold CLI. Follow the instructions:
+## How to sync content 
 
-1. In your terminal, from the project root, run the following command:
+The following scripts are created to facilitate sync of content from / to your project and source control. The representation of your project on disk is stored int the `./contnet` folder.
 
-   ```bash
-   npm run scaffold
-   ```
+1. Run `npm run push:data` to push data from disk (see `./content`) to your project.
+1. Run `npm run pull:data` to pull data from uniform to `./content` folder.
 
-1. Select necessary component from list. All necessary files as well as registration of this component will be added automatically
-1. If the application is running in build mode, you must re-run the build command and start it again (`npm run build && npm start`). For an application running in development mode, just enjoy the new component
-1. You can also customize new components. They will be located in the common canvas folder
+## Other scripts
 
-### Additional examples
+### Design Extension sync
 
-This package contains an additional set of examples based on the Component Starter Kit components:
+TODO: need more work here
+⚠️ Important: After each adding new color or font keys you have to rebuild your application, in order to simplify this process you can use Webhook Settings tab to provide rebuild webhook.
 
-1. Coveo Search Page
-1. Algolia Search Page
+1. Provide your own color palette or set up it from the code using `npm run push:colors` command. (see `./styles/colors.css`)
+1. Provide your own dimension configuration or set up it from the code using `npm run push:dimensions` command. (see `./styles/dimensions.css`)
+1. Provide your own fonts or set up it from the code using `npm run push:fonts` command. (see `./styles/fonts.css`)
+1. Provide your own border configuration or set up it from the code using `npm run push:borders` command. (see `./styles/border.css`)
 
-## Documentation
+### Publishing manifest file via CLI
 
-For the complete walkthrough tutorial, check out [this doc](https://docs.uniform.app/docs/learn/tutorials/csk).
+1. Run `npm run publish:manifest` to publish the manifest with A/B testing and personalization configuration.

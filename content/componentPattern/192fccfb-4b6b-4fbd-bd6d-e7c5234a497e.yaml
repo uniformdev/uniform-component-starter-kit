@@ -1,0 +1,190 @@
+composition:
+  _name: Background Image Card
+  _id: 192fccfb-4b6b-4fbd-bd6d-e7c5234a497e
+  type: card
+  variant: backgroundImage
+  parameters:
+    border:
+      type: dex-token-selector-parameter
+      value: ''
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        marginTop: ''
+        marginLeft: ''
+        paddingTop: container-small
+        marginRight: ''
+        paddingLeft: container-small
+        marginBottom: ''
+        paddingRight: container-small
+        paddingBottom: container-small
+    displayName:
+      type: text
+      value: Background Image Card
+    fluidContent:
+      type: checkbox
+      value: true
+  slots:
+    cardMedia:
+      - _id: 688fb6a0-a384-4b57-a1c1-33ada8f49db3
+        type: image
+        parameters:
+          image:
+            type: asset
+            value:
+              - _id: db360a7b-b715-4417-94ba-33f3fe8d8ee4
+                type: image
+                fields:
+                  id:
+                    type: text
+                    value: ff044480-8310-44f4-9991-82176767a172
+                  url:
+                    value: >-
+                      https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/fUU0Ip-VRpOGWHiS3Xg84A-featured-bg.png
+                    type: text
+                  file:
+                    type: file
+                    value: 88f7eb94-540c-4d1d-af78-04f216513db1
+                  size:
+                    value: 63589
+                    type: number
+                  title:
+                    type: text
+                    value: featured-bg.png
+                  width:
+                    value: 806
+                    type: number
+                  height:
+                    value: 432
+                    type: number
+                  mediaType:
+                    value: image/png
+                    type: text
+                _source: uniform-assets
+          border:
+            type: dex-token-selector-parameter
+            value: border-image-radius-small
+          objectFit:
+            type: dex-segmented-control-parameter
+            value: cover
+          overlayOpacity:
+            type: dex-slider-control-parameter
+            value: ''
+        _overridability:
+          parameters:
+            image: 'yes'
+          hideLockedParameters: true
+    cardContent:
+      - _id: d2458e59-81ce-4924-be03-71fc6562d67a
+        type: badge
+        parameters:
+          pill:
+            type: checkbox
+            value: true
+          size:
+            type: dex-token-selector-parameter
+            value: badge-large
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-light
+          backgroundColor:
+            type: dex-color-palette-parameter
+            value: general-color-4
+        _overridability:
+          parameters:
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: b5946345-35c3-4c0d-a096-5504e4bde08b
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-extra-small
+        _overridability:
+          hideLockedParameters: true
+      - _id: 7523fe18-c451-49dc-b82b-f8673945d26e
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: h2
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: 2xl
+              tablet: 2xl
+              desktop: 2xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-light
+          weight:
+            type: dex-segmented-control-parameter
+            value: medium
+        _overridability:
+          parameters:
+            tag: 'yes'
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: 16bad4f4-7132-4333-b6c3-5a86450c7b8e
+        type: text
+        parameters:
+          tag:
+            type: dex-segmented-control-parameter
+            value: span
+          size:
+            type: dex-segmented-control-parameter
+            value:
+              mobile: xl
+              tablet: xl
+              desktop: xl
+          color:
+            type: dex-color-palette-parameter
+            value: text-light
+          weight:
+            type: dex-segmented-control-parameter
+            value: normal
+          decoration:
+            type: dex-segmented-control-parameter
+            value: ''
+        _overridability:
+          parameters:
+            tag: 'yes'
+            text: 'yes'
+          hideLockedParameters: true
+      - _id: 2065e596-96d5-45c6-800c-935d074ed341
+        type: spacer
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: spacer-small
+        _overridability:
+          hideLockedParameters: true
+      - _id: 6d5300cd-a1c2-4734-89f1-b5a4038d68c9
+        type: button
+        parameters:
+          size:
+            type: dex-token-selector-parameter
+            value: button-small
+          textColor:
+            type: dex-color-palette-parameter
+            value: text-light
+          buttonColor:
+            type: dex-color-palette-parameter
+            value: button-primary
+        _overridability:
+          parameters:
+            link: 'yes'
+            text: 'yes'
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      displayName: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:07.519078+00:00'
+modified: '2025-01-29T10:47:07.519078+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/featured-card.jpg
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9

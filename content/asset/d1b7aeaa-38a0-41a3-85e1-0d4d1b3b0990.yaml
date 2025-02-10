@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: d1b7aeaa-38a0-41a3-85e1-0d4d1b3b0990
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: github-dark-logo.svg
+    file:
+      type: file
+      value: f2cac386-3204-4dfc-a047-19215c961112
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/vl_e2BsDSGuYBmsDJytReg-github-dark-logo.svg
+      type: text
+    size:
+      value: 1327
+      type: number
+    width:
+      value: 35
+      type: number
+    height:
+      value: 34
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:51.970872+00:00'
+modified: '2025-01-29T10:46:51.970872+00:00'

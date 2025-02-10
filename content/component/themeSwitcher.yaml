@@ -1,0 +1,18 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: themeSwitcher
+name: Theme Switcher
+icon: swiss
+parameters:
+  - id: iconColor
+    name: Icon Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/theme-switcher.jpg
+useTeamPermissions: true
+slots: []
+canBeComposition: false
+created: '2025-01-29T10:47:04.293448+00:00'
+updated: '2025-01-29T10:47:04.293448+00:00'

@@ -2,118 +2,99 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: review
 name: Review
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692281258/csk-icons/component-icons-v2/star_o0rgk8.svg
+icon: boy
 parameters:
-  - id: title
-    name: Title
+  - id: displayName
+    name: Display Name
     type: text
     typeConfig: null
-    localizable: true
-  - id: description
-    name: Description
-    type: text
-    typeConfig:
-      required: false
-      multiline: true
-      linesCount: '5'
     localizable: true
   - id: stars
     name: Stars
-    type: tp-slider-parameter
+    type: number
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-      maxValue: 10
-      minValue: 0
-  - id: personName
-    name: Person Name
-    type: text
-    typeConfig: null
-    localizable: true
-  - id: picture
-    name: Picture
-    type: asset
+      max: '5'
+      min: '0'
+      required: true
+  - id: activeStarsColor
+    name: Active Stars Color
+    type: dex-color-palette-parameter
     typeConfig:
-      max: 1
-      min: 0
-  - id: date
-    name: Date
-    type: text
+      allowColors: []
+      selectedGroup: button
+  - id: starsColor
+    name: Stars Color
+    type: dex-color-palette-parameter
     typeConfig: null
-    localizable: true
-  - id: group_reviewDescription
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
     name: Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
-        - textColorVariant
-        - starsColor
-        - showReviewLabel
-        - lineCountRestriction
-  - id: textColorVariant
-    name: Text Color Variant
-    type: select
-    typeConfig:
-      options:
-        - text: Dark
-          value: Dark
-        - text: Light
-          value: Light
-  - id: starsColor
-    name: Stars Color
-    type: tp-color-style-parameter
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
     typeConfig: null
-  - id: showReviewLabel
-    name: Show Label
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
     type: checkbox
     typeConfig: null
-  - id: lineCountRestriction
-    name: Line Count Restriction
-    type: tp-slider-parameter
-    typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: none
-        - label: '6'
-          value: '6'
-        - label: '5'
-          value: '5'
-        - label: '4'
-          value: '4'
-        - label: '3'
-          value: '3'
-        - label: '2'
-          value: '2'
-        - label: '1'
-          value: '1'
-      maxValue: 10
-      minValue: 0
-categoryId: 2da8c924-14d5-470b-9fe4-1e56521551e5
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+  - id: showRatingLabel
+    name: Show Rating Label
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Review_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/review-default-variant.jpg
 useTeamPermissions: true
-slots: []
-titleParameter: personName
+slots:
+  - id: reviewImage
+    name: Review Image
+    allowedComponents:
+      - image
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: reviewPersonInfo
+    name: Review Person Info
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: reviewContent
+    name: Review Content
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:19.579649+00:00'
-updated: '2024-08-16T11:17:11.538626+00:00'
+created: '2025-01-29T10:47:02.552456+00:00'
+updated: '2025-02-11T12:48:34.922853+00:00'
 variants:
   - id: multiColumn
     name: Multi Column

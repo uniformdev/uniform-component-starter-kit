@@ -2,50 +2,75 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: countdown
 name: Countdown
-icon: edit-exposure
+icon: timer
 parameters:
-  - id: title
-    name: Title
+  - id: displayName
+    name: Display Name
     type: text
-    helpText: Used just to display Title Parameter
     typeConfig: null
     localizable: true
   - id: targetDate
     name: Target Date
-    type: text
-    helpText: >-
-      Format with timezone: YYYY-MM-DDTHH:MM:SS-HH:00. Format in your local
-      timezone: YYYY-MM-DDTHH:MM:SS
+    type: datetime
     typeConfig: null
+  - id: fd19ac02-577c-4300-8eb9-45862e7a5cf5
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - size
+        - backgroundColor
+        - textColor
+        - border
   - id: size
     name: Size
-    type: tp-slider-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
       options:
-        - label: Tiny
-          value: tiny
-        - label: Small
-          value: small
-        - label: Normal
-          value: normal
-        - label: Large
-          value: large
-      maxValue: 10
-      minValue: 0
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      defaultValue: {}
+      withViewPort: true
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+  - id: textColor
+    name: Text Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Countdown_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/countdown-default.jpg
 useTeamPermissions: true
-slots: []
-titleParameter: title
+slots:
+  - id: countdownComplete
+    name: Countdown Complete
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-11-02T13:52:54.609194+00:00'
-updated: '2024-08-16T11:17:11.872575+00:00'
+created: '2025-01-29T10:47:01.362054+00:00'
+updated: '2025-01-29T10:47:01.362054+00:00'
 variants:
   - id: labelsUnder
     name: Labels Under
-  - id: labelsInBoxes
-    name: Labels In Boxes

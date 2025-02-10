@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 0e5575b8-ef94-46c9-8567-d8ce3f4bf206
+  _name: Group-670.png
+  fields:
+    title:
+      type: text
+      value: demo-bg
+    file:
+      type: file
+      value: 17f817f0-c3ad-4430-a852-b8553a67443a
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/4bMMxtcSSpaHR2WPvWVUVA-Group-670.png
+      type: text
+    size:
+      value: 190498
+      type: number
+    width:
+      value: 1528
+      type: number
+    height:
+      value: 988
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:52.247775+00:00'
+modified: '2025-01-29T10:46:52.247775+00:00'

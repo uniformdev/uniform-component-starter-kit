@@ -2,58 +2,146 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: navigationLink
 name: Navigation Link
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692281226/csk-icons/component-icons-v2/CSKicon_headerlink_coaugo_mfcseb.svg
+icon: link
 parameters:
-  - id: title
-    name: Title
-    type: text
-    typeConfig:
-      required: false
-    localizable: true
-  - id: link
-    name: Link
-    type: link
-    typeConfig:
-      required: false
-  - id: color
-    name: Color
-    type: tp-color-palette-parameter
-    typeConfig:
-      allowThemeColors:
-        - primary
-        - primary-content
-        - secondary-content
-        - accent
-  - id: group_iconSettings
-    name: Icon Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - icon
-        - hideIconBackground
   - id: icon
     name: Icon
     type: asset
     typeConfig:
       max: 1
       min: 0
-  - id: hideIconBackground
-    name: Hide Icon Background
-    type: checkbox
+    localizable: true
+  - id: text
+    name: Text
+    type: text
     typeConfig: null
-categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig:
+      linkTypes:
+        tel: true
+        email: true
+    localizable: true
+  - id: activeState
+    name: Active state
+    type: checkbox
+    helpText: >-
+      If the current page is equal to the current link value, the active styles
+      are applied.
+    typeConfig: null
+  - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - size
+        - color
+        - weight
+        - font
+        - transform
+        - decoration
+        - letterSpacing
+        - alignment
+  - id: size
+    name: Size
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: false
+  - id: color
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: weight
+    name: Weight
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: font
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: transform
+    name: Transform
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: decoration
+    name: Decoration
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Underline
+          value: underline
+        - key: Overline
+          value: overline
+        - key: Line Through
+          value: line-through
+  - id: letterSpacing
+    name: Letter Spacing
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Tighter
+          value: tighter
+        - key: Tight
+          value: tight
+        - key: Wide
+          value: wide
+        - key: Wider
+          value: wider
+  - id: alignment
+    name: Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Navigation_link_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/navigation-link.jpg
 useTeamPermissions: true
 slots: []
-titleParameter: title
+titleParameter: text
+thumbnailParameter: icon
 canBeComposition: false
-created: '2023-08-28T12:30:18.841682+00:00'
-updated: '2024-08-16T11:17:11.861844+00:00'
-variants:
-  - id: header
-    name: Header
-  - id: footer
-    name: Footer
+created: '2025-01-29T10:47:03.327349+00:00'
+updated: '2025-02-11T12:48:34.687857+00:00'

@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: c97f5a2d-ff0b-4aa7-9b9c-e4449398f790
+  _name: Group-673.png
+  fields:
+    title:
+      type: text
+      value: developers
+    file:
+      type: file
+      value: 47d9da8d-d873-48ea-a87c-e285ae6d661e
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/iLb_t7zOR8u0nkmxoE3Jew-Group-673.png
+      type: text
+    size:
+      value: 175484
+      type: number
+    width:
+      value: 1016
+      type: number
+    height:
+      value: 988
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:52.286964+00:00'
+modified: '2025-01-29T10:46:52.286964+00:00'

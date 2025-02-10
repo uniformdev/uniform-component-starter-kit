@@ -4,43 +4,69 @@ id: tabs
 name: Tabs
 icon: database
 parameters:
-  - id: size
-    name: Size
-    type: tp-slider-parameter
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: color
+    name: Color
+    type: dex-color-palette-parameter
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: Tiny
-          value: tiny
-        - label: Small
-          value: small
-        - label: Normal
-          value: normal
-        - label: Large
-          value: large
-      maxValue: 10
-      minValue: 0
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+      allowColors: []
+      selectedGroup: text
+  - id: 9f4a3823-8aad-4b30-a7bf-e5134643b0b3
+    name: More Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: ae15b0f6-4953-4ccb-9984-ad0525e77b01
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Tabs_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/tabs-default.jpg
 useTeamPermissions: true
 slots:
-  - id: tabs
-    name: Tabs
+  - id: tabItems
+    name: Tab Items
+    minComponents: 1
     allowedComponents:
       - tab
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-10-25T10:12:26.827357+00:00'
-updated: '2024-08-16T11:17:12.450354+00:00'
+created: '2025-01-29T10:47:03.767873+00:00'
+updated: '2025-02-11T12:48:35.245716+00:00'
 variants:
-  - id: boxed
-    name: Boxed
-  - id: lifted
-    name: Lifted
   - id: bordered
     name: Bordered

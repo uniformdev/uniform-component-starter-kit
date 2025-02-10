@@ -1,0 +1,84 @@
+composition:
+  _name: Global Page Template
+  _id: f9c058ea-c40d-4435-ac5a-53423cf654dc
+  type: page
+  parameters:
+    favicon:
+      type: asset
+      value:
+        - _id: 7d6cba04-7695-400b-8104-31b397e9b59e
+          type: image
+          fields:
+            id:
+              type: text
+              value: 9f964074-61ec-4afb-8d5b-8cb499257744
+            url:
+              value: >-
+                https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/lz9cc1w4S76I2SF-qtiSXA-favicon.png
+              type: text
+            file:
+              type: file
+              value: 8090c0e8-680e-4550-93e9-208aee8085c2
+            size:
+              value: 1139
+              type: number
+            title:
+              type: text
+              value: favicon.png
+            width:
+              value: 69
+              type: number
+            height:
+              value: 79
+              type: number
+            mediaType:
+              value: image/png
+              type: text
+          _source: uniform-assets
+    pageTitle:
+      type: text
+      value: Page Title
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: page-background-primary
+  slots:
+    pageFooter:
+      - _id: bbf196c6-4821-414c-9b14-b08fb1c7fede
+        type: footer
+        _pattern: 68136a90-0d34-4dbb-a34e-6e324179998a
+    pageHeader:
+      - _id: 38f88562-6b70-411b-a550-ada8514eef22
+        type: header
+        _pattern: 021762f3-8a06-41b4-a4fb-08a837c74415
+    pageContent:
+      - _id: dc2e95be-21b5-4476-a309-f8a34922f528
+        type: $slotSection
+        parameters:
+          name:
+            type: text
+            value: Page Content
+        _overridability:
+          hideLockedParameters: true
+  _overridability:
+    parameters:
+      $viz: 'yes'
+      pageTitle: 'yes'
+      twitterCard: 'yes'
+      pageKeywords: 'yes'
+      twitterImage: 'yes'
+      twitterTitle: 'yes'
+      openGraphType: 'yes'
+      openGraphImage: 'yes'
+      openGraphTitle: 'yes'
+      pageDescription: 'yes'
+      twitterDescription: 'yes'
+      openGraphDescription: 'yes'
+    hideLockedParameters: true
+  _locales:
+    - en
+created: '2025-01-29T10:47:09.615425+00:00'
+modified: '2025-01-29T10:47:09.615425+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/global-composition.png
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108

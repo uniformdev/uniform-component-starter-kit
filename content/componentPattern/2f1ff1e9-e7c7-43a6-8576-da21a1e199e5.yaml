@@ -1,0 +1,24 @@
+composition:
+  _name: Footer Link Pattern
+  _id: 2f1ff1e9-e7c7-43a6-8576-da21a1e199e5
+  type: navigationLink
+  parameters:
+    color:
+      type: dex-color-palette-parameter
+      value: text-primary
+    weight:
+      type: dex-segmented-control-parameter
+      value: bold
+  _overridability:
+    parameters:
+      icon: 'yes'
+      link: 'yes'
+      text: 'yes'
+      color: 'yes'
+      activeState: 'yes'
+  _locales:
+    - en
+created: '2025-02-05T13:12:50.8233+00:00'
+modified: '2025-02-05T13:13:41.842946+00:00'
+pattern: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4

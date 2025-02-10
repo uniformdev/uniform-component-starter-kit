@@ -2,111 +2,79 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: header
 name: Header
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692281090/csk-icons/component-icons-v2/CSKicon_header_eu1k3o_n0rurn.svg
+icon: border-top
 parameters:
-  - id: logo
-    name: Logo
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-  - id: linksAlignment
-    name: Links Alignment
-    type: tp-horizontal-align-parameter
+  - id: displayName
+    name: Display Name
+    type: text
     typeConfig: null
-  - id: group_global
-    name: Global
+    localizable: true
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
     type: group
     typeConfig:
-      collapsed: false
+      collapsed: true
       childrenParams:
-        - theme
-        - primaryFont
-        - favicon
-  - id: theme
-    name: Theme
-    type: tp-set-up-theme-parameter
+        - backgroundColor
+        - color
+        - spacing
+        - border
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
     typeConfig: null
-  - id: primaryFont
-    name: Primary Font
-    type: select
+  - id: color
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
     typeConfig:
-      options:
-        - text: Inter
-          value: inter
-        - text: Roboto mono
-          value: roboto_mono
-        - text: Rubik
-          value: rubik
-        - text: DM Mono
-          value: dm_mono
-        - text: Farro
-          value: farro
-        - text: Damion
-          value: damion
-        - text: Advent Pro
-          value: advent_pro
-        - text: Asap
-          value: asap
-        - text: Antonio
-          value: antonio
-        - text: Maven Pro
-          value: maven_pro
-        - text: Lexend Giga
-          value: lexend_giga
-        - text: Metrophobic
-          value: metrophobic
-  - id: favicon
-    name: Favicon
-    type: asset
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
     typeConfig:
-      max: 1
-      min: 0
-  - id: syntheticGap
-    name: Synthetic Gap
-    type: tp-slider-parameter
-    helpText: Manage spacing between components on the page
-    typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: None
-        - label: Small
-          value: Small
-        - label: Medium
-          value: Medium
-        - label: Large
-          value: Large
-      maxValue: 10
-      minValue: 0
-categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+      selectedTokenType: border
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Header_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/header-default.jpg
 useTeamPermissions: true
 slots:
-  - id: links
-    name: Links
+  - id: headerLeftContent
+    name: Header Left Content
+    allowedComponents:
+      - text
+      - iconLabel
+      - image
+      - link
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: headerCenterContent
+    name: Header Center Content
     allowedComponents:
       - navigationLink
+      - navigationFlyout
       - navigationGroup
-      - navigationMenu
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-  - id: iconLinks
-    name: Icon Links
+  - id: headerRightContent
+    name: Header Right Content
     allowedComponents:
-      - iconLink
+      - button
+      - themeSwitcher
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-titleParameter: linksAlignment
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:18.569126+00:00'
-updated: '2024-08-16T11:17:10.813038+00:00'
+created: '2025-01-29T10:47:01.517369+00:00'
+updated: '2025-02-11T12:48:34.365991+00:00'
 variants:
-  - id: light
-    name: Light
+  - id: sticky
+    name: Sticky

@@ -4,169 +4,133 @@ id: gridItem
 name: Grid Item
 icon: layout-grid
 parameters:
-  - id: title
-    name: Title
+  - id: displayName
+    name: Display Name
     type: text
-    helpText: Used just to display Title Parameter
-    typeConfig:
-      required: false
+    typeConfig: null
     localizable: true
   - id: columnStart
     name: Column Start
-    type: tp-slider-parameter
-    helpText: Use this to make an element start at the nth grid line
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: none
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-        - label: '7'
-          value: '7'
-        - label: '8'
-          value: '8'
-        - label: '9'
-          value: '9'
-        - label: '10'
-          value: '10'
-        - label: '11'
-          value: '11'
-        - label: '12'
-          value: '12'
-      maxValue: 10
-      minValue: 0
+      type: steps
+      units: ''
+      options: []
+      maxValue: 12
+      minValue: 1
+      defaultValue:
+        mobile: '1'
+        tablet: '1'
+        desktop: '1'
+      withViewPort: true
   - id: columnSpan
     name: Column Span
-    type: tp-slider-parameter
-    helpText: Use this parameter to set number of columns item should span
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
-      unit: px
+      units: px
       options:
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-        - label: '7'
-          value: '7'
-        - label: '8'
-          value: '8'
-        - label: '9'
-          value: '9'
-        - label: '10'
-          value: '10'
-        - label: '11'
-          value: '11'
-        - label: '12'
-          value: '12'
+        - key: Auto
+          value: auto
+        - key: Span 1
+          value: span-1
+        - key: Span 2
+          value: span-2
+        - key: Span 3
+          value: span-3
+        - key: Span 4
+          value: span-4
+        - key: Span 5
+          value: span-5
+        - key: Span 6
+          value: span-6
+        - key: Span 7
+          value: span-7
+        - key: Span 8
+          value: span-8
+        - key: Span 9
+          value: span-9
+        - key: Span 10
+          value: span-10
+        - key: Span 11
+          value: span-11
+        - key: Span 12
+          value: span-12
+        - key: Full
+          value: span-full
       maxValue: 10
       minValue: 0
+      defaultValue: {}
+      withViewPort: true
   - id: rowStart
     name: Row Start
-    type: tp-slider-parameter
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: None
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-      maxValue: 10
-      minValue: 0
+      type: steps
+      units: ''
+      options: []
+      maxValue: 6
+      minValue: 1
+      defaultValue:
+        mobile: '1'
+        tablet: '1'
+        desktop: '1'
+      withViewPort: true
   - id: rowSpan
     name: Row Span
-    type: tp-slider-parameter
-    helpText: Use this parameter to set number of row item should span
+    type: dex-slider-control-parameter
     typeConfig:
       step: 1
       type: custom
-      unit: px
+      units: px
       options:
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
+        - key: Auto
+          value: auto
+        - key: Span 1
+          value: span-1
+        - key: Span 2
+          value: span-2
+        - key: Span 3
+          value: span-3
+        - key: Span 4
+          value: span-4
+        - key: Span 5
+          value: span-5
+        - key: Span 6
+          value: span-6
+        - key: Span 7
+          value: span-7
+        - key: Span 8
+          value: span-8
+        - key: Span 9
+          value: span-9
+        - key: Span 10
+          value: span-10
+        - key: Span 11
+          value: span-11
+        - key: Span 12
+          value: span-12
+        - key: Full
+          value: span-full
       maxValue: 10
       minValue: 0
-categoryId: 19f9419d-14da-496d-a4ac-eec5010e13d7
+      defaultValue: {}
+      withViewPort: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Grid_item_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/grid-item.jpg
 useTeamPermissions: true
 slots:
   - id: inner
     name: Inner
-    allowedComponents:
-      - card
-      - callToAction
-      - accordion
-      - carousel
-      - content
-      - divider
-      - featuredCallout
-      - hero
-      - image
-      - richText
-      - video
-      - spacer
-      - grid
-      - $test
-      - $loop
-      - $personalization
-      - price
-      - addToCart
-      - review
-      - modal
-      - testimonial
-      - feature
-      - box
-      - navigationSection
-      - text
-    allowAllComponents: false
+    allowedComponents: []
+    allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-titleParameter: title
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:17.828063+00:00'
-updated: '2024-08-16T11:17:11.140717+00:00'
+created: '2025-01-29T10:47:01.813878+00:00'
+updated: '2025-02-11T12:48:34.020295+00:00'

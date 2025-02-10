@@ -2,39 +2,68 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: accordion
 name: Accordion
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692280906/csk-icons/component-icons-v2/CSKicon_accordion_qjni0k_evuadz.svg
+icon: list
 parameters:
-  - id: title
-    name: Title
+  - id: displayName
+    name: Display Name
     type: text
-    typeConfig:
-      required: false
+    typeConfig: null
     localizable: true
-  - id: description
-    name: Description
-    type: text
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
     typeConfig:
-      required: false
-      multiline: true
-      linesCount: '10'
-    localizable: true
-categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Accordion_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/accordion.jpg
 useTeamPermissions: true
 slots:
-  - id: items
+  - id: accordionContent
+    name: Accordion Content
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: accordionItems
     name: Accordion Items
     allowedComponents:
       - accordionItem
-      - $loop
-      - $test
-      - $personalization
     allowAllComponents: false
     inheritAllowedComponents: false
-    patternsInAllowedComponents: false
-titleParameter: title
+    patternsInAllowedComponents: true
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:17.330001+00:00'
-updated: '2024-08-16T11:17:08.446568+00:00'
+created: '2025-01-29T10:47:00.832869+00:00'
+updated: '2025-02-11T12:48:35.407642+00:00'

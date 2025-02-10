@@ -1,0 +1,181 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: flexibleHero
+name: Flexible Hero
+icon: image-text
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: contentAlignment
+    name: Content Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+      defaultValue: center
+  - id: 308570f8-09a0-4fe2-ba52-a5823cdd0119
+    name: Image
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - image
+        - imageObjectFit
+        - imageWidth
+        - imageHeight
+        - imageUnoptimized
+        - imagePriority
+        - imageOverlayColor
+        - imageOverlayOpacity
+        - imageBorder
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+      min: 1
+    allowConditionalValues: true
+  - id: imageObjectFit
+    name: Object Fit
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Fill
+          value: fill
+        - key: Contain
+          value: contain
+        - key: Cover
+          value: cover
+        - key: None
+          value: none
+        - key: Scale Down
+          value: scale-down
+      defaultValue: cover
+  - id: imageWidth
+    name: Width
+    type: number
+    typeConfig: null
+  - id: imageHeight
+    name: Height
+    type: number
+    typeConfig: null
+  - id: imageUnoptimized
+    name: Unoptimized
+    type: checkbox
+    typeConfig: null
+  - id: imagePriority
+    name: Priority
+    type: checkbox
+    typeConfig: null
+  - id: imageOverlayColor
+    name: Overlay Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: imageOverlayOpacity
+    name: Overlay Opacity
+    type: dex-slider-control-parameter
+    typeConfig:
+      type: custom
+      options:
+        - key: 0%
+          value: '0'
+        - key: 10%
+          value: '0.1'
+        - key: 20%
+          value: '0.2'
+        - key: 30%
+          value: '0.3'
+        - key: 40%
+          value: '0.4'
+        - key: 50%
+          value: '0.5'
+        - key: 60%
+          value: '0.6'
+        - key: 70%
+          value: '0.7'
+        - key: 80%
+          value: '0.8'
+        - key: 90%
+          value: '0.9'
+        - key: 100%
+          value: '1'
+  - id: imageBorder
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      allowTokens:
+        - border-image-radius-small
+        - border-image-radius-medium
+      selectedTokenType: border
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      type: dimensions
+      defaultValue: {}
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-flexible.jpg
+useTeamPermissions: true
+slots:
+  - id: flexibleHeroContent
+    name: Content
+    allowedComponents:
+      - text
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+  - id: flexibleHeroCta
+    name: CTA
+    allowedComponents:
+      - $p:646faee6-b476-43c6-a1a8-eebe85699889
+      - $p:53b59aed-e378-4fcb-9135-20247d92074e
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: true
+titleParameter: displayName
+canBeComposition: false
+created: '2025-01-29T10:47:01.698204+00:00'
+updated: '2025-02-11T12:48:33.821313+00:00'
+variants:
+  - id: columns
+    name: Columns
+  - id: columnsReverse
+    name: Columns Reverse

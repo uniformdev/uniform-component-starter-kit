@@ -1,0 +1,147 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: iconLabel
+name: Icon Label
+icon: format-heading
+parameters:
+  - id: icon
+    name: Icon
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+    localizable: true
+  - id: text
+    name: Text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: tag
+    name: HTML Tag
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: H1
+          value: h1
+        - key: H2
+          value: h2
+        - key: P
+          value: p
+        - key: Span
+          value: span
+      required: true
+      defaultValue: span
+  - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - alignment
+        - size
+        - color
+        - weight
+        - font
+        - transform
+        - decoration
+        - letterSpacing
+  - id: size
+    name: Size
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Base
+          value: base
+        - key: XL
+          value: xl
+        - key: 2XL
+          value: 2xl
+        - key: 4XL
+          value: 4xl
+        - key: 5XL
+          value: 5xl
+        - key: 7XL
+          value: 7xl
+      withViewPort: false
+  - id: color
+    name: Color
+    type: dex-color-palette-parameter
+    typeConfig:
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: weight
+    name: Weight
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Normal
+          value: normal
+        - key: Medium
+          value: medium
+        - key: Bold
+          value: bold
+        - key: Extrabold
+          value: extrabold
+      defaultValue: normal
+  - id: font
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: transform
+    name: Transform
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Uppercase
+          value: uppercase
+        - key: Lowercase
+          value: lowercase
+        - key: Capitalize
+          value: capitalize
+  - id: decoration
+    name: Decoration
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Underline
+          value: underline
+        - key: Overline
+          value: overline
+        - key: Line Through
+          value: line-through
+  - id: letterSpacing
+    name: Letter Spacing
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Tighter
+          value: tighter
+        - key: Tight
+          value: tight
+        - key: Wide
+          value: wide
+        - key: Wider
+          value: wider
+  - id: alignment
+    name: Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/icon-label.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: text
+thumbnailParameter: icon
+canBeComposition: false
+created: '2025-01-29T10:47:02.566154+00:00'
+updated: '2025-02-11T12:48:34.126556+00:00'

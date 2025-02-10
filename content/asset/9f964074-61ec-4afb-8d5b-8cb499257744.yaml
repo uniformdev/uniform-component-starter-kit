@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: 9f964074-61ec-4afb-8d5b-8cb499257744
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: favicon.png
+    file:
+      type: file
+      value: f5f4db6b-da24-45ef-a53e-425af95ec08e
+    mediaType:
+      value: image/png
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/lz9cc1w4S76I2SF-qtiSXA-favicon.png
+      type: text
+    size:
+      value: 1139
+      type: number
+    width:
+      value: 69
+      type: number
+    height:
+      value: 79
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:51.225657+00:00'
+modified: '2025-01-29T10:46:51.225657+00:00'

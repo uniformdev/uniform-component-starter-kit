@@ -4,24 +4,25 @@ id: tableRow
 name: Table Row
 icon: view-list
 parameters:
-  - id: highlightsOnHover
-    name: Highlights on hover
-    type: checkbox
+  - id: displayName
+    name: Display Name
+    type: text
     typeConfig: null
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
-previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_row_preview_image
+    localizable: true
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 useTeamPermissions: true
 slots:
-  - id: cells
-    name: Cells
+  - id: tableRowCells
+    name: Table Row Cells
     allowedComponents:
       - tableDataCell
       - tableHeaderCell
-      - $loop
+      - tableLinkCell
+      - tableCustomCell
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-10-26T13:12:30.805788+00:00'
-updated: '2024-08-16T11:17:12.164033+00:00'
+created: '2025-01-29T10:47:03.774418+00:00'
+updated: '2025-02-11T12:48:35.146312+00:00'

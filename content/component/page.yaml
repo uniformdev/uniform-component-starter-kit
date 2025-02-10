@@ -2,71 +2,67 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: page
 name: Page
-icon: file-document
+icon: card
 parameters:
+  - id: acb00032-a954-464b-ac5c-8fdf6bd9f53f
+    name: Meta Data
+    type: group
+    typeConfig:
+      collapsed: false
+      childrenParams:
+        - pageTitle
+        - pageDescription
+        - pageKeywords
   - id: pageTitle
     name: Page Title
     type: text
     typeConfig:
-      required: true
-  - id: group_metaData
-    name: Meta Data
-    type: group
-    typeConfig:
-      childrenParams:
-        - pageMetaDescription
-        - pageKeywords
-  - id: pageMetaDescription
-    name: Page Meta Description
+      required: false
+    localizable: true
+  - id: pageDescription
+    name: Page Description
     type: text
     typeConfig:
       multiline: true
-      linesCount: '5'
+      linesCount: 5
+    localizable: true
   - id: pageKeywords
     name: Page Keywords
     type: text
-    typeConfig:
-      multiline: true
-  - id: group_openGraph
+    typeConfig: null
+    localizable: true
+  - id: f4f80134-525c-4989-b414-145f14500d3d
     name: Open Graph
     type: group
     typeConfig:
+      collapsed: true
       childrenParams:
         - openGraphTitle
+        - openGraphDescription
         - openGraphImage
         - openGraphType
-        - openGraphDescription
-        - overlayTitleToOgImage
   - id: openGraphTitle
     name: Open Graph Title
     type: text
-    helpText: page head title
+    helpText: Fallback to Page Title when the value is not set.
     typeConfig: null
+    localizable: true
   - id: openGraphDescription
     name: Open Graph Description
     type: text
-    helpText: >-
-      used to set `og:description`. If not set, `Page Meta Description` will be
-      used.
+    helpText: Fallback to Page Description when the value is not set.
     typeConfig:
       multiline: true
-      linesCount: '5'
+      linesCount: 5
+    localizable: true
   - id: openGraphImage
     name: Open Graph Image
     type: asset
-    helpText: This will set og:image
     typeConfig:
       max: 1
-      min: 0
-  - id: overlayTitleToOgImage
-    name: Overlay Title over Open Graph Image?
-    type: checkbox
-    helpText: if set, renders the `og:title` over the image dynamically
-    typeConfig: null
   - id: openGraphType
     name: Open Graph Type
     type: select
-    helpText: sets the value of `og:type` (defalts to "website" if not specified)
     typeConfig:
       options:
         - text: website
@@ -75,46 +71,37 @@ parameters:
           value: video
         - text: article
           value: article
-  - id: group_twitter
+  - id: 609a7913-350c-4420-b94f-e408e40e96d9
     name: Twitter
     type: group
     typeConfig:
+      collapsed: true
       childrenParams:
-        - twitterDescription
         - twitterTitle
+        - twitterDescription
         - twitterImage
-        - overlayTitleToTwitterImage
         - twitterCard
   - id: twitterTitle
     name: Twitter Title
     type: text
-    helpText: Sets `twitter:title`. Fallback to Page Title if not set.
+    helpText: Fallback to Page Title when the value is not set.
     typeConfig: null
+    localizable: true
   - id: twitterDescription
     name: Twitter Description
     type: text
-    helpText: >-
-      Sets `twitter:description`. Falls back to `Page Meta Description` if not
-      set
-    typeConfig:
-      multiline: true
-      linesCount: '5'
+    helpText: Fallback to Page Description when the value is not set.
+    typeConfig: null
+    localizable: true
   - id: twitterImage
     name: Twitter Image
     type: asset
-    helpText: Sets `twitter:image`. Fallsback to `og:image` if not set.
+    helpText: Fallback to Open Graph Image when the correct value is not set.
     typeConfig:
       max: 1
-      min: 0
-  - id: overlayTitleToTwitterImage
-    name: Overlay Title to Twitter Image?
-    type: checkbox
-    helpText: if set, overlays content of `twitter:title` over the image dynamically
-    typeConfig: null
   - id: twitterCard
     name: Twitter Card
     type: select
-    helpText: Sets the value of `twitter:card`. If not set, defaults to `summary`.
     typeConfig:
       options:
         - text: summary
@@ -125,14 +112,30 @@ parameters:
           value: app
         - text: player
           value: player
-categoryId: 31fcffb0-aead-4256-8e49-4d50cc28aa29
+  - id: b6c69a16-66e8-4037-981a-bdd9cb019399
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - favicon
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: favicon
+    name: Favicon
+    type: asset
+    typeConfig:
+      max: 1
+categoryId: c7a1d1d9-cc3f-431c-b55e-6c4af1285108
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Page_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/page.jpg
 useTeamPermissions: true
 slots:
   - id: pageHeader
     name: Page Header
-    maxComponents: 1
     minComponents: 1
     allowedComponents:
       - header
@@ -142,140 +145,37 @@ slots:
   - id: pageContent
     name: Page Content
     allowedComponents:
-      - content
       - accordion
-      - callToAction
-      - cardBlock
+      - banner
+      - card
+      - carousel
       - container
-      - featuredCallout
-      - hero
+      - fixedHero
+      - flex
+      - flexibleHero
+      - grid
+      - imageGallery
+      - review
+      - section
+      - table
+      - tabs
+      - testimonial
       - $test
+      - $localization
       - $loop
       - $personalization
-      - image
-      - divider
-      - carousel
-      - breadcrumbs
-      - header
-      - spacer
-      - richText
-      - video
-      - grid
-      - price
-      - addToCart
-      - banner
-      - review
-      - modal
-      - button
-      - testimonial
-      - imageGallery
-      - productInfo
-      - tabs
-      - table
-      - countdown
-      - text
-      - box
-      - advancedContainer
-      - hotspots
-      - heroContainer
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
   - id: pageFooter
     name: Page Footer
-    maxComponents: 1
     allowedComponents:
       - footer
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-defaults:
-  type: page
-  slots:
-    pageFooter:
-      - type: footer
-        _pattern: 319639e9-4bac-4fb3-8f0b-19088c969fcb
-    pageHeader:
-      - type: header
-        _pattern: e46c8336-acfd-43e8-ac59-8be8f4c33b7d
-        _overridability:
-          parameters:
-            syntheticGap: 'yes'
-    pageContent:
-      - type: hero
-        variant: backgroundImage
-        parameters:
-          image:
-            type: asset
-            value:
-              - _id: 749a0108-de12-493f-a28d-f9a77e854d30
-                type: image
-                fields:
-                  id:
-                    type: text
-                    value: 3c1767ca-1851-4f4f-b8dc-4269d5ea6328
-                  url:
-                    type: text
-                    value: >-
-                      https://img.uniform.global/p/kCbnPCDaS0i62FtZC0jaqQ/k1_VXz4cSo-x7dnH4q_t2g-rectangle.webp
-                  file:
-                    type: file
-                    value: 417f72e5-d0bc-47c8-8633-eb537728e2ec
-                  size:
-                    type: number
-                    value: 49092
-                  title:
-                    type: text
-                    value: rectangle.webp
-                  width:
-                    type: number
-                    value: 1600
-                  height:
-                    type: number
-                    value: 689
-                  mediaType:
-                    type: text
-                    value: image/webp
-                _source: uniform-assets
-          title:
-            type: text
-            value: Page Title
-          objectFit:
-            type: select
-            value: cover
-          textColor:
-            type: tp-color-palette-parameter
-            value: primary-content
-          paddingTop:
-            type: select
-            value: None
-          titleStyle:
-            type: tp-title-style-parameter
-            value: h1
-          description:
-            type: text
-            value: Some page description
-          eyebrowText:
-            type: text
-            value: eyebrow text
-          paddingBottom:
-            type: select
-            value: None
-          containerVariant:
-            type: select
-            value: fluidContent
-      - type: breadcrumbs
-        parameters:
-          separator:
-            type: select
-            value: chevron
-          colorStyle:
-            type: tp-color-style-parameter
-            value: primary
-          displayRootNode:
-            type: checkbox
-            value: true
 titleParameter: pageTitle
+thumbnailParameter: openGraphImage
 canBeComposition: true
-created: '2023-12-04T16:14:18.18623+00:00'
-updated: '2024-08-16T11:17:11.86208+00:00'
+created: '2025-01-29T10:47:02.333016+00:00'
+updated: '2025-02-11T12:48:34.992627+00:00'

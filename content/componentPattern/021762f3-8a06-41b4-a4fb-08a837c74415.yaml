@@ -1,0 +1,146 @@
+composition:
+  _name: Global Header
+  _id: 021762f3-8a06-41b4-a4fb-08a837c74415
+  type: header
+  variant: sticky
+  parameters:
+    color:
+      type: dex-color-palette-parameter
+      value: text-primary
+    spacing:
+      type: dex-space-control-parameter
+      value:
+        paddingTop: container-small
+        paddingBottom: container-small
+    displayName:
+      type: text
+      value: Header
+    backgroundColor:
+      type: dex-color-palette-parameter
+      value: general-color-1
+  slots:
+    headerLeftContent:
+      - _id: 4fb2a9bd-3af3-4951-9ece-9e98588f3bf5
+        type: link
+        slots:
+          linkContent:
+            - _id: 1d80a3d5-a57a-44e5-9ac8-0b665124f55c
+              type: image
+              parameters:
+                image:
+                  type: asset
+                  value:
+                    - _id: bf66f619-6751-47ba-8249-28a233e15360
+                      type: image
+                      fields:
+                        id:
+                          type: text
+                          value: 0f0670b4-a425-40d3-842b-c7c895d500a5
+                        url:
+                          value: >-
+                            https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/ebN0qqKBTVmp_Dc2gD3Gsw-uniformlogo.svg
+                          type: text
+                        file:
+                          type: file
+                          value: d7405da9-bafe-4158-836d-f9994daa1ed1
+                        size:
+                          value: 454
+                          type: number
+                        title:
+                          type: text
+                          value: uniformlogo.svg
+                        width:
+                          value: 45
+                          type: number
+                        height:
+                          value: 52
+                          type: number
+                        mediaType:
+                          value: image/svg+xml
+                          type: text
+                      _source: uniform-assets
+                width:
+                  type: number
+                  value: '50'
+                height:
+                  type: number
+                  value: '40'
+                objectFit:
+                  type: dex-segmented-control-parameter
+                  value: contain
+        parameters:
+          link:
+            type: link
+            value:
+              path: /
+              type: projectMapNode
+              nodeId: b90aa0bf-891d-4e40-9899-0d79eb1b26af
+              projectMapId: 537d11ff-9ebe-4420-9682-36694477e2f9
+          displayName:
+            type: text
+            value: Logo
+        _overridability:
+          hideLockedParameters: true
+    headerCenterContent:
+      - _id: 09b1471d-7aa8-419c-85e1-ba30947775ca
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: af0e8859-9cc9-4db7-87a6-92db71e075a4
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: dd90af02-85aa-43ba-a85e-583cb1a8cba7
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+      - _id: a3d75824-5bd9-48fd-95a1-dc558627cb92
+        type: navigationLink
+        _pattern: f0bb02cd-315f-40d1-8e74-948e09019995
+  _overrides:
+    09b1471d-7aa8-419c-85e1-ba30947775ca:
+      parameters:
+        link:
+          type: link
+          locales:
+            en:
+              path: https://dev-csk-marketing-site.vercel.app/get-started
+              type: url
+        text:
+          type: text
+          value: Get Started
+    a3d75824-5bd9-48fd-95a1-dc558627cb92:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/recipes
+            type: url
+        text:
+          type: text
+          value: Recipes
+    af0e8859-9cc9-4db7-87a6-92db71e075a4:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/components
+            type: url
+        text:
+          type: text
+          value: Components
+    dd90af02-85aa-43ba-a85e-583cb1a8cba7:
+      parameters:
+        link:
+          type: link
+          value:
+            path: https://dev-csk-marketing-site.vercel.app/templates
+            type: url
+        text:
+          type: text
+          value: Templates
+  _locales:
+    - en
+created: '2025-01-29T10:47:07.470956+00:00'
+modified: '2025-02-05T14:53:10.954792+00:00'
+pattern: true
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/main-header.jpg
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718

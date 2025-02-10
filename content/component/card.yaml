@@ -2,241 +2,75 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: card
 name: Card
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692281127/csk-icons/component-icons-v2/CSKicon_card_wtsqok_zadmkv.svg
+icon: card-hearts
 parameters:
-  - id: group_content
-    name: Content
-    type: group
-    typeConfig:
-      collapsed: false
-      childrenParams:
-        - title
-        - image
-  - id: title
-    name: Title
-    type: text
-    typeConfig:
-      required: false
-    localizable: true
-  - id: image
-    name: Image
-    type: asset
-    typeConfig:
-      max: 1
-      min: 0
-  - id: group_description
-    name: Description
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - description
-        - lineCountRestriction
-  - id: description
-    name: Description
-    type: text
-    typeConfig:
-      required: false
-      multiline: true
-      linesCount: '5'
-    localizable: true
-  - id: lineCountRestriction
-    name: Line Count Restriction
-    type: tp-slider-parameter
-    typeConfig:
-      step: 1
-      type: custom
-      unit: px
-      options:
-        - label: None
-          value: none
-        - label: '1'
-          value: '1'
-        - label: '2'
-          value: '2'
-        - label: '3'
-          value: '3'
-        - label: '4'
-          value: '4'
-        - label: '5'
-          value: '5'
-        - label: '6'
-          value: '6'
-      maxValue: 10
-      minValue: 0
-  - id: group_badge
-    name: Badge
-    type: group
-    typeConfig:
-      childrenParams:
-        - badge
-        - badgeSize
-        - badgeStyle
-  - id: badge
-    name: Badge
+  - id: displayName
+    name: Display Name
     type: text
     typeConfig: null
     localizable: true
-  - id: badgeSize
-    name: Badge Size
-    type: select
-    typeConfig:
-      options:
-        - text: Large
-          value: lg
-        - text: Medium
-          value: md
-        - text: Small
-          value: sm
-        - text: Extra small
-          value: xs
-  - id: badgeStyle
-    name: Badge Style
-    type: tp-badge-style-parameter
-    typeConfig: null
-  - id: group_cta
-    name: CTA
-    type: group
-    typeConfig:
-      childrenParams:
-        - buttonLink
-        - buttonStyle
-        - buttonCopy
-        - buttonAnimationType
-  - id: buttonLink
-    name: Button Link
-    type: link
-    typeConfig: null
-  - id: buttonStyle
-    name: Button Style
-    type: tp-button-style-parameter
-    typeConfig: null
-  - id: buttonCopy
-    name: Button Copy
-    type: text
-    typeConfig: null
-    localizable: true
-  - id: buttonAnimationType
-    name: Button Animation Type
-    type: select
-    typeConfig:
-      options:
-        - text: Fade-In
-          value: fadeIn
-        - text: Fly-In
-          value: flyIn
-  - id: group_imageSettings
-    name: Image Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - objectFit
-        - overlayColor
-        - overlayOpacity
-  - id: objectFit
-    name: Object Fit
-    type: select
-    typeConfig:
-      options:
-        - text: Contain
-          value: contain
-        - text: Cover
-          value: cover
-        - text: Fill
-          value: fill
-        - text: None
-          value: none
-  - id: overlayColor
-    name: Overlay Color
-    type: tp-color-style-parameter
-    typeConfig: null
-  - id: overlayOpacity
-    name: Overlay Opacity
-    type: tp-slider-parameter
-    typeConfig:
-      step: 10
-      type: steps
-      unit: px
-      units: '%'
-      options: []
-      maxValue: 100
-      minValue: 0
-  - id: group_presentationSettings
+  - id: d17cf463-2fe4-4d1b-b0c5-c97ed1bf5a43
     name: Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
-        - textColorVariant
-  - id: textColorVariant
-    name: Text Color Variant
-    type: select
-    typeConfig:
-      options:
-        - text: Dark
-          value: Dark
-        - text: Light
-          value: Light
-  - id: group_animationSettings
-    name: Animation Settings
-    type: group
-    typeConfig:
-      collapsed: true
-      childrenParams:
-        - animationType
-        - duration
-        - delay
-        - animationPreview
-  - id: animationType
-    name: Animation Type
-    type: select
-    typeConfig:
-      options:
-        - text: Fade-In
-          value: fadeIn
-        - text: Fly-In
-          value: flyIn
-  - id: duration
-    name: Duration
-    type: select
-    typeConfig:
-      options:
-        - text: Slow
-          value: slow
-        - text: Medium
-          value: medium
-        - text: Fast
-          value: fast
-  - id: delay
-    name: Delay
-    type: select
-    typeConfig:
-      options:
-        - text: None
-          value: none
-        - text: Short (250ms)
-          value: short
-        - text: Medium (500ms)
-          value: medium
-        - text: Long (1000ms)
-          value: long
-  - id: animationPreview
-    name: Animation Preview
-    type: tp-play-animation-parameter
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+        - fullHeight
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
     typeConfig: null
-categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
+    type: checkbox
+    typeConfig: null
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: 096fd5ed-5e2a-4bfa-834b-fb805d1d1ce9
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Card_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/card-default.jpg
 useTeamPermissions: true
-slots: []
-titleParameter: title
+slots:
+  - id: cardMedia
+    name: Card Media
+    maxComponents: 1
+    allowedComponents:
+      - image
+      - video
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+  - id: cardContent
+    name: Card Content
+    allowedComponents:
+      - badge
+      - button
+      - text
+      - richText
+      - spacer
+    allowAllComponents: false
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:17.667255+00:00'
-updated: '2024-08-16T11:17:11.240429+00:00'
+created: '2025-01-29T10:47:01.200491+00:00'
+updated: '2025-02-11T12:48:33.522366+00:00'
 variants:
   - id: backgroundImage
     name: Background Image
-  - id: featured
-    name: Featured

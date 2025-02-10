@@ -1,0 +1,101 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: fixedHero
+name: Fixed Hero
+icon: image-text
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: eyebrowTitleText
+    name: Eyebrow Text
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: titleText
+    name: Title
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: titleTag
+    name: Title HTML Tag
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: H1
+          value: h1
+        - key: H2
+          value: h2
+        - key: P
+          value: p
+        - key: Span
+          value: span
+      required: true
+      defaultValue: h2
+  - id: descriptionText
+    name: Description
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: primaryButtonText
+    name: Button Text
+    type: text
+    helpText: Provide a value to set the button's label.
+    typeConfig:
+      multiline: false
+    localizable: true
+  - id: primaryButtonLink
+    name: Button Link
+    type: link
+    helpText: Select type and target link to set the button's link.
+    typeConfig: null
+    localizable: true
+  - id: image
+    name: Image
+    type: asset
+    typeConfig:
+      max: 1
+      min: 0
+      allowedTypes:
+        - image
+    allowConditionalValues: true
+  - id: 9f8178c3-539f-4a1e-8a4e-71bfcedfe223
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - contentAlignment
+        - fullHeight
+  - id: contentAlignment
+    name: Content Alignment
+    type: dex-segmented-control-parameter
+    typeConfig:
+      options:
+        - key: Left
+          value: left
+        - key: Center
+          value: center
+        - key: Right
+          value: right
+      defaultValue: center
+  - id: fullHeight
+    name: Full Height
+    type: checkbox
+    typeConfig: null
+categoryId: f22b05f0-c4bf-4158-8ebc-4856e4d453af
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/hero-fixed.jpg
+useTeamPermissions: true
+slots: []
+titleParameter: displayName
+canBeComposition: false
+created: '2025-01-29T10:47:01.402162+00:00'
+updated: '2025-02-11T12:48:33.863936+00:00'
+variants:
+  - id: columns
+    name: Columns
+  - id: columnsReverse
+    name: Columns Reverse

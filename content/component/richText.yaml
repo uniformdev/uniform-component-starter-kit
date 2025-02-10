@@ -4,8 +4,8 @@ id: richText
 name: Rich Text
 icon: format-text
 parameters:
-  - id: content
-    name: Content
+  - id: text
+    name: Text
     type: richText
     typeConfig:
       elements:
@@ -20,29 +20,70 @@ parameters:
           - orderedList
           - link
           - quote
+          - code
+          - variable
+          - asset
       required: false
       formatting:
         builtIn:
           - bold
           - italic
           - underline
+          - strikethrough
+          - code
+          - superscript
+          - subscript
     localizable: true
+  - id: 4fa3aa01-1d60-4c4d-ace3-c68c833126b3
+    name: Presentation Settings
+    type: group
+    typeConfig:
+      collapsed: true
+      childrenParams:
+        - color
+        - font
+        - lineCountRestrictions
   - id: color
     name: Color
-    type: tp-color-palette-parameter
+    type: dex-color-palette-parameter
     typeConfig:
-      allowThemeColors:
-        - primary
-        - primary-content
-        - secondary-content
-        - accent
-      isAllowCustomColor: true
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
+      allowColors: []
+      selectedGroup: text
+      allowThemeColors: []
+  - id: font
+    name: Font
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: font
+  - id: lineCountRestrictions
+    name: Line Count Restrictions
+    type: dex-slider-control-parameter
+    typeConfig:
+      step: 1
+      type: custom
+      units: px
+      options:
+        - key: none
+          value: none
+        - key: '1'
+          value: '1'
+        - key: '2'
+          value: '2'
+        - key: '3'
+          value: '3'
+        - key: '4'
+          value: '4'
+        - key: '5'
+          value: '5'
+        - key: '6'
+          value: '6'
+      maxValue: 10
+      minValue: 0
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Rich_text_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/rich-text.jpg
 useTeamPermissions: true
 slots: []
-titleParameter: content
 canBeComposition: false
-created: '2023-08-28T12:30:19.537253+00:00'
-updated: '2024-08-16T11:17:13.048767+00:00'
+created: '2025-01-29T10:47:03.280307+00:00'
+updated: '2025-02-11T12:52:48.311699+00:00'

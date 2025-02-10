@@ -1,0 +1,34 @@
+# yaml-language-server: $schema=<https://uniform.app/schemas/json-schema/component-definition/v1.json>
+$schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
+id: link
+name: Link
+icon: link
+parameters:
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: link
+    name: Link
+    type: link
+    typeConfig: null
+  - id: openInNewTab
+    name: Open In New Tab
+    type: checkbox
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
+previewImageUrl: >-
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/link-with-image.jpg
+useTeamPermissions: true
+slots:
+  - id: linkContent
+    name: Link Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
+canBeComposition: false
+created: '2025-01-29T10:47:02.34354+00:00'
+updated: '2025-02-11T12:48:34.276482+00:00'

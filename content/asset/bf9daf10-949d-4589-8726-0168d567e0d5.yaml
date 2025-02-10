@@ -1,0 +1,30 @@
+asset:
+  type: image
+  _id: bf9daf10-949d-4589-8726-0168d567e0d5
+  _name: ''
+  fields:
+    title:
+      type: text
+      value: arrow-right.svg
+    file:
+      type: file
+      value: 585c1ddc-13b2-4899-b9bb-4915100c1a45
+    mediaType:
+      value: image/svg+xml
+      type: text
+    url:
+      value: >-
+        https://img.uniform.global/p/bKE8PekcQ3Gk9j6C81jcrQ/C5prASc8SsmX1ynalXuvYg-arrow-right.svg
+      type: text
+    size:
+      value: 300
+      type: number
+    width:
+      value: 29
+      type: number
+    height:
+      value: 29
+      type: number
+    custom: {}
+created: '2025-01-29T10:46:52.711897+00:00'
+modified: '2025-01-29T10:46:52.711897+00:00'

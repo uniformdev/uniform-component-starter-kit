@@ -4,45 +4,47 @@ id: modal
 name: Modal
 icon: desktop
 parameters:
-  - id: closeOnClickOutside
-    name: Close on click outside
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: disableCloseModalOnClickOutside
+    name: Disable Close Modal On Click Outside
     type: checkbox
     typeConfig: null
-  - id: automaticOpenTimeout
-    name: Automatic Open Timeout
-    type: number
-    helpText: In seconds. This will only be used when the trigger slot is empty.
-    typeConfig: null
-  - id: group_presentationSettings
+  - id: 71cf65b3-5e47-4f97-9811-5cac1435fcab
     name: Presentation Settings
     type: group
     typeConfig:
       collapsed: true
       childrenParams:
         - maxWidth
+        - backgroundColor
+        - closeIconColor
   - id: maxWidth
     name: Max Width
-    type: tp-slider-parameter
+    type: dex-segmented-control-parameter
     typeConfig:
-      step: 1
-      type: custom
-      unit: px
       options:
-        - label: None
-          value: None
-        - label: Small
+        - key: Small
           value: small
-        - label: Medium
+        - key: Medium
           value: medium
-        - label: Large
+        - key: Large
           value: large
-        - label: X Large
-          value: xLarge
-      maxValue: 10
-      minValue: 0
-categoryId: ea001653-1f96-4f07-9187-a1626a4965e5
+      defaultValue: medium
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: closeIconColor
+    name: Close Icon Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Modal_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/modal-default.jpg
 useTeamPermissions: true
 slots:
   - id: trigger
@@ -52,14 +54,19 @@ slots:
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-  - id: content
-    name: Content
-    allowedComponents:
-      - callToAction
-      - hero
-    allowAllComponents: false
+  - id: modalContent
+    name: Modal Content
+    allowedComponents: []
+    allowAllComponents: true
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+  - id: modalActions
+    name: Modal Actions
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:18.564086+00:00'
-updated: '2024-08-16T11:17:12.35156+00:00'
+created: '2025-01-29T10:47:02.33521+00:00'
+updated: '2025-02-11T12:48:36.005186+00:00'

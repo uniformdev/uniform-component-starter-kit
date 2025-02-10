@@ -2,57 +2,70 @@
 $schema: https://uniform.app/schemas/json-schema/component-definition/v1.json
 id: footer
 name: Footer
-icon: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1692280987/csk-icons/component-icons-v2/CSKicon_footer_s663bz_b4irpm.svg
+icon: border-bottom
 parameters:
-  - id: logo
-    name: Logo
-    type: asset
+  - id: displayName
+    name: Display Name
+    type: text
+    typeConfig: null
+    localizable: true
+  - id: c3eed7c5-3aaf-4857-9934-1eda1d204b7e
+    name: Presentation Settings
+    type: group
     typeConfig:
-      max: 1
-      min: 0
-  - id: displayBuildTimestamp
-    name: Display Build Timestamp
+      collapsed: true
+      childrenParams:
+        - backgroundColor
+        - spacing
+        - border
+        - fluidContent
+  - id: backgroundColor
+    name: Background Color
+    type: dex-color-palette-parameter
+    typeConfig: null
+  - id: spacing
+    name: Spacing
+    type: dex-space-control-parameter
+    typeConfig:
+      selectedGroup: container
+  - id: border
+    name: Border
+    type: dex-token-selector-parameter
+    typeConfig:
+      selectedTokenType: border
+  - id: fluidContent
+    name: Fluid Content
     type: checkbox
     typeConfig: null
-  - id: copyright
-    name: Copyright
-    type: text
-    typeConfig:
-      multiline: true
-      linesCount: '10'
-    localizable: true
-  - id: footerText
-    name: Footer Text
-    type: richText
-    typeConfig:
-      elements:
-        builtIn:
-          - link
-      required: false
-      formatting:
-        builtIn:
-          - bold
-    localizable: true
-categoryId: 1bf9504a-07c4-4873-bbca-f235a6da182b
+categoryId: b1163ce2-5ac7-4347-bc38-a42198180718
 previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Footer_preview_image
+  https://res.cloudinary.com/uniform-demos/image/upload/csk-v-next/baseline/preview-images/footer.jpg
 useTeamPermissions: true
 slots:
-  - id: section
-    name: Section
+  - id: footerLogo
+    name: Footer Logo
     allowedComponents:
-      - navigationSection
+      - image
+      - link
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
-  - id: iconLinks
-    name: Icon Links
+  - id: footerCopyright
+    name: Footer Copyright
+    maxComponents: 1
     allowedComponents:
-      - iconLink
+      - text
+      - richText
     allowAllComponents: false
     inheritAllowedComponents: false
     patternsInAllowedComponents: false
+  - id: footerContent
+    name: Footer Content
+    allowedComponents: []
+    allowAllComponents: true
+    inheritAllowedComponents: false
+    patternsInAllowedComponents: false
+titleParameter: displayName
 canBeComposition: false
-created: '2023-08-28T12:30:17.996632+00:00'
-updated: '2024-08-16T11:17:12.061177+00:00'
+created: '2025-01-29T10:47:01.778144+00:00'
+updated: '2025-02-11T12:48:35.761133+00:00'

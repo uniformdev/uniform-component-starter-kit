@@ -7,14 +7,13 @@ parameters:
   - id: value
     name: Value
     type: text
-    typeConfig: null
+    typeConfig:
+      required: false
     localizable: true
-categoryId: 94a7a423-8c09-4264-8495-c562c17d811e
-previewImageUrl: >-
-  https://res.cloudinary.com/uniform-demos/image/upload/v1/preview-images/UniformTheme/Table_header_cell_preview_image
+categoryId: 70d03350-bbf9-457d-abc0-cf7d7aa2a3a4
 useTeamPermissions: true
 slots: []
 titleParameter: value
 canBeComposition: false
-created: '2023-10-26T13:12:32.366374+00:00'
-updated: '2024-08-16T11:17:12.457523+00:00'
+created: '2025-01-29T10:47:03.287438+00:00'
+updated: '2025-01-29T10:47:03.287438+00:00'
