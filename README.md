@@ -1,4 +1,8 @@
-## Uniform Component Starter Kit
+## Uniform Component Starter Kit (deprecated)
+
+
+**⚠️ DEPRECATION NOTICE ⚠️**
+This version is using Page Router only and has been deprecated in favor of the next generation Component Starter Kit you can access [here](https://github.com/uniformdev/component-starter-kit-next-approuter). This repo won't receive any further updates.
 
 The Component Starter kit gives you the key building blocks to create dynamic and compelling web experiences and demonstrate the power of digital experience composition in Uniform. Just install, customize and start creating.
 
